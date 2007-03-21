@@ -63,13 +63,6 @@ public interface MetaClass {
    * @return
    */
   Object getField(Object instance, String fieldName);
-  
-  /**
-   * @param instance
-   * @param arguments
-   * @return
-   */
-  Object call(Object instance, Object[] arguments);
 
   /**
    * @param instance
@@ -78,6 +71,13 @@ public interface MetaClass {
    * @return
    */
   Object setField(Object instance, String fieldName, Object newValue);
+  
+  /**
+   * @param instance
+   * @param arguments
+   * @return
+   */
+  Object call(Object instance, Object[] arguments);
 
   /**
    * @param instance

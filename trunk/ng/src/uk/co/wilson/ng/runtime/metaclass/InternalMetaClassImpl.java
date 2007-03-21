@@ -22,7 +22,6 @@ package uk.co.wilson.ng.runtime.metaclass;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
 import ng.runtime.InstanceHandler;
 import ng.runtime.InternalMetaClass;
@@ -46,7 +45,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doGetTheClass(java.lang.Object)
    */
   public Class doGetTheClass(final Object instance) {
-    return this.instanceHandler.getTheClass();
+    return this.instanceHandler.getTheClass(instance);
   }
 
   /* (non-Javadoc)
@@ -223,7 +222,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doComplement(final Object instance) {
-    return doInvokeMethod(instance, "complement");
+    return this.instanceHandler.complement(instance);
   }
 
   public Object doComplement(final int instance) {
@@ -239,7 +238,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doNot(final Object instance) {
-    return doInvokeMethod(instance, "not");
+    return this.instanceHandler.not(instance);
   }
 
   public Object doNot(final boolean instance) {
@@ -247,88 +246,75 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doUnaryPlus(final Object instance) {
-    return doInvokeMethod(instance, "unaryPlus");
+    return this.instanceHandler.unaryPlus(instance);
   }
 
-  public Object doUnaryPlus(final int operand) {
-    return doUnaryPlus(new NgInt(operand));
+  public Object doUnaryPlus(final int instance) {
+    return doUnaryPlus(new NgInt(instance));
   }
 
-  public Object doUnaryPlus(final long operand) {
-    return doUnaryPlus(new NgLong(operand));
+  public Object doUnaryPlus(final long instance) {
+    return doUnaryPlus(new NgLong(instance));
   }
 
-  public Object doUnaryPlus(final float operand) {
-    return doUnaryPlus(new NgFloat(operand));
+  public Object doUnaryPlus(final float instance) {
+    return doUnaryPlus(new NgFloat(instance));
   }
 
-  public Object doUnaryPlus(final double operand) {
-    return doUnaryPlus(new NgDouble(operand));
+  public Object doUnaryPlus(final double instance) {
+    return doUnaryPlus(new NgDouble(instance));
   }
 
-  public Object doUnaryPlus(final BigInteger operand) {
-    return doUnaryPlus((Object)operand);
+  public Object doUnaryPlus(final BigInteger instance) {
+    return doUnaryPlus((Object)instance);
   }
 
-  public Object doUnaryPlus(final BigDecimal operand) {
-    return doUnaryPlus((Object)operand);
+  public Object doUnaryPlus(final BigDecimal instance) {
+    return doUnaryPlus((Object)instance);
   }
 
   public Object doUnaryMinus(final Object instance) {
-    return doInvokeMethod(instance, "unaryMinus");
+    return this.instanceHandler.unaryMinus(instance);
   }
 
-  public Object doUnaryMinus(final int operand) {
-    return doUnaryMinus(new NgInt(operand));
+  public Object doUnaryMinus(final int instance) {
+    return doUnaryMinus(new NgInt(instance));
   }
 
-  public Object doUnaryMinus(final long operand) {
-    return doUnaryMinus(new NgLong(operand));
+  public Object doUnaryMinus(final long instance) {
+    return doUnaryMinus(new NgLong(instance));
   }
 
-  public Object doUnaryMinus(final float operand) {
-    return doUnaryMinus(new NgFloat(operand));
+  public Object doUnaryMinus(final float instance) {
+    return doUnaryMinus(new NgFloat(instance));
   }
 
-  public Object doUnaryMinus(final double operand) {
-    return doUnaryMinus(new NgDouble(operand));
+  public Object doUnaryMinus(final double instance) {
+    return doUnaryMinus(new NgDouble(instance));
   }
 
-  public Object doUnaryMinus(final BigInteger operand) {
-    return doUnaryMinus((Object)operand);
+  public Object doUnaryMinus(final BigInteger instance) {
+    return doUnaryMinus((Object)instance);
   }
 
-  public Object doUnaryMinus(final BigDecimal operand) {
-    return doUnaryMinus((Object)operand);
+  public Object doUnaryMinus(final BigDecimal instance) {
+    return doUnaryMinus((Object)instance);
   }
 
   public Object doIsCase(final Object instance, final Object rhs) {
-    return doInvokeMethod(instance, "isCase", rhs);
+    return this.instanceHandler.isCase(instance, rhs);
   }
 
   public Object doIsInstanceof(final Object instance, final Class type) {
-  final Object result = doInvokeMethod(instance, "isInstanceOf", type);
-
-	if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return (type.isAssignableFrom(instance.getClass())) ? NgBoolean.TRUE : NgBoolean.FALSE;
-    }
-
-    return result;
+    return this.instanceHandler.isInstanceof(instance, type);
   }
 
   public Object doAsType(final Object instance, final Class type) {
-  final Object result = doInvokeMethod(instance, "asType", type);
-
-	if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      if (type.isAssignableFrom(instance.getClass()))
-		return instance;
-    }
-
-    return result;
+    return this.instanceHandler.asType(instance, type);
   }
 
   public Object doGetAt(final Object instance, final Object index) {
-    return doInvokeMethod(instance, "getAt", index);
+    return this.instanceHandler.getAt(instance, index);
   }
 
   public Object doGetAt(final Object instance, final int index) {
@@ -340,7 +326,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doPutAt(final Object instance, final Object index) {
-    return doInvokeMethod(instance, "putAt", index);
+    return this.instanceHandler.putAt(instance, index);
   }
 
   public Object doPutAt(final Object instance, int index) {
@@ -352,115 +338,115 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doPrefixIncrement(final Object instance) {
-    return doInvokeMethod(instance, "prefixIncrement");
+    return this.instanceHandler.prefixIncrement(instance);
   }
 
-  public Object doPrefixIncrement(final int operand) {
-    return doPrefixIncrement(new NgInt(operand));
+  public Object doPrefixIncrement(final int instance) {
+    return doPrefixIncrement(new NgInt(instance));
   }
 
-  public Object doPrefixIncrement(final long operand) {
-    return doPrefixIncrement(new NgLong(operand));
+  public Object doPrefixIncrement(final long instance) {
+    return doPrefixIncrement(new NgLong(instance));
   }
 
-  public Object doPrefixIncrement(final float operand) {
-    return doPrefixIncrement(new NgFloat(operand));
+  public Object doPrefixIncrement(final float instance) {
+    return doPrefixIncrement(new NgFloat(instance));
   }
 
-  public Object doPrefixIncrement(final double operand) {
-    return doPrefixIncrement(new NgDouble(operand));
+  public Object doPrefixIncrement(final double instance) {
+    return doPrefixIncrement(new NgDouble(instance));
   }
 
-  public Object doPrefixIncrement(final BigInteger operand) {
-    return doPrefixIncrement((Object)operand);
+  public Object doPrefixIncrement(final BigInteger instance) {
+    return doPrefixIncrement((Object)instance);
   }
 
-  public Object doPrefixIncrement(final BigDecimal operand) {
-    return doPrefixIncrement((Object)operand);
+  public Object doPrefixIncrement(final BigDecimal instance) {
+    return doPrefixIncrement((Object)instance);
   }
 
   public Object doPrefixDecrement(final Object instance) {
-    return doInvokeMethod(instance, "prefixDecrement");
+    return this.instanceHandler.prefixDecrement(instance);
   }
 
-  public Object doPrefixDecrement(final int operand) {
-    return doPrefixDecrement(new NgInt(operand));
+  public Object doPrefixDecrement(final int instance) {
+    return doPrefixDecrement(new NgInt(instance));
   }
 
-  public Object doPrefixDecrement(final long operand) {
-    return doPrefixDecrement(new NgLong(operand));
+  public Object doPrefixDecrement(final long instance) {
+    return doPrefixDecrement(new NgLong(instance));
   }
 
-  public Object doPrefixDecrement(final float operand) {
-    return doPrefixDecrement(new NgFloat(operand));
+  public Object doPrefixDecrement(final float instance) {
+    return doPrefixDecrement(new NgFloat(instance));
   }
 
-  public Object doPrefixDecrement(final double operand) {
-    return doPrefixDecrement(new NgDouble(operand));
+  public Object doPrefixDecrement(final double instance) {
+    return doPrefixDecrement(new NgDouble(instance));
   }
 
-  public Object doPrefixDecrement(final BigInteger operand) {
-    return doPrefixDecrement((Object)operand);
+  public Object doPrefixDecrement(final BigInteger instance) {
+    return doPrefixDecrement((Object)instance);
   }
 
-  public Object doPrefixDecrement(final BigDecimal operand) {
-    return doPrefixDecrement((Object)operand);
+  public Object doPrefixDecrement(final BigDecimal instance) {
+    return doPrefixDecrement((Object)instance);
   }
 
   public Object doPostfixIncrement(final Object instance) {
-    return doInvokeMethod(instance, "postfixIncrement");
+    return this.instanceHandler.postfixIncrement(instance);
   }
 
-  public Object doPostfixIncrement(final int operand) {
-    return doPostfixIncrement(new NgInt(operand));
+  public Object doPostfixIncrement(final int instance) {
+    return doPostfixIncrement(new NgInt(instance));
   }
 
-  public Object doPostfixIncrement(final long operand) {
-    return doPostfixIncrement(new NgLong(operand));
+  public Object doPostfixIncrement(final long instance) {
+    return doPostfixIncrement(new NgLong(instance));
   }
 
-  public Object doPostfixIncrement(final float operand) {
-    return doPostfixIncrement(new NgFloat(operand));
+  public Object doPostfixIncrement(final float instance) {
+    return doPostfixIncrement(new NgFloat(instance));
   }
 
-  public Object doPostfixIncrement(final double operand) {
-    return doPostfixIncrement(new NgDouble(operand));
+  public Object doPostfixIncrement(final double instance) {
+    return doPostfixIncrement(new NgDouble(instance));
   }
 
-  public Object doPostfixIncrement(final BigInteger operand) {
-    return doPostfixIncrement((Object)operand);
+  public Object doPostfixIncrement(final BigInteger instance) {
+    return doPostfixIncrement((Object)instance);
   }
 
-  public Object doPostfixIncrement(final BigDecimal operand) {
-    return doPostfixIncrement((Object)operand);
+  public Object doPostfixIncrement(final BigDecimal instance) {
+    return doPostfixIncrement((Object)instance);
   }
 
   public Object doPostfixDecrement(final Object instance) {
-    return doInvokeMethod(instance, "postfixDecrement");
+    return this.instanceHandler.postfixDecrement(instance);
   }
 
-  public Object doPostfixDecrement(final int operand) {
-    return doPostfixDecrement(new NgInt(operand));
+  public Object doPostfixDecrement(final int instance) {
+    return doPostfixDecrement(new NgInt(instance));
   }
 
-  public Object doPostfixDecrement(final long operand) {
-    return doPostfixDecrement(new NgLong(operand));
+  public Object doPostfixDecrement(final long instance) {
+    return doPostfixDecrement(new NgLong(instance));
   }
 
-  public Object doPostfixDecrement(final float operand) {
-    return doPostfixDecrement(new NgFloat(operand));
+  public Object doPostfixDecrement(final float instance) {
+    return doPostfixDecrement(new NgFloat(instance));
   }
 
-  public Object doPostfixDecrement(final double operand) {
-    return doPostfixDecrement(new NgDouble(operand));
+  public Object doPostfixDecrement(final double instance) {
+    return doPostfixDecrement(new NgDouble(instance));
   }
 
-  public Object doPostfixDecrement(final BigInteger operand) {
-    return doPostfixDecrement((Object)operand);
+  public Object doPostfixDecrement(final BigInteger instance) {
+    return doPostfixDecrement((Object)instance);
   }
 
-  public Object doPostfixDecrement(final BigDecimal operand) {
-    return doPostfixDecrement((Object)operand);
+  public Object doPostfixDecrement(final BigDecimal instance) {
+    return doPostfixDecrement((Object)instance);
   }
 
   //
@@ -470,7 +456,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doAdd(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "plus", rhs);
+  final Object result = this.instanceHandler.add(lhs, rhs);
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAdd(lhs, rhs);
@@ -927,7 +913,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doAddEquals(final Object lhs, final Object rhs) {
-    final Object result = doInvokeMethod(lhs, "plusEquals", rhs);
+    final Object result = this.instanceHandler.addEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAddEquals(lhs, rhs);
@@ -1384,7 +1370,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doSubtract(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "minus", rhs);
+  final Object result = this.instanceHandler.subtract(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseSubtract(lhs, rhs);
@@ -1841,7 +1827,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doSubtractEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "minusEquals", rhs);
+  final Object result = this.instanceHandler.subtractEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseSubtractEquals(lhs, rhs);
@@ -2298,7 +2284,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doMultiply(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "multiply", rhs);
+  final Object result = this.instanceHandler.multiply(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiply(lhs, rhs);
@@ -2755,7 +2741,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doMultiplyEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "multiplyEquals", rhs);
+  final Object result = this.instanceHandler.multiplyEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiplyEquals(lhs, rhs);
@@ -3212,7 +3198,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doDivide(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "div", rhs);
+  final Object result = this.instanceHandler.divide(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivide(lhs, rhs);
@@ -3669,7 +3655,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doDivideEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "divEquals", rhs);
+  final Object result = this.instanceHandler.divideEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivideEquals(lhs, rhs);
@@ -4126,7 +4112,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doRemainder(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "mod", rhs);
+  final Object result = this.instanceHandler.remainder(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseRemainder(lhs, rhs);
@@ -4367,7 +4353,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doRemainderEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "modEquals", rhs);
+  final Object result = this.instanceHandler.remainderEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseRemainderEquals(lhs, rhs);
@@ -4608,7 +4594,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doIntegerDivide(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "intDiv", rhs);
+  final Object result = this.instanceHandler.integerDivide(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseIntegerDivide(lhs, rhs);
@@ -5065,7 +5051,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doIntegerDivideEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "intDivEquals", rhs);
+  final Object result = this.instanceHandler.integerDivideEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseIntegerDivideEquals(lhs, rhs);
@@ -5522,7 +5508,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doAnd(final Object lhs, final Object rhs) {
-    final Object result = doInvokeMethod(lhs, "and", rhs);
+    final Object result = this.instanceHandler.and(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAnd(lhs, rhs);
@@ -5763,7 +5749,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doAndEquals(final Object lhs, final Object rhs) {
-    final Object result = doInvokeMethod(lhs, "andEquals", rhs);
+    final Object result = this.instanceHandler.andEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAndEquals(lhs, rhs);
@@ -6004,7 +5990,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doOr(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "or", rhs);
+  final Object result = this.instanceHandler.or(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseOr(lhs, rhs);
@@ -6245,7 +6231,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doOrEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "orEquals", rhs);
+  final Object result = this.instanceHandler.orEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseOrEquals(lhs, rhs);
@@ -6486,7 +6472,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doXor(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "xor", rhs);
+  final Object result = this.instanceHandler.xor(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseXorEquals(lhs, rhs);
@@ -6728,7 +6714,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doXorEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "xorEquals", rhs);
+  final Object result = this.instanceHandler.xorEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseXorEquals(lhs, rhs);
@@ -6969,7 +6955,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLeftShift(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "leftShift", rhs);
+  final Object result = this.instanceHandler.leftShift(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLeftShift(lhs, rhs);
@@ -7210,7 +7196,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLeftShiftEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "leftShiftEquals", rhs);
+  final Object result = this.instanceHandler.leftShiftEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLeftShiftEquals(lhs, rhs);
@@ -7451,7 +7437,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doArithmeticRightShift(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "rightShift", rhs);
+  final Object result = this.instanceHandler.arithmeticRightShift(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseArithmeticRightShift(lhs, rhs);
@@ -7692,7 +7678,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doArithmeticRightShiftEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "rightShiftEquals", rhs);
+  final Object result = this.instanceHandler.arithmeticRightShiftEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseArithmeticRightShiftEquals(lhs, rhs);
@@ -7933,7 +7919,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLogicalRightShift(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "rightShiftUnsigned", rhs);
+  final Object result = this.instanceHandler.logicalRightShift(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLogicalRightShift(lhs, rhs);
@@ -8144,7 +8130,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLogicalRightShiftEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "rightShiftUnsignedEquals", rhs);
+  final Object result = this.instanceHandler.logicalRightShiftEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLogicalRightShift(lhs, rhs);
@@ -8355,7 +8341,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doCompare(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "compareTo", rhs);
+  final Object result = this.instanceHandler.compare(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseCompare(lhs, rhs);
@@ -8812,7 +8798,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "equals", rhs);
+  final Object result = this.instanceHandler.equals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhs, rhs);
@@ -9269,7 +9255,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doNotEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "notEquals", rhs);
+  final Object result = this.instanceHandler.notEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseNotEquals(lhs, rhs);
@@ -9726,7 +9712,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLessThan(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "lessThan", rhs);
+  final Object result = this.instanceHandler.lessThan(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThan(lhs, rhs);
@@ -10183,7 +10169,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLessThanOrEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "lessThanOrEquals", rhs);
+  final Object result = this.instanceHandler.lessThanOrEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThanOrEquals(lhs, rhs);
@@ -10640,7 +10626,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doGreaterThan(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "greaterThan", rhs);
+  final Object result = this.instanceHandler.greaterThan(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseGreaterThan(lhs, rhs);
@@ -11097,7 +11083,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doGreaterThanOrEquals(final Object lhs, final Object rhs) {
-  final Object result = doInvokeMethod(lhs, "greaterThanOrEquals", rhs);
+  final Object result = this.instanceHandler.greaterThanOrEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseGreaterThanOrEquals(lhs, rhs);
