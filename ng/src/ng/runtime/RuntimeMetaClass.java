@@ -42,7 +42,92 @@ public interface RuntimeMetaClass extends MetaClass {
    * @param internalMetaClass
    */
   void setInternalMetaClass(InternalMetaClass internalMetaClass);
-
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @return
+   */
+  Object invokeMethod(Object instance, String methodName);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Object invokeMethod(Object instance, String methodName, Object p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @return
+   */
+  Object invokeMethod(Object instance, String methodName, Object p1, Object p2);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  Object invokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  Object invokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4);
+  
+  /**
+   * @param instance
+   * @return
+   */
+  Object call(Object instance);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, Object p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @param p2
+   * @return
+   */
+  Object call(Object instance, Object p1, Object p2);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  Object call(Object instance, Object p1, Object p2, Object p3);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  Object call(Object instance, Object p1, Object p2, Object p3, Object p4);
+  
   /**
    * @param instance
    * @return

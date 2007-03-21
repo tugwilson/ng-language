@@ -192,10 +192,8 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     }
   }
   
-  /**
-   * @param instance
-   * @param methodName
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String)
    */
   public final Object invokeMethod(final Object instance, final String methodName) {
     final Object result = internalMetaClass.doInvokeMethod(instance, methodName);
@@ -206,11 +204,8 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
   }
   
-  /**
-   * @param instance
-   * @param methodName
-   * @param p1
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public final Object invokeMethod(final Object instance, final String methodName, final Object p1) {
     final Object result = internalMetaClass.doInvokeMethod(instance, methodName, p1);
@@ -221,12 +216,8 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
   }
 
-  /**
-   * @param instance
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
    */
   public final Object invokeMethod(final Object instance, final String methodName, final Object p1, final Object p2) {
     final Object result = internalMetaClass.doInvokeMethod(instance, methodName, p1, p2);
@@ -237,13 +228,8 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
   }
 
-  /**
-   * @param instance
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @param p3
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public final Object invokeMethod(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
     final Object result = internalMetaClass.doInvokeMethod(instance, methodName, p1, p2, p3);
@@ -254,14 +240,8 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
   }
 
-  /**
-   * @param instance
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @param p3
-   * @param p4
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public final Object invokeMethod(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
     final Object result = internalMetaClass.doInvokeMethod(instance, methodName, p1, p2, p3, p4);
@@ -349,10 +329,9 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
       return result;
     }
   }
-  
-  /**
-   * @param instance
-   * @return
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object)
    */
   public final Object call(final Object instance) {
   final Object result = internalMetaClass.doCall(instance);
@@ -363,10 +342,8 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
  }
 
-  /**
-   * @param instance
-   * @param p1
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object)
    */
   public final Object call(final Object instance, final Object p1) {
   final Object result = internalMetaClass.doCall(instance, p1);
@@ -377,11 +354,8 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
   }
 
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public final Object call(final Object instance, final Object p1, final Object p2) {
   final Object result = internalMetaClass.doCall(instance, p1, p2);
@@ -392,12 +366,8 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
   }
 
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @param p3
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public final Object call(final Object instance, final Object p1, final Object p2, final Object p3) {
   final Object result = internalMetaClass.doCall(instance, p1, p2, p3);
@@ -407,14 +377,8 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
 
     return result;
   }
-  
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @param p3
-   * @param p4
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public final Object call(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
   final Object result = internalMetaClass.doCall(instance, p1, p2, p3, p4);
@@ -658,10 +622,13 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
   }
 
-  public void putAt(final Object instance, final Object index) {
+  public Object putAt(final Object instance, final Object index) {
+  final Object result = internalMetaClass.doPutAt(instance, index);
+
     // TODO: make this error more detailed.
-    if ( internalMetaClass.doPutAt(instance, index) == NOT_CALLED)
-      throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
+
+    return result;
   }
 
   public void putAt(final Object instance, final int index) {

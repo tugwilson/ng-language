@@ -41,7 +41,7 @@ public interface MetaClass {
    *         parameters.
    */
   Object invokeMethod(Object instance, String methodName, Object[] arguments);
-
+  
   /**
    * @param instance
    * @param propertyName
@@ -63,12 +63,19 @@ public interface MetaClass {
    * @return
    */
   Object getField(Object instance, String fieldName);
+  
+  /**
+   * @param instance
+   * @param arguments
+   * @return
+   */
+  Object call(Object instance, Object[] arguments);
 
   /**
    * @param instance
    * @param fieldName
    * @param newValue
-   * @return TODO
+   * @return
    */
   Object setField(Object instance, String fieldName, Object newValue);
 
@@ -368,6 +375,7 @@ public interface MetaClass {
   /**
    * @param instance
    * @param index
+   * @return
    */
-  void putAt(Object instance, Object index);
+  Object putAt(Object instance, Object index);
 }
