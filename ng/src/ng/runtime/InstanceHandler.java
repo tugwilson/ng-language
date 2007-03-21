@@ -24,6 +24,11 @@ package ng.runtime;
  */
 public interface InstanceHandler {
   /**
+   * @return
+   */
+  Class getTheClass();
+  
+  /**
    * @param theClass 
    * @param arguments
    * @return an instance of the Class represented by the MetaClass
