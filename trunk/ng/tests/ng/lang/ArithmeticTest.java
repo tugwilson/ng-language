@@ -70,7 +70,7 @@ public class ArithmeticTest extends TestCase {
   Object[] integralOnes = new Object[] {oneByte, oneChar, oneShort, oneInt, oneLong, oneBigInt};
   Object[] integralTwos = new Object[] {twoByte, twoChar, twoShort, twoInt, twoLong, twoBigInt};
    
-  Map integralType = new HashMap();
+  Map<Class, Class> integralType = new HashMap<Class, Class>();
   {
     integralType.put(byte.class, int.class);
     integralType.put(char.class, int.class);
@@ -83,7 +83,7 @@ public class ArithmeticTest extends TestCase {
     integralType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map longType = new HashMap();
+  Map<Class, Class> longType = new HashMap<Class, Class>();
   {
     longType.put(byte.class, long.class);
     longType.put(char.class, long.class);
@@ -96,7 +96,7 @@ public class ArithmeticTest extends TestCase {
     longType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map integerDivideFloatType = new HashMap();
+  Map<Class, Class> integerDivideFloatType = new HashMap<Class, Class>();
   {
     integerDivideFloatType.put(byte.class, float.class);
     integerDivideFloatType.put(char.class, float.class);
@@ -109,7 +109,7 @@ public class ArithmeticTest extends TestCase {
     integerDivideFloatType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map floatType = new HashMap();
+  Map<Class, Class> floatType = new HashMap<Class, Class>();
   {
     floatType.put(byte.class, float.class);
     floatType.put(char.class, float.class);
@@ -122,7 +122,7 @@ public class ArithmeticTest extends TestCase {
     floatType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map integerDivideDoubleType = new HashMap();
+  Map<Class, Class> integerDivideDoubleType = new HashMap<Class, Class>();
   {
     integerDivideDoubleType.put(byte.class, double.class);
     integerDivideDoubleType.put(char.class, double.class);
@@ -135,7 +135,7 @@ public class ArithmeticTest extends TestCase {
     integerDivideDoubleType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map doubleType = new HashMap();
+  Map<Class, Class> doubleType = new HashMap<Class, Class>();
   {
     doubleType.put(byte.class, double.class);
     doubleType.put(char.class, double.class);
@@ -148,7 +148,7 @@ public class ArithmeticTest extends TestCase {
     doubleType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map integerDivideBigIntegerType = new HashMap();
+  Map<Class, Class> integerDivideBigIntegerType = new HashMap<Class, Class>();
   {
     integerDivideBigIntegerType.put(byte.class, BigInteger.class);
     integerDivideBigIntegerType.put(char.class, BigInteger.class);
@@ -161,7 +161,7 @@ public class ArithmeticTest extends TestCase {
     integerDivideBigIntegerType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map bigIntegerType = new HashMap();
+  Map<Class, Class> bigIntegerType = new HashMap<Class, Class>();
   {
     bigIntegerType.put(byte.class, BigInteger.class);
     bigIntegerType.put(char.class, BigInteger.class);
@@ -174,7 +174,7 @@ public class ArithmeticTest extends TestCase {
     bigIntegerType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map bigDecimalType = new HashMap();
+  Map<Class, Class> bigDecimalType = new HashMap<Class, Class>();
   {
     bigDecimalType.put(byte.class, BigDecimal.class);
     bigDecimalType.put(char.class, BigDecimal.class);
@@ -187,7 +187,7 @@ public class ArithmeticTest extends TestCase {
     bigDecimalType.put(BigDecimal.class, BigDecimal.class);
   }
 
-  Map typeConverter = new HashMap();
+  Map<Class, Map<Class, Class>> typeConverter = new HashMap<Class, Map<Class, Class>>();
   {
     typeConverter.put(byte.class, integralType);
     typeConverter.put(char.class, integralType);
@@ -200,7 +200,7 @@ public class ArithmeticTest extends TestCase {
     typeConverter.put(BigDecimal.class, bigDecimalType);
   }
 
-  Map integerDivideTypeConverter = new HashMap();
+  Map<Class, Map<Class, Class>> integerDivideTypeConverter = new HashMap<Class, Map<Class, Class>>();
   {
     integerDivideTypeConverter.put(byte.class, integralType);
     integerDivideTypeConverter.put(char.class, integralType);

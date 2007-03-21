@@ -1,5 +1,8 @@
 package uk.co.wilson.ng.runtime.metaclass;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import ng.lang.NgRuntimeException;
 import ng.runtime.InstanceHandler;
 /*
@@ -27,8 +30,21 @@ import ng.runtime.MetaMethod;
  *
  */
 public class InstanceReflectionHandler implements InstanceHandler {
-  private static final MetaMethod noMethod = new MetaMethod() {
+  private static class MetaMethodMap extends HashMap<String, MetaMethod> {
+    private static final long serialVersionUID = 1L;
 
+    public MetaMethod get(final Object key) {
+    final MetaMethod result = super.get(key);
+    
+      if (result == null) {
+        return noMethod;
+      } else {
+        return result;
+      }
+    }
+  }
+  
+  private static final MetaMethod noMethod = new MetaMethod() {
     /* (non-Javadoc)
      * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
      */
@@ -73,6 +89,8 @@ public class InstanceReflectionHandler implements InstanceHandler {
   };
   
   private final Class theClass;
+  private final Map<String, MetaMethod> methods = new MetaMethodMap();
+  private final MetaMethod call = noMethod;
   private final MetaMethod add = noMethod;
   private final MetaMethod reverseAdd = noMethod;
   private final MetaMethod addEquals = noMethod;
@@ -177,42 +195,42 @@ public class InstanceReflectionHandler implements InstanceHandler {
     if(arguments.length <= 4)
       throw new NgRuntimeException("Internal Error invokeMethod called with an array of " + arguments.length +" parameters");
     
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.methods.get(methodName).call(instance, arguments);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String)
    */
   public Object invokeMethod(final Object instance, final String methodName) {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.methods.get(methodName).call(instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object invokeMethod(final Object instance, final String methodName, final Object p1) {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.methods.get(methodName).call(instance, p1);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
    */
   public Object invokeMethod(final Object instance, final String methodName, final Object p1, final Object p2) {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.methods.get(methodName).call(instance, p1, p2);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public Object invokeMethod(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.methods.get(methodName).call(instance, p1, p2, p3);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public Object invokeMethod(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.methods.get(methodName).call(instance, p1, p2, p3, p4);
   }
 
   /* (non-Javadoc)
@@ -250,42 +268,42 @@ public class InstanceReflectionHandler implements InstanceHandler {
     if(arguments.length <= 4)
       throw new NgRuntimeException("Internal Error call called with an array of " + arguments.length +" parameters");
     
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.call.call(instance, arguments);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#call(java.lang.Object)
    */
   public Object call(final Object instance) {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.call.call(instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object)
    */
   public Object call(final Object instance, final Object p1) {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.call.call(instance, p1);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public Object call(final Object instance, final Object p1, final Object p2) {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.call.call(instance, p1, p2);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public Object call(final Object instance, final Object p1, final Object p2, final Object p3) {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.call.call(instance, p1, p2, p3);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public Object call(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.call.call(instance, p1, p2, p3, p4);
   }
 
   /* (non-Javadoc)
