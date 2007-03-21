@@ -91,7 +91,7 @@ public class LogicalTest extends TestCase {
   Object[] logicalShiftIntegralOnes = new Object[] {oneByte, oneChar, oneShort, oneInt, oneLong};
   Object[] logicalShiftIntegralTwos = new Object[] {twoByte, twoChar, twoShort, twoInt, twoLong};
   
-  Map allIntsType = new HashMap();
+  Map<Class, Class> allIntsType = new HashMap<Class, Class>();
   {
     allIntsType.put(byte.class, int.class);
     allIntsType.put(char.class, int.class);
@@ -101,7 +101,7 @@ public class LogicalTest extends TestCase {
     allIntsType.put(BigInteger.class, int.class);
   }
   
-  Map integralType = new HashMap();
+  Map<Class, Class> integralType = new HashMap<Class, Class>();
   {
     integralType.put(byte.class, int.class);
     integralType.put(char.class, int.class);
@@ -114,7 +114,7 @@ public class LogicalTest extends TestCase {
     integralType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map allLongsType = new HashMap();
+  Map<Class, Class> allLongsType = new HashMap<Class, Class>();
   {
     allLongsType.put(byte.class, long.class);
     allLongsType.put(char.class, long.class);
@@ -124,7 +124,7 @@ public class LogicalTest extends TestCase {
     allLongsType.put(BigInteger.class, long.class);
   }
   
-  Map longType = new HashMap();
+  Map<Class, Class> longType = new HashMap<Class, Class>();
   {
     longType.put(byte.class, long.class);
     longType.put(char.class, long.class);
@@ -137,7 +137,7 @@ public class LogicalTest extends TestCase {
     longType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map floatType = new HashMap();
+  Map<Class, Class> floatType = new HashMap<Class, Class>();
   {
     floatType.put(byte.class, float.class);
     floatType.put(char.class, float.class);
@@ -150,7 +150,7 @@ public class LogicalTest extends TestCase {
     floatType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map doubleType = new HashMap();
+  Map<Class, Class> doubleType = new HashMap<Class, Class>();
   {
     doubleType.put(byte.class, double.class);
     doubleType.put(char.class, double.class);
@@ -163,7 +163,7 @@ public class LogicalTest extends TestCase {
     doubleType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map bigIntegerType = new HashMap();
+  Map<Class, Class> bigIntegerType = new HashMap<Class, Class>();
   {
     bigIntegerType.put(byte.class, BigInteger.class);
     bigIntegerType.put(char.class, BigInteger.class);
@@ -176,7 +176,7 @@ public class LogicalTest extends TestCase {
     bigIntegerType.put(BigDecimal.class, BigDecimal.class);
   }
   
-  Map bigDecimalType = new HashMap();
+  Map<Class, Class> bigDecimalType = new HashMap<Class, Class>();
   {
     bigDecimalType.put(byte.class, BigDecimal.class);
     bigDecimalType.put(char.class, BigDecimal.class);
@@ -189,7 +189,7 @@ public class LogicalTest extends TestCase {
     bigDecimalType.put(BigDecimal.class, BigDecimal.class);
   }
 
-  Map typeConverter = new HashMap();
+  Map<Class, Map<Class, Class>> typeConverter = new HashMap<Class, Map<Class, Class>>();
   {
     typeConverter.put(byte.class, integralType);
     typeConverter.put(char.class, integralType);
@@ -202,7 +202,7 @@ public class LogicalTest extends TestCase {
     typeConverter.put(BigDecimal.class, bigDecimalType);
   }
 
-  Map shiftTypeConverter = new HashMap();
+  Map<Class, Map<Class, Class>> shiftTypeConverter = new HashMap<Class, Map<Class, Class>>();
   {
     shiftTypeConverter.put(byte.class, allIntsType);
     shiftTypeConverter.put(char.class, allIntsType);
