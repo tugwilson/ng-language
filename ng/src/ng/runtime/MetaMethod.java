@@ -22,51 +22,13 @@ package ng.runtime;
  * @author tug
  *
  */
-public interface InstanceHandler extends MetaClass {  
+public interface MetaMethod { 
   /**
    * @param instance
-   * @param methodName
+   * @param arguments
    * @return
    */
-  Object invokeMethod(Object instance, String methodName);
-  
-  /**
-   * @param instance
-   * @param methodName
-   * @param p1
-   * @return
-   */
-  Object invokeMethod(Object instance, String methodName, Object p1);
-  
-  /**
-   * @param instance
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @return
-   */
-  Object invokeMethod(Object instance, String methodName, Object p1, Object p2);
-  
-  /**
-   * @param instance
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @param p3
-   * @return
-   */
-  Object invokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3);
-  
-  /**
-   * @param instance
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @param p3
-   * @param p4
-   * @return
-   */
-  Object invokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4);
+  Object call(Object instance, Object[] arguments);
   
   /**
    * @param instance
