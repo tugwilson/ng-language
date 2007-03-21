@@ -74,49 +74,80 @@ public class InstanceReflectionHandler implements InstanceHandler {
   
   private final Class theClass;
   private final MetaMethod add = noMethod;
+  private final MetaMethod reverseAdd = noMethod;
   private final MetaMethod addEquals = noMethod;
+  private final MetaMethod reverseAddEquals = noMethod;
   private final MetaMethod and = noMethod;
+  private final MetaMethod reverseAnd = noMethod;
   private final MetaMethod andEquals = noMethod;
+  private final MetaMethod reverseAndEquals = noMethod;
   private final MetaMethod arithmeticRightShift = noMethod;
+  private final MetaMethod reverseArithmeticRightShift = noMethod;
   private final MetaMethod arithmeticRightShiftEquals = noMethod;
+  private final MetaMethod reverseArithmeticRightShiftEquals = noMethod;
   private final MetaMethod asType = noMethod;
   private final MetaMethod compare = noMethod;
+  private final MetaMethod reverseCompare = noMethod;
   private final MetaMethod complement = noMethod;
   private final MetaMethod divide = noMethod;
+  private final MetaMethod reverseDivide = noMethod;
   private final MetaMethod divideEquals = noMethod;
+  private final MetaMethod reverseDivideEquals = noMethod;
   private final MetaMethod equals = noMethod;
+  private final MetaMethod reverseEquals = noMethod;
   private final MetaMethod getAt = noMethod;
   private final MetaMethod greaterThan = noMethod;
+  private final MetaMethod reverseGreaterThan = noMethod;
   private final MetaMethod greaterThanOrEquals = noMethod;
+  private final MetaMethod reverseGreaterThanOrEquals = noMethod;
   private final MetaMethod integerDivide = noMethod;
+  private final MetaMethod reverseIntegerDivide = noMethod;
   private final MetaMethod integerDivideEquals = noMethod;
+  private final MetaMethod reverseIntegerDivideEquals = noMethod;
   private final MetaMethod isCase = noMethod;
   private final MetaMethod isInstanceof = noMethod;
   private final MetaMethod leftShift = noMethod;
+  private final MetaMethod reverseLeftShift = noMethod;
   private final MetaMethod leftShiftEquals = noMethod;
+  private final MetaMethod reverseLeftShiftEquals = noMethod;
   private final MetaMethod lessThan = noMethod;
+  private final MetaMethod reverseLessThan = noMethod;
   private final MetaMethod lessThanOrEquals = noMethod;
+  private final MetaMethod reverseLessThanOrEquals = noMethod;
   private final MetaMethod logicalRightShift = noMethod;
+  private final MetaMethod reverseLogicalRightShift = noMethod;
   private final MetaMethod logicalRightShiftEquals = noMethod;
+  private final MetaMethod reverseLogicalRightShiftEquals = noMethod;
   private final MetaMethod multiply = noMethod;
+  private final MetaMethod reverseMultiply = noMethod;
   private final MetaMethod multiplyEquals = noMethod;
+  private final MetaMethod reverseMultiplyEquals = noMethod;
   private final MetaMethod not = noMethod;
   private final MetaMethod notEquals = noMethod;
+  private final MetaMethod reverseNotEquals = noMethod;
   private final MetaMethod or = noMethod;
+  private final MetaMethod reverseOr = noMethod;
   private final MetaMethod orEquals = noMethod;
+  private final MetaMethod reverseOrEquals = noMethod;
   private final MetaMethod postfixDecrement = noMethod;
   private final MetaMethod postfixIncrement = noMethod;
   private final MetaMethod prefixDecrement = noMethod;
   private final MetaMethod prefixIncrement = noMethod;
   private final MetaMethod putAt = noMethod;
   private final MetaMethod remainder = noMethod;
+  private final MetaMethod reverseRemainder = noMethod;
   private final MetaMethod remainderEquals = noMethod;
+  private final MetaMethod reverseRemainderEquals = noMethod;
   private final MetaMethod subtract = noMethod;
+  private final MetaMethod reverseSubtract = noMethod;
   private final MetaMethod subtractEquals = noMethod;
+  private final MetaMethod reverseSubtractEquals = noMethod;
   private final MetaMethod unaryMinus = noMethod;
   private final MetaMethod unaryPlus = noMethod;
   private final MetaMethod xor = noMethod;
+  private final MetaMethod reverseXor = noMethod;
   private final MetaMethod xorEquals = noMethod;
+  private final MetaMethod reverseXorEquals = noMethod;
 
   /**
    * @param theClass
@@ -265,10 +296,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseAdd(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseAdd(Object lhs, Object rhs) {
+    return this.reverseAdd.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#addEquals(java.lang.Object, java.lang.Object)
    */
   public Object addEquals(final Object lhs, final Object rhs) {
     return this.addEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseAddEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseAddEquals(Object lhs, Object rhs) {
+    return this.reverseAddEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -279,10 +324,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseAnd(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseAnd(Object lhs, Object rhs) {
+    return this.reverseAnd.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#andEquals(java.lang.Object, java.lang.Object)
    */
   public Object andEquals(final Object lhs, final Object rhs) {
     return this.andEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseAndEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseAndEquals(Object lhs, Object rhs) {
+    return this.reverseAndEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -293,10 +352,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseArithmeticRightShift(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseArithmeticRightShift(Object lhs, Object rhs) {
+    return this.reverseArithmeticRightShift.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#arithmeticRightShiftEquals(java.lang.Object, java.lang.Object)
    */
   public Object arithmeticRightShiftEquals(final Object lhs, final Object rhs) {
     return this.arithmeticRightShiftEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseArithmeticRightShiftEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseArithmeticRightShiftEquals(Object lhs, Object rhs) {
+    return this.reverseArithmeticRightShiftEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -314,6 +387,13 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseCompare(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseCompare(Object lhs, Object rhs) {
+    return this.reverseCompare.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#complement(java.lang.Object)
    */
   public Object complement(final Object instance) {
@@ -328,6 +408,13 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseDivide(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseDivide(Object lhs, Object rhs) {
+    return this.reverseDivide.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#divideEquals(java.lang.Object, java.lang.Object)
    */
   public Object divideEquals(final Object lhs, final Object rhs) {
@@ -335,10 +422,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseDivideEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseDivideEquals(Object lhs, Object rhs) {
+    return this.reverseDivideEquals.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#equals(java.lang.Object, java.lang.Object)
    */
   public Object equals(final Object lhs, final Object rhs) {
     return this.equals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseEquals(Object lhs, Object rhs) {
+    return this.reverseEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -356,10 +457,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseGreaterThan(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseGreaterThan(Object lhs, Object rhs) {
+    return this.reverseGreaterThan.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#greaterThanOrEquals(java.lang.Object, java.lang.Object)
    */
   public Object greaterThanOrEquals(final Object lhs, final Object rhs) {
     return this.greaterThanOrEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseGreaterThanOrEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseGreaterThanOrEquals(Object lhs, Object rhs) {
+    return this.reverseGreaterThanOrEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -370,10 +485,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseIntegerDivide(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseIntegerDivide(Object lhs, Object rhs) {
+    return this.reverseIntegerDivide.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#integerDivideEquals(java.lang.Object, java.lang.Object)
    */
   public Object integerDivideEquals(final Object lhs, final Object rhs) {
     return this.integerDivideEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseIntegerDivideEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseIntegerDivideEquals(Object lhs, Object rhs) {
+    return this.reverseIntegerDivideEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -398,10 +527,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseLeftShift(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseLeftShift(Object lhs, Object rhs) {
+    return this.reverseLeftShift.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#leftShiftEquals(java.lang.Object, java.lang.Object)
    */
   public Object leftShiftEquals(final Object lhs, final Object rhs) {
     return this.leftShiftEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseLeftShiftEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseLeftShiftEquals(Object lhs, Object rhs) {
+    return this.reverseLeftShiftEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -412,10 +555,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseLessThan(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseLessThan(Object lhs, Object rhs) {
+    return this.reverseLessThan.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#lessThanOrEquals(java.lang.Object, java.lang.Object)
    */
   public Object lessThanOrEquals(final Object lhs, final Object rhs) {
     return this.lessThanOrEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseLessThanOrEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseLessThanOrEquals(Object lhs, Object rhs) {
+    return this.reverseLessThanOrEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -426,10 +583,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseLogicalRightShift(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseLogicalRightShift(Object lhs, Object rhs) {
+    return this.reverseLogicalRightShift.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#logicalRightShiftEquals(java.lang.Object, java.lang.Object)
    */
   public Object logicalRightShiftEquals(final Object lhs, final Object rhs) {
     return this.logicalRightShiftEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseLogicalRightShiftEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseLogicalRightShiftEquals(Object lhs, Object rhs) {
+    return this.reverseLogicalRightShiftEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -440,10 +611,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseMultiply(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseMultiply(Object lhs, Object rhs) {
+    return this.reverseMultiply.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#multiplyEquals(java.lang.Object, java.lang.Object)
    */
   public Object multiplyEquals(final Object lhs, final Object rhs) {
     return this.multiplyEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseMultiplyEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseMultiplyEquals(Object lhs, Object rhs) {
+    return this.reverseMultiplyEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -461,6 +646,13 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseNotEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseNotEquals(Object lhs, Object rhs) {
+    return this.reverseNotEquals.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#or(java.lang.Object, java.lang.Object)
    */
   public Object or(final Object lhs, final Object rhs) {
@@ -468,10 +660,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseOr(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseOr(Object lhs, Object rhs) {
+    return this.reverseOr.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#orEquals(java.lang.Object, java.lang.Object)
    */
   public Object orEquals(final Object lhs, final Object rhs) {
     return this.orEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseOrEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseOrEquals(Object lhs, Object rhs) {
+    return this.reverseOrEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -517,10 +723,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseRemainder(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseRemainder(Object lhs, Object rhs) {
+    return this.reverseRemainder.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#remainderEquals(java.lang.Object, java.lang.Object)
    */
   public Object remainderEquals(final Object lhs, final Object rhs) {
     return this.remainderEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseRemainderEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseRemainderEquals(Object lhs, Object rhs) {
+    return this.reverseRemainderEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -531,10 +751,24 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseSubtract(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseSubtract(Object lhs, Object rhs) {
+    return this.reverseSubtract.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#subtractEquals(java.lang.Object, java.lang.Object)
    */
   public Object subtractEquals(final Object lhs, final Object rhs) {
     return this.subtractEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseSubtractEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseSubtractEquals(Object lhs, Object rhs) {
+    return this.reverseSubtractEquals.call(rhs, lhs);
   }
 
   /* (non-Javadoc)
@@ -559,9 +793,23 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseXor(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseXor(Object lhs, Object rhs) {
+    return this.reverseXor.call(rhs, lhs);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#xorEquals(java.lang.Object, java.lang.Object)
    */
   public Object xorEquals(final Object lhs, final Object rhs) {
     return this.xorEquals.call(lhs, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#reverseXorEquals(java.lang.Object, java.lang.Object)
+   */
+  public Object reverseXorEquals(Object lhs, Object rhs) {
+    return this.reverseXorEquals.call(rhs, lhs);
   }
 }

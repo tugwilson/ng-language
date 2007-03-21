@@ -466,7 +466,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseAdd(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reversePlus", lhs);
+    return this.instanceHandler.reverseAdd(lhs, rhs);
   }
 
   //
@@ -923,7 +923,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseAddEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reversePlusEquals", lhs);
+    return this.instanceHandler.reverseAddEquals(lhs, rhs);
   }
 
   //
@@ -1380,7 +1380,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseSubtract(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseMinus", lhs);
+    return this.instanceHandler.reverseSubtract(lhs, rhs);
   }
 
   //
@@ -1837,7 +1837,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseSubtractEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseMinusEquals", lhs);
+    return this.instanceHandler.reverseSubtractEquals(lhs, rhs);
   }
 
   //
@@ -2294,7 +2294,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseMultiply(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseMultiply", lhs);
+    return this.instanceHandler.reverseMultiply(lhs, rhs);
   }
 
   //
@@ -2751,7 +2751,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseMultiplyEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseMultiplyEquals", lhs);
+    return this.instanceHandler.reverseMultiplyEquals(lhs, rhs);
   }
 
   //
@@ -3208,7 +3208,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseDivide(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseDiv", lhs);
+    return this.instanceHandler.reverseDivide(lhs, rhs);
   }
 
   //
@@ -3665,7 +3665,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseDivideEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseDivEquals", lhs);
+    return this.instanceHandler.reverseDivideEquals(lhs, rhs);
   }
 
   //
@@ -4122,7 +4122,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseRemainder(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseMod", lhs);
+    return this.instanceHandler.reverseRemainder(lhs, rhs);
   }
 
   //
@@ -4363,7 +4363,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseRemainderEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseModEquals", lhs);
+    return this.instanceHandler.reverseRemainderEquals(lhs, rhs);
   }
 
   //
@@ -4604,7 +4604,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseIntegerDivide(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseIntDiv", lhs);
+    return this.instanceHandler.reverseIntegerDivide(lhs, rhs);
   }
 
   //
@@ -5061,7 +5061,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseIntegerDivideEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseIntDivEquals", lhs);
+    return this.instanceHandler.reverseIntegerDivideEquals(lhs, rhs);
   }
 
   //
@@ -5518,7 +5518,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseAnd(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseAnd", lhs);
+    return this.instanceHandler.reverseAnd(lhs, rhs);
   }
 
   //
@@ -5759,7 +5759,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseAndEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseAndEquals", lhs);
+    return this.instanceHandler.reverseAndEquals(lhs, rhs);
   }
 
   //
@@ -6000,7 +6000,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseOr(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseOr", lhs);
+    return this.instanceHandler.reverseOr(lhs, rhs);
   }
 
   //
@@ -6241,7 +6241,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseOrEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseOrEquals", lhs);
+    return this.instanceHandler.reverseOrEquals(lhs, rhs);
   }
 
   //
@@ -6482,7 +6482,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseXor(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseXor", lhs);
+    return this.instanceHandler.reverseXor(lhs, rhs);
   }
 
   //
@@ -6724,7 +6724,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseXorEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseXorEquals", lhs);
+    return this.instanceHandler.reverseXorEquals(lhs, rhs);
   }
 
   //
@@ -6965,7 +6965,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseLeftShift(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseLeftShift", lhs);
+    return this.instanceHandler.reverseLeftShift(lhs, rhs);
   }
 
   //
@@ -7206,7 +7206,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseLeftShiftEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseLeftShiftEquals", lhs);
+    return this.instanceHandler.reverseLeftShiftEquals(lhs, rhs);
   }
 
   //
@@ -7447,7 +7447,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseArithmeticRightShift(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseRightShift", lhs);
+    return this.instanceHandler.reverseArithmeticRightShift(lhs, rhs);
   }
 
   //
@@ -7688,7 +7688,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseArithmeticRightShiftEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseRightShiftEquals", lhs);
+    return this.instanceHandler.reverseArithmeticRightShiftEquals(lhs, rhs);
   }
 
   //
@@ -7929,7 +7929,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseLogicalRightShift(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseRightShiftUnsigned", lhs);
+    return this.instanceHandler.reverseLogicalRightShift(lhs, rhs);
   }
 
   //
@@ -8140,7 +8140,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseLogicalRightShiftEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseRightShiftUnsignedEquals", lhs);
+    return this.instanceHandler.reverseLogicalRightShiftEquals(lhs, rhs);
   }
 
   //
@@ -8351,7 +8351,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseCompare(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseCompareTo", lhs);
+    return this.instanceHandler.reverseCompare(lhs, rhs);
   }
 
   //
@@ -8808,7 +8808,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseEquals", lhs);
+    return this.instanceHandler.reverseEquals(lhs, rhs);
   }
 
   //
@@ -9265,7 +9265,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseNotEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseNotEquals", lhs);
+    return this.instanceHandler.reverseNotEquals(lhs, rhs);
   }
 
   //
@@ -9722,7 +9722,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseLessThan(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "doReverseLessThan", lhs);
+    return this.instanceHandler.reverseLessThan(lhs, rhs);
   }
 
   //
@@ -10179,7 +10179,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseLessThanOrEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseLessThanOrEquals", lhs);
+    return this.instanceHandler.reverseLessThanOrEquals(lhs, rhs);
   }
 
   //
@@ -10636,7 +10636,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseGreaterThan(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseGreaterThan", lhs);
+    return this.instanceHandler.reverseGreaterThan(lhs, rhs);
   }
 
   //
@@ -11093,7 +11093,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseGreaterThanOrEquals(final Object lhs, final Object rhs) {
-    return doInvokeMethod(rhs, "reverseGreaterThanOrEquals", lhs);
+    return this.instanceHandler.reverseGreaterThanOrEquals(lhs, rhs);
   }
 
   //
