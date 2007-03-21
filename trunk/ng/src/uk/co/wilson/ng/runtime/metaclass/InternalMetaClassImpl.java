@@ -24,6 +24,7 @@ import java.math.BigInteger;
 
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
+import ng.runtime.InstanceHandler;
 import ng.runtime.InternalMetaClass;
 import ng.runtime.NgBoolean;
 import ng.runtime.NgByte;
@@ -35,24 +36,24 @@ import ng.runtime.NgLong;
 import ng.runtime.NgShort;
 
 public class InternalMetaClassImpl implements InternalMetaClass {
-  final Class theClass;
+  final InstanceHandler instanceHandler;;
   
   public InternalMetaClassImpl(final Class theClass) {
-    this.theClass = theClass;
+    this.instanceHandler = new InstanceReflectionHandler(theClass);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doGetTheClass(java.lang.Object)
    */
   public Class doGetTheClass(final Object instance) {
-    return this.theClass;
+    return this.instanceHandler.getTheClass();
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doInvokeConstructor(java.lang.Class, java.lang.Object[])
    */
   public Object doInvokeConstructor(final Class theClass, final Object[] arguments) {
-    return RuntimeMetaClassImpl.NOT_CONSTRUCTED;
+    return this.instanceHandler.invokeConstructor(theClass, arguments);
   }
 
   /**
@@ -62,10 +63,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doInvokeMethod(final Object instance, final String methodName, final Object[] arguments) {
-    if(arguments.length <= 4)
-      throw new NgRuntimeException("Internal Error doInvokeMethod called with an array of " + arguments.length +" parameters");
-    
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return this.instanceHandler.invokeMethod(instance, methodName, arguments);
   }
 
   /**
@@ -76,7 +74,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doInvokeMethod(final Object instance, final String methodName) {
-    return doInvokeMethod(instance, methodName, RuntimeMetaClassImpl.NO_PARAMETERS);
+    return this.instanceHandler.invokeMethod(instance, methodName);
   }
 
   /**
@@ -87,7 +85,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    *         parameters.
    */
   public Object doInvokeMethod(final Object instance, final String methodName, final Object p1) {
-    return doInvokeMethod(instance, methodName, new Object[]{p1});
+    return this.instanceHandler.invokeMethod(instance, methodName, p1);
   }
 
   /**
@@ -99,7 +97,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    *         parameters.
    */
   public Object doInvokeMethod(final Object instance, final String methodName, final Object p1, final Object p2) {
-    return doInvokeMethod(instance, methodName, new Object[]{p1, p2});
+    return this.instanceHandler.invokeMethod(instance, methodName, p1, p2);
   }
 
   /**
@@ -112,7 +110,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    *         parameters.
    */
   public Object doInvokeMethod(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
-    return doInvokeMethod(instance, methodName, new Object[]{p1, p2, p3});
+    return this.instanceHandler.invokeMethod(instance, methodName, p1, p2, p3);
   }
 
   /**
@@ -124,7 +122,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doInvokeMethod(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return doInvokeMethod(instance, methodName, new Object[]{p1, p2, p3, p4});
+    return this.instanceHandler.invokeMethod(instance, methodName, p1, p2, p3, p4);
   }
 
   /**
@@ -133,7 +131,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doGetProperty(final Object instance, final String propertyName) {
-     return RuntimeMetaClassImpl.NO_PROPERTY;
+    return this.instanceHandler.getProperty(instance, propertyName);
   }
 
   /**
@@ -143,7 +141,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doSetProperty(final Object instance, final String propertyName, final Object newValue) {
-    return RuntimeMetaClassImpl.NO_FIELD;
+    return this.instanceHandler.setProperty(instance, propertyName, newValue);
   }
 
   /**
@@ -152,7 +150,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doGetField(final Object instance, final String fieldName) {
-    return RuntimeMetaClassImpl.NO_FIELD;
+    return this.instanceHandler.getField(instance, fieldName);
   }
 
   /**
@@ -162,7 +160,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doSetField(final Object instance, final String fieldName, final Object newValue) {
-    return RuntimeMetaClassImpl.NO_FIELD;
+    return this.instanceHandler.setField(instance, fieldName, newValue);
   }
   
   /**
@@ -171,10 +169,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doCall(final Object instance, final Object[] arguments) {
-    if(arguments.length > 4)
-      throw new NgRuntimeException("Internal Error doCall called with " + arguments.length +" parameters");
-      
-      return doInvokeMethod(instance, "doCall", arguments);
+    return this.instanceHandler.call(instance, arguments);
   }
   
   /**
@@ -182,7 +177,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doCall(final Object instance) {
-    return doInvokeMethod(instance, "doCall");
+    return this.instanceHandler.call(instance);
   }
 
   /**
@@ -191,7 +186,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doCall(final Object instance, final Object p1) {
-    return doInvokeMethod(instance, "doCall", p1);
+    return this.instanceHandler.call(instance, p1);
   }
 
   /**
@@ -201,7 +196,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doCall(final Object instance, final Object p1, final Object p2) {
-    return doInvokeMethod(instance, "doCall", p1, p2);
+    return this.instanceHandler.call(instance, p1, p2);
   }
 
   /**
@@ -212,7 +207,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doCall(final Object instance, final Object p1, final Object p2, final Object p3) {
-    return doInvokeMethod(instance, "doCall", p1, p2, p3);
+    return this.instanceHandler.call(instance, p1, p2, p3);
   }
 
   /**
@@ -224,7 +219,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public Object doCall(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return doInvokeMethod(instance, "doCall", p1, p2, p3, p4);
+    return this.instanceHandler.call(instance, p1, p2, p3, p4);
   }
 
   public Object doComplement(final Object instance) {
