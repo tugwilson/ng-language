@@ -36,6 +36,13 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
     super(theClass);
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#getParamObject(java.lang.Object)
+   */
+  public Object getParamObject(final Object instance) {
+    return new Float(((NgFloat)instance).getFloatValue());
+  }
+
   public Object doUnaryPlus(final float instance) {
     return new NgFloat(instance);
   }

@@ -32,6 +32,13 @@ class NgBooleanInternalMetaClass extends InternalMetaClassImpl {
     super(boolean.class);
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#getParamObject(java.lang.Object)
+   */
+  public Object getParamObject(final Object instance) {
+    return new Boolean(((NgBoolean)instance).getBooleanValue());
+  }
+
   public Object doNot(final boolean instance) {
     return (instance) ? NgBoolean.FALSE : NgBoolean.TRUE;
   }

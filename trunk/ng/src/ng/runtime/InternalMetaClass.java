@@ -23,6 +23,11 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public interface InternalMetaClass {
+  /**
+   * @param instance
+   * @return the Object to be used whan passing this instance as a parameter
+   */
+  Object getParamObject(Object instance);
 
   /**
    * @param instance 

@@ -36,6 +36,13 @@ class NgDoubleInternalMetaClass extends InternalMetaClassImpl {
     super(theClass);
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#getParamObject(java.lang.Object)
+   */
+  public Object getParamObject(final Object instance) {
+    return new Double(((NgDouble)instance).getDoubleValue());
+  }
+
   public Object doUnaryPlus(final double instance) {
     return new NgDouble(instance);
   }

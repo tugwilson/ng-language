@@ -36,6 +36,13 @@ class NgLongInternalMetaClass extends InternalMetaClassImpl {
     super(theClass);
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#getParamObject(java.lang.Object)
+   */
+  public Object getParamObject(final Object instance) {
+    return new Long(((NgLong)instance).getLongValue());
+  }
+
   public Object doComplement(final long instance) {
     return new NgLong(~instance);
   }
