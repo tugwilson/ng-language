@@ -36,6 +36,13 @@ class NgCharInternalMetaClass extends InternalMetaClassImpl {
     super(theClass);
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#getParamObject(java.lang.Object)
+   */
+  public Object getParamObject(final Object instance) {
+    return new Character(((NgChar)instance).getCharValue());
+  }
+
   public Object doComplement(final int instance) {
     return new NgInt(~instance);
   }

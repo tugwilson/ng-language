@@ -42,6 +42,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#getParamObject(java.lang.Object)
+   */
+  public Object getParamObject(final Object instance) {
+    return instance;
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doGetTheClass(java.lang.Object)
    */
   public Class doGetTheClass(final Object instance) {
