@@ -2,11 +2,11 @@ package ng.lang;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.HashMap;
 
 import junit.framework.TestCase;
-
+import ng.runtime.NgBaseObject;
 import ng.runtime.NgTyped;
+import util.CustomMetaClass;
 
 
 
@@ -17,7 +17,7 @@ import ng.runtime.NgTyped;
 public class TypedTest extends TestCase {
   final BigInteger bi = BigInteger.valueOf(1);
   final BigDecimal bd = new BigDecimal(1);
-  final Object o = new NgTyped(new HashMap(), Object.class);
+  final Object o = new NgTyped(new NgBaseObject(new CustomMetaClass()), Object.class);
   
   public void testUnsupportedMetaClassMethodsAdd() {    
     try {
@@ -353,6 +353,10 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bd, bd);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
+  }
+  
+  public void testSupportedMetaClassMethodsAdd() {    
+      assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (byte)1), null);
   }
   
   public void testUnsupportedMetaClassMethodsAddEquals() {    
@@ -6704,31 +6708,6 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((long)1, bi);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
-    
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(bi, (byte)1);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(bi, (char)1);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(bi, (short)1);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(bi, (int)1);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(bi, (long)1);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(bi, bi);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
   }
   
   public void testUnsupportedMetaClassMethodsLogicalRightShiftEquals() {    
@@ -6854,31 +6833,6 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((long)1, bi);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(bi, (byte)1);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(bi, (char)1);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(bi, (short)1);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(bi, (int)1);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(bi, (long)1);
-      assertTrue(false);
-    } catch(NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(bi, bi);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
   }
