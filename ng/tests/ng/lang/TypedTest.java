@@ -356,7 +356,26 @@ public class TypedTest extends TestCase {
   }
   
   public void testSupportedMetaClassMethodsAdd() {    
-      assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd(bd, o), null);
   }
   
   public void testUnsupportedMetaClassMethodsAddEquals() {    
@@ -695,6 +714,29 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsAddEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals(bd, o), null);
+  }
+  
   public void testUnsupportedMetaClassMethodsSubtract() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((byte)1, (byte)1);
@@ -1029,6 +1071,29 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bd, bd);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
+  }
+  
+  public void testSupportedMetaClassMethodsSubtract() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract(bd, o), null);
   }
   
   public void testUnsupportedMetaClassMethodsSubtractEquals() {    
@@ -1367,6 +1432,29 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsSubtractEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals(bd, o), null);
+  }
+
   public void testUnsupportedMetaClassMethodsMultiply() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((byte)1, (byte)1);
@@ -1703,6 +1791,29 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsMultiply() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply(bd, o), null);
+  }
+ 
   public void testUnsupportedMetaClassMethodsMuiltiplyEquals() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((byte)1, (byte)1);
@@ -2039,6 +2150,29 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsMultiplyEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals(bd, o), null);
+  }
+
   public void testUnsupportedMetaClassMethodDivide() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((byte)1, (byte)1);
@@ -2373,6 +2507,29 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bd, bd);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
+  }
+  
+  public void testSupportedMetaClassMethodsDivide() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide(bd, o), null);
   }
   
   public void testUnsupportedMetaClassMethodsDivideEquals() {    
@@ -2711,6 +2868,29 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsDivideEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals(bd, o), null);
+  }
+  
   public void testUnsupportedMetaClassMethodsIntegerDivide() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((byte)1, (byte)1);
@@ -2861,6 +3041,23 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bi, bi);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
+  }
+  
+  public void testSupportedMetaClassMethodsIntegerDivide() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, bi), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide(bi, o), null);
   }
   
   public void testUnsupportedMetaClassMethodsIntegerDivideEquals() {    
@@ -3015,6 +3212,23 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsIntegerDivideEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, bi), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals(bi, o), null);
+  }
+  
   public void testUnsupportedMetaClassMethodsAnd() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((byte)1, (byte)1);
@@ -3165,6 +3379,23 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(bi, bi);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
+  }
+  
+  public void testSupportedMetaClassMethodsAnd() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, bi), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd(bi, o), null);
   }
   
   public void testUnsupportedMetaClassMethodsAndEquals() {    
@@ -3319,6 +3550,23 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsAndEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, bi), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals(bi, o), null);
+  }
+  
   public void testUnsupportedMetaClassMethodsOr() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((byte)1, (byte)1);
@@ -3469,6 +3717,23 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(bi, bi);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
+  }
+  
+  public void testSupportedMetaClassMethodsOr() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, bi), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr(bi, o), null);
   }
   
   public void testUnsupportedMetaClassMethodsOrEquals() {    
@@ -3623,6 +3888,23 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsOrEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, bi), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals(bi, o), null);
+  }
+  
   public void testUnsupportedMetaClassMethodsXor() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((byte)1, (byte)1);
@@ -3775,6 +4057,23 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsXor() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, bi), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor(bi, o), null);
+  }
+  
   public void testUnsupportedMetaClassMethodsXorEquals() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((byte)1, (byte)1);
@@ -3925,6 +4224,23 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(bi, bi);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
+  }
+  
+  public void testSupportedMetaClassMethodsXorEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, bi), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals(bi, o), null);
   }
   
   public void testUnsupportedMetaClassMethodsCompare() {    
@@ -4263,6 +4579,29 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsCompare() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare(bd, o), null);
+  }
+  
   public void testUnsupportedMetaClassMethodsEquals() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((byte)1, (byte)1);
@@ -4599,6 +4938,29 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals(bd, o), null);
+  }
+ 
   public void testUnsupportedMetaClassMethodsNotEquals() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((byte)1, (byte)1);
@@ -4935,6 +5297,29 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsNotEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals(bd, o), null);
+  }
+ 
   public void testUnsupportedMetaClassMethodsLessThan() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((byte)1, (byte)1);
@@ -5269,6 +5654,29 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bd, bd);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
+  }
+  
+  public void testSupportedMetaClassMethodsLessThan() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan(bd, o), null);
   }
   
   public void testUnsupportedMetaClassMethodsGreaterThan() {    
@@ -5607,6 +6015,29 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsGreaterThan() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan(bd, o), null);
+  }
+  
   public void testUnsupportedMetaClassMethodsLessThanOrEquals() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((byte)1, (byte)1);
@@ -5942,7 +6373,30 @@ public class TypedTest extends TestCase {
       assertTrue(false);
     } catch(NgRuntimeException e) {}
   }
- 
+  
+  public void testSupportedMetaClassMethodsLessThanOrEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals(bd, o), null);
+  }
+
   public void testUnsupportedMetaClassMethodsGreaterThanOrEquals() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((byte)1, (byte)1);
@@ -6279,6 +6733,29 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsGreaterThanOrEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, bd), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((float)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((double)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals(bd, o), null);
+  }
+  
   public void testUnsupportedMetaClassMethodsLeftShift() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((byte)1, (byte)1);
@@ -6431,6 +6908,23 @@ public class TypedTest extends TestCase {
     } catch(NgRuntimeException e) {}
   }
   
+  public void testSupportedMetaClassMethodsLeftShift() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, bi), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift(bi, o), null);
+  }
+  
   public void testUnsupportedMetaClassMethodsLeftShiftEquals() {    
     try {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((byte)1, (byte)1);
@@ -6581,6 +7075,23 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(bi, bi);
       assertTrue(false);
     } catch(NgRuntimeException e) {}
+  }
+  
+  public void testSupportedMetaClassMethodsLeftShiftEquals() {    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, bi), null);
+    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals((byte)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals((char)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals((short)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals((int)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals(bi, o), null);
   }
   
   public void testUnsupportedMetaClassMethodsLogicalRightShift() {    
