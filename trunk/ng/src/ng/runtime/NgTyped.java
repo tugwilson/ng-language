@@ -26,7 +26,7 @@ private final RuntimeMetaClass delegate;
   public NgTypedMetaClass(final Object instance, final Class type) {
     this.instance = instance;
     this.type = type;
-    this.delegate = NgSystem.metaClassRegistry.getRuntimeMetaClass(type);
+    this.delegate = NgSystem.metaClassRegistry.getRuntimeMetaClass(instance);
   }
 
   /**
