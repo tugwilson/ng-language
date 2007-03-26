@@ -25,6 +25,7 @@ import java.math.BigInteger;
 import ng.lang.NgSystem;
 import ng.runtime.InstanceHandler;
 import ng.runtime.InternalMetaClass;
+import ng.runtime.MetaClass;
 import ng.runtime.NgBoolean;
 import ng.runtime.NgByte;
 import ng.runtime.NgChar;
@@ -46,6 +47,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    */
   public Object getParamObject(final Object instance) {
     return instance;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doGetMetaClassFor(java.lang.Class)
+   */
+  public MetaClass doGetMetaClassFor(final Class theClass) {
+    return this.instanceHandler.getMetaClassFor(theClass);
   }
 
   /* (non-Javadoc)

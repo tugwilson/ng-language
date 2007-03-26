@@ -26,7 +26,21 @@ private final RuntimeMetaClass delegate;
   public NgTypedMetaClass(final Object instance, final Class type) {
     this.instance = instance;
     this.type = type;
-    this.delegate = NgSystem.metaClassRegistry.getRuntimeMetaClass(instance);
+    this.delegate = NgSystem.metaClassRegistry.getMetaClass(instance).getMetaClassFor(type).getRuntimeMetaClass();
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClass#getMetaClassFor(java.lang.Class)
+   */
+  public MetaClass getMetaClassFor(Class theClass) {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClass#getRuntimeMetaClass()
+   */
+  public RuntimeMetaClass getRuntimeMetaClass() {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
   }
 
   /**

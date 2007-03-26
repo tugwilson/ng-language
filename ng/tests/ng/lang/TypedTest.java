@@ -17,7 +17,7 @@ import util.CustomMetaClass;
 public class TypedTest extends TestCase {
   final BigInteger bi = BigInteger.valueOf(1);
   final BigDecimal bd = new BigDecimal(1);
-  final Object o = new NgTyped(new NgBaseObject(new CustomMetaClass()), Object.class);
+  final Object o = new NgTyped(new NgBaseObject(new CustomMetaClass()), NgBaseObject.class);
   
   public void testUnsupportedMetaClassMethodsAdd() {    
     try {

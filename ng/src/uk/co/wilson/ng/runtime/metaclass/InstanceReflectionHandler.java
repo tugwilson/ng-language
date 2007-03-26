@@ -5,6 +5,8 @@ import java.util.Map;
 
 import ng.lang.NgRuntimeException;
 import ng.runtime.InstanceHandler;
+import ng.runtime.MetaClass;
+import ng.runtime.RuntimeMetaClass;
 /*
  * Created on 21 Mar 2007
  *
@@ -172,6 +174,28 @@ public class InstanceReflectionHandler implements InstanceHandler {
    */
   public InstanceReflectionHandler(final Class theClass) {
     this.theClass = theClass;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClass#getMetaClassFor(java.lang.Class)
+   */
+  public MetaClass getMetaClassFor(final Class theClass) {
+    // TODO decide what to do here
+    //      Do we return the MetaClass for the superclass?
+    
+    if (this.theClass.isAssignableFrom(theClass)) {
+      return this;
+    } else {
+      throw new NgRuntimeException("cannot cast " + this.theClass.getName() + " to " + theClass.getName());
+    }
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClass#getRuntimeMetaClass()
+   */
+  public RuntimeMetaClass getRuntimeMetaClass() {
+    // TODO: I'd really like not to have to do this
+    throw new NgRuntimeException("Internal Error: can't call getRuntimeMetaClasson InstanceHandler");
   }
 
   /**

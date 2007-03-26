@@ -28,6 +28,8 @@ public interface InternalMetaClass {
    * @return the Object to be used whan passing this instance as a parameter
    */
   Object getParamObject(Object instance);
+  
+  MetaClass doGetMetaClassFor(Class theClass);
 
   /**
    * @param instance 
