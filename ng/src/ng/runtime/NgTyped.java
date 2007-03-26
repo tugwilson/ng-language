@@ -4601,7 +4601,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#complement(java.lang.Object)
    */
   public Object complement(Object instance) {
-    throw new NgRuntimeException("Operation not allowed on NgTyped");
+    return this.delegate.complement(instance);
   }
 
   /**
@@ -18239,7 +18239,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#postfixDecrement(java.lang.Object)
    */
   public Object postfixDecrement(Object operand) {
-    throw new NgRuntimeException("Operation not allowed on NgTyped");
+    return this.delegate.postfixDecrement(operand);
   }
 
   /**
@@ -18302,7 +18302,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#postfixIncrement(java.lang.Object)
    */
   public Object postfixIncrement(Object operand) {
-    throw new NgRuntimeException("Operation not allowed on NgTyped");
+    return this.delegate.postfixIncrement(operand);
   }
 
   /**
@@ -18431,22 +18431,18 @@ private final RuntimeMetaClass delegate;
     return this.delegate.prefixIncrement(this.instance);
   }
 
-  /**
-   * @param instance
-   * @param index
+  /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#putAt(java.lang.Object, java.math.BigInteger)
    */
-  public void putAt(Object instance, BigInteger index) {
-    this.delegate.putAt(this.instance, index);
+  public Object putAt(Object instance, BigInteger index) {
+    return this.delegate.putAt(this.instance, index);
   }
 
-  /**
-   * @param instance
-   * @param index
+  /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#putAt(java.lang.Object, int)
    */
-  public void putAt(Object instance, int index) {
-    this.delegate.putAt(this.instance, index);
+  public Object putAt(Object instance, int index) {
+    return this.delegate.putAt(this.instance, index);
   }
 
   /**

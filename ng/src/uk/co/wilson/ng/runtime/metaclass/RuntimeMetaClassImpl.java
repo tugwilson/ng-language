@@ -646,16 +646,22 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
   }
 
-  public void putAt(final Object instance, final int index) {
+  public Object putAt(final Object instance, final int index) {
+  final Object result = internalMetaClass.doPutAt(instance, index);
+
     // TODO: make this error more detailed.
-    if ( internalMetaClass.doPutAt(instance, index) == NOT_CALLED)
-      throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
+
+    return result;
   }
 
-  public void putAt(final Object instance, final BigInteger index) {
+  public Object putAt(final Object instance, final BigInteger index) {
+  final Object result = internalMetaClass.doPutAt(instance, index);
+
     // TODO: make this error more detailed.
-    if ( internalMetaClass.doPutAt(instance, index) == NOT_CALLED)
-      throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
+
+    return result;
   }
 
   public Object prefixIncrement(final Object operand) {

@@ -242,13 +242,13 @@ public interface RuntimeMetaClass extends MetaClass {
    * @param instance
    * @param index
    */
-  void putAt(Object instance, int index);
+  Object putAt(Object instance, int index);
   
   /**
    * @param instance
    * @param index
    */
-  void putAt(Object instance, BigInteger index); 
+  Object putAt(Object instance, BigInteger index); 
 
   /**
    * @param instance
