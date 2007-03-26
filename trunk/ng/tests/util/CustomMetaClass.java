@@ -23,6 +23,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.InternalMetaClass;
+import ng.runtime.MetaClass;
 import ng.runtime.RuntimeMetaClass;
 
 /**
@@ -31,6 +32,20 @@ import ng.runtime.RuntimeMetaClass;
  */
 public 
 class CustomMetaClass implements RuntimeMetaClass {
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClass#getMetaClassFor(java.lang.Class)
+   */
+  public MetaClass getMetaClassFor(Class theClass) {
+    return this;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClass#getRuntimeMetaClass()
+   */
+  public RuntimeMetaClass getRuntimeMetaClass() {
+    return this;
+  }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#add(java.math.BigDecimal, java.math.BigDecimal)

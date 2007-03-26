@@ -26,6 +26,7 @@ import java.math.BigInteger;
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
 import ng.runtime.InternalMetaClass;
+import ng.runtime.MetaClass;
 import ng.runtime.RuntimeMetaClass;
 
 public class RuntimeMetaClassImpl implements RuntimeMetaClass {
@@ -93,6 +94,20 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     this.internalMetaClass = new InternalMetaClassImpl(theClass);
   }
   
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClass#getMetaClassFor(java.lang.Class)
+   */
+  public MetaClass getMetaClassFor(final Class theClass) {
+    return this.internalMetaClass.doGetMetaClassFor(theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClass#getRuntimeMetaClass()
+   */
+  public RuntimeMetaClass getRuntimeMetaClass() {
+    return this;
+  }
+
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#getInternalMetaClass()
    */
