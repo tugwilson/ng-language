@@ -14450,17 +14450,17 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#putAt(java.lang.Object, java.math.BigInteger)
    */
-  public void putAt(Object instance, BigInteger index) {
+  public Object putAt(Object instance, BigInteger index) {
     // TODO Auto-generated method stub
-    
+    return null;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#putAt(java.lang.Object, int)
    */
-  public void putAt(Object instance, int index) {
+  public Object putAt(Object instance, int index) {
     // TODO Auto-generated method stub
-    
+    return null;
   }
 
   /* (non-Javadoc)
