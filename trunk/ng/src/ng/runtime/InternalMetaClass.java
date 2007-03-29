@@ -59,7 +59,7 @@ public interface InternalMetaClass {
    *         parameters.
    * @return
    */
-  Object doInvokeMethod(Object instance, String methodName);
+  Object doInvokeMethodQuick(Object instance, String methodName);
 
   /**
    * @param instance
@@ -68,7 +68,7 @@ public interface InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  Object doInvokeMethod(Object instance, String methodName, Object p1);
+  Object doInvokeMethodQuick(Object instance, String methodName, Object p1);
 
   /**
    * @param instance
@@ -78,7 +78,7 @@ public interface InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  Object doInvokeMethod(Object instance, String methodName, Object p1, Object p2);
+  Object doInvokeMethodQuick(Object instance, String methodName, Object p1, Object p2);
 
   /**
    * @param instance
@@ -89,7 +89,7 @@ public interface InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  Object doInvokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3);
+  Object doInvokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3);
 
   /**
    * @param instance
@@ -99,7 +99,7 @@ public interface InternalMetaClass {
    * @param p3
    * @return
    */
-  Object doInvokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4);
+  Object doInvokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4);
 
   /**
    * @param instance
@@ -142,14 +142,14 @@ public interface InternalMetaClass {
    * @param instance
    * @return
    */
-  Object doCall(Object instance);
+  Object doCallQuick(Object instance);
 
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object doCall(Object instance, Object p1);
+  Object doCallQuick(Object instance, Object p1);
 
   /**
    * @param instance
@@ -157,7 +157,7 @@ public interface InternalMetaClass {
    * @param p2
    * @return
    */
-  Object doCall(Object instance, Object p1, Object p2);
+  Object doCallQuick(Object instance, Object p1, Object p2);
 
   /**
    * @param instance
@@ -166,7 +166,7 @@ public interface InternalMetaClass {
    * @param p3
    * @return
    */
-  Object doCall(Object instance, Object p1, Object p2, Object p3);
+  Object doCallQuick(Object instance, Object p1, Object p2, Object p3);
 
   /**
    * @param instance
@@ -176,7 +176,7 @@ public interface InternalMetaClass {
    * @param p4
    * @return
    */
-  Object doCall(Object instance, Object p1, Object p2, Object p3, Object p4);
+  Object doCallQuick(Object instance, Object p1, Object p2, Object p3, Object p4);
 
   /**
    * @param instance

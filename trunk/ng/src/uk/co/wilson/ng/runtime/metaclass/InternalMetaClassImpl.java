@@ -87,8 +87,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    *         parameters.
    * @return
    */
-  public Object doInvokeMethod(final Object instance, final String methodName) {
-    return this.instanceHandler.invokeMethod(instance, methodName);
+  public Object doInvokeMethodQuick(final Object instance, final String methodName) {
+    return this.instanceHandler.invokeMethodQuick(instance, methodName);
   }
 
   /**
@@ -98,8 +98,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  public Object doInvokeMethod(final Object instance, final String methodName, final Object p1) {
-    return this.instanceHandler.invokeMethod(instance, methodName, p1);
+  public Object doInvokeMethodQuick(final Object instance, final String methodName, final Object p1) {
+    return this.instanceHandler.invokeMethodQuick(instance, methodName, p1);
   }
 
   /**
@@ -110,8 +110,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  public Object doInvokeMethod(final Object instance, final String methodName, final Object p1, final Object p2) {
-    return this.instanceHandler.invokeMethod(instance, methodName, p1, p2);
+  public Object doInvokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2) {
+    return this.instanceHandler.invokeMethodQuick(instance, methodName, p1, p2);
   }
 
   /**
@@ -123,8 +123,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  public Object doInvokeMethod(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
-    return this.instanceHandler.invokeMethod(instance, methodName, p1, p2, p3);
+  public Object doInvokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
+    return this.instanceHandler.invokeMethodQuick(instance, methodName, p1, p2, p3);
   }
 
   /**
@@ -135,8 +135,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param p3
    * @return
    */
-  public Object doInvokeMethod(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return this.instanceHandler.invokeMethod(instance, methodName, p1, p2, p3, p4);
+  public Object doInvokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
+    return this.instanceHandler.invokeMethodQuick(instance, methodName, p1, p2, p3, p4);
   }
 
   /**
@@ -190,8 +190,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param instance
    * @return
    */
-  public Object doCall(final Object instance) {
-    return this.instanceHandler.call(instance);
+  public Object doCallQuick(final Object instance) {
+    return this.instanceHandler.callQuick(instance);
   }
 
   /**
@@ -199,8 +199,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param p1
    * @return
    */
-  public Object doCall(final Object instance, final Object p1) {
-    return this.instanceHandler.call(instance, p1);
+  public Object doCallQuick(final Object instance, final Object p1) {
+    return this.instanceHandler.callQuick(instance, p1);
   }
 
   /**
@@ -209,8 +209,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param p2
    * @return
    */
-  public Object doCall(final Object instance, final Object p1, final Object p2) {
-    return this.instanceHandler.call(instance, p1, p2);
+  public Object doCallQuick(final Object instance, final Object p1, final Object p2) {
+    return this.instanceHandler.callQuick(instance, p1, p2);
   }
 
   /**
@@ -220,8 +220,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param p3
    * @return
    */
-  public Object doCall(final Object instance, final Object p1, final Object p2, final Object p3) {
-    return this.instanceHandler.call(instance, p1, p2, p3);
+  public Object doCallQuick(final Object instance, final Object p1, final Object p2, final Object p3) {
+    return this.instanceHandler.callQuick(instance, p1, p2, p3);
   }
 
   /**
@@ -232,8 +232,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param p4
    * @return
    */
-  public Object doCall(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return this.instanceHandler.call(instance, p1, p2, p3, p4);
+  public Object doCallQuick(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
+    return this.instanceHandler.callQuick(instance, p1, p2, p3, p4);
   }
 
   public Object doComplement(final Object instance) {

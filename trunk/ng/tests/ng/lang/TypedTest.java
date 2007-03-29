@@ -8627,18 +8627,18 @@ public class TypedTest extends TestCase {
   
   public void testSupportedMetaClassMiscMethods() {
     assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).call(o, new Object[]{}), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).call(o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).call(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).call(o, null, null), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).call(o, null, null, null), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).call(o, null, null, null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).callQuick(o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).callQuick(o, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).callQuick(o, null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).callQuick(o, null, null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).callQuick(o, null, null, null, null), null);
  
     assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethod(o, "test", new Object[]{}), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethod(o, "test"), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethod(o, "test", o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethod(o, "test", null, null), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethod(o, "test", null, null, null), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethod(o, "test", null, null, null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "test"), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "test", o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "test", null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "test", null, null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "test", null, null, null, null), null);
  
     assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeConstructor(o.getClass(), new Object[]{}), null);
 

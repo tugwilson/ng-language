@@ -20,6 +20,11 @@ package ng.runtime;
 
 
 public class NgNull extends NgBaseObject {
+  public static final NgNull NULL_OBJECT = new NgNull();
+  
+  private NgNull() {
+    // Singleton
+  }
   public Object toJavaObject() {
     return null;
   }

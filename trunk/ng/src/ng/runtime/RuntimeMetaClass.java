@@ -48,7 +48,7 @@ public interface RuntimeMetaClass extends MetaClass {
    * @param methodName
    * @return
    */
-  Object invokeMethod(Object instance, String methodName);
+  Object invokeMethodQuick(Object instance, String methodName);
   
   /**
    * @param instance
@@ -56,26 +56,16 @@ public interface RuntimeMetaClass extends MetaClass {
    * @param p1
    * @return
    */
-  Object invokeMethod(Object instance, String methodName, Object p1);
-  
-  /**
-   * @param instance
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @return
-   */
-  Object invokeMethod(Object instance, String methodName, Object p1, Object p2);
+  Object invokeMethodQuick(Object instance, String methodName, Object p1);
   
   /**
    * @param instance
    * @param methodName
    * @param p1
    * @param p2
-   * @param p3
    * @return
    */
-  Object invokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3);
+  Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2);
   
   /**
    * @param instance
@@ -83,50 +73,60 @@ public interface RuntimeMetaClass extends MetaClass {
    * @param p1
    * @param p2
    * @param p3
-   * @param p4
    * @return
    */
-  Object invokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4);
+  Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3);
   
   /**
    * @param instance
-   * @return
-   */
-  Object call(Object instance);
-  
-  /**
-   * @param instance
-   * @param p1
-   * @return
-   */
-  Object call(Object instance, Object p1);
-  
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @return
-   */
-  Object call(Object instance, Object p1, Object p2);
-  
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @param p3
-   * @return
-   */
-  Object call(Object instance, Object p1, Object p2, Object p3);
-  
-  /**
-   * @param instance
+   * @param methodName
    * @param p1
    * @param p2
    * @param p3
    * @param p4
    * @return
    */
-  Object call(Object instance, Object p1, Object p2, Object p3, Object p4);
+  Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4);
+  
+  /**
+   * @param instance
+   * @return
+   */
+  Object callQuick(Object instance);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, Object p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @param p2
+   * @return
+   */
+  Object callQuick(Object instance, Object p1, Object p2);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  Object callQuick(Object instance, Object p1, Object p2, Object p3);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  Object callQuick(Object instance, Object p1, Object p2, Object p3, Object p4);
   
   /**
    * @param instance
