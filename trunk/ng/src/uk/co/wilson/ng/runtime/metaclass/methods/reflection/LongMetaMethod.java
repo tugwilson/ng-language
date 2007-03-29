@@ -1,8 +1,8 @@
-package uk.co.wilson.ng.runtime.metaclass.methods;
+package uk.co.wilson.ng.runtime.metaclass.methods.reflection;
 
 import java.lang.reflect.Method;
 
-import ng.runtime.NgShort;
+import ng.runtime.NgLong;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 /*
  * Created on 22 Mar 2007
@@ -27,11 +27,11 @@ import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
  * @author tug
  *
  */
-public class ShortMetaMethod extends UntypedMetaMethod {
+public class LongMetaMethod extends UntypedMetaMethod {
   /**
    * @param method
    */
-  public ShortMetaMethod(Method method) {
+  public LongMetaMethod(Method method) {
     super(method);
   }
 
@@ -44,7 +44,7 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgShort(((Short)result).shortValue());
+    return new NgLong(((Long)result).longValue());
   }
 
   /* (non-Javadoc)
@@ -56,7 +56,7 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgShort(((Short)result).shortValue());
+    return new NgLong(((Long)result).longValue());
   }
 
   /* (non-Javadoc)
@@ -68,7 +68,7 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgShort(((Short)result).shortValue());
+    return new NgLong(((Long)result).longValue());
   }
 
   /* (non-Javadoc)
@@ -80,7 +80,7 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgShort(((Short)result).shortValue());
+    return new NgLong(((Long)result).longValue());
   }
 
   /* (non-Javadoc)
@@ -92,7 +92,7 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgShort(((Short)result).shortValue());
+    return new NgLong(((Long)result).longValue());
   }
 
   /* (non-Javadoc)
@@ -104,6 +104,6 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgShort(((Short)result).shortValue());
+    return new NgLong(((Long)result).longValue());
   }
 }

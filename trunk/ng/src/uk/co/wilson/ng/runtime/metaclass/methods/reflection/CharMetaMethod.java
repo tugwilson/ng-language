@@ -1,23 +1,38 @@
-package uk.co.wilson.ng.runtime.metaclass.methods;
+package uk.co.wilson.ng.runtime.metaclass.methods.reflection;
 
 import java.lang.reflect.Method;
 
-import ng.runtime.NgTyped;
+import ng.runtime.NgChar;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
+/*
+ * Created on 22 Mar 2007
+ *
+ * Copyright 2007 John G. Wilson
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ *
+ */
 
 /**
  * @author tug
  *
  */
-public class TypedMetaMethod extends UntypedMetaMethod {
-  private final Class type;
-
+public class CharMetaMethod extends UntypedMetaMethod {
   /**
    * @param method
    */
-  public TypedMetaMethod(final Method method) {
+  public CharMetaMethod(Method method) {
     super(method);
-    this.type = method.getReturnType();
   }
 
   /* (non-Javadoc)
@@ -29,12 +44,7 @@ public class TypedMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    
-    if (result.getClass() != this.type) {
-      return new NgTyped(result, this.type);
-    } else {
-      return result;
-    }
+    return new NgChar(((Character)result).charValue());
   }
 
   /* (non-Javadoc)
@@ -46,12 +56,7 @@ public class TypedMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    
-    if (result.getClass() != this.type) {
-      return new NgTyped(result, this.type);
-    } else {
-      return result;
-    }
+    return new NgChar(((Character)result).charValue());
   }
 
   /* (non-Javadoc)
@@ -63,12 +68,7 @@ public class TypedMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    
-    if (result.getClass() != this.type) {
-      return new NgTyped(result, this.type);
-    } else {
-      return result;
-    }
+    return new NgChar(((Character)result).charValue());
   }
 
   /* (non-Javadoc)
@@ -80,12 +80,7 @@ public class TypedMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    
-    if (result.getClass() != this.type) {
-      return new NgTyped(result, this.type);
-    } else {
-      return result;
-    }
+    return new NgChar(((Character)result).charValue());
   }
 
   /* (non-Javadoc)
@@ -97,12 +92,7 @@ public class TypedMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    
-    if (result.getClass() != this.type) {
-      return new NgTyped(result, this.type);
-    } else {
-      return result;
-    }
+    return new NgChar(((Character)result).charValue());
   }
 
   /* (non-Javadoc)
@@ -114,10 +104,6 @@ public class TypedMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    if (result.getClass() != this.type) {
-      return new NgTyped(result, this.type);
-    } else {
-      return result;
-    }
+    return new NgChar(((Character)result).charValue());
   }
 }
