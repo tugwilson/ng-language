@@ -1,31 +1,24 @@
 package uk.co.wilson.ng.runtime.metaclass;
 
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
 import ng.lang.NgRuntimeException;
 import ng.runtime.InstanceHandler;
 import ng.runtime.MetaClass;
-import ng.runtime.RuntimeMetaClass;
-/*
- * Created on 21 Mar 2007
- *
- * Copyright 2007 John G. Wilson
- *
- *   Licensed under the Apache License, Version 2.0 (the "License");
- *   you may not use this file except in compliance with the License.
- *   You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *   Unless required by applicable law or agreed to in writing, software
- *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- *
- */
 import ng.runtime.MetaMethod;
+import ng.runtime.RuntimeMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.methods.reflection.BooleanMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.methods.reflection.ByteMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.methods.reflection.CharMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.methods.reflection.DoubleMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.methods.reflection.FloatMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.methods.reflection.IntMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.methods.reflection.LongMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.methods.reflection.ShortMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.methods.reflection.TypedMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.methods.reflection.UntypedMetaMethod;
 
 /**
  * @author tug
@@ -91,7 +84,6 @@ public class InstanceReflectionHandler implements InstanceHandler {
   };
   
   private final Class theClass;
-  private final Map<String, MetaMethod> methods = new MetaMethodMap();
   private final MetaMethod call = noMethod;
   private final MetaMethod add = noMethod;
   private final MetaMethod reverseAdd = noMethod;
@@ -168,17 +160,88 @@ public class InstanceReflectionHandler implements InstanceHandler {
   private final MetaMethod reverseXor = noMethod;
   private final MetaMethod xorEquals = noMethod;
   private final MetaMethod reverseXorEquals = noMethod;
+  
+  private final Map<String, MetaMethod> zeroParameterMethods = new MetaMethodMap();
+  private final Map<String, MetaMethod> oneParameterMethods = new MetaMethodMap();
+  private final Map<String, MetaMethod> twoParameterMethods = new MetaMethodMap();
+  private final Map<String, MetaMethod> threeParameterMethods = new MetaMethodMap();
+  private final Map<String, MetaMethod> fourParameterMethods = new MetaMethodMap();
+  private final Map<String, MetaMethod> multiParameterMethods = new MetaMethodMap();
 
+  /**
+   * @param theClass
+   */
   /**
    * @param theClass
    */
   public InstanceReflectionHandler(final Class theClass) {
     this.theClass = theClass;
+    
+    final Method methods[] = theClass.getMethods();
+    
+     Method.setAccessible(methods, true);
+      
+     for (int i = 0; i != methods.length; i++) {
+     final Method method = methods[i];
+     
+       if (method.getDeclaringClass() == theClass) {
+       final Class returnType = method.getReturnType();
+       final MetaMethod metaMethod;
+       
+         if(returnType == boolean.class) {
+           metaMethod = new BooleanMetaMethod(method);
+         } else if (returnType == char.class) {
+           metaMethod = new CharMetaMethod(method);
+         } else if (returnType == byte.class) {
+           metaMethod = new ByteMetaMethod(method);
+         } else if (returnType == short.class) {
+           metaMethod = new ShortMetaMethod(method);
+         } else if (returnType == int.class) {
+           metaMethod = new IntMetaMethod(method);
+         } else if (returnType == long.class) {
+           metaMethod = new LongMetaMethod(method);
+         } else if (returnType == float.class) {
+           metaMethod = new FloatMetaMethod(method);
+         } else if (returnType == double.class) {
+           metaMethod = new DoubleMetaMethod(method);
+         } else if (returnType == Object.class) {
+           metaMethod = new UntypedMetaMethod(method);
+         } else {
+           metaMethod = new TypedMetaMethod(method);
+         }
+         
+         switch(method.getParameterTypes().length) {
+           case 0:
+             this.zeroParameterMethods.put(method.getName(), metaMethod);
+             break;
+           
+           case 1:
+             this.oneParameterMethods.put(method.getName(), metaMethod);
+             break;
+           
+           case 2:
+             this.twoParameterMethods.put(method.getName(), metaMethod);
+             break;
+           
+           case 3:
+             this.threeParameterMethods.put(method.getName(), metaMethod);
+             break;
+           
+           case 4:
+             this.fourParameterMethods.put(method.getName(), metaMethod);
+             break;
+           
+           default:
+             this.multiParameterMethods.put(method.getName(), metaMethod);
+         }
+       }
+     }
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#getMetaClassFor(java.lang.Class)
    */
+  @SuppressWarnings("unchecked")
   public MetaClass getMetaClassFor(final Class theClass) {
     // TODO decide what to do here
     //      Do we return the MetaClass for the superclass?
@@ -219,42 +282,42 @@ public class InstanceReflectionHandler implements InstanceHandler {
     if(arguments.length <= 4)
       throw new NgRuntimeException("Internal Error invokeMethod called with an array of " + arguments.length +" parameters");
     
-    return this.methods.get(methodName).call(instance, arguments);
+    return this.multiParameterMethods.get(methodName).call(instance, arguments);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String)
    */
-  public Object invokeMethod(final Object instance, final String methodName) {
-    return this.methods.get(methodName).call(instance);
+  public Object invokeMethodQuick(final Object instance, final String methodName) {
+    return this.zeroParameterMethods.get(methodName).call(instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object)
    */
-  public Object invokeMethod(final Object instance, final String methodName, final Object p1) {
-    return this.methods.get(methodName).call(instance, p1);
+  public Object invokeMethodQuick(final Object instance, final String methodName, final Object p1) {
+    return this.oneParameterMethods.get(methodName).call(instance, p1);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethod(final Object instance, final String methodName, final Object p1, final Object p2) {
-    return this.methods.get(methodName).call(instance, p1, p2);
+  public Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2) {
+    return this.twoParameterMethods.get(methodName).call(instance, p1, p2);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethod(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
-    return this.methods.get(methodName).call(instance, p1, p2, p3);
+  public Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
+    return this.threeParameterMethods.get(methodName).call(instance, p1, p2, p3);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethod(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return this.methods.get(methodName).call(instance, p1, p2, p3, p4);
+  public Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
+    return this.fourParameterMethods.get(methodName).call(instance, p1, p2, p3, p4);
   }
 
   /* (non-Javadoc)
@@ -298,35 +361,35 @@ public class InstanceReflectionHandler implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#call(java.lang.Object)
    */
-  public Object call(final Object instance) {
+  public Object callQuick(final Object instance) {
     return this.call.call(instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object)
    */
-  public Object call(final Object instance, final Object p1) {
+  public Object callQuick(final Object instance, final Object p1) {
     return this.call.call(instance, p1);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(final Object instance, final Object p1, final Object p2) {
+  public Object callQuick(final Object instance, final Object p1, final Object p2) {
     return this.call.call(instance, p1, p2);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(final Object instance, final Object p1, final Object p2, final Object p3) {
+  public Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3) {
     return this.call.call(instance, p1, p2, p3);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
+  public Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
     return this.call.call(instance, p1, p2, p3, p4);
   }
 

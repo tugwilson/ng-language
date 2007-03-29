@@ -2834,7 +2834,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1, Object p2, Object p3, Object p4) {
+  public Object callQuick(Object instance, Object p1, Object p2, Object p3, Object p4) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2842,7 +2842,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1, Object p2, Object p3) {
+  public Object callQuick(Object instance, Object p1, Object p2, Object p3) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2850,7 +2850,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1, Object p2) {
+  public Object callQuick(Object instance, Object p1, Object p2) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2858,7 +2858,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1) {
+  public Object callQuick(Object instance, Object p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2866,7 +2866,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object)
    */
-  public Object call(Object instance) {
+  public Object callQuick(Object instance) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -8690,7 +8690,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4) {
+  public Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -8698,7 +8698,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3) {
+  public Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -8706,7 +8706,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethod(Object instance, String methodName, Object p1, Object p2) {
+  public Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -8714,7 +8714,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object)
    */
-  public Object invokeMethod(Object instance, String methodName, Object p1) {
+  public Object invokeMethodQuick(Object instance, String methodName, Object p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -8722,7 +8722,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String)
    */
-  public Object invokeMethod(Object instance, String methodName) {
+  public Object invokeMethodQuick(Object instance, String methodName) {
     // TODO Auto-generated method stub
     return null;
   }

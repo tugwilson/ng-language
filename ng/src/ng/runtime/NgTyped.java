@@ -3600,10 +3600,10 @@ private final RuntimeMetaClass delegate;
    * @param p3
    * @param p4
    * @return
-   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1, Object p2, Object p3, Object p4) {
-    return this.delegate.call(this.instance, p1, p2, p3, p4);
+  public Object callQuick(Object instance, Object p1, Object p2, Object p3, Object p4) {
+    return this.delegate.callQuick(this.instance, p1, p2, p3, p4);
   }
 
   /**
@@ -3612,10 +3612,10 @@ private final RuntimeMetaClass delegate;
    * @param p2
    * @param p3
    * @return
-   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1, Object p2, Object p3) {
-    return this.delegate.call(this.instance, p1, p2, p3);
+  public Object callQuick(Object instance, Object p1, Object p2, Object p3) {
+    return this.delegate.callQuick(this.instance, p1, p2, p3);
   }
 
   /**
@@ -3623,20 +3623,20 @@ private final RuntimeMetaClass delegate;
    * @param p1
    * @param p2
    * @return
-   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1, Object p2) {
-    return this.delegate.call(this.instance, p1, p2);
+  public Object callQuick(Object instance, Object p1, Object p2) {
+    return this.delegate.callQuick(this.instance, p1, p2);
   }
 
   /**
    * @param instance
    * @param p1
    * @return
-   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1) {
-    return this.delegate.call(this.instance, p1);
+  public Object callQuick(Object instance, Object p1) {
+    return this.delegate.callQuick(this.instance, p1);
   }
 
   /**
@@ -3652,10 +3652,10 @@ private final RuntimeMetaClass delegate;
   /**
    * @param instance
    * @return
-   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object)
    */
-  public Object call(Object instance) {
-    return this.delegate.call(this.instance);
+  public Object callQuick(Object instance) {
+    return this.delegate.callQuick(this.instance);
   }
 
   /**
@@ -11068,10 +11068,10 @@ private final RuntimeMetaClass delegate;
    * @param p3
    * @param p4
    * @return
-   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4) {
-    return this.delegate.invokeMethod(this.instance, methodName, p1, p2, p3, p4);
+  public Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4) {
+    return this.delegate.invokeMethodQuick(this.instance, methodName, p1, p2, p3, p4);
   }
 
   /**
@@ -11081,10 +11081,10 @@ private final RuntimeMetaClass delegate;
    * @param p2
    * @param p3
    * @return
-   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethod(Object instance, String methodName, Object p1, Object p2, Object p3) {
-    return this.delegate.invokeMethod(this.instance, methodName, p1, p2, p3);
+  public Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3) {
+    return this.delegate.invokeMethodQuick(this.instance, methodName, p1, p2, p3);
   }
 
   /**
@@ -11093,10 +11093,10 @@ private final RuntimeMetaClass delegate;
    * @param p1
    * @param p2
    * @return
-   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethod(Object instance, String methodName, Object p1, Object p2) {
-    return this.delegate.invokeMethod(this.instance, methodName, p1, p2);
+  public Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2) {
+    return this.delegate.invokeMethodQuick(this.instance, methodName, p1, p2);
   }
 
   /**
@@ -11104,10 +11104,10 @@ private final RuntimeMetaClass delegate;
    * @param methodName
    * @param p1
    * @return
-   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, java.lang.Object)
    */
-  public Object invokeMethod(Object instance, String methodName, Object p1) {
-    return this.delegate.invokeMethod(this.instance, methodName, p1);
+  public Object invokeMethodQuick(Object instance, String methodName, Object p1) {
+    return this.delegate.invokeMethodQuick(this.instance, methodName, p1);
   }
 
   /**
@@ -11125,10 +11125,10 @@ private final RuntimeMetaClass delegate;
    * @param instance
    * @param methodName
    * @return
-   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String)
    */
-  public Object invokeMethod(Object instance, String methodName) {
-    return this.delegate.invokeMethod(this.instance, methodName);
+  public Object invokeMethodQuick(Object instance, String methodName) {
+    return this.delegate.invokeMethodQuick(this.instance, methodName);
   }
 
   /**
