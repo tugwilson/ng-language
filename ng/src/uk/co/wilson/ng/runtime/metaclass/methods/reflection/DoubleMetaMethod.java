@@ -1,8 +1,8 @@
-package uk.co.wilson.ng.runtime.metaclass.methods;
+package uk.co.wilson.ng.runtime.metaclass.methods.reflection;
 
 import java.lang.reflect.Method;
 
-import ng.runtime.NgFloat;
+import ng.runtime.NgDouble;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 /*
  * Created on 22 Mar 2007
@@ -27,11 +27,11 @@ import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
  * @author tug
  *
  */
-public class FloatMetaMethod extends UntypedMetaMethod {
+public class DoubleMetaMethod extends UntypedMetaMethod {
   /**
    * @param method
    */
-  public FloatMetaMethod(Method method) {
+  public DoubleMetaMethod(Method method) {
     super(method);
   }
 
@@ -44,7 +44,7 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgFloat(((Float)result).floatValue());
+    return new NgDouble(((Double)result).doubleValue());
   }
 
   /* (non-Javadoc)
@@ -56,7 +56,7 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgFloat(((Float)result).floatValue());
+    return new NgDouble(((Double)result).doubleValue());
   }
 
   /* (non-Javadoc)
@@ -68,7 +68,7 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgFloat(((Float)result).floatValue());
+    return new NgDouble(((Double)result).doubleValue());
   }
 
   /* (non-Javadoc)
@@ -80,7 +80,7 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgFloat(((Float)result).floatValue());
+    return new NgDouble(((Double)result).doubleValue());
   }
 
   /* (non-Javadoc)
@@ -92,7 +92,7 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgFloat(((Float)result).floatValue());
+    return new NgDouble(((Double)result).doubleValue());
   }
 
   /* (non-Javadoc)
@@ -104,6 +104,6 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgFloat(((Float)result).floatValue());
+    return new NgDouble(((Double)result).doubleValue());
   }
 }

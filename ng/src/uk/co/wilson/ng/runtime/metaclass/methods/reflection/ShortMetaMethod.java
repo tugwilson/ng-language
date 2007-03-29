@@ -1,8 +1,8 @@
-package uk.co.wilson.ng.runtime.metaclass.methods;
+package uk.co.wilson.ng.runtime.metaclass.methods.reflection;
 
 import java.lang.reflect.Method;
 
-import ng.runtime.NgDouble;
+import ng.runtime.NgShort;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 /*
  * Created on 22 Mar 2007
@@ -27,11 +27,11 @@ import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
  * @author tug
  *
  */
-public class DoubleMetaMethod extends UntypedMetaMethod {
+public class ShortMetaMethod extends UntypedMetaMethod {
   /**
    * @param method
    */
-  public DoubleMetaMethod(Method method) {
+  public ShortMetaMethod(Method method) {
     super(method);
   }
 
@@ -44,7 +44,7 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgDouble(((Double)result).doubleValue());
+    return new NgShort(((Short)result).shortValue());
   }
 
   /* (non-Javadoc)
@@ -56,7 +56,7 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgDouble(((Double)result).doubleValue());
+    return new NgShort(((Short)result).shortValue());
   }
 
   /* (non-Javadoc)
@@ -68,7 +68,7 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgDouble(((Double)result).doubleValue());
+    return new NgShort(((Short)result).shortValue());
   }
 
   /* (non-Javadoc)
@@ -80,7 +80,7 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgDouble(((Double)result).doubleValue());
+    return new NgShort(((Short)result).shortValue());
   }
 
   /* (non-Javadoc)
@@ -92,7 +92,7 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgDouble(((Double)result).doubleValue());
+    return new NgShort(((Short)result).shortValue());
   }
 
   /* (non-Javadoc)
@@ -104,6 +104,6 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgDouble(((Double)result).doubleValue());
+    return new NgShort(((Short)result).shortValue());
   }
 }

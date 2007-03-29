@@ -1,8 +1,8 @@
-package uk.co.wilson.ng.runtime.metaclass.methods;
+package uk.co.wilson.ng.runtime.metaclass.methods.reflection;
 
 import java.lang.reflect.Method;
 
-import ng.runtime.NgBoolean;
+import ng.runtime.NgFloat;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 /*
  * Created on 22 Mar 2007
@@ -27,11 +27,11 @@ import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
  * @author tug
  *
  */
-public class BooleanMetaMethod extends UntypedMetaMethod {
+public class FloatMetaMethod extends UntypedMetaMethod {
   /**
    * @param method
    */
-  public BooleanMetaMethod(Method method) {
+  public FloatMetaMethod(Method method) {
     super(method);
   }
 
@@ -44,11 +44,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    if (((Boolean)result).booleanValue()) {
-      return NgBoolean.TRUE;
-    } else {
-      return NgBoolean.FALSE;
-    }
+    return new NgFloat(((Float)result).floatValue());
   }
 
   /* (non-Javadoc)
@@ -60,11 +56,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    if (((Boolean)result).booleanValue()) {
-      return NgBoolean.TRUE;
-    } else {
-      return NgBoolean.FALSE;
-    }
+    return new NgFloat(((Float)result).floatValue());
   }
 
   /* (non-Javadoc)
@@ -76,11 +68,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    if (((Boolean)result).booleanValue()) {
-      return NgBoolean.TRUE;
-    } else {
-      return NgBoolean.FALSE;
-    }
+    return new NgFloat(((Float)result).floatValue());
   }
 
   /* (non-Javadoc)
@@ -92,11 +80,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    if (((Boolean)result).booleanValue()) {
-      return NgBoolean.TRUE;
-    } else {
-      return NgBoolean.FALSE;
-    }
+    return new NgFloat(((Float)result).floatValue());
   }
 
   /* (non-Javadoc)
@@ -108,11 +92,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    if (((Boolean)result).booleanValue()) {
-      return NgBoolean.TRUE;
-    } else {
-      return NgBoolean.FALSE;
-    }
+    return new NgFloat(((Float)result).floatValue());
   }
 
   /* (non-Javadoc)
@@ -124,10 +104,6 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    if (((Boolean)result).booleanValue()) {
-      return NgBoolean.TRUE;
-    } else {
-      return NgBoolean.FALSE;
-    }
+    return new NgFloat(((Float)result).floatValue());
   }
 }

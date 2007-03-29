@@ -1,8 +1,8 @@
-package uk.co.wilson.ng.runtime.metaclass.methods;
+package uk.co.wilson.ng.runtime.metaclass.methods.reflection;
 
 import java.lang.reflect.Method;
 
-import ng.runtime.NgLong;
+import ng.runtime.NgBoolean;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 /*
  * Created on 22 Mar 2007
@@ -27,11 +27,11 @@ import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
  * @author tug
  *
  */
-public class LongMetaMethod extends UntypedMetaMethod {
+public class BooleanMetaMethod extends UntypedMetaMethod {
   /**
    * @param method
    */
-  public LongMetaMethod(Method method) {
+  public BooleanMetaMethod(Method method) {
     super(method);
   }
 
@@ -44,7 +44,11 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgLong(((Long)result).longValue());
+    if (((Boolean)result).booleanValue()) {
+      return NgBoolean.TRUE;
+    } else {
+      return NgBoolean.FALSE;
+    }
   }
 
   /* (non-Javadoc)
@@ -56,7 +60,11 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgLong(((Long)result).longValue());
+    if (((Boolean)result).booleanValue()) {
+      return NgBoolean.TRUE;
+    } else {
+      return NgBoolean.FALSE;
+    }
   }
 
   /* (non-Javadoc)
@@ -68,7 +76,11 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgLong(((Long)result).longValue());
+    if (((Boolean)result).booleanValue()) {
+      return NgBoolean.TRUE;
+    } else {
+      return NgBoolean.FALSE;
+    }
   }
 
   /* (non-Javadoc)
@@ -80,7 +92,11 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgLong(((Long)result).longValue());
+    if (((Boolean)result).booleanValue()) {
+      return NgBoolean.TRUE;
+    } else {
+      return NgBoolean.FALSE;
+    }
   }
 
   /* (non-Javadoc)
@@ -92,7 +108,11 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgLong(((Long)result).longValue());
+    if (((Boolean)result).booleanValue()) {
+      return NgBoolean.TRUE;
+    } else {
+      return NgBoolean.FALSE;
+    }
   }
 
   /* (non-Javadoc)
@@ -104,6 +124,10 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgLong(((Long)result).longValue());
+    if (((Boolean)result).booleanValue()) {
+      return NgBoolean.TRUE;
+    } else {
+      return NgBoolean.FALSE;
+    }
   }
 }

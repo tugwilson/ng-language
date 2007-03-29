@@ -1,4 +1,4 @@
-package uk.co.wilson.ng.runtime.metaclass.methods;
+package uk.co.wilson.ng.runtime.metaclass.methods.reflection;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
