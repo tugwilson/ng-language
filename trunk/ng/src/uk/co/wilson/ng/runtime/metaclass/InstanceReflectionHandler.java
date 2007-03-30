@@ -215,13 +215,31 @@ public class InstanceReflectionHandler implements InstanceHandler {
          }
          
          switch(method.getParameterTypes().length) {
-           case 0:
-             this.zeroParameterMethods.put(method.getName(), metaMethod);
-             break;
+           case 0: {
+           final String name = method.getName();
            
-           case 1:
-             this.oneParameterMethods.put(method.getName(), metaMethod);
+             this.zeroParameterMethods.put(name, metaMethod);
+             
+             if (name.startsWith("get") && name.length() > 3) {
+               this.getPropertyMethods.put(name.substring(3, 4).toLowerCase() + name.substring(4), metaMethod);
+             } else if (name.startsWith("is") && name.length() > 2 && method.getReturnType() == boolean.class) {
+               this.getPropertyMethods.put(name.substring(2, 3).toLowerCase() + name.substring(3), metaMethod);
+             }
+             
              break;
+           }
+           
+           case 1: {
+           final String name = method.getName();
+             
+             this.oneParameterMethods.put(method.getName(), metaMethod);
+             
+             if (name.startsWith("set") && name.length() > 3) {
+               this.setPropertyMethods.put(name.substring(3, 4).toLowerCase() + name.substring(4), metaMethod);
+             }
+             
+             break;
+           }
            
            case 2:
              this.twoParameterMethods.put(method.getName(), metaMethod);
@@ -355,7 +373,11 @@ public class InstanceReflectionHandler implements InstanceHandler {
       }
     }
     
-    return result;
+    //
+    // TODO: review this behaviour
+    // if the method is not void we should propbably return the actual value returned
+    //
+    return instance;
   }
 
   /* (non-Javadoc)
