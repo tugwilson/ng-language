@@ -22,8 +22,12 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.lang.NgSystem;
-
-import ng.runtime.*;
+import ng.runtime.NgBoolean;
+import ng.runtime.NgByte;
+import ng.runtime.NgDouble;
+import ng.runtime.NgFloat;
+import ng.runtime.NgInt;
+import ng.runtime.NgLong;
 
 public class NgByteMetaClass extends RuntimeMetaClassImpl {
   public NgByteMetaClass() {

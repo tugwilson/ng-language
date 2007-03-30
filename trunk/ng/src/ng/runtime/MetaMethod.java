@@ -22,7 +22,13 @@ package ng.runtime;
  * @author tug
  *
  */
-public interface MetaMethod { 
+public interface MetaMethod {
+  /**
+   * @param metaMethod
+   * @return
+   */
+  MetaMethod addMetaMethod(MetaMethod metaMethod);
+  
   /**
    * @param instance
    * @param arguments

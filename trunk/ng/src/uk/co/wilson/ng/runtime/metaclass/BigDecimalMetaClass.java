@@ -22,8 +22,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.lang.NgSystem;
-
-import ng.runtime.*;
+import ng.runtime.NgBoolean;
+import ng.runtime.NgInt;
 
 public class BigDecimalMetaClass extends RuntimeMetaClassImpl {
   public BigDecimalMetaClass() {

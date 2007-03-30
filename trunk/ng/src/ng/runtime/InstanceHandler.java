@@ -1,4 +1,6 @@
 package ng.runtime;
+
+import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 /*
  * Created on 21 Mar 2007
  *
@@ -324,4 +326,56 @@ public interface InstanceHandler extends MetaClass {
    * @return
    */
   Object reverseGreaterThanOrEquals(Object lhs, Object rhs);
+  
+  final MetaMethod noMethod = new MetaMethod() {
+    
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#addMetaMethod(ng.runtime.MetaMethod)
+     */
+    public MetaMethod addMetaMethod(final MetaMethod metaMethod) {
+      return metaMethod;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+     */
+    public Object call(Object instance, Object p1, Object p2, Object p3, Object p4) {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+     */
+    public Object call(Object instance, Object p1, Object p2, Object p3) {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object)
+     */
+    public Object call(Object instance, Object p1, Object p2) {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object)
+     */
+    public Object call(Object instance, Object p1) {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object[])
+     */
+    public Object call(Object instance, Object[] arguments) {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#call(java.lang.Object)
+     */
+    public Object call(Object instance) {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+  };
 }
