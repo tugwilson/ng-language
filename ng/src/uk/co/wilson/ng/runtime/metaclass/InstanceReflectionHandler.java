@@ -438,9 +438,9 @@ public class InstanceReflectionHandler implements InstanceHandler {
     
     //
     // TODO: review this behaviour
-    // if the method is not void we should propbably return the actual value returned
+    // if the method is not void we should probably return the actual value returned
     //
-    return instance;
+    return newValue;
   }
 
   /* (non-Javadoc)
