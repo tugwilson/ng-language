@@ -8,6 +8,7 @@ import ng.runtime.NgDouble;
 import ng.runtime.NgFloat;
 import ng.runtime.NgInt;
 import ng.runtime.NgLong;
+import ng.runtime.NgNull;
 import ng.runtime.NgShort;
 
 /**
@@ -38,9 +39,81 @@ public class MethodCallTest extends TestCase {
       NgSystem.metaClassRegistry.getInternalMetaClass(o).doInvokeMethodQuick(o, "c4", null, null, null, null);
       assertTrue(o.c4Called);
       
+      assertTrue(((Integer)o.t1).intValue() == 1);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "t1")).intValue() == 1);
+      assertTrue(((Integer)o.t1).intValue() == 1);
+      
       assertFalse(o.cnCalled);
       NgSystem.metaClassRegistry.getInternalMetaClass(o).doInvokeMethod(o, "cn", new Object[]{null, null, null, null, null});
       assertTrue(o.cnCalled);
+      
+      assertTrue(((Integer)o.t1).intValue() == 1);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "t1", new Integer(2))).intValue() == 2);
+      assertTrue(((Integer)o.t1).intValue() == 2);
+      
+      assertTrue(((Integer)o.t1).intValue() == 2);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "t1")).intValue() == 2);
+      assertTrue(((Integer)o.t1).intValue() == 2);
+      
+      assertTrue(((Integer)o.t1).intValue() == 2);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetField(o, "t1", new Integer(3))).intValue() == 3);
+      assertTrue(((Integer)o.t1).intValue() == 3);
+      
+      assertTrue(((Integer)o.t1).intValue() == 3);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "t1")).intValue() == 3);
+      assertTrue(((Integer)o.t1).intValue() == 3);
+      
+      assertTrue(o.t2 == null);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "t2", new Integer(1))).intValue() == 1);
+      assertTrue(((Integer)o.t2).intValue() == 1);
+      
+      o.t2 = null;
+      assertTrue(o.t2 == null);
+      assertTrue(NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "t2") == null);
+      assertTrue(o.t2 == null);
+      
+      assertTrue(o.t2 == null);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetField(o, "t2", new Integer(2))).intValue() == 2);
+      assertTrue(((Integer)o.t2).intValue() == 2);
+      
+      o.t2 = null;
+      assertTrue(o.t2 == null);
+      assertTrue(NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetField(o, "t2") == null);
+      assertTrue(o.t2 == null);
+      
+      assertTrue(((Integer)o.t3).intValue() == 2);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "t3", new Integer(2))).intValue() == 2);
+      assertTrue(((Integer)o.t3).intValue() == 2);
+      
+      assertTrue(((Integer)o.t3).intValue() == 2);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "t3")).intValue() == 2);
+      assertTrue(((Integer)o.t3).intValue() == 2);
+      
+      assertTrue(((Integer)o.t3).intValue() == 2);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetField(o, "t3", new Integer(3))).intValue() == 3);
+      assertTrue(((Integer)o.t3).intValue() == 3);
+      
+      assertTrue(((Integer)o.t3).intValue() == 3);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "t3")).intValue() == 3);
+      assertTrue(((Integer)o.t3).intValue() == 3);
+      
+      assertTrue(o.t4 == null);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "t4", new Integer(1))).intValue() == 1);
+      assertTrue(((Integer)o.t4).intValue() == 1);
+      
+      o.t4 = null;
+      assertTrue(o.t4 == null);
+      assertTrue(NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "t4") == NgNull.NULL_OBJECT);
+      assertTrue(o.t4 == null);
+      
+      assertTrue(o.t4 == null);
+      assertTrue(((Integer)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetField(o, "t4", new Integer(2))).intValue() == 2);
+      assertTrue(((Integer)o.t4).intValue() == 2);
+      
+      o.t4 = null;
+      assertTrue(o.t4 == null);
+      assertTrue(NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetField(o, "t4") == NgNull.NULL_OBJECT);
+      assertTrue(o.t4 == null);
     }
   
   public void testBoolean() {
@@ -477,6 +550,11 @@ class TestVoidTarget {
   public boolean c4Called = false;
   public boolean cnCalled = false;
   
+  public Object t1 = new Integer(1);
+  public Object t2 = null;
+  public Integer t3 = new Integer(2);
+  public Integer t4 = null;
+  
   public void c0() {
     this.c0Called = true;
   }
@@ -499,6 +577,62 @@ class TestVoidTarget {
   
   public void cn(Object o1, Object o2, Object o3, Object o4, Object o5) {
     this.cnCalled = true;
+  }
+
+  /**
+   * @return the t1
+   */
+  public Object getT1() {
+    return this.t1;
+  }
+
+  /**
+   * @param t1 the t1 to set
+   */
+  public void setT1(Object t1) {
+    this.t1 = t1;
+  }
+
+  /**
+   * @return the t2
+   */
+  public Object getT2() {
+    return this.t2;
+  }
+
+  /**
+   * @param t2 the t2 to set
+   */
+  public void setT2(Object t2) {
+    this.t2 = t2;
+  }
+
+  /**
+   * @return the t3
+   */
+  public Integer getT3() {
+    return this.t3;
+  }
+
+  /**
+   * @param t3 the t3 to set
+   */
+  public void setT3(Integer t3) {
+    this.t3 = t3;
+  }
+
+  /**
+   * @return the t4
+   */
+  public Integer getT4() {
+    return this.t4;
+  }
+
+  /**
+   * @param t4 the t4 to set
+   */
+  public void setT4(Integer t4) {
+    this.t4 = t4;
   }
 }
 
