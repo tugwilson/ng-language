@@ -5,22 +5,21 @@ import java.lang.reflect.Method;
 
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
-import ng.runtime.MetaMethod;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.methods.BaseMetaMethod;
 
 /**
  * @author tug
  *
  */
-public class UntypedMetaMethod implements MetaMethod {
+public class UntypedMetaMethod extends BaseMetaMethod {
   private static final Object[] NO_PARAMS = new Object[]{};
   
   private final Method method;
-  private final int numberOfParameters;
   
   public UntypedMetaMethod(final Method method) {
+    super(method.getParameterTypes().length);
     this.method = method;
-    this.numberOfParameters = method.getParameterTypes().length;
   }
 
   /* (non-Javadoc)

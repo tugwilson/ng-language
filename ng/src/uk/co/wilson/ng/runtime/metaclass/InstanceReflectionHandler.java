@@ -49,8 +49,12 @@ public class InstanceReflectionHandler implements InstanceHandler {
   private static class MetaMethodMap extends HashMap<String, MetaMethod> {
     private static final long serialVersionUID = 1L;
 
-    public MetaMethod get(final Object key) {
-    final MetaMethod result = super.get(key);
+    /**
+     * @param key
+     * @return
+     */
+    public MetaMethod get(final Object methodName) {
+    final MetaMethod result = super.get(methodName);
     
       if (result == null) {
         return noMethod;
@@ -58,51 +62,21 @@ public class InstanceReflectionHandler implements InstanceHandler {
         return result;
       }
     }
+
+    /* (non-Javadoc)
+     * @see java.util.HashMap#put(java.lang.Object, java.lang.Object)
+     */
+    @Override
+    public MetaMethod put(final String methodName, final MetaMethod metaMethod) {
+    final MetaMethod oldMetaMethod = super.put(methodName, metaMethod);
+    
+      if (oldMetaMethod != null) {
+        super.put(methodName, oldMetaMethod.addMetaMethod(metaMethod));
+      }
+      
+      return oldMetaMethod;
+    }
   }
-  
-  private static final MetaMethod noMethod = new MetaMethod() {
-    /* (non-Javadoc)
-     * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
-     */
-    public Object call(Object instance, Object p1, Object p2, Object p3, Object p4) {
-      return RuntimeMetaClassImpl.NOT_CALLED;
-    }
-
-    /* (non-Javadoc)
-     * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
-     */
-    public Object call(Object instance, Object p1, Object p2, Object p3) {
-      return RuntimeMetaClassImpl.NOT_CALLED;
-    }
-
-    /* (non-Javadoc)
-     * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object)
-     */
-    public Object call(Object instance, Object p1, Object p2) {
-      return RuntimeMetaClassImpl.NOT_CALLED;
-    }
-
-    /* (non-Javadoc)
-     * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object)
-     */
-    public Object call(Object instance, Object p1) {
-      return RuntimeMetaClassImpl.NOT_CALLED;
-    }
-
-    /* (non-Javadoc)
-     * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object[])
-     */
-    public Object call(Object instance, Object[] arguments) {
-      return RuntimeMetaClassImpl.NOT_CALLED;
-    }
-
-    /* (non-Javadoc)
-     * @see ng.runtime.MetaMethod#call(java.lang.Object)
-     */
-    public Object call(Object instance) {
-      return RuntimeMetaClassImpl.NOT_CALLED;
-    }
-  };
   
   private final Class theClass;
   private final MetaMethod call = noMethod;
