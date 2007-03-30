@@ -22,6 +22,8 @@ package uk.co.wilson.ng.runtime.metaclass;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.metaclass.reflection.InstanceReflectionHandler;
+
 import ng.lang.NgSystem;
 import ng.runtime.InstanceHandler;
 import ng.runtime.InternalMetaClass;
