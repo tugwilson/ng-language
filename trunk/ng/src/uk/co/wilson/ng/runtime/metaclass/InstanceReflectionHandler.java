@@ -1,5 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +10,26 @@ import ng.runtime.InstanceHandler;
 import ng.runtime.MetaClass;
 import ng.runtime.MetaMethod;
 import ng.runtime.RuntimeMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetBooleanFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetByteFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetCharFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetDoubleFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetFloatFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetIntFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetLongFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetShortFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetTypedFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetUntypedFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetBooleanFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetByteFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetCharFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetDoubleFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetFloatFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetIntFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetLongFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetShortFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetTypedFieldMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetUntypedFieldMetaMethod;
 import uk.co.wilson.ng.runtime.metaclass.methods.reflection.BooleanMetaMethod;
 import uk.co.wilson.ng.runtime.metaclass.methods.reflection.ByteMetaMethod;
 import uk.co.wilson.ng.runtime.metaclass.methods.reflection.CharMetaMethod;
@@ -182,8 +203,10 @@ public class InstanceReflectionHandler implements InstanceHandler {
     this.theClass = theClass;
     
     final Method methods[] = theClass.getMethods();
+    final Field fields[] = theClass.getFields();
     
      Method.setAccessible(methods, true);
+     Field.setAccessible(fields, true);
       
      for (int i = 0; i != methods.length; i++) {
      final Method method = methods[i];
@@ -255,6 +278,46 @@ public class InstanceReflectionHandler implements InstanceHandler {
            
            default:
              this.multiParameterMethods.put(method.getName(), metaMethod);
+         }
+       }
+     }
+     
+     for (int i = 0; i != fields.length; i++) {
+     final Field field = fields[i];
+     
+       if (field.getDeclaringClass() == theClass) {
+       final Class fieldType = field.getType();
+       
+         if(fieldType == boolean.class) {
+           this.getFieldMethods.put(field.getName(), new GetBooleanFieldMetaMethod(field));
+           this.setFieldMethods.put(field.getName(), new SetBooleanFieldMetaMethod(field));
+         } else if (fieldType == char.class) {
+           this.getFieldMethods.put(field.getName(), new GetCharFieldMetaMethod(field));
+           this.setFieldMethods.put(field.getName(), new SetCharFieldMetaMethod(field));
+         } else if (fieldType == byte.class) {
+           this.getFieldMethods.put(field.getName(), new GetByteFieldMetaMethod(field));
+           this.setFieldMethods.put(field.getName(), new SetByteFieldMetaMethod(field));
+         } else if (fieldType == short.class) {
+           this.getFieldMethods.put(field.getName(), new GetShortFieldMetaMethod(field));
+           this.setFieldMethods.put(field.getName(), new SetShortFieldMetaMethod(field));
+         } else if (fieldType == int.class) {
+           this.getFieldMethods.put(field.getName(), new GetIntFieldMetaMethod(field));
+           this.setFieldMethods.put(field.getName(), new SetIntFieldMetaMethod(field));
+         } else if (fieldType == long.class) {
+           this.getFieldMethods.put(field.getName(), new GetLongFieldMetaMethod(field));
+           this.setFieldMethods.put(field.getName(), new SetLongFieldMetaMethod(field));
+         } else if (fieldType == float.class) {
+           this.getFieldMethods.put(field.getName(), new GetFloatFieldMetaMethod(field));
+           this.setFieldMethods.put(field.getName(), new SetFloatFieldMetaMethod(field));
+         } else if (fieldType == double.class) {
+           this.getFieldMethods.put(field.getName(), new GetDoubleFieldMetaMethod(field));
+           this.setFieldMethods.put(field.getName(), new SetDoubleFieldMetaMethod(field));
+         } else if (fieldType == Object.class) {
+           this.getFieldMethods.put(field.getName(), new GetUntypedFieldMetaMethod(field));
+           this.setFieldMethods.put(field.getName(), new SetUntypedFieldMetaMethod(field));
+         } else {
+           this.getFieldMethods.put(field.getName(), new GetTypedFieldMetaMethod(field));
+           this.setFieldMethods.put(field.getName(), new SetTypedFieldMetaMethod(field));
          }
        }
      }
