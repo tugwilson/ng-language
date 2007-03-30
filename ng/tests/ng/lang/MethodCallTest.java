@@ -69,6 +69,14 @@ public class MethodCallTest extends TestCase {
       assertFalse(o.cnCalled);
       assertTrue(((NgBoolean)NgSystem.metaClassRegistry.getInternalMetaClass(o).doInvokeMethod(o, "cn", new Object[]{null, null, null, null, null})).getBooleanValue() == o.res);
       assertTrue(o.cnCalled);
+      
+      assertFalse(o.value);
+      assertTrue(((NgBoolean)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "value")).getBooleanValue() == o.value);
+      assertFalse(o.value);
+      
+      assertFalse(o.value);
+      assertTrue(((TestBooleanTarget)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "value", NgBoolean.TRUE)) == o);
+      assertTrue(o.value);
     }
   
   public void testChar() {
@@ -97,6 +105,14 @@ public class MethodCallTest extends TestCase {
       assertFalse(o.cnCalled);
       assertTrue(((NgChar)NgSystem.metaClassRegistry.getInternalMetaClass(o).doInvokeMethod(o, "cn", new Object[]{null, null, null, null, null})).getCharValue() == o.res);
       assertTrue(o.cnCalled);
+      
+      assertTrue(o.value == (char)0);
+      assertTrue(((NgChar)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "value")).getCharValue() == o.value);
+      assertTrue(o.value == (char)0);
+      
+      assertTrue(o.value == (char)0);
+      assertTrue(((TestCharTarget)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "value", new NgChar((char)1))) == o);
+      assertTrue(o.value == (char)1);
     }
   
   public void testByte() {
@@ -125,6 +141,14 @@ public class MethodCallTest extends TestCase {
       assertFalse(o.cnCalled);
       assertTrue(((NgByte)NgSystem.metaClassRegistry.getInternalMetaClass(o).doInvokeMethod(o, "cn", new Object[]{null, null, null, null, null})).getByteValue() == o.res);
       assertTrue(o.cnCalled);
+      
+      assertTrue(o.value == (byte)0);
+      assertTrue(((NgByte)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "value")).getByteValue() == o.value);
+      assertTrue(o.value == (byte)0);
+      
+      assertTrue(o.value == (byte)0);
+      assertTrue(((TestByteTarget)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "value", new NgByte((byte)1))) == o);
+      assertTrue(o.value == (byte)1);
     }
   
   public void testShort() {
@@ -153,6 +177,14 @@ public class MethodCallTest extends TestCase {
       assertFalse(o.cnCalled);
       assertTrue(((NgShort)NgSystem.metaClassRegistry.getInternalMetaClass(o).doInvokeMethod(o, "cn", new Object[]{null, null, null, null, null})).getShortValue() == o.res);
       assertTrue(o.cnCalled);
+      
+      assertTrue(o.value == (short)0);
+      assertTrue(((NgShort)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "value")).getShortValue() == o.value);
+      assertTrue(o.value == (short)0);
+      
+      assertTrue(o.value == (short)0);
+      assertTrue(((TestShortTarget)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "value", new NgShort((short)1))) == o);
+      assertTrue(o.value == (short)1);
     }
   
   public void testInt() {
@@ -181,7 +213,15 @@ public class MethodCallTest extends TestCase {
       assertFalse(o.cnCalled);
       assertTrue(((NgInt)NgSystem.metaClassRegistry.getInternalMetaClass(o).doInvokeMethod(o, "cn", new Object[]{null, null, null, null, null})).getIntValue() == o.res);
       assertTrue(o.cnCalled);
-    }
+      
+      assertTrue(o.value == (int)0);
+      assertTrue(((NgInt)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "value")).getIntValue() == o.value);
+      assertTrue(o.value == (int)0);
+      
+      assertTrue(o.value == (int)0);
+      assertTrue(((TestIntTarget)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "value", new NgInt((int)1))) == o);
+      assertTrue(o.value == (int)1);
+ }
   
   public void testLong() {
     final TestLongTarget o = new TestLongTarget();
@@ -209,6 +249,14 @@ public class MethodCallTest extends TestCase {
       assertFalse(o.cnCalled);
       assertTrue(((NgLong)NgSystem.metaClassRegistry.getInternalMetaClass(o).doInvokeMethod(o, "cn", new Object[]{null, null, null, null, null})).getLongValue() == o.res);
       assertTrue(o.cnCalled);
+      
+      assertTrue(o.value == (long)0);
+      assertTrue(((NgLong)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "value")).getLongValue() == o.value);
+      assertTrue(o.value == (long)0);
+      
+      assertTrue(o.value == (long)0);
+      assertTrue(((TestLongTarget)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "value", new NgLong((long)1))) == o);
+      assertTrue(o.value == (long)1);
     }
   
   public void testFloat() {
@@ -237,6 +285,14 @@ public class MethodCallTest extends TestCase {
       assertFalse(o.cnCalled);
       assertTrue(((NgFloat)NgSystem.metaClassRegistry.getInternalMetaClass(o).doInvokeMethod(o, "cn", new Object[]{null, null, null, null, null})).getFloatValue() == o.res);
       assertTrue(o.cnCalled);
+      
+      assertTrue(o.value == (float)0);
+      assertTrue(((NgFloat)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "value")).getFloatValue() == o.value);
+      assertTrue(o.value == (float)0);
+      
+      assertTrue(o.value == (float)0);
+      assertTrue(((TestFloatTarget)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "value", new NgFloat((float)1))) == o);
+      assertTrue(o.value == (float)1);
     }
   
   public void testDouble() {
@@ -265,6 +321,14 @@ public class MethodCallTest extends TestCase {
       assertFalse(o.cnCalled);
       assertTrue(((NgDouble)NgSystem.metaClassRegistry.getInternalMetaClass(o).doInvokeMethod(o, "cn", new Object[]{null, null, null, null, null})).getDoubleValue() == o.res);
       assertTrue(o.cnCalled);
+      
+      assertTrue(o.value == (double)0);
+      assertTrue(((NgDouble)NgSystem.metaClassRegistry.getInternalMetaClass(o).doGetProperty(o, "value")).getDoubleValue() == o.value);
+      assertTrue(o.value == (double)0);
+      
+      assertTrue(o.value == (double)0);
+      assertTrue(((TestDoubleTarget)NgSystem.metaClassRegistry.getInternalMetaClass(o).doSetProperty(o, "value", new NgDouble((double)1))) == o);
+      assertTrue(o.value == (double)1);
     }
 }
 
@@ -311,6 +375,8 @@ class TestBooleanTarget {
   
   public final boolean res = true;
   
+  public boolean value = false;
+  
   public boolean c0() {
     this.c0Called = true;
     return res;
@@ -340,6 +406,20 @@ class TestBooleanTarget {
     this.cnCalled = true;
     return res;
  }
+
+  /**
+   * @return the value
+   */
+  public boolean isValue() {
+    return this.value;
+  }
+
+  /**
+   * @param value the value to set
+   */
+  public void setValue(boolean value) {
+    this.value = value;
+  }
 }
 
 class TestCharTarget {
@@ -351,6 +431,8 @@ class TestCharTarget {
   public boolean cnCalled = false;
   
   public final char res = 'a';
+  
+  public char value = 0;
   
   public char c0() {
     this.c0Called = true;
@@ -381,6 +463,20 @@ class TestCharTarget {
     this.cnCalled = true;
     return res;
  }
+
+  /**
+   * @return the value
+   */
+  public char getValue() {
+    return this.value;
+  }
+
+  /**
+   * @param val the value to set
+   */
+  public void setValue(char value) {
+    this.value = value;
+  }
 }
 
 class TestByteTarget {
@@ -392,6 +488,8 @@ class TestByteTarget {
   public boolean cnCalled = false;
   
   public final byte res = 'a';
+  
+  public byte value = 0;
   
   public byte c0() {
     this.c0Called = true;
@@ -422,6 +520,20 @@ class TestByteTarget {
     this.cnCalled = true;
     return res;
  }
+
+  /**
+   * @return the value
+   */
+  public byte getValue() {
+    return this.value;
+  }
+
+  /**
+   * @param value the value to set
+   */
+  public void setValue(byte value) {
+    this.value = value;
+  }
 }
 
 class TestShortTarget {
@@ -433,6 +545,8 @@ class TestShortTarget {
   public boolean cnCalled = false;
   
   public final short res = 'a';
+  
+  public short value = 0;
   
   public short c0() {
     this.c0Called = true;
@@ -463,6 +577,20 @@ class TestShortTarget {
     this.cnCalled = true;
     return res;
  }
+
+  /**
+   * @return the value
+   */
+  public short getValue() {
+    return this.value;
+  }
+
+  /**
+   * @param value the value to set
+   */
+  public void setValue(short value) {
+    this.value = value;
+  }
 }
 
 class TestIntTarget {
@@ -474,6 +602,8 @@ class TestIntTarget {
   public boolean cnCalled = false;
   
   public final int res = 'a';
+  
+  public int value = 0;
   
   public int c0() {
     this.c0Called = true;
@@ -504,6 +634,20 @@ class TestIntTarget {
     this.cnCalled = true;
     return res;
  }
+
+  /**
+   * @return the value
+   */
+  public int getValue() {
+    return this.value;
+  }
+
+  /**
+   * @param value the value to set
+   */
+  public void setValue(int value) {
+    this.value = value;
+  }
 }
 
 class TestLongTarget {
@@ -515,6 +659,8 @@ class TestLongTarget {
   public boolean cnCalled = false;
   
   public final long res = 'a';
+  
+  public long value = 0;
   
   public long c0() {
     this.c0Called = true;
@@ -545,6 +691,20 @@ class TestLongTarget {
     this.cnCalled = true;
     return res;
  }
+
+  /**
+   * @return the value
+   */
+  public long getValue() {
+    return this.value;
+  }
+
+  /**
+   * @param value the value to set
+   */
+  public void setValue(long value) {
+    this.value = value;
+  }
 }
 
 class TestFloatTarget {
@@ -556,6 +716,8 @@ class TestFloatTarget {
   public boolean cnCalled = false;
   
   public final float res = 'a';
+  
+  public float value = 0;
   
   public float c0() {
     this.c0Called = true;
@@ -586,6 +748,20 @@ class TestFloatTarget {
     this.cnCalled = true;
     return res;
  }
+
+  /**
+   * @return the value
+   */
+  public float getValue() {
+    return this.value;
+  }
+
+  /**
+   * @param value the value to set
+   */
+  public void setValue(float value) {
+    this.value = value;
+  }
 }
 
 class TestDoubleTarget {
@@ -597,6 +773,8 @@ class TestDoubleTarget {
   public boolean cnCalled = false;
   
   public final double res = 'a';
+  
+  public double value = 0;
   
   public double c0() {
     this.c0Called = true;
@@ -627,4 +805,18 @@ class TestDoubleTarget {
     this.cnCalled = true;
     return res;
  }
+
+  /**
+   * @return the value
+   */
+  public double getValue() {
+    return this.value;
+  }
+
+  /**
+   * @param value the value to set
+   */
+  public void setValue(double value) {
+    this.value = value;
+  }
 }
