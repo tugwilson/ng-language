@@ -18,7 +18,7 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
   private final Method method;
   
   public UntypedMetaMethod(final Method method) {
-    super(method.getParameterTypes().length);
+    super(method.getParameterTypes());
     this.method = method;
   }
 
