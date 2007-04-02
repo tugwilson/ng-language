@@ -46,6 +46,12 @@ public interface RuntimeMetaClass extends MetaClass {
   void setInternalMetaClass(InternalMetaClass internalMetaClass);
   
   /**
+   * @param parameterType
+   * @return
+   */
+  int calculateConversionCost(Class parameterType);
+  
+  /**
    * @param currentSelection
    * @param methodName
    * @param argumentMetaClasses

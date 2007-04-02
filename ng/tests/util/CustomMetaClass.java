@@ -19401,6 +19401,14 @@ class CustomMetaClass implements RuntimeMetaClass {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#calculateConversionCost(java.lang.Class)
+   */
+  public int calculateConversionCost(Class parameterType) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#invokeConstructor(java.lang.Class, java.lang.Object[])
    */
   public Object invokeConstructor(Class theClass, Object[] arguments) {

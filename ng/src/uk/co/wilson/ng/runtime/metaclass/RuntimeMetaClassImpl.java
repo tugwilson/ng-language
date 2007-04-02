@@ -168,6 +168,13 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   }
   
   /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#calculateConversionCost(java.lang.Class)
+   */
+  public int calculateConversionCost(final Class parameterType) {
+    return this.internalMetaClass.doCalculateConversionCost(parameterType);
+  }
+  
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#invokeConstructor(java.lang.Class, java.lang.Object[])
    */
   public final Object invokeConstructor(final Class theClass, final Object[] arguments) {

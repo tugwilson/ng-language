@@ -307,6 +307,14 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#calculateConversionCost(java.lang.Class)
+   */
+  public int calculateConversionCost(Class parameterType) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeConstructor(java.lang.Class, java.lang.Object[])
    */
   public Object invokeConstructor(final Class theClass, final Object[] arguments) {

@@ -11052,6 +11052,13 @@ private final RuntimeMetaClass delegate;
     throw new NgRuntimeException("Operation not allowed on NgTyped");
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#calculateConversionCost(java.lang.Class)
+   */
+  public int calculateConversionCost(final Class parameterType) {
+    return this.delegate.calculateConversionCost(parameterType);
+  }
+
   /**
    * @param theClass
    * @param arguments

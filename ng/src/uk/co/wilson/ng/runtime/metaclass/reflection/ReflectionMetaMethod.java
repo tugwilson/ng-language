@@ -46,8 +46,17 @@ public abstract class ReflectionMetaMethod extends BaseMetaMethod {
    * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass[])
    */
   public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final RuntimeMetaClass[] argumentMetaClasses) {
-    // TODO Calculate the match factor for the paremeters of this method
-    currentSelection.metaMethod = this;
+  int score = 0;
+  
+    for (int i = 0; i != argumentMetaClasses.length; i++) {
+      score += argumentMetaClasses[i].calculateConversionCost(this.parameterTypes[i]);
+    }
+    
+    if (currentSelection.score > score) {
+      currentSelection.score = score;
+      currentSelection.metaMethod = this;
+    }
+    
     return currentSelection;
   }
 }
