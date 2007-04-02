@@ -3,13 +3,13 @@ package uk.co.wilson.ng.runtime.metaclass.reflection.fields;
 import java.lang.reflect.Field;
 
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.methods.BaseMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.reflection.ReflectionMetaMethod;
 
 /**
  * @author John
  *
  */
-public class SetUntypedFieldMetaMethod extends BaseMetaMethod {
+public class SetUntypedFieldMetaMethod extends ReflectionMetaMethod {
   protected final Field field;
   
   public SetUntypedFieldMetaMethod(final Field field) {

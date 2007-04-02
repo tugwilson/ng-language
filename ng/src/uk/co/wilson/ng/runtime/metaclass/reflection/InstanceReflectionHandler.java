@@ -6,41 +6,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import ng.lang.NgRuntimeException;
+import ng.lang.NgSystem;
 import ng.runtime.InstanceHandler;
 import ng.runtime.MetaClass;
 import ng.runtime.MetaMethod;
 import ng.runtime.RuntimeMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetBooleanFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetByteFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetCharFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetDoubleFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetFloatFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetIntFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetLongFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetShortFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetTypedFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetUntypedFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetBooleanFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetByteFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetCharFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetDoubleFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetFloatFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetIntFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetLongFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetShortFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetTypedFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetUntypedFieldMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.methods.BooleanMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.methods.ByteMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.methods.CharMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.methods.DoubleMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.methods.FloatMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.methods.IntMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.methods.LongMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.methods.ShortMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.methods.TypedMetaMethod;
-import uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.reflection.fields.*;
+import uk.co.wilson.ng.runtime.metaclass.reflection.methods.*;
 
 /**
  * @author tug
@@ -80,6 +53,7 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
   
   private final Class theClass;
+  private final Class theSuperClass;
   private final MetaMethod call = noMethod;
   private final MetaMethod add = noMethod;
   private final MetaMethod reverseAdd = noMethod;
@@ -167,6 +141,9 @@ public class InstanceReflectionHandler implements InstanceHandler {
   private final Map<String, MetaMethod> setPropertyMethods = new MetaMethodMap();
   private final Map<String, MetaMethod> getFieldMethods = new MetaMethodMap();
   private final Map<String, MetaMethod> setFieldMethods = new MetaMethodMap();
+  
+  private RuntimeMetaClass superClassMetaClass;
+  private RuntimeMetaClass interfaceMetaClasses[];
 
   /**
    * @param theClass
@@ -176,9 +153,10 @@ public class InstanceReflectionHandler implements InstanceHandler {
    */
   public InstanceReflectionHandler(final Class theClass) {
     this.theClass = theClass;
+    this.theSuperClass = theClass.getSuperclass();
     
-    final Method methods[] = theClass.getMethods();
-    final Field fields[] = theClass.getFields();
+    final Method methods[] = theClass.getDeclaredMethods();
+    final Field fields[] = theClass.getDeclaredFields();
     
      Method.setAccessible(methods, true);
      Field.setAccessible(fields, true);
@@ -342,9 +320,42 @@ public class InstanceReflectionHandler implements InstanceHandler {
     if(arguments.length <= 4)
       throw new NgRuntimeException("Internal Error invokeMethod called with an array of " + arguments.length +" parameters");
     
-    return this.multiParameterMethods.get(methodName).call(instance, arguments);
+    final RuntimeMetaClass argumentMetaClasses[] = new RuntimeMetaClass[arguments.length];
+    
+    for (int i = 0; i != argumentMetaClasses.length; i++) {
+      argumentMetaClasses[i] = NgSystem.metaClassRegistry.getRuntimeMetaClass(arguments[i]);
+    }
+       
+    return selectMethod(this.multiParameterMethods.get(methodName).selectMethod(argumentMetaClasses), methodName, argumentMetaClasses).metaMethod.call(instance, arguments);
   }
 
+  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {    
+    if (this.theSuperClass != null && this.superClassMetaClass == null) {
+      this.superClassMetaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(this.theSuperClass);
+    }
+    
+    if (this.interfaceMetaClasses == null) {
+    final Class interfaces[] = this.theClass.getInterfaces();
+    
+      this.interfaceMetaClasses = new RuntimeMetaClass[interfaces.length];
+      
+      for (int i = 0; i != interfaces.length; i++) {
+        this.interfaceMetaClasses[i] = NgSystem.metaClassRegistry.getRuntimeMetaClass(interfaces[i]);
+      }
+    }
+    if (currentSelection.score != 0) {
+      for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
+        currentSelection = this.interfaceMetaClasses[i].selectMethod(currentSelection, methodName, argumentMetaClasses);
+      }
+      
+      if (this.theSuperClass != null) {
+        currentSelection = this.superClassMetaClass.selectMethod(currentSelection, methodName, argumentMetaClasses);
+      }
+    }
+    
+    return currentSelection;
+  }
+  
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String)
    */

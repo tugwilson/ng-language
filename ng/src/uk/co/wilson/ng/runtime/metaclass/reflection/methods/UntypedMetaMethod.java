@@ -6,13 +6,13 @@ import java.lang.reflect.Method;
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.methods.BaseMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.reflection.ReflectionMetaMethod;
 
 /**
  * @author tug
  *
  */
-public class UntypedMetaMethod extends BaseMetaMethod {
+public class UntypedMetaMethod extends ReflectionMetaMethod {
   private static final Object[] NO_PARAMS = new Object[]{};
   
   private final Method method;

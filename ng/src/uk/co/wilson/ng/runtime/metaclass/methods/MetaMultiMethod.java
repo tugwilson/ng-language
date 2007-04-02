@@ -3,8 +3,11 @@ package uk.co.wilson.ng.runtime.metaclass.methods;
 import java.util.LinkedList;
 import java.util.List;
 
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+
 import ng.runtime.InstanceHandler;
 import ng.runtime.MetaMethod;
+import ng.runtime.RuntimeMetaClass;
 
 /**
  * @author John
@@ -31,6 +34,24 @@ public class MetaMultiMethod implements MetaMethod {
    */
   public Object call(final Object instance, final Object[] arguments) {
     return selectMethod(arguments).call(instance, arguments);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.RuntimeMetaClass[])
+   */
+  public MetaMethodSelection selectMethod(final RuntimeMetaClass[] argumentMetaClasses) {
+    return this.selectMethod(new MetaMethodSelection(), argumentMetaClasses);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass[])
+   */
+  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final RuntimeMetaClass[] argumentMetaClasses) {
+    for (int i = 0; i != this.methodList.size(); i++) {
+      currentSelection = this.methodList.get(i).selectMethod(currentSelection, argumentMetaClasses);
+    }
+    
+    return currentSelection;
   }
 
   /* (non-Javadoc)

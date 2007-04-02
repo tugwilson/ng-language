@@ -22,6 +22,8 @@ package util;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+
 import ng.runtime.InternalMetaClass;
 import ng.runtime.MetaClass;
 import ng.runtime.RuntimeMetaClass;
@@ -19410,6 +19412,14 @@ class CustomMetaClass implements RuntimeMetaClass {
    * @see ng.runtime.MetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object[])
    */
   public Object invokeMethod(Object instance, String methodName, Object[] arguments) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
+   */
+  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses) {
     // TODO Auto-generated method stub
     return null;
   }
