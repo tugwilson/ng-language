@@ -20,18 +20,7 @@ package ng.lang;
 
 import ng.runtime.MetaClassRegistry;
 import ng.runtime.RuntimeMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.BigDecimalMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.BigIntegerMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.MetaClassRegistryImpl;
-import uk.co.wilson.ng.runtime.metaclass.NgBooleanMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.NgByteMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.NgCharMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.NgDoubleMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.NgFloatMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.NgIntMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.NgLongMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.NgShortMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.ObjectMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.*;
 
 public final class NgSystem {
   private NgSystem() {
