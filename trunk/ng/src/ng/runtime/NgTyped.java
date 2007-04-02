@@ -3,6 +3,8 @@ package ng.runtime;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
 
@@ -11119,6 +11121,13 @@ private final RuntimeMetaClass delegate;
    */
   public Object invokeMethod(Object instance, String methodName, Object[] arguments) {
     return this.delegate.invokeMethod(this.instance, methodName, arguments);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
+   */
+  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses) {
+    return this.delegate.selectMethod(currentSelection, methodName, argumentMetaClasses);
   }
 
   /**

@@ -22,6 +22,8 @@ package ng.runtime;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+
 /**
  * @author John Wilson tug@wilson.co.uk
  *
@@ -42,6 +44,14 @@ public interface RuntimeMetaClass extends MetaClass {
    * @param internalMetaClass
    */
   void setInternalMetaClass(InternalMetaClass internalMetaClass);
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param argumentMetaClasses
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
   
   /**
    * @param instance

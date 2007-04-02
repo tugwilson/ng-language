@@ -22,6 +22,8 @@ package ng.runtime;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+
 public interface InternalMetaClass {
   /**
    * @param instance
@@ -29,6 +31,10 @@ public interface InternalMetaClass {
    */
   Object getParamObject(Object instance);
   
+  /**
+   * @param theClass
+   * @return
+   */
   MetaClass doGetMetaClassFor(Class theClass);
 
   /**
@@ -51,6 +57,14 @@ public interface InternalMetaClass {
    * @return
    */
   Object doInvokeMethod(Object instance, String methodName, Object[] arguments);
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param argumentMetaClasses
+   * @return
+   */
+  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
 
   /**
    * @param instance

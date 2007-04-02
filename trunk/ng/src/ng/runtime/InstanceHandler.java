@@ -1,30 +1,22 @@
 package ng.runtime;
 
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
-/*
- * Created on 21 Mar 2007
- *
- * Copyright 2007 John G. Wilson
- *
- *   Licensed under the Apache License, Version 2.0 (the "License");
- *   you may not use this file except in compliance with the License.
- *   You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *   Unless required by applicable law or agreed to in writing, software
- *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- *
- */
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
 
 /**
  * @author tug
  *
  */
-public interface InstanceHandler extends MetaClass {  
+public interface InstanceHandler extends MetaClass {
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param argumentMetaClasses
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
+  
   /**
    * @param instance
    * @param methodName
@@ -369,6 +361,20 @@ public interface InstanceHandler extends MetaClass {
      */
     public Object call(Object instance, Object[] arguments) {
       return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.RuntimeMetaClass[])
+     */
+    public MetaMethodSelection selectMethod(RuntimeMetaClass[] argumentMetaClasses) {
+      return new MetaMethodSelection();
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass[])
+     */
+    public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass[] argumentMetaClasses) {
+      return currentSelection;
     }
 
     /* (non-Javadoc)

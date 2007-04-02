@@ -1,4 +1,6 @@
 package ng.runtime;
+
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
 /*
  * Created on 21 Mar 2007
  *
@@ -35,6 +37,10 @@ public interface MetaMethod {
    * @return
    */
   Object call(Object instance, Object[] arguments);
+  
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass[] argumentMetaClasses);
+  
+  MetaMethodSelection selectMethod(RuntimeMetaClass[] argumentMetaClasses);
   
   /**
    * @param instance
