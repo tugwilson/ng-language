@@ -23,6 +23,8 @@ import java.lang.reflect.Constructor;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
 import ng.runtime.InternalMetaClass;
@@ -207,6 +209,13 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     }
   }
   
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
+   */
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {
+    return this.internalMetaClass.doSelectMethod(currentSelection, methodName, argumentMetaClasses);
+  }
+
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String)
    */
