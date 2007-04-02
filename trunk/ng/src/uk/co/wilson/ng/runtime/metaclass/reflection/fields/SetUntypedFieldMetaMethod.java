@@ -13,7 +13,7 @@ public class SetUntypedFieldMetaMethod extends ReflectionMetaMethod {
   protected final Field field;
   
   public SetUntypedFieldMetaMethod(final Field field) {
-    super(1);
+    super(new Class[]{field.getClass()});
     this.field = field;
   }
   
