@@ -22,20 +22,10 @@ package uk.co.wilson.ng.runtime.metaclass;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.metaclass.reflection.InstanceReflectionHandler;
-
 import ng.lang.NgSystem;
-import ng.runtime.InstanceHandler;
-import ng.runtime.InternalMetaClass;
-import ng.runtime.MetaClass;
-import ng.runtime.NgBoolean;
-import ng.runtime.NgByte;
-import ng.runtime.NgChar;
-import ng.runtime.NgDouble;
-import ng.runtime.NgFloat;
-import ng.runtime.NgInt;
-import ng.runtime.NgLong;
-import ng.runtime.NgShort;
+import ng.runtime.*;
+import uk.co.wilson.ng.runtime.metaclass.reflection.InstanceReflectionHandler;
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
 
 public class InternalMetaClassImpl implements InternalMetaClass {
   final InstanceHandler instanceHandler;;
@@ -70,6 +60,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    */
   public Object doInvokeConstructor(final Class theClass, final Object[] arguments) {
     return this.instanceHandler.invokeConstructor(theClass, arguments);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
+   */
+  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses) {
+    return this.instanceHandler.selectMethod(currentSelection, methodName, argumentMetaClasses);
   }
 
   /**
