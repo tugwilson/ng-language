@@ -8,6 +8,11 @@ import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
  *
  */
 public interface InstanceHandler extends MetaClass {
+  /**
+   * @param parameterType
+   * @return
+   */
+  int calculateConversionCost(Class parameterType);
   
   /**
    * @param currentSelection

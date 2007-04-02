@@ -56,6 +56,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCalculateConversionCost(java.lang.Class)
+   */
+  public int doCalculateConversionCost(final Class parameterType) {
+   return this.instanceHandler.calculateConversionCost(parameterType);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doInvokeConstructor(java.lang.Class, java.lang.Object[])
    */
   public Object doInvokeConstructor(final Class theClass, final Object[] arguments) {

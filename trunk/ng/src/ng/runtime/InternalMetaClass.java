@@ -44,6 +44,12 @@ public interface InternalMetaClass {
   Class doGetTheClass(Object instance);
   
   /**
+   * @param parameterType
+   * @return
+   */
+  int doCalculateConversionCost(Class parameterType);
+  
+  /**
    * @param theClass 
    * @param arguments
    * @return
