@@ -84,7 +84,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
 
           if (metaClass == null) {        
             //
-            // If the class has a static ngMetaClass then usee this value as the MetaClass
+            // If the class has a static ngMetaClass then use this value as the MetaClass
             // The refection is an expensive operation so put the MetaClass in the thread local cache
             // to speed up subsequent fetches
             //
