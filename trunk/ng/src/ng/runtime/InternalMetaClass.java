@@ -72,35 +72,31 @@ public interface InternalMetaClass {
   MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
 
   /**
-   * @param instance
    * @param methodName
    * @return the result of invoking the method on the instance with no
    *         parameters.
    * @return
    */
-  Object doInvokeMethodQuick(Object instance, String methodName);
+  MetaMethod doGetMetaMethodQuick(String methodName);
 
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  Object doInvokeMethodQuick(Object instance, String methodName, Object p1);
+  MetaMethod doGetMetaMethodQuick(String methodName, Object p1);
 
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @param p2
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  Object doInvokeMethodQuick(Object instance, String methodName, Object p1, Object p2);
+  MetaMethod doGetMetaMethodQuick(String methodName, Object p1, Object p2);
 
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @param p2
@@ -108,17 +104,16 @@ public interface InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  Object doInvokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3);
+  MetaMethod doGetMetaMethodQuick(String methodName, Object p1, Object p2, Object p3);
 
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @param p2
    * @param p3
    * @return
    */
-  Object doInvokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4);
+  MetaMethod doGetMetaMethodQuick(String methodName, Object p1, Object p2, Object p3, Object p4);
 
   /**
    * @param instance

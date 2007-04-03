@@ -392,41 +392,36 @@ public interface InstanceHandler {
   MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
   
   /**
-   * @param instance
    * @param methodName
    * @return
    */
-  Object invokeMethodQuick(Object instance, String methodName);
+  MetaMethod getMetamethodQuick(String methodName);
   
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(Object instance, String methodName, Object p1);
+  MetaMethod getMetaMethodQuick(String methodName, Object p1);
   
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @param p2
    * @return
    */
-  Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2);
+  MetaMethod getMetaMethodMethodQuick(String methodName, Object p1, Object p2);
   
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @param p2
    * @param p3
    * @return
    */
-  Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3);
+  MetaMethod getMetaMethodQuick(String methodName, Object p1, Object p2, Object p3);
   
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @param p2
@@ -434,7 +429,7 @@ public interface InstanceHandler {
    * @param p4
    * @return
    */
-  Object invokeMethodQuick(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4);
+  MetaMethod getMetaMethodQuick(String methodName, Object p1, Object p2, Object p3, Object p4);
   
   /**
    * @param instance
