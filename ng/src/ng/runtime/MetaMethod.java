@@ -38,8 +38,17 @@ public interface MetaMethod {
    */
   Object call(Object instance, Object[] arguments);
   
+  /**
+   * @param currentSelection
+   * @param argumentMetaClasses
+   * @return
+   */
   MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass[] argumentMetaClasses);
   
+  /**
+   * @param argumentMetaClasses
+   * @return
+   */
   MetaMethodSelection selectMethod(RuntimeMetaClass[] argumentMetaClasses);
   
   /**

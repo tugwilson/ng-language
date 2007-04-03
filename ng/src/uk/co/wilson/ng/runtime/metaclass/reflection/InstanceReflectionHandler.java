@@ -341,10 +341,12 @@ public class InstanceReflectionHandler implements InstanceHandler {
       argumentMetaClasses[i] = NgSystem.metaClassRegistry.getRuntimeMetaClass(arguments[i]);
     }
        
-    return selectMethod(this.multiParameterMethods.get(methodName).selectMethod(argumentMetaClasses), methodName, argumentMetaClasses).metaMethod.call(instance, arguments);
+    return selectMethod(new MetaMethodSelection(), methodName, argumentMetaClasses).metaMethod.call(instance, arguments);
   }
 
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {    
+  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {
+    currentSelection = this.multiParameterMethods.get(methodName).selectMethod(currentSelection, argumentMetaClasses);
+    
     if (this.theSuperClass != null && this.superClassMetaClass == null) {
       this.superClassMetaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(this.theSuperClass);
     }
@@ -360,14 +362,16 @@ public class InstanceReflectionHandler implements InstanceHandler {
       this.interfaceMetaClasses = metaClasses;
     }
     
-    if (currentSelection.score != 0) {
-      for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-        currentSelection = this.interfaceMetaClasses[i].selectMethod(currentSelection, methodName, argumentMetaClasses);
-      }
+    if (currentSelection.score == 0) return currentSelection;
+    
+    for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
+      currentSelection = this.interfaceMetaClasses[i].selectMethod(currentSelection, methodName, argumentMetaClasses);
       
-      if (this.theSuperClass != null) {
-        currentSelection = this.superClassMetaClass.selectMethod(currentSelection, methodName, argumentMetaClasses);
-      }
+      if (currentSelection.score == 0) return currentSelection;
+    }
+    
+    if (this.theSuperClass != null) {
+      return this.superClassMetaClass.selectMethod(currentSelection, methodName, argumentMetaClasses);
     }
     
     return currentSelection;

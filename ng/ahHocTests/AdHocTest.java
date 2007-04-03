@@ -39,13 +39,16 @@ public class AdHocTest {
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1), t1})).getIntValue());
     System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{new NgLong(1), new NgLong(1), new NgLong(1), new NgLong(1), new NgLong(1)})).getLongValue());
     System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{new NgLong(1), new NgLong(1), new NgLong(1), new NgLong(1), t})).getLongValue());
+    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{new NgLong(1), new NgLong(1), new NgLong(1), new NgLong(1), new NgTyped(t1, T.class)})).getLongValue());
     System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{new NgLong(1), new NgLong(1), new NgLong(1), new NgLong(1), t1})).getLongValue());
     
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1)})).getIntValue());
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1), t})).getIntValue());
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1), new NgTyped(t1, T.class)})).getIntValue());
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1), t1})).getIntValue());
     System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{new NgLong(1), new NgLong(1), new NgLong(1), new NgLong(1), new NgLong(1)})).getLongValue());
     System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{new NgLong(1), new NgLong(1), new NgLong(1), new NgLong(1), t})).getLongValue());
+    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{new NgLong(1), new NgLong(1), new NgLong(1), new NgLong(1), new NgTyped(t1, T.class)})).getLongValue());
     System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{new NgLong(1), new NgLong(1), new NgLong(1), new NgLong(1), t1})).getLongValue());
   }
 }
