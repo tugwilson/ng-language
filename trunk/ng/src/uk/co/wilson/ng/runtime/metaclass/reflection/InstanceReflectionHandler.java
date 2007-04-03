@@ -284,8 +284,8 @@ public class InstanceReflectionHandler implements InstanceHandler {
     // TODO decide what to do here
     //      Do we return the MetaClass for the superclass?
     
-    if (this.theClass.isAssignableFrom(theClass)) {
-      return this;
+    if (theClass.isAssignableFrom(this.theClass)) {
+      return NgSystem.metaClassRegistry.getMetaClass(theClass);
     } else {
       throw new NgRuntimeException("cannot cast " + this.theClass.getName() + " to " + theClass.getName());
     }
@@ -296,7 +296,7 @@ public class InstanceReflectionHandler implements InstanceHandler {
    */
   public RuntimeMetaClass getRuntimeMetaClass() {
     // TODO: I'd really like not to have to do this
-    throw new NgRuntimeException("Internal Error: can't call getRuntimeMetaClasson InstanceHandler");
+    throw new NgRuntimeException("Internal Error: can't call getRuntimeMetaClass on InstanceHandler");
   }
 
   /**
@@ -351,13 +351,15 @@ public class InstanceReflectionHandler implements InstanceHandler {
     
     if (this.interfaceMetaClasses == null) {
     final Class interfaces[] = this.theClass.getInterfaces();
-    
-      this.interfaceMetaClasses = new RuntimeMetaClass[interfaces.length];
+    final RuntimeMetaClass[] metaClasses = new RuntimeMetaClass[interfaces.length];
       
       for (int i = 0; i != interfaces.length; i++) {
-        this.interfaceMetaClasses[i] = NgSystem.metaClassRegistry.getRuntimeMetaClass(interfaces[i]);
+        metaClasses[i] = NgSystem.metaClassRegistry.getRuntimeMetaClass(interfaces[i]);
       }
+      
+      this.interfaceMetaClasses = metaClasses;
     }
+    
     if (currentSelection.score != 0) {
       for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
         currentSelection = this.interfaceMetaClasses[i].selectMethod(currentSelection, methodName, argumentMetaClasses);
