@@ -77,13 +77,12 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   /**
-   * @param instance
    * @param methodName
    * @param arguments
    * @return
    */
-  public Object doInvokeMethod(final Object instance, final String methodName, final Object[] arguments) {
-    return this.instanceHandler.invokeMethod(instance, methodName, arguments);
+  public MetaMethod doGetMetaMethodFor(final String methodName, final Object[] arguments) {
+    return this.instanceHandler.getMetaMethodFor(methodName, arguments);
   }
 
   /**

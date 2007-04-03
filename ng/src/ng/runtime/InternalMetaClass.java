@@ -57,12 +57,11 @@ public interface InternalMetaClass {
   Object doInvokeConstructor(Class theClass, Object[] arguments);
 
   /**
-   * @param instance
    * @param methodName
    * @param arguments
    * @return
    */
-  Object doInvokeMethod(Object instance, String methodName, Object[] arguments);
+  MetaMethod doGetMetaMethodFor(String methodName, Object[] arguments);
   
   /**
    * @param currentSelection

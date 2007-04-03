@@ -214,7 +214,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
       return invokeMethodQuick(instance, methodName, arguments[0], arguments[1], arguments[2], arguments[3]);
 
     default:
-      final Object result = internalMetaClass.doInvokeMethod(instance, methodName, arguments);
+      final Object result = internalMetaClass.doGetMetaMethodFor(methodName, arguments).call(instance, arguments);
 
     // TODO: make this error more detailed.
     if (result == NOT_CALLED) throw new NgRuntimeException("The method " +  methodName + " is not found");
