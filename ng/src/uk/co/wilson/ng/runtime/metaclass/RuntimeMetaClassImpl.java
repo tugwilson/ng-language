@@ -231,6 +231,41 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String)
+   */
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName) {
+    return this.internalMetaClass.doSelectMethod(currentSelection, methodName);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1) {
+    return this.internalMetaClass.doSelectMethod(currentSelection, methodName, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
+    return this.internalMetaClass.doSelectMethod(currentSelection, methodName, p1, p2);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
+    return this.internalMetaClass.doSelectMethod(currentSelection, methodName, p1, p2, p3);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
+    return this.internalMetaClass.doSelectMethod(currentSelection, methodName, p1, p2, p3, p4);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String)
    */
   public final Object invokeMethodQuick(final Object instance, final String methodName) {

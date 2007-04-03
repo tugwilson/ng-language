@@ -67,6 +67,51 @@ public interface RuntimeMetaClass extends MetaClass {
   MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
   
   /**
+   * @param currentSelection
+   * @param methodName
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName);
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1);
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2);
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
+  
+  /**
    * @param instance
    * @param methodName
    * @return

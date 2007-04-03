@@ -59,4 +59,61 @@ public abstract class ReflectionMetaMethod extends BaseMetaMethod {
     
     return currentSelection;
   }
+  
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection) {
+    currentSelection.score = 0;
+    currentSelection.metaMethod = this;
+    
+    return currentSelection;
+  }
+  
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final RuntimeMetaClass p1) {
+  int score = p1.calculateConversionCost(this.parameterTypes[0]);
+    
+    if (currentSelection.score > score) {
+      currentSelection.score = score;
+      currentSelection.metaMethod = this;
+    }
+    
+    return currentSelection;
+  }
+  
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
+  int score = p1.calculateConversionCost(this.parameterTypes[0])
+              + p2.calculateConversionCost(this.parameterTypes[1]);
+    
+    if (currentSelection.score > score) {
+      currentSelection.score = score;
+      currentSelection.metaMethod = this;
+    }
+    
+    return currentSelection;
+  }
+  
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
+  int score = p1.calculateConversionCost(this.parameterTypes[0])
+              + p2.calculateConversionCost(this.parameterTypes[1])
+              + p3.calculateConversionCost(this.parameterTypes[2]);
+    
+    if (currentSelection.score > score) {
+      currentSelection.score = score;
+      currentSelection.metaMethod = this;
+    }
+    
+    return currentSelection;
+  }
+  
+  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
+  int score = p1.calculateConversionCost(this.parameterTypes[0])
+              + p2.calculateConversionCost(this.parameterTypes[1])
+              + p3.calculateConversionCost(this.parameterTypes[2])
+              + p4.calculateConversionCost(this.parameterTypes[3]);
+    
+    if (currentSelection.score > score) {
+      currentSelection.score = score;
+      currentSelection.metaMethod = this;
+    }
+    
+    return currentSelection;
+  }
 }

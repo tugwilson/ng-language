@@ -76,6 +76,41 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     return this.instanceHandler.selectMethod(currentSelection, methodName, argumentMetaClasses);
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String)
+   */
+  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName) {
+    return this.instanceHandler.selectMethod(currentSelection, methodName);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1) {
+    return this.instanceHandler.selectMethod(currentSelection, methodName);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2) {
+    return this.instanceHandler.selectMethod(currentSelection, methodName, p1, p2);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3) {
+    return this.instanceHandler.selectMethod(currentSelection, methodName, p1, p2, p3);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4) {
+    return this.instanceHandler.selectMethod(currentSelection, methodName, p1, p2, p3, p4);
+  }
+
   /**
    * @param methodName
    * @param arguments
@@ -92,7 +127,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return
    */
   public MetaMethod doGetMetaMethodQuick(final String methodName) {
-    return this.instanceHandler.getMetamethodQuick(methodName);
+    return this.instanceHandler.getMetaMethodQuick(methodName);
   }
 
   /**
