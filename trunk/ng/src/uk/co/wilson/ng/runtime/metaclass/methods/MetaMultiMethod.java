@@ -49,6 +49,8 @@ public class MetaMultiMethod implements MetaMethod {
   public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final RuntimeMetaClass[] argumentMetaClasses) {
     for (int i = 0; i != this.methodList.size(); i++) {
       currentSelection = this.methodList.get(i).selectMethod(currentSelection, argumentMetaClasses);
+      
+      if (currentSelection.score == 0) return currentSelection;
     }
     
     return currentSelection;
