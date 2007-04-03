@@ -378,38 +378,38 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String)
    */
-  public Object invokeMethodQuick(final Object instance, final String methodName) {
-    return this.zeroParameterMethods.get(methodName).call(instance);
+  public MetaMethod getMetamethodQuick(final String methodName) {
+    return this.zeroParameterMethods.get(methodName);
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object)
    */
-  public Object invokeMethodQuick(final Object instance, final String methodName, final Object p1) {
-    return this.oneParameterMethods.get(methodName).call(instance, p1);
+  public MetaMethod getMetaMethodQuick(final String methodName, final Object p1) {
+    return this.oneParameterMethods.get(methodName);
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2) {
-    return this.twoParameterMethods.get(methodName).call(instance, p1, p2);
+  public MetaMethod getMetaMethodMethodQuick(final String methodName, final Object p1, final Object p2) {
+    return this.twoParameterMethods.get(methodName);
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
-    return this.threeParameterMethods.get(methodName).call(instance, p1, p2, p3);
+  public MetaMethod getMetaMethodQuick(final String methodName, final Object p1, final Object p2, final Object p3) {
+    return this.threeParameterMethods.get(methodName);
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return this.fourParameterMethods.get(methodName).call(instance, p1, p2, p3, p4);
+  public MetaMethod getMetaMethodQuick(final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
+    return this.fourParameterMethods.get(methodName);
   }
 
   /* (non-Javadoc)

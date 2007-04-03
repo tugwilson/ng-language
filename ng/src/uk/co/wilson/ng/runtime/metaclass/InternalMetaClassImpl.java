@@ -86,41 +86,37 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   /**
-   * @param instance
    * @param methodName
    * @return the result of invoking the method on the instance with no
    *         parameters.
    * @return
    */
-  public Object doInvokeMethodQuick(final Object instance, final String methodName) {
-    return this.instanceHandler.invokeMethodQuick(instance, methodName);
+  public MetaMethod doGetMetaMethodQuick(final String methodName) {
+    return this.instanceHandler.getMetamethodQuick(methodName);
   }
 
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  public Object doInvokeMethodQuick(final Object instance, final String methodName, final Object p1) {
-    return this.instanceHandler.invokeMethodQuick(instance, methodName, p1);
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final Object p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @param p2
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  public Object doInvokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2) {
-    return this.instanceHandler.invokeMethodQuick(instance, methodName, p1, p2);
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final Object p1, final Object p2) {
+    return this.instanceHandler.getMetaMethodMethodQuick(methodName, p1, p2);
   }
 
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @param p2
@@ -128,20 +124,19 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  public Object doInvokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
-    return this.instanceHandler.invokeMethodQuick(instance, methodName, p1, p2, p3);
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final Object p1, final Object p2, final Object p3) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1, p2, p3);
   }
 
   /**
-   * @param instance
    * @param methodName
    * @param p1
    * @param p2
    * @param p3
    * @return
    */
-  public Object doInvokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return this.instanceHandler.invokeMethodQuick(instance, methodName, p1, p2, p3, p4);
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1, p2, p3, p4);
   }
 
   /**
