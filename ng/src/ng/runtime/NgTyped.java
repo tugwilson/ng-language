@@ -23,12 +23,19 @@ public class NgTyped extends NgBaseObject {
 class NgTypedMetaClass implements RuntimeMetaClass {
 private final Object instance;
 private final Class type;
-private final MetaClass delegate;
+private final RuntimeMetaClass delegate;
   
   public NgTypedMetaClass(final Object instance, final Class type) {
     this.instance = instance;
     this.type = type;
-    this.delegate = NgSystem.metaClassRegistry.getMetaClass(instance).getMetaClassFor(type);
+    this.delegate = NgSystem.metaClassRegistry.getMetaClass(instance).getMetaClassFor(type).getRuntimeMetaClass();
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#getParamObject(java.lang.Object)
+   */
+  public Object getParamObject(Object instance) {
+    return this.delegate.getParamObject(this.instance);
   }
 
   /* (non-Javadoc)

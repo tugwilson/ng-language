@@ -97,6 +97,13 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   }
   
   /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#getParamObject(java.lang.Object)
+   */
+  public Object getParamObject(final Object instance) {
+    return this.internalMetaClass.doGetParamObject(instance);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#getMetaClassFor(java.lang.Class)
    */
   public MetaClass getMetaClassFor(final Class theClass) {
