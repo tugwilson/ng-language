@@ -329,9 +329,9 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object[])
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object[])
    */
-  public Object invokeMethod(final Object instance, final String methodName, final Object[] arguments) {
+  public MetaMethod getMetaMethodFor(final String methodName, final Object[] arguments) {
     if(arguments.length <= 4)
       throw new NgRuntimeException("Internal Error invokeMethod called with an array of " + arguments.length +" parameters");
     
@@ -341,7 +341,7 @@ public class InstanceReflectionHandler implements InstanceHandler {
       argumentMetaClasses[i] = NgSystem.metaClassRegistry.getRuntimeMetaClass(arguments[i]);
     }
        
-    return selectMethod(new MetaMethodSelection(), methodName, argumentMetaClasses).metaMethod.call(instance, arguments);
+    return selectMethod(new MetaMethodSelection(), methodName, argumentMetaClasses).metaMethod;
   }
 
   public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {
