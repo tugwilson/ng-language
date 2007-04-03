@@ -72,6 +72,51 @@ public interface InternalMetaClass {
   MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
 
   /**
+   * @param currentSelection
+   * @param methodName
+   * @return
+   */
+  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName);
+
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1);
+
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @return
+   */
+  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2);
+
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
+
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
+
+  /**
    * @param methodName
    * @return the result of invoking the method on the instance with no
    *         parameters.

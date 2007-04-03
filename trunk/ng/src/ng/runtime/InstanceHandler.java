@@ -392,10 +392,55 @@ public interface InstanceHandler {
   MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
   
   /**
+   * @param currentSelection
    * @param methodName
    * @return
    */
-  MetaMethod getMetamethodQuick(String methodName);
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName);
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1);
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2);
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
+  
+  /**
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
+  
+  /**
+   * @param methodName
+   * @return
+   */
+  MetaMethod getMetaMethodQuick(String methodName);
   
   /**
    * @param methodName
@@ -737,6 +782,41 @@ public interface InstanceHandler {
      */
     public MetaMethodSelection selectMethod(RuntimeMetaClass[] argumentMetaClasses) {
       return new MetaMethodSelection();
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection)
+     */
+    public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection) {
+      return currentSelection;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass)
+     */
+    public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass p1) {
+      return currentSelection;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+     */
+    public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2) {
+      return currentSelection;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+     */
+    public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3) {
+      return currentSelection;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+     */
+    public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4) {
+      return currentSelection;
     }
 
     /* (non-Javadoc)

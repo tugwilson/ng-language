@@ -18,7 +18,7 @@ import ng.runtime.NgShort;
 public class MethodCallTest extends TestCase {
   public void testVoid() {
     final TestVoidTarget o = new TestVoidTarget();
-    
+   
       assertFalse(o.c0Called);
       NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c0");
       assertTrue(o.c0Called);

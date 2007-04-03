@@ -33,6 +33,8 @@ public class AdHocTest {
     final Object t = new T();
     final Object t1 = new T1();
     
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethodQuick(t, "foo")).getIntValue());
+    
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1)})).getIntValue());
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1), t})).getIntValue());
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1), new NgTyped(t1, T.class)})).getIntValue());
@@ -55,6 +57,10 @@ public class AdHocTest {
 
 
 class T {
+  public int foo() {
+    return -1;
+  }
+  
   public int foo(int a, int b, int c, int d, int e) {
     return a + b + c + d + e;
   }

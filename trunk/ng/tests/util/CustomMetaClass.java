@@ -19441,6 +19441,46 @@ class CustomMetaClass implements RuntimeMetaClass {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String)
+   */
+  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#isCase(java.lang.Object, java.lang.Object)
    */
   public Object isCase(Object instance, Object rhs) {
