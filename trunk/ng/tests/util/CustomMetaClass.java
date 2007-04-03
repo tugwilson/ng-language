@@ -36,6 +36,14 @@ public
 class CustomMetaClass implements RuntimeMetaClass {
 
   /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#getParamObject(java.lang.Object)
+   */
+  public Object getParamObject(Object instance) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#getMetaClassFor(java.lang.Class)
    */
   public MetaClass getMetaClassFor(Class theClass) {

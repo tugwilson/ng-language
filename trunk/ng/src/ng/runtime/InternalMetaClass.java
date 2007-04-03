@@ -29,7 +29,7 @@ public interface InternalMetaClass {
    * @param instance
    * @return the Object to be used whan passing this instance as a parameter
    */
-  Object getParamObject(Object instance);
+  Object doGetParamObject(Object instance);
   
   /**
    * @param theClass

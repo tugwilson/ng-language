@@ -33,7 +33,7 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
     for (int i = 0; i != arguments.length; i++) {
     final Object p = arguments[i];
     
-      actualParams[i] = NgSystem.metaClassRegistry.getInternalMetaClass(p).getParamObject(p);
+      actualParams[i] = NgSystem.metaClassRegistry.getRuntimeMetaClass(p).getParamObject(p);
     }
     
     try {
@@ -71,7 +71,7 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
     if (this.numberOfParameters != 1) return RuntimeMetaClassImpl.NOT_CALLED;
     
     try {
-      return this.method.invoke(instance, new Object[]{NgSystem.metaClassRegistry.getInternalMetaClass(p1).getParamObject(p1)});
+      return this.method.invoke(instance, new Object[]{NgSystem.metaClassRegistry.getRuntimeMetaClass(p1).getParamObject(p1)});
     } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     } catch (final IllegalAccessException e) {
@@ -88,8 +88,8 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
     if (this.numberOfParameters != 2) return RuntimeMetaClassImpl.NOT_CALLED;
         
     try {
-      return this.method.invoke(instance, new Object[]{NgSystem.metaClassRegistry.getInternalMetaClass(p1).getParamObject(p1),
-                                                       NgSystem.metaClassRegistry.getInternalMetaClass(p2).getParamObject(p2)});
+      return this.method.invoke(instance, new Object[]{NgSystem.metaClassRegistry.getRuntimeMetaClass(p1).getParamObject(p1),
+                                                       NgSystem.metaClassRegistry.getRuntimeMetaClass(p2).getParamObject(p2)});
     } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     } catch (final IllegalAccessException e) {
@@ -106,9 +106,9 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
     if (this.numberOfParameters != 3) return RuntimeMetaClassImpl.NOT_CALLED;
     
     try {
-      return this.method.invoke(instance, new Object[]{NgSystem.metaClassRegistry.getInternalMetaClass(p1).getParamObject(p1),
-                                                       NgSystem.metaClassRegistry.getInternalMetaClass(p2).getParamObject(p2),
-                                                       NgSystem.metaClassRegistry.getInternalMetaClass(p3).getParamObject(p3)});
+      return this.method.invoke(instance, new Object[]{NgSystem.metaClassRegistry.getRuntimeMetaClass(p1).getParamObject(p1),
+                                                       NgSystem.metaClassRegistry.getRuntimeMetaClass(p2).getParamObject(p2),
+                                                       NgSystem.metaClassRegistry.getRuntimeMetaClass(p3).getParamObject(p3)});
     } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     } catch (final IllegalAccessException e) {
@@ -125,10 +125,10 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
     if (this.numberOfParameters != 4) return RuntimeMetaClassImpl.NOT_CALLED;
     
     try {
-      return this.method.invoke(instance, new Object[]{NgSystem.metaClassRegistry.getInternalMetaClass(p1).getParamObject(p1),
-                                                       NgSystem.metaClassRegistry.getInternalMetaClass(p2).getParamObject(p2),
-                                                       NgSystem.metaClassRegistry.getInternalMetaClass(p3).getParamObject(p3),
-                                                       NgSystem.metaClassRegistry.getInternalMetaClass(p4).getParamObject(p4)});
+      return this.method.invoke(instance, new Object[]{NgSystem.metaClassRegistry.getRuntimeMetaClass(p1).getParamObject(p1),
+                                                       NgSystem.metaClassRegistry.getRuntimeMetaClass(p2).getParamObject(p2),
+                                                       NgSystem.metaClassRegistry.getRuntimeMetaClass(p3).getParamObject(p3),
+                                                       NgSystem.metaClassRegistry.getRuntimeMetaClass(p4).getParamObject(p4)});
     } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     } catch (final IllegalAccessException e) {
