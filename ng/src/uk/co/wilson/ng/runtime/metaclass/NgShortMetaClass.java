@@ -39,12 +39,48 @@ class NgShortInternalMetaClass extends InternalMetaClassImpl {
   public NgShortInternalMetaClass(final Class theClass) {
     super(theClass);
   }
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doCalculateConversionCost(java.lang.Class)
+   */
+  @Override
+  public int doCalculateConversionCost(final Class parameterType) {
+    if (parameterType == short.class) return 0;
+    
+    if (parameterType == int.class) return 1;
+    
+    if (parameterType == long.class) return 2;
+    
+    if (parameterType == BigInteger.class) return 3;
+    
+    if (parameterType == float.class) return 4;
+    
+    if (parameterType == double.class) return 5;
+    
+    if (parameterType == BigDecimal.class) return 6;
+    
+    return super.doCalculateConversionCost(parameterType);
+  }
 
   /* (non-Javadoc)
    * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetParamObject(java.lang.Object, java.lang.Class)
    */
-  public Object doGetParamObject(final Object instance, final Class theClass) {
-    return new Short(((NgShort)instance).getShortValue());
+  @Override
+ public Object doGetParamObject(final Object instance, final Class parameterType) {
+    if (parameterType == short.class) return new Short(((NgShort)instance).getShortValue());
+    
+    if (parameterType == int.class) return new Integer(((NgShort)instance).getShortValue());
+    
+    if (parameterType == long.class) return new Long(((NgShort)instance).getShortValue());
+    
+    if (parameterType == BigInteger.class) return BigInteger.valueOf(((NgShort)instance).getShortValue());
+    
+    if (parameterType == float.class) return new Float(((NgShort)instance).getShortValue());
+    
+    if (parameterType == double.class) return new Double(((NgShort)instance).getShortValue());
+    
+    if (parameterType == BigDecimal.class) return new BigDecimal(((NgShort)instance).getShortValue());
+    
+    return super.doGetParamObject(instance, parameterType);
   }
 
   public Object doComplement(final int instance) {
