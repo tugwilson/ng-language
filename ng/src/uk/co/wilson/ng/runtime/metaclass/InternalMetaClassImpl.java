@@ -973,17 +973,35 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doAddEquals(final Object lhs, final Object rhs) {
-    final Object result = this.instanceHandler.addEquals(lhs, rhs);
+  Object result = this.instanceHandler.add(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAddEquals(lhs, rhs);
-    } else {
-      return result;
+      result = this.instanceHandler.getMetaMethodQuick("plusEquals", rhs).call(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAdd(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doAdd(lhs, rhs);
+        }
+      }
     }
+
+    return result;
   }
   
   public Object doReverseAddEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseAddEquals(lhs, rhs);
+  Object result = this.instanceHandler.reverseAdd(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      result = this.instanceHandler.getMetaMethodQuick("reversePlusEquals", rhs).call(rhs, lhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return doReverseAdd(lhs, rhs);
+      }
+    }
+
+    return result;
   }
 
   //

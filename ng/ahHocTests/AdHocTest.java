@@ -45,6 +45,11 @@ public class AdHocTest {
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(int1).add(int1, t)).getIntValue());
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(int1).add(int1, t1)).getIntValue());
     
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).addEquals(t, new NgInt(1))).getIntValue());
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).addEquals(t1, new NgInt(1))).getIntValue());
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(int1).addEquals(int1, t)).getIntValue());
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(int1).addEquals(int1, t1)).getIntValue());
+    
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethodQuick(t, "foo")).getIntValue());
     
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethodQuick((I)t1, "foo")).getIntValue());
