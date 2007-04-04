@@ -30,10 +30,11 @@ import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
  */
 public interface RuntimeMetaClass extends MetaClass {
   /**
-   * @param instance
+   * @param the actual parameter
+   * @param the required type
    * @return the Object to be used whan passing this instance as a parameter
    */
-  Object getParamObject(Object instance);
+  Object getParamObject(Object instance, Class theClass);
   
   
   /**
