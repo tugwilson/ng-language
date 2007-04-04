@@ -458,7 +458,7 @@ public class InstanceReflectionHandler implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object, java.lang.Object)
    */
-  public MetaMethod getMetaMethodMethodQuick(final String methodName, final Object p1, final Object p2) {
+  public MetaMethod getMetaMethodQuick(final String methodName, final Object p1, final Object p2) {
     return selectMethod(new MetaMethodSelection(), methodName,
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p1),
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p2)).metaMethod;
@@ -685,14 +685,38 @@ public class InstanceReflectionHandler implements InstanceHandler {
    * @see ng.runtime.MetaClass#add(java.lang.Object, java.lang.Object)
    */
   public Object add(final Object lhs, final Object rhs) {
-    return this.add.call(lhs, rhs);
+    setUpMetaClasses();
+    
+    for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
+    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doAdd(lhs, rhs);
+      
+      if (result != RuntimeMetaClassImpl.NOT_CALLED) return result;
+    }
+    
+    if (this.theSuperClass != null) {
+      return this.superClassMetaClass.getInternalMetaClass().doAdd(lhs, rhs);
+    } else {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseAdd(java.lang.Object, java.lang.Object)
    */
   public Object reverseAdd(final Object lhs, final Object rhs) {
-    return this.reverseAdd.call(rhs, lhs);
+    setUpMetaClasses();
+    
+    for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
+    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doReverseAdd(lhs, rhs);
+      
+      if (result != RuntimeMetaClassImpl.NOT_CALLED) return result;
+    }
+    
+    if (this.theSuperClass != null) {
+      return this.superClassMetaClass.getInternalMetaClass().doReverseAdd(lhs, rhs);
+    } else {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
   }
 
   /* (non-Javadoc)
