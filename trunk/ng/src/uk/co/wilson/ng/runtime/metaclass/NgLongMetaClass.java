@@ -38,12 +38,40 @@ class NgLongInternalMetaClass extends InternalMetaClassImpl {
   public NgLongInternalMetaClass(final Class theClass) {
     super(theClass);
   }
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doCalculateConversionCost(java.lang.Class)
+   */
+  @Override
+  public int doCalculateConversionCost(final Class parameterType) {
+    if (parameterType == long.class) return 0;
+    
+    if (parameterType == BigInteger.class) return 1;
+    
+    if (parameterType == float.class) return 2;
+    
+    if (parameterType == double.class) return 3;
+    
+    if (parameterType == BigDecimal.class) return 4;
+    
+    return super.doCalculateConversionCost(parameterType);
+  }
 
   /* (non-Javadoc)
    * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetParamObject(java.lang.Object, java.lang.Class)
    */
-  public Object doGetParamObject(final Object instance, final Class theClass) {
-    return new Long(((NgLong)instance).getLongValue());
+  @Override
+ public Object doGetParamObject(final Object instance, final Class parameterType) {
+    if (parameterType == long.class) return new Long(((NgLong)instance).getLongValue());
+    
+    if (parameterType == BigInteger.class) return BigInteger.valueOf(((NgLong)instance).getLongValue());
+    
+    if (parameterType == float.class) return new Float(((NgLong)instance).getLongValue());
+    
+    if (parameterType == double.class) return new Double(((NgLong)instance).getLongValue());
+    
+    if (parameterType == BigDecimal.class) return new BigDecimal(((NgLong)instance).getLongValue());
+    
+    return super.doGetParamObject(instance, parameterType);
   }
 
   public Object doComplement(final long instance) {

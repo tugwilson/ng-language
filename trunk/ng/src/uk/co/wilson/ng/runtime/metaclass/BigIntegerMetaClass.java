@@ -37,6 +37,58 @@ class BigIntegerInternalMetaClass extends InternalMetaClassImpl {
   public BigIntegerInternalMetaClass(final Class theClass) {
     super(theClass);
   }
+  
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doCalculateConversionCost(java.lang.Class)
+   */
+  @Override
+  public int doCalculateConversionCost(final Class parameterType) {
+    if (parameterType == char.class) return 3;
+    
+    if (parameterType == byte.class) return 3;
+    
+    if (parameterType == short.class) return 3;
+    
+    if (parameterType == int.class) return 2;
+    
+    if (parameterType == long.class) return 1;
+    
+    if (parameterType == BigInteger.class) return 0;
+    
+    if (parameterType == float.class) return 3;
+    
+    if (parameterType == double.class) return 2;
+    
+    if (parameterType == BigDecimal.class) return 1;
+    
+    return super.doCalculateConversionCost(parameterType);
+  }
+
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetParamObject(java.lang.Object, java.lang.Class)
+   */
+  @Override
+ public Object doGetParamObject(final Object instance, final Class parameterType) {   
+    if (parameterType == BigInteger.class) return instance;
+    
+    if (parameterType == char.class) return new Character((char)((BigInteger)instance).intValue());
+    
+    if (parameterType == byte.class) return new Byte(((BigInteger)instance).byteValue());
+    
+    if (parameterType == short.class) return new Short(((BigInteger)instance).shortValue());
+    
+    if (parameterType == int.class) return new Integer(((BigInteger)instance).intValue());
+    
+    if (parameterType == long.class) return new Long(((BigInteger)instance).longValue());
+    
+    if (parameterType == float.class) return new Float(((BigInteger)instance).floatValue());
+    
+    if (parameterType == double.class) return new Double(((BigInteger)instance).doubleValue());
+    
+    if (parameterType == BigDecimal.class) return BigDecimal.valueOf(((BigInteger)instance).longValue());
+    
+    return super.doGetParamObject(instance, parameterType);
+  }
 
   public Object doComplement(final BigInteger instance) {
     return instance.not();

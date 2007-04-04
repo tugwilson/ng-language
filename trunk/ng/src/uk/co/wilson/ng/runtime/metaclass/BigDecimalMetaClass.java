@@ -35,6 +35,58 @@ class BigDecimalInternalMetaClass extends InternalMetaClassImpl {
   public BigDecimalInternalMetaClass(final Class theClass) {
     super(theClass);
   }
+  
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doCalculateConversionCost(java.lang.Class)
+   */
+  @Override
+  public int doCalculateConversionCost(final Class parameterType) {
+    if (parameterType == char.class) return 7;
+    
+    if (parameterType == byte.class) return 7;
+    
+    if (parameterType == short.class) return 6;
+    
+    if (parameterType == int.class) return 5;
+    
+    if (parameterType == long.class) return 4;
+    
+    if (parameterType == BigInteger.class) return 3;
+    
+    if (parameterType == float.class) return 2;
+    
+    if (parameterType == double.class) return 1;
+    
+    if (parameterType == BigDecimal.class) return 0;
+    
+    return super.doCalculateConversionCost(parameterType);
+  }
+
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetParamObject(java.lang.Object, java.lang.Class)
+   */
+  @Override
+ public Object doGetParamObject(final Object instance, final Class parameterType) {   
+    if (parameterType == BigDecimal.class) return instance;
+    
+    if (parameterType == char.class) return new Character((char)((BigDecimal)instance).intValue());
+    
+    if (parameterType == byte.class) return new Byte(((BigDecimal)instance).byteValue());
+    
+    if (parameterType == short.class) return new Short(((BigDecimal)instance).shortValue());
+    
+    if (parameterType == int.class) return new Integer(((BigDecimal)instance).intValue());
+    
+    if (parameterType == long.class) return new Long(((BigDecimal)instance).longValue());
+    
+    if (parameterType == BigInteger.class) return BigInteger.valueOf(((BigDecimal)instance).longValue());
+    
+    if (parameterType == float.class) return new Float(((BigDecimal)instance).floatValue());
+    
+    if (parameterType == double.class) return new Double(((BigDecimal)instance).doubleValue());
+    
+    return super.doGetParamObject(instance, parameterType);
+  }
 
   public Object doUnaryPlus(final BigDecimal instance) {
     return instance;

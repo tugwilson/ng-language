@@ -39,12 +39,52 @@ class NgCharInternalMetaClass extends InternalMetaClassImpl {
   public NgCharInternalMetaClass(final Class theClass) {
     super(theClass);
   }
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doCalculateConversionCost(java.lang.Class)
+   */
+  @Override
+  public int doCalculateConversionCost(final Class parameterType) {
+    if (parameterType == char.class) return 0;
+    
+    if (parameterType == short.class) return 1;
+    
+    if (parameterType == int.class) return 2;
+    
+    if (parameterType == long.class) return 3;
+    
+    if (parameterType == BigInteger.class) return 4;
+    
+    if (parameterType == float.class) return 5;
+    
+    if (parameterType == double.class) return 6;
+    
+    if (parameterType == BigDecimal.class) return 7;
+    
+    return super.doCalculateConversionCost(parameterType);
+  }
 
   /* (non-Javadoc)
    * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetParamObject(java.lang.Object, java.lang.Class)
    */
-  public Object doGetParamObject(final Object instance, final Class theClass) {
-    return new Character(((NgChar)instance).getCharValue());
+  @Override
+ public Object doGetParamObject(final Object instance, final Class parameterType) {
+    if (parameterType == char.class) return new Character(((NgChar)instance).getCharValue());
+    
+    if (parameterType == short.class) return new Short((short)((NgChar)instance).getCharValue());
+    
+    if (parameterType == int.class) return new Integer(((NgChar)instance).getCharValue());
+    
+    if (parameterType == long.class) return new Long(((NgChar)instance).getCharValue());
+    
+    if (parameterType == BigInteger.class) return BigInteger.valueOf(((NgChar)instance).getCharValue());
+    
+    if (parameterType == float.class) return new Float(((NgChar)instance).getCharValue());
+    
+    if (parameterType == double.class) return new Double(((NgChar)instance).getCharValue());
+    
+    if (parameterType == BigDecimal.class) return new BigDecimal(((NgChar)instance).getCharValue());
+    
+    return super.doGetParamObject(instance, parameterType);
   }
 
   public Object doComplement(final int instance) {

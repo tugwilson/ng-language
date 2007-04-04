@@ -37,12 +37,32 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
   public NgFloatInternalMetaClass(final Class theClass) {
     super(theClass);
   }
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doCalculateConversionCost(java.lang.Class)
+   */
+  @Override
+  public int doCalculateConversionCost(final Class parameterType) {
+    if (parameterType == float.class) return 0;
+    
+    if (parameterType == double.class) return 1;
+    
+    if (parameterType == BigDecimal.class) return 2;
+    
+    return super.doCalculateConversionCost(parameterType);
+  }
 
   /* (non-Javadoc)
    * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetParamObject(java.lang.Object, java.lang.Class)
    */
-  public Object doGetParamObject(final Object instance, final Class theClass) {
-    return new Float(((NgFloat)instance).getFloatValue());
+  @Override
+ public Object doGetParamObject(final Object instance, final Class parameterType) {
+    if (parameterType == float.class) return new Float(((NgFloat)instance).getFloatValue());
+    
+    if (parameterType == double.class) return new Double(((NgFloat)instance).getFloatValue());
+    
+    if (parameterType == BigDecimal.class) return new BigDecimal(((NgFloat)instance).getFloatValue());
+    
+    return super.doGetParamObject(instance, parameterType);
   }
 
   public Object doUnaryPlus(final float instance) {

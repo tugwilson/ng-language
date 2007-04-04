@@ -41,10 +41,51 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doCalculateConversionCost(java.lang.Class)
+   */
+  @Override
+  public int doCalculateConversionCost(final Class parameterType) {
+    if (parameterType == byte.class) return 0;
+    
+    if (parameterType == short.class) return 1;
+    
+    if (parameterType == int.class) return 2;
+    
+    if (parameterType == long.class) return 3;
+    
+    if (parameterType == BigInteger.class) return 4;
+    
+    if (parameterType == float.class) return 5;
+    
+    if (parameterType == double.class) return 6;
+    
+    if (parameterType == BigDecimal.class) return 7;
+    
+    return super.doCalculateConversionCost(parameterType);
+  }
+
+  /* (non-Javadoc)
    * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetParamObject(java.lang.Object, java.lang.Class)
    */
-  public Object doGetParamObject(final Object instance, final Class theClass) {
-    return new Byte(((NgByte)instance).getByteValue());
+  @Override
+ public Object doGetParamObject(final Object instance, final Class parameterType) {
+    if (parameterType == byte.class) return new Byte(((NgByte)instance).getByteValue());
+    
+    if (parameterType == short.class) return new Short(((NgByte)instance).getByteValue());
+    
+    if (parameterType == int.class) return new Integer(((NgByte)instance).getByteValue());
+    
+    if (parameterType == long.class) return new Long(((NgByte)instance).getByteValue());
+    
+    if (parameterType == BigInteger.class) return BigInteger.valueOf(((NgByte)instance).getByteValue());
+    
+    if (parameterType == float.class) return new Float(((NgByte)instance).getByteValue());
+    
+    if (parameterType == double.class) return new Double(((NgByte)instance).getByteValue());
+    
+    if (parameterType == BigDecimal.class) return new BigDecimal(((NgByte)instance).getByteValue());
+    
+    return super.doGetParamObject(instance, parameterType);
   }
 
   public Object doComplement(final int instance) {

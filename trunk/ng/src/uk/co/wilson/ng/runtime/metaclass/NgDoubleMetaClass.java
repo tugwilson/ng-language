@@ -36,12 +36,28 @@ class NgDoubleInternalMetaClass extends InternalMetaClassImpl {
   public NgDoubleInternalMetaClass(final Class theClass) {
     super(theClass);
   }
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doCalculateConversionCost(java.lang.Class)
+   */
+  @Override
+  public int doCalculateConversionCost(final Class parameterType) {
+    if (parameterType == double.class) return 0;
+    
+    if (parameterType == BigDecimal.class) return 1;
+    
+    return super.doCalculateConversionCost(parameterType);
+  }
 
   /* (non-Javadoc)
    * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetParamObject(java.lang.Object, java.lang.Class)
    */
-  public Object doGetParamObject(final Object instance, final Class theClass) {
-    return new Double(((NgDouble)instance).getDoubleValue());
+  @Override
+ public Object doGetParamObject(final Object instance, final Class parameterType) {
+    if (parameterType == double.class) return new Double(((NgDouble)instance).getDoubleValue());
+    
+    if (parameterType == BigDecimal.class) return new BigDecimal(((NgDouble)instance).getDoubleValue());
+    
+    return super.doGetParamObject(instance, parameterType);
   }
 
   public Object doUnaryPlus(final double instance) {
