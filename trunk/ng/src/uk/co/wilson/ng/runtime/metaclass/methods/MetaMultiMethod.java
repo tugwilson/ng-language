@@ -36,13 +36,6 @@ public class MetaMultiMethod implements MetaMethod {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.RuntimeMetaClass[])
-   */
-  public MetaMethodSelection selectMethod(final RuntimeMetaClass[] argumentMetaClasses) {
-    return this.selectMethod(new MetaMethodSelection(), argumentMetaClasses);
-  }
-
-  /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass[])
    */
   public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final RuntimeMetaClass[] argumentMetaClasses) {

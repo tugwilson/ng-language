@@ -1,8 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.methods;
 
 import ng.runtime.MetaMethod;
-import ng.runtime.RuntimeMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
 
 /**
  * @author John
@@ -13,13 +11,6 @@ public abstract class BaseMetaMethod implements MetaMethod {
 
   public BaseMetaMethod(final int numberOfParameters) {
     this.numberOfParameters = numberOfParameters;
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.RuntimeMetaClass[])
-   */
-  public MetaMethodSelection selectMethod(final RuntimeMetaClass[] argumentMetaClasses) {
-    return this.selectMethod(new MetaMethodSelection(), argumentMetaClasses);
   }
     
   /* (non-Javadoc)

@@ -72,12 +72,6 @@ public interface MetaMethod {
   MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
   
   /**
-   * @param argumentMetaClasses
-   * @return
-   */
-  MetaMethodSelection selectMethod(RuntimeMetaClass[] argumentMetaClasses);
-  
-  /**
    * @param instance
    * @return
    */
