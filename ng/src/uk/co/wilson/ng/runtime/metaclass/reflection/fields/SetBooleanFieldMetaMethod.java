@@ -25,9 +25,9 @@ public class SetBooleanFieldMetaMethod extends SetUntypedFieldMetaMethod {
   public Object call(final Object instance, final Object value) {
     try {
       this.field.setBoolean(instance, ((NgBoolean)value).getBooleanValue());
-    } catch (IllegalArgumentException e) {
+    } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
-    } catch (IllegalAccessException e) {
+    } catch (final IllegalAccessException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
     

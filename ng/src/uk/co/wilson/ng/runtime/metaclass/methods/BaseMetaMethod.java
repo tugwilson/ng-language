@@ -1,8 +1,8 @@
 package uk.co.wilson.ng.runtime.metaclass.methods;
 
-import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
 import ng.runtime.MetaMethod;
 import ng.runtime.RuntimeMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
 
 /**
  * @author John

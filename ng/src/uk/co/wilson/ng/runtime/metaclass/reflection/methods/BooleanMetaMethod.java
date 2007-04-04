@@ -13,7 +13,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
   /**
    * @param method
    */
-  public BooleanMetaMethod(Method method) {
+  public BooleanMetaMethod(final Method method) {
     super(method);
   }
 
@@ -21,7 +21,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(Object instance, Object p1, Object p2, Object p3, Object p4) {
+  public Object call(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
   final Object result = super.call(instance, p1, p2, p3, p4);
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
@@ -37,7 +37,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(Object instance, Object p1, Object p2, Object p3) {
+  public Object call(final Object instance, final Object p1, final Object p2, final Object p3) {
   final Object result = super.call(instance, p1, p2, p3);
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
@@ -53,7 +53,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(Object instance, Object p1, Object p2) {
+  public Object call(final Object instance, final Object p1, final Object p2) {
   final Object result = super.call(instance, p1, p2);
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
@@ -69,7 +69,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(Object instance, Object p1) {
+  public Object call(final Object instance, final Object p1) {
   final Object result = super.call(instance, p1);
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
@@ -85,7 +85,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object[])
    */
   @Override
-  public Object call(Object instance, Object[] arguments) {
+  public Object call(final Object instance, final Object[] arguments) {
   final Object result = super.call(instance, arguments);
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
@@ -101,7 +101,7 @@ public class BooleanMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.methods.UntypedMetaMethod#call(java.lang.Object)
    */
   @Override
-  public Object call(Object instance) {
+  public Object call(final Object instance) {
   final Object result = super.call(instance);
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;

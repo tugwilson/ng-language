@@ -3,18 +3,17 @@ package uk.co.wilson.ng.runtime.metaclass.methods;
 import java.util.LinkedList;
 import java.util.List;
 
-import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
-
 import ng.runtime.InstanceHandler;
 import ng.runtime.MetaMethod;
 import ng.runtime.RuntimeMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
 
 /**
  * @author John
  *
  */
 public class MetaMultiMethod implements MetaMethod {
-  private List<MetaMethod> methodList = new LinkedList<MetaMethod>();
+  private final List<MetaMethod> methodList = new LinkedList<MetaMethod>();
   
   public MetaMultiMethod(final MetaMethod metaMethod) {
     this.methodList.add(metaMethod);

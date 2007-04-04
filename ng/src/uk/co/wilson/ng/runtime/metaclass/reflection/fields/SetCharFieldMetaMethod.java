@@ -25,9 +25,9 @@ public class SetCharFieldMetaMethod extends SetUntypedFieldMetaMethod {
   public Object call(final Object instance, final Object value) {
     try {
       this.field.setChar(instance, ((NgChar)value).getCharValue());
-    } catch (IllegalArgumentException e) {
+    } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
-    } catch (IllegalAccessException e) {
+    } catch (final IllegalAccessException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
     

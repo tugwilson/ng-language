@@ -40,6 +40,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
   private final Map registry = new HashMap() {
     private static final long serialVersionUID = 1L;
 
+    @Override
     public Object get(final Object key) {
     final Object result = super.get(key);
     
@@ -48,6 +49,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
       return ((SoftReference)result).get();
     }
     
+    @Override
     public Object put(final Object key, final Object value) {
       return super.put(key, new SoftReference(value));
     }
@@ -58,10 +60,12 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
   }
   
   private final ThreadLocal localRegistry = new ThreadLocal() {
+    @Override
     protected Object initialValue() {
       return new MetaClassAccessor() {
         private static final int ngMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC | Modifier.FINAL;
         private final Map threadRegistry = new WeakHashMap() {
+          @Override
           public Object get(final Object key) {
           final Object result = super.get(key);
             
@@ -70,6 +74,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
             return ((WeakReference)result).get();
           }
           
+          @Override
           public Object put(final Object key, final Object value) {
             return super.put(key, new WeakReference(value));
           }
@@ -80,7 +85,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
         // First try and get the MetaClass from the thread local registry cache
         // This does not need any synchronisation
         //
-        RuntimeMetaClass metaClass = (RuntimeMetaClass)threadRegistry.get(theClass);
+        RuntimeMetaClass metaClass = (RuntimeMetaClass)this.threadRegistry.get(theClass);
 
           if (metaClass == null) {        
             //
@@ -118,7 +123,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
               // global registry and in the thread local cache and return it.
               //
               synchronized (MetaClassRegistryImpl.class) {
-                metaClass = (RuntimeMetaClass)registry.get(theClass);
+                metaClass = (RuntimeMetaClass)MetaClassRegistryImpl.this.registry.get(theClass);
     
                 if (metaClass == null) {
                 final Class superClass = theClass.getSuperclass();
@@ -130,11 +135,11 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
                   }
                 }
                 
-                registry.put(theClass, metaClass);
+                MetaClassRegistryImpl.this.registry.put(theClass, metaClass);
               }
             }
             
-            threadRegistry.put(theClass, metaClass);
+            this.threadRegistry.put(theClass, metaClass);
           }
           
           return metaClass;
@@ -150,21 +155,21 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
     // This is the root MetaClass which generates all the other MetaClasses
     // directly or indirectly.
     //
-    registry.put(Object.class, NgSystem.objectMetaClass);
+    this.registry.put(Object.class, NgSystem.objectMetaClass);
     
     //
     // Now associate the primitive types with their wrappers
     //
-    registry.put(boolean.class, NgSystem.ngBooleanMetaClass);
-    registry.put(byte.class, NgSystem.ngByteMetaClass);
-    registry.put(char.class, NgSystem.ngCharMetaClass);
-    registry.put(short.class, NgSystem.ngShortMetaClass);
-    registry.put(int.class, NgSystem.ngIntMetaClass);
-    registry.put(long.class, NgSystem.ngLongMetaClass);
-    registry.put(float.class, NgSystem.ngFloatMetaClass);
-    registry.put(double.class, NgSystem.ngDoubleMetaClass);    
-    registry.put(BigInteger.class, NgSystem.bigIntegerMetaClass);    
-    registry.put(BigDecimal.class, NgSystem.bigDecimalMetaClass);    
+    this.registry.put(boolean.class, NgSystem.ngBooleanMetaClass);
+    this.registry.put(byte.class, NgSystem.ngByteMetaClass);
+    this.registry.put(char.class, NgSystem.ngCharMetaClass);
+    this.registry.put(short.class, NgSystem.ngShortMetaClass);
+    this.registry.put(int.class, NgSystem.ngIntMetaClass);
+    this.registry.put(long.class, NgSystem.ngLongMetaClass);
+    this.registry.put(float.class, NgSystem.ngFloatMetaClass);
+    this.registry.put(double.class, NgSystem.ngDoubleMetaClass);    
+    this.registry.put(BigInteger.class, NgSystem.bigIntegerMetaClass);    
+    this.registry.put(BigDecimal.class, NgSystem.bigDecimalMetaClass);    
   }
 
   /*
@@ -187,7 +192,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
    * @see ng.runtime.MetaClassRegistry#getRuntimeMetaClass(java.lang.Class)
    */
   public RuntimeMetaClass getRuntimeMetaClass(final Class theClass) {
-    return ((MetaClassAccessor)localRegistry.get()).getRuntimeMetaClass(theClass);
+    return ((MetaClassAccessor)this.localRegistry.get()).getRuntimeMetaClass(theClass);
   }
 
   /* (non-Javadoc)

@@ -33,6 +33,7 @@ public class ObjectMetaClassImpl extends RuntimeMetaClassImpl {
     this(Object.class);
   }
 
+  @Override
   public RuntimeMetaClass createMetaClassFor(final Class theClass) {
     if (Object.class != theClass.getSuperclass() && !theClass.isInterface())
       throw new NgRuntimeException("Error when constucting MetaClass for " + theClass.getName()

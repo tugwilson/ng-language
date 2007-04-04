@@ -25,9 +25,9 @@ public class SetLongFieldMetaMethod extends SetUntypedFieldMetaMethod {
   public Object call(final Object instance, final Object value) {
     try {
       this.field.setLong(instance, ((NgLong)value).getLongValue());
-    } catch (IllegalArgumentException e) {
+    } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
-    } catch (IllegalAccessException e) {
+    } catch (final IllegalAccessException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
     
