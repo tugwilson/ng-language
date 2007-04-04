@@ -72,42 +72,42 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
    */
-  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses) {
+  public MetaMethodSelection doSelectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {
     return this.instanceHandler.selectMethod(currentSelection, methodName, argumentMetaClasses);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String)
    */
-  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName) {
+  public MetaMethodSelection doSelectMethod(final MetaMethodSelection currentSelection, final String methodName) {
     return this.instanceHandler.selectMethod(currentSelection, methodName);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1) {
+  public MetaMethodSelection doSelectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1) {
     return this.instanceHandler.selectMethod(currentSelection, methodName);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2) {
+  public MetaMethodSelection doSelectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
     return this.instanceHandler.selectMethod(currentSelection, methodName, p1, p2);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3) {
+  public MetaMethodSelection doSelectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
     return this.instanceHandler.selectMethod(currentSelection, methodName, p1, p2, p3);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doSelectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4) {
+  public MetaMethodSelection doSelectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
     return this.instanceHandler.selectMethod(currentSelection, methodName, p1, p2, p3, p4);
   }
 
@@ -379,7 +379,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     return this.instanceHandler.putAt(instance, index);
   }
 
-  public Object doPutAt(final Object instance, int index) {
+  public Object doPutAt(final Object instance, final int index) {
     return doPutAt(instance, new NgInt(index));
   }
 
@@ -777,31 +777,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doAdd(final BigInteger lhs, final byte rhs) {
-    return doAdd((Object)lhs, new NgByte(rhs));
+    return doAdd(lhs, new NgByte(rhs));
   }
 
   public Object doAdd(final BigInteger lhs, final char rhs) {
-    return doAdd((Object)lhs, new NgChar(rhs));
+    return doAdd(lhs, new NgChar(rhs));
   }
 
   public Object doAdd(final BigInteger lhs, final short rhs) {
-    return doAdd((Object)lhs, new NgShort(rhs));
+    return doAdd(lhs, new NgShort(rhs));
   }
 
   public Object doAdd(final BigInteger lhs, final int rhs) {
-    return doAdd((Object)lhs, new NgInt(rhs));
+    return doAdd(lhs, new NgInt(rhs));
   }
 
   public Object doAdd(final BigInteger lhs, final long rhs) {
-    return doAdd((Object)lhs, new NgLong(rhs));
+    return doAdd(lhs, new NgLong(rhs));
   }
 
   public Object doAdd(final BigInteger lhs, final float rhs) {
-    return doAdd((Object)lhs, new NgFloat(rhs));
+    return doAdd(lhs, new NgFloat(rhs));
   }
 
   public Object doAdd(final BigInteger lhs, final double rhs) {
-    return doAdd((Object)lhs, new NgDouble(rhs));
+    return doAdd(lhs, new NgDouble(rhs));
   }
 
   public Object doAdd(final BigInteger lhs, final BigInteger rhs) {
@@ -813,31 +813,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doAdd(final BigDecimal lhs, final byte rhs) {
-    return doAdd((Object)lhs, new NgByte(rhs));
+    return doAdd(lhs, new NgByte(rhs));
   }
 
   public Object doAdd(final BigDecimal lhs, final char rhs) {
-    return doAdd((Object)lhs, new NgChar(rhs));
+    return doAdd(lhs, new NgChar(rhs));
   }
 
   public Object doAdd(final BigDecimal lhs, final short rhs) {
-    return doAdd((Object)lhs, new NgShort(rhs));
+    return doAdd(lhs, new NgShort(rhs));
   }
 
   public Object doAdd(final BigDecimal lhs, final int rhs) {
-    return doAdd((Object)lhs, new NgInt(rhs));
+    return doAdd(lhs, new NgInt(rhs));
   }
 
   public Object doAdd(final BigDecimal lhs, final long rhs) {
-    return doAdd((Object)lhs, new NgLong(rhs));
+    return doAdd(lhs, new NgLong(rhs));
   }
 
   public Object doAdd(final BigDecimal lhs, final float rhs) {
-    return doAdd((Object)lhs, new NgFloat(rhs));
+    return doAdd(lhs, new NgFloat(rhs));
   }
 
   public Object doAdd(final BigDecimal lhs, final double rhs) {
-    return doAdd((Object)lhs, new NgDouble(rhs));
+    return doAdd(lhs, new NgDouble(rhs));
   }
 
   public Object doAdd(final BigDecimal lhs, final BigInteger rhs) {
@@ -891,13 +891,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doAdd(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseAdd(lhs, rhsObject);
   }
 
   public Object doAdd(final Object lhs, final BigDecimal rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseAdd(lhs, rhsObject);
   }
@@ -945,13 +945,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseAdd(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAdd(lhsObject, rhs);
   }
 
   public Object doReverseAdd(final BigDecimal lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAdd(lhsObject, rhs);
   }
@@ -1234,31 +1234,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doAddEquals(final BigInteger lhs, final byte rhs) {
-    return doAddEquals((Object)lhs, new NgByte(rhs));
+    return doAddEquals(lhs, new NgByte(rhs));
   }
 
   public Object doAddEquals(final BigInteger lhs, final char rhs) {
-    return doAddEquals((Object)lhs, new NgChar(rhs));
+    return doAddEquals(lhs, new NgChar(rhs));
   }
 
   public Object doAddEquals(final BigInteger lhs, final short rhs) {
-    return doAddEquals((Object)lhs, new NgShort(rhs));
+    return doAddEquals(lhs, new NgShort(rhs));
   }
 
   public Object doAddEquals(final BigInteger lhs, final int rhs) {
-    return doAddEquals((Object)lhs, new NgInt(rhs));
+    return doAddEquals(lhs, new NgInt(rhs));
   }
 
   public Object doAddEquals(final BigInteger lhs, final long rhs) {
-    return doAddEquals((Object)lhs, new NgLong(rhs));
+    return doAddEquals(lhs, new NgLong(rhs));
   }
 
   public Object doAddEquals(final BigInteger lhs, final float rhs) {
-    return doAddEquals((Object)lhs, new NgFloat(rhs));
+    return doAddEquals(lhs, new NgFloat(rhs));
   }
 
   public Object doAddEquals(final BigInteger lhs, final double rhs) {
-    return doAddEquals((Object)lhs, new NgDouble(rhs));
+    return doAddEquals(lhs, new NgDouble(rhs));
   }
 
   public Object doAddEquals(final BigInteger lhs, final BigInteger rhs) {
@@ -1270,31 +1270,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doAddEquals(final BigDecimal lhs, final byte rhs) {
-    return doAddEquals((Object)lhs, new NgByte(rhs));
+    return doAddEquals(lhs, new NgByte(rhs));
   }
 
   public Object doAddEquals(final BigDecimal lhs, final char rhs) {
-    return doAddEquals((Object)lhs, new NgChar(rhs));
+    return doAddEquals(lhs, new NgChar(rhs));
   }
 
   public Object doAddEquals(final BigDecimal lhs, final short rhs) {
-    return doAddEquals((Object)lhs, new NgShort(rhs));
+    return doAddEquals(lhs, new NgShort(rhs));
   }
 
   public Object doAddEquals(final BigDecimal lhs, final int rhs) {
-    return doAddEquals((Object)lhs, new NgInt(rhs));
+    return doAddEquals(lhs, new NgInt(rhs));
   }
 
   public Object doAddEquals(final BigDecimal lhs, final long rhs) {
-    return doAddEquals((Object)lhs, new NgLong(rhs));
+    return doAddEquals(lhs, new NgLong(rhs));
   }
 
   public Object doAddEquals(final BigDecimal lhs, final float rhs) {
-    return doAddEquals((Object)lhs, new NgFloat(rhs));
+    return doAddEquals(lhs, new NgFloat(rhs));
   }
 
   public Object doAddEquals(final BigDecimal lhs, final double rhs) {
-    return doAddEquals((Object)lhs, new NgDouble(rhs));
+    return doAddEquals(lhs, new NgDouble(rhs));
   }
 
   public Object doAddEquals(final BigDecimal lhs, final BigInteger rhs) {
@@ -1348,13 +1348,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doAddEquals(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseAddEquals(lhs, rhsObject);
   }
 
   public Object doAddEquals(final Object lhs, final BigDecimal rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseAddEquals(lhs, rhsObject);
   }
@@ -1402,13 +1402,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseAddEquals(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAddEquals(lhsObject, rhs);
   }
 
   public Object doReverseAddEquals(final BigDecimal lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAddEquals(lhsObject, rhs);
   }
@@ -1691,31 +1691,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doSubtract(final BigInteger lhs, final byte rhs) {
-    return doSubtract((Object)lhs, new NgByte(rhs));
+    return doSubtract(lhs, new NgByte(rhs));
   }
 
   public Object doSubtract(final BigInteger lhs, final char rhs) {
-    return doSubtract((Object)lhs, new NgChar(rhs));
+    return doSubtract(lhs, new NgChar(rhs));
   }
 
   public Object doSubtract(final BigInteger lhs, final short rhs) {
-    return doSubtract((Object)lhs, new NgShort(rhs));
+    return doSubtract(lhs, new NgShort(rhs));
   }
 
   public Object doSubtract(final BigInteger lhs, final int rhs) {
-    return doSubtract((Object)lhs, new NgInt(rhs));
+    return doSubtract(lhs, new NgInt(rhs));
   }
 
   public Object doSubtract(final BigInteger lhs, final long rhs) {
-    return doSubtract((Object)lhs, new NgLong(rhs));
+    return doSubtract(lhs, new NgLong(rhs));
   }
 
   public Object doSubtract(final BigInteger lhs, final float rhs) {
-    return doSubtract((Object)lhs, new NgFloat(rhs));
+    return doSubtract(lhs, new NgFloat(rhs));
   }
 
   public Object doSubtract(final BigInteger lhs, final double rhs) {
-    return doSubtract((Object)lhs, new NgDouble(rhs));
+    return doSubtract(lhs, new NgDouble(rhs));
   }
 
   public Object doSubtract(final BigInteger lhs, final BigInteger rhs) {
@@ -1727,31 +1727,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doSubtract(final BigDecimal lhs, final byte rhs) {
-    return doSubtract((Object)lhs, new NgByte(rhs));
+    return doSubtract(lhs, new NgByte(rhs));
   }
 
   public Object doSubtract(final BigDecimal lhs, final char rhs) {
-    return doSubtract((Object)lhs, new NgChar(rhs));
+    return doSubtract(lhs, new NgChar(rhs));
   }
 
   public Object doSubtract(final BigDecimal lhs, final short rhs) {
-    return doSubtract((Object)lhs, new NgShort(rhs));
+    return doSubtract(lhs, new NgShort(rhs));
   }
 
   public Object doSubtract(final BigDecimal lhs, final int rhs) {
-    return doSubtract((Object)lhs, new NgInt(rhs));
+    return doSubtract(lhs, new NgInt(rhs));
   }
 
   public Object doSubtract(final BigDecimal lhs, final long rhs) {
-    return doSubtract((Object)lhs, new NgLong(rhs));
+    return doSubtract(lhs, new NgLong(rhs));
   }
 
   public Object doSubtract(final BigDecimal lhs, final float rhs) {
-    return doSubtract((Object)lhs, new NgFloat(rhs));
+    return doSubtract(lhs, new NgFloat(rhs));
   }
 
   public Object doSubtract(final BigDecimal lhs, final double rhs) {
-    return doSubtract((Object)lhs, new NgDouble(rhs));
+    return doSubtract(lhs, new NgDouble(rhs));
   }
 
   public Object doSubtract(final BigDecimal lhs, final BigInteger rhs) {
@@ -1805,13 +1805,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doSubtract(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseSubtract(lhs, rhsObject);
   }
 
   public Object doSubtract(final Object lhs, final BigDecimal rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseSubtract(lhs, rhsObject);
   }
@@ -1859,13 +1859,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseSubtract(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseSubtract(lhsObject, rhs);
   }
 
   public Object doReverseSubtract(final BigDecimal lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseSubtract(lhsObject, rhs);
   }
@@ -2148,31 +2148,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doSubtractEquals(final BigInteger lhs, final byte rhs) {
-    return doSubtractEquals((Object)lhs, new NgByte(rhs));
+    return doSubtractEquals(lhs, new NgByte(rhs));
   }
 
   public Object doSubtractEquals(final BigInteger lhs, final char rhs) {
-    return doSubtractEquals((Object)lhs, new NgChar(rhs));
+    return doSubtractEquals(lhs, new NgChar(rhs));
   }
 
   public Object doSubtractEquals(final BigInteger lhs, final short rhs) {
-    return doSubtractEquals((Object)lhs, new NgShort(rhs));
+    return doSubtractEquals(lhs, new NgShort(rhs));
   }
 
   public Object doSubtractEquals(final BigInteger lhs, final int rhs) {
-    return doSubtractEquals((Object)lhs, new NgInt(rhs));
+    return doSubtractEquals(lhs, new NgInt(rhs));
   }
 
   public Object doSubtractEquals(final BigInteger lhs, final long rhs) {
-    return doSubtractEquals((Object)lhs, new NgLong(rhs));
+    return doSubtractEquals(lhs, new NgLong(rhs));
   }
 
   public Object doSubtractEquals(final BigInteger lhs, final float rhs) {
-    return doSubtractEquals((Object)lhs, new NgFloat(rhs));
+    return doSubtractEquals(lhs, new NgFloat(rhs));
   }
 
   public Object doSubtractEquals(final BigInteger lhs, final double rhs) {
-    return doSubtractEquals((Object)lhs, new NgDouble(rhs));
+    return doSubtractEquals(lhs, new NgDouble(rhs));
   }
 
   public Object doSubtractEquals(final BigInteger lhs, final BigInteger rhs) {
@@ -2184,31 +2184,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doSubtractEquals(final BigDecimal lhs, final byte rhs) {
-    return doSubtractEquals((Object)lhs, new NgByte(rhs));
+    return doSubtractEquals(lhs, new NgByte(rhs));
   }
 
   public Object doSubtractEquals(final BigDecimal lhs, final char rhs) {
-    return doSubtractEquals((Object)lhs, new NgChar(rhs));
+    return doSubtractEquals(lhs, new NgChar(rhs));
   }
 
   public Object doSubtractEquals(final BigDecimal lhs, final short rhs) {
-    return doSubtractEquals((Object)lhs, new NgShort(rhs));
+    return doSubtractEquals(lhs, new NgShort(rhs));
   }
 
   public Object doSubtractEquals(final BigDecimal lhs, final int rhs) {
-    return doSubtractEquals((Object)lhs, new NgInt(rhs));
+    return doSubtractEquals(lhs, new NgInt(rhs));
   }
 
   public Object doSubtractEquals(final BigDecimal lhs, final long rhs) {
-    return doSubtractEquals((Object)lhs, new NgLong(rhs));
+    return doSubtractEquals(lhs, new NgLong(rhs));
   }
 
   public Object doSubtractEquals(final BigDecimal lhs, final float rhs) {
-    return doSubtractEquals((Object)lhs, new NgFloat(rhs));
+    return doSubtractEquals(lhs, new NgFloat(rhs));
   }
 
   public Object doSubtractEquals(final BigDecimal lhs, final double rhs) {
-    return doSubtractEquals((Object)lhs, new NgDouble(rhs));
+    return doSubtractEquals(lhs, new NgDouble(rhs));
   }
 
   public Object doSubtractEquals(final BigDecimal lhs, final BigInteger rhs) {
@@ -2262,13 +2262,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doSubtractEquals(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseSubtractEquals(lhs, rhsObject);
   }
 
   public Object doSubtractEquals(final Object lhs, final BigDecimal rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseSubtractEquals(lhs, rhsObject);
   }
@@ -2316,13 +2316,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseSubtractEquals(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseSubtractEquals(lhsObject, rhs);
   }
 
   public Object doReverseSubtractEquals(final BigDecimal lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseSubtractEquals(lhsObject, rhs);
   }
@@ -2605,31 +2605,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doMultiply(final BigInteger lhs, final byte rhs) {
-    return doMultiply((Object)lhs, new NgByte(rhs));
+    return doMultiply(lhs, new NgByte(rhs));
   }
 
   public Object doMultiply(final BigInteger lhs, final char rhs) {
-    return doMultiply((Object)lhs, new NgChar(rhs));
+    return doMultiply(lhs, new NgChar(rhs));
   }
 
   public Object doMultiply(final BigInteger lhs, final short rhs) {
-    return doMultiply((Object)lhs, new NgShort(rhs));
+    return doMultiply(lhs, new NgShort(rhs));
   }
 
   public Object doMultiply(final BigInteger lhs, final int rhs) {
-    return doMultiply((Object)lhs, new NgInt(rhs));
+    return doMultiply(lhs, new NgInt(rhs));
   }
 
   public Object doMultiply(final BigInteger lhs, final long rhs) {
-    return doMultiply((Object)lhs, new NgLong(rhs));
+    return doMultiply(lhs, new NgLong(rhs));
   }
 
   public Object doMultiply(final BigInteger lhs, final float rhs) {
-    return doMultiply((Object)lhs, new NgFloat(rhs));
+    return doMultiply(lhs, new NgFloat(rhs));
   }
 
   public Object doMultiply(final BigInteger lhs, final double rhs) {
-    return doMultiply((Object)lhs, new NgDouble(rhs));
+    return doMultiply(lhs, new NgDouble(rhs));
   }
 
   public Object doMultiply(final BigInteger lhs, final BigInteger rhs) {
@@ -2641,31 +2641,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doMultiply(final BigDecimal lhs, final byte rhs) {
-    return doMultiply((Object)lhs, new NgByte(rhs));
+    return doMultiply(lhs, new NgByte(rhs));
   }
 
   public Object doMultiply(final BigDecimal lhs, final char rhs) {
-    return doMultiply((Object)lhs, new NgChar(rhs));
+    return doMultiply(lhs, new NgChar(rhs));
   }
 
   public Object doMultiply(final BigDecimal lhs, final short rhs) {
-    return doMultiply((Object)lhs, new NgShort(rhs));
+    return doMultiply(lhs, new NgShort(rhs));
   }
 
   public Object doMultiply(final BigDecimal lhs, final int rhs) {
-    return doMultiply((Object)lhs, new NgInt(rhs));
+    return doMultiply(lhs, new NgInt(rhs));
   }
 
   public Object doMultiply(final BigDecimal lhs, final long rhs) {
-    return doMultiply((Object)lhs, new NgLong(rhs));
+    return doMultiply(lhs, new NgLong(rhs));
   }
 
   public Object doMultiply(final BigDecimal lhs, final float rhs) {
-    return doMultiply((Object)lhs, new NgFloat(rhs));
+    return doMultiply(lhs, new NgFloat(rhs));
   }
 
   public Object doMultiply(final BigDecimal lhs, final double rhs) {
-    return doMultiply((Object)lhs, new NgDouble(rhs));
+    return doMultiply(lhs, new NgDouble(rhs));
   }
 
   public Object doMultiply(final BigDecimal lhs, final BigInteger rhs) {
@@ -2719,13 +2719,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doMultiply(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseMultiply(lhs, rhsObject);
   }
 
   public Object doMultiply(final Object lhs, final BigDecimal rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseMultiply(lhs, rhsObject);
   }
@@ -2773,13 +2773,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseMultiply(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiply(lhsObject, rhs);
   }
 
   public Object doReverseMultiply(final BigDecimal lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiply(lhsObject, rhs);
   }
@@ -3062,31 +3062,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doMultiplyEquals(final BigInteger lhs, final byte rhs) {
-    return doMultiplyEquals((Object)lhs, new NgByte(rhs));
+    return doMultiplyEquals(lhs, new NgByte(rhs));
   }
 
   public Object doMultiplyEquals(final BigInteger lhs, final char rhs) {
-    return doMultiplyEquals((Object)lhs, new NgChar(rhs));
+    return doMultiplyEquals(lhs, new NgChar(rhs));
   }
 
   public Object doMultiplyEquals(final BigInteger lhs, final short rhs) {
-    return doMultiplyEquals((Object)lhs, new NgShort(rhs));
+    return doMultiplyEquals(lhs, new NgShort(rhs));
   }
 
   public Object doMultiplyEquals(final BigInteger lhs, final int rhs) {
-    return doMultiplyEquals((Object)lhs, new NgInt(rhs));
+    return doMultiplyEquals(lhs, new NgInt(rhs));
   }
 
   public Object doMultiplyEquals(final BigInteger lhs, final long rhs) {
-    return doMultiplyEquals((Object)lhs, new NgLong(rhs));
+    return doMultiplyEquals(lhs, new NgLong(rhs));
   }
 
   public Object doMultiplyEquals(final BigInteger lhs, final float rhs) {
-    return doMultiplyEquals((Object)lhs, new NgFloat(rhs));
+    return doMultiplyEquals(lhs, new NgFloat(rhs));
   }
 
   public Object doMultiplyEquals(final BigInteger lhs, final double rhs) {
-    return doMultiplyEquals((Object)lhs, new NgDouble(rhs));
+    return doMultiplyEquals(lhs, new NgDouble(rhs));
   }
 
   public Object doMultiplyEquals(final BigInteger lhs, final BigInteger rhs) {
@@ -3098,15 +3098,15 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doMultiplyEquals(final BigDecimal lhs, final byte rhs) {
-    return doMultiplyEquals((Object)lhs, new NgByte(rhs));
+    return doMultiplyEquals(lhs, new NgByte(rhs));
   }
 
   public Object doMultiplyEquals(final BigDecimal lhs, final char rhs) {
-    return doMultiplyEquals((Object)lhs, new NgChar(rhs));
+    return doMultiplyEquals(lhs, new NgChar(rhs));
   }
 
   public Object doMultiplyEquals(final BigDecimal lhs, final short rhs) {
-    return doMultiplyEquals((Object)lhs, new NgShort(rhs));
+    return doMultiplyEquals(lhs, new NgShort(rhs));
   }
 
   public Object doMultiplyEquals(final BigDecimal lhs, final int rhs) {

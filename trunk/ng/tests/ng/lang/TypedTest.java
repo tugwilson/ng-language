@@ -21,8652 +21,8652 @@ public class TypedTest extends TestCase {
   
   public void testUnsupportedMetaClassMethodsAdd() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((byte)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((char)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((short)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((long)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((float)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((double)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bi, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bd, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsAdd() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).add(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.o, 1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).add(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAdd(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAdd((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAdd((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAdd((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAdd(1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAdd((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAdd((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAdd((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAdd(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAdd(this.bd, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsAddEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((byte)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((char)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((short)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((long)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((float)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((double)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bi, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bd, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsAddEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).addEquals(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.o, 1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).addEquals(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAddEquals(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAddEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAddEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAddEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAddEquals(1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAddEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAddEquals((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAddEquals((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAddEquals(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAddEquals(this.bd, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsSubtract() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((byte)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((char)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((short)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((long)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((float)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((double)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bi, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bd, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsSubtract() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtract(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.o, 1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtract(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtract(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtract((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtract((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtract((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtract(1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtract((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtract((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtract((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtract(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtract(this.bd, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsSubtractEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((byte)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((char)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((short)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((long)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((float)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((double)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bi, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bd, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsSubtractEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).subtractEquals(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.o, 1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).subtractEquals(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseSubtractEquals(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtractEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtractEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtractEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtractEquals(1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtractEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtractEquals((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtractEquals((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtractEquals(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseSubtractEquals(this.bd, this.o), null);
   }
 
   public void testUnsupportedMetaClassMethodsMultiply() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((byte)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((char)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((short)1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(1, 1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsMultiply() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiply(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiply(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiply(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiply((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiply((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiply((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiply((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiply((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiply((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiply((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiply(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiply(this.bd, this.o), null);
   }
  
   public void testUnsupportedMetaClassMethodsMuiltiplyEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsMultiplyEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).multiplyEquals(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).multiplyEquals(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseMultiplyEquals(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiplyEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiplyEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiplyEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiplyEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiplyEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiplyEquals((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiplyEquals((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiplyEquals(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseMultiplyEquals(this.bd, this.o), null);
   }
 
   public void testUnsupportedMetaClassMethodDivide() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsDivide() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divide(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divide(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivide(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivide((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivide((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivide((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivide((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivide((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivide((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivide((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivide(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivide(this.bd, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsDivideEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsDivideEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).divideEquals(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).divideEquals(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseDivideEquals(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivideEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivideEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivideEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivideEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivideEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivideEquals((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivideEquals((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivideEquals(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseDivideEquals(this.bd, this.o), null);
   }
 
   public void testUnsupportedMetaClassMethodIntegerDivide() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsIntegerDivide() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivide(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivide(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivide(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivide((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivide((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivide((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivide((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivide((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivide((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivide((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivide(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivide(this.bd, this.o), null);
   }
 
   public void testUnsupportedMetaClassMethodIntegerDivideEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsIntegerDivideEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).integerDivideEquals(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).integerDivideEquals(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseIntegerDivideEquals(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivideEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivideEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivideEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivideEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivideEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivideEquals((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivideEquals((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivideEquals(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseIntegerDivideEquals(this.bd, this.o), null);
   }
 
   public void testUnsupportedMetaClassMethodRemainder() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsRemainder() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainder(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainder(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainder((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainder((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainder((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainder((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainder((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainder(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainder((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainder((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainder((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainder((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainder((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainder(this.bi, this.o), null);
   }
 
   public void testUnsupportedMetaClassMethodRemainderEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsRemainderEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).remainderEquals(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).remainderEquals(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainderEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainderEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainderEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainderEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainderEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseRemainderEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainderEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainderEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainderEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainderEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainderEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseRemainderEquals(this.bi, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsAnd() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsAnd() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).and(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).and(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAnd(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAnd((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAnd((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAnd((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAnd((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAnd((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAnd(this.bi, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsAndEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsAndEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).andEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).andEquals(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseAndEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAndEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAndEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAndEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAndEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAndEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseAndEquals(this.bi, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsOr() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsOr() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).or(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).or(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOr(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOr((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOr((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOr((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOr((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOr((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOr(this.bi, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsOrEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsOrEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).orEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).orEquals(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseOrEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOrEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOrEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOrEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOrEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOrEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseOrEquals(this.bi, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsXor() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsXor() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xor(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xor(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXor(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXor((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXor((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXor((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXor((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXor((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXor(this.bi, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsXorEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsXorEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).xorEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).xorEquals(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseXorEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXorEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXorEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXorEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXorEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXorEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseXorEquals(this.bi, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsCompare() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsCompare() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).compare(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).compare(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseCompare(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseCompare((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseCompare((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseCompare((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseCompare((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseCompare((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseCompare((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseCompare((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseCompare(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseCompare(this.bd, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).equals(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).equals(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseEquals(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseEquals((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseEquals((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseEquals(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseEquals(this.bd, this.o), null);
   }
  
   public void testUnsupportedMetaClassMethodsNotEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsNotEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).notEquals(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).notEquals(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseNotEquals(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseNotEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseNotEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseNotEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseNotEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseNotEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseNotEquals((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseNotEquals((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseNotEquals(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseNotEquals(this.bd, this.o), null);
   }
  
   public void testUnsupportedMetaClassMethodsLessThan() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsLessThan() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThan(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThan(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThan(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThan((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThan((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThan((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThan((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThan((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThan((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThan((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThan(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThan(this.bd, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsGreaterThan() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsGreaterThan() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThan(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThan(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThan(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThan((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThan((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThan((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThan((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThan((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThan((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThan((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThan(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThan(this.bd, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsLessThanOrEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsLessThanOrEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).lessThanOrEquals(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).lessThanOrEquals(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLessThanOrEquals(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThanOrEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThanOrEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThanOrEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThanOrEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThanOrEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThanOrEquals((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThanOrEquals((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThanOrEquals(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLessThanOrEquals(this.bd, this.o), null);
   }
 
   public void testUnsupportedMetaClassMethodsGreaterThanOrEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((byte)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((byte)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((byte)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((byte)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((byte)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((byte)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((char)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((char)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((char)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((char)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((char)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((char)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((short)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((short)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((short)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((short)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((short)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((short)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((int)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((int)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((int)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((int)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((int)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((int)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((long)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((long)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((long)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((long)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((long)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((long)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((float)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((float)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((float)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((float)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((float)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((float)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((float)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((float)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((float)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((float)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((float)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((float)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((float)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((float)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((float)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((float)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((float)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((float)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((double)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((double)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((double)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((double)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((double)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((double)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((double)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((double)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((double)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((double)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((double)1, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((double)1, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((double)1, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((double)1, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((double)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((double)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals((double)1, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals((double)1, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bi, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bi, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bi, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bi, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bi, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bi, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bd, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bd, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bd, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bd, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bd, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bd, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bd, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bd, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bd, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bd, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bd, (float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bd, (float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bd, (double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bd, (double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bd, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bd, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(bd, bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.bd, this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsGreaterThanOrEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (float)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, (double)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).greaterThanOrEquals(o, bd), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.o, (float)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.o, (double)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).greaterThanOrEquals(this.o, this.bd), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((float)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals((double)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals(bi, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseGreaterThanOrEquals(bd, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThanOrEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThanOrEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThanOrEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThanOrEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThanOrEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThanOrEquals((float)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThanOrEquals((double)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThanOrEquals(this.bi, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseGreaterThanOrEquals(this.bd, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsLeftShift() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsLeftShift() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShift(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShift(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShift(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShift((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShift((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShift((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShift((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShift((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShift(this.bi, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsLeftShiftEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsLeftShiftEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).leftShiftEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).leftShiftEquals(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLeftShiftEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShiftEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShiftEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShiftEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShiftEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShiftEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLeftShiftEquals(this.bi, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsLogicalRightShift() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsLogicalRightShift() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShift(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShift(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLogicalRightShift((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLogicalRightShift((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLogicalRightShift((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLogicalRightShift((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLogicalRightShift((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLogicalRightShift((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLogicalRightShift((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLogicalRightShift((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLogicalRightShift((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLogicalRightShift((long)1, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsLogicalRightShiftEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsLogicalRightShiftEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).logicalRightShiftEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).logicalRightShiftEquals(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLogicalRightShiftEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLogicalRightShiftEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLogicalRightShiftEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLogicalRightShiftEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseLogicalRightShiftEquals((long)1, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLogicalRightShiftEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLogicalRightShiftEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLogicalRightShiftEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLogicalRightShiftEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseLogicalRightShiftEquals((long)1, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsArithmeticRightShift() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsArithmeticRightShift() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShift(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShift(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShift((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShift((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShift((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShift((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShift((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShift(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShift((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShift((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShift((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShift((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShift((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShift(this.bi, this.o), null);
   }
   
   public void testUnsupportedMetaClassMethodsArithmeticRightShiftEquals() {    
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((byte)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((byte)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((byte)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((byte)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((byte)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((byte)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((byte)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((byte)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((byte)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((byte)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((byte)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((byte)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((char)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((char)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((char)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((char)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((char)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((char)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((char)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((char)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((char)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((char)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((char)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((char)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((short)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((short)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((short)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((short)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((short)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((short)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((short)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((short)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((short)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((short)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((short)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((short)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((int)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((int)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((int)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((int)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((int)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((int)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((int)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((int)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((int)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((int)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((int)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((int)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((long)1, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((long)1, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((long)1, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((long)1, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((long)1, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((long)1, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((long)1, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((long)1, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((long)1, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((long)1, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals((long)1, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals((long)1, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(bi, (byte)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.bi, (byte)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(bi, (char)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.bi, (char)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(bi, (short)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.bi, (short)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(bi, (int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.bi, (int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(bi, (long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.bi, (long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(bi, bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.bi, this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMethodsArithmeticRightShiftEquals() {    
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(o, (byte)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(o, (char)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(o, (short)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(o, (int)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(o, (long)1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).arithmeticRightShiftEquals(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.o, (byte)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.o, (char)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.o, (short)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.o, (int)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.o, (long)1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).arithmeticRightShiftEquals(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShiftEquals((byte)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShiftEquals((char)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShiftEquals((short)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShiftEquals((int)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShiftEquals((long)1, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).reverseArithmeticRightShiftEquals(bi, o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShiftEquals((byte)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShiftEquals((char)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShiftEquals((short)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShiftEquals((int)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShiftEquals((long)1, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).reverseArithmeticRightShiftEquals(this.bi, this.o), null);
   }
 
   public void testUnsupportedMetaClassUnaryOperators() {
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).not(true);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).not(true);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).complement((int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).complement((int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).complement((long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).complement((long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).complement(bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).complement(this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryPlus((int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryPlus((int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryPlus((long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryPlus((long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryPlus((float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryPlus((float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryPlus((double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryPlus((double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryPlus(bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryPlus(this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryPlus(bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryPlus(this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryMinus((int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryMinus((int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryMinus((long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryMinus((long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryMinus((float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryMinus((float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryMinus((double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryMinus((double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryMinus(bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryMinus(this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryMinus(bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryMinus(this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixIncrement((int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixIncrement((int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixIncrement((long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixIncrement((long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixIncrement((float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixIncrement((float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixIncrement((double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixIncrement((double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixIncrement(bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixIncrement(this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixIncrement(bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixIncrement(this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixDecrement((int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixDecrement((int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixDecrement((long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixDecrement((long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixDecrement((float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixDecrement((float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixDecrement((double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixDecrement((double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixDecrement(bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixDecrement(this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixDecrement(bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixDecrement(this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixIncrement((int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixIncrement((int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixIncrement((long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixIncrement((long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixIncrement((float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixIncrement((float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixIncrement((double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixIncrement((double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixIncrement(bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixIncrement(this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixIncrement(bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixIncrement(this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixDecrement((int)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixDecrement((int)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixDecrement((long)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixDecrement((long)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixDecrement((float)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixDecrement((float)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixDecrement((double)1);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixDecrement((double)1);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixDecrement(bi);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixDecrement(this.bi);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixDecrement(bd);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixDecrement(this.bd);
       assertTrue(false);
-    } catch(NgRuntimeException e) {}   
+    } catch(final NgRuntimeException e) {}   
   }
 
   public void testSupportedMetaClassUnaryOperators() {
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).not(o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryMinus(o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).unaryPlus(o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).complement(o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixIncrement(o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).postfixDecrement(o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixIncrement(o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).prefixDecrement(o), null);    
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).not(this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryMinus(this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).unaryPlus(this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).complement(this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixIncrement(this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).postfixDecrement(this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixIncrement(this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixDecrement(this.o), null);    
   }
 
   public void testunSupportedMetaClassMiscMethods() {
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).getMetaClassFor(o.getClass());
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getMetaClassFor(this.o.getClass());
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
     try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).getRuntimeMetaClass();
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getRuntimeMetaClass();
       assertTrue(false);
-    } catch(NgRuntimeException e) {}
+    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMiscMethods() {
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).call(o, new Object[]{}), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).callQuick(o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).callQuick(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).callQuick(o, null, null), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).callQuick(o, null, null, null), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).callQuick(o, null, null, null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).call(this.o, new Object[]{}), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).callQuick(this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).callQuick(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).callQuick(this.o, null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).callQuick(this.o, null, null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).callQuick(this.o, null, null, null, null), null);
  
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethod(o, "test", new Object[]{}), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "test"), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "test", o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "test", null, null), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "test", null, null, null), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "test", null, null, null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).invokeMethod(this.o, "test", new Object[]{}), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).invokeMethodQuick(this.o, "test"), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).invokeMethodQuick(this.o, "test", this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).invokeMethodQuick(this.o, "test", null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).invokeMethodQuick(this.o, "test", null, null, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).invokeMethodQuick(this.o, "test", null, null, null, null), null);
  
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeConstructor(o.getClass(), new Object[]{}), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).invokeConstructor(this.o.getClass(), new Object[]{}), null);
 
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).getProperty(o, "test"), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "test", null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getProperty(this.o, "test"), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).setProperty(this.o, "test", null), null);
 
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).getField(o, "test"), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "test", null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getField(this.o, "test"), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).setField(this.o, "test", null), null);
   
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).getAt(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).getAt(o, 1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).getAt(o, bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).putAt(o, o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).putAt(o, 1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).putAt(o, bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getAt(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getAt(this.o, 1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getAt(this.o, this.bi), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).putAt(this.o, this.o), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).putAt(this.o, 1), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).putAt(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).createMetaClassFor(o.getClass()), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).createMetaClassFor(this.o.getClass()), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).getInternalMetaClass(), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getInternalMetaClass(), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).getTheClass(o), Object.class);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getTheClass(this.o), Object.class);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).isCase(o, null), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).isCase(this.o, null), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).isInstanceof(o, o.getClass()), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).isInstanceof(this.o, this.o.getClass()), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(o).asType(o, o.getClass()), null);
+    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).asType(this.o, this.o.getClass()), null);
     
-    NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setInternalMetaClass(null);
+    NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).setInternalMetaClass(null);
   }
 }

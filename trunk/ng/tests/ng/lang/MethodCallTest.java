@@ -559,23 +559,23 @@ class TestVoidTarget {
     this.c0Called = true;
   }
   
-  public void c1(Object o1) {
+  public void c1(final Object o1) {
     this.c1Called = true;
   }
   
-  public void c2(Object o1, Object o2) {
+  public void c2(final Object o1, final Object o2) {
     this.c2Called = true;
   }
   
-  public void c3(Object o1, Object o2, Object o3) {
+  public void c3(final Object o1, final Object o2, final Object o3) {
     this.c3Called = true;
   }
   
-  public void c4(Object o1, Object o2, Object o3, Object o4) {
+  public void c4(final Object o1, final Object o2, final Object o3, final Object o4) {
     this.c4Called = true;
   }
   
-  public void cn(Object o1, Object o2, Object o3, Object o4, Object o5) {
+  public void cn(final Object o1, final Object o2, final Object o3, final Object o4, final Object o5) {
     this.cnCalled = true;
   }
 
@@ -589,7 +589,7 @@ class TestVoidTarget {
   /**
    * @param t1 the t1 to set
    */
-  public void setT1(Object t1) {
+  public void setT1(final Object t1) {
     this.t1 = t1;
   }
 
@@ -603,7 +603,7 @@ class TestVoidTarget {
   /**
    * @param t2 the t2 to set
    */
-  public void setT2(Object t2) {
+  public void setT2(final Object t2) {
     this.t2 = t2;
   }
 
@@ -617,7 +617,7 @@ class TestVoidTarget {
   /**
    * @param t3 the t3 to set
    */
-  public void setT3(Integer t3) {
+  public void setT3(final Integer t3) {
     this.t3 = t3;
   }
 
@@ -631,7 +631,7 @@ class TestVoidTarget {
   /**
    * @param t4 the t4 to set
    */
-  public void setT4(Integer t4) {
+  public void setT4(final Integer t4) {
     this.t4 = t4;
   }
 }
@@ -651,32 +651,32 @@ class TestBooleanTarget {
   
   public boolean c0() {
     this.c0Called = true;
-    return res;
+    return this.res;
   }
   
-  public boolean c1(Object o1) {
+  public boolean c1(final Object o1) {
     this.c1Called = true;
-    return res;
+    return this.res;
   }
   
-  public boolean c2(Object o1, Object o2) {
+  public boolean c2(final Object o1, final Object o2) {
     this.c2Called = true;
-    return res;
+    return this.res;
   }
   
-  public boolean c3(Object o1, Object o2, Object o3) {
+  public boolean c3(final Object o1, final Object o2, final Object o3) {
     this.c3Called = true;
-    return res;
+    return this.res;
   }
   
-  public boolean c4(Object o1, Object o2, Object o3, Object o4) {
+  public boolean c4(final Object o1, final Object o2, final Object o3, final Object o4) {
     this.c4Called = true;
-    return res;
+    return this.res;
   }
   
-  public boolean cn(Object o1, Object o2, Object o3, Object o4, Object o5) {
+  public boolean cn(final Object o1, final Object o2, final Object o3, final Object o4, final Object o5) {
     this.cnCalled = true;
-    return res;
+    return this.res;
  }
 
   /**
@@ -689,7 +689,7 @@ class TestBooleanTarget {
   /**
    * @param value the value to set
    */
-  public void setValue(boolean value) {
+  public void setValue(final boolean value) {
     this.value = value;
   }
 }
@@ -709,32 +709,32 @@ class TestCharTarget {
   
   public char c0() {
     this.c0Called = true;
-    return res;
+    return this.res;
   }
   
-  public char c1(Object o1) {
+  public char c1(final Object o1) {
     this.c1Called = true;
-    return res;
+    return this.res;
   }
   
-  public char c2(Object o1, Object o2) {
+  public char c2(final Object o1, final Object o2) {
     this.c2Called = true;
-    return res;
+    return this.res;
   }
   
-  public char c3(Object o1, Object o2, Object o3) {
+  public char c3(final Object o1, final Object o2, final Object o3) {
     this.c3Called = true;
-    return res;
+    return this.res;
   }
   
-  public char c4(Object o1, Object o2, Object o3, Object o4) {
+  public char c4(final Object o1, final Object o2, final Object o3, final Object o4) {
     this.c4Called = true;
-    return res;
+    return this.res;
   }
   
-  public char cn(Object o1, Object o2, Object o3, Object o4, Object o5) {
+  public char cn(final Object o1, final Object o2, final Object o3, final Object o4, final Object o5) {
     this.cnCalled = true;
-    return res;
+    return this.res;
  }
 
   /**
@@ -747,7 +747,7 @@ class TestCharTarget {
   /**
    * @param val the value to set
    */
-  public void setValue(char value) {
+  public void setValue(final char value) {
     this.value = value;
   }
 }
@@ -767,32 +767,32 @@ class TestByteTarget {
   
   public byte c0() {
     this.c0Called = true;
-    return res;
+    return this.res;
   }
   
-  public byte c1(Object o1) {
+  public byte c1(final Object o1) {
     this.c1Called = true;
-    return res;
+    return this.res;
   }
   
-  public byte c2(Object o1, Object o2) {
+  public byte c2(final Object o1, final Object o2) {
     this.c2Called = true;
-    return res;
+    return this.res;
   }
   
-  public byte c3(Object o1, Object o2, Object o3) {
+  public byte c3(final Object o1, final Object o2, final Object o3) {
     this.c3Called = true;
-    return res;
+    return this.res;
   }
   
-  public byte c4(Object o1, Object o2, Object o3, Object o4) {
+  public byte c4(final Object o1, final Object o2, final Object o3, final Object o4) {
     this.c4Called = true;
-    return res;
+    return this.res;
   }
   
-  public byte cn(Object o1, Object o2, Object o3, Object o4, Object o5) {
+  public byte cn(final Object o1, final Object o2, final Object o3, final Object o4, final Object o5) {
     this.cnCalled = true;
-    return res;
+    return this.res;
  }
 
   /**
@@ -805,7 +805,7 @@ class TestByteTarget {
   /**
    * @param value the value to set
    */
-  public void setValue(byte value) {
+  public void setValue(final byte value) {
     this.value = value;
   }
 }
@@ -825,32 +825,32 @@ class TestShortTarget {
   
   public short c0() {
     this.c0Called = true;
-    return res;
+    return this.res;
   }
   
-  public short c1(Object o1) {
+  public short c1(final Object o1) {
     this.c1Called = true;
-    return res;
+    return this.res;
   }
   
-  public short c2(Object o1, Object o2) {
+  public short c2(final Object o1, final Object o2) {
     this.c2Called = true;
-    return res;
+    return this.res;
   }
   
-  public short c3(Object o1, Object o2, Object o3) {
+  public short c3(final Object o1, final Object o2, final Object o3) {
     this.c3Called = true;
-    return res;
+    return this.res;
   }
   
-  public short c4(Object o1, Object o2, Object o3, Object o4) {
+  public short c4(final Object o1, final Object o2, final Object o3, final Object o4) {
     this.c4Called = true;
-    return res;
+    return this.res;
   }
   
-  public short cn(Object o1, Object o2, Object o3, Object o4, Object o5) {
+  public short cn(final Object o1, final Object o2, final Object o3, final Object o4, final Object o5) {
     this.cnCalled = true;
-    return res;
+    return this.res;
  }
 
   /**
@@ -863,7 +863,7 @@ class TestShortTarget {
   /**
    * @param value the value to set
    */
-  public void setValue(short value) {
+  public void setValue(final short value) {
     this.value = value;
   }
 }
@@ -883,32 +883,32 @@ class TestIntTarget {
   
   public int c0() {
     this.c0Called = true;
-    return res;
+    return this.res;
   }
   
-  public int c1(Object o1) {
+  public int c1(final Object o1) {
     this.c1Called = true;
-    return res;
+    return this.res;
   }
   
-  public int c2(Object o1, Object o2) {
+  public int c2(final Object o1, final Object o2) {
     this.c2Called = true;
-    return res;
+    return this.res;
   }
   
-  public int c3(Object o1, Object o2, Object o3) {
+  public int c3(final Object o1, final Object o2, final Object o3) {
     this.c3Called = true;
-    return res;
+    return this.res;
   }
   
-  public int c4(Object o1, Object o2, Object o3, Object o4) {
+  public int c4(final Object o1, final Object o2, final Object o3, final Object o4) {
     this.c4Called = true;
-    return res;
+    return this.res;
   }
   
-  public int cn(Object o1, Object o2, Object o3, Object o4, Object o5) {
+  public int cn(final Object o1, final Object o2, final Object o3, final Object o4, final Object o5) {
     this.cnCalled = true;
-    return res;
+    return this.res;
  }
 
   /**
@@ -921,7 +921,7 @@ class TestIntTarget {
   /**
    * @param value the value to set
    */
-  public void setValue(int value) {
+  public void setValue(final int value) {
     this.value = value;
   }
 }
@@ -941,32 +941,32 @@ class TestLongTarget {
   
   public long c0() {
     this.c0Called = true;
-    return res;
+    return this.res;
   }
   
-  public long c1(Object o1) {
+  public long c1(final Object o1) {
     this.c1Called = true;
-    return res;
+    return this.res;
   }
   
-  public long c2(Object o1, Object o2) {
+  public long c2(final Object o1, final Object o2) {
     this.c2Called = true;
-    return res;
+    return this.res;
   }
   
-  public long c3(Object o1, Object o2, Object o3) {
+  public long c3(final Object o1, final Object o2, final Object o3) {
     this.c3Called = true;
-    return res;
+    return this.res;
   }
   
-  public long c4(Object o1, Object o2, Object o3, Object o4) {
+  public long c4(final Object o1, final Object o2, final Object o3, final Object o4) {
     this.c4Called = true;
-    return res;
+    return this.res;
   }
   
-  public long cn(Object o1, Object o2, Object o3, Object o4, Object o5) {
+  public long cn(final Object o1, final Object o2, final Object o3, final Object o4, final Object o5) {
     this.cnCalled = true;
-    return res;
+    return this.res;
  }
 
   /**
@@ -979,7 +979,7 @@ class TestLongTarget {
   /**
    * @param value the value to set
    */
-  public void setValue(long value) {
+  public void setValue(final long value) {
     this.value = value;
   }
 }
@@ -999,32 +999,32 @@ class TestFloatTarget {
   
   public float c0() {
     this.c0Called = true;
-    return res;
+    return this.res;
   }
   
-  public float c1(Object o1) {
+  public float c1(final Object o1) {
     this.c1Called = true;
-    return res;
+    return this.res;
   }
   
-  public float c2(Object o1, Object o2) {
+  public float c2(final Object o1, final Object o2) {
     this.c2Called = true;
-    return res;
+    return this.res;
   }
   
-  public float c3(Object o1, Object o2, Object o3) {
+  public float c3(final Object o1, final Object o2, final Object o3) {
     this.c3Called = true;
-    return res;
+    return this.res;
   }
   
-  public float c4(Object o1, Object o2, Object o3, Object o4) {
+  public float c4(final Object o1, final Object o2, final Object o3, final Object o4) {
     this.c4Called = true;
-    return res;
+    return this.res;
   }
   
-  public float cn(Object o1, Object o2, Object o3, Object o4, Object o5) {
+  public float cn(final Object o1, final Object o2, final Object o3, final Object o4, final Object o5) {
     this.cnCalled = true;
-    return res;
+    return this.res;
  }
 
   /**
@@ -1037,7 +1037,7 @@ class TestFloatTarget {
   /**
    * @param value the value to set
    */
-  public void setValue(float value) {
+  public void setValue(final float value) {
     this.value = value;
   }
 }
@@ -1057,32 +1057,32 @@ class TestDoubleTarget {
   
   public double c0() {
     this.c0Called = true;
-    return res;
+    return this.res;
   }
   
-  public double c1(Object o1) {
+  public double c1(final Object o1) {
     this.c1Called = true;
-    return res;
+    return this.res;
   }
   
-  public double c2(Object o1, Object o2) {
+  public double c2(final Object o1, final Object o2) {
     this.c2Called = true;
-    return res;
+    return this.res;
   }
   
-  public double c3(Object o1, Object o2, Object o3) {
+  public double c3(final Object o1, final Object o2, final Object o3) {
     this.c3Called = true;
-    return res;
+    return this.res;
   }
   
-  public double c4(Object o1, Object o2, Object o3, Object o4) {
+  public double c4(final Object o1, final Object o2, final Object o3, final Object o4) {
     this.c4Called = true;
-    return res;
+    return this.res;
   }
   
-  public double cn(Object o1, Object o2, Object o3, Object o4, Object o5) {
+  public double cn(final Object o1, final Object o2, final Object o3, final Object o4, final Object o5) {
     this.cnCalled = true;
-    return res;
+    return this.res;
  }
 
   /**
@@ -1095,7 +1095,7 @@ class TestDoubleTarget {
   /**
    * @param value the value to set
    */
-  public void setValue(double value) {
+  public void setValue(final double value) {
     this.value = value;
   }
 }

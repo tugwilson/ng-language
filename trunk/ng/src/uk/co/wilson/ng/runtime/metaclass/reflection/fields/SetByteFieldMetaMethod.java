@@ -25,9 +25,9 @@ public class SetByteFieldMetaMethod extends SetUntypedFieldMetaMethod {
   public Object call(final Object instance, final Object value) {
     try {
       this.field.setByte(instance, ((NgByte)value).getByteValue());
-    } catch (IllegalArgumentException e) {
+    } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
-    } catch (IllegalAccessException e) {
+    } catch (final IllegalAccessException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
     

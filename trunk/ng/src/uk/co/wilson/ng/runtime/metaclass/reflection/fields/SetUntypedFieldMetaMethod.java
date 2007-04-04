@@ -20,26 +20,26 @@ public class SetUntypedFieldMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object[])
    */
-  public Object call(Object instance, Object[] arguments) {
+  public Object call(final Object instance, final Object[] arguments) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(java.lang.Object)
    */
-  public Object call(Object instance) {
+  public Object call(final Object instance) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object value) {
+  public Object call(final Object instance, final Object value) {
     try {
       this.field.set(instance, value);
-    } catch (IllegalArgumentException e) {
+    } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
-    } catch (IllegalAccessException e) {
+    } catch (final IllegalAccessException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
     
@@ -49,21 +49,21 @@ public class SetUntypedFieldMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1, Object p2) {
+  public Object call(final Object instance, final Object p1, final Object p2) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1, Object p2, Object p3) {
+  public Object call(final Object instance, final Object p1, final Object p2, final Object p3) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object call(Object instance, Object p1, Object p2, Object p3, Object p4) {
+  public Object call(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 
