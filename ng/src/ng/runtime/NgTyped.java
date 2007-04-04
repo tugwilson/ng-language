@@ -32,10 +32,10 @@ private final RuntimeMetaClass delegate;
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#getParamObject(java.lang.Object)
+   * @see ng.runtime.RuntimeMetaClass#getParamObject(java.lang.Object, java.lang.Class)
    */
-  public Object getParamObject(Object instance) {
-    return this.delegate.getParamObject(this.instance);
+  public Object getParamObject(Object instance, Class theClass) {
+    return this.delegate.getParamObject(this.instance, theClass);
   }
 
   /* (non-Javadoc)

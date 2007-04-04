@@ -32,8 +32,25 @@ public class AdHocTest {
   public static void main(String[] args) {
     final Object t = new T();
     final Object t1 = new T1();
+    final Object t2 = new T2();
+    final Object t2TypedAsT1 = new NgTyped(t2, T1.class);
+    final Object t1TypedAsT = new NgTyped(t1, T.class);
     
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethodQuick(t, "foo")).getIntValue());
+    
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethodQuick((I)t1, "foo")).getIntValue());
+    
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t2TypedAsT1).invokeMethodQuick(t2TypedAsT1, "foo")).getIntValue());
+    
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1TypedAsT).invokeMethodQuick(t1TypedAsT, "foo")).getIntValue());
+    
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethodQuick(t1, "bar")).getIntValue());
+    
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t2).invokeMethodQuick(t2, "bar")).getIntValue());
+    
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t2TypedAsT1).invokeMethodQuick(t2TypedAsT1, "bar")).getIntValue());
+    
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1TypedAsT).invokeMethodQuick(t1TypedAsT, "bar")).getIntValue());
     
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1)})).getIntValue());
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{new NgInt(1), new NgInt(1), new NgInt(1), new NgInt(1), t})).getIntValue());
@@ -86,8 +103,20 @@ class T {
   }
 }
 
-class T1 extends T {
+class T1 extends T implements I {
   public int foo(int a, int b, int c, int d, int e) {
     return 10000;
   }
+  
+  public int bar() {
+    return 400;
+  }
+}
+
+class T2 extends T1 {
+  
+}
+
+interface I {
+  int foo();
 }

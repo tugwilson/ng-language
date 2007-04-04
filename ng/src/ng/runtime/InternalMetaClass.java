@@ -27,9 +27,10 @@ import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
 public interface InternalMetaClass {
   /**
    * @param instance
-   * @return the Object to be used whan passing this instance as a parameter
+   * @param theClass
+   * @return
    */
-  Object doGetParamObject(Object instance);
+  Object doGetParamObject(Object instance, Class theClass);
   
   /**
    * @param theClass

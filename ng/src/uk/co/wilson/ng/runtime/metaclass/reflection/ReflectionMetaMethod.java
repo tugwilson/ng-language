@@ -27,7 +27,7 @@ import uk.co.wilson.ng.runtime.metaclass.methods.BaseMetaMethod;
  */
 public abstract class ReflectionMetaMethod extends BaseMetaMethod {
   private static final Class NO_PARAMETERS[] = new Class[0];
-  private final Class parameterTypes[];
+  protected final Class parameterTypes[];
   
   public ReflectionMetaMethod() {
     super(0);
