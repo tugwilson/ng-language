@@ -455,7 +455,7 @@ public interface InstanceHandler {
    * @param p2
    * @return
    */
-  MetaMethod getMetaMethodMethodQuick(String methodName, Object p1, Object p2);
+  MetaMethod getMetaMethodQuick(String methodName, Object p1, Object p2);
   
   /**
    * @param methodName
@@ -775,13 +775,6 @@ public interface InstanceHandler {
      */
     public Object call(Object instance, Object[] arguments) {
       return RuntimeMetaClassImpl.NOT_CALLED;
-    }
-
-    /* (non-Javadoc)
-     * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.RuntimeMetaClass[])
-     */
-    public MetaMethodSelection selectMethod(RuntimeMetaClass[] argumentMetaClasses) {
-      return new MetaMethodSelection();
     }
 
     /* (non-Javadoc)

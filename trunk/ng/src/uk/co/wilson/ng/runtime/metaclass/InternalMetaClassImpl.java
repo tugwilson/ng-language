@@ -148,7 +148,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    *         parameters.
    */
   public MetaMethod doGetMetaMethodQuick(final String methodName, final Object p1, final Object p2) {
-    return this.instanceHandler.getMetaMethodMethodQuick(methodName, p1, p2);
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1, p2);
   }
 
   /**
@@ -506,17 +506,27 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doAdd(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.add(lhs, rhs);
+  Object result = this.instanceHandler.add(lhs, rhs);
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAdd(lhs, rhs);
-    } else {
-      return result;
+      result = this.instanceHandler.getMetaMethodQuick("plus", rhs).call(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAdd(lhs, rhs);
+      }
     }
+
+    return result;
   }
   
   public Object doReverseAdd(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseAdd(lhs, rhs);
+  Object result = this.instanceHandler.reverseAdd(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      return this.instanceHandler.getMetaMethodQuick("reversePlus", rhs).call(rhs, lhs);
+    }
+
+    return result;
   }
 
   //

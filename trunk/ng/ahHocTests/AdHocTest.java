@@ -38,7 +38,13 @@ public class AdHocTest {
     final Object t2 = new T2();
     final Object t2TypedAsT1 = new NgTyped(t2, T1.class);
     final Object t1TypedAsT = new NgTyped(t1, T.class);
-   
+    final Object int1 = new NgInt(1);
+    
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).add(t, new NgInt(1))).getIntValue());
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).add(t1, new NgInt(1))).getIntValue());
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(int1).add(int1, t)).getIntValue());
+    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(int1).add(int1, t1)).getIntValue());
+    
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethodQuick(t, "foo")).getIntValue());
     
     System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethodQuick((I)t1, "foo")).getIntValue());
@@ -105,6 +111,14 @@ class T {
   
   public long foo(long a, long b, long c, long d, T1 e) {
     return a + b + c + d + 100;
+  }
+  
+  public int plus(int rhs) {
+    return rhs + 1000;
+  }
+  
+  public int reversePlus(int lhs) {
+    return lhs + 2000;
   }
 }
 
