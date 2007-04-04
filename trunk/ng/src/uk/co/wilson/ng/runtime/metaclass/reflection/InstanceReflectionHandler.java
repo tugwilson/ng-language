@@ -723,14 +723,38 @@ public class InstanceReflectionHandler implements InstanceHandler {
    * @see ng.runtime.MetaClass#addEquals(java.lang.Object, java.lang.Object)
    */
   public Object addEquals(final Object lhs, final Object rhs) {
-    return this.addEquals.call(lhs, rhs);
+    setUpMetaClasses();
+    
+    for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
+    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doAddEquals(lhs, rhs);
+      
+      if (result != RuntimeMetaClassImpl.NOT_CALLED) return result;
+    }
+    
+    if (this.theSuperClass != null) {
+      return this.superClassMetaClass.getInternalMetaClass().doAddEquals(lhs, rhs);
+    } else {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseAddEquals(java.lang.Object, java.lang.Object)
    */
   public Object reverseAddEquals(final Object lhs, final Object rhs) {
-    return this.reverseAddEquals.call(rhs, lhs);
+    setUpMetaClasses();
+    
+    for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
+    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doReverseAddEquals(lhs, rhs);
+      
+      if (result != RuntimeMetaClassImpl.NOT_CALLED) return result;
+    }
+    
+    if (this.theSuperClass != null) {
+      return this.superClassMetaClass.getInternalMetaClass().doReverseAddEquals(lhs, rhs);
+    } else {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
   }
 
   /* (non-Javadoc)
