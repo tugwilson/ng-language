@@ -374,67 +374,32 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#getProperty(java.lang.Object, java.lang.String)
+   * @see ng.runtime.InstanceHandler#getPropertyMetaMethod(java.lang.Object, java.lang.String)
    */
-  public Object getProperty(final Object instance, final String propertyName) {
-  Object result = this.getPropertyMethods.get(propertyName).call(instance);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-    result = this.getFieldMethods.get(propertyName).call(instance);
-      
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-        return RuntimeMetaClassImpl.NO_PROPERTY;
-      }
-    }
-    
-    return result;
+  public MetaMethod getGetPropertyMetaMethod(final Object instance, final String propertyName) {
+    return this.getPropertyMethods.get(propertyName);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#setProperty(java.lang.Object, java.lang.String, java.lang.Object)
    */
-  public Object setProperty(final Object instance, final String propertyName, final Object newValue) {
-  Object result = this.setPropertyMethods.get(propertyName).call(instance, newValue);
- 
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-    result = this.setFieldMethods.get(propertyName).call(instance, newValue);
-      
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-        return RuntimeMetaClassImpl.NO_PROPERTY;
-      }
-    }
-    
-    //
-    // TODO: review this behaviour
-    // if the method is not void we should probably return the actual value returned
-    //
-    return newValue;
+  public MetaMethod getSetPropertyMetaMethod(final Object instance, final String propertyName, final Object newValue) {
+    // TODO: select the method based on the parameter match
+    return this.setPropertyMethods.get(propertyName);
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#getField(java.lang.Object, java.lang.String)
+   * @see ng.runtime.InstanceHandler#getFieldMetaMethod(java.lang.Object, java.lang.String)
    */
-  public Object getField(final Object instance, final String fieldName) {
-  final Object result = this.getFieldMethods.get(fieldName).call(instance);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return RuntimeMetaClassImpl.NO_FIELD;
-    } else {
-      return result;
-    }
+  public MetaMethod getGetFieldMetaMethod(final Object instance, final String fieldName) {
+    return this.getFieldMethods.get(fieldName);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#setField(java.lang.Object, java.lang.String, java.lang.Object)
    */
-  public Object setField(final Object instance, final String fieldName, final Object newValue) {
-    final Object result = this.setFieldMethods.get(fieldName).call(instance, newValue);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return RuntimeMetaClassImpl.NO_FIELD;
-    } else {
-      return result;
-    }
+  public MetaMethod getSetFieldMetaMethod(final Object instance, final String fieldName, final Object newValue) {
+    return this.setFieldMethods.get(fieldName);
   }
 
   /* (non-Javadoc)

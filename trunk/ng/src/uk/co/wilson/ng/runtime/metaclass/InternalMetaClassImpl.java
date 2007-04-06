@@ -179,8 +179,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param propertyName
    * @return
    */
-  public Object doGetProperty(final Object instance, final String propertyName) {
-    return this.instanceHandler.getProperty(instance, propertyName);
+  public MetaMethod doGetGetPropertyMetaMethod(final Object instance, final String propertyName) {
+    return this.instanceHandler.getGetPropertyMetaMethod(instance, propertyName);
   }
 
   /**
@@ -189,8 +189,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param newValue
    * @return
    */
-  public Object doSetProperty(final Object instance, final String propertyName, final Object newValue) {
-    return this.instanceHandler.setProperty(instance, propertyName, newValue);
+  public MetaMethod doGetSetPropertyMetaMethod(final Object instance, final String propertyName, final Object newValue) {
+    return this.instanceHandler.getSetPropertyMetaMethod(instance, propertyName, newValue);
   }
 
   /**
@@ -198,8 +198,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param fieldName
    * @return
    */
-  public Object doGetField(final Object instance, final String fieldName) {
-    return this.instanceHandler.getField(instance, fieldName);
+  public MetaMethod doGetGetFieldMetaMethod(final Object instance, final String fieldName) {
+    return this.instanceHandler.getGetFieldMetaMethod(instance, fieldName);
   }
 
   /**
@@ -208,8 +208,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param newValue
    * @return
    */
-  public Object doSetField(final Object instance, final String fieldName, final Object newValue) {
-    return this.instanceHandler.setField(instance, fieldName, newValue);
+  public MetaMethod doGetSetFieldMetaMethod(final Object instance, final String fieldName, final Object newValue) {
+    return this.instanceHandler.getSetFieldMetaMethod(instance, fieldName, newValue);
   }
   
   /**

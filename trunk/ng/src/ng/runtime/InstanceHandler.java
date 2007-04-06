@@ -45,7 +45,7 @@ public interface InstanceHandler {
    * @param propertyName
    * @return
    */
-  Object getProperty(Object instance, String propertyName);
+  MetaMethod getGetPropertyMetaMethod(Object instance, String propertyName);
 
   /**
    * @param instance
@@ -53,14 +53,14 @@ public interface InstanceHandler {
    * @param newValue
    * @return
    */
-  Object setProperty(Object instance, String propertyName, Object newValue);
+  MetaMethod getSetPropertyMetaMethod(Object instance, String propertyName, Object newValue);
 
   /**
    * @param instance
    * @param fieldName
    * @return
    */
-  Object getField(Object instance, String fieldName);
+  MetaMethod getGetFieldMetaMethod(Object instance, String fieldName);
 
   /**
    * @param instance
@@ -68,7 +68,7 @@ public interface InstanceHandler {
    * @param newValue
    * @return
    */
-  Object setField(Object instance, String fieldName, Object newValue);
+  MetaMethod getSetFieldMetaMethod(Object instance, String fieldName, Object newValue);
   
   /**
    * @return

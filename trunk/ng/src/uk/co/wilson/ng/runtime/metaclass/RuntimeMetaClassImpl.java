@@ -33,8 +33,6 @@ import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   public static final Object NOT_CONSTRUCTED = new Object();
   public static final Object NOT_CALLED = new Object();
-  public static final Object NO_PROPERTY = new Object();
-  public static final Object NO_FIELD = new Object();
   
   protected static final Object[] NO_PARAMETERS = new Object[] {};
 
@@ -169,7 +167,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * 
    * @see ng.lang.MetaClass#getTheClass()
    */
-  public final Class getTheClass(final Object instance) {
+  public Class getTheClass(final Object instance) {
     return this.internalMetaClass.doGetTheClass(instance);
   }
   
@@ -183,7 +181,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#invokeConstructor(java.lang.Class, java.lang.Object[])
    */
-  public final Object invokeConstructor(final Class theClass, final Object[] arguments) {
+  public  Object invokeConstructor(final Class theClass, final Object[] arguments) {
   final Object result = this.internalMetaClass.doInvokeConstructor(theClass, arguments);
   
     // TODO: make this error more detailed.
@@ -195,7 +193,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object[])
    */
-  public final Object invokeMethod(final Object instance, final String methodName, final Object[] arguments) {
+  public  Object invokeMethod(final Object instance, final String methodName, final Object[] arguments) {
     switch (arguments.length) {
     case 0:
       return invokeMethodQuick(instance, methodName);
@@ -267,7 +265,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String)
    */
-  public final Object invokeMethodQuick(final Object instance, final String methodName) {
+  public  Object invokeMethodQuick(final Object instance, final String methodName) {
     final Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName).call(instance);
 
     // TODO: make this error more detailed.
@@ -279,7 +277,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object)
    */
-  public final Object invokeMethodQuick(final Object instance, final String methodName, final Object p1) {
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final Object p1) {
     final Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
 
     // TODO: make this error more detailed.
@@ -291,7 +289,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
    */
-  public final Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2) {
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2) {
     final Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2).call(instance, p1, p2);
 
     // TODO: make this error more detailed.
@@ -303,7 +301,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public final Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
     final Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2, p3).call(instance, p1, p2, p3);
 
     // TODO: make this error more detailed.
@@ -315,7 +313,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public final Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
     final Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2, p3, p4).call(instance, p1, p2, p3, p4);
 
     // TODO: make this error more detailed.
@@ -327,23 +325,33 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#getProperty(java.lang.Object, java.lang.String)
    */
-  public final Object getProperty(final Object instance, final String propertyName) {
-  final Object result = this.internalMetaClass.doGetProperty(instance, propertyName);
+  public Object getProperty(final Object instance, final String propertyName) {
+  final InternalMetaClass internalMetaClass = this.internalMetaClass;
+  Object result = internalMetaClass.doGetGetPropertyMetaMethod(instance, propertyName).call(instance);
     
-    // TODO: make this error more detailed.
-    if (result == NO_PROPERTY) throw new NgRuntimeException("The property " +  propertyName + " was not found");
-
+    if (result == NOT_CALLED) {
+      result = internalMetaClass.doGetGetFieldMetaMethod(instance, propertyName).call(instance);
+      
+      // TODO: make this error more detailed.
+      if (result == NOT_CALLED) throw new NgRuntimeException("The property " +  propertyName + " was not found");
+    }
+    
     return result;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#setProperty(java.lang.Object, java.lang.String, java.lang.Object)
    */
-  public final Object setProperty(final Object instance, final String propertyName, final Object newValue) {
-  final Object result = this.internalMetaClass.doSetProperty(instance, propertyName, newValue);
+  public Object setProperty(final Object instance, final String propertyName, final Object newValue) {
+  final InternalMetaClass internalMetaClass = this.internalMetaClass;
+  Object result = internalMetaClass.doGetSetPropertyMetaMethod(instance, propertyName, newValue).call(instance, newValue);
+    
+  if (result == NOT_CALLED) {
+    result = internalMetaClass.doGetSetFieldMetaMethod(instance, propertyName, newValue).call(instance, newValue);
     
     // TODO: make this error more detailed.
-    if (result == NO_PROPERTY) throw new NgRuntimeException("The property " +  propertyName + " was not found");
+    if (result == NOT_CALLED) throw new NgRuntimeException("The property " +  propertyName + " was not found");
+  }
 
     return result;
   }
@@ -351,11 +359,11 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#getField(java.lang.Object, java.lang.String)
    */
-  public final Object getField(final Object instance, final String fieldName) {
-  final Object result = this.internalMetaClass.doGetField(instance, fieldName);
+  public Object getField(final Object instance, final String fieldName) {
+  final Object result = this.internalMetaClass.doGetGetFieldMetaMethod(instance, fieldName).call(instance);
     
     // TODO: make this error more detailed.
-    if (result == NO_FIELD) throw new NgRuntimeException("The field " +  fieldName + " was not found");
+    if (result == NOT_CALLED) throw new NgRuntimeException("The field " +  fieldName + " was not found");
 
     return result;
   }
@@ -364,10 +372,10 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.MetaClass#setField(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object setField(final Object instance, final String fieldName, final Object newValue) {
-  final Object result = this.internalMetaClass.doSetField(instance, fieldName, newValue);
+  final Object result = this.internalMetaClass.doGetSetFieldMetaMethod(instance, fieldName, newValue).call(instance, newValue);
     
     // TODO: make this error more detailed.
-    if (result == NO_FIELD) throw new NgRuntimeException("The field " +  fieldName + " was not found");
+    if (result == NOT_CALLED) throw new NgRuntimeException("The field " +  fieldName + " was not found");
 
     return result;
   }
@@ -375,7 +383,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#call(java.lang.Object, java.lang.Object[])
    */
-  public final Object call(final Object instance, final Object[] arguments) {
+  public  Object call(final Object instance, final Object[] arguments) {
     switch (arguments.length) {
     case 0:
       return callQuick(instance);
@@ -405,7 +413,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object)
    */
-  public final Object callQuick(final Object instance) {
+  public  Object callQuick(final Object instance) {
   final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance);
 
     // TODO: make this error more detailed.
@@ -417,7 +425,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object)
    */
-  public final Object callQuick(final Object instance, final Object p1) {
+  public  Object callQuick(final Object instance, final Object p1) {
   final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
 
     // TODO: make this error more detailed.
@@ -429,7 +437,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public final Object callQuick(final Object instance, final Object p1, final Object p2) {
+  public  Object callQuick(final Object instance, final Object p1, final Object p2) {
   final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1, p2);
 
     // TODO: make this error more detailed.
@@ -441,7 +449,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public final Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3) {
+  public  Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3) {
   final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1, p2, p3);
 
     // TODO: make this error more detailed.
@@ -452,7 +460,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public final Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
+  public  Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
   final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1, p2, p3, p4);
 
     // TODO: make this error more detailed.

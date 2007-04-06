@@ -166,7 +166,7 @@ public interface InternalMetaClass {
    * @param propertyName
    * @return
    */
-  Object doGetProperty(Object instance, String propertyName);
+  MetaMethod doGetGetPropertyMetaMethod(Object instance, String propertyName);
 
   /**
    * @param instance
@@ -174,14 +174,14 @@ public interface InternalMetaClass {
    * @param newValue
    * @return
    */
-  Object doSetProperty(Object instance, String propertyName, Object newValue);
+  MetaMethod doGetSetPropertyMetaMethod(Object instance, String propertyName, Object newValue);
 
   /**
    * @param instance
    * @param fieldName
    * @return
    */
-  Object doGetField(Object instance, String fieldName);
+  MetaMethod doGetGetFieldMetaMethod(Object instance, String fieldName);
 
   /**
    * @param instance
@@ -189,7 +189,7 @@ public interface InternalMetaClass {
    * @param newValue
    * @return
    */
-  Object doSetField(Object instance, String fieldName, Object newValue);
+  MetaMethod doGetSetFieldMetaMethod(Object instance, String fieldName, Object newValue);
   
   /**
    * @return
