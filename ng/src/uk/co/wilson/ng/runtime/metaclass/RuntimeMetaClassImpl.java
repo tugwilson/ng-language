@@ -194,6 +194,8 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.MetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object[])
    */
   public  Object invokeMethod(final Object instance, final String methodName, final Object[] arguments) {
+  final InternalMetaClass internalMetaClass = this.internalMetaClass;
+  
     switch (arguments.length) {
     case 0:
       return invokeMethodQuick(instance, methodName);
@@ -211,12 +213,20 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
       return invokeMethodQuick(instance, methodName, arguments[0], arguments[1], arguments[2], arguments[3]);
 
     default:
-      final Object result = this.internalMetaClass.doGetMetaMethodFor(methodName, arguments).call(instance, arguments);
+      Object result = internalMetaClass.doGetMetaMethodFor(methodName, arguments).call(instance, arguments);
 
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException("The method " +  methodName + " is not found");
-
-    return result;
+      if (result == NOT_CALLED) {
+        result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+        
+        if (result != NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).call(instance, arguments);
+        }
+        
+        // TODO: make this error more detailed.
+        throw new NgRuntimeException("The method " +  methodName + " is not found");
+      }
+  
+      return result;
     }
   }
   
@@ -266,10 +276,18 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String)
    */
   public  Object invokeMethodQuick(final Object instance, final String methodName) {
-    final Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName).call(instance);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException("The method " +  methodName + " is not found");
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName).call(instance);
+  
+    if (result == NOT_CALLED) {
+      result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
 
     return result;
   }
@@ -278,10 +296,18 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public  Object invokeMethodQuick(final Object instance, final String methodName, final Object p1) {
-    final Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
 
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException("The method " +  methodName + " is not found");
+    if (result == NOT_CALLED) {
+      result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
 
     return result;
   }
@@ -290,10 +316,18 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
    */
   public  Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2) {
-    final Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2).call(instance, p1, p2);
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2).call(instance, p1, p2);
 
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException("The method " +  methodName + " is not found");
+    if (result == NOT_CALLED) {
+      result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1, p2);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
 
     return result;
   }
@@ -302,10 +336,18 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public  Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
-    final Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2, p3).call(instance, p1, p2, p3);
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2, p3).call(instance, p1, p2, p3);
 
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException("The method " +  methodName + " is not found");
+    if (result == NOT_CALLED) {
+      result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1, p2, p3);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
 
     return result;
   }
@@ -314,10 +356,18 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public  Object invokeMethodQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
-    final Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2, p3, p4).call(instance, p1, p2, p3, p4);
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2, p3, p4).call(instance, p1, p2, p3, p4);
 
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException("The method " +  methodName + " is not found");
+    if (result == NOT_CALLED) {
+      result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1, p2, p3, p4);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
 
     return result;
   }
