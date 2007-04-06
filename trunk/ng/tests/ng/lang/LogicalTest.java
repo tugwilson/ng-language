@@ -24,15 +24,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import junit.framework.TestCase;
-import ng.runtime.MetaClassRegistry;
-import ng.runtime.NgBoolean;
-import ng.runtime.NgByte;
-import ng.runtime.NgChar;
-import ng.runtime.NgDouble;
-import ng.runtime.NgFloat;
-import ng.runtime.NgInt;
-import ng.runtime.NgLong;
-import ng.runtime.NgShort;
+import ng.runtime.*;
+import uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 
 public class LogicalTest extends TestCase {
   final MetaClassRegistry registry = NgSystem.metaClassRegistry;
@@ -8135,335 +8129,335 @@ public class LogicalTest extends TestCase {
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(BigDecimal.class).equals(this.oneBigDecimal, this.oneBigDecimal)).getBooleanValue(), b2);
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(BigDecimal.class).equals(this.twoBigDecimal, this.twoBigDecimal)).getBooleanValue(), b3);
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(BigDecimal.class).equals(this.twoBigDecimal, this.oneBigDecimal)).getBooleanValue(), b4);
-/*
+
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((byte) 1, (byte) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((byte) 1, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((char) 1, (byte) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((char) 1, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((short) 1, (byte) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((short) 1, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((int) 1, (byte) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((int) 1, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((long) 1, (byte) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((long) 1, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((float) 1, (byte) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((float) 1, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((double) 1, (byte) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((double) 1, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigInteger)this.oneBigInt, (byte) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigInteger)this.oneBigInt, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigDecimal)this.oneBigDecimal, (byte) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigDecimal)this.oneBigDecimal, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((byte) 1, (char) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((byte) 1, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((char) 1, (char) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((char) 1, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((short) 1, (char) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((short) 1, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((int) 1, (char) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((int) 1, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((long) 1, (char) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((long) 1, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((float) 1, (char) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((float) 1, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((double) 1, (char) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((double) 1, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigInteger)this.oneBigInt, (char) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigInteger)this.oneBigInt, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigDecimal)this.oneBigDecimal, (char) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigDecimal)this.oneBigDecimal, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((byte) 1, (short) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((byte) 1, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((char) 1, (short) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((char) 1, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((short) 1, (short) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((short) 1, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((int) 1, (short) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((int) 1, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((long) 1, (short) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((long) 1, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((float) 1, (short) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((float) 1, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((double) 1, (short) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((double) 1, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigInteger)this.oneBigInt, (short) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigInteger)this.oneBigInt, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigDecimal)this.oneBigDecimal, (short) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigDecimal)this.oneBigDecimal, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((byte) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((byte) 1, (int) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((char) 1, (int) 1);
-      assertTrue(false);
-    } catch (final NgRuntimeException e) {
-    }
-    try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((short) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((char) 1, (int) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {
     }
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((int) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((short) 1, (int) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {
     }
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((long) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((int) 1, (int) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {
+    }
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((long) 1, (int) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((float) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((float) 1, (int) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((double) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((double) 1, (int) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigInteger)this.oneBigInt, (int) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigInteger)this.oneBigInt, (int) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigDecimal)this.oneBigDecimal, (int) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigDecimal)this.oneBigDecimal, (int) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((byte) 1, (long) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((byte) 1, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((char) 1, (long) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((char) 1, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((short) 1, (long) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((short) 1, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((int) 1, (long) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((int) 1, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((long) 1, (long) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((long) 1, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((float) 1, (long) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((float) 1, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((double) 1, (long) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((double) 1, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigInteger)this.oneBigInt, (long) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigInteger)this.oneBigInt, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigDecimal)this.oneBigDecimal, (long) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigDecimal)this.oneBigDecimal, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((byte) 1, (float) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((byte) 1, (float) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((char) 1, (float) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((char) 1, (float) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((short) 1, (float) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((short) 1, (float) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((int) 1, (float) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((int) 1, (float) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((long) 1, (float) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((long) 1, (float) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((float) 1, (float) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((float) 1, (float) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((double) 1, (float) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((double) 1, (float) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigInteger)this.oneBigInt, (float) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigInteger)this.oneBigInt, (float) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigDecimal)this.oneBigDecimal, (float) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigDecimal)this.oneBigDecimal, (float) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((byte) 1, (double) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((byte) 1, (double) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((char) 1, (double) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((char) 1, (double) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((short) 1, (double) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((short) 1, (double) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((int) 1, (double) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((int) 1, (double) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((long) 1, (double) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((long) 1, (double) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((float) 1, (double) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((float) 1, (double) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((double) 1, (double) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((double) 1, (double) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigInteger)this.oneBigInt, (double) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigInteger)this.oneBigInt, (double) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigDecimal)this.oneBigDecimal, (double) 1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigDecimal)this.oneBigDecimal, (double) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((byte) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((byte) 1, (BigInteger) this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((char) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((char) 1, (BigInteger) this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((short) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((short) 1, (BigInteger) this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((int) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((int) 1, (BigInteger) this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((long) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((long) 1, (BigInteger) this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((float) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((float) 1, (BigInteger) this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((double) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((double) 1, (BigInteger) this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((byte) 1, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((byte) 1, (BigDecimal) this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((char) 1, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((char) 1, (BigDecimal) this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((short) 1, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((short) 1, (BigDecimal) this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((int) 1, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((int) 1, (BigDecimal) this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((long) 1, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((long) 1, (BigDecimal) this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((float) 1, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((float) 1, (BigDecimal) this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((double) 1, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((double) 1, (BigDecimal) this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {} 
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigInteger) this.oneBigInt, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigInteger) this.oneBigInt, (BigInteger) this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {} 
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigInteger) this.oneBigInt, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigInteger) this.oneBigInt, (BigDecimal) this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {} 
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigDecimal) this.oneBigDecimal, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigDecimal) this.oneBigDecimal, (BigInteger) this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {} 
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals((BigDecimal) this.oneBigDecimal, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals((BigDecimal) this.oneBigDecimal, (BigDecimal) this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {} 
-*/    
+    
     for (int i = 0; i != this.ones.length; i++) {
       
       assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(this.ones[i]).equals(this.ones[i], (byte)2)).getBooleanValue(), b1);
@@ -8563,85 +8557,85 @@ public class LogicalTest extends TestCase {
         assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(this.twos[i]).equals(this.twos[i], this.ones[j])).getBooleanValue(), b4);
       }      
     }
-/*    
+    
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), new Object());
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals(new Object(), new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), (byte)1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals(new Object(), (byte)1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), (char)1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals(new Object(), (char)1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), (short)1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals(new Object(), (short)1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), (int)1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals(new Object(), (int)1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), (long)1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals(new Object(), (long)1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), (float)1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals(new Object(), (float)1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), (double)1);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals(new Object(), (double)1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), (BigInteger)this.oneBigInt);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals(new Object(), (BigInteger)this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), (BigDecimal)this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equals(new Object(), (BigDecimal)this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseEquals((byte)1, new Object());
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEquals((byte)1, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseEquals((char)1, new Object());
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEquals((char)1, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseEquals((short)1, new Object());
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEquals((short)1, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseEquals((int)1, new Object());
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEquals((int)1, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseEquals((long)1, new Object());
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEquals((long)1, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseEquals((float)1, new Object());
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEquals((float)1, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseEquals((double)1, new Object());
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEquals((double)1, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseEquals((BigInteger)this.oneBigInt, new Object());
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEquals((BigInteger)this.oneBigInt, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseEquals((BigDecimal)this.oneBigDecimal, new Object());
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEquals((BigDecimal)this.oneBigDecimal, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
-*/
+
   }
 
   public void testNotEquals() {
@@ -9056,335 +9050,335 @@ public class LogicalTest extends TestCase {
       assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(BigDecimal.class).notEquals(this.oneBigDecimal, this.oneBigDecimal)).getBooleanValue(), b2);
       assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(BigDecimal.class).notEquals(this.twoBigDecimal, this.twoBigDecimal)).getBooleanValue(), b3);
       assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(BigDecimal.class).notEquals(this.twoBigDecimal, this.oneBigDecimal)).getBooleanValue(), b4);
-/*
+
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((byte) 1, (byte) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((byte) 1, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((char) 1, (byte) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((char) 1, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((short) 1, (byte) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((short) 1, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((int) 1, (byte) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((int) 1, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((long) 1, (byte) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((long) 1, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((float) 1, (byte) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((float) 1, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((double) 1, (byte) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((double) 1, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigInteger)this.oneBigInt, (byte) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigInteger)this.oneBigInt, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigDecimal)this.oneBigDecimal, (byte) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigDecimal)this.oneBigDecimal, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((byte) 1, (char) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((byte) 1, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((char) 1, (char) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((char) 1, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((short) 1, (char) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((short) 1, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((int) 1, (char) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((int) 1, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((long) 1, (char) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((long) 1, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((float) 1, (char) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((float) 1, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((double) 1, (char) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((double) 1, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigInteger)this.oneBigInt, (char) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigInteger)this.oneBigInt, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigDecimal)this.oneBigDecimal, (char) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigDecimal)this.oneBigDecimal, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((byte) 1, (short) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((byte) 1, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((char) 1, (short) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((char) 1, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((short) 1, (short) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((short) 1, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((int) 1, (short) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((int) 1, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((long) 1, (short) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((long) 1, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((float) 1, (short) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((float) 1, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((double) 1, (short) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((double) 1, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigInteger)this.oneBigInt, (short) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigInteger)this.oneBigInt, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigDecimal)this.oneBigDecimal, (short) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigDecimal)this.oneBigDecimal, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((byte) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((byte) 1, (int) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((char) 1, (int) 1);
-        assertTrue(false);
-      } catch (final NgRuntimeException e) {
-      }
-      try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((short) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((char) 1, (int) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {
       }
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((int) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((short) 1, (int) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {
       }
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((long) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((int) 1, (int) 1);
+        assertTrue(false);
+      } catch (final NgRuntimeException e) {
+      }
+      try {
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((long) 1, (int) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((float) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((float) 1, (int) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((double) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((double) 1, (int) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigInteger)this.oneBigInt, (int) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigInteger)this.oneBigInt, (int) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigDecimal)this.oneBigDecimal, (int) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigDecimal)this.oneBigDecimal, (int) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((byte) 1, (long) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((byte) 1, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((char) 1, (long) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((char) 1, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((short) 1, (long) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((short) 1, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((int) 1, (long) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((int) 1, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((long) 1, (long) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((long) 1, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((float) 1, (long) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((float) 1, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((double) 1, (long) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((double) 1, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigInteger)this.oneBigInt, (long) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigInteger)this.oneBigInt, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigDecimal)this.oneBigDecimal, (long) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigDecimal)this.oneBigDecimal, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((byte) 1, (float) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((byte) 1, (float) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((char) 1, (float) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((char) 1, (float) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((short) 1, (float) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((short) 1, (float) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((int) 1, (float) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((int) 1, (float) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((long) 1, (float) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((long) 1, (float) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((float) 1, (float) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((float) 1, (float) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((double) 1, (float) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((double) 1, (float) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigInteger)this.oneBigInt, (float) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigInteger)this.oneBigInt, (float) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigDecimal)this.oneBigDecimal, (float) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigDecimal)this.oneBigDecimal, (float) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((byte) 1, (double) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((byte) 1, (double) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((char) 1, (double) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((char) 1, (double) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((short) 1, (double) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((short) 1, (double) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((int) 1, (double) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((int) 1, (double) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((long) 1, (double) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((long) 1, (double) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((float) 1, (double) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((float) 1, (double) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((double) 1, (double) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((double) 1, (double) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigInteger)this.oneBigInt, (double) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigInteger)this.oneBigInt, (double) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigDecimal)this.oneBigDecimal, (double) 1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigDecimal)this.oneBigDecimal, (double) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((byte) 1, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((byte) 1, (BigInteger) this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((char) 1, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((char) 1, (BigInteger) this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((short) 1, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((short) 1, (BigInteger) this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((int) 1, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((int) 1, (BigInteger) this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((long) 1, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((long) 1, (BigInteger) this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((float) 1, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((float) 1, (BigInteger) this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((double) 1, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((double) 1, (BigInteger) this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((byte) 1, (BigDecimal) this.oneBigDecimal);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((byte) 1, (BigDecimal) this.oneBigDecimal);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((char) 1, (BigDecimal) this.oneBigDecimal);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((char) 1, (BigDecimal) this.oneBigDecimal);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((short) 1, (BigDecimal) this.oneBigDecimal);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((short) 1, (BigDecimal) this.oneBigDecimal);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((int) 1, (BigDecimal) this.oneBigDecimal);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((int) 1, (BigDecimal) this.oneBigDecimal);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((long) 1, (BigDecimal) this.oneBigDecimal);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((long) 1, (BigDecimal) this.oneBigDecimal);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((float) 1, (BigDecimal) this.oneBigDecimal);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((float) 1, (BigDecimal) this.oneBigDecimal);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((double) 1, (BigDecimal) this.oneBigDecimal);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((double) 1, (BigDecimal) this.oneBigDecimal);
         assertTrue(false);
       } catch (final NgRuntimeException e) {} 
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigInteger) this.oneBigInt, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigInteger) this.oneBigInt, (BigInteger) this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {} 
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigInteger) this.oneBigInt, (BigDecimal) this.oneBigDecimal);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigInteger) this.oneBigInt, (BigDecimal) this.oneBigDecimal);
         assertTrue(false);
       } catch (final NgRuntimeException e) {} 
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigDecimal) this.oneBigDecimal, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigDecimal) this.oneBigDecimal, (BigInteger) this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {} 
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals((BigDecimal) this.oneBigDecimal, (BigDecimal) this.oneBigDecimal);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals((BigDecimal) this.oneBigDecimal, (BigDecimal) this.oneBigDecimal);
         assertTrue(false);
       } catch (final NgRuntimeException e) {} 
- */     
+      
       for (int i = 0; i != this.ones.length; i++) {
         
         assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(this.ones[i]).notEquals(this.ones[i], (byte)2)).getBooleanValue(), b1);
@@ -9484,85 +9478,84 @@ public class LogicalTest extends TestCase {
           assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(this.twos[i]).notEquals(this.twos[i], this.ones[j])).getBooleanValue(), b4);
         }      
       }
-/*      
+     
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals(new Object(), new Object());
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals(new Object(), new Object());
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals(new Object(), (byte)1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals(new Object(), (byte)1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals(new Object(), (char)1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals(new Object(), (char)1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals(new Object(), (short)1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals(new Object(), (short)1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals(new Object(), (int)1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals(new Object(), (int)1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals(new Object(), (long)1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals(new Object(), (long)1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals(new Object(), (float)1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals(new Object(), (float)1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals(new Object(), (double)1);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals(new Object(), (double)1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals(new Object(), (BigInteger)this.oneBigInt);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals(new Object(), (BigInteger)this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).notEquals(new Object(), (BigDecimal)this.oneBigDecimal);
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).notEquals(new Object(), (BigDecimal)this.oneBigDecimal);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       
       try {
-        this.registry.getRuntimeMetaClass(Object.class).reverseNotEquals((byte)1, new Object());
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseNotEquals((byte)1, new Object());
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).reverseNotEquals((char)1, new Object());
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseNotEquals((char)1, new Object());
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).reverseNotEquals((short)1, new Object());
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseNotEquals((short)1, new Object());
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).reverseNotEquals((int)1, new Object());
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseNotEquals((int)1, new Object());
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).reverseNotEquals((long)1, new Object());
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseNotEquals((long)1, new Object());
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).reverseNotEquals((float)1, new Object());
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseNotEquals((float)1, new Object());
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).reverseNotEquals((double)1, new Object());
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseNotEquals((double)1, new Object());
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).reverseNotEquals((BigInteger)this.oneBigInt, new Object());
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseNotEquals((BigInteger)this.oneBigInt, new Object());
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).reverseNotEquals((BigDecimal)this.oneBigDecimal, new Object());
+        this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseNotEquals((BigDecimal)this.oneBigDecimal, new Object());
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
-*/
     }
   
   public void testLessThan() {
@@ -11405,3 +11398,28 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
 }
+
+class ObjectWhichDoesNotDoEquals {
+  public static final RuntimeMetaClass ngMetaClass = new ObjectWhichDoesNotDoEqualsMetaClass();
+}
+
+class ObjectWhichDoesNotDoEqualsMetaClass extends RuntimeMetaClassImpl {
+
+  /**
+   * @param theClass
+   * @param internalMetaClass
+   */
+  public ObjectWhichDoesNotDoEqualsMetaClass() {
+    super(ObjectWhichDoesNotDoEquals.class, new InternalMetaClassImpl(ObjectWhichDoesNotDoEquals.class) {
+      public Object doEquals(final Object lhs, final Object rhs) {
+        return RuntimeMetaClassImpl.NOT_CALLED;
+      }
+      
+      public Object doNotEquals(final Object lhs, final Object rhs) {
+        return RuntimeMetaClassImpl.NOT_CALLED;
+      }
+    });
+  }
+
+}
+
