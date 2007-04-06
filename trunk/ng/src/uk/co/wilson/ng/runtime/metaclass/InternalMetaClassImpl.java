@@ -213,62 +213,10 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   /**
-   * @param instance
-   * @param arguments
    * @return
    */
-  public Object doCall(final Object instance, final Object[] arguments) {
-    return this.instanceHandler.call(instance, arguments);
-  }
-  
-  /**
-   * @param instance
-   * @return
-   */
-  public Object doCallQuick(final Object instance) {
-    return this.instanceHandler.callQuick(instance);
-  }
-
-  /**
-   * @param instance
-   * @param p1
-   * @return
-   */
-  public Object doCallQuick(final Object instance, final Object p1) {
-    return this.instanceHandler.callQuick(instance, p1);
-  }
-
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @return
-   */
-  public Object doCallQuick(final Object instance, final Object p1, final Object p2) {
-    return this.instanceHandler.callQuick(instance, p1, p2);
-  }
-
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @param p3
-   * @return
-   */
-  public Object doCallQuick(final Object instance, final Object p1, final Object p2, final Object p3) {
-    return this.instanceHandler.callQuick(instance, p1, p2, p3);
-  }
-
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @param p3
-   * @param p4
-   * @return
-   */
-  public Object doCallQuick(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return this.instanceHandler.callQuick(instance, p1, p2, p3, p4);
+  public MetaMethod doGetAnonMetaMethod() {
+    return this.instanceHandler.getAnonMetaMethod();
   }
 
   public Object doComplement(final Object instance) {

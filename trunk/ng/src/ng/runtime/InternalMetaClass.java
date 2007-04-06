@@ -192,51 +192,9 @@ public interface InternalMetaClass {
   Object doSetField(Object instance, String fieldName, Object newValue);
   
   /**
-   * @param instance
-   * @param arguments
    * @return
    */
-  Object doCall(Object instance, Object[] arguments);
-  
-  /**
-   * @param instance
-   * @return
-   */
-  Object doCallQuick(Object instance);
-
-  /**
-   * @param instance
-   * @param p1
-   * @return
-   */
-  Object doCallQuick(Object instance, Object p1);
-
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @return
-   */
-  Object doCallQuick(Object instance, Object p1, Object p2);
-
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @param p3
-   * @return
-   */
-  Object doCallQuick(Object instance, Object p1, Object p2, Object p3);
-
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @param p3
-   * @param p4
-   * @return
-   */
-  Object doCallQuick(Object instance, Object p1, Object p2, Object p3, Object p4);
+  MetaMethod doGetAnonMetaMethod();
 
   /**
    * @param instance
