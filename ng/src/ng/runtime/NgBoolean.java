@@ -24,6 +24,7 @@ import ng.lang.NgSystem;
 public class NgBoolean extends NgBaseObject {
   public static final NgBoolean TRUE = new NgBoolean(true);
   public static final NgBoolean FALSE = new NgBoolean(false);
+  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngBooleanMetaClass;
   
   private final boolean value;
 
