@@ -8135,7 +8135,7 @@ public class LogicalTest extends TestCase {
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(BigDecimal.class).equals(this.oneBigDecimal, this.oneBigDecimal)).getBooleanValue(), b2);
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(BigDecimal.class).equals(this.twoBigDecimal, this.twoBigDecimal)).getBooleanValue(), b3);
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(BigDecimal.class).equals(this.twoBigDecimal, this.oneBigDecimal)).getBooleanValue(), b4);
-
+/*
     try {
       this.registry.getRuntimeMetaClass(Object.class).equals((byte) 1, (byte) 1);
       assertTrue(false);
@@ -8463,7 +8463,7 @@ public class LogicalTest extends TestCase {
       this.registry.getRuntimeMetaClass(Object.class).equals((BigDecimal) this.oneBigDecimal, (BigDecimal) this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {} 
-    
+*/    
     for (int i = 0; i != this.ones.length; i++) {
       
       assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(this.ones[i]).equals(this.ones[i], (byte)2)).getBooleanValue(), b1);
@@ -8563,7 +8563,7 @@ public class LogicalTest extends TestCase {
         assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(this.twos[i]).equals(this.twos[i], this.ones[j])).getBooleanValue(), b4);
       }      
     }
-    
+/*    
     try {
       this.registry.getRuntimeMetaClass(Object.class).equals(new Object(), new Object());
       assertTrue(false);
@@ -8641,6 +8641,7 @@ public class LogicalTest extends TestCase {
       this.registry.getRuntimeMetaClass(Object.class).reverseEquals((BigDecimal)this.oneBigDecimal, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
+*/
   }
 
   public void testNotEquals() {

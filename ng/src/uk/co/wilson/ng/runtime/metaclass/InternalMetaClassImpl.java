@@ -272,7 +272,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doComplement(final Object instance) {
-    return this.instanceHandler.complement(instance);
+  final Object result = this.instanceHandler.complement(instance);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      return this.instanceHandler.getMetaMethodQuick("negate").call(instance);
+    } else {
+      return result;
+    }
   }
 
   public Object doComplement(final int instance) {
@@ -288,7 +294,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doNot(final Object instance) {
-    return this.instanceHandler.not(instance);
+  final Object result = this.instanceHandler.not(instance);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      return this.instanceHandler.getMetaMethodQuick("not").call(instance);
+    } else {
+      return result;
+    }
   }
 
   public Object doNot(final boolean instance) {
@@ -296,7 +308,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doUnaryPlus(final Object instance) {
-    return this.instanceHandler.unaryPlus(instance);
+  final Object result = this.instanceHandler.unaryPlus(instance);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      return this.instanceHandler.getMetaMethodQuick("unaryPlus").call(instance);
+    } else {
+      return result;
+    }
   }
 
   public Object doUnaryPlus(final int instance) {
@@ -324,7 +342,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doUnaryMinus(final Object instance) {
-    return this.instanceHandler.unaryMinus(instance);
+  final Object result = this.instanceHandler.unaryMinus(instance);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      return this.instanceHandler.getMetaMethodQuick("unaryMinus").call(instance);
+    } else {
+      return result;
+    }
   }
 
   public Object doUnaryMinus(final int instance) {
@@ -352,19 +376,43 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doIsCase(final Object instance, final Object rhs) {
-    return this.instanceHandler.isCase(instance, rhs);
+  final Object result = this.instanceHandler.isCase(instance, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      return this.instanceHandler.getMetaMethodQuick("isCase", rhs).call(instance, rhs);
+    } else {
+      return result;
+    }
   }
 
   public Object doIsInstanceof(final Object instance, final Class type) {
-    return this.instanceHandler.isInstanceof(instance, type);
+  final Object result = this.instanceHandler.isInstanceof(instance, type);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      return this.instanceHandler.getMetaMethodQuick("isInstanceof", type).call(instance, type);
+    } else {
+      return result;
+    }
   }
 
   public Object doAsType(final Object instance, final Class type) {
-    return this.instanceHandler.asType(instance, type);
+  final Object result = this.instanceHandler.asType(instance, type);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      return this.instanceHandler.getMetaMethodQuick("asType", type).call(instance, type);
+    } else {
+      return result;
+    }
   }
 
   public Object doGetAt(final Object instance, final Object index) {
-    return this.instanceHandler.getAt(instance, index);
+  final Object result = this.instanceHandler.getAt(instance, index);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      return this.instanceHandler.getMetaMethodQuick("getAt", index).call(instance, index);
+    } else {
+      return result;
+    }
   }
 
   public Object doGetAt(final Object instance, final int index) {
@@ -376,7 +424,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doPutAt(final Object instance, final Object index) {
-    return this.instanceHandler.putAt(instance, index);
+  final Object result = this.instanceHandler.putAt(instance, index);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      return this.instanceHandler.getMetaMethodQuick("putAt", index).call(instance, index);
+    } else {
+      return result;
+    }
   }
 
   public Object doPutAt(final Object instance, final int index) {
@@ -388,7 +442,17 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doPrefixIncrement(final Object instance) {
-    return this.instanceHandler.prefixIncrement(instance);
+  Object result = this.instanceHandler.prefixIncrement(instance);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      result = this.instanceHandler.getMetaMethodQuick("prefixIncrement").call(instance);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return doAdd(instance, NgInt.ONE);
+      }
+    }
+
+    return result;
   }
 
   public Object doPrefixIncrement(final int instance) {
@@ -416,7 +480,17 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doPrefixDecrement(final Object instance) {
-    return this.instanceHandler.prefixDecrement(instance);
+  Object result = this.instanceHandler.prefixDecrement(instance);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      result = this.instanceHandler.getMetaMethodQuick("prefixDecrement").call(instance);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return doSubtract(instance, NgInt.ONE);
+      }
+    }
+
+    return result;
   }
 
   public Object doPrefixDecrement(final int instance) {
@@ -444,7 +518,17 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doPostfixIncrement(final Object instance) {
-    return this.instanceHandler.postfixIncrement(instance);
+  Object result = this.instanceHandler.postfixIncrement(instance);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      result = this.instanceHandler.getMetaMethodQuick("postfixIncrement").call(instance);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return doAdd(instance, NgInt.ONE);
+      }
+    }
+
+    return result;
   }
 
   public Object doPostfixIncrement(final int instance) {
@@ -472,7 +556,17 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doPostfixDecrement(final Object instance) {
-    return this.instanceHandler.postfixDecrement(instance);
+  Object result = this.instanceHandler.postfixDecrement(instance);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      result = this.instanceHandler.getMetaMethodQuick("postfixDecrement").call(instance);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return doSubtract(instance, NgInt.ONE);
+      }
+    }
+
+    return result;
   }
 
   public Object doPostfixDecrement(final int instance) {
@@ -523,7 +617,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   Object result = this.instanceHandler.reverseAdd(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return this.instanceHandler.getMetaMethodQuick("reversePlus", rhs).call(rhs, lhs);
+      return this.instanceHandler.getMetaMethodQuick("reversePlus", lhs).call(rhs, lhs);
     }
 
     return result;
@@ -973,13 +1067,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doAddEquals(final Object lhs, final Object rhs) {
-  Object result = this.instanceHandler.add(lhs, rhs);
+  Object result = this.instanceHandler.addEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       result = this.instanceHandler.getMetaMethodQuick("plusEquals", rhs).call(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-        result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAdd(lhs, rhs);
+        result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAddEquals(lhs, rhs);
         
         if (result == RuntimeMetaClassImpl.NOT_CALLED) {
           return doAdd(lhs, rhs);
@@ -991,10 +1085,10 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseAddEquals(final Object lhs, final Object rhs) {
-  Object result = this.instanceHandler.reverseAdd(lhs, rhs);
+  Object result = this.instanceHandler.reverseAddEquals(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      result = this.instanceHandler.getMetaMethodQuick("reversePlusEquals", rhs).call(rhs, lhs);
+      result = this.instanceHandler.getMetaMethodQuick("reversePlusEquals", lhs).call(rhs, lhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return doReverseAdd(lhs, rhs);
@@ -1448,18 +1542,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doSubtract(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.subtract(lhs, rhs);
+    Object result = this.instanceHandler.subtract(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseSubtract(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("minus", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseSubtract(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseSubtract(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseSubtract(lhs, rhs);
-  }
+    
+    public Object doReverseSubtract(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseSubtract(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseMinus", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -1905,18 +2009,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doSubtractEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.subtractEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseSubtractEquals(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.subtractEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("minusEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseSubtractEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doSubtract(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseSubtractEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseSubtractEquals(lhs, rhs);
-  }
+    
+    public Object doReverseSubtractEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseSubtractEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseMinusEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseSubtract(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -2362,18 +2484,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doMultiply(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.multiply(lhs, rhs);
+    Object result = this.instanceHandler.multiply(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiply(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("multiply", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiply(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseMultiply(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseMultiply(lhs, rhs);
-  }
+    
+    public Object doReverseMultiply(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseMultiply(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseMultiply", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -2819,18 +2951,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doMultiplyEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.multiplyEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiplyEquals(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.multiplyEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("multiplyEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiplyEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doMultiply(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseMultiplyEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseMultiplyEquals(lhs, rhs);
-  }
+    
+    public Object doReverseMultiplyEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseMultiplyEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseMultiplyEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseMultiply(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -3276,18 +3426,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doDivide(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.divide(lhs, rhs);
+    Object result = this.instanceHandler.divide(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivide(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("div", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivide(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseDivide(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseDivide(lhs, rhs);
-  }
+    
+    public Object doReverseDivide(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseDivide(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseDiv", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -3733,18 +3893,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doDivideEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.divideEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivideEquals(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.divide(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("divEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivideEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doDivide(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseDivideEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseDivideEquals(lhs, rhs);
-  }
+    
+    public Object doReverseDivideEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseDivideEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseDivEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseDivide(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -4190,18 +4368,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doRemainder(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.remainder(lhs, rhs);
+    Object result = this.instanceHandler.remainder(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseRemainder(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("mod", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseRemainder(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseRemainder(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseRemainder(lhs, rhs);
-  }
+    
+    public Object doReverseRemainder(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseRemainder(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseMod", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -4431,18 +4619,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doRemainderEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.remainderEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseRemainderEquals(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.remainderEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("modEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseRemainderEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doRemainder(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseRemainderEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseRemainderEquals(lhs, rhs);
-  }
+    
+    public Object doReverseRemainderEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseRemainderEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseModEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseRemainder(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -4672,18 +4878,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doIntegerDivide(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.integerDivide(lhs, rhs);
+    Object result = this.instanceHandler.integerDivide(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseIntegerDivide(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("intDiv", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseIntegerDivide(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseIntegerDivide(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseIntegerDivide(lhs, rhs);
-  }
+    
+    public Object doReverseIntegerDivide(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseIntegerDivide(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseIntDiv", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -5129,18 +5345,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doIntegerDivideEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.integerDivideEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseIntegerDivideEquals(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.integerDivideEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("intdivEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseIntegerDivideEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doIntegerDivide(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseIntegerDivideEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseIntegerDivideEquals(lhs, rhs);
-  }
+    
+    public Object doReverseIntegerDivideEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseIntegerDivideEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseIntDivEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseIntegerDivide(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -5586,18 +5820,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doAnd(final Object lhs, final Object rhs) {
-    final Object result = this.instanceHandler.and(lhs, rhs);
+    Object result = this.instanceHandler.and(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAnd(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("and", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAnd(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseAnd(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseAnd(lhs, rhs);
-  }
+    
+    public Object doReverseAnd(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseAnd(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseAnd", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -5827,18 +6071,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doAndEquals(final Object lhs, final Object rhs) {
-    final Object result = this.instanceHandler.andEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAndEquals(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.andEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("andEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseAndEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doAnd(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseAndEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseAndEquals(lhs, rhs);
-  }
+    
+    public Object doReverseAndEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseAndEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseAndEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseAnd(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -6068,18 +6330,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doOr(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.or(lhs, rhs);
+    Object result = this.instanceHandler.or(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseOr(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("or", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseOr(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseOr(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseOr(lhs, rhs);
-  }
+    
+    public Object doReverseOr(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseOr(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseOr", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -6309,18 +6581,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doOrEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.orEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseOrEquals(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.orEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("orEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseOrEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doOr(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseOrEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseOrEquals(lhs, rhs);
-  }
+    
+    public Object doReverseOrEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseOrEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseOrEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseOr(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -6550,18 +6840,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doXor(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.xor(lhs, rhs);
+    Object result = this.instanceHandler.xor(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseXorEquals(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("xor", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseXor(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseXor(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseXor(lhs, rhs);
-  }
+    
+    public Object doReverseXor(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseXor(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseXor", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -6792,18 +7092,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doXorEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.xorEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseXorEquals(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.xorEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("xorEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseXorEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doXor(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseXorEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseXorEquals(lhs, rhs);
-  }
+    
+    public Object doReverseXorEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseXorEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseXorEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseXor(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -7033,18 +7351,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLeftShift(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.leftShift(lhs, rhs);
+    Object result = this.instanceHandler.leftShift(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLeftShift(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("leftShift", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLeftShift(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseLeftShift(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseLeftShift(lhs, rhs);
-  }
+    
+    public Object doReverseLeftShift(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseLeftShift(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseLeftShift", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -7274,18 +7602,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLeftShiftEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.leftShiftEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLeftShiftEquals(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.leftShiftEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("leftShiftEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLeftShiftEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doLeftShift(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseLeftShiftEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseLeftShiftEquals(lhs, rhs);
-  }
+    
+    public Object doReverseLeftShiftEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseLeftShiftEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseLeftShiftEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseLeftShift(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -7515,18 +7861,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doArithmeticRightShift(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.arithmeticRightShift(lhs, rhs);
+    Object result = this.instanceHandler.arithmeticRightShift(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseArithmeticRightShift(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("rightShift", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseArithmeticRightShift(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseArithmeticRightShift(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseArithmeticRightShift(lhs, rhs);
-  }
+    
+    public Object doReverseArithmeticRightShift(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseArithmeticRightShift(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseRightShift", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -7756,18 +8112,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doArithmeticRightShiftEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.arithmeticRightShiftEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseArithmeticRightShiftEquals(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.arithmeticRightShiftEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("rightShiftEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseArithmeticRightShiftEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doArithmeticRightShift(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseArithmeticRightShiftEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseArithmeticRightShiftEquals(lhs, rhs);
-  }
+    
+    public Object doReverseArithmeticRightShiftEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseArithmeticRightShiftEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseRightShiftEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseArithmeticRightShift(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -7997,18 +8371,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLogicalRightShift(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.logicalRightShift(lhs, rhs);
+    Object result = this.instanceHandler.logicalRightShift(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLogicalRightShift(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("rightShiftUnsigned", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLogicalRightShift(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseLogicalRightShift(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseLogicalRightShift(lhs, rhs);
-  }
+    
+    public Object doReverseLogicalRightShift(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseLogicalRightShift(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseRightShiftUnsigned", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -8208,18 +8592,36 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLogicalRightShiftEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.logicalRightShiftEquals(lhs, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLogicalRightShift(lhs, rhs);
-    } else {
+    Object result = this.instanceHandler.logicalRightShiftEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("rightShiftUnsignedEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLogicalRightShiftEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            return doLogicalRightShift(lhs, rhs);
+          }
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseLogicalRightShiftEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseLogicalRightShiftEquals(lhs, rhs);
-  }
+    
+    public Object doReverseLogicalRightShiftEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseLogicalRightShiftEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("reverseRightShiftUnsignedEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return doReverseLogicalRightShift(lhs, rhs);
+        }
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -8419,18 +8821,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doCompare(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.compare(lhs, rhs);
+    Object result = this.instanceHandler.compare(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseCompare(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("compare", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseCompare(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
+    
+    public Object doReverseCompare(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseCompare(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseCompare", lhs).call(rhs, lhs);
+      }
 
-  public Object doReverseCompare(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseCompare(lhs, rhs);
-  }
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -8876,18 +9288,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.equals(lhs, rhs);
+    Object result = this.instanceHandler.equals(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("equals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseEquals(lhs, rhs);
-  }
+    
+    public Object doReverseEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseEquals", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -9333,18 +9755,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doNotEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.notEquals(lhs, rhs);
+    Object result = this.instanceHandler.notEquals(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseNotEquals(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("notEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseNotEquals(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseNotEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseNotEquals(lhs, rhs);
-  }
+    
+    public Object doReverseNotEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseNotEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseNotEquals", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -9790,18 +10222,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLessThan(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.lessThan(lhs, rhs);
+    Object result = this.instanceHandler.lessThan(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThan(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("lessThan", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThan(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseLessThan(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseLessThan(lhs, rhs);
-  }
+    
+    public Object doReverseLessThan(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseLessThan(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseLessThan", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -10247,18 +10689,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLessThanOrEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.lessThanOrEquals(lhs, rhs);
+    Object result = this.instanceHandler.lessThanOrEquals(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThanOrEquals(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("lessThanOrEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThanOrEquals(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseLessThanOrEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseLessThanOrEquals(lhs, rhs);
-  }
+    
+    public Object doReverseLessThanOrEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseLessThanOrEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseLessThanOrEquals", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -10704,18 +11156,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doGreaterThan(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.greaterThan(lhs, rhs);
+    Object result = this.instanceHandler.greaterThan(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseGreaterThan(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("greaterThan", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseGreaterThan(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseGreaterThan(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseGreaterThan(lhs, rhs);
-  }
+    
+    public Object doReverseGreaterThan(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseGreaterThan(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseGreaterThan", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
@@ -11161,18 +11623,28 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doGreaterThanOrEquals(final Object lhs, final Object rhs) {
-  final Object result = this.instanceHandler.greaterThanOrEquals(lhs, rhs);
+    Object result = this.instanceHandler.greaterThanOrEquals(lhs, rhs);
     
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseGreaterThanOrEquals(lhs, rhs);
-    } else {
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        result = this.instanceHandler.getMetaMethodQuick("greaterThanOrEquals", rhs).call(lhs, rhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseGreaterThanOrEquals(lhs, rhs);
+        }
+      }
+
       return result;
     }
-  }
-  
-  public Object doReverseGreaterThanOrEquals(final Object lhs, final Object rhs) {
-    return this.instanceHandler.reverseGreaterThanOrEquals(lhs, rhs);
-  }
+    
+    public Object doReverseGreaterThanOrEquals(final Object lhs, final Object rhs) {
+    Object result = this.instanceHandler.reverseGreaterThanOrEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+        return this.instanceHandler.getMetaMethodQuick("reverseGreaterThanOrequals", lhs).call(rhs, lhs);
+      }
+
+      return result;
+    }
 
   //
   // These methods can be overridden to improve performance
