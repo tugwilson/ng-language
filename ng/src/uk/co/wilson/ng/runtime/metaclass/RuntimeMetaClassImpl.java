@@ -393,7 +393,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
       return callQuick(instance, arguments[0], arguments[1], arguments[2], arguments[3]);
 
     default:
-      final Object result = this.internalMetaClass.doCall(instance, arguments);
+      final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, arguments);
 
       // TODO: make this error more detailed.
       if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
@@ -406,7 +406,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object)
    */
   public final Object callQuick(final Object instance) {
-  final Object result = this.internalMetaClass.doCallQuick(instance);
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance);
 
     // TODO: make this error more detailed.
     if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
@@ -418,7 +418,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object)
    */
   public final Object callQuick(final Object instance, final Object p1) {
-  final Object result = this.internalMetaClass.doCallQuick(instance, p1);
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
 
     // TODO: make this error more detailed.
     if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
@@ -430,7 +430,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public final Object callQuick(final Object instance, final Object p1, final Object p2) {
-  final Object result = this.internalMetaClass.doCallQuick(instance, p1, p2);
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1, p2);
 
     // TODO: make this error more detailed.
     if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
@@ -442,7 +442,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public final Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3) {
-  final Object result = this.internalMetaClass.doCallQuick(instance, p1, p2, p3);
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1, p2, p3);
 
     // TODO: make this error more detailed.
     if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
@@ -453,7 +453,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   public final Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
-  final Object result = this.internalMetaClass.doCallQuick(instance, p1, p2, p3, p4);
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1, p2, p3, p4);
 
     // TODO: make this error more detailed.
     if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");

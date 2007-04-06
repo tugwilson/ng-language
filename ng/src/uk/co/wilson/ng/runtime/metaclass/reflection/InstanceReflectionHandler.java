@@ -562,48 +562,10 @@ public class InstanceReflectionHandler implements InstanceHandler {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object[])
+   * @see ng.runtime.InstanceHandler#getDoCallMetaMethod()
    */
-  public Object call(final Object instance, final Object[] arguments) {
-    if(arguments.length <= 4)
-      throw new NgRuntimeException("Internal Error call called with an array of " + arguments.length +" parameters");
-    
-    return this.call.call(instance, arguments);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#call(java.lang.Object)
-   */
-  public Object callQuick(final Object instance) {
-    return this.call.call(instance);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object)
-   */
-  public Object callQuick(final Object instance, final Object p1) {
-    return this.call.call(instance, p1);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object, java.lang.Object)
-   */
-  public Object callQuick(final Object instance, final Object p1, final Object p2) {
-    return this.call.call(instance, p1, p2);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
-   */
-  public Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3) {
-    return this.call.call(instance, p1, p2, p3);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
-   */
-  public Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return this.call.call(instance, p1, p2, p3, p4);
+  public MetaMethod getAnonMetaMethod() {
+    return this.call;
   }
 
   /* (non-Javadoc)

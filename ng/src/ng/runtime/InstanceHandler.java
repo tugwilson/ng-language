@@ -71,11 +71,9 @@ public interface InstanceHandler {
   Object setField(Object instance, String fieldName, Object newValue);
   
   /**
-   * @param instance
-   * @param arguments
    * @return
    */
-  Object call(Object instance, Object[] arguments);
+  MetaMethod getAnonMetaMethod();
 
   /**
    * @param instance
@@ -475,46 +473,6 @@ public interface InstanceHandler {
    * @return
    */
   MetaMethod getMetaMethodQuick(String methodName, Object p1, Object p2, Object p3, Object p4);
-  
-  /**
-   * @param instance
-   * @return
-   */
-  Object callQuick(Object instance);
-  
-  /**
-   * @param instance
-   * @param p1
-   * @return
-   */
-  Object callQuick(Object instance, Object p1);
-  
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @return
-   */
-  Object callQuick(Object instance, Object p1, Object p2);
-  
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @param p3
-   * @return
-   */
-  Object callQuick(Object instance, Object p1, Object p2, Object p3);
-  
-  /**
-   * @param instance
-   * @param p1
-   * @param p2
-   * @param p3
-   * @param p4
-   * @return
-   */
-  Object callQuick(Object instance, Object p1, Object p2, Object p3, Object p4);
   
   /**
    * @param lhs
