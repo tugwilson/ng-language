@@ -50,6 +50,8 @@ public class InstanceReflectionHandler extends InstanceHandlerImpl {
            metaMethod = new FloatMetaMethod(method);
          } else if (returnType == double.class) {
            metaMethod = new DoubleMetaMethod(method);
+         } else if (returnType == void.class) {
+           metaMethod = new VoidMetaMethod(method);
          } else if (returnType == Object.class) {
            metaMethod = new UntypedMetaMethod(method);
          } else {
@@ -77,7 +79,11 @@ public class InstanceReflectionHandler extends InstanceHandlerImpl {
              this.oneParameterMethods.put(method.getName(), metaMethod);
              
              if (name.startsWith("set") && name.length() > 3) {
-               this.setPropertyMethods.put(name.substring(3, 4).toLowerCase() + name.substring(4), metaMethod);
+               if (returnType == void.class) {
+                 this.setPropertyMethods.put(name.substring(3, 4).toLowerCase() + name.substring(4), new VoidSetPropertyMetaMethod(method));
+               } else {
+                 this.setPropertyMethods.put(name.substring(3, 4).toLowerCase() + name.substring(4), metaMethod);
+               }
              }
              
              break;
