@@ -22,7 +22,7 @@ package ng.runtime;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 public interface InternalMetaClass {
   /**

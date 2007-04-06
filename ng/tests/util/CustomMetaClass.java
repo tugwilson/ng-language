@@ -25,7 +25,7 @@ import java.math.BigInteger;
 import ng.runtime.InternalMetaClass;
 import ng.runtime.MetaClass;
 import ng.runtime.RuntimeMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 /**
  * @author tug

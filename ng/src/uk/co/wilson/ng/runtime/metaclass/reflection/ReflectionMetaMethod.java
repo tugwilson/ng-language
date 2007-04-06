@@ -2,6 +2,7 @@ package uk.co.wilson.ng.runtime.metaclass.reflection;
 
 import ng.runtime.RuntimeMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.methods.BaseMetaMethod;
+import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 /**
  * @author John

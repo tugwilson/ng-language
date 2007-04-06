@@ -1,4 +1,4 @@
-package uk.co.wilson.ng.runtime.metaclass.reflection;
+package uk.co.wilson.ng.runtime.metaclass.methods;
 
 import ng.runtime.InstanceHandler;
 import ng.runtime.MetaMethod;
