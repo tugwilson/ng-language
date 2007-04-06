@@ -28,7 +28,7 @@ import ng.lang.NgSystem;
 import ng.runtime.InternalMetaClass;
 import ng.runtime.MetaClass;
 import ng.runtime.RuntimeMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   public static final Object NOT_CONSTRUCTED = new Object();

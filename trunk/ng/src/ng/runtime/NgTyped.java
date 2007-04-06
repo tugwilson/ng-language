@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
-import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 /**
  * @author tug

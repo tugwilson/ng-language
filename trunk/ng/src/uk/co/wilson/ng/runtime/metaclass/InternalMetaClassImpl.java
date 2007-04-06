@@ -24,8 +24,8 @@ import java.math.BigInteger;
 
 import ng.lang.NgSystem;
 import ng.runtime.*;
+import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 import uk.co.wilson.ng.runtime.metaclass.reflection.InstanceReflectionHandler;
-import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
 
 public class InternalMetaClassImpl implements InternalMetaClass {
   final InstanceHandler instanceHandler;;

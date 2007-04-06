@@ -1,6 +1,6 @@
 package ng.runtime;
 
-import uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection;
+import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 /**
  * @author tug
