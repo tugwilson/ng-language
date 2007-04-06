@@ -9761,7 +9761,15 @@ public class InternalMetaClassImpl implements InternalMetaClass {
         result = this.instanceHandler.getMetaMethodQuick("notEquals", rhs).call(lhs, rhs);
         
         if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseNotEquals(lhs, rhs);
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseNotEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            result = doEquals(lhs, rhs);
+            
+            if (result != RuntimeMetaClassImpl.NOT_CALLED) {
+              return NgSystem.metaClassRegistry.getInternalMetaClass(result).doNot(result);
+            }
+          }
         }
       }
 
@@ -9772,7 +9780,15 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     Object result = this.instanceHandler.reverseNotEquals(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-        return this.instanceHandler.getMetaMethodQuick("reverseNotEquals", lhs).call(rhs, lhs);
+        result = this.instanceHandler.getMetaMethodQuick("reverseNotEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = doReverseEquals(lhs, rhs);
+          
+          if (result != RuntimeMetaClassImpl.NOT_CALLED) {
+            return NgSystem.metaClassRegistry.getInternalMetaClass(result).doNot(result);
+          }
+        }
       }
 
       return result;
@@ -10222,13 +10238,21 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //  If the underlying object does not have the appropriate method
   //
   public Object doLessThan(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.lessThan(lhs, rhs);
+  Object result = this.instanceHandler.lessThan(lhs, rhs);
     
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         result = this.instanceHandler.getMetaMethodQuick("lessThan", rhs).call(lhs, rhs);
         
         if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThan(lhs, rhs);
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThan(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            result = doCompare(lhs, rhs);
+            
+            if (result != RuntimeMetaClassImpl.NOT_CALLED) {
+              return NgSystem.metaClassRegistry.getInternalMetaClass(result).doLessThan(result, NgInt.ZERO);
+            }
+          }
         }
       }
 
@@ -10239,7 +10263,15 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     Object result = this.instanceHandler.reverseLessThan(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-        return this.instanceHandler.getMetaMethodQuick("reverseLessThan", lhs).call(rhs, lhs);
+        result = this.instanceHandler.getMetaMethodQuick("reverseLessThan", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = doReverseCompare(lhs, rhs);
+          
+          if (result != RuntimeMetaClassImpl.NOT_CALLED) {
+            return NgSystem.metaClassRegistry.getInternalMetaClass(result).doLessThan(result, NgInt.ZERO);
+          }
+        }
       }
 
       return result;
@@ -10695,7 +10727,15 @@ public class InternalMetaClassImpl implements InternalMetaClass {
         result = this.instanceHandler.getMetaMethodQuick("lessThanOrEquals", rhs).call(lhs, rhs);
         
         if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThanOrEquals(lhs, rhs);
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThanOrEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            result = doCompare(lhs, rhs);
+            
+            if (result != RuntimeMetaClassImpl.NOT_CALLED) {
+              return NgSystem.metaClassRegistry.getInternalMetaClass(result).doLessThanOrEquals(result, NgInt.ZERO);
+            }
+          }
         }
       }
 
@@ -10706,7 +10746,15 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     Object result = this.instanceHandler.reverseLessThanOrEquals(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-        return this.instanceHandler.getMetaMethodQuick("reverseLessThanOrEquals", lhs).call(rhs, lhs);
+        result = this.instanceHandler.getMetaMethodQuick("reverseLessThanOrEquals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = doReverseCompare(lhs, rhs);
+          
+          if (result != RuntimeMetaClassImpl.NOT_CALLED) {
+            return NgSystem.metaClassRegistry.getInternalMetaClass(result).doLessThanOrEquals(result, NgInt.ZERO);
+          }
+        }
       }
 
       return result;
@@ -11162,7 +11210,15 @@ public class InternalMetaClassImpl implements InternalMetaClass {
         result = this.instanceHandler.getMetaMethodQuick("greaterThan", rhs).call(lhs, rhs);
         
         if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseGreaterThan(lhs, rhs);
+          result = NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseGreaterThan(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            result = doCompare(lhs, rhs);
+            
+            if (result != RuntimeMetaClassImpl.NOT_CALLED) {
+              return NgSystem.metaClassRegistry.getInternalMetaClass(result).doGreaterThan(result, NgInt.ZERO);
+            }
+          }
         }
       }
 
@@ -11173,7 +11229,15 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     Object result = this.instanceHandler.reverseGreaterThan(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-        return this.instanceHandler.getMetaMethodQuick("reverseGreaterThan", lhs).call(rhs, lhs);
+        result = this.instanceHandler.getMetaMethodQuick("reverseGreaterThan", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = doReverseCompare(lhs, rhs);
+          
+          if (result != RuntimeMetaClassImpl.NOT_CALLED) {
+            return NgSystem.metaClassRegistry.getInternalMetaClass(result).doGreaterThan(result, NgInt.ZERO);
+          }
+        }
       }
 
       return result;
@@ -11629,7 +11693,15 @@ public class InternalMetaClassImpl implements InternalMetaClass {
         result = this.instanceHandler.getMetaMethodQuick("greaterThanOrEquals", rhs).call(lhs, rhs);
         
         if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-          return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseGreaterThanOrEquals(lhs, rhs);
+          result =  NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseGreaterThanOrEquals(lhs, rhs);
+          
+          if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+            result = doCompare(lhs, rhs);
+            
+            if (result != RuntimeMetaClassImpl.NOT_CALLED) {
+              return NgSystem.metaClassRegistry.getInternalMetaClass(result).doGreaterThanOrEquals(result, NgInt.ZERO);
+            }
+          }
         }
       }
 
@@ -11640,7 +11712,15 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     Object result = this.instanceHandler.reverseGreaterThanOrEquals(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-        return this.instanceHandler.getMetaMethodQuick("reverseGreaterThanOrequals", lhs).call(rhs, lhs);
+        result =  this.instanceHandler.getMetaMethodQuick("reverseGreaterThanOrequals", lhs).call(rhs, lhs);
+        
+        if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+          result = doReverseCompare(lhs, rhs);
+          
+          if (result != RuntimeMetaClassImpl.NOT_CALLED) {
+            return NgSystem.metaClassRegistry.getInternalMetaClass(result).doGreaterThanOrEquals(result, NgInt.ZERO);
+          }
+        }
       }
 
       return result;
