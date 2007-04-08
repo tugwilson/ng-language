@@ -27,7 +27,7 @@ public class NgLexer {
   int c = this.reader.read();
   int c1, c2;
   
-    while (c == ' ' || c == '\t' || c == '\f') this.reader.read();
+    while (c == ' ' || c == '\t' || c == '\f') c = this.reader.read();
     
     switch (c) {
       case 0X1A:  // CTRL-Z
@@ -55,8 +55,15 @@ public class NgLexer {
       case '*':
         this.reader.mark(1);
         c1 = this.reader.read();
-        if (c1 == '*') return new PowerToken();
         if (c1 == '=') return new MultiplyEqualsToken();
+        if (c1 == '*') {
+          this.reader.mark(1);
+          if (this.reader.read() == '=') {
+            return new PowerEqualsToken();
+          }
+          this.reader.reset();
+          return new PowerToken();
+        }
         this.reader.reset();
         return new MultiplyToken();
         
@@ -134,18 +141,18 @@ public class NgLexer {
         c1 = this.reader.read();
         if (c1 == '<') {
           this.reader.mark(1);
-          if (this.reader.read() == '=') {
-            this.reader.mark(1);
-            if (this.reader.read() == '>') {
-              return new CompareToken();
-            }
-            this.reader.reset();
-            return new LeftShiftEqualsToken();
-          }
+          if (this.reader.read() == '=') return new LeftShiftEqualsToken();
           this.reader.reset();
           return new LeftShiftToken();
         }
-        if (c1 == '=') return new LessThanOrEqualsToken();
+        if (c1 == '=') {
+          this.reader.mark(1);
+          if (this.reader.read() == '>') {
+            return new CompareToken();
+          }
+          this.reader.reset();
+          return new LessThanOrEqualsToken();
+        }
         this.reader.reset();
         return new LessThanToken();
         
@@ -616,11 +623,11 @@ public class NgLexer {
     }
   }
   
-  private boolean isIdentifierStartCharacter(final int c) {
+  public static boolean isIdentifierStartCharacter(final int c) {
     return Character.isJavaIdentifierStart(c);
   }
   
-  private boolean isIdentifierPartCharacter(final int c) {
+  public static boolean isIdentifierPartCharacter(final int c) {
     return Character.isJavaIdentifierPart(c);
   }
   

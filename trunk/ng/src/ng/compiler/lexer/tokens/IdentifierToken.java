@@ -1,5 +1,6 @@
 package ng.compiler.lexer.tokens;
 
+import java.io.IOException;
 import java.io.Reader;
 /*
  * Created on 8 Apr 2007
@@ -20,12 +21,32 @@ import java.io.Reader;
  *
  */
 
+import ng.compiler.lexer.NgLexer;
+
 /**
  * @author John
  *
  */
 public class IdentifierToken implements Token {
-  public IdentifierToken(final int firstChar, final Reader reader) {
+  private final String name;
+  
+  public IdentifierToken(final int firstChar, final Reader reader) throws IOException {
+  final StringBuilder buf = new StringBuilder();
+  
+    buf.append(firstChar);
     
+    while(true) {
+      reader.mark(1);
+      final int c = reader.read();
+      
+      if (NgLexer.isIdentifierPartCharacter(c)) {
+        buf.append(c);
+      } else {
+        break;
+      }
+    }
+    
+    reader.reset();
+    this.name = buf.toString();
   }
 }
