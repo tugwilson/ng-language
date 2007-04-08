@@ -1,5 +1,6 @@
 package ng.compiler.lexer.tokens;
 
+import java.io.IOException;
 import java.io.Reader;
 /*
  * Created on 8 Apr 2007
@@ -25,7 +26,7 @@ import java.io.Reader;
  *
  */
 public class FieldnameToken extends IdentifierToken {
-  public FieldnameToken(final int c, final Reader reader) {
+  public FieldnameToken(final int c, final Reader reader) throws IOException {
     super(c, reader);
   }
 }
