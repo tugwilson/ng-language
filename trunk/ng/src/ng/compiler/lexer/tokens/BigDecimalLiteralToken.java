@@ -1,4 +1,6 @@
 package ng.compiler.lexer.tokens;
+
+import java.math.BigDecimal;
 /*
  * Created on 8 Apr 2007
  *
@@ -23,5 +25,7 @@ package ng.compiler.lexer.tokens;
  *
  */
 public class BigDecimalLiteralToken extends RealLiteralToken {
-
+  public BigDecimalLiteralToken(final BigDecimal value) {
+    
+  }
 }

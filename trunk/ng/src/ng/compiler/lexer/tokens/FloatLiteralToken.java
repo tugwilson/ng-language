@@ -23,5 +23,7 @@ package ng.compiler.lexer.tokens;
  *
  */
 public class FloatLiteralToken extends RealLiteralToken {
-
+  public FloatLiteralToken(final float value) {
+    
+  }
 }

@@ -23,5 +23,7 @@ package ng.compiler.lexer.tokens;
  *
  */
 public class LongLiteralToken extends IntegralLiteralToken {
-
+  public LongLiteralToken(final long value) {
+    
+  }
 }
