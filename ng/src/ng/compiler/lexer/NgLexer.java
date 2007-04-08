@@ -68,22 +68,6 @@ public class NgLexer {
       case '\'':
         return new SingleQuoteStringToken(this.reader);
         
-      case '+':
-        this.reader.mark(1);
-        c1 = this.reader.read();
-        if (c1 == '+') return new IncrementToken();
-        if (c1 == '=') return new PlusEqualsToken();
-        this.reader.reset();
-        return new PlusToken();
-        
-      case '-':
-        this.reader.mark(1);
-        c1 = this.reader.read();
-        if (c1 == '-') return new DecrementToken();
-        if (c1 == '=') return new MinusEqualsToken();
-        this.reader.reset();
-        return new MinusToken();
-        
       case '*':
         this.reader.mark(1);
         c1 = this.reader.read();
@@ -97,10 +81,29 @@ public class NgLexer {
         c1 = this.reader.read();
         if (c1 == '=') return new DivideEqualsToken();
         if (c1 == '*') {
-          // TODO: consume the comment
+          while(true) {
+            int c2 = this.reader.read();
+            if (c2 == -1){
+              return new ErrorToken();
+            }
+            this.reader.mark(1);
+            if (c2 == '*' && this.reader.read() == '/') {
+              return new BlockCommentToken();
+            } else 
+              this.reader.reset();
+            
+            }
         }
         if (c1 == '/') {
-          //        TODO: consume the comment
+          while(true) {
+            this.reader.mark(1);
+            int c2 = this.reader.read();
+            if (c2 == -1 || c2 == '\n' || c2 == '\r') {
+              this.reader.reset();
+              return new LineCommentToken();
+            }
+          }
+          
         }
         this.reader.reset();
         return new DivideToken();
@@ -231,17 +234,48 @@ public class NgLexer {
         return new SemicolonToken();
         
       case '?':
-        return new QuestionmarkToken();
+        return new QuestionmarkToken();      
         
+      case '+':
+        this.reader.mark(1);
+        c1 = this.reader.read();
+        if (c1 == '+') return new IncrementToken();
+        if (c1 == '=') return new PlusEqualsToken();
+        this.reader.reset();
+        return new PlusToken();
+        
+      case '-':
+        this.reader.mark(1);
+        c1 = this.reader.read();
+        if (c1 == '-') return new DecrementToken();
+        if (c1 == '=') return new MinusEqualsToken();
+        this.reader.reset();
+        return new MinusToken();
         
       case '.':
         this.reader.mark(2);
         if (this.reader.read() == '.' && this.reader.read() == '.') return new EllipsisToken();
         this.reader.reset();
         return new DotToken();
+        
+      case '0':
+      case '1':
+      case '2':
+      case '3':
+      case '4':
+      case '5':
+      case '6':
+      case '7':
+      case '8':
+      case '9':
+        
+      default:
+        if (identifierStartCharacter(c)) {
+          return new IdentifierToken(this.reader);
+        } else {
+          return new ErrorToken();
+        }
     }
-    
-    return null;
   }
   
   private boolean identifierStartCharacter(final int c) {
