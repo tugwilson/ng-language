@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.HashMap;
-import java.util.Map;
 
 import ng.compiler.lexer.tokens.*;
 
@@ -261,6 +259,17 @@ public class NgLexer {
       case '8':
       case '9':
         return parseNumericConstant(c);
+        
+      case '@':
+        this.reader.mark(1);
+        c1 = this.reader.read();
+        
+        if (isIdentifierStartCharacter(c1)) {
+          return new FieldnameToken(c1, this.reader);
+        } else {
+          this.reader.reset();
+          new ErrorToken();
+        }
         
       case 'a': {
         final String value = assembleChars(7);
