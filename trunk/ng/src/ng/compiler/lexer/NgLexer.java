@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.Reader;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.Map;
 
 import ng.compiler.lexer.tokens.*;
 
@@ -260,17 +262,370 @@ public class NgLexer {
       case '9':
         return parseNumericConstant(c);
         
+      case 'a': {
+        final String value = assembleChars(7);
+        if (!isIdentifierPartCharacter(value.charAt(7)) && value.startsWith("bstract")) {
+          this.reader.reset();
+          this.reader.skip(7);
+          return new AbstractToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(5)) && value.startsWith("ssert")) {
+          this.reader.reset();
+          this.reader.skip(5);
+          return new AssertToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(2)) && value.startsWith("ny")) {
+          this.reader.reset();
+          this.reader.skip(2);
+          return new AnyToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(1)) && value.startsWith("s")) {
+          this.reader.reset();
+          this.reader.skip(1);
+          return new AsToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('a', this.reader); 
+        }
+      }
+      
+      case 'b': {
+        final String value = assembleChars(6);
+        if (!isIdentifierPartCharacter(value.charAt(6)) && value.startsWith("oolean")) {
+          this.reader.reset();
+          this.reader.skip(6);
+          return new BooleanToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(4)) && value.startsWith("reak")) {
+          this.reader.reset();
+          this.reader.skip(4);
+          return new BreakToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("yte")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new ByteToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('b', this.reader); 
+        }
+      }
+      
+      case 'c': {
+        final String value = assembleChars(7);
+        if (!isIdentifierPartCharacter(value.charAt(7)) && value.startsWith("ontinue")) {
+          this.reader.reset();
+          this.reader.skip(7);
+          return new ContinueToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(4)) && value.startsWith("atch")) {
+          this.reader.reset();
+          this.reader.skip(4);
+          return new CatchToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("lass")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new ClassToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("ase")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new CaseToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("har")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new CharToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('c', this.reader); 
+        }
+      }
+      
+      case 'd': {
+        final String value = assembleChars(6);
+        if (!isIdentifierPartCharacter(value.charAt(6)) && value.startsWith("efault")) {
+          this.reader.reset();
+          this.reader.skip(6);
+          return new DefaultToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(5)) && value.startsWith("ouble")) {
+          this.reader.reset();
+          this.reader.skip(5);
+          return new DoubleToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(2)) && value.startsWith("ef")) {
+          this.reader.reset();
+          this.reader.skip(2);
+          return new DefToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(1)) && value.startsWith("o")) {
+          this.reader.reset();
+          this.reader.skip(1);
+          return new DoToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('d', this.reader); 
+        }
+      }
+      
+      case 'e': {
+        final String value = assembleChars(6);
+        if (!isIdentifierPartCharacter(value.charAt(6)) && value.startsWith("xtends")) {
+          this.reader.reset();
+          this.reader.skip(6);
+          return new ExtendsToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("num")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new EnumToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("lse")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new ElseToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('e', this.reader); 
+        }
+      }
+      
+      case 'f': {
+        final String value = assembleChars(6);
+        if (!isIdentifierPartCharacter(value.charAt(6)) && value.startsWith("inally")) {
+          this.reader.reset();
+          this.reader.skip(6);
+          return new FinallyToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(4)) && value.startsWith("inal")) {
+          this.reader.reset();
+          this.reader.skip(4);
+          return new FinalToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(4)) && value.startsWith("alse")) {
+          this.reader.reset();
+          this.reader.skip(4);
+          return new FalseToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(4)) && value.startsWith("loat")) {
+          this.reader.reset();
+          this.reader.skip(4);
+          return new FloatToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(2)) && value.startsWith("or")) {
+          this.reader.reset();
+          this.reader.skip(2);
+          return new ForToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('f', this.reader); 
+        }
+      }
+      
+      case 'i': {
+        final String value = assembleChars(9);
+        if (!isIdentifierPartCharacter(value.charAt(9)) && value.startsWith("nstanceof")) {
+          this.reader.reset();
+          this.reader.skip(9);
+          return new InstanceofToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(8)) && value.startsWith("nterface")) {
+          this.reader.reset();
+          this.reader.skip(8);
+          return new InterfaceToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(5)) && value.startsWith("mport")) {
+          this.reader.reset();
+          this.reader.skip(5);
+          return new ImportToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(2)) && value.startsWith("nt")) {
+          this.reader.reset();
+          this.reader.skip(2);
+          return new IntToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(1)) && value.startsWith("n")) {
+          this.reader.reset();
+          this.reader.skip(1);
+          return new InToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(1)) && value.startsWith("f")) {
+          this.reader.reset();
+          this.reader.skip(1);
+          return new IfToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('i', this.reader); 
+        }
+      }
+      
+      case 'l': {
+        final String value = assembleChars(3);
+        if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("ong")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new LongToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('l', this.reader); 
+        }
+      }
+      
+      case 'n': {
+        final String value = assembleChars(5);
+        if (!isIdentifierPartCharacter(value.charAt(5)) && value.startsWith("ative")) {
+          this.reader.reset();
+          this.reader.skip(5);
+          return new NativeToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("ull")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new NullToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(2)) && value.startsWith("ew")) {
+          this.reader.reset();
+          this.reader.skip(2);
+          return new NewToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('n', this.reader); 
+        }
+      }
+      
+      case 'p': {
+        final String value = assembleChars(8);
+        if (!isIdentifierPartCharacter(value.charAt(8)) && value.startsWith("rotected")) {
+          this.reader.reset();
+          this.reader.skip(8);
+          return new ProtectedToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(6)) && value.startsWith("rivate")) {
+          this.reader.reset();
+          this.reader.skip(6);
+          return new PrivateToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(5)) && value.startsWith("ublic")) {
+          this.reader.reset();
+          this.reader.skip(5);
+          return new PublicToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('p', this.reader); 
+        }
+      }
+      
+      case 'r': {
+        final String value = assembleChars(5);
+        if (!isIdentifierPartCharacter(value.charAt(5)) && value.startsWith("eturn")) {
+          this.reader.reset();
+          this.reader.skip(5);
+          return new ReturnToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('r', this.reader); 
+        }
+      }
+      
+      case 's': {
+        final String value = assembleChars(11);
+        if (!isIdentifierPartCharacter(value.charAt(11)) && value.startsWith("ynchronized")) {
+          this.reader.reset();
+          this.reader.skip(11);
+          return new SynchronizedToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(7)) && value.startsWith("trictfp")) {
+          this.reader.reset();
+          this.reader.skip(7);
+          return new StrictfpToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(5)) && value.startsWith("witch")) {
+          this.reader.reset();
+          this.reader.skip(5);
+          return new SwitchToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(5)) && value.startsWith("tatic")) {
+          this.reader.reset();
+          this.reader.skip(5);
+          return new StaticToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(4)) && value.startsWith("hort")) {
+          this.reader.reset();
+          this.reader.skip(4);
+          return new ShortToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(4)) && value.startsWith("uper")) {
+          this.reader.reset();
+          this.reader.skip(4);
+          return new SuperToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('s', this.reader); 
+        }
+      }
+      
+      case 't': {
+        final String value = assembleChars(9);
+        if (!isIdentifierPartCharacter(value.charAt(9)) && value.startsWith("hreadsafe")) {
+          this.reader.reset();
+          this.reader.skip(9);
+          return new ThreadsafeToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(8)) && value.startsWith("ransient")) {
+          this.reader.reset();
+          this.reader.skip(8);
+          return new TransientToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(5)) && value.startsWith("hrows")) {
+          this.reader.reset();
+          this.reader.skip(5);
+          return new ThrowsToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(4)) && value.startsWith("hrow")) {
+          this.reader.reset();
+          this.reader.skip(4);
+          return new ThrowToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("his")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new ThisToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("rue")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new TrueToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(2)) && value.startsWith("ry")) {
+          this.reader.reset();
+          this.reader.skip(2);
+          return new TryToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('t', this.reader); 
+        }
+      }
+      
+      case 'v': {
+        final String value = assembleChars(7);
+        if (!isIdentifierPartCharacter(value.charAt(7)) && value.startsWith("olatile")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new VolatileToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("oid")) {
+          this.reader.reset();
+          this.reader.skip(3);
+          return new VoidToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('v', this.reader); 
+        }
+      }
+      
+      case 'w': {
+        final String value = assembleChars(4);
+        if (!isIdentifierPartCharacter(value.charAt(4)) && value.startsWith("hile")) {
+          this.reader.reset();
+          this.reader.skip(4);
+          return new WhileToken();
+        } else {
+          this.reader.reset();
+          return new IdentifierToken('w', this.reader); 
+        }
+      }
+        
       default:
-        if (identifierStartCharacter(c)) {
-          return new IdentifierToken(this.reader);
+        if (isIdentifierStartCharacter(c)) {
+          return new IdentifierToken(c, this.reader);
         } else {
           return new ErrorToken();
         }
     }
   }
   
-  private boolean identifierStartCharacter(final int c) {
+  private boolean isIdentifierStartCharacter(final int c) {
     return Character.isJavaIdentifierStart(c);
+  }
+  
+  private boolean isIdentifierPartCharacter(final int c) {
+    return Character.isJavaIdentifierPart(c);
+  }
+  
+  private String assembleChars(final int size) throws IOException {
+  final StringBuilder buf = new StringBuilder(size);
+  
+    this.reader.mark(size + 1);
+    
+    for (int i = 0; i != size; i++) {
+      buf.append(this.reader.read());
+    }
+    
+    this.reader.reset();
+    return buf.toString();
   }
   
   private Token parseNumericConstant(int c) throws IOException {

@@ -1,6 +1,4 @@
 package ng.compiler.lexer.tokens;
-
-import java.io.Reader;
 /*
  * Created on 8 Apr 2007
  *
@@ -24,8 +22,6 @@ import java.io.Reader;
  * @author John
  *
  */
-public class IdentifierToken implements Token {
-  public IdentifierToken(final int firstChar, final Reader reader) {
-    
-  }
+public class PublicToken extends KeywordToken {
+
 }
