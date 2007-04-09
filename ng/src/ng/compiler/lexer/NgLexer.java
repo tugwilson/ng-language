@@ -332,9 +332,9 @@ public class NgLexer {
           this.reader.reset();
           this.reader.skip(4);
           return new CatchToken();
-        } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("lass")) {
+        } else if (!isIdentifierPartCharacter(value.charAt(4)) && value.startsWith("lass")) {
           this.reader.reset();
-          this.reader.skip(3);
+          this.reader.skip(4);
           return new ClassToken();
         } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("ase")) {
           this.reader.reset();

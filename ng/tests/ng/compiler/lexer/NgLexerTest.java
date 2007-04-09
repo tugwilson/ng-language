@@ -64,18 +64,14 @@ public class NgLexerTest extends TestCase {
   public void testKeywordRecognition() throws IOException {
     final NgLexer lexer = new NgLexer(new StringReader(
         "abstract abstract1 assert assert1 any any1 as as1 " +
-        "" +
-        "" +
-        "" +
-        "" +
-        "" +
-        "" +
-        "" +
-        "" +
+        "boolean boolean1 break break1 byte byte1 " +
+        "continue continue1 case case1 catch catch1 char char1 class class1 " +
         ""
         ));
     final Class[] expected = new Class[] {
         AbstractToken.class, IdentifierToken.class, AssertToken.class, IdentifierToken.class, AnyToken.class, IdentifierToken.class, AsToken.class, IdentifierToken.class, 
+        BooleanToken.class, IdentifierToken.class, BreakToken.class, IdentifierToken.class, ByteToken.class, IdentifierToken.class, 
+        ContinueToken.class, IdentifierToken.class, CaseToken.class, IdentifierToken.class, CatchToken.class, IdentifierToken.class, CharToken.class, IdentifierToken.class, ClassToken.class, IdentifierToken.class, 
         EOFToken.class
     };
     
