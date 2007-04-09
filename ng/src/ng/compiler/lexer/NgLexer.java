@@ -636,8 +636,8 @@ public class NgLexer {
   
     this.reader.mark(size + 1);
     
-    for (int i = 0; i != size; i++) {
-      buf.append(this.reader.read());
+    for (int i = 0; i != size + 1; i++) {
+      buf.append((char)this.reader.read());
     }
     
     this.reader.reset();
