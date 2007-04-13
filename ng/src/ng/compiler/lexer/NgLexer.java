@@ -590,7 +590,7 @@ public class NgLexer {
         final String value = assembleChars(7);
         if (!isIdentifierPartCharacter(value.charAt(7)) && value.startsWith("olatile")) {
           this.reader.reset();
-          this.reader.skip(3);
+          this.reader.skip(7);
           return new VolatileToken();
         } else if (!isIdentifierPartCharacter(value.charAt(3)) && value.startsWith("oid")) {
           this.reader.reset();
