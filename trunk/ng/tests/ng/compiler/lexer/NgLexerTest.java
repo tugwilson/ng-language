@@ -31,7 +31,7 @@ import junit.framework.TestCase;
  */
 public class NgLexerTest extends TestCase {
   public void testSymbolRecognition() throws IOException {
-    final NgLexer lexer = new NgLexer(new StringReader("+ ++ += - -- -= / /= % %= ÷ ÷= * *= ** **= & &= && | |= || ^ ^= >> >>= >>> >>>= << <<= = == != > >= < <= <=> ! ~,[](){}"));
+    final NgLexer lexer = new NgLexer(new StringReader("+ ++ += - -- -= / /= % %= ÷ ÷= * *= ** **= & &= && | |= || ^ ^= >> >>= >>> >>>= << <<= = == != > >= < <= <=> ! ~,[](){} :; . ... ? \r\n\n\r\u001a"));
     final Class[] expected = new Class[] {
         PlusToken.class, IncrementToken.class, PlusEqualsToken.class,
         MinusToken.class, DecrementToken.class, MinusEqualsToken.class,
@@ -53,8 +53,11 @@ public class NgLexerTest extends TestCase {
         CommaToken.class,
         OpenSquareBracketToken.class, CloseSquareBracketToken.class,
         OpenRoundBracketToken.class, CloseRoundBracketToken.class,
-        OpenCurlyBracketToken.class, CloseCurlyBracketToken.class,      
-        EOFToken.class
+        OpenCurlyBracketToken.class, CloseCurlyBracketToken.class,
+        ColonToken.class, SemicolonToken.class,
+        DotToken.class, EllipsisToken.class,
+        QuestionmarkToken.class,
+        EOLToken.class, EOLToken.class, EOLToken.class, EOFToken.class
     };
     
       for (int i = 0; i != expected.length; i++) {
@@ -98,8 +101,50 @@ public class NgLexerTest extends TestCase {
         EOFToken.class
     };
     
-      for (int i = 0; i != expected.length; i++) {
-        assertEquals(expected[i], lexer.nextToken().getClass());
-      }
+    for (int i = 0; i != expected.length; i++) {
+      assertEquals(expected[i], lexer.nextToken().getClass());
     }
+  }
+  
+  public void testIdentifierRecognition() throws IOException {
+    final NgLexer lexer = new NgLexer(new StringReader(
+        "abc ad123 aBc_d @abc @ad123 @aBc_d "));
+    final Class[] expected = new Class[] {
+        IdentifierToken.class, IdentifierToken.class, IdentifierToken.class,
+        FieldnameToken.class, FieldnameToken.class, FieldnameToken.class,
+        EOFToken.class
+    };
+    
+    for (int i = 0; i != expected.length; i++) {
+      assertEquals(expected[i], lexer.nextToken().getClass());
+    }
+  }
+  
+  public void testNumberRecognition() throws IOException {
+    final NgLexer lexer = new NgLexer(new StringReader(
+        "123 123l 123L " +
+        "0X01 0x02Bl 0x0aL " +
+        "01 022l 0145L 08" +
+        "123g 1234567890G  1. " +
+        ".1 0.1 0e+1 0.0e-1 " +
+        ".1g 0.1G 0e+1g 0.0e-1G " +
+        ".1f 0.1f 0e+1F 0.0e-1F " +
+        ".1D 0.1d 0e+1D 0.0e-1d "
+        ));
+    final Class[] expected = new Class[] {
+        IntLiteralToken.class, LongLiteralToken.class, LongLiteralToken.class,
+        IntLiteralToken.class, LongLiteralToken.class, LongLiteralToken.class,
+        IntLiteralToken.class, LongLiteralToken.class, LongLiteralToken.class, ErrorToken.class,
+        BigIntegerLiteralToken.class, BigIntegerLiteralToken.class, IntLiteralToken.class, DotToken.class,
+        BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, 
+        BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, 
+        FloatLiteralToken.class, FloatLiteralToken.class, FloatLiteralToken.class, FloatLiteralToken.class,
+        DoubleLiteralToken.class, DoubleLiteralToken.class, DoubleLiteralToken.class, DoubleLiteralToken.class, 
+        EOFToken.class
+    };
+    
+    for (int i = 0; i != expected.length; i++) {
+      assertEquals(expected[i], lexer.nextToken().getClass());
+    }
+  }
 }
