@@ -256,6 +256,16 @@ public class NgLexer {
         return new DotToken();
         
       case '0':
+        this.reader.mark(1);
+        c1 = this.reader.read();
+        if (c1 == 'x' || c1 == 'X') {
+          return parseHexConstant();
+        } else if (Character.isDigit(c1)) {
+          this.reader.reset();
+          return parseOctalConstant();
+        } else {
+          this.reader.reset();
+        }
       case '1':
       case '2':
       case '3':
@@ -647,14 +657,14 @@ public class NgLexer {
   private Token parseNumericConstant(int c) throws IOException {
   final StringBuilder buf = new StringBuilder();
   
-    buf.append(c);
+    buf.append((char)c);
     
     return parseNumericConstant(buf);
   }
   
   private Token parseNumericConstant(final StringBuilder buf) throws IOException {
     while(true) {
-      this.reader.mark(1);
+      this.reader.mark(2);
       final int c = this.reader.read();
       
       switch(c) {
@@ -668,16 +678,22 @@ public class NgLexer {
         case '7':
         case '8':
         case '9':
-          buf.append(c);
+          buf.append((char)c);
           break;
           
         case '.':
-          buf.append(c);
-          return parseRealConstant(buf);
+          if (Character.isDigit(this.reader.read())) {
+            this.reader.reset();
+            buf.append(this.reader.read());
+            return parseRealConstant(buf);
+          } else {
+            this.reader.reset();
+            return new IntLiteralToken(Integer.parseInt(buf.toString()));
+          }
           
         case 'e':
         case 'E':
-          buf.append(c);
+          buf.append((char)c);
           return parseExponentPart(buf);
           
         case 'l':
@@ -695,10 +711,98 @@ public class NgLexer {
     }
   }
   
+  private Token parseHexConstant() throws IOException {
+  final StringBuilder buf = new StringBuilder();
+    buf.append("0");
+    
+    while(true) {
+      this.reader.mark(1);
+      final int c = this.reader.read();
+      
+      switch(c) {
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case 'a':
+        case 'A':
+        case 'b':
+        case 'B':
+        case 'c':
+        case 'C':
+        case 'd':
+        case 'D':
+        case 'e':
+        case 'E':
+        case 'f':
+        case 'F':
+          buf.append((char)c);
+          break;
+          
+        case 'l':
+        case 'L':
+          return new LongLiteralToken(Long.parseLong(buf.toString(), 16));
+          
+        case 'g':
+        case 'G':
+          return new BigIntegerLiteralToken(new BigInteger(buf.toString(), 16));
+          
+        default:
+          reader.reset();
+          return new IntLiteralToken(Integer.parseInt(buf.toString(), 16));
+      }
+    }
+  }
+  
+  private Token parseOctalConstant() throws IOException {
+  final StringBuilder buf = new StringBuilder();
+    buf.append('0');
+    
+    while(true) {
+      this.reader.mark(1);
+      final int c = this.reader.read();
+      
+      switch(c) {
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+          buf.append((char)c);
+          break;
+          
+        case '8':
+        case '9':
+          return new ErrorToken();
+          
+        case 'l':
+        case 'L':
+          return new LongLiteralToken(Long.parseLong(buf.toString(), 16));
+          
+        case 'g':
+        case 'G':
+          return new BigIntegerLiteralToken(new BigInteger(buf.toString(), 16));
+          
+        default:
+          reader.reset();
+          return new IntLiteralToken(Integer.parseInt(buf.toString(), 16));
+      }
+    }
+  }
+  
   private Token parseRealConstant(final int c) throws IOException {
     final StringBuilder buf = new StringBuilder();
     
-    buf.append(c);
+    buf.append((char)c);
     
     return parseRealConstant(buf);
   } 
@@ -719,12 +823,12 @@ public class NgLexer {
         case '7':
         case '8':
         case '9':
-          buf.append(c);
+          buf.append((char)c);
           break;
           
         case 'e':
         case 'E':
-          buf.append(c);
+          buf.append((char)c);
           return parseExponentPart(buf);
           
         case 'f':
@@ -749,7 +853,7 @@ public class NgLexer {
     final int c = this.reader.read();
   
     if (c == '+' || c == '-') {
-      buf.append(c);
+      buf.append((char)c);
     } else {
       this.reader.reset();
     }
@@ -773,7 +877,7 @@ public class NgLexer {
         case '7':
         case '8':
         case '9':
-          buf.append(c);
+          buf.append((char)c);
           break;
           
         case 'f':
