@@ -260,11 +260,9 @@ public class NgLexer {
         c1 = this.reader.read();
         if (c1 == 'x' || c1 == 'X') {
           return parseHexConstant();
-        } else if (Character.isDigit(c1)) {
-          this.reader.reset();
-          return parseOctalConstant();
         } else {
           this.reader.reset();
+          if (Character.isDigit(c1)) return parseOctalConstant();
         }
       case '1':
       case '2':

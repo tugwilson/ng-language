@@ -126,20 +126,24 @@ public class NgLexerTest extends TestCase {
         "0X01 0x02Bl 0x0aL " +
         "01 022l 0145L 08" +
         "123g 1234567890G  1. " +
-        ".1 0.1 0e+1 0.0e-1 " +
-        ".1g 0.1G 0e+1g 0.0e-1G " +
-        ".1f 0.1f 0e+1F 0.0e-1F " +
-        ".1D 0.1d 0e+1D 0.0e-1d "
+        "0X01g 0x02BG  0x0a. " +
+        "01g 0221G  0123. " +
+        ".1 0.1 0e+1 0.0e-1 0.0e1 " +
+        ".1g 0.1G 0e+1g 0.0e-1G 0.0e1G " +
+        ".1f 0.1f 0e+1F 0.0e-1F 0.0e1F " +
+        ".1D 0.1d 0e+1D 0.0e-1d 0.0e1d "
         ));
     final Class[] expected = new Class[] {
         IntLiteralToken.class, LongLiteralToken.class, LongLiteralToken.class,
         IntLiteralToken.class, LongLiteralToken.class, LongLiteralToken.class,
         IntLiteralToken.class, LongLiteralToken.class, LongLiteralToken.class, ErrorToken.class,
         BigIntegerLiteralToken.class, BigIntegerLiteralToken.class, IntLiteralToken.class, DotToken.class,
-        BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, 
-        BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, 
-        FloatLiteralToken.class, FloatLiteralToken.class, FloatLiteralToken.class, FloatLiteralToken.class,
-        DoubleLiteralToken.class, DoubleLiteralToken.class, DoubleLiteralToken.class, DoubleLiteralToken.class, 
+        BigIntegerLiteralToken.class, BigIntegerLiteralToken.class, IntLiteralToken.class, DotToken.class,
+        BigIntegerLiteralToken.class, BigIntegerLiteralToken.class, IntLiteralToken.class, DotToken.class,
+        BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, 
+        BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, BigDecimalLiteralToken.class, 
+        FloatLiteralToken.class, FloatLiteralToken.class, FloatLiteralToken.class, FloatLiteralToken.class, FloatLiteralToken.class,
+        DoubleLiteralToken.class, DoubleLiteralToken.class, DoubleLiteralToken.class, DoubleLiteralToken.class, DoubleLiteralToken.class, 
         EOFToken.class
     };
     
