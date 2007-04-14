@@ -107,11 +107,12 @@ public class NgLexerTest extends TestCase {
   }
   
   public void testIdentifierRecognition() throws IOException {
-    final NgLexer lexer = new NgLexer(new StringReader(
-        "abc ad123 aBc_d @abc @ad123 @aBc_d "));
-    final Class[] expected = new Class[] {
+  final NgLexer lexer = new NgLexer(new StringReader(
+        "abc ad123 oaBc_d @abc @ad123 @aBc_d @ "));
+  final Class[] expected = new Class[] {
         IdentifierToken.class, IdentifierToken.class, IdentifierToken.class,
         FieldnameToken.class, FieldnameToken.class, FieldnameToken.class,
+        ErrorToken.class,
         EOFToken.class
     };
     
@@ -121,7 +122,7 @@ public class NgLexerTest extends TestCase {
   }
   
   public void testNumberRecognition() throws IOException {
-    final NgLexer lexer = new NgLexer(new StringReader(
+  final NgLexer lexer = new NgLexer(new StringReader(
         "123 123l 123L " +
         "0X01 0x02Bl 0x0aL " +
         "01 022l 0145L 08" +
@@ -133,7 +134,7 @@ public class NgLexerTest extends TestCase {
         ".1f 0.1f 0e+1F 0.0e-1F 0.0e1F " +
         ".1D 0.1d 0e+1D 0.0e-1d 0.0e1d "
         ));
-    final Class[] expected = new Class[] {
+  final Class[] expected = new Class[] {
         IntLiteralToken.class, LongLiteralToken.class, LongLiteralToken.class,
         IntLiteralToken.class, LongLiteralToken.class, LongLiteralToken.class,
         IntLiteralToken.class, LongLiteralToken.class, LongLiteralToken.class, ErrorToken.class,
@@ -145,6 +146,26 @@ public class NgLexerTest extends TestCase {
         FloatLiteralToken.class, FloatLiteralToken.class, FloatLiteralToken.class, FloatLiteralToken.class, FloatLiteralToken.class,
         DoubleLiteralToken.class, DoubleLiteralToken.class, DoubleLiteralToken.class, DoubleLiteralToken.class, DoubleLiteralToken.class, 
         EOFToken.class
+    };
+    
+    for (int i = 0; i != expected.length; i++) {
+      assertEquals(expected[i], lexer.nextToken().getClass());
+    }
+  }
+  
+  public void testCommentRecognition() throws IOException {
+  final NgLexer lexer = new NgLexer(new StringReader(
+      " xyz // dsh r ur  //  gg  g \r" + 
+      " xyz // dsh r ur  //  gg  g \n" + 
+      " xyz // dsh r ur  //  gg  g \r\n" + 
+      " xyz /* dd \r\n hfhg \r gfhghgh \n HHHH */ hfhfhfhf \r" + 
+      ""));
+  final Class[] expected = new Class[] {
+      IdentifierToken.class, LineCommentToken.class, EOLToken.class,
+      IdentifierToken.class, LineCommentToken.class, EOLToken.class,
+      IdentifierToken.class, LineCommentToken.class, EOLToken.class,
+      IdentifierToken.class, BlockCommentToken.class, IdentifierToken.class, EOLToken.class,
+      EOFToken.class
     };
     
     for (int i = 0; i != expected.length; i++) {
