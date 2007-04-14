@@ -283,7 +283,7 @@ public class NgLexer {
           return new FieldnameToken(c1, this.reader);
         } else {
           this.reader.reset();
-          new ErrorToken();
+          return new ErrorToken();
         }
         
       case 'a': {
