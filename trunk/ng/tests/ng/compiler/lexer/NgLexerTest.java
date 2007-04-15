@@ -172,4 +172,17 @@ public class NgLexerTest extends TestCase {
       assertEquals(expected[i], lexer.nextToken().getClass());
     }
   }
+  
+  public void testStringRecognition() throws IOException {
+  final NgLexer lexer = new NgLexer(new StringReader(
+      "'' 'hello' '\\b\\t\\n\\f\\r\\\"\\'\\\\\\0\\07\\7\\123\\65' ' "));
+  final Class[] expected = new Class[] {
+      SingleQuoteStringToken.class, SingleQuoteStringToken.class, SingleQuoteStringToken.class, ErrorToken.class,
+      EOFToken.class
+  };
+  
+    for (int i = 0; i != expected.length; i++) {
+      assertEquals(expected[i], lexer.nextToken().getClass());
+    }
+  }
 }
