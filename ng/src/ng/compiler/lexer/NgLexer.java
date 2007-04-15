@@ -50,7 +50,7 @@ public class NgLexer {
         return new DoubleQuoteStringToken(this.reader);
         
       case '\'':
-        return new SingleQuoteStringToken(this.reader);
+        return ParseSingleQuoteString();
         
       case '*':
         this.reader.mark(1);
@@ -650,6 +650,107 @@ public class NgLexer {
     
     this.reader.reset();
     return buf.toString();
+  }
+  
+  private Token ParseSingleQuoteString() throws IOException {
+  final StringBuilder buf = new StringBuilder();
+  
+    while (true) {
+    final int c = this.reader.read();
+    
+      switch(c) {
+      case -1:
+      case '\r':
+      case '\n':
+        return new ErrorToken();
+      
+      case '\\':
+        final int result = parseEscapedChar();
+        
+        if(result == -1) {
+          return new ErrorToken();
+        } else {
+          buf.append((char)result);
+          break;
+        }
+        
+      case '\'':
+        return new SingleQuoteStringToken(buf.toString());
+        
+      default:
+        buf.append((char)c);
+      }
+    }
+  }
+  
+  private int parseEscapedChar() throws IOException {
+    this.reader.mark(1);
+    int c = this.reader.read();
+    
+    switch(c) {
+      case 'b':
+        return '\b';
+       
+      case 't':
+        return '\t';
+       
+      case 'n':
+        return '\n';
+       
+      case 'f':
+        return '\f';
+       
+      case 'r':
+        return '\r';
+       
+      case '"':
+        return '"';
+       
+      case '\'':
+        return '\'';
+       
+      case '\\':
+        return '\\';
+     
+      case '0':
+      case '1':
+      case '2':
+      case '3':
+        int result = c - '0';
+        this.reader.mark(1);
+        c = this.reader.read();
+        if (c >= '0' && c <= '7') {
+          result = (result << 3) + (c - '0');
+          this.reader.mark(1);
+          c = this.reader.read();
+          if (c >= '0' && c <= '7') {
+            result = (result << 3) + (c - '0');
+          } else {
+            this.reader.reset();
+          }
+        } else {
+          this.reader.reset();
+        }
+        return result;
+        
+      case '4':
+      case '5':
+      case '6':
+      case '7':
+        result = c - '0';
+        this.reader.mark(1);
+        c = this.reader.read();
+        if (c >= '0' && c <= '7') {
+          result = (result << 3) + (c - '0');
+        } else {
+          this.reader.reset();
+        }
+        return result;
+        
+      default:
+        this.reader.reset();
+        return -1;
+    }
   }
   
   private Token parseNumericConstant(int c) throws IOException {
