@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class SemicolonToken implements Token {
+public class SemicolonToken extends Token {
 
 }

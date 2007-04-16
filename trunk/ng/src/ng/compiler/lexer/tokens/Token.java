@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public interface Token {
+public abstract class Token {
 
 }

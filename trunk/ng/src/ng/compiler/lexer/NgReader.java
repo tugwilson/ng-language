@@ -174,7 +174,7 @@ public class NgReader extends Reader {
    */
   @Override
   public void mark(final int readAheadLimit) throws IOException {
-    throw new IOException("mark not supported");
+    this.reader.mark(readAheadLimit);
   }
 
   /**
@@ -183,6 +183,6 @@ public class NgReader extends Reader {
    */
   @Override
   public void reset() throws IOException {
-    throw new IOException("reset not supported");
+    this.reader.reset();
   }
 }

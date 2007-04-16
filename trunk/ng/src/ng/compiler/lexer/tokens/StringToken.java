@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public abstract class StringToken implements Token {
+public abstract class StringToken extends Token {
 
 }

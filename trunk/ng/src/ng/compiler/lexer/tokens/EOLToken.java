@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class EOLToken implements Token {
+public class EOLToken extends Token {
 
 }

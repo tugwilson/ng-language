@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class KeywordToken implements Token {
+public class KeywordToken extends Token {
 
 }
