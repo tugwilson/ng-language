@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class CommaToken implements Token {
+public class CommaToken extends Token {
 
 }

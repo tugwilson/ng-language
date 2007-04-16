@@ -27,7 +27,7 @@ import ng.compiler.lexer.NgLexer;
  * @author John
  *
  */
-public class IdentifierToken implements Token {
+public class IdentifierToken extends Token {
   private final String name;
   
   public IdentifierToken(final int firstChar, final Reader reader) throws IOException {

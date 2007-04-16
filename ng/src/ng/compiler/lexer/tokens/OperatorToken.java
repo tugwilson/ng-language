@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public abstract class OperatorToken implements Token {
+public abstract class OperatorToken extends Token {
 
 }

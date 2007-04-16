@@ -1,6 +1,9 @@
-package ng.compiler.lexer.tokens;
+package ng.compiler.parser;
+
+import java.io.Reader;
+import java.io.StringReader;
 /*
- * Created on 7 Apr 2007
+ * Created on 16 Apr 2007
  *
  * Copyright 2007 John G. Wilson
  *
@@ -18,10 +21,20 @@ package ng.compiler.lexer.tokens;
  *
  */
 
+import ng.compiler.lexer.NgLexer;
+
 /**
  * @author John
  *
  */
-public class EllipsisToken extends Token {
-
+public class Compiler {
+  public Object compile(final String source) {
+    return compile(new StringReader(source));
+  }
+  
+  public Object compile(final Reader sourceReader) {
+  final NgLexer lexer = new NgLexer(sourceReader);
+  
+    return null;
+  }
 }

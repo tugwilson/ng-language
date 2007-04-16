@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class CloseRoundBracketToken implements Token {
+public class CloseRoundBracketToken extends Token {
 
 }

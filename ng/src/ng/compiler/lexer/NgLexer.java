@@ -16,11 +16,7 @@ public class NgLexer {
   private final Reader reader;
   
   public NgLexer(final Reader reader) {
-    if (reader.markSupported()) {
-      this.reader = reader;
-    } else {
-      this.reader = new BufferedReader(reader);
-    }
+    this.reader = new NgReader(reader);
   }
   
   public Token nextToken() throws IOException {

@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class OpenCurlyBracketToken implements Token {
+public class OpenCurlyBracketToken extends Token {
 
 }

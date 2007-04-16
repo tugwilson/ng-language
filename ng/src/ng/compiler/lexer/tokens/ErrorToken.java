@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class ErrorToken implements Token {
+public class ErrorToken extends Token {
 
 }

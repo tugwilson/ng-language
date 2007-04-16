@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class ColonToken implements Token {
+public class ColonToken extends Token {
 
 }

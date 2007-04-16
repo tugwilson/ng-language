@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class DotToken implements Token {
+public class DotToken extends Token {
 
 }

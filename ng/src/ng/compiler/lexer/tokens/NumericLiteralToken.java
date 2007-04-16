@@ -22,6 +22,6 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class NumericLiteralToken implements Token {
+public class NumericLiteralToken extends Token {
 
 }
