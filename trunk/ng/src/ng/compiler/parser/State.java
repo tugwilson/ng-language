@@ -1,9 +1,4 @@
 package ng.compiler.parser;
-
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
-
 /*
  * Created on 16 Apr 2007
  *
@@ -23,29 +18,39 @@ import java.io.StringReader;
  *
  */
 
-import ng.compiler.lexer.NgLexer;
-
 /**
  * @author John
  *
  */
-public class Compiler {
-  public Object compile(final String source) throws IOException {
-    return compile(new StringReader(source));
+public class State {
+  public enum Value {start, canFinish, finished};
+  
+  private boolean done = false;
+  private boolean error = false;
+  private Value currentState = Value.start;
+  
+  public boolean isDone() {
+    return this.done;
   }
   
-  public Object compile(final Reader sourceReader) throws IOException {
-  final NgLexer lexer = new NgLexer(sourceReader);
-  final State state = new State();
-  
-    while (!state.isDone()) {
-      lexer.nextToken().transform(state);
-      
-      if (state.isError()) {
-        // TODO: handle the error here
-      }
-    }
-    
-    return null;
+  public void setDone(boolean done) {
+    this.done = done;
   }
+
+  public boolean isError() {
+    return this.error;
+  }
+
+  public void setError(boolean error) {
+    this.error = error;
+  }
+
+  public Value getCurrentState() {
+    return this.currentState;
+  }
+
+  public void setCurrentState(final Value currentState) {
+    this.currentState = currentState;
+  }
+  
 }
