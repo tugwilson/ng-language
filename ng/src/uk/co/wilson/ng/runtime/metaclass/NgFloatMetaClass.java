@@ -565,402 +565,502 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
     return new NgFloat(lhs - rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final float lhs, final int rhs) {
     return new NgFloat(lhs - rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final float lhs, final long rhs) {
     return new NgFloat(lhs - rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final float lhs, final float rhs) {
     return new NgFloat(lhs - rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final float lhs, final double rhs) {
     return new NgDouble(lhs - rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final float lhs, final BigInteger rhs) {
     return new NgFloat(lhs - rhs.floatValue());
   }
 
+  @Override
   public Object doSubtractEquals(final float lhs, final BigDecimal rhs) {
     return new BigDecimal(lhs).subtract(rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final Object lhs, final byte rhs) {
     return doSubtractEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final Object lhs, final char rhs) {
     return doSubtractEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final Object lhs, final short rhs) {
     return doSubtractEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final Object lhs, final int rhs) {
     return doSubtractEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final Object lhs, final long rhs) {
     return doSubtractEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final Object lhs, final float rhs) {
     return doSubtractEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final Object lhs, final double rhs) {
     return doSubtractEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final Object lhs, final BigInteger rhs) {
     return doSubtractEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doSubtractEquals(final Object lhs, final BigDecimal rhs) {
     return doSubtractEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doReverseSubtractEquals(final byte lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(byte.class).doSubtractEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseSubtractEquals(final char lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(char.class).doSubtractEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseSubtractEquals(final short lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(short.class).doSubtractEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseSubtractEquals(final int lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(int.class).doSubtractEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseSubtractEquals(final long lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(long.class).doSubtractEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseSubtractEquals(final float lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(float.class).doSubtractEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseSubtractEquals(final double lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(double.class).doSubtractEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseSubtractEquals(final BigInteger lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigInteger.class).doSubtractEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseSubtractEquals(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doSubtractEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doMultiply(final Object lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiply(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiply(final float lhs, final byte rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiply(final float lhs, final char rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiply(final float lhs, final short rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiply(final float lhs, final int rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiply(final float lhs, final long rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiply(final float lhs, final float rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiply(final float lhs, final double rhs) {
     return new NgDouble(lhs * rhs);
   }
 
+  @Override
   public Object doMultiply(final float lhs, final BigInteger rhs) {
     return new NgFloat(lhs * rhs.floatValue());
   }
 
+  @Override
   public Object doMultiply(final float lhs, final BigDecimal rhs) {
     return new BigDecimal(lhs).multiply(rhs);
   }
 
+  @Override
   public Object doMultiply(final Object lhs, final byte rhs) {
     return doMultiply(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiply(final Object lhs, final char rhs) {
     return doMultiply(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiply(final Object lhs, final short rhs) {
     return doMultiply(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiply(final Object lhs, final int rhs) {
     return doMultiply(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiply(final Object lhs, final long rhs) {
     return doMultiply(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiply(final Object lhs, final float rhs) {
     return doMultiply(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiply(final Object lhs, final double rhs) {
     return doMultiply(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiply(final Object lhs, final BigInteger rhs) {
     return doMultiply(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiply(final Object lhs, final BigDecimal rhs) {
     return doMultiply(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doReverseMultiply(final byte lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(byte.class).doMultiply(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiply(final char lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(char.class).doMultiply(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiply(final short lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(short.class).doMultiply(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiply(final int lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(int.class).doMultiply(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiply(final long lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(long.class).doMultiply(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiply(final float lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(float.class).doMultiply(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiply(final double lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(double.class).doMultiply(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiply(final BigInteger lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigInteger.class).doMultiply(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiply(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doMultiply(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doMultiplyEquals(final Object lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiplyEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final float lhs, final byte rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final float lhs, final char rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final float lhs, final short rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final float lhs, final int rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final float lhs, final long rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final float lhs, final float rhs) {
     return new NgFloat(lhs * rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final float lhs, final double rhs) {
     return new NgDouble(lhs * rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final float lhs, final BigInteger rhs) {
     return new NgFloat(lhs * rhs.floatValue());
   }
 
+  @Override
   public Object doMultiplyEquals(final float lhs, final BigDecimal rhs) {
     return new BigDecimal(lhs).multiply(rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final Object lhs, final byte rhs) {
     return doMultiplyEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final Object lhs, final char rhs) {
     return doMultiplyEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final Object lhs, final short rhs) {
     return doMultiplyEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final Object lhs, final int rhs) {
     return doMultiplyEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final Object lhs, final long rhs) {
     return doMultiplyEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final Object lhs, final float rhs) {
     return doMultiplyEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final Object lhs, final double rhs) {
     return doMultiplyEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final Object lhs, final BigInteger rhs) {
     return doMultiplyEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doMultiplyEquals(final Object lhs, final BigDecimal rhs) {
     return doMultiplyEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doReverseMultiplyEquals(final byte lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(byte.class).doMultiplyEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiplyEquals(final char lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(char.class).doMultiplyEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiplyEquals(final short lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(short.class).doMultiplyEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiplyEquals(final int lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(int.class).doMultiplyEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiplyEquals(final long lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(long.class).doMultiplyEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiplyEquals(final float lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(float.class).doMultiplyEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiplyEquals(final double lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(double.class).doMultiplyEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiplyEquals(final BigInteger lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigInteger.class).doMultiplyEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseMultiplyEquals(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doMultiplyEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doDivide(final Object lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivide(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doDivide(final float lhs, final byte rhs) {
     return new NgFloat(lhs / rhs);
   }
 
+  @Override
   public Object doDivide(final float lhs, final char rhs) {
     return new NgFloat(lhs / rhs);
   }
 
+  @Override
   public Object doDivide(final float lhs, final short rhs) {
     return new NgFloat(lhs / rhs);
   }
 
+  @Override
   public Object doDivide(final float lhs, final int rhs) {
     return new NgFloat(lhs / rhs);
   }
 
+  @Override
   public Object doDivide(final float lhs, final long rhs) {
     return new NgFloat(lhs / rhs);
   }
 
+  @Override
   public Object doDivide(final float lhs, final float rhs) {
     return new NgFloat(lhs / rhs);
   }
 
+  @Override
   public Object doDivide(final float lhs, final double rhs) {
     return new NgDouble(lhs / rhs);
   }
 
+  @Override
   public Object doDivide(final float lhs, final BigInteger rhs) {
     return new NgFloat(lhs / rhs.floatValue());
   }
 
+  @Override
   public Object doDivide(final float lhs, final BigDecimal rhs) {
     return new BigDecimal(lhs).divide(rhs);
   }
 
+  @Override
   public Object doDivide(final Object lhs, final byte rhs) {
     return doDivide(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doDivide(final Object lhs, final char rhs) {
     return doDivide(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doDivide(final Object lhs, final short rhs) {
     return doDivide(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doDivide(final Object lhs, final int rhs) {
     return doDivide(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doDivide(final Object lhs, final long rhs) {
     return doDivide(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doDivide(final Object lhs, final float rhs) {
     return doDivide(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doDivide(final Object lhs, final double rhs) {
     return doDivide(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doDivide(final Object lhs, final BigInteger rhs) {
     return doDivide(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doDivide(final Object lhs, final BigDecimal rhs) {
     return doDivide(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doReverseDivide(final byte lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(byte.class).doDivide(lhs, ((NgFloat)rhs).getFloatValue());
   }

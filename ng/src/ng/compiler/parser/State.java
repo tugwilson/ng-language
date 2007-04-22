@@ -23,7 +23,9 @@ package ng.compiler.parser;
  *
  */
 public class State {
-  public enum Value {start, canFinish, finished};
+  public enum Value {start, finished,
+                     expectingPackageName, possiblePackageQualifierDot,
+                     packageDeclared};
   
   private boolean done = false;
   private boolean error = false;
@@ -33,7 +35,7 @@ public class State {
     return this.done;
   }
   
-  public void setDone(boolean done) {
+  public void setDone(final boolean done) {
     this.done = done;
   }
 
@@ -41,7 +43,7 @@ public class State {
     return this.error;
   }
 
-  public void setError(boolean error) {
+  public void setError(final boolean error) {
     this.error = error;
   }
 

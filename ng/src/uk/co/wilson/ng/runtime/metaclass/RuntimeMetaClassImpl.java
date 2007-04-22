@@ -279,7 +279,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName).call(instance);
   
     if (result == NOT_CALLED) {
-      result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
       
       if (result != NOT_CALLED) {
         return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance);
@@ -299,7 +299,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
 
     if (result == NOT_CALLED) {
-      result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
       
       if (result != NOT_CALLED) {
         return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
@@ -319,7 +319,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2).call(instance, p1, p2);
 
     if (result == NOT_CALLED) {
-      result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
       
       if (result != NOT_CALLED) {
         return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1, p2);
@@ -339,7 +339,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2, p3).call(instance, p1, p2, p3);
 
     if (result == NOT_CALLED) {
-      result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
       
       if (result != NOT_CALLED) {
         return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1, p2, p3);
@@ -359,7 +359,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1, p2, p3, p4).call(instance, p1, p2, p3, p4);
 
     if (result == NOT_CALLED) {
-      result = internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
       
       if (result != NOT_CALLED) {
         return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1, p2, p3, p4);

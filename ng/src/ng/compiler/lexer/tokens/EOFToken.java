@@ -33,13 +33,14 @@ public class EOFToken extends Token {
   protected void transform(final State state, final Value currentValue) {
     switch (currentValue) {
       case start:
-      case canFinish:
+      case packageDeclared:
         state.setCurrentState(Value.finished);
-        state.setDone(true);
         break;
       
       default:
-        super.transform(state, currentValue);
+        state.setError(true);
     }
+    
+    state.setDone(true);
   }
 }

@@ -562,7 +562,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
   
   public Object doReverseAdd(final Object lhs, final Object rhs) {
-  Object result = this.instanceHandler.reverseAdd(lhs, rhs);
+  final Object result = this.instanceHandler.reverseAdd(lhs, rhs);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return this.instanceHandler.getMetaMethodQuick("reversePlus", lhs).call(rhs, lhs);
@@ -1504,7 +1504,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseSubtract(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseSubtract(lhs, rhs);
+    final Object result = this.instanceHandler.reverseSubtract(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseMinus", lhs).call(rhs, lhs);
@@ -2446,7 +2446,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseMultiply(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseMultiply(lhs, rhs);
+    final Object result = this.instanceHandler.reverseMultiply(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseMultiply", lhs).call(rhs, lhs);
@@ -3236,19 +3236,19 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doMultiplyEquals(final BigDecimal lhs, final int rhs) {
-    return doMultiplyEquals((Object)lhs, new NgInt(rhs));
+    return doMultiplyEquals(lhs, new NgInt(rhs));
   }
 
   public Object doMultiplyEquals(final BigDecimal lhs, final long rhs) {
-    return doMultiplyEquals((Object)lhs, new NgLong(rhs));
+    return doMultiplyEquals(lhs, new NgLong(rhs));
   }
 
   public Object doMultiplyEquals(final BigDecimal lhs, final float rhs) {
-    return doMultiplyEquals((Object)lhs, new NgFloat(rhs));
+    return doMultiplyEquals(lhs, new NgFloat(rhs));
   }
 
   public Object doMultiplyEquals(final BigDecimal lhs, final double rhs) {
-    return doMultiplyEquals((Object)lhs, new NgDouble(rhs));
+    return doMultiplyEquals(lhs, new NgDouble(rhs));
   }
 
   public Object doMultiplyEquals(final BigDecimal lhs, final BigInteger rhs) {
@@ -3302,13 +3302,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doMultiplyEquals(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseMultiplyEquals(lhs, rhsObject);
   }
 
   public Object doMultiplyEquals(final Object lhs, final BigDecimal rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseMultiplyEquals(lhs, rhsObject);
   }
@@ -3356,13 +3356,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseMultiplyEquals(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiplyEquals(lhsObject, rhs);
   }
 
   public Object doReverseMultiplyEquals(final BigDecimal lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseMultiplyEquals(lhsObject, rhs);
   }
@@ -3388,7 +3388,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseDivide(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseDivide(lhs, rhs);
+    final Object result = this.instanceHandler.reverseDivide(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseDiv", lhs).call(rhs, lhs);
@@ -3655,31 +3655,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doDivide(final BigInteger lhs, final byte rhs) {
-    return doDivide((Object)lhs, new NgByte(rhs));
+    return doDivide(lhs, new NgByte(rhs));
   }
 
   public Object doDivide(final BigInteger lhs, final char rhs) {
-    return doDivide((Object)lhs, new NgChar(rhs));
+    return doDivide(lhs, new NgChar(rhs));
   }
 
   public Object doDivide(final BigInteger lhs, final short rhs) {
-    return doDivide((Object)lhs, new NgShort(rhs));
+    return doDivide(lhs, new NgShort(rhs));
   }
 
   public Object doDivide(final BigInteger lhs, final int rhs) {
-    return doDivide((Object)lhs, new NgInt(rhs));
+    return doDivide(lhs, new NgInt(rhs));
   }
 
   public Object doDivide(final BigInteger lhs, final long rhs) {
-    return doDivide((Object)lhs, new NgLong(rhs));
+    return doDivide(lhs, new NgLong(rhs));
   }
 
   public Object doDivide(final BigInteger lhs, final float rhs) {
-    return doDivide((Object)lhs, new NgFloat(rhs));
+    return doDivide(lhs, new NgFloat(rhs));
   }
 
   public Object doDivide(final BigInteger lhs, final double rhs) {
-    return doDivide((Object)lhs, new NgDouble(rhs));
+    return doDivide(lhs, new NgDouble(rhs));
   }
 
   public Object doDivide(final BigInteger lhs, final BigInteger rhs) {
@@ -3691,31 +3691,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doDivide(final BigDecimal lhs, final byte rhs) {
-    return doDivide((Object)lhs, new NgByte(rhs));
+    return doDivide(lhs, new NgByte(rhs));
   }
 
   public Object doDivide(final BigDecimal lhs, final char rhs) {
-    return doDivide((Object)lhs, new NgChar(rhs));
+    return doDivide(lhs, new NgChar(rhs));
   }
 
   public Object doDivide(final BigDecimal lhs, final short rhs) {
-    return doDivide((Object)lhs, new NgShort(rhs));
+    return doDivide(lhs, new NgShort(rhs));
   }
 
   public Object doDivide(final BigDecimal lhs, final int rhs) {
-    return doDivide((Object)lhs, new NgInt(rhs));
+    return doDivide(lhs, new NgInt(rhs));
   }
 
   public Object doDivide(final BigDecimal lhs, final long rhs) {
-    return doDivide((Object)lhs, new NgLong(rhs));
+    return doDivide(lhs, new NgLong(rhs));
   }
 
   public Object doDivide(final BigDecimal lhs, final float rhs) {
-    return doDivide((Object)lhs, new NgFloat(rhs));
+    return doDivide(lhs, new NgFloat(rhs));
   }
 
   public Object doDivide(final BigDecimal lhs, final double rhs) {
-    return doDivide((Object)lhs, new NgDouble(rhs));
+    return doDivide(lhs, new NgDouble(rhs));
   }
 
   public Object doDivide(final BigDecimal lhs, final BigInteger rhs) {
@@ -3769,13 +3769,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doDivide(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseDivide(lhs, rhsObject);
   }
 
   public Object doDivide(final Object lhs, final BigDecimal rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseDivide(lhs, rhsObject);
   }
@@ -3823,7 +3823,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseDivide(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivide(lhsObject, rhs);
   }
@@ -4330,7 +4330,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseRemainder(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseRemainder(lhs, rhs);
+    final Object result = this.instanceHandler.reverseRemainder(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseMod", lhs).call(rhs, lhs);
@@ -4840,7 +4840,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseIntegerDivide(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseIntegerDivide(lhs, rhs);
+    final Object result = this.instanceHandler.reverseIntegerDivide(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseIntDiv", lhs).call(rhs, lhs);
@@ -5782,7 +5782,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseAnd(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseAnd(lhs, rhs);
+    final Object result = this.instanceHandler.reverseAnd(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseAnd", lhs).call(rhs, lhs);
@@ -6292,7 +6292,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseOr(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseOr(lhs, rhs);
+    final Object result = this.instanceHandler.reverseOr(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseOr", lhs).call(rhs, lhs);
@@ -6802,7 +6802,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseXor(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseXor(lhs, rhs);
+    final Object result = this.instanceHandler.reverseXor(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseXor", lhs).call(rhs, lhs);
@@ -7313,7 +7313,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseLeftShift(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseLeftShift(lhs, rhs);
+    final Object result = this.instanceHandler.reverseLeftShift(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseLeftShift", lhs).call(rhs, lhs);
@@ -7823,7 +7823,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseArithmeticRightShift(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseArithmeticRightShift(lhs, rhs);
+    final Object result = this.instanceHandler.reverseArithmeticRightShift(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseRightShift", lhs).call(rhs, lhs);
@@ -8333,7 +8333,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseLogicalRightShift(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseLogicalRightShift(lhs, rhs);
+    final Object result = this.instanceHandler.reverseLogicalRightShift(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseRightShiftUnsigned", lhs).call(rhs, lhs);
@@ -8783,7 +8783,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseCompare(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseCompare(lhs, rhs);
+    final Object result = this.instanceHandler.reverseCompare(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseCompare", lhs).call(rhs, lhs);
@@ -9250,7 +9250,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     }
     
     public Object doReverseEquals(final Object lhs, final Object rhs) {
-    Object result = this.instanceHandler.reverseEquals(lhs, rhs);
+    final Object result = this.instanceHandler.reverseEquals(lhs, rhs);
       
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         return this.instanceHandler.getMetaMethodQuick("reverseEquals", lhs).call(rhs, lhs);

@@ -1,4 +1,7 @@
 package ng.compiler.lexer.tokens;
+
+import ng.compiler.parser.State;
+import ng.compiler.parser.State.Value;
 /*
  * Created on 7 Apr 2007
  *
@@ -22,6 +25,15 @@ package ng.compiler.lexer.tokens;
  * @author John
  *
  */
-public class EOLToken extends Token {
-
+public class EOLToken extends SemicolonToken {
+  /* (non-Javadoc)
+   * @see ng.compiler.lexer.tokens.Token#transform(ng.compiler.parser.State, ng.compiler.parser.State.Value)
+   */
+  @Override
+  protected void transform(final State state, final Value currentValue) {
+    switch (currentValue) {
+      case possiblePackageQualifierDot:
+        super.transform(state, currentValue);
+    }
+  }
 }

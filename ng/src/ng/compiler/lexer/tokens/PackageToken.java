@@ -3,7 +3,7 @@ package ng.compiler.lexer.tokens;
 import ng.compiler.parser.State;
 import ng.compiler.parser.State.Value;
 /*
- * Created on 7 Apr 2007
+ * Created on 22 Apr 2007
  *
  * Copyright 2007 John G. Wilson
  *
@@ -25,17 +25,17 @@ import ng.compiler.parser.State.Value;
  * @author John
  *
  */
-public class SemicolonToken extends Token {
+public class PackageToken extends KeywordToken {
   /* (non-Javadoc)
    * @see ng.compiler.lexer.tokens.Token#transform(ng.compiler.parser.State, ng.compiler.parser.State.Value)
    */
   @Override
   protected void transform(final State state, final Value currentValue) {
     switch (currentValue) {
-      case possiblePackageQualifierDot:
-        state.setCurrentState(Value.packageDeclared);
+      case start:
+        state.setCurrentState(Value.expectingPackageName);
         break;
-        
+    
       default:
         super.transform(state, currentValue);
     }

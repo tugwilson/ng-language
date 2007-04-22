@@ -37,7 +37,7 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(Object instance, Object p1, Object p2, Object p3, Object p4) {
+  public Object call(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) {
     super.call(instance, p1, p2, p3, p4);
     
     return instance;
@@ -47,7 +47,7 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(Object instance, Object p1, Object p2, Object p3) {
+  public Object call(final Object instance, final Object p1, final Object p2, final Object p3) {
     super.call(instance, p1, p2, p3);
     
     return instance;
@@ -57,7 +57,7 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(Object instance, Object p1, Object p2) {
+  public Object call(final Object instance, final Object p1, final Object p2) {
     super.call(instance, p1, p2);
     
     return instance;
@@ -67,7 +67,7 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(Object instance, Object p1) {
+  public Object call(final Object instance, final Object p1) {
     super.call(instance, p1);
     
     return instance;
@@ -77,7 +77,7 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object[])
    */
   @Override
-  public Object call(Object instance, Object[] arguments) {
+  public Object call(final Object instance, final Object[] arguments) {
     super.call(instance, arguments);
     
     return instance;
@@ -87,7 +87,7 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object)
    */
   @Override
-  public Object call(Object instance) {
+  public Object call(final Object instance) {
     // TODO Auto-generated method stub
     return super.call(instance);
   }
