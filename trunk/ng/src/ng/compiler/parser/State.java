@@ -1,4 +1,6 @@
 package ng.compiler.parser;
+
+import java.util.Stack;
 /*
  * Created on 16 Apr 2007
  *
@@ -24,12 +26,13 @@ package ng.compiler.parser;
  */
 public class State {
   public enum Value {start, finished,
-                     expectingPackageName, possiblePackageQualifierDot,
-                     packageDeclared};
+                     expectingPackageName, possiblePackageQualifierDot, packageDeclared,
+                     expectingImportName, possibleImportQualifierDot, expectingImportAsName, importDeclared};
   
   private boolean done = false;
   private boolean error = false;
   private Value currentState = Value.start;
+  private Stack<Value> stateStack = new Stack<Value>();
   
   public boolean isDone() {
     return this.done;
@@ -55,4 +58,13 @@ public class State {
     this.currentState = currentState;
   }
   
+  public Value popCurrentState() {
+    this.currentState = this.stateStack.pop();
+    return getCurrentState();
+  }
+  
+  public void pushCurrentState(final Value currentState) {
+    this.stateStack.push(this.currentState);
+    setCurrentState(currentState);
+  }
 }

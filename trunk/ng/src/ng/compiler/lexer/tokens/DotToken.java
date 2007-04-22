@@ -36,6 +36,10 @@ public class DotToken extends Token {
         state.setCurrentState(Value.expectingPackageName);
         break;
     
+      case possibleImportQualifierDot:
+        state.setCurrentState(Value.expectingImportName);
+        break;
+  
       default:
         super.transform(state, currentValue);
     }

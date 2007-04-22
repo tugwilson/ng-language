@@ -36,6 +36,11 @@ public class SemicolonToken extends Token {
         state.setCurrentState(Value.packageDeclared);
         break;
         
+      case possibleImportQualifierDot:
+      case importDeclared:
+        state.popCurrentState();
+        break;
+      
       default:
         super.transform(state, currentValue);
     }
