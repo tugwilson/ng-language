@@ -75,7 +75,7 @@ public class NgLexerTest extends TestCase {
         "instanceof instanceof1  interface interface1 import import1 int int1 in in1 if if1 " +
         "long long1 " +
         "native native1 null null1 new new1 " +
-        "protected protected1 private private1 public public1 " +
+        "protected protected1 package package1 private private1 public public1 " +
         "return return1 " +
         "synchronized synchronized1 strictfp strictfp1 switch switch1 static static1 short short1 super super1 " +
         "threadsafe threadsafe1 transient transient1 throws throws1 throw throw1 this this1 true true1 try try1 " +
@@ -92,7 +92,7 @@ public class NgLexerTest extends TestCase {
         InstanceofToken.class, IdentifierToken.class, InterfaceToken.class, IdentifierToken.class, ImportToken.class, IdentifierToken.class, IntToken.class, IdentifierToken.class, InToken.class, IdentifierToken.class, IfToken.class, IdentifierToken.class,
         LongToken.class, IdentifierToken.class,
         NativeToken.class, IdentifierToken.class, NullToken.class, IdentifierToken.class, NewToken.class, IdentifierToken.class,
-        ProtectedToken.class, IdentifierToken.class, PrivateToken.class, IdentifierToken.class, PublicToken.class, IdentifierToken.class,
+        ProtectedToken.class, IdentifierToken.class, PackageToken.class, IdentifierToken.class, PrivateToken.class, IdentifierToken.class, PublicToken.class, IdentifierToken.class,
         ReturnToken.class, IdentifierToken.class,
         SynchronizedToken.class, IdentifierToken.class, StrictfpToken.class, IdentifierToken.class, SwitchToken.class, IdentifierToken.class, StaticToken.class, IdentifierToken.class, ShortToken.class, IdentifierToken.class, SuperToken.class, IdentifierToken.class,
         ThreadsafeToken.class, IdentifierToken.class, TransientToken.class, IdentifierToken.class, ThrowsToken.class, IdentifierToken.class, ThrowToken.class, IdentifierToken.class, ThisToken.class, IdentifierToken.class, TrueToken.class, IdentifierToken.class, TryToken.class, IdentifierToken.class,
