@@ -27,15 +27,10 @@ import ng.compiler.parser.State.Value;
  */
 public class EOLToken extends SemicolonToken {
   /* (non-Javadoc)
-   * @see ng.compiler.lexer.tokens.Token#transform(ng.compiler.parser.State, ng.compiler.parser.State.Value)
+   * @see ng.compiler.lexer.tokens.SemicolonToken#dontExpect(ng.compiler.parser.State, ng.compiler.parser.State.Value)
    */
   @Override
-  protected void transform(final State state, final Value currentValue) {
-    switch (currentValue) {
-      case possiblePackageQualifierDot:
-      case possibleImportQualifierDot:
-      case importDeclared:
-        super.transform(state, currentValue);
-    }
+  protected void dontExpect(final State state, final Value currentValue) {
+    // Ignore
   }
 }
