@@ -42,7 +42,11 @@ public class SemicolonToken extends Token {
         break;
       
       default:
-        super.transform(state, currentValue);
+        dontExpect(state, currentValue);
     }
+  }
+  
+  protected void dontExpect(final State state, final Value currentValue) {
+    super.transform(state, currentValue);
   }
 }
