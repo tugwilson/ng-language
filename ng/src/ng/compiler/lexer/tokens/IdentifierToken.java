@@ -61,6 +61,14 @@ public class IdentifierToken extends Token {
       case expectingPackageName:
         state.setCurrentState(Value.possiblePackageQualifierDot);
         break;
+                
+      case expectingImportName:
+        state.setCurrentState(Value.possibleImportQualifierDot);
+        break;
+    
+      case expectingImportAsName:
+        state.setCurrentState(Value.importDeclared);
+        break;
     
       default:
         super.transform(state, currentValue);

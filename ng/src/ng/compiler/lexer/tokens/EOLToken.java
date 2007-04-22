@@ -33,6 +33,8 @@ public class EOLToken extends SemicolonToken {
   protected void transform(final State state, final Value currentValue) {
     switch (currentValue) {
       case possiblePackageQualifierDot:
+      case possibleImportQualifierDot:
+      case importDeclared:
         super.transform(state, currentValue);
     }
   }
