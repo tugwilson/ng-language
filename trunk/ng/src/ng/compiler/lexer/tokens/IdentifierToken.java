@@ -22,6 +22,8 @@ import java.io.Reader;
  */
 
 import ng.compiler.lexer.NgLexer;
+import ng.compiler.parser.State;
+import ng.compiler.parser.State.Value;
 
 /**
  * @author John
@@ -48,5 +50,20 @@ public class IdentifierToken extends Token {
     
     reader.reset();
     this.name = buf.toString();
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.compiler.lexer.tokens.Token#transform(ng.compiler.parser.State, ng.compiler.parser.State.Value)
+   */
+  @Override
+  protected void transform(final State state, final Value currentValue) {
+    switch (currentValue) {
+      case expectingPackageName:
+        state.setCurrentState(Value.possiblePackageQualifierDot);
+        break;
+    
+      default:
+        super.transform(state, currentValue);
+    }
   }
 }

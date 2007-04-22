@@ -1,6 +1,5 @@
 package ng.compiler.lexer;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.math.BigDecimal;
@@ -500,6 +499,10 @@ public class NgLexer {
           this.reader.reset();
           this.reader.skip(6);
           return new PrivateToken();
+        } else if (!isIdentifierPartCharacter(value.charAt(6)) && value.startsWith("ackage")) {
+          this.reader.reset();
+          this.reader.skip(6);
+          return new PackageToken();
         } else if (!isIdentifierPartCharacter(value.charAt(5)) && value.startsWith("ublic")) {
           this.reader.reset();
           this.reader.skip(5);
@@ -749,7 +752,7 @@ public class NgLexer {
     }
   }
   
-  private Token parseNumericConstant(int c) throws IOException {
+  private Token parseNumericConstant(final int c) throws IOException {
   final StringBuilder buf = new StringBuilder();
   
     buf.append((char)c);
@@ -800,7 +803,7 @@ public class NgLexer {
           return new BigIntegerLiteralToken(new BigInteger(buf.toString()));
           
         default:
-          reader.reset();
+          this.reader.reset();
           return new IntLiteralToken(Integer.parseInt(buf.toString()));
       }
     }
@@ -849,7 +852,7 @@ public class NgLexer {
           return new BigIntegerLiteralToken(new BigInteger(buf.toString(), 16));
           
         default:
-          reader.reset();
+          this.reader.reset();
           return new IntLiteralToken(Integer.parseInt(buf.toString(), 16));
       }
     }
@@ -888,7 +891,7 @@ public class NgLexer {
           return new BigIntegerLiteralToken(new BigInteger(buf.toString(), 16));
           
         default:
-          reader.reset();
+          this.reader.reset();
           return new IntLiteralToken(Integer.parseInt(buf.toString(), 16));
       }
     }
@@ -935,7 +938,7 @@ public class NgLexer {
           return new DoubleLiteralToken(Double.parseDouble(buf.toString()));
           
         default:
-          reader.reset();          
+          this.reader.reset();          
         case 'g':
         case 'G':
           return new BigDecimalLiteralToken(new BigDecimal(buf.toString()));
@@ -984,7 +987,7 @@ public class NgLexer {
           return new DoubleLiteralToken(Double.parseDouble(buf.toString()));
           
         default:
-          reader.reset();
+          this.reader.reset();
         case 'g':
         case 'G':
           return new BigDecimalLiteralToken(new BigDecimal(buf.toString()));
