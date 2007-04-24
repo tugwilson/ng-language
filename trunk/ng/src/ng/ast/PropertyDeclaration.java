@@ -22,6 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface PropertyDeclaration extends Declaration {
+public interface PropertyDeclaration extends NonLocalDeclaration {
 
 }

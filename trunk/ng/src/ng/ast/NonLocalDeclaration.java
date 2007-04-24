@@ -1,6 +1,6 @@
 package ng.ast;
 /*
- * Created on 23 Apr 2007
+ * Created on 24 Apr 2007
  *
  * Copyright 2007 John G. Wilson
  *
@@ -22,7 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface Throw extends Statement {
-  void setThrowableValue(Expression throwable);
-  Expression getThrowableValue();
+public interface NonLocalDeclaration extends Declaration {
+
 }
