@@ -1,4 +1,7 @@
 package ng.ast;
+
+import ng.ast.util.UnaryOperations;
+
 /*
  * Created on 23 Apr 2007
  *
@@ -23,5 +26,6 @@ package ng.ast;
  *
  */
 public interface UnaryOperation extends Operator {
-
+  void setOperation(UnaryOperations op);
+  void setOperand(Expression operand);
 }
