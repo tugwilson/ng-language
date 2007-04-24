@@ -23,5 +23,5 @@ package ng.ast;
  *
  */
 public interface While extends Statement {
-
+  Statement getBody();
 }

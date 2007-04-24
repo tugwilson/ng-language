@@ -84,6 +84,11 @@ public interface Node {
   /**
    * @return
    */
+  Empty newEmpty();
+  
+  /**
+   * @return
+   */
   FieldDeclaration newFieldDeclaration();
   
   /**
@@ -115,6 +120,11 @@ public interface Node {
    * @return
    */
   LocalDeclaration newLocalDeclaration();
+  
+  /**
+   * @return
+   */
+  MethodCall newMethodCall();
   
   /**
    * @return

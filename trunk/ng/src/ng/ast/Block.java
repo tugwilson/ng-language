@@ -1,4 +1,6 @@
 package ng.ast;
+
+import java.util.List;
 /*
  * Created on 22 Apr 2007
  *
@@ -23,5 +25,6 @@ package ng.ast;
  *
  */
 public interface Block extends Statement {
-
+  void addStatement(Statement statement);
+  List<Statement> getStatements();
 }

@@ -23,5 +23,5 @@ package ng.ast;
  *
  */
 public interface ConcreteMethodDeclaration extends MethodDeclaration {
-
+  Block getBlock();
 }

@@ -1,4 +1,6 @@
 package ng.ast;
+
+import java.util.List;
 /*
  * Created on 23 Apr 2007
  *
@@ -23,5 +25,7 @@ package ng.ast;
  *
  */
 public interface Try extends Statement {
-
+  Block getTryBlock();
+  List<Catch> getCatches();
+  Finally getFinally();
 }

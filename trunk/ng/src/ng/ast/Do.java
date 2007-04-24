@@ -23,5 +23,5 @@ package ng.ast;
  *
  */
 public interface Do extends Statement {
-
+  Statement getBody();
 }
