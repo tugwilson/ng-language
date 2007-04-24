@@ -22,6 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface Case extends Node {
+public interface Case extends Statement {
 
 }

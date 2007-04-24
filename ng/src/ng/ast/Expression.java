@@ -22,6 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface Expression extends Node {
+public interface Expression extends Statement {
 
 }
