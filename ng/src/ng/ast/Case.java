@@ -23,5 +23,4 @@ package ng.ast;
  *
  */
 public interface Case extends Statement {
-
 }

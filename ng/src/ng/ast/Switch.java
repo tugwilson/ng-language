@@ -23,5 +23,5 @@ package ng.ast;
  *
  */
 public interface Switch extends Statement {
-
+  Block getBlock();
 }

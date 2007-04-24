@@ -23,5 +23,6 @@ package ng.ast;
  *
  */
 public interface Closure extends Expression {
+  Block getBlock();
 
 }

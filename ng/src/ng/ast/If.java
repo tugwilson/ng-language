@@ -23,5 +23,6 @@ package ng.ast;
  *
  */
 public interface If extends Statement {
-
+  Statement getTrueStatement();
+  Statement getFalseStatement();
 }
