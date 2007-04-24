@@ -1,6 +1,4 @@
 package ng.ast;
-
-import ng.ast.util.BinaryOperations;
 /*
  * Created on 23 Apr 2007
  *
@@ -24,8 +22,8 @@ import ng.ast.util.BinaryOperations;
  * @author John
  *
  */
-public interface BinaryOperation extends Operator {
-  void setOperation(BinaryOperations op);
-  void setLhs(Expression lhs);
-  void setRhs(Expression Rhs);
+public interface ConditionalExpression extends Operator {
+  void setTest(Expression test);
+  void setTrueValue(Expression trueValue);
+  void setFalseValue(Expression falseValue);
 }

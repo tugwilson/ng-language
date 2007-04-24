@@ -1,8 +1,6 @@
-package ng.ast;
-
-import ng.ast.util.BinaryOperations;
+package ng.ast.util;
 /*
- * Created on 23 Apr 2007
+ * Created on 24 Apr 2007
  *
  * Copyright 2007 John G. Wilson
  *
@@ -24,8 +22,9 @@ import ng.ast.util.BinaryOperations;
  * @author John
  *
  */
-public interface BinaryOperation extends Operator {
-  void setOperation(BinaryOperations op);
-  void setLhs(Expression lhs);
-  void setRhs(Expression Rhs);
+public enum BinaryOperations {
+  plus, minus, mutiply, divide, integerDivide, remainderDivide,
+  power, or, and, xor, leftShift, rightShift, unsignedRightShift,
+  equals, notEquals, compare, greaterThan, lessThan,
+  greaterThanOrEquals, lessThanOrEquals, as, instanceOf
 }

@@ -64,6 +64,11 @@ public interface Node {
   /**
    * @return
    */
+  ConditionalExpression newConditionalExpression();
+  
+  /**
+   * @return
+   */
   Constructor newConstructor();
   
   /**
@@ -155,11 +160,6 @@ public interface Node {
    * @return
    */
   Synchronized newSynchronized();
-  
-  /**
-   * @return
-   */
-  TernaryOperation newTernaryOperation();
   
   /**
    * @return

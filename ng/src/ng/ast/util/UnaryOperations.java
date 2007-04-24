@@ -1,6 +1,6 @@
-package ng.ast;
+package ng.ast.util;
 /*
- * Created on 23 Apr 2007
+ * Created on 24 Apr 2007
  *
  * Copyright 2007 John G. Wilson
  *
@@ -22,6 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface TernaryOperation extends Operator {
-
+public enum UnaryOperations {
+  plus, munis, preIncrement, preDecrement, postIncrement, postDecrement, complement, not
 }

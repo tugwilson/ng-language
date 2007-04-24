@@ -114,6 +114,14 @@ public class Node implements ng.ast.Node {
   }
 
   /* (non-Javadoc)
+   * @see ng.ast.Node#newConditionalExpression ()
+   */
+  public ConditionalExpression newConditionalExpression () {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
    * @see ng.ast.Node#newConstructor()
    */
   public Constructor newConstructor() {
@@ -261,14 +269,6 @@ public class Node implements ng.ast.Node {
    * @see ng.ast.Node#newSynchronized()
    */
   public Synchronized newSynchronized() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  /* (non-Javadoc)
-   * @see ng.ast.Node#newTernaryOperation()
-   */
-  public TernaryOperation newTernaryOperation() {
     // TODO Auto-generated method stub
     return null;
   }
