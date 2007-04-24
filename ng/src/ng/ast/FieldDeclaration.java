@@ -22,6 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface FieldDeclaration extends Declaration {
+public interface FieldDeclaration extends NonLocalDeclaration {
 
 }

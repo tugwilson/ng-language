@@ -22,6 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface MethodDeclaration extends Declaration {
-
+public interface MethodDeclaration extends NonLocalDeclaration {
+  void addParameter(ParameterDeclaration parameter);
 }

@@ -23,5 +23,7 @@ package ng.ast;
  *
  */
 public interface Synchronized extends Statement {
-
+  void setSynchronizedExpression(Expression expression);
+  Expression getSynchronizedExpression();
+  Block getSynchronizedBlock();
 }

@@ -22,6 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface ClassDeclaration extends Declaration {
+public interface ClassDeclaration extends NonLocalDeclaration {
 
 }
