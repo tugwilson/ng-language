@@ -5,7 +5,17 @@ package ng.ast;
  * @author John
  *
  */
-public interface Node {
+public interface Node {  
+  /**
+   * @return
+   */
+  AbstractMethodDeclaration newAbstractMethodDeclaration();
+  
+  /**
+   * @return
+   */
+  AbstractPropertyDeclaration newAbstractPropertyDeclaration();
+  
   /**
    * @return
    */
@@ -40,6 +50,16 @@ public interface Node {
    * @return
    */
   Closure newClosure();
+  
+  /**
+   * @return
+   */
+  ConcreteMethodDeclaration newConcreteMethodDeclaration();
+  
+  /**
+   * @return
+   */
+  ConcretePropertyDeclaration newConcretePropertyDeclaration();
   
   /**
    * @return
@@ -99,22 +119,12 @@ public interface Node {
   /**
    * @return
    */
-  Method newMethod();
-  
-  /**
-   * @return
-   */
   NumericValue newNumericValue();
   
   /**
    * @return
    */
   ParameterDeclaration newParameterDeclaration();
-  
-  /**
-   * @return
-   */
-  PropertyDeclaration newPropertyDeclaration();
   
   /**
    * @return
@@ -129,7 +139,7 @@ public interface Node {
   /**
    * @return
    */
-  SwitchStatement newSwitchStatement();
+  Switch newSwitch();
   
   /**
    * @return

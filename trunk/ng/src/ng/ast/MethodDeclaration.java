@@ -22,6 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface ParameterDeclaration extends LocalDeclaration {
+public interface MethodDeclaration extends Declaration {
 
 }

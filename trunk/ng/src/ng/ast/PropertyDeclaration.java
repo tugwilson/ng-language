@@ -1,6 +1,6 @@
 package ng.ast;
 /*
- * Created on 22 Apr 2007
+ * Created on 23 Apr 2007
  *
  * Copyright 2007 John G. Wilson
  *
@@ -22,6 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface PropertyDeclaration extends FieldDeclaration {
+public interface PropertyDeclaration extends Declaration {
 
 }
