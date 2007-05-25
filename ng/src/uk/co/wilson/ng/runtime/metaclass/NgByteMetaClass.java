@@ -3317,5 +3317,13 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   public Object doReverseGreaterThanOrEquals(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doGreaterThanOrEquals(lhs, ((NgByte)rhs).getByteValue());
   }
+  
+  @Override
+  public Object doAsType(final Object instance, final Class type) {
+    
+    if (type == byte.class) return instance;
+    
+    return super.doAsType(instance, type);
+  }
 
 }

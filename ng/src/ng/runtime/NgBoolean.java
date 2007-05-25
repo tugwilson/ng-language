@@ -26,6 +26,10 @@ public class NgBoolean extends NgBaseObject {
   public static final NgBoolean FALSE = new NgBoolean(false);
   public static final RuntimeMetaClass ngMetaClass = NgSystem.ngBooleanMetaClass;
   
+  public static NgBoolean valueOf(final boolean value) {
+    return (value) ? TRUE : FALSE;
+  }
+  
   private final boolean value;
 
   private NgBoolean(final boolean value) {

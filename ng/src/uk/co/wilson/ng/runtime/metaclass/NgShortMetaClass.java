@@ -3312,5 +3312,12 @@ class NgShortInternalMetaClass extends InternalMetaClassImpl {
   public Object doReverseGreaterThanOrEquals(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doGreaterThanOrEquals(lhs, ((NgShort)rhs).getShortValue());
   }
-
+  
+  @Override
+  public Object doAsType(final Object instance, final Class type) {
+    
+    if (type == short.class) return instance;
+    
+    return super.doAsType(instance, type);
+  }
 }

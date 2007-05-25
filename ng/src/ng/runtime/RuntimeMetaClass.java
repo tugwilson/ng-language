@@ -201,6 +201,54 @@ public interface RuntimeMetaClass extends MetaClass {
    * @param instance
    * @return
    */
+  byte asByte(Object instance);
+  
+  /**
+   * @param instance
+   * @return
+   */
+  char asChar(Object instance);
+  
+  /**
+   * @param instance
+   * @return
+   */
+  short asShort(Object instance);
+  
+  /**
+   * @param instance
+   * @return
+   */
+  int asInt(Object instance);
+  
+  /**
+   * @param instance
+   * @return
+   */
+  long asLong(Object instance);
+  
+  /**
+   * @param instance
+   * @return
+   */
+  float asFloat(Object instance);
+  
+  /**
+   * @param instance
+   * @return
+   */
+  double asDouble(Object instance);
+  
+  /**
+   * @param instance
+   * @return
+   */
+  boolean asBoolean(Object instance);
+   
+  /**
+   * @param instance
+   * @return
+   */
   Object complement(int instance);
   
   /**

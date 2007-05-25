@@ -24,6 +24,10 @@ import ng.lang.NgSystem;
 public class NgLong extends NgBaseObject {
   public static final RuntimeMetaClass ngMetaClass = NgSystem.ngLongMetaClass;
   
+  public static NgLong valueOf(final long value) {
+    return new NgLong(value);
+  }
+  
   private final long value;
 
   public NgLong(final long value) {

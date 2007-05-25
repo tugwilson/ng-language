@@ -24,6 +24,10 @@ import ng.lang.NgSystem;
 public class NgFloat extends NgBaseObject {
   public static final RuntimeMetaClass ngMetaClass = NgSystem.ngFloatMetaClass;
   
+  public static NgFloat valueOf(final float value) {
+    return new NgFloat(value);
+  }
+  
   private final float value;
 
   public NgFloat(final float value) {

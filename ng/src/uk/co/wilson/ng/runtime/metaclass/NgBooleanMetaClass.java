@@ -49,4 +49,12 @@ class NgBooleanInternalMetaClass extends InternalMetaClassImpl {
   public Object doNot(final Object instance) {
     return (instance == NgBoolean.TRUE) ? NgBoolean.FALSE : NgBoolean.TRUE;
   }
+  
+  @Override
+  public Object doAsType(final Object instance, final Class type) {
+    
+    if (type == boolean.class) return instance;
+    
+    return super.doAsType(instance, type);
+  }
 }

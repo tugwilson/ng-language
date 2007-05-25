@@ -2230,5 +2230,12 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
   public Object doReverseGreaterThanOrEquals(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doGreaterThanOrEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
-
+  
+  @Override
+  public Object doAsType(final Object instance, final Class type) {
+    
+    if (type == float.class) return instance;
+    
+    return super.doAsType(instance, type);
+  }
 }
