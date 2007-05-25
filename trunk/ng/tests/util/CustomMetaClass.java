@@ -19297,6 +19297,70 @@ class CustomMetaClass implements RuntimeMetaClass {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asBoolean(java.lang.Object)
+   */
+  public boolean asBoolean(Object instance) {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asByte(java.lang.Object)
+   */
+  public byte asByte(Object instance) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asChar(java.lang.Object)
+   */
+  public char asChar(Object instance) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asDouble(java.lang.Object)
+   */
+  public double asDouble(Object instance) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asFloat(java.lang.Object)
+   */
+  public float asFloat(Object instance) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asInt(java.lang.Object)
+   */
+  public int asInt(Object instance) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asLong(java.lang.Object)
+   */
+  public long asLong(Object instance) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asShort(java.lang.Object)
+   */
+  public short asShort(Object instance) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#call(java.lang.Object, java.lang.Object[])
    */
   public Object call(final Object instance, final Object[] arguments) {

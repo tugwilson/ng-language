@@ -24,6 +24,10 @@ import ng.lang.NgSystem;
 public class NgChar extends NgBaseObject {
   public static final RuntimeMetaClass ngMetaClass = NgSystem.ngCharMetaClass;
   
+  public static NgChar valueOf(final char value) {
+    return new NgChar(value);
+  }
+  
   private final char value;
 
   public NgChar(final char value) {

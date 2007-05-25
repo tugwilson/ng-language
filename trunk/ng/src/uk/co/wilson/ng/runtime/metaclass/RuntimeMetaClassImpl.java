@@ -25,9 +25,7 @@ import java.math.BigInteger;
 
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
-import ng.runtime.InternalMetaClass;
-import ng.runtime.MetaClass;
-import ng.runtime.RuntimeMetaClass;
+import ng.runtime.*;
 import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 public class RuntimeMetaClassImpl implements RuntimeMetaClass {
@@ -723,6 +721,78 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to " + type.getClass().getName());
 
     return result;
+  }
+
+  public byte asByte(final Object instance) {
+  final Object result = this.internalMetaClass.doAsType(instance, byte.class);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to byte");
+
+    return ((NgByte)result).getByteValue();
+  }
+
+  public char asChar(final Object instance) {
+  final Object result = this.internalMetaClass.doAsType(instance, char.class);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to char");
+
+    return ((NgChar)result).getCharValue();
+  }
+
+  public short asShort(final Object instance) {
+  final Object result = this.internalMetaClass.doAsType(instance, short.class);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to short");
+
+    return ((NgShort)result).getShortValue();
+  }
+
+  public int asInt(final Object instance) {
+  final Object result = this.internalMetaClass.doAsType(instance, int.class);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to int");
+
+    return ((NgInt)result).getIntValue();
+  }
+
+  public long asLong(final Object instance) {
+  final Object result = this.internalMetaClass.doAsType(instance, long.class);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to long");
+
+    return ((NgLong)result).getLongValue();
+  }
+
+  public float asFloat(final Object instance) {
+  final Object result = this.internalMetaClass.doAsType(instance, float.class);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to float");
+
+    return ((NgFloat)result).getFloatValue();
+  }
+
+  public double asDouble(final Object instance) {
+  final Object result = this.internalMetaClass.doAsType(instance, double.class);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to double");
+
+    return ((NgDouble)result).getDoubleValue();
+  }
+
+  public boolean asBoolean(final Object instance) {
+  final Object result = this.internalMetaClass.doAsType(instance, boolean.class);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to boolean");
+
+    return ((NgBoolean)result).getBooleanValue();
   }
 
   public Object getAt(final Object instance, final Object index) {

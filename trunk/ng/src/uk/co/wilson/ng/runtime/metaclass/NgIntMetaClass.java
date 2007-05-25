@@ -3307,5 +3307,12 @@ class NgIntInternalMetaClass extends InternalMetaClassImpl {
   public Object doReverseGreaterThanOrEquals(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doGreaterThanOrEquals(lhs, ((NgInt)rhs).getIntValue());
   }
-
+  
+  @Override
+  public Object doAsType(final Object instance, final Class type) {
+    
+    if (type == int.class) return instance;
+    
+    return super.doAsType(instance, type);
+  }
 }

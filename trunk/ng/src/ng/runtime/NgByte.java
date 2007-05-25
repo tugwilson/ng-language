@@ -23,6 +23,10 @@ import ng.lang.NgSystem;
 public class NgByte extends NgBaseObject {
   public static final RuntimeMetaClass ngMetaClass = NgSystem.ngByteMetaClass;
   
+  public static NgByte valueOf(final byte value) {
+    return new NgByte(value);
+  }
+  
   private final byte value;
 
   public NgByte(final byte value) {

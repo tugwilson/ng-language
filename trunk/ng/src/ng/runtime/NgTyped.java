@@ -3601,6 +3601,62 @@ private final RuntimeMetaClass delegate;
     return this.delegate.getRuntimeMetaClass().asType(this.instance, type);
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asBoolean(java.lang.Object)
+   */
+  public boolean asBoolean(final Object instance) {
+    return this.delegate.getRuntimeMetaClass().asBoolean(this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asByte(java.lang.Object)
+   */
+  public byte asByte(final Object instance) {
+    return this.delegate.getRuntimeMetaClass().asByte(this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asChar(java.lang.Object)
+   */
+  public char asChar(final Object instance) {
+    return this.delegate.getRuntimeMetaClass().asChar(this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asDouble(java.lang.Object)
+   */
+  public double asDouble(final Object instance) {
+    return this.delegate.getRuntimeMetaClass().asDouble(this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asFloat(java.lang.Object)
+   */
+  public float asFloat(final Object instance) {
+    return this.delegate.getRuntimeMetaClass().asFloat(this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asInt(java.lang.Object)
+   */
+  public int asInt(final Object instance) {
+    return this.delegate.getRuntimeMetaClass().asInt(this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asLong(java.lang.Object)
+   */
+  public long asLong(final Object instance) {
+    return this.delegate.getRuntimeMetaClass().asLong(this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#asShort(java.lang.Object)
+   */
+  public short asShort(final Object instance) {
+    return this.delegate.getRuntimeMetaClass().asShort(this.instance);
+  }
+
   /**
    * @param instance
    * @param p1

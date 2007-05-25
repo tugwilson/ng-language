@@ -24,6 +24,10 @@ import ng.lang.NgSystem;
 public class NgShort extends NgBaseObject {
   public static final RuntimeMetaClass ngMetaClass = NgSystem.ngShortMetaClass;
   
+  public static NgShort valueOf(final short value) {
+    return new NgShort(value);
+  }
+  
   private final short value;
 
   public NgShort(final short value) {

@@ -26,6 +26,15 @@ public class NgInt extends NgBaseObject {
   public static final NgInt MINUS_ONE = new NgInt(-1);
   public static final NgInt ZERO = new NgInt(0);
   public static final NgInt ONE = new NgInt(1);
+  
+  public static NgInt valueOf(final int value) {
+    switch (value) {
+    case -1: return MINUS_ONE;
+    case  0: return ZERO;
+    case  1: return ONE;
+    default: return new NgInt(value);
+    }
+  }
 
   private final int value;
 

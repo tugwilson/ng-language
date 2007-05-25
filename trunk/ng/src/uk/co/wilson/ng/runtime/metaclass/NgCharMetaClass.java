@@ -3316,5 +3316,12 @@ class NgCharInternalMetaClass extends InternalMetaClassImpl {
   public Object doReverseGreaterThanOrEquals(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doGreaterThanOrEquals(lhs, ((NgChar)rhs).getCharValue());
   }
-
+  
+  @Override
+  public Object doAsType(final Object instance, final Class type) {
+    
+    if (type == char.class) return instance;
+    
+    return super.doAsType(instance, type);
+  }
 }

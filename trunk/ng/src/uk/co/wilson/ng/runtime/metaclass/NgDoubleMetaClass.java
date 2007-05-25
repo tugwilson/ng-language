@@ -2225,5 +2225,12 @@ class NgDoubleInternalMetaClass extends InternalMetaClassImpl {
   public Object doReverseGreaterThanOrEquals(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doGreaterThanOrEquals(lhs, ((NgDouble)rhs).getDoubleValue());
   }
-
+  
+  @Override
+  public Object doAsType(final Object instance, final Class type) {
+    
+    if (type == double.class) return instance;
+    
+    return super.doAsType(instance, type);
+  }
 }

@@ -23,6 +23,11 @@ import ng.lang.NgSystem;
 
 public class NgDouble extends NgBaseObject {
   public static final RuntimeMetaClass ngMetaClass = NgSystem.ngDoubleMetaClass;
+  
+  public static NgDouble valueOf(final double value) {
+    return new NgDouble(value);
+  }
+  
   private final double value;
 
   public NgDouble(final double value) {
