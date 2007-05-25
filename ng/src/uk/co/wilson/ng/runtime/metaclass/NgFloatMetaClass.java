@@ -67,7 +67,7 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doUnaryPlus(final float instance) {
-    return new NgFloat(instance);
+    return NgFloat.valueOf(instance);
   }
   
   @Override
@@ -77,52 +77,52 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
   
   @Override
   public Object doUnaryMinus(final float instance) {
-    return new NgFloat(-instance);
+    return NgFloat.valueOf(-instance);
   }
   
   @Override
   public Object doUnaryMinus(final Object instance) {
-    return new NgFloat(-((NgFloat)instance).getFloatValue());
+    return NgFloat.valueOf(-((NgFloat)instance).getFloatValue());
   }
 
   @Override
   public Object doPostfixIncrement(final float instance) {
-    return new NgFloat(instance + 1);
+    return NgFloat.valueOf(instance + 1);
   }
 
   @Override
   public Object doPostfixIncrement(final Object instance) {
-    return new NgFloat(((NgFloat)instance).getFloatValue() + 1);
+    return NgFloat.valueOf(((NgFloat)instance).getFloatValue() + 1);
   }
 
   @Override
   public Object doPostfixDecrement(final float instance) {
-    return new NgFloat(instance - 1);
+    return NgFloat.valueOf(instance - 1);
   }
 
   @Override
   public Object doPostfixDecrement(final Object instance) {
-    return new NgFloat(((NgFloat)instance).getFloatValue() - 1);
+    return NgFloat.valueOf(((NgFloat)instance).getFloatValue() - 1);
   }
 
   @Override
   public Object doPrefixIncrement(final float instance) {
-    return new NgFloat(instance + 1);
+    return NgFloat.valueOf(instance + 1);
   }
 
   @Override
   public Object doPrefixIncrement(final Object instance) {
-    return new NgFloat(((NgFloat)instance).getFloatValue() + 1);
+    return NgFloat.valueOf(((NgFloat)instance).getFloatValue() + 1);
   }
 
   @Override
   public Object doPrefixDecrement(final float instance) {
-    return new NgFloat(instance - 1);
+    return NgFloat.valueOf(instance - 1);
   }
 
   @Override
   public Object doPrefixDecrement(final Object instance) {
-    return new NgFloat(((NgFloat)instance).getFloatValue() - 1);
+    return NgFloat.valueOf(((NgFloat)instance).getFloatValue() - 1);
   }
 
   @Override
@@ -132,42 +132,42 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doAdd(final float lhs, final byte rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final float lhs, final char rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final float lhs, final short rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final float lhs, final int rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final float lhs, final long rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final float lhs, final float rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final float lhs, final double rhs) {
-    return new NgDouble(lhs + rhs);
+    return NgDouble.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final float lhs, final BigInteger rhs) {
-    return new NgFloat(lhs + rhs.floatValue());
+    return NgFloat.valueOf(lhs + rhs.floatValue());
   }
 
   @Override
@@ -272,42 +272,42 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doAddEquals(final float lhs, final byte rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final float lhs, final char rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final float lhs, final short rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final float lhs, final int rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final float lhs, final long rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final float lhs, final float rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final float lhs, final double rhs) {
-    return new NgDouble(lhs + rhs);
+    return NgDouble.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final float lhs, final BigInteger rhs) {
-    return new NgFloat(lhs + rhs.floatValue());
+    return NgFloat.valueOf(lhs + rhs.floatValue());
   }
 
   @Override
@@ -412,42 +412,42 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doSubtract(final float lhs, final byte rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final float lhs, final char rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final float lhs, final short rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final float lhs, final int rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final float lhs, final long rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final float lhs, final float rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final float lhs, final double rhs) {
-    return new NgDouble(lhs - rhs);
+    return NgDouble.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final float lhs, final BigInteger rhs) {
-    return new NgFloat(lhs - rhs.floatValue());
+    return NgFloat.valueOf(lhs - rhs.floatValue());
   }
 
   @Override
@@ -552,42 +552,42 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doSubtractEquals(final float lhs, final byte rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final float lhs, final char rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final float lhs, final short rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final float lhs, final int rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final float lhs, final long rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final float lhs, final float rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final float lhs, final double rhs) {
-    return new NgDouble(lhs - rhs);
+    return NgDouble.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final float lhs, final BigInteger rhs) {
-    return new NgFloat(lhs - rhs.floatValue());
+    return NgFloat.valueOf(lhs - rhs.floatValue());
   }
 
   @Override
@@ -692,42 +692,42 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doMultiply(final float lhs, final byte rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final float lhs, final char rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final float lhs, final short rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final float lhs, final int rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final float lhs, final long rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final float lhs, final float rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final float lhs, final double rhs) {
-    return new NgDouble(lhs * rhs);
+    return NgDouble.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final float lhs, final BigInteger rhs) {
-    return new NgFloat(lhs * rhs.floatValue());
+    return NgFloat.valueOf(lhs * rhs.floatValue());
   }
 
   @Override
@@ -832,42 +832,42 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doMultiplyEquals(final float lhs, final byte rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final float lhs, final char rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final float lhs, final short rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final float lhs, final int rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final float lhs, final long rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final float lhs, final float rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final float lhs, final double rhs) {
-    return new NgDouble(lhs * rhs);
+    return NgDouble.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final float lhs, final BigInteger rhs) {
-    return new NgFloat(lhs * rhs.floatValue());
+    return NgFloat.valueOf(lhs * rhs.floatValue());
   }
 
   @Override
@@ -972,42 +972,42 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doDivide(final float lhs, final byte rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final float lhs, final char rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final float lhs, final short rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final float lhs, final int rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final float lhs, final long rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final float lhs, final float rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final float lhs, final double rhs) {
-    return new NgDouble(lhs / rhs);
+    return NgDouble.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final float lhs, final BigInteger rhs) {
-    return new NgFloat(lhs / rhs.floatValue());
+    return NgFloat.valueOf(lhs / rhs.floatValue());
   }
 
   @Override
@@ -1102,35 +1102,35 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doDivideEquals(final float lhs, final byte rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final float lhs, final char rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final float lhs, final short rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final float lhs, final int rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final float lhs, final long rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final float lhs, final float rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final float lhs, final double rhs) {
-    return new NgDouble(lhs / rhs);
+    return NgDouble.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final float lhs, final BigInteger rhs) {
-    return new NgFloat(lhs / rhs.floatValue());
+    return NgFloat.valueOf(lhs / rhs.floatValue());
   }
 
   public Object doDivideEquals(final float lhs, final BigDecimal rhs) {
@@ -1214,31 +1214,31 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doIntegerDivide(final float lhs, final byte rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivide(final float lhs, final char rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivide(final float lhs, final short rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivide(final float lhs, final int rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivide(final float lhs, final long rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivide(final float lhs, final float rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivide(final float lhs, final double rhs) {
-    return new NgDouble((float)Math.floor(lhs / rhs));
+    return NgDouble.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivide(final float lhs, final BigInteger rhs) {
@@ -1326,31 +1326,31 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doIntegerDivideEquals(final float lhs, final byte rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivideEquals(final float lhs, final char rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivideEquals(final float lhs, final short rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivideEquals(final float lhs, final int rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivideEquals(final float lhs, final long rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivideEquals(final float lhs, final float rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivideEquals(final float lhs, final double rhs) {
-    return new NgDouble((float)Math.floor(lhs / rhs));
+    return NgDouble.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivideEquals(final float lhs, final BigInteger rhs) {
@@ -1480,11 +1480,11 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doCompare(final float lhs, final BigInteger rhs) {
-    return new NgInt(new BigDecimal(lhs).compareTo(new BigDecimal(rhs)));
+    return NgInt.valueOf(new BigDecimal(lhs).compareTo(new BigDecimal(rhs)));
   }
 
   public Object doCompare(final float lhs, final BigDecimal rhs) {
-    return new NgInt(new BigDecimal(lhs).compareTo(rhs));
+    return NgInt.valueOf(new BigDecimal(lhs).compareTo(rhs));
   }
 
   public Object doCompare(final Object lhs, final byte rhs) {

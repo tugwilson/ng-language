@@ -24,7 +24,7 @@ public class GetFloatFieldMetaMethod extends GetUntypedFieldMetaMethod {
   @Override
   public Object call(final Object instance) {
     try {
-      return new NgFloat(this.field.getFloat(instance));
+      return NgFloat.valueOf(this.field.getFloat(instance));
     } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     } catch (final IllegalAccessException e) {

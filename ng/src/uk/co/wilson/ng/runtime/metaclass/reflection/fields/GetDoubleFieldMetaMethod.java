@@ -24,7 +24,7 @@ public class GetDoubleFieldMetaMethod extends GetUntypedFieldMetaMethod {
   @Override
   public Object call(final Object instance) {
     try {
-      return new NgDouble(this.field.getDouble(instance));
+      return NgDouble.valueOf(this.field.getDouble(instance));
     } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     } catch (final IllegalAccessException e) {

@@ -30,7 +30,7 @@ public class NgLong extends NgBaseObject {
   
   private final long value;
 
-  public NgLong(final long value) {
+  private NgLong(final long value) {
     super(ngMetaClass);
     this.value = value;
   }

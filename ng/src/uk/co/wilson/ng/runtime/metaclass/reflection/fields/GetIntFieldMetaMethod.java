@@ -24,7 +24,7 @@ public class GetIntFieldMetaMethod extends GetUntypedFieldMetaMethod {
   @Override
   public Object call(final Object instance) {
     try {
-      return new NgInt(this.field.getInt(instance));
+      return NgInt.valueOf(this.field.getInt(instance));
     } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     } catch (final IllegalAccessException e) {

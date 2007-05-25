@@ -26,7 +26,7 @@ public class CharMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgChar(((Character)result).charValue());
+    return NgChar.valueOf(((Character)result).charValue());
   }
 
   /* (non-Javadoc)
@@ -38,7 +38,7 @@ public class CharMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgChar(((Character)result).charValue());
+    return NgChar.valueOf(((Character)result).charValue());
   }
 
   /* (non-Javadoc)
@@ -50,7 +50,7 @@ public class CharMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgChar(((Character)result).charValue());
+    return NgChar.valueOf(((Character)result).charValue());
   }
 
   /* (non-Javadoc)
@@ -62,7 +62,7 @@ public class CharMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgChar(((Character)result).charValue());
+    return NgChar.valueOf(((Character)result).charValue());
   }
 
   /* (non-Javadoc)
@@ -74,7 +74,7 @@ public class CharMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgChar(((Character)result).charValue());
+    return NgChar.valueOf(((Character)result).charValue());
   }
 
   /* (non-Javadoc)
@@ -86,6 +86,6 @@ public class CharMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgChar(((Character)result).charValue());
+    return NgChar.valueOf(((Character)result).charValue());
   }
 }

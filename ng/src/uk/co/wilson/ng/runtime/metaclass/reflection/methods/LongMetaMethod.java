@@ -26,7 +26,7 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgLong(((Long)result).longValue());
+    return NgLong.valueOf(((Long)result).longValue());
   }
 
   /* (non-Javadoc)
@@ -38,7 +38,7 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgLong(((Long)result).longValue());
+    return NgLong.valueOf(((Long)result).longValue());
   }
 
   /* (non-Javadoc)
@@ -50,7 +50,7 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgLong(((Long)result).longValue());
+    return NgLong.valueOf(((Long)result).longValue());
   }
 
   /* (non-Javadoc)
@@ -62,7 +62,7 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgLong(((Long)result).longValue());
+    return NgLong.valueOf(((Long)result).longValue());
   }
 
   /* (non-Javadoc)
@@ -74,7 +74,7 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgLong(((Long)result).longValue());
+    return NgLong.valueOf(((Long)result).longValue());
   }
 
   /* (non-Javadoc)
@@ -86,6 +86,6 @@ public class LongMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgLong(((Long)result).longValue());
+    return NgLong.valueOf(((Long)result).longValue());
   }
 }

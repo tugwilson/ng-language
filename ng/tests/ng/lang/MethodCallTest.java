@@ -202,7 +202,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value == (char)0);
       
       assertTrue(o.value == (char)0);
-      assertTrue(((NgChar)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", new NgChar((char)1))).getCharValue() == (char)1);
+      assertTrue(((NgChar)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", NgChar.valueOf((char)1))).getCharValue() == (char)1);
       assertTrue(o.value == (char)1);
       
       assertTrue(o.value1 == (char)0);
@@ -210,7 +210,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (char)0);
       
       assertTrue(o.value1 == (char)0);
-      assertTrue(((NgChar)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", new NgChar((char)1))).getCharValue() == (char)1);
+      assertTrue(((NgChar)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", NgChar.valueOf((char)1))).getCharValue() == (char)1);
       assertTrue(o.value1 == (char)1);
       
       o.value1 = (char)0;
@@ -219,7 +219,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (char)0);
       
       assertTrue(o.value1 == (char)0);
-      assertTrue(((NgChar)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", new NgChar((char)1))).getCharValue() == (char)1);
+      assertTrue(((NgChar)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", NgChar.valueOf((char)1))).getCharValue() == (char)1);
       assertTrue(o.value1 == (char)1);
     }
   
@@ -255,7 +255,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value == (byte)0);
       
       assertTrue(o.value == (byte)0);
-      assertTrue(((NgByte)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", new NgByte((byte)1))).getByteValue() == (byte)1);
+      assertTrue(((NgByte)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", NgByte.valueOf((byte)1))).getByteValue() == (byte)1);
       assertTrue(o.value == (byte)1);
       
       assertTrue(o.value1 == (byte)0);
@@ -263,7 +263,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (byte)0);
       
       assertTrue(o.value1 == (byte)0);
-      assertTrue(((NgByte)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", new NgByte((byte)1))).getByteValue() == (byte)1);
+      assertTrue(((NgByte)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", NgByte.valueOf((byte)1))).getByteValue() == (byte)1);
       assertTrue(o.value1 == (byte)1);
       
       o.value1 = (byte)0;
@@ -272,7 +272,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (byte)0);
       
       assertTrue(o.value1 == (byte)0);
-      assertTrue(((NgByte)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", new NgByte((byte)1))).getByteValue() == (byte)1);
+      assertTrue(((NgByte)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", NgByte.valueOf((byte)1))).getByteValue() == (byte)1);
       assertTrue(o.value1 == (byte)1);
     }
   
@@ -308,7 +308,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value == (short)0);
       
       assertTrue(o.value == (short)0);
-      assertTrue(((NgShort)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", new NgShort((short)1))).getShortValue() == (short)1);
+      assertTrue(((NgShort)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", NgShort.valueOf((short)1))).getShortValue() == (short)1);
       assertTrue(o.value == (short)1);
       
       assertTrue(o.value1 == (short)0);
@@ -316,7 +316,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (short)0);
       
       assertTrue(o.value1 == (short)0);
-      assertTrue(((NgShort)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", new NgShort((short)1))).getShortValue() == (short)1);
+      assertTrue(((NgShort)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", NgShort.valueOf((short)1))).getShortValue() == (short)1);
       assertTrue(o.value1 == (short)1);
       
       o.value1 = (short)0;
@@ -325,7 +325,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (short)0);
       
       assertTrue(o.value1 == (short)0);
-      assertTrue(((NgShort)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", new NgShort((short)1))).getShortValue() == (short)1);
+      assertTrue(((NgShort)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", NgShort.valueOf((short)1))).getShortValue() == (short)1);
       assertTrue(o.value1 == (short)1);
     }
   
@@ -361,7 +361,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value == (int)0);
       
       assertTrue(o.value == (int)0);
-      assertTrue(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", new NgInt((int)1))).getIntValue() ==  (int)1);
+      assertTrue(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", NgInt.valueOf((int)1))).getIntValue() ==  (int)1);
       assertTrue(o.value == (int)1);
       
       assertTrue(o.value1 == (int)0);
@@ -369,7 +369,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (int)0);
       
       assertTrue(o.value1 == (int)0);
-      assertTrue(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", new NgInt((int)1))).getIntValue() ==  (int)1);
+      assertTrue(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", NgInt.valueOf((int)1))).getIntValue() ==  (int)1);
       assertTrue(o.value1 == (int)1);
       
       o.value1 = (int)0;
@@ -378,7 +378,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (int)0);
       
       assertTrue(o.value1 == (int)0);
-      assertTrue(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", new NgInt((int)1))).getIntValue() ==  (int)1);
+      assertTrue(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", NgInt.valueOf((int)1))).getIntValue() ==  (int)1);
       assertTrue(o.value1 == (int)1);
  }
   
@@ -414,7 +414,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value == (long)0);
       
       assertTrue(o.value == (long)0);
-      assertTrue(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", new NgLong((long)1))).getLongValue() == (long)1);
+      assertTrue(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", NgLong.valueOf((long)1))).getLongValue() == (long)1);
       assertTrue(o.value == (long)1);
       
       assertTrue(o.value1 == (long)0);
@@ -422,7 +422,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (long)0);
       
       assertTrue(o.value1 == (long)0);
-      assertTrue(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", new NgLong((long)1))).getLongValue() == (long)1);
+      assertTrue(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", NgLong.valueOf((long)1))).getLongValue() == (long)1);
       assertTrue(o.value1 == (long)1);
       
       o.value1 = (long)0;
@@ -431,7 +431,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (long)0);
       
       assertTrue(o.value1 == (long)0);
-      assertTrue(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", new NgLong((long)1))).getLongValue() == (long)1);
+      assertTrue(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", NgLong.valueOf((long)1))).getLongValue() == (long)1);
       assertTrue(o.value1 == (long)1);
     }
   
@@ -467,7 +467,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value == (float)0);
       
       assertTrue(o.value == (float)0);
-      assertTrue(((NgFloat)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", new NgFloat((float)1))).getFloatValue() == (float)1);
+      assertTrue(((NgFloat)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", NgFloat.valueOf((float)1))).getFloatValue() == (float)1);
       assertTrue(o.value == (float)1);
       
       assertTrue(o.value1 == (float)0);
@@ -475,7 +475,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (float)0);
       
       assertTrue(o.value1 == (float)0);
-      assertTrue(((NgFloat)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", new NgFloat((float)1))).getFloatValue() == (float)1);
+      assertTrue(((NgFloat)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", NgFloat.valueOf((float)1))).getFloatValue() == (float)1);
       assertTrue(o.value1 == (float)1);
       
       o.value1 = (float)0;
@@ -484,7 +484,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (float)0);
       
       assertTrue(o.value1 == (float)0);
-      assertTrue(((NgFloat)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", new NgFloat((float)1))).getFloatValue() == (float)1);
+      assertTrue(((NgFloat)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", NgFloat.valueOf((float)1))).getFloatValue() == (float)1);
       assertTrue(o.value1 == (float)1);
     }
   
@@ -520,7 +520,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value == (double)0);
       
       assertTrue(o.value == (double)0);
-      assertTrue(((NgDouble)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", new NgDouble((double)1))).getDoubleValue() == (double)1);
+      assertTrue(((NgDouble)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value", NgDouble.valueOf((double)1))).getDoubleValue() == (double)1);
       assertTrue(o.value == (double)1);
       
       assertTrue(o.value1 == (double)0);
@@ -528,7 +528,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (double)0);
       
       assertTrue(o.value1 == (double)0);
-      assertTrue(((NgDouble)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", new NgDouble((double)1))).getDoubleValue() == (double)1);
+      assertTrue(((NgDouble)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setProperty(o, "value1", NgDouble.valueOf((double)1))).getDoubleValue() == (double)1);
       assertTrue(o.value1 == (double)1);
       
       o.value1 = (double)0;
@@ -537,7 +537,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (double)0);
       
       assertTrue(o.value1 == (double)0);
-      assertTrue(((NgDouble)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", new NgDouble((double)1))).getDoubleValue() == (double)1);
+      assertTrue(((NgDouble)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).setField(o, "value1", NgDouble.valueOf((double)1))).getDoubleValue() == (double)1);
       assertTrue(o.value1 == (double)1);
     }
 }

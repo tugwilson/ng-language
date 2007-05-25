@@ -26,7 +26,7 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgShort(((Short)result).shortValue());
+    return NgShort.valueOf(((Short)result).shortValue());
   }
 
   /* (non-Javadoc)
@@ -38,7 +38,7 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgShort(((Short)result).shortValue());
+    return NgShort.valueOf(((Short)result).shortValue());
   }
 
   /* (non-Javadoc)
@@ -50,7 +50,7 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgShort(((Short)result).shortValue());
+    return NgShort.valueOf(((Short)result).shortValue());
   }
 
   /* (non-Javadoc)
@@ -62,7 +62,7 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgShort(((Short)result).shortValue());
+    return NgShort.valueOf(((Short)result).shortValue());
   }
 
   /* (non-Javadoc)
@@ -74,7 +74,7 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgShort(((Short)result).shortValue());
+    return NgShort.valueOf(((Short)result).shortValue());
   }
 
   /* (non-Javadoc)
@@ -86,6 +86,6 @@ public class ShortMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgShort(((Short)result).shortValue());
+    return NgShort.valueOf(((Short)result).shortValue());
   }
 }

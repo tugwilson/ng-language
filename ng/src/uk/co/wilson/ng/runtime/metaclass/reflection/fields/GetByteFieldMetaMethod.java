@@ -24,7 +24,7 @@ public class GetByteFieldMetaMethod extends GetUntypedFieldMetaMethod {
   @Override
   public Object call(final Object instance) {
     try {
-      return new NgByte(this.field.getByte(instance));
+      return NgByte.valueOf(this.field.getByte(instance));
     } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     } catch (final IllegalAccessException e) {

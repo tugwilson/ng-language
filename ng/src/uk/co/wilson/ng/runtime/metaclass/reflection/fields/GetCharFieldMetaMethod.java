@@ -25,7 +25,7 @@ public class GetCharFieldMetaMethod extends GetUntypedFieldMetaMethod {
   @Override
   public Object call(final Object instance) {
     try {
-      return new NgChar(this.field.getChar(instance));
+      return NgChar.valueOf(this.field.getChar(instance));
     } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     } catch (final IllegalAccessException e) {

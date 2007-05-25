@@ -31,39 +31,39 @@ import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 public class LogicalTest extends TestCase {
   final MetaClassRegistry registry = NgSystem.metaClassRegistry;
   
-  Object minusOneByte = new NgByte((byte) -1);
-  Object zeroByte = new NgByte((byte) 0);
-  Object oneByte = new NgByte((byte) 1);
-  Object twoByte = new NgByte((byte) 2);
+  Object minusOneByte = NgByte.valueOf((byte) -1);
+  Object zeroByte = NgByte.valueOf((byte) 0);
+  Object oneByte = NgByte.valueOf((byte) 1);
+  Object twoByte = NgByte.valueOf((byte) 2);
   
-  Object zeroChar = new NgChar((char) 0);
-  Object oneChar = new NgChar((char) 1);
-  Object twoChar = new NgChar((char) 2);
+  Object zeroChar = NgChar.valueOf((char) 0);
+  Object oneChar = NgChar.valueOf((char) 1);
+  Object twoChar = NgChar.valueOf((char) 2);
   
-  Object minusOneShort = new NgShort((byte) -1);
-  Object zeroShort = new NgShort((byte) 0);
-  Object oneShort = new NgShort((byte) 1);
-  Object twoShort = new NgShort((byte) 2);
+  Object minusOneShort = NgShort.valueOf((byte) -1);
+  Object zeroShort = NgShort.valueOf((byte) 0);
+  Object oneShort = NgShort.valueOf((byte) 1);
+  Object twoShort = NgShort.valueOf((byte) 2);
   
-  Object minusOneInt = new NgInt(-1);
-  Object zeroInt = new NgInt(0);
-  Object oneInt = new NgInt(1);
-  Object twoInt = new NgInt(2);
+  Object minusOneInt = NgInt.valueOf(-1);
+  Object zeroInt = NgInt.valueOf(0);
+  Object oneInt = NgInt.valueOf(1);
+  Object twoInt = NgInt.valueOf(2);
   
-  Object minusOneLong = new NgLong(-1);
-  Object zeroLong = new NgLong(0);
-  Object oneLong = new NgLong(1);
-  Object twoLong = new NgLong(2);
+  Object minusOneLong = NgLong.valueOf(-1);
+  Object zeroLong = NgLong.valueOf(0);
+  Object oneLong = NgLong.valueOf(1);
+  Object twoLong = NgLong.valueOf(2);
   
-  Object minusOneFloat = new NgFloat(-1);
-  Object zeroFloat = new NgFloat(0);
-  Object oneFloat = new NgFloat(1);
-  Object twoFloat = new NgFloat(2);
+  Object minusOneFloat = NgFloat.valueOf(-1);
+  Object zeroFloat = NgFloat.valueOf(0);
+  Object oneFloat = NgFloat.valueOf(1);
+  Object twoFloat = NgFloat.valueOf(2);
   
-  Object minusOneDouble = new NgDouble(-1);
-  Object zeroDouble = new NgDouble(0);
-  Object oneDouble = new NgDouble(1);
-  Object twoDouble = new NgDouble(2);
+  Object minusOneDouble = NgDouble.valueOf(-1);
+  Object zeroDouble = NgDouble.valueOf(0);
+  Object oneDouble = NgDouble.valueOf(1);
+  Object twoDouble = NgDouble.valueOf(2);
   
   BigInteger minusOneBigInt = BigInteger.valueOf(-1);
   BigInteger zeroBigInt = BigInteger.ZERO;

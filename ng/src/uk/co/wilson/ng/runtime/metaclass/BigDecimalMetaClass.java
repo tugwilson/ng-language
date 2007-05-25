@@ -1461,39 +1461,39 @@ class BigDecimalInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doCompare(final BigDecimal lhs, final byte rhs) {
-    return new NgInt(lhs.compareTo(new BigDecimal(rhs)));
+    return NgInt.valueOf(lhs.compareTo(new BigDecimal(rhs)));
   }
 
   public Object doCompare(final BigDecimal lhs, final char rhs) {
-    return new NgInt(lhs.compareTo(new BigDecimal(rhs)));
+    return NgInt.valueOf(lhs.compareTo(new BigDecimal(rhs)));
   }
 
   public Object doCompare(final BigDecimal lhs, final short rhs) {
-    return new NgInt(lhs.compareTo(new BigDecimal(rhs)));
+    return NgInt.valueOf(lhs.compareTo(new BigDecimal(rhs)));
   }
 
   public Object doCompare(final BigDecimal lhs, final int rhs) {
-    return new NgInt(lhs.compareTo(new BigDecimal(rhs)));
+    return NgInt.valueOf(lhs.compareTo(new BigDecimal(rhs)));
   }
 
   public Object doCompare(final BigDecimal lhs, final long rhs) {
-    return new NgInt(lhs.compareTo(new BigDecimal(rhs)));
+    return NgInt.valueOf(lhs.compareTo(new BigDecimal(rhs)));
   }
 
   public Object doCompare(final BigDecimal lhs, final float rhs) {
-    return new NgInt(lhs.compareTo(new BigDecimal(rhs)));
+    return NgInt.valueOf(lhs.compareTo(new BigDecimal(rhs)));
   }
 
   public Object doCompare(final BigDecimal lhs, final double rhs) {
-    return new NgInt(lhs.compareTo(new BigDecimal(rhs)));
+    return NgInt.valueOf(lhs.compareTo(new BigDecimal(rhs)));
   }
 
   public Object doCompare(final BigDecimal lhs, final BigInteger rhs) {
-    return new NgInt(lhs.compareTo(new BigDecimal(rhs)));
+    return NgInt.valueOf(lhs.compareTo(new BigDecimal(rhs)));
   }
 
   public Object doCompare(final BigDecimal lhs, final BigDecimal rhs) {
-    return new NgInt(lhs.compareTo(rhs));
+    return NgInt.valueOf(lhs.compareTo(rhs));
   }
 
   public Object doCompare(final Object lhs, final byte rhs) {
