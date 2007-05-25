@@ -22,9 +22,9 @@ import ng.lang.NgSystem;
 
 
 public class NgBoolean extends NgBaseObject {
+  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngBooleanMetaClass;
   public static final NgBoolean TRUE = new NgBoolean(true);
   public static final NgBoolean FALSE = new NgBoolean(false);
-  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngBooleanMetaClass;
   
   public static NgBoolean valueOf(final boolean value) {
     return (value) ? TRUE : FALSE;
@@ -33,7 +33,7 @@ public class NgBoolean extends NgBaseObject {
   private final boolean value;
 
   private NgBoolean(final boolean value) {
-    super(NgSystem.ngBooleanMetaClass);
+    super(ngMetaClass);
     this.value = value;
   }
 

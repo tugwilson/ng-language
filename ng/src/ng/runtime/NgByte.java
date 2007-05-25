@@ -30,6 +30,7 @@ public class NgByte extends NgBaseObject {
   private final byte value;
 
   public NgByte(final byte value) {
+    super(ngMetaClass);
     this.value = value;
   }
 

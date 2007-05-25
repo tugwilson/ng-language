@@ -31,6 +31,7 @@ public class NgFloat extends NgBaseObject {
   private final float value;
 
   public NgFloat(final float value) {
+    super(ngMetaClass);
     this.value = value;
   }
 

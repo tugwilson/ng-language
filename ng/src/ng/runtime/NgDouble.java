@@ -31,6 +31,7 @@ public class NgDouble extends NgBaseObject {
   private final double value;
 
   public NgDouble(final double value) {
+    super(ngMetaClass);
     this.value = value;
   }
 

@@ -25,8 +25,8 @@ public class NgNull extends NgBaseObject {
   private NgNull() {
     // Singleton
   }
+  
   public Object toJavaObject() {
     return null;
   }
-
 }

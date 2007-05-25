@@ -31,6 +31,7 @@ public class NgChar extends NgBaseObject {
   private final char value;
 
   public NgChar(final char value) {
+    super(ngMetaClass);
     this.value = value;
   }
 
