@@ -26,7 +26,7 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgFloat(((Float)result).floatValue());
+    return NgFloat.valueOf(((Float)result).floatValue());
   }
 
   /* (non-Javadoc)
@@ -38,7 +38,7 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgFloat(((Float)result).floatValue());
+    return NgFloat.valueOf(((Float)result).floatValue());
   }
 
   /* (non-Javadoc)
@@ -50,7 +50,7 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgFloat(((Float)result).floatValue());
+    return NgFloat.valueOf(((Float)result).floatValue());
   }
 
   /* (non-Javadoc)
@@ -62,7 +62,7 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgFloat(((Float)result).floatValue());
+    return NgFloat.valueOf(((Float)result).floatValue());
   }
 
   /* (non-Javadoc)
@@ -74,7 +74,7 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgFloat(((Float)result).floatValue());
+    return NgFloat.valueOf(((Float)result).floatValue());
   }
 
   /* (non-Javadoc)
@@ -86,6 +86,6 @@ public class FloatMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgFloat(((Float)result).floatValue());
+    return NgFloat.valueOf(((Float)result).floatValue());
   }
 }

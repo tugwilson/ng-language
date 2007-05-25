@@ -24,7 +24,7 @@ public class GetShortFieldMetaMethod extends GetUntypedFieldMetaMethod {
   @Override
   public Object call(final Object instance) {
     try {
-      return new NgShort(this.field.getShort(instance));
+      return NgShort.valueOf(this.field.getShort(instance));
     } catch (final IllegalArgumentException e) {
       return RuntimeMetaClassImpl.NOT_CALLED;
     } catch (final IllegalAccessException e) {

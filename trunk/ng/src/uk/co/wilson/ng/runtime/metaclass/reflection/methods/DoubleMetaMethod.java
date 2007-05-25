@@ -26,7 +26,7 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgDouble(((Double)result).doubleValue());
+    return NgDouble.valueOf(((Double)result).doubleValue());
   }
 
   /* (non-Javadoc)
@@ -38,7 +38,7 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgDouble(((Double)result).doubleValue());
+    return NgDouble.valueOf(((Double)result).doubleValue());
   }
 
   /* (non-Javadoc)
@@ -50,7 +50,7 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgDouble(((Double)result).doubleValue());
+    return NgDouble.valueOf(((Double)result).doubleValue());
   }
 
   /* (non-Javadoc)
@@ -62,7 +62,7 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgDouble(((Double)result).doubleValue());
+    return NgDouble.valueOf(((Double)result).doubleValue());
   }
 
   /* (non-Javadoc)
@@ -74,7 +74,7 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgDouble(((Double)result).doubleValue());
+    return NgDouble.valueOf(((Double)result).doubleValue());
   }
 
   /* (non-Javadoc)
@@ -86,6 +86,6 @@ public class DoubleMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgDouble(((Double)result).doubleValue());
+    return NgDouble.valueOf(((Double)result).doubleValue());
   }
 }

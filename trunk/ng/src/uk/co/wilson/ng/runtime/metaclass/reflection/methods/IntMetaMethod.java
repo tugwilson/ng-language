@@ -26,7 +26,7 @@ public class IntMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgInt(((Integer)result).intValue());
+    return NgInt.valueOf(((Integer)result).intValue());
   }
 
   /* (non-Javadoc)
@@ -38,7 +38,7 @@ public class IntMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgInt(((Integer)result).intValue());
+    return NgInt.valueOf(((Integer)result).intValue());
   }
 
   /* (non-Javadoc)
@@ -50,7 +50,7 @@ public class IntMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgInt(((Integer)result).intValue());
+    return NgInt.valueOf(((Integer)result).intValue());
   }
 
   /* (non-Javadoc)
@@ -62,7 +62,7 @@ public class IntMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   
-    return new NgInt(((Integer)result).intValue());
+    return NgInt.valueOf(((Integer)result).intValue());
   }
 
   /* (non-Javadoc)
@@ -74,7 +74,7 @@ public class IntMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgInt(((Integer)result).intValue());
+    return NgInt.valueOf(((Integer)result).intValue());
   }
 
   /* (non-Javadoc)
@@ -86,6 +86,6 @@ public class IntMetaMethod extends UntypedMetaMethod {
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
     
-    return new NgInt(((Integer)result).intValue());
+    return NgInt.valueOf(((Integer)result).intValue());
   }
 }

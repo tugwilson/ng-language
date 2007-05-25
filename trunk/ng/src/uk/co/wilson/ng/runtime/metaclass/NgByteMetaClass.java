@@ -90,72 +90,72 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doComplement(final int instance) {
-    return new NgInt(~instance);
+    return NgInt.valueOf(~instance);
   }
   
   @Override
   public Object doComplement(final Object instance) {
-    return new NgInt(~((NgByte)instance).getByteValue());
+    return NgInt.valueOf(~((NgByte)instance).getByteValue());
   }
 
   @Override
   public Object doUnaryPlus(final int instance) {
-    return new NgInt(instance);
+    return NgInt.valueOf(instance);
   }
   
   @Override
   public Object doUnaryPlus(final Object instance) {
-    return new NgInt(((NgByte)instance).getByteValue());
+    return NgInt.valueOf(((NgByte)instance).getByteValue());
   }
   
   @Override
   public Object doUnaryMinus(final int instance) {
-    return new NgInt(-instance);
+    return NgInt.valueOf(-instance);
   }
   
   @Override
   public Object doUnaryMinus(final Object instance) {
-    return new NgInt(-((NgByte)instance).getByteValue());
+    return NgInt.valueOf(-((NgByte)instance).getByteValue());
   }
 
   @Override
   public Object doPostfixIncrement(final int instance) {
-    return new NgInt(instance + 1);
+    return NgInt.valueOf(instance + 1);
   }
 
   @Override
   public Object doPostfixIncrement(final Object instance) {
-    return new NgInt(((NgByte)instance).getByteValue() + 1);
+    return NgInt.valueOf(((NgByte)instance).getByteValue() + 1);
   }
 
   @Override
   public Object doPostfixDecrement(final int instance) {
-    return new NgInt(instance - 1);
+    return NgInt.valueOf(instance - 1);
   }
 
   @Override
   public Object doPostfixDecrement(final Object instance) {
-    return new NgInt(((NgByte)instance).getByteValue() - 1);
+    return NgInt.valueOf(((NgByte)instance).getByteValue() - 1);
   }
 
   @Override
   public Object doPrefixIncrement(final int instance) {
-    return new NgInt(instance + 1);
+    return NgInt.valueOf(instance + 1);
   }
 
   @Override
   public Object doPrefixIncrement(final Object instance) {
-    return new NgInt(((NgByte)instance).getByteValue() + 1);
+    return NgInt.valueOf(((NgByte)instance).getByteValue() + 1);
   }
 
   @Override
   public Object doPrefixDecrement(final int instance) {
-    return new NgInt(instance - 1);
+    return NgInt.valueOf(instance - 1);
   }
 
   @Override
   public Object doPrefixDecrement(final Object instance) {
-    return new NgInt(((NgByte)instance).getByteValue() - 1);
+    return NgInt.valueOf(((NgByte)instance).getByteValue() - 1);
   }
 
   @Override
@@ -165,37 +165,37 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doAdd(final byte lhs, final byte rhs) {
-    return new NgInt(lhs + rhs);
+    return NgInt.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final byte lhs, final char rhs) {
-    return new NgInt(lhs + rhs);
+    return NgInt.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final byte lhs, final short rhs) {
-    return new NgInt(lhs + rhs);
+    return NgInt.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final byte lhs, final int rhs) {
-    return new NgInt(lhs + rhs);
+    return NgInt.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final byte lhs, final long rhs) {
-    return new NgLong(lhs + rhs);
+    return NgLong.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final byte lhs, final float rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAdd(final byte lhs, final double rhs) {
-    return new NgDouble(lhs + rhs);
+    return NgDouble.valueOf(lhs + rhs);
   }
 
   @Override
@@ -305,37 +305,37 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doAddEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs + rhs);
+    return NgInt.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs + rhs);
+    return NgInt.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs + rhs);
+    return NgInt.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs + rhs);
+    return NgInt.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final byte lhs, final long rhs) {
-    return new NgLong(lhs + rhs);
+    return NgLong.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final byte lhs, final float rhs) {
-    return new NgFloat(lhs + rhs);
+    return NgFloat.valueOf(lhs + rhs);
   }
 
   @Override
   public Object doAddEquals(final byte lhs, final double rhs) {
-    return new NgDouble(lhs + rhs);
+    return NgDouble.valueOf(lhs + rhs);
   }
 
   @Override
@@ -445,37 +445,37 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doSubtract(final byte lhs, final byte rhs) {
-    return new NgInt(lhs - rhs);
+    return NgInt.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final byte lhs, final char rhs) {
-    return new NgInt(lhs - rhs);
+    return NgInt.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final byte lhs, final short rhs) {
-    return new NgInt(lhs - rhs);
+    return NgInt.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final byte lhs, final int rhs) {
-    return new NgInt(lhs - rhs);
+    return NgInt.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final byte lhs, final long rhs) {
-    return new NgLong(lhs - rhs);
+    return NgLong.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final byte lhs, final float rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtract(final byte lhs, final double rhs) {
-    return new NgDouble(lhs - rhs);
+    return NgDouble.valueOf(lhs - rhs);
   }
 
   @Override
@@ -585,37 +585,37 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doSubtractEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs - rhs);
+    return NgInt.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs - rhs);
+    return NgInt.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs - rhs);
+    return NgInt.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs - rhs);
+    return NgInt.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final byte lhs, final long rhs) {
-    return new NgLong(lhs - rhs);
+    return NgLong.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final byte lhs, final float rhs) {
-    return new NgFloat(lhs - rhs);
+    return NgFloat.valueOf(lhs - rhs);
   }
 
   @Override
   public Object doSubtractEquals(final byte lhs, final double rhs) {
-    return new NgDouble(lhs - rhs);
+    return NgDouble.valueOf(lhs - rhs);
   }
 
   @Override
@@ -725,37 +725,37 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doMultiply(final byte lhs, final byte rhs) {
-    return new NgInt(lhs * rhs);
+    return NgInt.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final byte lhs, final char rhs) {
-    return new NgInt(lhs * rhs);
+    return NgInt.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final byte lhs, final short rhs) {
-    return new NgInt(lhs * rhs);
+    return NgInt.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final byte lhs, final int rhs) {
-    return new NgInt(lhs * rhs);
+    return NgInt.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final byte lhs, final long rhs) {
-    return new NgLong(lhs * rhs);
+    return NgLong.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final byte lhs, final float rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiply(final byte lhs, final double rhs) {
-    return new NgDouble(lhs * rhs);
+    return NgDouble.valueOf(lhs * rhs);
   }
 
   @Override
@@ -865,37 +865,37 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doMultiplyEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs * rhs);
+    return NgInt.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs * rhs);
+    return NgInt.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs * rhs);
+    return NgInt.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs * rhs);
+    return NgInt.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final byte lhs, final long rhs) {
-    return new NgLong(lhs * rhs);
+    return NgLong.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final byte lhs, final float rhs) {
-    return new NgFloat(lhs * rhs);
+    return NgFloat.valueOf(lhs * rhs);
   }
 
   @Override
   public Object doMultiplyEquals(final byte lhs, final double rhs) {
-    return new NgDouble(lhs * rhs);
+    return NgDouble.valueOf(lhs * rhs);
   }
 
   @Override
@@ -1005,37 +1005,37 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
 
   @Override
   public Object doDivide(final byte lhs, final byte rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final byte lhs, final char rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final byte lhs, final short rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final byte lhs, final int rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final byte lhs, final long rhs) {
-    return new NgLong(lhs / rhs);
+    return NgLong.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final byte lhs, final float rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   @Override
   public Object doDivide(final byte lhs, final double rhs) {
-    return new NgDouble(lhs / rhs);
+    return NgDouble.valueOf(lhs / rhs);
   }
 
   @Override
@@ -1133,31 +1133,31 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doDivideEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final byte lhs, final long rhs) {
-    return new NgLong(lhs / rhs);
+    return NgLong.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final byte lhs, final float rhs) {
-    return new NgFloat(lhs / rhs);
+    return NgFloat.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final byte lhs, final double rhs) {
-    return new NgDouble(lhs / rhs);
+    return NgDouble.valueOf(lhs / rhs);
   }
 
   public Object doDivideEquals(final byte lhs, final BigInteger rhs) {
@@ -1245,23 +1245,23 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doRemainder(final byte lhs, final byte rhs) {
-    return new NgInt(lhs % rhs);
+    return NgInt.valueOf(lhs % rhs);
   }
 
   public Object doRemainder(final byte lhs, final char rhs) {
-    return new NgInt(lhs % rhs);
+    return NgInt.valueOf(lhs % rhs);
   }
 
   public Object doRemainder(final byte lhs, final short rhs) {
-    return new NgInt(lhs % rhs);
+    return NgInt.valueOf(lhs % rhs);
   }
 
   public Object doRemainder(final byte lhs, final int rhs) {
-    return new NgInt(lhs % rhs);
+    return NgInt.valueOf(lhs % rhs);
   }
 
   public Object doRemainder(final byte lhs, final long rhs) {
-    return new NgLong(lhs % rhs);
+    return NgLong.valueOf(lhs % rhs);
   }
 
   public Object doRemainder(final byte lhs, final BigInteger rhs) {
@@ -1321,23 +1321,23 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doRemainderEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs % rhs);
+    return NgInt.valueOf(lhs % rhs);
   }
 
   public Object doRemainderEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs % rhs);
+    return NgInt.valueOf(lhs % rhs);
   }
 
   public Object doRemainderEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs % rhs);
+    return NgInt.valueOf(lhs % rhs);
   }
 
   public Object doRemainderEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs % rhs);
+    return NgInt.valueOf(lhs % rhs);
   }
 
   public Object doRemainderEquals(final byte lhs, final long rhs) {
-    return new NgLong(lhs % rhs);
+    return NgLong.valueOf(lhs % rhs);
   }
 
   public Object doRemainderEquals(final byte lhs, final BigInteger rhs) {
@@ -1397,31 +1397,31 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doIntegerDivide(final byte lhs, final byte rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doIntegerDivide(final byte lhs, final char rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doIntegerDivide(final byte lhs, final short rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doIntegerDivide(final byte lhs, final int rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doIntegerDivide(final byte lhs, final long rhs) {
-    return new NgLong(lhs / rhs);
+    return NgLong.valueOf(lhs / rhs);
   }
 
   public Object doIntegerDivide(final byte lhs, final float rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivide(final byte lhs, final double rhs) {
-    return new NgDouble(Math.floor(lhs / rhs));
+    return NgDouble.valueOf(Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivide(final byte lhs, final BigInteger rhs) {
@@ -1509,31 +1509,31 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doIntegerDivideEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doIntegerDivideEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doIntegerDivideEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doIntegerDivideEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs / rhs);
+    return NgInt.valueOf(lhs / rhs);
   }
 
   public Object doIntegerDivideEquals(final byte lhs, final long rhs) {
-    return new NgLong(lhs / rhs);
+    return NgLong.valueOf(lhs / rhs);
   }
 
   public Object doIntegerDivideEquals(final byte lhs, final float rhs) {
-    return new NgFloat((float)Math.floor(lhs / rhs));
+    return NgFloat.valueOf((float)Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivideEquals(final byte lhs, final double rhs) {
-    return new NgDouble(Math.floor(lhs / rhs));
+    return NgDouble.valueOf(Math.floor(lhs / rhs));
   }
 
   public Object doIntegerDivideEquals(final byte lhs, final BigInteger rhs) {
@@ -1621,23 +1621,23 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doAnd(final byte lhs, final byte rhs) {
-    return new NgInt(lhs & rhs);
+    return NgInt.valueOf(lhs & rhs);
   }
 
   public Object doAnd(final byte lhs, final char rhs) {
-    return new NgInt(lhs & rhs);
+    return NgInt.valueOf(lhs & rhs);
   }
 
   public Object doAnd(final byte lhs, final short rhs) {
-    return new NgInt(lhs & rhs);
+    return NgInt.valueOf(lhs & rhs);
   }
 
   public Object doAnd(final byte lhs, final int rhs) {
-    return new NgInt(lhs & rhs);
+    return NgInt.valueOf(lhs & rhs);
   }
 
   public Object doAnd(final byte lhs, final long rhs) {
-    return new NgLong(lhs & rhs);
+    return NgLong.valueOf(lhs & rhs);
   }
 
   public Object doAnd(final byte lhs, final BigInteger rhs) {
@@ -1697,23 +1697,23 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doAndEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs & rhs);
+    return NgInt.valueOf(lhs & rhs);
   }
 
   public Object doAndEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs & rhs);
+    return NgInt.valueOf(lhs & rhs);
   }
 
   public Object doAndEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs & rhs);
+    return NgInt.valueOf(lhs & rhs);
   }
 
   public Object doAndEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs & rhs);
+    return NgInt.valueOf(lhs & rhs);
   }
 
   public Object doAndEquals(final byte lhs, final long rhs) {
-    return new NgLong(lhs & rhs);
+    return NgLong.valueOf(lhs & rhs);
   }
 
   public Object doAndEquals(final byte lhs, final BigInteger rhs) {
@@ -1773,23 +1773,23 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doOr(final byte lhs, final byte rhs) {
-    return new NgInt(lhs | rhs);
+    return NgInt.valueOf(lhs | rhs);
   }
 
   public Object doOr(final byte lhs, final char rhs) {
-    return new NgInt(lhs | rhs);
+    return NgInt.valueOf(lhs | rhs);
   }
 
   public Object doOr(final byte lhs, final short rhs) {
-    return new NgInt(lhs | rhs);
+    return NgInt.valueOf(lhs | rhs);
   }
 
   public Object doOr(final byte lhs, final int rhs) {
-    return new NgInt(lhs | rhs);
+    return NgInt.valueOf(lhs | rhs);
   }
 
   public Object doOr(final byte lhs, final long rhs) {
-    return new NgLong(lhs | rhs);
+    return NgLong.valueOf(lhs | rhs);
   }
 
   public Object doOr(final byte lhs, final BigInteger rhs) {
@@ -1849,23 +1849,23 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doOrEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs | rhs);
+    return NgInt.valueOf(lhs | rhs);
   }
 
   public Object doOrEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs | rhs);
+    return NgInt.valueOf(lhs | rhs);
   }
 
   public Object doOrEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs | rhs);
+    return NgInt.valueOf(lhs | rhs);
   }
 
   public Object doOrEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs | rhs);
+    return NgInt.valueOf(lhs | rhs);
   }
 
   public Object doOrEquals(final byte lhs, final long rhs) {
-    return new NgLong(lhs | rhs);
+    return NgLong.valueOf(lhs | rhs);
   }
 
   public Object doOrEquals(final byte lhs, final BigInteger rhs) {
@@ -1925,23 +1925,23 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doXor(final byte lhs, final byte rhs) {
-    return new NgInt(lhs ^ rhs);
+    return NgInt.valueOf(lhs ^ rhs);
   }
 
   public Object doXor(final byte lhs, final char rhs) {
-    return new NgInt(lhs ^ rhs);
+    return NgInt.valueOf(lhs ^ rhs);
   }
 
   public Object doXor(final byte lhs, final short rhs) {
-    return new NgInt(lhs ^ rhs);
+    return NgInt.valueOf(lhs ^ rhs);
   }
 
   public Object doXor(final byte lhs, final int rhs) {
-    return new NgInt(lhs ^ rhs);
+    return NgInt.valueOf(lhs ^ rhs);
   }
 
   public Object doXor(final byte lhs, final long rhs) {
-    return new NgLong(lhs ^ rhs);
+    return NgLong.valueOf(lhs ^ rhs);
   }
 
   public Object doXor(final byte lhs, final BigInteger rhs) {
@@ -2001,23 +2001,23 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doXorEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs ^ rhs);
+    return NgInt.valueOf(lhs ^ rhs);
   }
 
   public Object doXorEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs ^ rhs);
+    return NgInt.valueOf(lhs ^ rhs);
   }
 
   public Object doXorEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs ^ rhs);
+    return NgInt.valueOf(lhs ^ rhs);
   }
 
   public Object doXorEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs ^ rhs);
+    return NgInt.valueOf(lhs ^ rhs);
   }
 
   public Object doXorEquals(final byte lhs, final long rhs) {
-    return new NgLong(lhs ^ rhs);
+    return NgLong.valueOf(lhs ^ rhs);
   }
 
   public Object doXorEquals(final byte lhs, final BigInteger rhs) {
@@ -2077,27 +2077,27 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doLeftShift(final byte lhs, final byte rhs) {
-    return new NgInt(lhs << rhs);
+    return NgInt.valueOf(lhs << rhs);
   }
 
   public Object doLeftShift(final byte lhs, final char rhs) {
-    return new NgInt(lhs << rhs);
+    return NgInt.valueOf(lhs << rhs);
   }
 
   public Object doLeftShift(final byte lhs, final short rhs) {
-    return new NgInt(lhs << rhs);
+    return NgInt.valueOf(lhs << rhs);
   }
 
   public Object doLeftShift(final byte lhs, final int rhs) {
-    return new NgInt(lhs << rhs);
+    return NgInt.valueOf(lhs << rhs);
   }
 
   public Object doLeftShift(final byte lhs, final long rhs) {
-    return new NgInt(lhs << rhs);
+    return NgInt.valueOf(lhs << rhs);
   }
 
   public Object doLeftShift(final byte lhs, final BigInteger rhs) {
-    return new NgInt(lhs << rhs.intValue());
+    return NgInt.valueOf(lhs << rhs.intValue());
   }
 
   public Object doLeftShift(final Object lhs, final byte rhs) {
@@ -2153,27 +2153,27 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doLeftShiftEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs << rhs);
+    return NgInt.valueOf(lhs << rhs);
   }
 
   public Object doLeftShiftEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs << rhs);
+    return NgInt.valueOf(lhs << rhs);
   }
 
   public Object doLeftShiftEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs << rhs);
+    return NgInt.valueOf(lhs << rhs);
   }
 
   public Object doLeftShiftEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs << rhs);
+    return NgInt.valueOf(lhs << rhs);
   }
 
   public Object doLeftShiftEquals(final byte lhs, final long rhs) {
-    return new NgInt(lhs << rhs);
+    return NgInt.valueOf(lhs << rhs);
   }
 
   public Object doLeftShiftEquals(final byte lhs, final BigInteger rhs) {
-    return new NgInt(lhs << rhs.intValue());
+    return NgInt.valueOf(lhs << rhs.intValue());
   }
 
   public Object doLeftShiftEquals(final Object lhs, final byte rhs) {
@@ -2229,27 +2229,27 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doArithmeticRightShift(final byte lhs, final byte rhs) {
-    return new NgInt(lhs >> rhs);
+    return NgInt.valueOf(lhs >> rhs);
   }
 
   public Object doArithmeticRightShift(final byte lhs, final char rhs) {
-    return new NgInt(lhs >> rhs);
+    return NgInt.valueOf(lhs >> rhs);
   }
 
   public Object doArithmeticRightShift(final byte lhs, final short rhs) {
-    return new NgInt(lhs >> rhs);
+    return NgInt.valueOf(lhs >> rhs);
   }
 
   public Object doArithmeticRightShift(final byte lhs, final int rhs) {
-    return new NgInt(lhs >> rhs);
+    return NgInt.valueOf(lhs >> rhs);
   }
 
   public Object doArithmeticRightShift(final byte lhs, final long rhs) {
-    return new NgInt(lhs >> rhs);
+    return NgInt.valueOf(lhs >> rhs);
   }
 
   public Object doArithmeticRightShift(final byte lhs, final BigInteger rhs) {
-    return new NgInt(lhs >> rhs.intValue());
+    return NgInt.valueOf(lhs >> rhs.intValue());
   }
 
   public Object doArithmeticRightShift(final Object lhs, final byte rhs) {
@@ -2305,27 +2305,27 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doArithmeticRightShiftEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs >> rhs);
+    return NgInt.valueOf(lhs >> rhs);
   }
 
   public Object doArithmeticRightShiftEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs >> rhs);
+    return NgInt.valueOf(lhs >> rhs);
   }
 
   public Object doArithmeticRightShiftEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs >> rhs);
+    return NgInt.valueOf(lhs >> rhs);
   }
 
   public Object doArithmeticRightShiftEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs >> rhs);
+    return NgInt.valueOf(lhs >> rhs);
   }
 
   public Object doArithmeticRightShiftEquals(final byte lhs, final long rhs) {
-    return new NgInt(lhs >> rhs);
+    return NgInt.valueOf(lhs >> rhs);
   }
 
   public Object doArithmeticRightShiftEquals(final byte lhs, final BigInteger rhs) {
-    return new NgInt(lhs >> rhs.intValue());
+    return NgInt.valueOf(lhs >> rhs.intValue());
   }
 
   public Object doArithmeticRightShiftEquals(final Object lhs, final byte rhs) {
@@ -2381,27 +2381,27 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doLogicalRightShift(final byte lhs, final byte rhs) {
-    return new NgInt(lhs >>> rhs);
+    return NgInt.valueOf(lhs >>> rhs);
   }
 
   public Object doLogicalRightShift(final byte lhs, final char rhs) {
-    return new NgInt(lhs >>> rhs);
+    return NgInt.valueOf(lhs >>> rhs);
   }
 
   public Object doLogicalRightShift(final byte lhs, final short rhs) {
-    return new NgInt(lhs >>> rhs);
+    return NgInt.valueOf(lhs >>> rhs);
   }
 
   public Object doLogicalRightShift(final byte lhs, final int rhs) {
-    return new NgInt(lhs >>> rhs);
+    return NgInt.valueOf(lhs >>> rhs);
   }
 
   public Object doLogicalRightShift(final byte lhs, final long rhs) {
-    return new NgInt(lhs >>> rhs);
+    return NgInt.valueOf(lhs >>> rhs);
   }
 
   public Object doLogicalRightShift(final byte lhs, final BigInteger rhs) {
-    return new NgInt(lhs >>> rhs.intValue());
+    return NgInt.valueOf(lhs >>> rhs.intValue());
   }
 
   public Object doLogicalRightShift(final Object lhs, final byte rhs) {
@@ -2453,27 +2453,27 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doLogicalRightShiftEquals(final byte lhs, final byte rhs) {
-    return new NgInt(lhs >>> rhs);
+    return NgInt.valueOf(lhs >>> rhs);
   }
 
   public Object doLogicalRightShiftEquals(final byte lhs, final char rhs) {
-    return new NgInt(lhs >>> rhs);
+    return NgInt.valueOf(lhs >>> rhs);
   }
 
   public Object doLogicalRightShiftEquals(final byte lhs, final short rhs) {
-    return new NgInt(lhs >>> rhs);
+    return NgInt.valueOf(lhs >>> rhs);
   }
 
   public Object doLogicalRightShiftEquals(final byte lhs, final int rhs) {
-    return new NgInt(lhs >>> rhs);
+    return NgInt.valueOf(lhs >>> rhs);
   }
 
   public Object doLogicalRightShiftEquals(final byte lhs, final long rhs) {
-    return new NgInt(lhs >>> rhs);
+    return NgInt.valueOf(lhs >>> rhs);
   }
 
   public Object doLogicalRightShiftEquals(final byte lhs, final BigInteger rhs) {
-    return new NgInt(lhs >>> rhs.intValue());
+    return NgInt.valueOf(lhs >>> rhs.intValue());
   }
 
   public Object doLogicalRightShiftEquals(final Object lhs, final byte rhs) {
@@ -2567,11 +2567,11 @@ class NgByteInternalMetaClass extends InternalMetaClassImpl {
   }
 
   public Object doCompare(final byte lhs, final BigInteger rhs) {
-    return new NgInt(BigInteger.valueOf(lhs).compareTo(rhs));
+    return NgInt.valueOf(BigInteger.valueOf(lhs).compareTo(rhs));
   }
 
   public Object doCompare(final byte lhs, final BigDecimal rhs) {
-    return new NgInt(new BigDecimal(lhs).compareTo(rhs));
+    return NgInt.valueOf(new BigDecimal(lhs).compareTo(rhs));
   }
 
   public Object doCompare(final Object lhs, final byte rhs) {
