@@ -31,6 +31,7 @@ public class NgShort extends NgBaseObject {
   private final short value;
 
   public NgShort(final short value) {
+    super(ngMetaClass);
     this.value = value;
   }
 

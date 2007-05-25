@@ -39,6 +39,7 @@ public class NgInt extends NgBaseObject {
   private final int value;
 
   public NgInt(final int value) {
+    super(ngMetaClass);
     this.value = value;
   }
 
