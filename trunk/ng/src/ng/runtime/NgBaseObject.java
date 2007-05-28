@@ -22,7 +22,7 @@ import ng.lang.NgObject;
 import ng.lang.NgSystem;
 
 public class NgBaseObject implements NgObject {
-  private RuntimeMetaClass metaClass;
+  protected final RuntimeMetaClass metaClass;
 
   public NgBaseObject() {
     this.metaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(this.getClass());
