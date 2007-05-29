@@ -30,14 +30,20 @@ public class FibNg extends NgBaseObject {
   private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(FibNg.class);
     Object series;
     
+    //
+    // main is not translated
+    //
     public static void main(String args[]) {
-      new FibNg(NgInt.valueOf(10)).calculate();
+      new FibNg(NgInt.valueOf(10)).calculate(); // warm up the JVM
       long start = System.currentTimeMillis();
       int result = new FibNg(NgInt.valueOf(35)).calculate();
       System.out.println(System.currentTimeMillis() - start);
       System.out.println(result);
     }
 
+    //
+    // the rest of the class approximates to what the Ng compiler will generate
+    //
     FibNg(Object x) {
       super(ngMetaClass);
       this.metaClass.setField(this, "series", x);
