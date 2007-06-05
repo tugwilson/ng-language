@@ -55,14 +55,14 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
     }
   };
 
-  private interface MetaClassAccessor {
+  public interface ThreadContext {
     RuntimeMetaClass getRuntimeMetaClass(Class theClass);
   }
   
   private final ThreadLocal localRegistry = new ThreadLocal() {
     @Override
     protected Object initialValue() {
-      return new MetaClassAccessor() {
+      return new ThreadContext() {
         private static final int ngMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC | Modifier.FINAL;
         private final Map threadRegistry = new WeakHashMap() {
           @Override
@@ -192,7 +192,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
    * @see ng.runtime.MetaClassRegistry#getRuntimeMetaClass(java.lang.Class)
    */
   public RuntimeMetaClass getRuntimeMetaClass(final Class theClass) {
-    return ((MetaClassAccessor)this.localRegistry.get()).getRuntimeMetaClass(theClass);
+    return ((ThreadContext)this.localRegistry.get()).getRuntimeMetaClass(theClass);
   }
 
   /* (non-Javadoc)
