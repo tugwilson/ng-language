@@ -21,10 +21,22 @@ package ng.runtime;
 
 public interface MetaClassRegistry {
   /**
+   * @return
+   */
+  ThreadContext getThreadContext();
+  
+  /**
    * @param theClass
    * @return The MetaClass associated with the Class
    */
   MetaClass getMetaClass(Class theClass);
+
+  /**
+   * @param context
+   * @param theClass
+   * @return
+   */
+  MetaClass getMetaClass(ThreadContext context, Class theClass);
 
   /**
    * @param theInstance
@@ -33,10 +45,24 @@ public interface MetaClassRegistry {
   MetaClass getMetaClass(Object theInstance);
   
   /**
+   * @param context
+   * @param theInstance
+   * @return
+   */
+  MetaClass getMetaClass(ThreadContext context, Object theInstance);
+  
+  /**
    * @param theClass
    * @return The RuntimeMetaClass associated with the Class
    */
   RuntimeMetaClass getRuntimeMetaClass(Class theClass);
+
+  /**
+   * @param context
+   * @param theClass
+   * @return
+   */
+  RuntimeMetaClass getRuntimeMetaClass(ThreadContext context, Class theClass);
 
   /**
    * @param theInstance
@@ -45,14 +71,35 @@ public interface MetaClassRegistry {
   RuntimeMetaClass getRuntimeMetaClass(Object theInstance);
   
   /**
+   * @param context
+   * @param theInstance
+   * @return
+   */
+  RuntimeMetaClass getRuntimeMetaClass(ThreadContext context, Object theInstance);
+  
+  /**
    * @param theClass
    * @return The InternalMetaClass associated with the Class
    */
   InternalMetaClass getInternalMetaClass(Class theClass);
 
   /**
+   * @param context
+   * @param theClass
+   * @return
+   */
+  InternalMetaClass getInternalMetaClass(ThreadContext context, Class theClass);
+
+  /**
    * @param theInstance
    * @return The InternalMetaClass associated with the Class of the instance
    */
   InternalMetaClass getInternalMetaClass(Object theInstance);
+  
+  /**
+   * @param context
+   * @param theInstance
+   * @return
+   */
+  InternalMetaClass getInternalMetaClass(ThreadContext context, Object theInstance);
 }

@@ -3829,7 +3829,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseDivide(final BigDecimal lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivide(lhsObject, rhs);
   }
@@ -4130,31 +4130,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doDivideEquals(final BigInteger lhs, final byte rhs) {
-    return doDivideEquals((Object)lhs, NgByte.valueOf(rhs));
+    return doDivideEquals(lhs, NgByte.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigInteger lhs, final char rhs) {
-    return doDivideEquals((Object)lhs, NgChar.valueOf(rhs));
+    return doDivideEquals(lhs, NgChar.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigInteger lhs, final short rhs) {
-    return doDivideEquals((Object)lhs, NgShort.valueOf(rhs));
+    return doDivideEquals(lhs, NgShort.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigInteger lhs, final int rhs) {
-    return doDivideEquals((Object)lhs, NgInt.valueOf(rhs));
+    return doDivideEquals(lhs, NgInt.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigInteger lhs, final long rhs) {
-    return doDivideEquals((Object)lhs, NgLong.valueOf(rhs));
+    return doDivideEquals(lhs, NgLong.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigInteger lhs, final float rhs) {
-    return doDivideEquals((Object)lhs, NgFloat.valueOf(rhs));
+    return doDivideEquals(lhs, NgFloat.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigInteger lhs, final double rhs) {
-    return doDivideEquals((Object)lhs, NgDouble.valueOf(rhs));
+    return doDivideEquals(lhs, NgDouble.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigInteger lhs, final BigInteger rhs) {
@@ -4166,31 +4166,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doDivideEquals(final BigDecimal lhs, final byte rhs) {
-    return doDivideEquals((Object)lhs, NgByte.valueOf(rhs));
+    return doDivideEquals(lhs, NgByte.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigDecimal lhs, final char rhs) {
-    return doDivideEquals((Object)lhs, NgChar.valueOf(rhs));
+    return doDivideEquals(lhs, NgChar.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigDecimal lhs, final short rhs) {
-    return doDivideEquals((Object)lhs, NgShort.valueOf(rhs));
+    return doDivideEquals(lhs, NgShort.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigDecimal lhs, final int rhs) {
-    return doDivideEquals((Object)lhs, NgInt.valueOf(rhs));
+    return doDivideEquals(lhs, NgInt.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigDecimal lhs, final long rhs) {
-    return doDivideEquals((Object)lhs, NgLong.valueOf(rhs));
+    return doDivideEquals(lhs, NgLong.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigDecimal lhs, final float rhs) {
-    return doDivideEquals((Object)lhs, NgFloat.valueOf(rhs));
+    return doDivideEquals(lhs, NgFloat.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigDecimal lhs, final double rhs) {
-    return doDivideEquals((Object)lhs, NgDouble.valueOf(rhs));
+    return doDivideEquals(lhs, NgDouble.valueOf(rhs));
   }
 
   public Object doDivideEquals(final BigDecimal lhs, final BigInteger rhs) {
@@ -4244,13 +4244,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doDivideEquals(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseDivideEquals(lhs, rhsObject);
   }
 
   public Object doDivideEquals(final Object lhs, final BigDecimal rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseDivideEquals(lhs, rhsObject);
   }
@@ -4298,13 +4298,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseDivideEquals(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivideEquals(lhsObject, rhs);
   }
 
   public Object doReverseDivideEquals(final BigDecimal lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseDivideEquals(lhsObject, rhs);
   }
@@ -4465,23 +4465,23 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doRemainder(final BigInteger lhs, final byte rhs) {
-    return doRemainder((Object)lhs, NgByte.valueOf(rhs));
+    return doRemainder(lhs, NgByte.valueOf(rhs));
   }
 
   public Object doRemainder(final BigInteger lhs, final char rhs) {
-    return doRemainder((Object)lhs, NgChar.valueOf(rhs));
+    return doRemainder(lhs, NgChar.valueOf(rhs));
   }
 
   public Object doRemainder(final BigInteger lhs, final short rhs) {
-    return doRemainder((Object)lhs, NgShort.valueOf(rhs));
+    return doRemainder(lhs, NgShort.valueOf(rhs));
   }
 
   public Object doRemainder(final BigInteger lhs, final int rhs) {
-    return doRemainder((Object)lhs, NgInt.valueOf(rhs));
+    return doRemainder(lhs, NgInt.valueOf(rhs));
   }
 
   public Object doRemainder(final BigInteger lhs, final long rhs) {
-    return doRemainder((Object)lhs, NgLong.valueOf(rhs));
+    return doRemainder(lhs, NgLong.valueOf(rhs));
   }
 
   public Object doRemainder(final BigInteger lhs, final BigInteger rhs) {
@@ -4519,7 +4519,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doRemainder(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseRemainder(lhs, rhsObject);
   }

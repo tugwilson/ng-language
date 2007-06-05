@@ -32,7 +32,7 @@ public class State {
   private boolean done = false;
   private boolean error = false;
   private Value currentState = Value.start;
-  private Stack<Value> stateStack = new Stack<Value>();
+  private final Stack<Value> stateStack = new Stack<Value>();
   
   public boolean isDone() {
     return this.done;

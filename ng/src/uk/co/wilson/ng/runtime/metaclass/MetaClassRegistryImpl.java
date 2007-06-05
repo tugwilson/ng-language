@@ -35,6 +35,7 @@ import ng.runtime.MetaClass;
 import ng.runtime.MetaClassRegistry;
 import ng.runtime.NgNull;
 import ng.runtime.RuntimeMetaClass;
+import ng.runtime.ThreadContext;
 
 public class MetaClassRegistryImpl implements MetaClassRegistry {
   private final Map registry = new HashMap() {
@@ -54,12 +55,8 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
       return super.put(key, new SoftReference(value));
     }
   };
-
-  public interface ThreadContext {
-    RuntimeMetaClass getRuntimeMetaClass(Class theClass);
-  }
   
-  private final ThreadLocal localRegistry = new ThreadLocal() {
+  private final ThreadLocal threadContext = new ThreadLocal() {
     @Override
     protected Object initialValue() {
       return new ThreadContext() {
@@ -172,6 +169,13 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
     this.registry.put(BigDecimal.class, NgSystem.bigDecimalMetaClass);    
   }
 
+  /**
+   * @return the threadContext
+   */
+  public ThreadContext getThreadContext() {
+    return (ThreadContext)this.threadContext.get();
+  }
+
   /*
    * (non-Javadoc)
    * 
@@ -182,6 +186,13 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.MetaClassRegistry#getMetaClass(ng.runtime.ThreadContext, java.lang.Class)
+   */
+  public MetaClass getMetaClass(final ThreadContext context, final Class theClass) {
+    return getRuntimeMetaClass(context, theClass);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClassRegistry#getMetaClass(java.lang.Object)
    */
   public MetaClass getMetaClass(final Object theInstance) {
@@ -189,22 +200,49 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
   }
   
   /* (non-Javadoc)
+   * @see ng.runtime.MetaClassRegistry#getMetaClass(ng.runtime.ThreadContext, java.lang.Object)
+   */
+  public MetaClass getMetaClass(final ThreadContext context, final Object theInstance) {
+    return getRuntimeMetaClass(context, theInstance);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClassRegistry#getRuntimeMetaClass(java.lang.Class)
    */
   public RuntimeMetaClass getRuntimeMetaClass(final Class theClass) {
-    return ((ThreadContext)this.localRegistry.get()).getRuntimeMetaClass(theClass);
+    return getRuntimeMetaClass((ThreadContext)this.threadContext.get(), theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClassRegistry#getRuntimeMetaClass(ng.runtime.ThreadContext, java.lang.Class)
+   */
+  public RuntimeMetaClass getRuntimeMetaClass(final ThreadContext context, final Class theClass) {
+    return context.getRuntimeMetaClass(theClass);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaClassRegistry#getRuntimeMetaClass(java.lang.Object)
    */
   public RuntimeMetaClass getRuntimeMetaClass(final Object theInstance) {
-    if (theInstance == null) {
-      return getRuntimeMetaClass(NgNull.class);
-    } else if (theInstance instanceof NgObject) {
+    if (theInstance instanceof NgObject) {
       return ((NgObject)theInstance).getMetaClass();
+    } else if (theInstance == null) {
+      return getRuntimeMetaClass((ThreadContext)this.threadContext.get(), NgNull.class);
+    } else  {
+      return getRuntimeMetaClass((ThreadContext)this.threadContext.get(), theInstance.getClass());
+    }
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClassRegistry#getRuntimeMetaClass(ng.runtime.ThreadContext, java.lang.Object)
+   */
+  public RuntimeMetaClass getRuntimeMetaClass(final ThreadContext context, final Object theInstance) {
+    if (theInstance instanceof NgObject) {
+      return ((NgObject)theInstance).getMetaClass();
+    } else if (theInstance == null) {
+      return getRuntimeMetaClass(context, NgNull.class);
     } else {
-      return getRuntimeMetaClass(theInstance.getClass());
+      return getRuntimeMetaClass(context, theInstance.getClass());
     }
   }
 
@@ -216,9 +254,23 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
   }
   
   /* (non-Javadoc)
+   * @see ng.runtime.MetaClassRegistry#getInternalMetaClass(ng.runtime.ThreadContext, java.lang.Class)
+   */
+  public InternalMetaClass getInternalMetaClass(final ThreadContext context, final Class theClass) {
+    return getRuntimeMetaClass(context, theClass).getInternalMetaClass();
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.MetaClassRegistry#getInternalMetaClass(java.lang.Object)
    */
   public InternalMetaClass getInternalMetaClass(final Object theInstance) {
     return getRuntimeMetaClass(theInstance).getInternalMetaClass();
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClassRegistry#getInternalMetaClass(ng.runtime.ThreadContext, java.lang.Object)
+   */
+  public InternalMetaClass getInternalMetaClass(final ThreadContext context, final Object theInstance) {
+    return getRuntimeMetaClass(context, theInstance).getInternalMetaClass();
   }
 }
