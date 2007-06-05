@@ -2,6 +2,7 @@ import ng.lang.NgSystem;
 import ng.runtime.NgBaseObject;
 import ng.runtime.NgInt;
 import ng.runtime.RuntimeMetaClass;
+import ng.runtime.ThreadContext;
 
 /*
  * Created on 24 May 2007
@@ -55,18 +56,19 @@ public class FibNg extends NgBaseObject {
      }
     
      int fib(Object x) {
-         Object tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(x).lessThanOrEquals(x, 0);
+         final ThreadContext tc = NgSystem.metaClassRegistry.getThreadContext();
+         Object tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).lessThanOrEquals(x, 0);
          if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp).asBoolean(tmp)) {
              return 0;
          }
          
-         tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(x).equals(x, 1);
-         if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp).asBoolean(tmp)) {
+         tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).equals(x, 1);
+         if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, tmp).asBoolean(tmp)) {
              return 1;
          }
     
-         tmp = this.metaClass.invokeMethodQuick(this, "fib", NgSystem.metaClassRegistry.getRuntimeMetaClass(x).subtract(x, 1));
-         tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp).add(tmp, this.metaClass.invokeMethodQuick(this, "fib", NgSystem.metaClassRegistry.getRuntimeMetaClass(x).subtract(x, 2)));
-         return NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp).asInt(tmp);
+         tmp = this.metaClass.invokeMethodQuick(this, "fib", NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).subtract(x, 1));
+         tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, tmp).add(tmp, this.metaClass.invokeMethodQuick(this, "fib", NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).subtract(x, 2)));
+         return NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, tmp).asInt(tmp);
      }
 }
