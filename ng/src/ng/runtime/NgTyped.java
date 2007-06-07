@@ -3705,6 +3705,106 @@ private final RuntimeMetaClass delegate;
 
   /**
    * @param instance
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, boolean)
+   */
+  public Object callQuick(final Object instance, final boolean p1) {
+    return this.delegate.callQuick(instance, p1);
+  }
+
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, char)
+   */
+  public Object callQuick(final Object instance, final char p1) {
+    return this.delegate.callQuick(instance, p1);
+  }
+
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, byte)
+   */
+  public Object callQuick(final Object instance, final byte p1) {
+    return this.delegate.callQuick(instance, p1);
+  }
+
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, short)
+   */
+  public Object callQuick(final Object instance, final short p1) {
+    return this.delegate.callQuick(instance, p1);
+  }
+
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, int)
+   */
+  public Object callQuick(final Object instance, final int p1) {
+    return this.delegate.callQuick(instance, p1);
+  }
+
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, long)
+   */
+  public Object callQuick(final Object instance, final long p1) {
+    return this.delegate.callQuick(instance, p1);
+  }
+
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, float)
+   */
+  public Object callQuick(final Object instance, final float p1) {
+    return this.delegate.callQuick(instance, p1);
+  }
+
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, double)
+   */
+  public Object callQuick(final Object instance, final double p1) {
+    return this.delegate.callQuick(instance, p1);
+  }
+
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, java.math.BigInteger)
+   */
+  public Object callQuick(final Object instance, final BigInteger p1) {
+    return this.delegate.callQuick(instance, p1);
+  }
+
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, java.math.BigDecimal)
+   */
+  public Object callQuick(final Object instance, final BigDecimal p1) {
+    return this.delegate.callQuick(instance, p1);
+  }
+
+  /**
+   * @param instance
    * @param arguments
    * @return
    * @see ng.runtime.MetaClass#call(java.lang.Object, java.lang.Object[])
@@ -11179,6 +11279,116 @@ private final RuntimeMetaClass delegate;
    */
   public Object invokeMethodQuick(final Object instance, final String methodName, final Object p1) {
     return this.delegate.getRuntimeMetaClass().invokeMethodQuick(this.instance, methodName, p1);
+  }
+
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, boolean)
+   */
+  public Object invokeMethodQuick(final Object instance, final String methodName, final boolean p1) {
+    return this.delegate.invokeMethodQuick(instance, methodName, p1);
+  }
+
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, char)
+   */
+  public Object invokeMethodQuick(final Object instance, final String methodName, final char p1) {
+    return this.delegate.invokeMethodQuick(instance, methodName, p1);
+  }
+
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, byte)
+   */
+  public Object invokeMethodQuick(final Object instance, final String methodName, final byte p1) {
+    return this.delegate.invokeMethodQuick(instance, methodName, p1);
+  }
+
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, short)
+   */
+  public Object invokeMethodQuick(final Object instance, final String methodName, final short p1) {
+    return this.delegate.invokeMethodQuick(instance, methodName, p1);
+  }
+
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, int)
+   */
+  public Object invokeMethodQuick(final Object instance, final String methodName, final int p1) {
+    return this.delegate.invokeMethodQuick(instance, methodName, p1);
+  }
+
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, long)
+   */
+  public Object invokeMethodQuick(final Object instance, final String methodName, final long p1) {
+    return this.delegate.invokeMethodQuick(instance, methodName, p1);
+  }
+
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, float)
+   */
+  public Object invokeMethodQuick(final Object instance, final String methodName, final float p1) {
+    return this.delegate.invokeMethodQuick(instance, methodName, p1);
+  }
+
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, double)
+   */
+  public Object invokeMethodQuick(final Object instance, final String methodName, final double p1) {
+    return this.delegate.invokeMethodQuick(instance, methodName, p1);
+  }
+
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, java.math.BigInteger)
+   */
+  public Object invokeMethodQuick(final Object instance, final String methodName, final BigInteger p1) {
+    return this.delegate.invokeMethodQuick(instance, methodName, p1);
+  }
+
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, java.math.BigDecimal)
+   */
+  public Object invokeMethodQuick(final Object instance, final String methodName, final BigDecimal p1) {
+    return this.delegate.invokeMethodQuick(instance, methodName, p1);
   }
 
   /**

@@ -1,5 +1,7 @@
 package uk.co.wilson.ng.runtime.metaclass;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -227,6 +229,76 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   public MetaMethod getMetaMethodQuick(final String methodName, final Object p1) {
     return selectMethod(new MetaMethodSelection(), methodName,
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p1)).metaMethod;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, boolean)
+   */
+  public MetaMethod getMetaMethodQuick(final String methodName, final boolean p1) {
+    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngBooleanMetaClass).metaMethod;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, char)
+   */
+  public MetaMethod getMetaMethodQuick(final String methodName, final char p1) {
+    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngCharMetaClass).metaMethod;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, byte)
+   */
+  public MetaMethod getMetaMethodQuick(final String methodName, final byte p1) {
+    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngByteMetaClass).metaMethod;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, short)
+   */
+  public MetaMethod getMetaMethodQuick(final String methodName, final short p1) {
+    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngShortMetaClass).metaMethod;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, int)
+   */
+  public MetaMethod getMetaMethodQuick(final String methodName, final int p1) {
+    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngIntMetaClass).metaMethod;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, long)
+   */
+  public MetaMethod getMetaMethodQuick(final String methodName, final long p1) {
+    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngLongMetaClass).metaMethod;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, float)
+   */
+  public MetaMethod getMetaMethodQuick(final String methodName, final float p1) {
+    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngFloatMetaClass).metaMethod;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, double)
+   */
+  public MetaMethod getMetaMethodQuick(final String methodName, final double p1) {
+    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngDoubleMetaClass).metaMethod;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.math.BigInteger)
+   */
+  public MetaMethod getMetaMethodQuick(final String methodName, final BigInteger p1) {
+    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.bigIntegerMetaClass).metaMethod;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.math.BigDecimal)
+   */
+  public MetaMethod getMetaMethodQuick(final String methodName, final BigDecimal p1) {
+    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.bigDecimalMetaClass).metaMethod;
   }
 
   /**

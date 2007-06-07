@@ -309,6 +309,206 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
 
     return result;
   }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, boolean)
+   */
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final boolean p1) {
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+
+    if (result == NOT_CALLED) {
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
+
+    return result;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, char)
+   */
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final char p1) {
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+
+    if (result == NOT_CALLED) {
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
+
+    return result;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, byte)
+   */
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final byte p1) {
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+
+    if (result == NOT_CALLED) {
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
+
+    return result;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, short)
+   */
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final short p1) {
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+
+    if (result == NOT_CALLED) {
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
+
+    return result;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, int)
+   */
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final int p1) {
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+
+    if (result == NOT_CALLED) {
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
+
+    return result;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, long)
+   */
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final long p1) {
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+
+    if (result == NOT_CALLED) {
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
+
+    return result;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, float)
+   */
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final float p1) {
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+
+    if (result == NOT_CALLED) {
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
+
+    return result;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, double)
+   */
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final double p1) {
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+
+    if (result == NOT_CALLED) {
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
+
+    return result;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.math.BigInteger)
+   */
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final BigInteger p1) {
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+
+    if (result == NOT_CALLED) {
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
+
+    return result;
+  }
+  
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.math.BigDecimal)
+   */
+  public  Object invokeMethodQuick(final Object instance, final String methodName, final BigDecimal p1) {
+  Object result = this.internalMetaClass.doGetMetaMethodQuick(methodName, p1).call(instance, p1);
+
+    if (result == NOT_CALLED) {
+      result = this.internalMetaClass.doGetGetPropertyMetaMethod(instance, methodName).call(instance, methodName);
+      
+      if (result != NOT_CALLED) {
+        return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).callQuick(instance, p1);
+      }
+      
+      // TODO: make this error more detailed.
+      throw new NgRuntimeException("The method " +  methodName + " is not found");
+    }
+
+    return result;
+  }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
@@ -474,6 +674,126 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.lang.Object)
    */
   public  Object callQuick(final Object instance, final Object p1) {
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, boolean)
+   */
+  public  Object callQuick(final Object instance, final boolean p1) {
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, char)
+   */
+  public  Object callQuick(final Object instance, final char p1) {
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, byte)
+   */
+  public  Object callQuick(final Object instance, final byte p1) {
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, short)
+   */
+  public  Object callQuick(final Object instance, final short p1) {
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, int)
+   */
+  public  Object callQuick(final Object instance, final int p1) {
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, long)
+   */
+  public  Object callQuick(final Object instance, final long p1) {
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, float)
+   */
+  public  Object callQuick(final Object instance, final float p1) {
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, double)
+   */
+  public  Object callQuick(final Object instance, final double p1) {
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.math.BigInteger)
+   */
+  public  Object callQuick(final Object instance, final BigInteger p1) {
+  final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
+
+    // TODO: make this error more detailed.
+    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " is not callable");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object, java.math.BigDecimal)
+   */
+  public  Object callQuick(final Object instance, final BigDecimal p1) {
   final Object result = this.internalMetaClass.doGetAnonMetaMethod().call(instance, p1);
 
     // TODO: make this error more detailed.

@@ -134,9 +134,109 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
-   *         parameters.
+   *         parameter.
    */
   public MetaMethod doGetMetaMethodQuick(final String methodName, final Object p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
+  }
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final boolean p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
+  }
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final char p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
+  }
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final byte p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
+  }
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final short p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
+  }
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final int p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
+  }
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final long p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
+  }
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final float p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
+  }
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final double p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
+  }
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final BigInteger p1) {
+    return this.instanceHandler.getMetaMethodQuick(methodName, p1);
+  }
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  public MetaMethod doGetMetaMethodQuick(final String methodName, final BigDecimal p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -4555,7 +4655,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseRemainder(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseRemainder(lhsObject, rhs);
   }
@@ -4724,23 +4824,23 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doRemainderEquals(final BigInteger lhs, final byte rhs) {
-    return doRemainderEquals((Object)lhs, NgByte.valueOf(rhs));
+    return doRemainderEquals(lhs, NgByte.valueOf(rhs));
   }
 
   public Object doRemainderEquals(final BigInteger lhs, final char rhs) {
-    return doRemainderEquals((Object)lhs, NgChar.valueOf(rhs));
+    return doRemainderEquals(lhs, NgChar.valueOf(rhs));
   }
 
   public Object doRemainderEquals(final BigInteger lhs, final short rhs) {
-    return doRemainderEquals((Object)lhs, NgShort.valueOf(rhs));
+    return doRemainderEquals(lhs, NgShort.valueOf(rhs));
   }
 
   public Object doRemainderEquals(final BigInteger lhs, final int rhs) {
-    return doRemainderEquals((Object)lhs, NgInt.valueOf(rhs));
+    return doRemainderEquals(lhs, NgInt.valueOf(rhs));
   }
 
   public Object doRemainderEquals(final BigInteger lhs, final long rhs) {
-    return doRemainderEquals((Object)lhs, NgLong.valueOf(rhs));
+    return doRemainderEquals(lhs, NgLong.valueOf(rhs));
   }
 
   public Object doRemainderEquals(final BigInteger lhs, final BigInteger rhs) {
@@ -4778,7 +4878,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doRemainderEquals(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseRemainderEquals(lhs, rhsObject);
   }
@@ -4814,7 +4914,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseRemainderEquals(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseRemainderEquals(lhsObject, rhs);
   }
@@ -5107,31 +5207,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doIntegerDivide(final BigInteger lhs, final byte rhs) {
-    return doIntegerDivide((Object)lhs, NgByte.valueOf(rhs));
+    return doIntegerDivide(lhs, NgByte.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigInteger lhs, final char rhs) {
-    return doIntegerDivide((Object)lhs, NgChar.valueOf(rhs));
+    return doIntegerDivide(lhs, NgChar.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigInteger lhs, final short rhs) {
-    return doIntegerDivide((Object)lhs, NgShort.valueOf(rhs));
+    return doIntegerDivide(lhs, NgShort.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigInteger lhs, final int rhs) {
-    return doIntegerDivide((Object)lhs, NgInt.valueOf(rhs));
+    return doIntegerDivide(lhs, NgInt.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigInteger lhs, final long rhs) {
-    return doIntegerDivide((Object)lhs, NgLong.valueOf(rhs));
+    return doIntegerDivide(lhs, NgLong.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigInteger lhs, final float rhs) {
-    return doIntegerDivide((Object)lhs, NgFloat.valueOf(rhs));
+    return doIntegerDivide(lhs, NgFloat.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigInteger lhs, final double rhs) {
-    return doIntegerDivide((Object)lhs, NgDouble.valueOf(rhs));
+    return doIntegerDivide(lhs, NgDouble.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigInteger lhs, final BigInteger rhs) {
@@ -5143,31 +5243,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doIntegerDivide(final BigDecimal lhs, final byte rhs) {
-    return doIntegerDivide((Object)lhs, NgByte.valueOf(rhs));
+    return doIntegerDivide(lhs, NgByte.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigDecimal lhs, final char rhs) {
-    return doIntegerDivide((Object)lhs, NgChar.valueOf(rhs));
+    return doIntegerDivide(lhs, NgChar.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigDecimal lhs, final short rhs) {
-    return doIntegerDivide((Object)lhs, NgShort.valueOf(rhs));
+    return doIntegerDivide(lhs, NgShort.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigDecimal lhs, final int rhs) {
-    return doIntegerDivide((Object)lhs, NgInt.valueOf(rhs));
+    return doIntegerDivide(lhs, NgInt.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigDecimal lhs, final long rhs) {
-    return doIntegerDivide((Object)lhs, NgLong.valueOf(rhs));
+    return doIntegerDivide(lhs, NgLong.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigDecimal lhs, final float rhs) {
-    return doIntegerDivide((Object)lhs, NgFloat.valueOf(rhs));
+    return doIntegerDivide(lhs, NgFloat.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigDecimal lhs, final double rhs) {
-    return doIntegerDivide((Object)lhs, NgDouble.valueOf(rhs));
+    return doIntegerDivide(lhs, NgDouble.valueOf(rhs));
   }
 
   public Object doIntegerDivide(final BigDecimal lhs, final BigInteger rhs) {
@@ -5221,13 +5321,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doIntegerDivide(final Object lhs, final BigInteger rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseIntegerDivide(lhs, rhsObject);
   }
 
   public Object doIntegerDivide(final Object lhs, final BigDecimal rhs) {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseIntegerDivide(lhs, rhsObject);
   }
@@ -5275,7 +5375,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseIntegerDivide(final BigInteger lhs, final Object rhs) {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseIntegerDivide(lhsObject, rhs);
   }

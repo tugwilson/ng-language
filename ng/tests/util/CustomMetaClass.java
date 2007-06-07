@@ -2873,6 +2873,86 @@ class CustomMetaClass implements RuntimeMetaClass {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, java.math.BigDecimal)
+   */
+  public Object callQuick(Object instance, BigDecimal p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, java.math.BigInteger)
+   */
+  public Object callQuick(Object instance, BigInteger p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, boolean)
+   */
+  public Object callQuick(Object instance, boolean p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, byte)
+   */
+  public Object callQuick(Object instance, byte p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, char)
+   */
+  public Object callQuick(Object instance, char p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, double)
+   */
+  public Object callQuick(Object instance, double p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, float)
+   */
+  public Object callQuick(Object instance, float p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, int)
+   */
+  public Object callQuick(Object instance, int p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, long)
+   */
+  public Object callQuick(Object instance, long p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, short)
+   */
+  public Object callQuick(Object instance, short p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#call(java.lang.Object)
    */
   public Object callQuick(final Object instance) {
@@ -8724,6 +8804,86 @@ class CustomMetaClass implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object invokeMethodQuick(final Object instance, final String methodName, final Object p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, java.math.BigDecimal)
+   */
+  public Object invokeMethodQuick(Object instance, String methodName, BigDecimal p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, java.math.BigInteger)
+   */
+  public Object invokeMethodQuick(Object instance, String methodName, BigInteger p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, boolean)
+   */
+  public Object invokeMethodQuick(Object instance, String methodName, boolean p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, byte)
+   */
+  public Object invokeMethodQuick(Object instance, String methodName, byte p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, char)
+   */
+  public Object invokeMethodQuick(Object instance, String methodName, char p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, double)
+   */
+  public Object invokeMethodQuick(Object instance, String methodName, double p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, float)
+   */
+  public Object invokeMethodQuick(Object instance, String methodName, float p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, int)
+   */
+  public Object invokeMethodQuick(Object instance, String methodName, int p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, long)
+   */
+  public Object invokeMethodQuick(Object instance, String methodName, long p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, short)
+   */
+  public Object invokeMethodQuick(Object instance, String methodName, short p1) {
     // TODO Auto-generated method stub
     return null;
   }
