@@ -131,6 +131,86 @@ public interface RuntimeMetaClass extends MetaClass {
    * @param instance
    * @param methodName
    * @param p1
+   * @return
+   */
+  Object invokeMethodQuick(Object instance, String methodName, boolean p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Object invokeMethodQuick(Object instance, String methodName, char p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Object invokeMethodQuick(Object instance, String methodName, byte p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Object invokeMethodQuick(Object instance, String methodName, short p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Object invokeMethodQuick(Object instance, String methodName, int p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Object invokeMethodQuick(Object instance, String methodName, long p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Object invokeMethodQuick(Object instance, String methodName, float p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Object invokeMethodQuick(Object instance, String methodName, double p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Object invokeMethodQuick(Object instance, String methodName, BigInteger p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Object invokeMethodQuick(Object instance, String methodName, BigDecimal p1);
+  
+  /**
+   * @param instance
+   * @param methodName
+   * @param p1
    * @param p2
    * @return
    */
@@ -169,6 +249,76 @@ public interface RuntimeMetaClass extends MetaClass {
    * @return
    */
   Object callQuick(Object instance, Object p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, boolean p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, char p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, byte p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, short p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, int p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, long p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, float p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, double p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, BigInteger p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(Object instance, BigDecimal p1);
   
   /**
    * @param instance

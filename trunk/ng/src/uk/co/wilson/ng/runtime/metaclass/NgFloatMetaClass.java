@@ -1579,402 +1579,502 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
     return NgInt.ONE;
   }
 
+  @Override
   public Object doCompare(final float lhs, final BigInteger rhs) {
     return NgInt.valueOf(new BigDecimal(lhs).compareTo(new BigDecimal(rhs)));
   }
 
+  @Override
   public Object doCompare(final float lhs, final BigDecimal rhs) {
     return NgInt.valueOf(new BigDecimal(lhs).compareTo(rhs));
   }
 
+  @Override
   public Object doCompare(final Object lhs, final byte rhs) {
     return doCompare(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doCompare(final Object lhs, final char rhs) {
     return doCompare(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doCompare(final Object lhs, final short rhs) {
     return doCompare(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doCompare(final Object lhs, final int rhs) {
     return doCompare(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doCompare(final Object lhs, final long rhs) {
     return doCompare(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doCompare(final Object lhs, final float rhs) {
     return doCompare(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doCompare(final Object lhs, final double rhs) {
     return doCompare(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doCompare(final Object lhs, final BigInteger rhs) {
     return doCompare(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doCompare(final Object lhs, final BigDecimal rhs) {
     return doCompare(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doReverseCompare(final byte lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(byte.class).doCompare(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseCompare(final char lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(char.class).doCompare(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseCompare(final short lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(short.class).doCompare(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseCompare(final int lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(int.class).doCompare(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseCompare(final long lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(long.class).doCompare(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseCompare(final float lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(float.class).doCompare(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseCompare(final double lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(double.class).doCompare(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseCompare(final BigInteger lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigInteger.class).doCompare(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseCompare(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doCompare(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doEquals(final Object lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doEquals(final float lhs, final byte rhs) {
     return (lhs == rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doEquals(final float lhs, final char rhs) {
     return (lhs == rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doEquals(final float lhs, final short rhs) {
     return (lhs == rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doEquals(final float lhs, final int rhs) {
     return (lhs == rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doEquals(final float lhs, final long rhs) {
     return (lhs == rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doEquals(final float lhs, final float rhs) {
     return (lhs == rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doEquals(final float lhs, final double rhs) {
     return (lhs == rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doEquals(final float lhs, final BigInteger rhs) {
     return (lhs == rhs.floatValue()) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doEquals(final float lhs, final BigDecimal rhs) {
     return (new BigDecimal(lhs).compareTo(rhs) == 0) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doEquals(final Object lhs, final byte rhs) {
     return doEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doEquals(final Object lhs, final char rhs) {
     return doEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doEquals(final Object lhs, final short rhs) {
     return doEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doEquals(final Object lhs, final int rhs) {
     return doEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doEquals(final Object lhs, final long rhs) {
     return doEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doEquals(final Object lhs, final float rhs) {
     return doEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doEquals(final Object lhs, final double rhs) {
     return doEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doEquals(final Object lhs, final BigInteger rhs) {
     return doEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doEquals(final Object lhs, final BigDecimal rhs) {
     return doEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doReverseEquals(final byte lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(byte.class).doEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseEquals(final char lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(char.class).doEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseEquals(final short lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(short.class).doEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseEquals(final int lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(int.class).doEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseEquals(final long lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(long.class).doEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseEquals(final float lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(float.class).doEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseEquals(final double lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(double.class).doEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseEquals(final BigInteger lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigInteger.class).doEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseEquals(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doNotEquals(final Object lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseNotEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doNotEquals(final float lhs, final byte rhs) {
     return (lhs != rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doNotEquals(final float lhs, final char rhs) {
     return (lhs != rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doNotEquals(final float lhs, final short rhs) {
     return (lhs != rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doNotEquals(final float lhs, final int rhs) {
     return (lhs != rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doNotEquals(final float lhs, final long rhs) {
     return (lhs != rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doNotEquals(final float lhs, final float rhs) {
     return (lhs != rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doNotEquals(final float lhs, final double rhs) {
     return (lhs != rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doNotEquals(final float lhs, final BigInteger rhs) {
     return (lhs != rhs.floatValue()) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doNotEquals(final float lhs, final BigDecimal rhs) {
     return (new BigDecimal(lhs).compareTo(rhs) != 0) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doNotEquals(final Object lhs, final byte rhs) {
     return doNotEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doNotEquals(final Object lhs, final char rhs) {
     return doNotEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doNotEquals(final Object lhs, final short rhs) {
     return doNotEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doNotEquals(final Object lhs, final int rhs) {
     return doNotEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doNotEquals(final Object lhs, final long rhs) {
     return doNotEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doNotEquals(final Object lhs, final float rhs) {
     return doNotEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doNotEquals(final Object lhs, final double rhs) {
     return doNotEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doNotEquals(final Object lhs, final BigInteger rhs) {
     return doNotEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doNotEquals(final Object lhs, final BigDecimal rhs) {
     return doNotEquals(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doReverseNotEquals(final byte lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(byte.class).doNotEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseNotEquals(final char lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(char.class).doNotEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseNotEquals(final short lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(short.class).doNotEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseNotEquals(final int lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(int.class).doNotEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseNotEquals(final long lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(long.class).doNotEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseNotEquals(final float lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(float.class).doNotEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseNotEquals(final double lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(double.class).doNotEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseNotEquals(final BigInteger lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigInteger.class).doNotEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseNotEquals(final BigDecimal lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doNotEquals(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doLessThan(final Object lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThan(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doLessThan(final float lhs, final byte rhs) {
     return (lhs < rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doLessThan(final float lhs, final char rhs) {
     return (lhs < rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doLessThan(final float lhs, final short rhs) {
     return (lhs < rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doLessThan(final float lhs, final int rhs) {
     return (lhs < rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doLessThan(final float lhs, final long rhs) {
     return (lhs < rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doLessThan(final float lhs, final float rhs) {
     return (lhs < rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doLessThan(final float lhs, final double rhs) {
     return (lhs < rhs) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doLessThan(final float lhs, final BigInteger rhs) {
     return (lhs < rhs.floatValue()) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doLessThan(final float lhs, final BigDecimal rhs) {
     return (new BigDecimal(lhs).compareTo(rhs) < 0) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
+  @Override
   public Object doLessThan(final Object lhs, final byte rhs) {
     return doLessThan(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doLessThan(final Object lhs, final char rhs) {
     return doLessThan(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doLessThan(final Object lhs, final short rhs) {
     return doLessThan(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doLessThan(final Object lhs, final int rhs) {
     return doLessThan(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doLessThan(final Object lhs, final long rhs) {
     return doLessThan(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doLessThan(final Object lhs, final float rhs) {
     return doLessThan(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doLessThan(final Object lhs, final double rhs) {
     return doLessThan(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doLessThan(final Object lhs, final BigInteger rhs) {
     return doLessThan(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doLessThan(final Object lhs, final BigDecimal rhs) {
     return doLessThan(((NgFloat)lhs).getFloatValue(), rhs);
   }
 
+  @Override
   public Object doReverseLessThan(final byte lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(byte.class).doLessThan(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseLessThan(final char lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(char.class).doLessThan(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseLessThan(final short lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(short.class).doLessThan(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseLessThan(final int lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(int.class).doLessThan(lhs, ((NgFloat)rhs).getFloatValue());
   }
 
+  @Override
   public Object doReverseLessThan(final long lhs, final Object rhs) {
     return NgSystem.metaClassRegistry.getInternalMetaClass(long.class).doLessThan(lhs, ((NgFloat)rhs).getFloatValue());
   }

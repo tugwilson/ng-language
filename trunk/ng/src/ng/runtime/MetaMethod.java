@@ -1,5 +1,8 @@
 package ng.runtime;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 /**
@@ -83,6 +86,76 @@ public interface MetaMethod {
    * @return
    */
   Object call(Object instance, Object p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, boolean p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, char p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, byte p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, short p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, int p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, long p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, float p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, double p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, BigInteger p1);
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object call(Object instance, BigDecimal p1);
   
   /**
    * @param instance

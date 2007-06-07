@@ -24,7 +24,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.c0Called);
       
       assertFalse(o.c1Called);
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", null);
+      NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", (Object)null);
       assertTrue(o.c1Called);
       
       assertFalse(o.c2Called);
@@ -124,7 +124,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.c0Called);
       
       assertFalse(o.c1Called);
-      assertTrue(((NgBoolean)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", null)).getBooleanValue() == o.res);
+      assertTrue(((NgBoolean)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", (Object)null)).getBooleanValue() == o.res);
       assertTrue(o.c1Called);
       
       assertFalse(o.c2Called);
@@ -178,7 +178,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.c0Called);
       
       assertFalse(o.c1Called);
-      assertTrue(((NgChar)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", null)).getCharValue() == o.res);
+      assertTrue(((NgChar)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", (Object)null)).getCharValue() == o.res);
       assertTrue(o.c1Called);
       
       assertFalse(o.c2Called);
@@ -231,7 +231,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.c0Called);
       
       assertFalse(o.c1Called);
-      assertTrue(((NgByte)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", null)).getByteValue() == o.res);
+      assertTrue(((NgByte)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", (Object)null)).getByteValue() == o.res);
       assertTrue(o.c1Called);
       
       assertFalse(o.c2Called);
@@ -284,7 +284,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.c0Called);
       
       assertFalse(o.c1Called);
-      assertTrue(((NgShort)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", null)).getShortValue() == o.res);
+      assertTrue(((NgShort)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", (Object)null)).getShortValue() == o.res);
       assertTrue(o.c1Called);
       
       assertFalse(o.c2Called);
@@ -337,7 +337,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.c0Called);
       
       assertFalse(o.c1Called);
-      assertTrue(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", null)).getIntValue() == o.res);
+      assertTrue(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", (Object)null)).getIntValue() == o.res);
       assertTrue(o.c1Called);
       
       assertFalse(o.c2Called);
@@ -390,7 +390,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.c0Called);
       
       assertFalse(o.c1Called);
-      assertTrue(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", null)).getLongValue() == o.res);
+      assertTrue(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", (Object)null)).getLongValue() == o.res);
       assertTrue(o.c1Called);
       
       assertFalse(o.c2Called);
@@ -443,7 +443,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.c0Called);
       
       assertFalse(o.c1Called);
-      assertTrue(((NgFloat)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", null)).getFloatValue() == o.res);
+      assertTrue(((NgFloat)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", (Object)null)).getFloatValue() == o.res);
       assertTrue(o.c1Called);
       
       assertFalse(o.c2Called);
@@ -496,7 +496,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.c0Called);
       
       assertFalse(o.c1Called);
-      assertTrue(((NgDouble)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", null)).getDoubleValue() == o.res);
+      assertTrue(((NgDouble)NgSystem.metaClassRegistry.getRuntimeMetaClass(o).invokeMethodQuick(o, "c1", (Object)null)).getDoubleValue() == o.res);
       assertTrue(o.c1Called);
       
       assertFalse(o.c2Called);

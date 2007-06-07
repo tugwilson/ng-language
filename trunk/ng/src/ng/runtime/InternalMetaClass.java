@@ -129,9 +129,89 @@ public interface InternalMetaClass {
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
-   *         parameters.
+   *         parameter.
    */
   MetaMethod doGetMetaMethodQuick(String methodName, Object p1);
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  MetaMethod doGetMetaMethodQuick(String methodName, boolean p1);
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  MetaMethod doGetMetaMethodQuick(String methodName, char p1);
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  MetaMethod doGetMetaMethodQuick(String methodName, byte p1);
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  MetaMethod doGetMetaMethodQuick(String methodName, short p1);
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  MetaMethod doGetMetaMethodQuick(String methodName, int p1);
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  MetaMethod doGetMetaMethodQuick(String methodName, long p1);
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  MetaMethod doGetMetaMethodQuick(String methodName, float p1);
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  MetaMethod doGetMetaMethodQuick(String methodName, double p1);
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  MetaMethod doGetMetaMethodQuick(String methodName, BigInteger p1);
+
+  /**
+   * @param methodName
+   * @param p1
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameter.
+   */
+  MetaMethod doGetMetaMethodQuick(String methodName, BigDecimal p1);
 
   /**
    * @param methodName
