@@ -16,7 +16,7 @@ import ng.runtime.NgShort;
  *
  */
 public class MethodCallTest extends TestCase {
-  public void testVoid() {
+  public void testVoid() throws Throwable {
     final TestVoidTarget o = new TestVoidTarget();
    
       assertFalse(o.c0Called);
@@ -116,7 +116,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.t4 == null);
     }
   
-  public void testBoolean() {
+  public void testBoolean() throws Throwable {
     final TestBooleanTarget o = new TestBooleanTarget();
     
       assertFalse(o.c0Called);
@@ -170,7 +170,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1);
     }
   
-  public void testChar() {
+  public void testChar() throws Throwable {
     final TestCharTarget o = new TestCharTarget();
     
       assertFalse(o.c0Called);
@@ -223,7 +223,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (char)1);
     }
   
-  public void testByte() {
+  public void testByte() throws Throwable {
     final TestByteTarget o = new TestByteTarget();
     
       assertFalse(o.c0Called);
@@ -276,7 +276,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (byte)1);
     }
   
-  public void testShort() {
+  public void testShort() throws Throwable {
     final TestShortTarget o = new TestShortTarget();
     
       assertFalse(o.c0Called);
@@ -329,7 +329,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (short)1);
     }
   
-  public void testInt() {
+  public void testInt() throws Throwable {
     final TestIntTarget o = new TestIntTarget();
     
       assertFalse(o.c0Called);
@@ -382,7 +382,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (int)1);
  }
   
-  public void testLong() {
+  public void testLong() throws Throwable {
     final TestLongTarget o = new TestLongTarget();
     
       assertFalse(o.c0Called);
@@ -435,7 +435,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (long)1);
     }
   
-  public void testFloat() {
+  public void testFloat() throws Throwable {
     final TestFloatTarget o = new TestFloatTarget();
     
       assertFalse(o.c0Called);
@@ -488,7 +488,7 @@ public class MethodCallTest extends TestCase {
       assertTrue(o.value1 == (float)1);
     }
   
-  public void testDouble() {
+  public void testDouble() throws Throwable {
     final TestDoubleTarget o = new TestDoubleTarget();
     
       assertFalse(o.c0Called);
@@ -555,7 +555,7 @@ class TestVoidTarget {
   public Integer t3 = new Integer(2);
   public Integer t4 = null;
   
-  public void c0() {
+  public void c0() throws Throwable {
     this.c0Called = true;
   }
   
@@ -582,7 +582,7 @@ class TestVoidTarget {
   /**
    * @return the t1
    */
-  public Object getT1() {
+  public Object getT1() throws Throwable {
     return this.t1;
   }
 
@@ -596,7 +596,7 @@ class TestVoidTarget {
   /**
    * @return the t2
    */
-  public Object getT2() {
+  public Object getT2() throws Throwable {
     return this.t2;
   }
 
@@ -610,7 +610,7 @@ class TestVoidTarget {
   /**
    * @return the t3
    */
-  public Integer getT3() {
+  public Integer getT3() throws Throwable {
     return this.t3;
   }
 
@@ -624,7 +624,7 @@ class TestVoidTarget {
   /**
    * @return the t4
    */
-  public Integer getT4() {
+  public Integer getT4() throws Throwable {
     return this.t4;
   }
 
@@ -649,7 +649,7 @@ class TestBooleanTarget {
   public boolean value = false;
   public boolean value1 = false;
   
-  public boolean c0() {
+  public boolean c0() throws Throwable {
     this.c0Called = true;
     return this.res;
   }
@@ -682,7 +682,7 @@ class TestBooleanTarget {
   /**
    * @return the value
    */
-  public boolean isValue() {
+  public boolean isValue() throws Throwable {
     return this.value;
   }
 
@@ -707,7 +707,7 @@ class TestCharTarget {
   public char value = 0;
   public char value1 = 0;
   
-  public char c0() {
+  public char c0() throws Throwable {
     this.c0Called = true;
     return this.res;
   }
@@ -740,7 +740,7 @@ class TestCharTarget {
   /**
    * @return the value
    */
-  public char getValue() {
+  public char getValue() throws Throwable {
     return this.value;
   }
 
@@ -765,7 +765,7 @@ class TestByteTarget {
   public byte value = 0;
   public byte value1 = 0;
   
-  public byte c0() {
+  public byte c0() throws Throwable {
     this.c0Called = true;
     return this.res;
   }
@@ -798,7 +798,7 @@ class TestByteTarget {
   /**
    * @return the value
    */
-  public byte getValue() {
+  public byte getValue() throws Throwable {
     return this.value;
   }
 
@@ -823,7 +823,7 @@ class TestShortTarget {
   public short value = 0;
   public short value1 = 0;
   
-  public short c0() {
+  public short c0() throws Throwable {
     this.c0Called = true;
     return this.res;
   }
@@ -856,7 +856,7 @@ class TestShortTarget {
   /**
    * @return the value
    */
-  public short getValue() {
+  public short getValue() throws Throwable {
     return this.value;
   }
 
@@ -881,7 +881,7 @@ class TestIntTarget {
   public int value = 0;
   public int value1 = 0;
   
-  public int c0() {
+  public int c0() throws Throwable {
     this.c0Called = true;
     return this.res;
   }
@@ -914,7 +914,7 @@ class TestIntTarget {
   /**
    * @return the value
    */
-  public int getValue() {
+  public int getValue() throws Throwable {
     return this.value;
   }
 
@@ -939,7 +939,7 @@ class TestLongTarget {
   public long value = 0;
   public long value1 = 0;
   
-  public long c0() {
+  public long c0() throws Throwable {
     this.c0Called = true;
     return this.res;
   }
@@ -972,7 +972,7 @@ class TestLongTarget {
   /**
    * @return the value
    */
-  public long getValue() {
+  public long getValue() throws Throwable {
     return this.value;
   }
 
@@ -997,7 +997,7 @@ class TestFloatTarget {
   public float value = 0;
   public float value1 = 0;
   
-  public float c0() {
+  public float c0() throws Throwable {
     this.c0Called = true;
     return this.res;
   }
@@ -1030,7 +1030,7 @@ class TestFloatTarget {
   /**
    * @return the value
    */
-  public float getValue() {
+  public float getValue() throws Throwable {
     return this.value;
   }
 
@@ -1055,7 +1055,7 @@ class TestDoubleTarget {
   
   public double value = 0;
   
-  public double c0() {
+  public double c0() throws Throwable {
     this.c0Called = true;
     return this.res;
   }
@@ -1088,7 +1088,7 @@ class TestDoubleTarget {
   /**
    * @return the value
    */
-  public double getValue() {
+  public double getValue() throws Throwable {
     return this.value;
   }
 

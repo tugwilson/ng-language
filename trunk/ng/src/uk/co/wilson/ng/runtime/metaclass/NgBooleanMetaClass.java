@@ -51,7 +51,7 @@ class NgBooleanInternalMetaClass extends InternalMetaClassImpl {
   }
   
   @Override
-  public Object doAsType(final Object instance, final Class type) {
+  public Object doAsType(final Object instance, final Class type) throws Throwable {
     
     if (type == boolean.class) return instance;
     

@@ -205,7 +205,7 @@ public class LogicalTest extends TestCase {
     this.shiftTypeConverter.put(BigInteger.class, this.bigIntegerType);
   }
   
-  public void testNot() {
+  public void testNot() throws Throwable {
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(boolean.class).not(true)).getBooleanValue(), false);
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(boolean.class).not(false)).getBooleanValue(), true);
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(NgBoolean.TRUE).not(NgBoolean.TRUE)).getBooleanValue(), false);
@@ -222,7 +222,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testAnd() {
+  public void testAnd() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).and((byte)1, (byte)1);   
@@ -621,7 +621,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testAndEquals() {
+  public void testAndEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).andEquals((byte)1, (byte)1);   
@@ -1020,7 +1020,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testOr() {
+  public void testOr() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).or((byte)1, (byte)1);   
@@ -1419,7 +1419,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testOrEquals() {
+  public void testOrEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).orEquals((byte)1, (byte)1);   
@@ -1818,7 +1818,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testXor() {
+  public void testXor() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).xor((byte)1, (byte)1);   
@@ -2217,7 +2217,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testXorEquals() {
+  public void testXorEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).xorEquals((byte)1, (byte)1);   
@@ -2616,7 +2616,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testLeftShift() {
+  public void testLeftShift() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).leftShift((byte)1, (byte)1);   
@@ -3015,7 +3015,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testLeftShiftEquals() {
+  public void testLeftShiftEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).leftShiftEquals((byte)1, (byte)1);   
@@ -3414,7 +3414,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testArithmeticRightShift() {
+  public void testArithmeticRightShift() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).arithmeticRightShift((byte)1, (byte)1);   
@@ -3813,7 +3813,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testArithmeticRightShiftEquals() {
+  public void testArithmeticRightShiftEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).arithmeticRightShiftEquals((byte)1, (byte)1);   
@@ -4212,7 +4212,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testLogicalRightShift() {
+  public void testLogicalRightShift() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).logicalRightShift((byte)1, (byte)1);   
@@ -4585,7 +4585,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testLogicalRightShiftEquals() {
+  public void testLogicalRightShiftEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).logicalRightShiftEquals((byte)1, (byte)1);   
@@ -4958,7 +4958,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testGreaterThanOrEquals () {
+  public void testGreaterThanOrEquals () throws Throwable {
   final boolean b1 = false, b2 = true, b3 = true, b4 = true;
   
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(byte.class).greaterThanOrEquals((byte)1, (byte)2)).getBooleanValue(), b1);
@@ -5878,7 +5878,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testGreaterThan() {
+  public void testGreaterThan() throws Throwable {
   final boolean b1 = false, b2 = false, b3 = false, b4 = true;
   
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(byte.class).greaterThan((byte)1, (byte)2)).getBooleanValue(), b1);
@@ -6798,7 +6798,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testCompare() {
+  public void testCompare() throws Throwable {
   
     assertTrue(((NgInt)this.registry.getRuntimeMetaClass(byte.class).compare((byte)1, (byte)2)).getIntValue() < 0);
     assertTrue(((NgInt)this.registry.getRuntimeMetaClass(byte.class).compare((byte)1, (byte)1)).getIntValue() == 0);
@@ -7717,7 +7717,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testEquals() {
+  public void testEquals() throws Throwable {
   final boolean b1 = false, b2 = true, b3 = true, b4 = false;
   
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(byte.class).equals((byte)1, (byte)2)).getBooleanValue(), b1);
@@ -8638,7 +8638,7 @@ public class LogicalTest extends TestCase {
 
   }
 
-  public void testNotEquals() {
+  public void testNotEquals() throws Throwable {
     final boolean b1 = true, b2 = false, b3 = false, b4 = true;
     
       assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(byte.class).notEquals((byte)1, (byte)2)).getBooleanValue(), b1);
@@ -9558,7 +9558,7 @@ public class LogicalTest extends TestCase {
       } catch (final NgRuntimeException e) {}
     }
   
-  public void testLessThan() {
+  public void testLessThan() throws Throwable {
   final boolean b1 = true, b2 = false, b3 = false, b4 = false;
   
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(byte.class).lessThan((byte)1, (byte)2)).getBooleanValue(), b1);
@@ -10478,7 +10478,7 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
      
-  public void testLessThanOrEquals() {
+  public void testLessThanOrEquals() throws Throwable {
   final boolean b1 = true, b2 = true, b3 = true, b4 = false;
   
     assertEquals(((NgBoolean)this.registry.getRuntimeMetaClass(byte.class).lessThanOrEquals((byte)1, (byte)2)).getBooleanValue(), b1);

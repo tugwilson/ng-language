@@ -32,7 +32,7 @@ import ng.runtime.NgTyped;
 public class AdHocTest {
 
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Throwable {
     final Object t = new T();
     final Object t1 = new T1();
     final Object t2 = new T2();
