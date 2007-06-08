@@ -43,7 +43,7 @@ public interface MetaClass {
    * @param arguments
    * @return an instance of the Class represented by the MetaClass
    */
-  Object invokeConstructor(Class theClass, Object[] arguments);
+  Object invokeConstructor(Class theClass, Object[] arguments) throws Throwable;
   /**
    * @param instance
    * @param methodName
@@ -51,14 +51,14 @@ public interface MetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  Object invokeMethod(Object instance, String methodName, Object[] arguments);
+  Object invokeMethod(Object instance, String methodName, Object[] arguments) throws Throwable;
   
   /**
    * @param instance
    * @param propertyName
    * @return
    */
-  Object getProperty(Object instance, String propertyName);
+  Object getProperty(Object instance, String propertyName) throws Throwable;
 
   /**
    * @param instance
@@ -66,14 +66,14 @@ public interface MetaClass {
    * @param newValue
    * @return
    */
-  Object setProperty(Object instance, String propertyName, Object newValue);
+  Object setProperty(Object instance, String propertyName, Object newValue) throws Throwable;
 
   /**
    * @param instance
    * @param fieldName
    * @return
    */
-  Object getField(Object instance, String fieldName);
+  Object getField(Object instance, String fieldName) throws Throwable;
 
   /**
    * @param instance
@@ -81,312 +81,312 @@ public interface MetaClass {
    * @param newValue
    * @return
    */
-  Object setField(Object instance, String fieldName, Object newValue);
+  Object setField(Object instance, String fieldName, Object newValue) throws Throwable;
   
   /**
    * @param instance
    * @param arguments
    * @return
    */
-  Object call(Object instance, Object[] arguments);
+  Object call(Object instance, Object[] arguments) throws Throwable;
 
   /**
    * @param instance
    * @return
    */
-  Object complement(Object instance);
+  Object complement(Object instance) throws Throwable;
   
   /**
    * @param operand
    * @return
    */
-  Object not(Object operand);
+  Object not(Object operand) throws Throwable;
   
   /**
    * @param operand
    * @return
    */
-  Object unaryPlus(Object operand);
+  Object unaryPlus(Object operand) throws Throwable;
   
   /**
    * @param operand
    * @return
    */
-  Object unaryMinus(Object operand);
+  Object unaryMinus(Object operand) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object add(Object operand, Object rhs);
+  Object add(Object operand, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object addEquals(Object lhs, Object rhs);
+  Object addEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object subtract(Object lhs, Object rhs);
+  Object subtract(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object subtractEquals(Object lhs, Object rhs);
+  Object subtractEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object multiply(Object lhs, Object rhs);
+  Object multiply(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object multiplyEquals(Object lhs, Object rhs);
+  Object multiplyEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object divide(Object lhs, Object rhs);
+  Object divide(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object divideEquals(Object lhs, Object rhs);
+  Object divideEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object remainder(Object lhs, Object rhs);
+  Object remainder(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object remainderEquals(Object lhs, Object rhs);
+  Object remainderEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object integerDivide(Object lhs, Object rhs);
+  Object integerDivide(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object integerDivideEquals(Object lhs, Object rhs);
+  Object integerDivideEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object and(Object lhs, Object rhs);
+  Object and(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object andEquals(Object lhs, Object rhs);
+  Object andEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object or(Object lhs, Object rhs);
+  Object or(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object orEquals(Object lhs, Object rhs);
+  Object orEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object xor(Object lhs, Object rhs);
+  Object xor(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object xorEquals(Object lhs, Object rhs);
+  Object xorEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object leftShift(Object lhs, Object rhs);
+  Object leftShift(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object leftShiftEquals(Object lhs, Object rhs);
+  Object leftShiftEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object arithmeticRightShift(Object lhs, Object rhs);
+  Object arithmeticRightShift(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object arithmeticRightShiftEquals(Object lhs, Object rhs);
+  Object arithmeticRightShiftEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object logicalRightShift(Object lhs, Object rhs);
+  Object logicalRightShift(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object logicalRightShiftEquals(Object lhs, Object rhs);
+  Object logicalRightShiftEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param operand
    * @return
    */
-  Object prefixIncrement(Object operand);
+  Object prefixIncrement(Object operand) throws Throwable;
   
   /**
    * @param operand
    * @return
    */
-  Object prefixDecrement(Object operand);
+  Object prefixDecrement(Object operand) throws Throwable;
   
   /**
    * @param operand
    * @return
    */
-  Object postfixIncrement(Object operand);
+  Object postfixIncrement(Object operand) throws Throwable;
   
   /**
    * @param operand
    * @return
    */
-  Object postfixDecrement(Object operand);
+  Object postfixDecrement(Object operand) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object compare(Object lhs, Object rhs);
+  Object compare(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object equals(Object lhs, Object rhs);
+  Object equals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object notEquals(Object lhs, Object rhs);
+  Object notEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object lessThan(Object lhs, Object rhs);
+  Object lessThan(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object greaterThan(Object lhs, Object rhs);
+  Object greaterThan(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object lessThanOrEquals(Object lhs, Object rhs);
+  Object lessThanOrEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param lhs
    * @param rhs
    * @return
    */
-  Object greaterThanOrEquals(Object lhs, Object rhs);
+  Object greaterThanOrEquals(Object lhs, Object rhs) throws Throwable;
   
   /**
    * @param instance
    * @param type
    * @return
    */
-  Object isInstanceof(Object instance, Class type);
+  Object isInstanceof(Object instance, Class type) throws Throwable;
   
   /**
    * @param instance
    * @param rhs
    * @return
    */
-  Object isCase(Object instance, Object rhs);
+  Object isCase(Object instance, Object rhs) throws Throwable;
   
   /**
    * @param instance
    * @param type
    * @return
    */
-  Object asType(Object instance, Class type);
+  Object asType(Object instance, Class type) throws Throwable;
   
   /**
    * @param instance
    * @param index
    * @return
    */
-  Object getAt(Object instance, Object index);
+  Object getAt(Object instance, Object index) throws Throwable;
   
   /**
    * @param instance
    * @param index
    * @return
    */
-  Object putAt(Object instance, Object index);
+  Object putAt(Object instance, Object index) throws Throwable;
 }

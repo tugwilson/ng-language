@@ -213,7 +213,7 @@ public class ArithmeticTest extends TestCase {
     this.integerDivideTypeConverter.put(BigDecimal.class, this.bigDecimalType);
   }
   
-  public void testComplement() {
+  public void testComplement() throws Throwable {
   Object o;
     
     o = this.registry.getRuntimeMetaClass(byte.class).complement((byte)1);   
@@ -320,7 +320,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testUnaryPlus() {
+  public void testUnaryPlus() throws Throwable {
   Object o;
     
     o = this.registry.getRuntimeMetaClass(byte.class).unaryPlus((byte)1);   
@@ -453,7 +453,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testUnaryMinus() {
+  public void testUnaryMinus() throws Throwable {
   Object o;
     
     o = this.registry.getRuntimeMetaClass(byte.class).unaryMinus((byte)1);   
@@ -586,7 +586,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testPostfixIncrement() {
+  public void testPostfixIncrement() throws Throwable {
   Object o;
     
     o = this.registry.getRuntimeMetaClass(byte.class).postfixIncrement((byte)1);   
@@ -719,7 +719,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testPostfixDecrement() {
+  public void testPostfixDecrement() throws Throwable {
   Object o;
     
     o = this.registry.getRuntimeMetaClass(byte.class).postfixDecrement((byte)1);   
@@ -852,7 +852,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testPrefixIncrement() {
+  public void testPrefixIncrement() throws Throwable {
   Object o;
     
     o = this.registry.getRuntimeMetaClass(byte.class).prefixIncrement((byte)1);   
@@ -985,7 +985,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testPrefixDecrement() {
+  public void testPrefixDecrement() throws Throwable {
   Object o;
     
     o = this.registry.getRuntimeMetaClass(byte.class).prefixDecrement((byte)1);   
@@ -1118,7 +1118,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testAdd() {
+  public void testAdd() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).add((byte)1, (byte)1);   
@@ -1858,7 +1858,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testAddEquals() {
+  public void testAddEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).addEquals((byte)1, (byte)1);   
@@ -2598,7 +2598,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
  }
   
-  public void testSubtract() {
+  public void testSubtract() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).subtract((byte)1, (byte)1);   
@@ -3338,7 +3338,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testSubtractEquals() {
+  public void testSubtractEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).subtractEquals((byte)1, (byte)1);   
@@ -4078,7 +4078,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testMultiply() {
+  public void testMultiply() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).multiply((byte)1, (byte)1);   
@@ -4818,7 +4818,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testMultiplyEquals() {
+  public void testMultiplyEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).multiplyEquals((byte)1, (byte)1);   
@@ -5558,7 +5558,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testDivide() {
+  public void testDivide() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).divide((byte)1, (byte)1);   
@@ -6298,7 +6298,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testDivideEquals() {
+  public void testDivideEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).divideEquals((byte)1, (byte)1);   
@@ -7038,7 +7038,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testIntegerDivide() {
+  public void testIntegerDivide() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).integerDivide((byte)1, (byte)1);   
@@ -7778,7 +7778,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testIntegerDivideEquals() {
+  public void testIntegerDivideEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).integerDivideEquals((byte)1, (byte)1);   
@@ -8518,7 +8518,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
 
-  public void testRemainder() {
+  public void testRemainder() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).remainder((byte)1, (byte)1);   
@@ -8909,7 +8909,7 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testRemainderEquals() {
+  public void testRemainderEquals() throws Throwable {
   Object o;
   
     o = this.registry.getRuntimeMetaClass(byte.class).remainderEquals((byte)1, (byte)1);   
@@ -9300,11 +9300,11 @@ public class ArithmeticTest extends TestCase {
     } catch (final NgRuntimeException e) {}
   }
   
-  public void testPower() {
+  public void testPower() throws Throwable {
     // TODO: Implement
   }
   
-  public void testReversePower() {
+  public void testReversePower() throws Throwable {
     // TODO: Implement
   }
 }

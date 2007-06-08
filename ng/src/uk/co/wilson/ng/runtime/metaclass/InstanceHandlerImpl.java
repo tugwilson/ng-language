@@ -484,7 +484,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#add(java.lang.Object, java.lang.Object)
    */
-  public Object add(final Object lhs, final Object rhs) {
+  public Object add(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -503,7 +503,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseAdd(java.lang.Object, java.lang.Object)
    */
-  public Object reverseAdd(final Object lhs, final Object rhs) {
+  public Object reverseAdd(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -522,7 +522,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#addEquals(java.lang.Object, java.lang.Object)
    */
-  public Object addEquals(final Object lhs, final Object rhs) {
+  public Object addEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -541,7 +541,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseAddEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseAddEquals(final Object lhs, final Object rhs) {
+  public Object reverseAddEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -560,7 +560,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#and(java.lang.Object, java.lang.Object)
    */
-  public Object and(final Object lhs, final Object rhs) {
+  public Object and(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -579,7 +579,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseAnd(java.lang.Object, java.lang.Object)
    */
-  public Object reverseAnd(final Object lhs, final Object rhs) {
+  public Object reverseAnd(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -598,7 +598,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#andEquals(java.lang.Object, java.lang.Object)
    */
-  public Object andEquals(final Object lhs, final Object rhs) {
+  public Object andEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -617,7 +617,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseAndEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseAndEquals(final Object lhs, final Object rhs) {
+  public Object reverseAndEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -636,7 +636,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#arithmeticRightShift(java.lang.Object, java.lang.Object)
    */
-  public Object arithmeticRightShift(final Object lhs, final Object rhs) {
+  public Object arithmeticRightShift(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -655,7 +655,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseArithmeticRightShift(java.lang.Object, java.lang.Object)
    */
-  public Object reverseArithmeticRightShift(final Object lhs, final Object rhs) {
+  public Object reverseArithmeticRightShift(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -674,7 +674,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#arithmeticRightShiftEquals(java.lang.Object, java.lang.Object)
    */
-  public Object arithmeticRightShiftEquals(final Object lhs, final Object rhs) {
+  public Object arithmeticRightShiftEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -693,7 +693,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseArithmeticRightShiftEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseArithmeticRightShiftEquals(final Object lhs, final Object rhs) {
+  public Object reverseArithmeticRightShiftEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -712,7 +712,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#asType(java.lang.Object, java.lang.Class)
    */
-  public Object asType(final Object instance, final Class type) {
+  public Object asType(final Object instance, final Class type) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -731,7 +731,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#compare(java.lang.Object, java.lang.Object)
    */
-  public Object compare(final Object lhs, final Object rhs) {
+  public Object compare(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -750,7 +750,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseCompare(java.lang.Object, java.lang.Object)
    */
-  public Object reverseCompare(final Object lhs, final Object rhs) {
+  public Object reverseCompare(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -769,7 +769,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#complement(java.lang.Object)
    */
-  public Object complement(final Object instance) {
+  public Object complement(final Object instance) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -788,7 +788,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#divide(java.lang.Object, java.lang.Object)
    */
-  public Object divide(final Object lhs, final Object rhs) {
+  public Object divide(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -807,7 +807,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseDivide(java.lang.Object, java.lang.Object)
    */
-  public Object reverseDivide(final Object lhs, final Object rhs) {
+  public Object reverseDivide(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -826,7 +826,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#divideEquals(java.lang.Object, java.lang.Object)
    */
-  public Object divideEquals(final Object lhs, final Object rhs) {
+  public Object divideEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -845,7 +845,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseDivideEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseDivideEquals(final Object lhs, final Object rhs) {
+  public Object reverseDivideEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -864,7 +864,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#equals(java.lang.Object, java.lang.Object)
    */
-  public Object equals(final Object lhs, final Object rhs) {
+  public Object equals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -883,7 +883,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseEquals(final Object lhs, final Object rhs) {
+  public Object reverseEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -902,7 +902,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#getAt(java.lang.Object, java.lang.Object)
    */
-  public Object getAt(final Object instance, final Object index) {
+  public Object getAt(final Object instance, final Object index) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -921,7 +921,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#greaterThan(java.lang.Object, java.lang.Object)
    */
-  public Object greaterThan(final Object lhs, final Object rhs) {
+  public Object greaterThan(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -940,7 +940,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseGreaterThan(java.lang.Object, java.lang.Object)
    */
-  public Object reverseGreaterThan(final Object lhs, final Object rhs) {
+  public Object reverseGreaterThan(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -959,7 +959,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#greaterThanOrEquals(java.lang.Object, java.lang.Object)
    */
-  public Object greaterThanOrEquals(final Object lhs, final Object rhs) {
+  public Object greaterThanOrEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -978,7 +978,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseGreaterThanOrEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseGreaterThanOrEquals(final Object lhs, final Object rhs) {
+  public Object reverseGreaterThanOrEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -997,7 +997,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#integerDivide(java.lang.Object, java.lang.Object)
    */
-  public Object integerDivide(final Object lhs, final Object rhs) {
+  public Object integerDivide(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1016,7 +1016,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseIntegerDivide(java.lang.Object, java.lang.Object)
    */
-  public Object reverseIntegerDivide(final Object lhs, final Object rhs) {
+  public Object reverseIntegerDivide(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1035,7 +1035,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#integerDivideEquals(java.lang.Object, java.lang.Object)
    */
-  public Object integerDivideEquals(final Object lhs, final Object rhs) {
+  public Object integerDivideEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1054,7 +1054,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseIntegerDivideEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseIntegerDivideEquals(final Object lhs, final Object rhs) {
+  public Object reverseIntegerDivideEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1073,7 +1073,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#isCase(java.lang.Object, java.lang.Object)
    */
-  public Object isCase(final Object instance, final Object rhs) {
+  public Object isCase(final Object instance, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1092,7 +1092,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#isInstanceof(java.lang.Object, java.lang.Class)
    */
-  public Object isInstanceof(final Object instance, final Class type) {
+  public Object isInstanceof(final Object instance, final Class type) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1111,7 +1111,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#leftShift(java.lang.Object, java.lang.Object)
    */
-  public Object leftShift(final Object lhs, final Object rhs) {
+  public Object leftShift(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1130,7 +1130,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseLeftShift(java.lang.Object, java.lang.Object)
    */
-  public Object reverseLeftShift(final Object lhs, final Object rhs) {
+  public Object reverseLeftShift(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1149,7 +1149,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#leftShiftEquals(java.lang.Object, java.lang.Object)
    */
-  public Object leftShiftEquals(final Object lhs, final Object rhs) {
+  public Object leftShiftEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1168,7 +1168,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseLeftShiftEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseLeftShiftEquals(final Object lhs, final Object rhs) {
+  public Object reverseLeftShiftEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1187,7 +1187,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#lessThan(java.lang.Object, java.lang.Object)
    */
-  public Object lessThan(final Object lhs, final Object rhs) {
+  public Object lessThan(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1206,7 +1206,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseLessThan(java.lang.Object, java.lang.Object)
    */
-  public Object reverseLessThan(final Object lhs, final Object rhs) {
+  public Object reverseLessThan(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1225,7 +1225,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#lessThanOrEquals(java.lang.Object, java.lang.Object)
    */
-  public Object lessThanOrEquals(final Object lhs, final Object rhs) {
+  public Object lessThanOrEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1244,7 +1244,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseLessThanOrEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseLessThanOrEquals(final Object lhs, final Object rhs) {
+  public Object reverseLessThanOrEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1263,7 +1263,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#logicalRightShift(java.lang.Object, java.lang.Object)
    */
-  public Object logicalRightShift(final Object lhs, final Object rhs) {
+  public Object logicalRightShift(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1282,7 +1282,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseLogicalRightShift(java.lang.Object, java.lang.Object)
    */
-  public Object reverseLogicalRightShift(final Object lhs, final Object rhs) {
+  public Object reverseLogicalRightShift(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1301,7 +1301,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#logicalRightShiftEquals(java.lang.Object, java.lang.Object)
    */
-  public Object logicalRightShiftEquals(final Object lhs, final Object rhs) {
+  public Object logicalRightShiftEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1320,7 +1320,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseLogicalRightShiftEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseLogicalRightShiftEquals(final Object lhs, final Object rhs) {
+  public Object reverseLogicalRightShiftEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1339,7 +1339,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#multiply(java.lang.Object, java.lang.Object)
    */
-  public Object multiply(final Object lhs, final Object rhs) {
+  public Object multiply(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1358,7 +1358,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseMultiply(java.lang.Object, java.lang.Object)
    */
-  public Object reverseMultiply(final Object lhs, final Object rhs) {
+  public Object reverseMultiply(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1377,7 +1377,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#multiplyEquals(java.lang.Object, java.lang.Object)
    */
-  public Object multiplyEquals(final Object lhs, final Object rhs) {
+  public Object multiplyEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1396,7 +1396,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseMultiplyEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseMultiplyEquals(final Object lhs, final Object rhs) {
+  public Object reverseMultiplyEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1415,7 +1415,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#not(java.lang.Object)
    */
-  public Object not(final Object operand) {
+  public Object not(final Object operand) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1434,7 +1434,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#notEquals(java.lang.Object, java.lang.Object)
    */
-  public Object notEquals(final Object lhs, final Object rhs) {
+  public Object notEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1453,7 +1453,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseNotEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseNotEquals(final Object lhs, final Object rhs) {
+  public Object reverseNotEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1472,7 +1472,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#or(java.lang.Object, java.lang.Object)
    */
-  public Object or(final Object lhs, final Object rhs) {
+  public Object or(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1491,7 +1491,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseOr(java.lang.Object, java.lang.Object)
    */
-  public Object reverseOr(final Object lhs, final Object rhs) {
+  public Object reverseOr(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1510,7 +1510,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#orEquals(java.lang.Object, java.lang.Object)
    */
-  public Object orEquals(final Object lhs, final Object rhs) {
+  public Object orEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1529,7 +1529,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseOrEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseOrEquals(final Object lhs, final Object rhs) {
+  public Object reverseOrEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1548,7 +1548,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#postfixDecrement(java.lang.Object)
    */
-  public Object postfixDecrement(final Object operand) {
+  public Object postfixDecrement(final Object operand) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1567,7 +1567,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#postfixIncrement(java.lang.Object)
    */
-  public Object postfixIncrement(final Object operand) {
+  public Object postfixIncrement(final Object operand) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1586,7 +1586,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#prefixDecrement(java.lang.Object)
    */
-  public Object prefixDecrement(final Object operand) {
+  public Object prefixDecrement(final Object operand) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1605,7 +1605,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#prefixIncrement(java.lang.Object)
    */
-  public Object prefixIncrement(final Object operand) {
+  public Object prefixIncrement(final Object operand) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1624,7 +1624,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#putAt(java.lang.Object, java.lang.Object)
    */
-  public Object putAt(final Object instance, final Object index) {
+  public Object putAt(final Object instance, final Object index) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1643,7 +1643,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#remainder(java.lang.Object, java.lang.Object)
    */
-  public Object remainder(final Object lhs, final Object rhs) {
+  public Object remainder(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1662,7 +1662,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseRemainder(java.lang.Object, java.lang.Object)
    */
-  public Object reverseRemainder(final Object lhs, final Object rhs) {
+  public Object reverseRemainder(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1681,7 +1681,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#remainderEquals(java.lang.Object, java.lang.Object)
    */
-  public Object remainderEquals(final Object lhs, final Object rhs) {
+  public Object remainderEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1700,7 +1700,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseRemainderEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseRemainderEquals(final Object lhs, final Object rhs) {
+  public Object reverseRemainderEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1719,7 +1719,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#subtract(java.lang.Object, java.lang.Object)
    */
-  public Object subtract(final Object lhs, final Object rhs) {
+  public Object subtract(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1738,7 +1738,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseSubtract(java.lang.Object, java.lang.Object)
    */
-  public Object reverseSubtract(final Object lhs, final Object rhs) {
+  public Object reverseSubtract(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1757,7 +1757,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#subtractEquals(java.lang.Object, java.lang.Object)
    */
-  public Object subtractEquals(final Object lhs, final Object rhs) {
+  public Object subtractEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1776,7 +1776,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseSubtractEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseSubtractEquals(final Object lhs, final Object rhs) {
+  public Object reverseSubtractEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1795,7 +1795,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#unaryMinus(java.lang.Object)
    */
-  public Object unaryMinus(final Object operand) {
+  public Object unaryMinus(final Object operand) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1814,7 +1814,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#unaryPlus(java.lang.Object)
    */
-  public Object unaryPlus(final Object operand) {
+  public Object unaryPlus(final Object operand) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1833,7 +1833,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#xor(java.lang.Object, java.lang.Object)
    */
-  public Object xor(final Object lhs, final Object rhs) {
+  public Object xor(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1852,7 +1852,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseXor(java.lang.Object, java.lang.Object)
    */
-  public Object reverseXor(final Object lhs, final Object rhs) {
+  public Object reverseXor(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1871,7 +1871,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#xorEquals(java.lang.Object, java.lang.Object)
    */
-  public Object xorEquals(final Object lhs, final Object rhs) {
+  public Object xorEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
@@ -1890,7 +1890,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#reverseXorEquals(java.lang.Object, java.lang.Object)
    */
-  public Object reverseXorEquals(final Object lhs, final Object rhs) {
+  public Object reverseXorEquals(final Object lhs, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {

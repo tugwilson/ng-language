@@ -20,7 +20,7 @@ public class VoidSetPropertyMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(final Object instance, final Object newValue) {
+  public Object call(final Object instance, final Object newValue) throws Throwable {
     super.call(instance, newValue);
     
     return newValue;
