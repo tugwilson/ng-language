@@ -5381,7 +5381,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseIntegerDivide(final BigDecimal lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseIntegerDivide(lhsObject, rhs);
   }
@@ -5682,31 +5682,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doIntegerDivideEquals(final BigInteger lhs, final byte rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgByte.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgByte.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigInteger lhs, final char rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgChar.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgChar.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigInteger lhs, final short rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgShort.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgShort.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigInteger lhs, final int rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgInt.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgInt.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigInteger lhs, final long rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgLong.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgLong.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigInteger lhs, final float rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgFloat.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgFloat.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigInteger lhs, final double rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgDouble.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgDouble.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigInteger lhs, final BigInteger rhs) throws Throwable {
@@ -5718,31 +5718,31 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doIntegerDivideEquals(final BigDecimal lhs, final byte rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgByte.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgByte.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigDecimal lhs, final char rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgChar.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgChar.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigDecimal lhs, final short rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgShort.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgShort.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigDecimal lhs, final int rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgInt.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgInt.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigDecimal lhs, final long rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgLong.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgLong.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigDecimal lhs, final float rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgFloat.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgFloat.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigDecimal lhs, final double rhs) throws Throwable {
-    return doIntegerDivideEquals((Object)lhs, NgDouble.valueOf(rhs));
+    return doIntegerDivideEquals(lhs, NgDouble.valueOf(rhs));
   }
 
   public Object doIntegerDivideEquals(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
@@ -5796,13 +5796,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doIntegerDivideEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseIntegerDivideEquals(lhs, rhsObject);
   }
 
   public Object doIntegerDivideEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseIntegerDivideEquals(lhs, rhsObject);
   }
@@ -5850,13 +5850,13 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doReverseIntegerDivideEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseIntegerDivideEquals(lhsObject, rhs);
   }
 
   public Object doReverseIntegerDivideEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = (Object)lhs;
+  final Object lhsObject = lhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseIntegerDivideEquals(lhsObject, rhs);
   }
@@ -6017,23 +6017,23 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doAnd(final BigInteger lhs, final byte rhs) throws Throwable {
-    return doAnd((Object)lhs, NgByte.valueOf(rhs));
+    return doAnd(lhs, NgByte.valueOf(rhs));
   }
 
   public Object doAnd(final BigInteger lhs, final char rhs) throws Throwable {
-    return doAnd((Object)lhs, NgChar.valueOf(rhs));
+    return doAnd(lhs, NgChar.valueOf(rhs));
   }
 
   public Object doAnd(final BigInteger lhs, final short rhs) throws Throwable {
-    return doAnd((Object)lhs, NgShort.valueOf(rhs));
+    return doAnd(lhs, NgShort.valueOf(rhs));
   }
 
   public Object doAnd(final BigInteger lhs, final int rhs) throws Throwable {
-    return doAnd((Object)lhs, NgInt.valueOf(rhs));
+    return doAnd(lhs, NgInt.valueOf(rhs));
   }
 
   public Object doAnd(final BigInteger lhs, final long rhs) throws Throwable {
-    return doAnd((Object)lhs, NgLong.valueOf(rhs));
+    return doAnd(lhs, NgLong.valueOf(rhs));
   }
 
   public Object doAnd(final BigInteger lhs, final BigInteger rhs) throws Throwable {
@@ -6071,7 +6071,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   }
 
   public Object doAnd(final Object lhs, final BigInteger rhs) throws Throwable {
-  final Object rhsObject = (Object)rhs;
+  final Object rhsObject = rhs;
     
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseAnd(lhs, rhsObject);
   }
