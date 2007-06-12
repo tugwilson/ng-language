@@ -8637,6 +8637,927 @@ public class LogicalTest extends TestCase {
     } catch (final NgRuntimeException e) {}
 
   }
+  
+  public void testEqualsBoolean() throws Throwable {
+  final boolean b1 = false, b2 = true, b3 = true, b4 = false;
+  
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (byte)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (byte)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (byte)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (byte)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (char)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (char)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (char)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (char)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (short)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (short)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (short)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (short)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (int)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (int)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (int)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (int)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (long)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (long)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (long)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (long)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (float)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (float)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (float)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (float)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (double)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, (double)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (double)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, (double)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (byte)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (byte)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (byte)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (byte)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (char)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (char)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (char)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (char)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (short)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (short)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (short)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (short)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (int)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (int)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (int)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (int)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (long)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (long)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (long)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (long)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (float)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (float)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (float)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (float)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (double)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, (double)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (double)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, (double)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (byte)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (byte)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (byte)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (byte)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (char)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (char)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (char)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (char)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (short)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (short)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (short)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (short)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (int)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (int)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (int)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (int)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (long)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (long)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (long)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (long)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (float)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (float)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (float)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (float)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (double)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, (double)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (double)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, (double)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (byte)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (byte)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (byte)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (byte)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (char)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (char)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (char)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (char)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (short)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (short)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (short)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (short)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (int)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (int)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (int)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (int)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (long)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (long)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (long)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (long)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (float)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (float)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (float)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (float)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (double)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, (double)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (double)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, (double)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (byte)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (byte)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (byte)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (byte)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (char)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (char)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (char)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (char)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (short)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (short)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (short)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (short)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (int)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (int)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (int)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (int)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (long)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (long)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (long)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (long)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (float)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (float)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (float)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (float)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (double)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, (double)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (double)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, (double)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (byte)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (byte)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (byte)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (byte)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (char)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (char)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (char)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (char)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (short)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (short)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (short)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (short)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (int)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (int)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (int)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (int)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (long)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (long)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (long)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (long)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (float)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (float)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (float)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (float)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (double)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, (double)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (double)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, (double)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (byte)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (byte)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (byte)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (byte)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (char)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (char)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (char)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (char)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (short)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (short)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (short)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (short)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (int)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (int)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (int)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (int)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (long)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (long)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (long)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (long)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (float)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (float)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (float)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (float)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (double)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, (double)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (double)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, (double)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, this.twoBigInt)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, this.oneBigInt)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, this.twoBigInt)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, this.oneBigInt)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, this.twoBigInt)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, this.oneBigInt)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, this.twoBigInt)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, this.oneBigInt)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, this.twoBigInt)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, this.oneBigInt)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, this.twoBigInt)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, this.oneBigInt)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, this.twoBigInt)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, this.oneBigInt)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, this.twoBigInt)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, this.oneBigInt)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, this.twoBigInt)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, this.oneBigInt)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, this.twoBigInt)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, this.oneBigInt)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, this.twoBigInt)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, this.oneBigInt)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, this.twoBigInt)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, this.oneBigInt)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, this.twoBigInt)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, this.oneBigInt)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, this.twoBigInt)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, this.oneBigInt)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (byte)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (byte)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (byte)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (byte)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (char)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (char)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (char)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (char)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (short)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (short)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (short)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (short)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (int)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (int)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (int)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (int)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (long)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (long)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (long)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (long)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (float)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (float)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (float)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (float)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (double)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (double)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (double)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (double)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (byte)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, (byte)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (byte)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, (byte)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, this.twoBigInt)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, this.oneBigInt)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, this.twoBigInt)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, this.oneBigInt)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, this.twoBigDecimal)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.oneBigInt, this.oneBigDecimal)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, this.twoBigDecimal)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigInteger.class).equalsBoolean(this.twoBigInt, this.oneBigDecimal)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, this.twoBigDecimal)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)1, this.oneBigDecimal)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, this.twoBigDecimal)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(byte.class).equalsBoolean((byte)2, this.oneBigDecimal)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, this.twoBigDecimal)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)1, this.oneBigDecimal)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, this.twoBigDecimal)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(char.class).equalsBoolean((char)2, this.oneBigDecimal)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, this.twoBigDecimal)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)1, this.oneBigDecimal)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, this.twoBigDecimal)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(short.class).equalsBoolean((short)2, this.oneBigDecimal)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, this.twoBigDecimal)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)1, this.oneBigDecimal)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, this.twoBigDecimal)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(int.class).equalsBoolean((int)2, this.oneBigDecimal)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, this.twoBigDecimal)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)1, this.oneBigDecimal)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, this.twoBigDecimal)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(long.class).equalsBoolean((long)2, this.oneBigDecimal)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, this.twoBigDecimal)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)1, this.oneBigDecimal)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, this.twoBigDecimal)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(float.class).equalsBoolean((float)2, this.oneBigDecimal)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, this.twoBigDecimal)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)1, this.oneBigDecimal)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, this.twoBigDecimal)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(double.class).equalsBoolean((double)2, this.oneBigDecimal)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (byte)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (byte)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (byte)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (byte)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (char)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (char)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (char)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (char)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (short)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (short)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (short)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (short)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (int)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (int)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (int)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (int)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (long)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (long)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (long)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (long)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (float)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (float)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (float)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (float)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (double)2)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, (double)1)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (double)2)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, (double)1)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, this.twoBigInt)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, this.oneBigInt)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, this.twoBigInt)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, this.oneBigInt)), b4);
+    
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, this.twoBigDecimal)), b1);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.oneBigDecimal, this.oneBigDecimal)), b2);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, this.twoBigDecimal)), b3);
+    assertEquals((this.registry.getRuntimeMetaClass(BigDecimal.class).equalsBoolean(this.twoBigDecimal, this.oneBigDecimal)), b4);
+
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((byte) 1, (byte) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((char) 1, (byte) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((short) 1, (byte) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((int) 1, (byte) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((long) 1, (byte) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((float) 1, (byte) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((double) 1, (byte) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigInteger)this.oneBigInt, (byte) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigDecimal)this.oneBigDecimal, (byte) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((byte) 1, (char) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((char) 1, (char) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((short) 1, (char) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((int) 1, (char) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((long) 1, (char) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((float) 1, (char) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((double) 1, (char) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigInteger)this.oneBigInt, (char) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigDecimal)this.oneBigDecimal, (char) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((byte) 1, (short) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((char) 1, (short) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((short) 1, (short) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((int) 1, (short) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((long) 1, (short) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((float) 1, (short) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((double) 1, (short) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigInteger)this.oneBigInt, (short) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigDecimal)this.oneBigDecimal, (short) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((byte) 1, (int) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((char) 1, (int) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {
+    }
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((short) 1, (int) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {
+    }
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((int) 1, (int) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {
+    }
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((long) 1, (int) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((float) 1, (int) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((double) 1, (int) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigInteger)this.oneBigInt, (int) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigDecimal)this.oneBigDecimal, (int) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((byte) 1, (long) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((char) 1, (long) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((short) 1, (long) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((int) 1, (long) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((long) 1, (long) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((float) 1, (long) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((double) 1, (long) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigInteger)this.oneBigInt, (long) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigDecimal)this.oneBigDecimal, (long) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((byte) 1, (float) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((char) 1, (float) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((short) 1, (float) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((int) 1, (float) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((long) 1, (float) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((float) 1, (float) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((double) 1, (float) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigInteger)this.oneBigInt, (float) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigDecimal)this.oneBigDecimal, (float) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((byte) 1, (double) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((char) 1, (double) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((short) 1, (double) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((int) 1, (double) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((long) 1, (double) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((float) 1, (double) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((double) 1, (double) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigInteger)this.oneBigInt, (double) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigDecimal)this.oneBigDecimal, (double) 1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((byte) 1, (BigInteger) this.oneBigInt);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((char) 1, (BigInteger) this.oneBigInt);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((short) 1, (BigInteger) this.oneBigInt);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((int) 1, (BigInteger) this.oneBigInt);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((long) 1, (BigInteger) this.oneBigInt);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((float) 1, (BigInteger) this.oneBigInt);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((double) 1, (BigInteger) this.oneBigInt);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((byte) 1, (BigDecimal) this.oneBigDecimal);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((char) 1, (BigDecimal) this.oneBigDecimal);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((short) 1, (BigDecimal) this.oneBigDecimal);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((int) 1, (BigDecimal) this.oneBigDecimal);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((long) 1, (BigDecimal) this.oneBigDecimal);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((float) 1, (BigDecimal) this.oneBigDecimal);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((double) 1, (BigDecimal) this.oneBigDecimal);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {} 
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigInteger) this.oneBigInt, (BigInteger) this.oneBigInt);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {} 
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigInteger) this.oneBigInt, (BigDecimal) this.oneBigDecimal);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {} 
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigDecimal) this.oneBigDecimal, (BigInteger) this.oneBigInt);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {} 
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean((BigDecimal) this.oneBigDecimal, (BigDecimal) this.oneBigDecimal);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {} 
+    
+    for (int i = 0; i != this.ones.length; i++) {
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (byte)2)), b1);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (byte)1)), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (byte)2)), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (byte)1)), b4);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (char)2)), b1);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (char)1)), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (char)2)), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (char)1)), b4);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (short)2)), b1);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (short)1)), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (short)2)), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (short)1)), b4);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (int)2)), b1);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (int)1)), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (int)2)), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (int)1)), b4);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (long)2)), b1);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (long)1)), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (long)2)), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (long)1)), b4);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (float)2)), b1);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (float)1)), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (float)2)), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (float)1)), b4);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (double)2)), b1);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], (double)1)), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (double)2)), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], (double)1)), b4);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], this.twoBigInt)), b1);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], this.oneBigInt)), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], this.twoBigInt)), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], this.oneBigInt)), b4);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], this.twoBigDecimal)), b1);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], this.oneBigDecimal)), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], this.twoBigDecimal)), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], this.oneBigDecimal)), b4);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((byte)2), this.ones[i])), b4);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((byte)1), this.ones[i])), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((byte)2), this.twos[i])), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((byte)1), this.twos[i])), b1);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((char)2), this.ones[i])), b4);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((char)1), this.ones[i])), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((char)2), this.twos[i])), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((char)1), this.twos[i])), b1);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((short)2), this.ones[i])), b4);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((short)1), this.ones[i])), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((short)2), this.twos[i])), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((short)1), this.twos[i])), b1);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((int)2), this.ones[i])), b4);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((int)1), this.ones[i])), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((int)2), this.twos[i])), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((int)1), this.twos[i])), b1);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((long)2), this.ones[i])), b4);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((long)1), this.ones[i])), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((long)2), this.twos[i])), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((long)1), this.twos[i])), b1);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((float)2), this.ones[i])), b4);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((float)1), this.ones[i])), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((float)2), this.twos[i])), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((float)1), this.twos[i])), b1);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((double)2), this.ones[i])), b4);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(((double)1), this.ones[i])), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((double)2), this.twos[i])), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(((double)1), this.twos[i])), b1);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(this.twoBigInt, this.ones[i])), b4);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(this.oneBigInt, this.ones[i])), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(this.twoBigInt, this.twos[i])), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(this.oneBigInt, this.twos[i])), b1);
+      
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(this.twoBigDecimal, this.ones[i])), b4);
+      assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).reverseEqualsBoolean(this.oneBigDecimal, this.ones[i])), b3);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(this.twoBigDecimal, this.twos[i])), b2);
+      assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).reverseEqualsBoolean(this.oneBigDecimal, this.twos[i])), b1);
+      
+      for (int j = 0; j != this.twos.length; j++) {
+        assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], this.twos[j])), b1);
+        assertEquals((this.registry.getRuntimeMetaClass(this.ones[i]).equalsBoolean(this.ones[i], this.ones[j])), b2);
+        assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], this.twos[j])), b3);
+        assertEquals((this.registry.getRuntimeMetaClass(this.twos[i]).equalsBoolean(this.twos[i], this.ones[j])), b4);
+      }      
+    }
+    
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean(new Object(), new Object());
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean(new Object(), (byte)1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean(new Object(), (char)1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean(new Object(), (short)1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean(new Object(), (int)1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean(new Object(), (long)1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean(new Object(), (float)1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean(new Object(), (double)1);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean(new Object(), (BigInteger)this.oneBigInt);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).equalsBoolean(new Object(), (BigDecimal)this.oneBigDecimal);
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEqualsBoolean((byte)1, new Object());
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEqualsBoolean((char)1, new Object());
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEqualsBoolean((short)1, new Object());
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEqualsBoolean((int)1, new Object());
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEqualsBoolean((long)1, new Object());
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEqualsBoolean((float)1, new Object());
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEqualsBoolean((double)1, new Object());
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEqualsBoolean((BigInteger)this.oneBigInt, new Object());
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+    try {
+      this.registry.getRuntimeMetaClass(ObjectWhichDoesNotDoEquals.class).reverseEqualsBoolean((BigDecimal)this.oneBigDecimal, new Object());
+      assertTrue(false);
+    } catch (final NgRuntimeException e) {}
+
+  }
 
   public void testNotEquals() throws Throwable {
     final boolean b1 = true, b2 = false, b3 = false, b4 = true;

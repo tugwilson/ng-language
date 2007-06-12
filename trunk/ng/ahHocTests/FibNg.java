@@ -62,8 +62,9 @@ public class FibNg extends NgBaseObject {
              return NgInt.valueOf(0);
          }
          
-         tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).equals(x, 1);
-         if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, tmp).asBoolean(tmp)) {
+//         tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).equals(x, 1);
+//         if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, tmp).asBoolean(tmp)) {
+         if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).equalsBoolean(x, 1)) {
              return NgInt.valueOf(1);
          }
     
