@@ -7417,6 +7417,806 @@ class CustomMetaClass implements RuntimeMetaClass {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, java.math.BigDecimal)
+   */
+  public boolean greaterThanBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, java.math.BigInteger)
+   */
+  public boolean greaterThanBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, byte)
+   */
+  public boolean greaterThanBoolean(BigDecimal lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, char)
+   */
+  public boolean greaterThanBoolean(BigDecimal lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, double)
+   */
+  public boolean greaterThanBoolean(BigDecimal lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, float)
+   */
+  public boolean greaterThanBoolean(BigDecimal lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, int)
+   */
+  public boolean greaterThanBoolean(BigDecimal lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, long)
+   */
+  public boolean greaterThanBoolean(BigDecimal lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, short)
+   */
+  public boolean greaterThanBoolean(BigDecimal lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, java.math.BigDecimal)
+   */
+  public boolean greaterThanBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, java.math.BigInteger)
+   */
+  public boolean greaterThanBoolean(BigInteger lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, byte)
+   */
+  public boolean greaterThanBoolean(BigInteger lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, char)
+   */
+  public boolean greaterThanBoolean(BigInteger lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, double)
+   */
+  public boolean greaterThanBoolean(BigInteger lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, float)
+   */
+  public boolean greaterThanBoolean(BigInteger lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, int)
+   */
+  public boolean greaterThanBoolean(BigInteger lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, long)
+   */
+  public boolean greaterThanBoolean(BigInteger lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, short)
+   */
+  public boolean greaterThanBoolean(BigInteger lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, java.math.BigDecimal)
+   */
+  public boolean greaterThanBoolean(byte lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, java.math.BigInteger)
+   */
+  public boolean greaterThanBoolean(byte lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, byte)
+   */
+  public boolean greaterThanBoolean(byte lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, char)
+   */
+  public boolean greaterThanBoolean(byte lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, double)
+   */
+  public boolean greaterThanBoolean(byte lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, float)
+   */
+  public boolean greaterThanBoolean(byte lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, int)
+   */
+  public boolean greaterThanBoolean(byte lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, long)
+   */
+  public boolean greaterThanBoolean(byte lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, short)
+   */
+  public boolean greaterThanBoolean(byte lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, java.math.BigDecimal)
+   */
+  public boolean greaterThanBoolean(char lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, java.math.BigInteger)
+   */
+  public boolean greaterThanBoolean(char lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, byte)
+   */
+  public boolean greaterThanBoolean(char lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, char)
+   */
+  public boolean greaterThanBoolean(char lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, double)
+   */
+  public boolean greaterThanBoolean(char lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, float)
+   */
+  public boolean greaterThanBoolean(char lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, int)
+   */
+  public boolean greaterThanBoolean(char lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, long)
+   */
+  public boolean greaterThanBoolean(char lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, short)
+   */
+  public boolean greaterThanBoolean(char lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, java.math.BigDecimal)
+   */
+  public boolean greaterThanBoolean(double lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, java.math.BigInteger)
+   */
+  public boolean greaterThanBoolean(double lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, byte)
+   */
+  public boolean greaterThanBoolean(double lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, char)
+   */
+  public boolean greaterThanBoolean(double lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, double)
+   */
+  public boolean greaterThanBoolean(double lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, float)
+   */
+  public boolean greaterThanBoolean(double lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, int)
+   */
+  public boolean greaterThanBoolean(double lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, long)
+   */
+  public boolean greaterThanBoolean(double lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, short)
+   */
+  public boolean greaterThanBoolean(double lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, java.math.BigDecimal)
+   */
+  public boolean greaterThanBoolean(float lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, java.math.BigInteger)
+   */
+  public boolean greaterThanBoolean(float lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, byte)
+   */
+  public boolean greaterThanBoolean(float lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, char)
+   */
+  public boolean greaterThanBoolean(float lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, double)
+   */
+  public boolean greaterThanBoolean(float lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, float)
+   */
+  public boolean greaterThanBoolean(float lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, int)
+   */
+  public boolean greaterThanBoolean(float lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, long)
+   */
+  public boolean greaterThanBoolean(float lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, short)
+   */
+  public boolean greaterThanBoolean(float lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, java.math.BigDecimal)
+   */
+  public boolean greaterThanBoolean(int lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, java.math.BigInteger)
+   */
+  public boolean greaterThanBoolean(int lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, byte)
+   */
+  public boolean greaterThanBoolean(int lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, char)
+   */
+  public boolean greaterThanBoolean(int lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, double)
+   */
+  public boolean greaterThanBoolean(int lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, float)
+   */
+  public boolean greaterThanBoolean(int lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, int)
+   */
+  public boolean greaterThanBoolean(int lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, long)
+   */
+  public boolean greaterThanBoolean(int lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, short)
+   */
+  public boolean greaterThanBoolean(int lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, java.math.BigDecimal)
+   */
+  public boolean greaterThanBoolean(long lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, java.math.BigInteger)
+   */
+  public boolean greaterThanBoolean(long lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, byte)
+   */
+  public boolean greaterThanBoolean(long lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, char)
+   */
+  public boolean greaterThanBoolean(long lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, double)
+   */
+  public boolean greaterThanBoolean(long lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, float)
+   */
+  public boolean greaterThanBoolean(long lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, int)
+   */
+  public boolean greaterThanBoolean(long lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, long)
+   */
+  public boolean greaterThanBoolean(long lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, short)
+   */
+  public boolean greaterThanBoolean(long lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, java.math.BigDecimal)
+   */
+  public boolean greaterThanBoolean(Object lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, java.math.BigInteger)
+   */
+  public boolean greaterThanBoolean(Object lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, byte)
+   */
+  public boolean greaterThanBoolean(Object lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, char)
+   */
+  public boolean greaterThanBoolean(Object lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, double)
+   */
+  public boolean greaterThanBoolean(Object lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, float)
+   */
+  public boolean greaterThanBoolean(Object lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, int)
+   */
+  public boolean greaterThanBoolean(Object lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, long)
+   */
+  public boolean greaterThanBoolean(Object lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, java.lang.Object)
+   */
+  public boolean greaterThanBoolean(Object lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, short)
+   */
+  public boolean greaterThanBoolean(Object lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, java.math.BigDecimal)
+   */
+  public boolean greaterThanBoolean(short lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, java.math.BigInteger)
+   */
+  public boolean greaterThanBoolean(short lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, byte)
+   */
+  public boolean greaterThanBoolean(short lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, char)
+   */
+  public boolean greaterThanBoolean(short lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, double)
+   */
+  public boolean greaterThanBoolean(short lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, float)
+   */
+  public boolean greaterThanBoolean(short lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, int)
+   */
+  public boolean greaterThanBoolean(short lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, long)
+   */
+  public boolean greaterThanBoolean(short lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, short)
+   */
+  public boolean greaterThanBoolean(short lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(java.math.BigDecimal, java.lang.Object)
+   */
+  public boolean reverseGreaterThanBoolean(BigDecimal lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(java.math.BigInteger, java.lang.Object)
+   */
+  public boolean reverseGreaterThanBoolean(BigInteger lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(byte, java.lang.Object)
+   */
+  public boolean reverseGreaterThanBoolean(byte lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(char, java.lang.Object)
+   */
+  public boolean reverseGreaterThanBoolean(char lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(double, java.lang.Object)
+   */
+  public boolean reverseGreaterThanBoolean(double lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(float, java.lang.Object)
+   */
+  public boolean reverseGreaterThanBoolean(float lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(int, java.lang.Object)
+   */
+  public boolean reverseGreaterThanBoolean(int lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(long, java.lang.Object)
+   */
+  public boolean reverseGreaterThanBoolean(long lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(short, java.lang.Object)
+   */
+  public boolean reverseGreaterThanBoolean(short lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEquals(java.math.BigDecimal, java.math.BigDecimal)
    */
   public Object greaterThanOrEquals(final BigDecimal lhs, final BigDecimal rhs) {
