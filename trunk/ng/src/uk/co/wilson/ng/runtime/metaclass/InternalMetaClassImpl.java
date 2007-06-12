@@ -12041,6 +12041,801 @@ public class InternalMetaClassImpl implements InternalMetaClass {
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThanOrEquals(lhsObject, rhs);
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doLessThanOrEqualsBoolean(java.lang.Object, java.lang.Object)
+   */
+  public boolean doLessThanOrEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+  
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final byte lhs, final byte rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final byte lhs, final char rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final byte lhs, final short rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final byte lhs, final int rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final byte lhs, final long rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final byte lhs, final float rhs) throws Throwable {
+    return doLessThanOrEqualsBoolean(NgByte.valueOf(lhs), NgFloat.valueOf(rhs));
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final byte lhs, final double rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final char lhs, final byte rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final char lhs, final char rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final char lhs, final short rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final char lhs, final int rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final char lhs, final long rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final char lhs, final float rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final char lhs, final double rhs) throws Throwable {
+    return doLessThanOrEqualsBoolean(NgChar.valueOf(lhs), NgDouble.valueOf(rhs));
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final char lhs, final BigInteger rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final short lhs, final byte rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final short lhs, final char rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final short lhs, final short rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final short lhs, final int rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final short lhs, final long rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final short lhs, final float rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final short lhs, final double rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final short lhs, final BigInteger rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final short lhs, final BigDecimal rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final int lhs, final byte rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final int lhs, final char rhs) throws Throwable {
+    final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final int lhs, final short rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final int lhs, final int rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final int lhs, final long rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final int lhs, final float rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final int lhs, final double rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final int lhs, final BigInteger rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final int lhs, final BigDecimal rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final long lhs, final byte rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final long lhs, final char rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final long lhs, final short rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final long lhs, final int rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final long lhs, final long rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final long lhs, final float rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final long lhs, final double rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final long lhs, final BigInteger rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final float lhs, final byte rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final float lhs, final char rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final float lhs, final short rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final float lhs, final int rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final float lhs, final long rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final float lhs, final float rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final float lhs, final double rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final float lhs, final BigInteger rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final float lhs, final BigDecimal rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final double lhs, final byte rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final double lhs, final char rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final double lhs, final short rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final double lhs, final int rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final double lhs, final long rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final double lhs, final float rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final double lhs, final double rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final double lhs, final BigInteger rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final double lhs, final BigDecimal rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigInteger lhs, final byte rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigInteger lhs, final char rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigInteger lhs, final short rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigInteger lhs, final int rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigInteger lhs, final long rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigInteger lhs, final float rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigInteger lhs, final double rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigInteger lhs, final BigInteger rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigDecimal lhs, final byte rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigDecimal lhs, final char rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigDecimal lhs, final short rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigDecimal lhs, final int rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigDecimal lhs, final long rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigDecimal lhs, final float rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigDecimal lhs, final double rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doLessThanOrEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
+  final Object result = doLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doReverseLessThanOrEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
+  final Object result = doReverseLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doReverseLessThanOrEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
+  final Object result = doReverseLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doReverseLessThanOrEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
+  final Object result = doReverseLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doReverseLessThanOrEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
+  final Object result = doReverseLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doReverseLessThanOrEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
+  final Object result = doReverseLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doReverseLessThanOrEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
+  final Object result = doReverseLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doReverseLessThanOrEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
+  final Object result = doReverseLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doReverseLessThanOrEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
+  final Object result = doReverseLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
+  public boolean doReverseLessThanOrEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
+  final Object result = doReverseLessThanOrEquals(lhs, rhs);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "<=", float.class);
+    
+    return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+  }
+
   //
   //   Internal methods for operator >
   //

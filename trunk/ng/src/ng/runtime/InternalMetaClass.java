@@ -5664,6 +5664,206 @@ public interface InternalMetaClass {
 
   Object doReverseLessThanOrEquals(BigDecimal lhs, Object rhs) throws Throwable;
 
+  boolean doLessThanOrEqualsBoolean(Object lhs, Object rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(byte lhs, byte rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(byte lhs, char rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(byte lhs, short rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(byte lhs, int rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(byte lhs, long rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(byte lhs, float rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(byte lhs, double rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(byte lhs, BigInteger rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(byte lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(char lhs, byte rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(char lhs, char rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(char lhs, short rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(char lhs, int rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(char lhs, long rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(char lhs, float rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(char lhs, double rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(char lhs, BigInteger rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(char lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(short lhs, byte rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(short lhs, char rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(short lhs, short rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(short lhs, int rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(short lhs, long rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(short lhs, float rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(short lhs, double rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(short lhs, BigInteger rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(short lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(int lhs, byte rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(int lhs, char rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(int lhs, short rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(int lhs, int rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(int lhs, long rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(int lhs, float rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(int lhs, double rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(int lhs, BigInteger rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(int lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(long lhs, byte rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(long lhs, char rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(long lhs, short rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(long lhs, int rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(long lhs, long rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(long lhs, float rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(long lhs, double rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(long lhs, BigInteger rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(long lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(float lhs, byte rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(float lhs, char rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(float lhs, short rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(float lhs, int rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(float lhs, long rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(float lhs, float rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(float lhs, double rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(float lhs, BigInteger rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(float lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(double lhs, byte rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(double lhs, char rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(double lhs, short rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(double lhs, int rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(double lhs, long rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(double lhs, float rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(double lhs, double rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(double lhs, BigInteger rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(double lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigInteger lhs, byte rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigInteger lhs, char rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigInteger lhs, short rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigInteger lhs, int rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigInteger lhs, long rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigInteger lhs, float rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigInteger lhs, double rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigInteger lhs, BigInteger rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigDecimal lhs, byte rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigDecimal lhs, char rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigDecimal lhs, short rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigDecimal lhs, int rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigDecimal lhs, long rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigDecimal lhs, float rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigDecimal lhs, double rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(Object lhs, byte rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(Object lhs, char rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(Object lhs, short rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(Object lhs, int rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(Object lhs, long rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(Object lhs, float rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(Object lhs, double rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(Object lhs, BigInteger rhs) throws Throwable;
+
+  boolean doLessThanOrEqualsBoolean(Object lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doReverseLessThanOrEqualsBoolean(byte lhs, Object rhs) throws Throwable;
+
+  boolean doReverseLessThanOrEqualsBoolean(char lhs, Object rhs) throws Throwable;
+
+  boolean doReverseLessThanOrEqualsBoolean(short lhs, Object rhs) throws Throwable;
+
+  boolean doReverseLessThanOrEqualsBoolean(int lhs, Object rhs) throws Throwable;
+
+  boolean doReverseLessThanOrEqualsBoolean(long lhs, Object rhs) throws Throwable;
+
+  boolean doReverseLessThanOrEqualsBoolean(float lhs, Object rhs) throws Throwable;
+
+  boolean doReverseLessThanOrEqualsBoolean(double lhs, Object rhs) throws Throwable;
+
+  boolean doReverseLessThanOrEqualsBoolean(BigInteger lhs, Object rhs) throws Throwable;
+
+  boolean doReverseLessThanOrEqualsBoolean(BigDecimal lhs, Object rhs) throws Throwable;
+
   //
   //   Internal methods for operator >
   //   Do not generate calls to these
