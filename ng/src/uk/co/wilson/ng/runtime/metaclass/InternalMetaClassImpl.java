@@ -24,6 +24,7 @@ import java.math.BigInteger;
 
 import ng.lang.NgSystem;
 import ng.runtime.*;
+import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl.NgBinaryOperatorException;
 import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 import uk.co.wilson.ng.runtime.metaclass.reflection.InstanceReflectionHandler;
 
@@ -9364,437 +9365,1232 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   //
   //
 
-  public Object doEquals(final byte lhs, final byte rhs) throws Throwable {
-    return doEquals(NgByte.valueOf(lhs), NgByte.valueOf(rhs));
-  }
-
-  public Object doEquals(final byte lhs, final char rhs) throws Throwable {
-    return doEquals(NgByte.valueOf(lhs), NgChar.valueOf(rhs));
-  }
-
-  public Object doEquals(final byte lhs, final short rhs) throws Throwable {
-    return doEquals(NgByte.valueOf(lhs), NgShort.valueOf(rhs));
-  }
-
-  public Object doEquals(final byte lhs, final int rhs) throws Throwable {
-    return doEquals(NgByte.valueOf(lhs), NgInt.valueOf(rhs));
-  }
-
-  public Object doEquals(final byte lhs, final long rhs) throws Throwable {
-    return doEquals(NgByte.valueOf(lhs), NgLong.valueOf(rhs));
-  }
-
-  public Object doEquals(final byte lhs, final float rhs) throws Throwable {
-    return doEquals(NgByte.valueOf(lhs), NgFloat.valueOf(rhs));
-  }
-
-  public Object doEquals(final byte lhs, final double rhs) throws Throwable {
-    return doEquals(NgByte.valueOf(lhs), NgDouble.valueOf(rhs));
-  }
-
-  public Object doEquals(final byte lhs, final BigInteger rhs) throws Throwable {
-    return doEquals(NgByte.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final byte lhs, final BigDecimal rhs) throws Throwable {
-    return doEquals(NgByte.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final char lhs, final byte rhs) throws Throwable {
-    return doEquals(NgChar.valueOf(lhs), NgByte.valueOf(rhs));
-  }
-
-  public Object doEquals(final char lhs, final char rhs) throws Throwable {
-    return doEquals(NgChar.valueOf(lhs), NgChar.valueOf(rhs));
-  }
-
-  public Object doEquals(final char lhs, final short rhs) throws Throwable {
-    return doEquals(NgChar.valueOf(lhs), NgShort.valueOf(rhs));
-  }
-
-  public Object doEquals(final char lhs, final int rhs) throws Throwable {
-    return doEquals(NgChar.valueOf(lhs), NgInt.valueOf(rhs));
-  }
-
-  public Object doEquals(final char lhs, final long rhs) throws Throwable {
-    return doEquals(NgChar.valueOf(lhs), NgLong.valueOf(rhs));
-  }
-
-  public Object doEquals(final char lhs, final float rhs) throws Throwable {
-    return doEquals(NgChar.valueOf(lhs), NgFloat.valueOf(rhs));
-  }
-
-  public Object doEquals(final char lhs, final double rhs) throws Throwable {
-    return doEquals(NgChar.valueOf(lhs), NgDouble.valueOf(rhs));
-  }
-
-  public Object doEquals(final char lhs, final BigInteger rhs) throws Throwable {
-    return doEquals(NgChar.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final char lhs, final BigDecimal rhs) throws Throwable {
-    return doEquals(NgChar.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final short lhs, final byte rhs) throws Throwable {
-    return doEquals(NgShort.valueOf(lhs), NgByte.valueOf(rhs));
-  }
-
-  public Object doEquals(final short lhs, final char rhs) throws Throwable {
-    return doEquals(NgShort.valueOf(lhs), NgChar.valueOf(rhs));
-  }
-
-  public Object doEquals(final short lhs, final short rhs) throws Throwable {
-    return doEquals(NgShort.valueOf(lhs), NgShort.valueOf(rhs));
-  }
-
-  public Object doEquals(final short lhs, final int rhs) throws Throwable {
-    return doEquals(NgShort.valueOf(lhs), NgInt.valueOf(rhs));
-  }
-
-  public Object doEquals(final short lhs, final long rhs) throws Throwable {
-    return doEquals(NgShort.valueOf(lhs), NgLong.valueOf(rhs));
-  }
-
-  public Object doEquals(final short lhs, final float rhs) throws Throwable {
-    return doEquals(NgShort.valueOf(lhs), NgFloat.valueOf(rhs));
-  }
-
-  public Object doEquals(final short lhs, final double rhs) throws Throwable {
-    return doEquals(NgShort.valueOf(lhs), NgDouble.valueOf(rhs));
-  }
-
-  public Object doEquals(final short lhs, final BigInteger rhs) throws Throwable {
-    return doEquals(NgShort.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final short lhs, final BigDecimal rhs) throws Throwable {
-    return doEquals(NgShort.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final int lhs, final byte rhs) throws Throwable {
-    return doEquals(NgInt.valueOf(lhs), NgByte.valueOf(rhs));
-  }
-
-  public Object doEquals(final int lhs, final char rhs) throws Throwable {
-    return doEquals(NgInt.valueOf(lhs), NgChar.valueOf(rhs));
-  }
-
-  public Object doEquals(final int lhs, final short rhs) throws Throwable {
-    return doEquals(NgInt.valueOf(lhs), NgShort.valueOf(rhs));
-  }
-
-  public Object doEquals(final int lhs, final int rhs) throws Throwable {
-    return doEquals(NgInt.valueOf(lhs), NgInt.valueOf(rhs));
-  }
-
-  public Object doEquals(final int lhs, final long rhs) throws Throwable {
-    return doEquals(NgInt.valueOf(lhs), NgLong.valueOf(rhs));
-  }
-
-  public Object doEquals(final int lhs, final float rhs) throws Throwable {
-    return doEquals(NgInt.valueOf(lhs), NgFloat.valueOf(rhs));
-  }
-
-  public Object doEquals(final int lhs, final double rhs) throws Throwable {
-    return doEquals(NgInt.valueOf(lhs), NgDouble.valueOf(rhs));
-  }
-
-  public Object doEquals(final int lhs, final BigInteger rhs) throws Throwable {
-    return doEquals(NgInt.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final int lhs, final BigDecimal rhs) throws Throwable {
-    return doEquals(NgInt.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final long lhs, final byte rhs) throws Throwable {
-    return doEquals(NgLong.valueOf(lhs), NgByte.valueOf(rhs));
-  }
-
-  public Object doEquals(final long lhs, final char rhs) throws Throwable {
-    return doEquals(NgLong.valueOf(lhs), NgChar.valueOf(rhs));
-  }
-
-  public Object doEquals(final long lhs, final short rhs) throws Throwable {
-    return doEquals(NgLong.valueOf(lhs), NgShort.valueOf(rhs));
-  }
-
-  public Object doEquals(final long lhs, final int rhs) throws Throwable {
-    return doEquals(NgLong.valueOf(lhs), NgInt.valueOf(rhs));
-  }
-
-  public Object doEquals(final long lhs, final long rhs) throws Throwable {
-    return doEquals(NgLong.valueOf(lhs), NgLong.valueOf(rhs));
-  }
-
-  public Object doEquals(final long lhs, final float rhs) throws Throwable {
-    return doEquals(NgLong.valueOf(lhs), NgFloat.valueOf(rhs));
-  }
-
-  public Object doEquals(final long lhs, final double rhs) throws Throwable {
-    return doEquals(NgLong.valueOf(lhs), NgDouble.valueOf(rhs));
-  }
-
-  public Object doEquals(final long lhs, final BigInteger rhs) throws Throwable {
-    return doEquals(NgLong.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final long lhs, final BigDecimal rhs) throws Throwable {
-    return doEquals(NgLong.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final float lhs, final byte rhs) throws Throwable {
-    return doEquals(NgFloat.valueOf(lhs), NgByte.valueOf(rhs));
-  }
-
-  public Object doEquals(final float lhs, final char rhs) throws Throwable {
-    return doEquals(NgFloat.valueOf(lhs), NgChar.valueOf(rhs));
-  }
-
-  public Object doEquals(final float lhs, final short rhs) throws Throwable {
-    return doEquals(NgFloat.valueOf(lhs), NgShort.valueOf(rhs));
-  }
-
-  public Object doEquals(final float lhs, final int rhs) throws Throwable {
-    return doEquals(NgFloat.valueOf(lhs), NgInt.valueOf(rhs));
-  }
-
-  public Object doEquals(final float lhs, final long rhs) throws Throwable {
-    return doEquals(NgFloat.valueOf(lhs), NgLong.valueOf(rhs));
-  }
-
-  public Object doEquals(final float lhs, final float rhs) throws Throwable {
-    return doEquals(NgFloat.valueOf(lhs), NgFloat.valueOf(rhs));
-  }
-
-  public Object doEquals(final float lhs, final double rhs) throws Throwable {
-    return doEquals(NgFloat.valueOf(lhs), NgDouble.valueOf(rhs));
-  }
-
-  public Object doEquals(final float lhs, final BigInteger rhs) throws Throwable {
-    return doEquals(NgFloat.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final float lhs, final BigDecimal rhs) throws Throwable {
-    return doEquals(NgFloat.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final double lhs, final byte rhs) throws Throwable {
-    return doEquals(NgDouble.valueOf(lhs), NgByte.valueOf(rhs));
-  }
-
-  public Object doEquals(final double lhs, final char rhs) throws Throwable {
-    return doEquals(NgDouble.valueOf(lhs), NgChar.valueOf(rhs));
-  }
-
-  public Object doEquals(final double lhs, final short rhs) throws Throwable {
-    return doEquals(NgDouble.valueOf(lhs), NgShort.valueOf(rhs));
-  }
-
-  public Object doEquals(final double lhs, final int rhs) throws Throwable {
-    return doEquals(NgDouble.valueOf(lhs), NgInt.valueOf(rhs));
-  }
-
-  public Object doEquals(final double lhs, final long rhs) throws Throwable {
-    return doEquals(NgDouble.valueOf(lhs), NgLong.valueOf(rhs));
-  }
-
-  public Object doEquals(final double lhs, final float rhs) throws Throwable {
-    return doEquals(NgDouble.valueOf(lhs), NgFloat.valueOf(rhs));
-  }
-
-  public Object doEquals(final double lhs, final double rhs) throws Throwable {
-    return doEquals(NgDouble.valueOf(lhs), NgDouble.valueOf(rhs));
-  }
-
-  public Object doEquals(final double lhs, final BigInteger rhs) throws Throwable {
-    return doEquals(NgDouble.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final double lhs, final BigDecimal rhs) throws Throwable {
-    return doEquals(NgDouble.valueOf(lhs), (Object)rhs);
-  }
-
-  public Object doEquals(final BigInteger lhs, final byte rhs) throws Throwable {
-    return doEquals((Object)lhs, NgByte.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigInteger lhs, final char rhs) throws Throwable {
-    return doEquals((Object)lhs, NgChar.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigInteger lhs, final short rhs) throws Throwable {
-    return doEquals((Object)lhs, NgShort.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigInteger lhs, final int rhs) throws Throwable {
-    return doEquals((Object)lhs, NgInt.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigInteger lhs, final long rhs) throws Throwable {
-    return doEquals((Object)lhs, NgLong.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigInteger lhs, final float rhs) throws Throwable {
-    return doEquals((Object)lhs, NgFloat.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigInteger lhs, final double rhs) throws Throwable {
-    return doEquals((Object)lhs, NgDouble.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigInteger lhs, final BigInteger rhs) throws Throwable {
-    return doEquals((Object)lhs, (Object)rhs);
-  }
-
-  public Object doEquals(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
-    return doEquals((Object)lhs, (Object)rhs);
-  }
-
-  public Object doEquals(final BigDecimal lhs, final byte rhs) throws Throwable {
-    return doEquals((Object)lhs, NgByte.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigDecimal lhs, final char rhs) throws Throwable {
-    return doEquals((Object)lhs, NgChar.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigDecimal lhs, final short rhs) throws Throwable {
-    return doEquals((Object)lhs, NgShort.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigDecimal lhs, final int rhs) throws Throwable {
-    return doEquals((Object)lhs, NgInt.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigDecimal lhs, final long rhs) throws Throwable {
-    return doEquals((Object)lhs, NgLong.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigDecimal lhs, final float rhs) throws Throwable {
-    return doEquals((Object)lhs, NgFloat.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigDecimal lhs, final double rhs) throws Throwable {
-    return doEquals((Object)lhs, NgDouble.valueOf(rhs));
-  }
-
-  public Object doEquals(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
-    return doEquals((Object)lhs, (Object)rhs);
-  }
-
-  public Object doEquals(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
-    return doEquals((Object)lhs, (Object)rhs);
-  }
-
-  public Object doEquals(final Object lhs, final byte rhs) throws Throwable {
-  final Object rhsObject = NgByte.valueOf(rhs);
+    public Object doEquals(final byte lhs, final byte rhs) throws Throwable {
+      return doEquals(NgByte.valueOf(lhs), NgByte.valueOf(rhs));
+    }
+
+    public Object doEquals(final byte lhs, final char rhs) throws Throwable {
+      return doEquals(NgByte.valueOf(lhs), NgChar.valueOf(rhs));
+    }
+
+    public Object doEquals(final byte lhs, final short rhs) throws Throwable {
+      return doEquals(NgByte.valueOf(lhs), NgShort.valueOf(rhs));
+    }
+
+    public Object doEquals(final byte lhs, final int rhs) throws Throwable {
+      return doEquals(NgByte.valueOf(lhs), NgInt.valueOf(rhs));
+    }
+
+    public Object doEquals(final byte lhs, final long rhs) throws Throwable {
+      return doEquals(NgByte.valueOf(lhs), NgLong.valueOf(rhs));
+    }
+
+    public Object doEquals(final byte lhs, final float rhs) throws Throwable {
+      return doEquals(NgByte.valueOf(lhs), NgFloat.valueOf(rhs));
+    }
+
+    public Object doEquals(final byte lhs, final double rhs) throws Throwable {
+      return doEquals(NgByte.valueOf(lhs), NgDouble.valueOf(rhs));
+    }
+
+    public Object doEquals(final byte lhs, final BigInteger rhs) throws Throwable {
+      return doEquals(NgByte.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final byte lhs, final BigDecimal rhs) throws Throwable {
+      return doEquals(NgByte.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final char lhs, final byte rhs) throws Throwable {
+      return doEquals(NgChar.valueOf(lhs), NgByte.valueOf(rhs));
+    }
+
+    public Object doEquals(final char lhs, final char rhs) throws Throwable {
+      return doEquals(NgChar.valueOf(lhs), NgChar.valueOf(rhs));
+    }
+
+    public Object doEquals(final char lhs, final short rhs) throws Throwable {
+      return doEquals(NgChar.valueOf(lhs), NgShort.valueOf(rhs));
+    }
+
+    public Object doEquals(final char lhs, final int rhs) throws Throwable {
+      return doEquals(NgChar.valueOf(lhs), NgInt.valueOf(rhs));
+    }
+
+    public Object doEquals(final char lhs, final long rhs) throws Throwable {
+      return doEquals(NgChar.valueOf(lhs), NgLong.valueOf(rhs));
+    }
+
+    public Object doEquals(final char lhs, final float rhs) throws Throwable {
+      return doEquals(NgChar.valueOf(lhs), NgFloat.valueOf(rhs));
+    }
+
+    public Object doEquals(final char lhs, final double rhs) throws Throwable {
+      return doEquals(NgChar.valueOf(lhs), NgDouble.valueOf(rhs));
+    }
+
+    public Object doEquals(final char lhs, final BigInteger rhs) throws Throwable {
+      return doEquals(NgChar.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final char lhs, final BigDecimal rhs) throws Throwable {
+      return doEquals(NgChar.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final short lhs, final byte rhs) throws Throwable {
+      return doEquals(NgShort.valueOf(lhs), NgByte.valueOf(rhs));
+    }
+
+    public Object doEquals(final short lhs, final char rhs) throws Throwable {
+      return doEquals(NgShort.valueOf(lhs), NgChar.valueOf(rhs));
+    }
+
+    public Object doEquals(final short lhs, final short rhs) throws Throwable {
+      return doEquals(NgShort.valueOf(lhs), NgShort.valueOf(rhs));
+    }
+
+    public Object doEquals(final short lhs, final int rhs) throws Throwable {
+      return doEquals(NgShort.valueOf(lhs), NgInt.valueOf(rhs));
+    }
+
+    public Object doEquals(final short lhs, final long rhs) throws Throwable {
+      return doEquals(NgShort.valueOf(lhs), NgLong.valueOf(rhs));
+    }
+
+    public Object doEquals(final short lhs, final float rhs) throws Throwable {
+      return doEquals(NgShort.valueOf(lhs), NgFloat.valueOf(rhs));
+    }
+
+    public Object doEquals(final short lhs, final double rhs) throws Throwable {
+      return doEquals(NgShort.valueOf(lhs), NgDouble.valueOf(rhs));
+    }
+
+    public Object doEquals(final short lhs, final BigInteger rhs) throws Throwable {
+      return doEquals(NgShort.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final short lhs, final BigDecimal rhs) throws Throwable {
+      return doEquals(NgShort.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final int lhs, final byte rhs) throws Throwable {
+      return doEquals(NgInt.valueOf(lhs), NgByte.valueOf(rhs));
+    }
+
+    public Object doEquals(final int lhs, final char rhs) throws Throwable {
+      return doEquals(NgInt.valueOf(lhs), NgChar.valueOf(rhs));
+    }
+
+    public Object doEquals(final int lhs, final short rhs) throws Throwable {
+      return doEquals(NgInt.valueOf(lhs), NgShort.valueOf(rhs));
+    }
+
+    public Object doEquals(final int lhs, final int rhs) throws Throwable {
+      return doEquals(NgInt.valueOf(lhs), NgInt.valueOf(rhs));
+    }
+
+    public Object doEquals(final int lhs, final long rhs) throws Throwable {
+      return doEquals(NgInt.valueOf(lhs), NgLong.valueOf(rhs));
+    }
+
+    public Object doEquals(final int lhs, final float rhs) throws Throwable {
+      return doEquals(NgInt.valueOf(lhs), NgFloat.valueOf(rhs));
+    }
+
+    public Object doEquals(final int lhs, final double rhs) throws Throwable {
+      return doEquals(NgInt.valueOf(lhs), NgDouble.valueOf(rhs));
+    }
+
+    public Object doEquals(final int lhs, final BigInteger rhs) throws Throwable {
+      return doEquals(NgInt.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final int lhs, final BigDecimal rhs) throws Throwable {
+      return doEquals(NgInt.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final long lhs, final byte rhs) throws Throwable {
+      return doEquals(NgLong.valueOf(lhs), NgByte.valueOf(rhs));
+    }
+
+    public Object doEquals(final long lhs, final char rhs) throws Throwable {
+      return doEquals(NgLong.valueOf(lhs), NgChar.valueOf(rhs));
+    }
+
+    public Object doEquals(final long lhs, final short rhs) throws Throwable {
+      return doEquals(NgLong.valueOf(lhs), NgShort.valueOf(rhs));
+    }
+
+    public Object doEquals(final long lhs, final int rhs) throws Throwable {
+      return doEquals(NgLong.valueOf(lhs), NgInt.valueOf(rhs));
+    }
+
+    public Object doEquals(final long lhs, final long rhs) throws Throwable {
+      return doEquals(NgLong.valueOf(lhs), NgLong.valueOf(rhs));
+    }
+
+    public Object doEquals(final long lhs, final float rhs) throws Throwable {
+      return doEquals(NgLong.valueOf(lhs), NgFloat.valueOf(rhs));
+    }
+
+    public Object doEquals(final long lhs, final double rhs) throws Throwable {
+      return doEquals(NgLong.valueOf(lhs), NgDouble.valueOf(rhs));
+    }
+
+    public Object doEquals(final long lhs, final BigInteger rhs) throws Throwable {
+      return doEquals(NgLong.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final long lhs, final BigDecimal rhs) throws Throwable {
+      return doEquals(NgLong.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final float lhs, final byte rhs) throws Throwable {
+      return doEquals(NgFloat.valueOf(lhs), NgByte.valueOf(rhs));
+    }
+
+    public Object doEquals(final float lhs, final char rhs) throws Throwable {
+      return doEquals(NgFloat.valueOf(lhs), NgChar.valueOf(rhs));
+    }
+
+    public Object doEquals(final float lhs, final short rhs) throws Throwable {
+      return doEquals(NgFloat.valueOf(lhs), NgShort.valueOf(rhs));
+    }
+
+    public Object doEquals(final float lhs, final int rhs) throws Throwable {
+      return doEquals(NgFloat.valueOf(lhs), NgInt.valueOf(rhs));
+    }
+
+    public Object doEquals(final float lhs, final long rhs) throws Throwable {
+      return doEquals(NgFloat.valueOf(lhs), NgLong.valueOf(rhs));
+    }
+
+    public Object doEquals(final float lhs, final float rhs) throws Throwable {
+      return doEquals(NgFloat.valueOf(lhs), NgFloat.valueOf(rhs));
+    }
+
+    public Object doEquals(final float lhs, final double rhs) throws Throwable {
+      return doEquals(NgFloat.valueOf(lhs), NgDouble.valueOf(rhs));
+    }
+
+    public Object doEquals(final float lhs, final BigInteger rhs) throws Throwable {
+      return doEquals(NgFloat.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final float lhs, final BigDecimal rhs) throws Throwable {
+      return doEquals(NgFloat.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final double lhs, final byte rhs) throws Throwable {
+      return doEquals(NgDouble.valueOf(lhs), NgByte.valueOf(rhs));
+    }
+
+    public Object doEquals(final double lhs, final char rhs) throws Throwable {
+      return doEquals(NgDouble.valueOf(lhs), NgChar.valueOf(rhs));
+    }
+
+    public Object doEquals(final double lhs, final short rhs) throws Throwable {
+      return doEquals(NgDouble.valueOf(lhs), NgShort.valueOf(rhs));
+    }
+
+    public Object doEquals(final double lhs, final int rhs) throws Throwable {
+      return doEquals(NgDouble.valueOf(lhs), NgInt.valueOf(rhs));
+    }
+
+    public Object doEquals(final double lhs, final long rhs) throws Throwable {
+      return doEquals(NgDouble.valueOf(lhs), NgLong.valueOf(rhs));
+    }
+
+    public Object doEquals(final double lhs, final float rhs) throws Throwable {
+      return doEquals(NgDouble.valueOf(lhs), NgFloat.valueOf(rhs));
+    }
+
+    public Object doEquals(final double lhs, final double rhs) throws Throwable {
+      return doEquals(NgDouble.valueOf(lhs), NgDouble.valueOf(rhs));
+    }
+
+    public Object doEquals(final double lhs, final BigInteger rhs) throws Throwable {
+      return doEquals(NgDouble.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final double lhs, final BigDecimal rhs) throws Throwable {
+      return doEquals(NgDouble.valueOf(lhs), (Object)rhs);
+    }
+
+    public Object doEquals(final BigInteger lhs, final byte rhs) throws Throwable {
+      return doEquals((Object)lhs, NgByte.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigInteger lhs, final char rhs) throws Throwable {
+      return doEquals((Object)lhs, NgChar.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigInteger lhs, final short rhs) throws Throwable {
+      return doEquals((Object)lhs, NgShort.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigInteger lhs, final int rhs) throws Throwable {
+      return doEquals((Object)lhs, NgInt.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigInteger lhs, final long rhs) throws Throwable {
+      return doEquals((Object)lhs, NgLong.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigInteger lhs, final float rhs) throws Throwable {
+      return doEquals((Object)lhs, NgFloat.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigInteger lhs, final double rhs) throws Throwable {
+      return doEquals((Object)lhs, NgDouble.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigInteger lhs, final BigInteger rhs) throws Throwable {
+      return doEquals((Object)lhs, (Object)rhs);
+    }
+
+    public Object doEquals(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
+      return doEquals((Object)lhs, (Object)rhs);
+    }
+
+    public Object doEquals(final BigDecimal lhs, final byte rhs) throws Throwable {
+      return doEquals((Object)lhs, NgByte.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigDecimal lhs, final char rhs) throws Throwable {
+      return doEquals((Object)lhs, NgChar.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigDecimal lhs, final short rhs) throws Throwable {
+      return doEquals((Object)lhs, NgShort.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigDecimal lhs, final int rhs) throws Throwable {
+      return doEquals((Object)lhs, NgInt.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigDecimal lhs, final long rhs) throws Throwable {
+      return doEquals((Object)lhs, NgLong.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigDecimal lhs, final float rhs) throws Throwable {
+      return doEquals((Object)lhs, NgFloat.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigDecimal lhs, final double rhs) throws Throwable {
+      return doEquals((Object)lhs, NgDouble.valueOf(rhs));
+    }
+
+    public Object doEquals(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
+      return doEquals((Object)lhs, (Object)rhs);
+    }
+
+    public Object doEquals(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
+      return doEquals((Object)lhs, (Object)rhs);
+    }
+
+    public Object doEquals(final Object lhs, final byte rhs) throws Throwable {
+    final Object rhsObject = NgByte.valueOf(rhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
+    }
+
+    public Object doEquals(final Object lhs, final char rhs) throws Throwable {
+    final Object rhsObject = NgChar.valueOf(rhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
+    }
+
+    public Object doEquals(final Object lhs, final short rhs) throws Throwable {
+    final Object rhsObject = NgShort.valueOf(rhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
+    }
+
+    public Object doEquals(final Object lhs, final int rhs) throws Throwable {
+    final Object rhsObject = NgInt.valueOf(rhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
+    }
+
+    public Object doEquals(final Object lhs, final long rhs) throws Throwable {
+    final Object rhsObject = NgLong.valueOf(rhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
+    }
+
+    public Object doEquals(final Object lhs, final float rhs) throws Throwable {
+    final Object rhsObject = NgFloat.valueOf(rhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
+    }
+
+    public Object doEquals(final Object lhs, final double rhs) throws Throwable {
+    final Object rhsObject = NgDouble.valueOf(rhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
+    }
+
+    public Object doEquals(final Object lhs, final BigInteger rhs) throws Throwable {
+    final Object rhsObject = (Object)rhs;
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
+    }
+
+    public Object doEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
+    final Object rhsObject = (Object)rhs;
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
+    }
+
+    public Object doReverseEquals(final byte lhs, final Object rhs) throws Throwable {
+    final Object lhsObject = NgByte.valueOf(lhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
+    }
+
+    public Object doReverseEquals(final char lhs, final Object rhs) throws Throwable {
+    final Object lhsObject = NgChar.valueOf(lhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
+    }
+
+    public Object doReverseEquals(final short lhs, final Object rhs) throws Throwable {
+    final Object lhsObject = NgShort.valueOf(lhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
+    }
+
+    public Object doReverseEquals(final int lhs, final Object rhs) throws Throwable {
+    final Object lhsObject = NgInt.valueOf(lhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
+    }
+
+    public Object doReverseEquals(final long lhs, final Object rhs) throws Throwable {
+    final Object lhsObject = NgLong.valueOf(lhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
+    }
+
+    public Object doReverseEquals(final float lhs, final Object rhs) throws Throwable {
+    final Object lhsObject = NgFloat.valueOf(lhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
+    }
+
+    public Object doReverseEquals(final double lhs, final Object rhs) throws Throwable {
+    final Object lhsObject = NgDouble.valueOf(lhs);
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
+    }
+
+    public Object doReverseEquals(final BigInteger lhs, final Object rhs) throws Throwable {
+    final Object lhsObject = (Object)lhs;
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
+    }
+
+    public Object doReverseEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
+    final Object lhsObject = (Object)lhs;
+      
+      return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.InternalMetaClass#doEqualsBoolean(java.lang.Object, java.lang.Object)
+     */
+    public boolean doEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
     
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
-  }
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doEquals(final Object lhs, final char rhs) throws Throwable {
-  final Object rhsObject = NgChar.valueOf(rhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
-  }
+    public boolean doEqualsBoolean(final byte lhs, final byte rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doEquals(final Object lhs, final short rhs) throws Throwable {
-  final Object rhsObject = NgShort.valueOf(rhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
-  }
+    public boolean doEqualsBoolean(final byte lhs, final char rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doEquals(final Object lhs, final int rhs) throws Throwable {
-  final Object rhsObject = NgInt.valueOf(rhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
-  }
+    public boolean doEqualsBoolean(final byte lhs, final short rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doEquals(final Object lhs, final long rhs) throws Throwable {
-  final Object rhsObject = NgLong.valueOf(rhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
-  }
+    public boolean doEqualsBoolean(final byte lhs, final int rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doEquals(final Object lhs, final float rhs) throws Throwable {
-  final Object rhsObject = NgFloat.valueOf(rhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
-  }
+    public boolean doEqualsBoolean(final byte lhs, final long rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doEquals(final Object lhs, final double rhs) throws Throwable {
-  final Object rhsObject = NgDouble.valueOf(rhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
-  }
+    public boolean doEqualsBoolean(final byte lhs, final float rhs) throws Throwable {
+      return doEqualsBoolean(NgByte.valueOf(lhs), NgFloat.valueOf(rhs));
+    }
 
-  public Object doEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-  final Object rhsObject = (Object)rhs;
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
-  }
+    public boolean doEqualsBoolean(final byte lhs, final double rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
-  final Object rhsObject = (Object)rhs;
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhsObject).doReverseEquals(lhs, rhsObject);
-  }
+    public boolean doEqualsBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doReverseEquals(final byte lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = NgByte.valueOf(lhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
-  }
+    public boolean doEqualsBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doReverseEquals(final char lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = NgChar.valueOf(lhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
-  }
+    public boolean doEqualsBoolean(final char lhs, final byte rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doReverseEquals(final short lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = NgShort.valueOf(lhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
-  }
+    public boolean doEqualsBoolean(final char lhs, final char rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doReverseEquals(final int lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = NgInt.valueOf(lhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
-  }
+    public boolean doEqualsBoolean(final char lhs, final short rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doReverseEquals(final long lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = NgLong.valueOf(lhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
-  }
+    public boolean doEqualsBoolean(final char lhs, final int rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doReverseEquals(final float lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = NgFloat.valueOf(lhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
-  }
+    public boolean doEqualsBoolean(final char lhs, final long rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doReverseEquals(final double lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = NgDouble.valueOf(lhs);
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
-  }
+    public boolean doEqualsBoolean(final char lhs, final float rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
-  public Object doReverseEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = (Object)lhs;
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
-  }
+    public boolean doEqualsBoolean(final char lhs, final double rhs) throws Throwable {
+      return doEqualsBoolean(NgChar.valueOf(lhs), NgDouble.valueOf(rhs));
+    }
 
-  public Object doReverseEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-  final Object lhsObject = (Object)lhs;
-    
-    return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseEquals(lhsObject, rhs);
-  }
+    public boolean doEqualsBoolean(final char lhs, final BigInteger rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final short lhs, final byte rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final short lhs, final char rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final short lhs, final short rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final short lhs, final int rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final short lhs, final long rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final short lhs, final float rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final short lhs, final double rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final short lhs, final BigInteger rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final short lhs, final BigDecimal rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final int lhs, final byte rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final int lhs, final char rhs) throws Throwable {
+      final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final int lhs, final short rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final int lhs, final int rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final int lhs, final long rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final int lhs, final float rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final int lhs, final double rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final int lhs, final BigInteger rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final int lhs, final BigDecimal rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final long lhs, final byte rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final long lhs, final char rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final long lhs, final short rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final long lhs, final int rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final long lhs, final long rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final long lhs, final float rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final long lhs, final double rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final long lhs, final BigInteger rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final float lhs, final byte rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final float lhs, final char rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final float lhs, final short rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final float lhs, final int rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final float lhs, final long rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final float lhs, final float rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final float lhs, final double rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final float lhs, final BigInteger rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final float lhs, final BigDecimal rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final double lhs, final byte rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final double lhs, final char rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final double lhs, final short rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final double lhs, final int rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final double lhs, final long rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final double lhs, final float rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final double lhs, final double rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final double lhs, final BigInteger rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final double lhs, final BigDecimal rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigInteger lhs, final byte rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigInteger lhs, final char rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigInteger lhs, final short rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigInteger lhs, final int rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigInteger lhs, final long rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigInteger lhs, final float rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigInteger lhs, final double rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigInteger lhs, final BigInteger rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigDecimal lhs, final byte rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigDecimal lhs, final char rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigDecimal lhs, final short rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigDecimal lhs, final int rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigDecimal lhs, final long rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigDecimal lhs, final float rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigDecimal lhs, final double rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doReverseEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
+    final Object result = doReverseEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doReverseEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
+    final Object result = doReverseEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doReverseEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
+    final Object result = doReverseEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doReverseEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
+    final Object result = doReverseEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doReverseEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
+    final Object result = doReverseEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doReverseEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
+    final Object result = doReverseEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doReverseEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
+    final Object result = doReverseEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doReverseEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
+    final Object result = doReverseEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
+
+    public boolean doReverseEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
+    final Object result = doReverseEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getRuntimeMetaClass(result).asBoolean(result);
+    }
 
   //
   //   Internal methods for operator !=

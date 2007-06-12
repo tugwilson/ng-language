@@ -4813,6 +4813,206 @@ public interface InternalMetaClass {
 
   Object doReverseEquals(BigDecimal lhs, Object rhs) throws Throwable;
 
+  boolean doEqualsBoolean(Object lhs, Object rhs) throws Throwable;
+
+  boolean doEqualsBoolean(byte lhs, byte rhs) throws Throwable;
+
+  boolean doEqualsBoolean(byte lhs, char rhs) throws Throwable;
+
+  boolean doEqualsBoolean(byte lhs, short rhs) throws Throwable;
+
+  boolean doEqualsBoolean(byte lhs, int rhs) throws Throwable;
+
+  boolean doEqualsBoolean(byte lhs, long rhs) throws Throwable;
+
+  boolean doEqualsBoolean(byte lhs, float rhs) throws Throwable;
+
+  boolean doEqualsBoolean(byte lhs, double rhs) throws Throwable;
+
+  boolean doEqualsBoolean(byte lhs, BigInteger rhs) throws Throwable;
+
+  boolean doEqualsBoolean(byte lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doEqualsBoolean(char lhs, byte rhs) throws Throwable;
+
+  boolean doEqualsBoolean(char lhs, char rhs) throws Throwable;
+
+  boolean doEqualsBoolean(char lhs, short rhs) throws Throwable;
+
+  boolean doEqualsBoolean(char lhs, int rhs) throws Throwable;
+
+  boolean doEqualsBoolean(char lhs, long rhs) throws Throwable;
+
+  boolean doEqualsBoolean(char lhs, float rhs) throws Throwable;
+
+  boolean doEqualsBoolean(char lhs, double rhs) throws Throwable;
+
+  boolean doEqualsBoolean(char lhs, BigInteger rhs) throws Throwable;
+
+  boolean doEqualsBoolean(char lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doEqualsBoolean(short lhs, byte rhs) throws Throwable;
+
+  boolean doEqualsBoolean(short lhs, char rhs) throws Throwable;
+
+  boolean doEqualsBoolean(short lhs, short rhs) throws Throwable;
+
+  boolean doEqualsBoolean(short lhs, int rhs) throws Throwable;
+
+  boolean doEqualsBoolean(short lhs, long rhs) throws Throwable;
+
+  boolean doEqualsBoolean(short lhs, float rhs) throws Throwable;
+
+  boolean doEqualsBoolean(short lhs, double rhs) throws Throwable;
+
+  boolean doEqualsBoolean(short lhs, BigInteger rhs) throws Throwable;
+
+  boolean doEqualsBoolean(short lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doEqualsBoolean(int lhs, byte rhs) throws Throwable;
+
+  boolean doEqualsBoolean(int lhs, char rhs) throws Throwable;
+
+  boolean doEqualsBoolean(int lhs, short rhs) throws Throwable;
+
+  boolean doEqualsBoolean(int lhs, int rhs) throws Throwable;
+
+  boolean doEqualsBoolean(int lhs, long rhs) throws Throwable;
+
+  boolean doEqualsBoolean(int lhs, float rhs) throws Throwable;
+
+  boolean doEqualsBoolean(int lhs, double rhs) throws Throwable;
+
+  boolean doEqualsBoolean(int lhs, BigInteger rhs) throws Throwable;
+
+  boolean doEqualsBoolean(int lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doEqualsBoolean(long lhs, byte rhs) throws Throwable;
+
+  boolean doEqualsBoolean(long lhs, char rhs) throws Throwable;
+
+  boolean doEqualsBoolean(long lhs, short rhs) throws Throwable;
+
+  boolean doEqualsBoolean(long lhs, int rhs) throws Throwable;
+
+  boolean doEqualsBoolean(long lhs, long rhs) throws Throwable;
+
+  boolean doEqualsBoolean(long lhs, float rhs) throws Throwable;
+
+  boolean doEqualsBoolean(long lhs, double rhs) throws Throwable;
+
+  boolean doEqualsBoolean(long lhs, BigInteger rhs) throws Throwable;
+
+  boolean doEqualsBoolean(long lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doEqualsBoolean(float lhs, byte rhs) throws Throwable;
+
+  boolean doEqualsBoolean(float lhs, char rhs) throws Throwable;
+
+  boolean doEqualsBoolean(float lhs, short rhs) throws Throwable;
+
+  boolean doEqualsBoolean(float lhs, int rhs) throws Throwable;
+
+  boolean doEqualsBoolean(float lhs, long rhs) throws Throwable;
+
+  boolean doEqualsBoolean(float lhs, float rhs) throws Throwable;
+
+  boolean doEqualsBoolean(float lhs, double rhs) throws Throwable;
+
+  boolean doEqualsBoolean(float lhs, BigInteger rhs) throws Throwable;
+
+  boolean doEqualsBoolean(float lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doEqualsBoolean(double lhs, byte rhs) throws Throwable;
+
+  boolean doEqualsBoolean(double lhs, char rhs) throws Throwable;
+
+  boolean doEqualsBoolean(double lhs, short rhs) throws Throwable;
+
+  boolean doEqualsBoolean(double lhs, int rhs) throws Throwable;
+
+  boolean doEqualsBoolean(double lhs, long rhs) throws Throwable;
+
+  boolean doEqualsBoolean(double lhs, float rhs) throws Throwable;
+
+  boolean doEqualsBoolean(double lhs, double rhs) throws Throwable;
+
+  boolean doEqualsBoolean(double lhs, BigInteger rhs) throws Throwable;
+
+  boolean doEqualsBoolean(double lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigInteger lhs, byte rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigInteger lhs, char rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigInteger lhs, short rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigInteger lhs, int rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigInteger lhs, long rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigInteger lhs, float rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigInteger lhs, double rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigInteger lhs, BigInteger rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigDecimal lhs, byte rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigDecimal lhs, char rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigDecimal lhs, short rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigDecimal lhs, int rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigDecimal lhs, long rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigDecimal lhs, float rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigDecimal lhs, double rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable;
+
+  boolean doEqualsBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doEqualsBoolean(Object lhs, byte rhs) throws Throwable;
+
+  boolean doEqualsBoolean(Object lhs, char rhs) throws Throwable;
+
+  boolean doEqualsBoolean(Object lhs, short rhs) throws Throwable;
+
+  boolean doEqualsBoolean(Object lhs, int rhs) throws Throwable;
+
+  boolean doEqualsBoolean(Object lhs, long rhs) throws Throwable;
+
+  boolean doEqualsBoolean(Object lhs, float rhs) throws Throwable;
+
+  boolean doEqualsBoolean(Object lhs, double rhs) throws Throwable;
+
+  boolean doEqualsBoolean(Object lhs, BigInteger rhs) throws Throwable;
+
+  boolean doEqualsBoolean(Object lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doReverseEqualsBoolean(byte lhs, Object rhs) throws Throwable;
+
+  boolean doReverseEqualsBoolean(char lhs, Object rhs) throws Throwable;
+
+  boolean doReverseEqualsBoolean(short lhs, Object rhs) throws Throwable;
+
+  boolean doReverseEqualsBoolean(int lhs, Object rhs) throws Throwable;
+
+  boolean doReverseEqualsBoolean(long lhs, Object rhs) throws Throwable;
+
+  boolean doReverseEqualsBoolean(float lhs, Object rhs) throws Throwable;
+
+  boolean doReverseEqualsBoolean(double lhs, Object rhs) throws Throwable;
+
+  boolean doReverseEqualsBoolean(BigInteger lhs, Object rhs) throws Throwable;
+
+  boolean doReverseEqualsBoolean(BigDecimal lhs, Object rhs) throws Throwable;
+
   //
   //   Internal methods for operator !=
   //   Do not generate calls to these
