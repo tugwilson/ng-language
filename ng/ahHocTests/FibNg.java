@@ -57,8 +57,9 @@ public class FibNg extends NgBaseObject {
     
      Object fib(Object x) throws Throwable {
          final ThreadContext tc = NgSystem.metaClassRegistry.getThreadContext();
-         Object tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).lessThanOrEquals(x, 0);
-         if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp).asBoolean(tmp)) {
+ //        Object tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).lessThanOrEquals(x, 0);
+ //        if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp).asBoolean(tmp)) {
+         if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).lessThanOrEqualsBoolean(x, 0)) {
              return NgInt.valueOf(0);
          }
          
@@ -68,7 +69,7 @@ public class FibNg extends NgBaseObject {
              return NgInt.valueOf(1);
          }
     
-         tmp = this.metaClass.invokeMethodQuick(this, "fib", NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).subtract(x, 1));
+         Object tmp = this.metaClass.invokeMethodQuick(this, "fib", NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).subtract(x, 1));
          return NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, tmp).add(tmp, this.metaClass.invokeMethodQuick(this, "fib", NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).subtract(x, 2)));
      }
 }
