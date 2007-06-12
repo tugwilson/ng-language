@@ -29,15 +29,15 @@ import ng.runtime.ThreadContext;
  */
 public class FibNg extends NgBaseObject {
   private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(FibNg.class);
-    Object series;
+    int series;
     
     //
     // main is not translated
     //
     public static void main(String args[]) throws Throwable {
-      new FibNg(NgInt.valueOf(10)).calculate(); // warm up the JVM
+      new FibNg(10).calculate(); // warm up the JVM
       long start = System.currentTimeMillis();
-      int result = new FibNg(NgInt.valueOf(35)).calculate();
+      int result = new FibNg(35).calculate();
       System.out.println(System.currentTimeMillis() - start);
       System.out.println(result);
     }
@@ -45,31 +45,28 @@ public class FibNg extends NgBaseObject {
     //
     // the rest of the class approximates to what the Ng compiler will generate
     //
-    FibNg(Object x) throws Throwable {
+    FibNg(int x) throws Throwable {
       super(ngMetaClass);
-      this.metaClass.setField(this, "series", x);
+      this.metaClass.setField(this, "series", NgInt.valueOf(x));
      }
     
      int calculate() throws Throwable {
-         Object tmp = this.metaClass.invokeMethodQuick(this, "fib", this.metaClass.getField(this, "series"));
+     Object tmp = this.metaClass.invokeMethodQuick(this, "fib", this.metaClass.getField(this, "series"));
          return NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp).asInt(tmp);
      }
     
-     Object fib(Object x) throws Throwable {
-         final ThreadContext tc = NgSystem.metaClassRegistry.getThreadContext();
- //        Object tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).lessThanOrEquals(x, 0);
- //        if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp).asBoolean(tmp)) {
-         if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).lessThanOrEqualsBoolean(x, 0)) {
+     Object fib(int x) throws Throwable {
+     final ThreadContext tc = NgSystem.metaClassRegistry.getThreadContext();
+     
+         if (NgSystem.ngIntMetaClass.lessThanOrEqualsBoolean(x, 0)) {
              return NgInt.valueOf(0);
          }
          
-//         tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).equals(x, 1);
-//         if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, tmp).asBoolean(tmp)) {
-         if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).equalsBoolean(x, 1)) {
+         if (NgSystem.ngIntMetaClass.equalsBoolean(x, 1)) {
              return NgInt.valueOf(1);
          }
     
-         Object tmp = this.metaClass.invokeMethodQuick(this, "fib", NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).subtract(x, 1));
-         return NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, tmp).add(tmp, this.metaClass.invokeMethodQuick(this, "fib", NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, x).subtract(x, 2)));
+         Object tmp = this.metaClass.invokeMethodQuick(this, "fib", NgSystem.ngIntMetaClass.subtract(x, 1));
+         return NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, tmp).add(tmp, this.metaClass.invokeMethodQuick(this, "fib", NgSystem.ngIntMetaClass.subtract(x, 2)));
      }
 }
