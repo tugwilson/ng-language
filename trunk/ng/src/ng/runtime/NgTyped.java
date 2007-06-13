@@ -10794,6 +10794,706 @@ private final RuntimeMetaClass delegate;
     throw new NgRuntimeException("Operation not allowed on NgTyped");
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, java.math.BigDecimal)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, java.math.BigInteger)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, byte)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final byte rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, char)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final char rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, double)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final double rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, float)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final float rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, int)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final int rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, long)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final long rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, short)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final short rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, java.math.BigDecimal)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, java.math.BigInteger)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final BigInteger rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, byte)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final byte rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, char)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final char rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, double)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final double rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, float)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final float rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, int)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final int rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, long)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final long rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, short)
+   */
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final short rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, java.math.BigDecimal)
+   */
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, java.math.BigInteger)
+   */
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, byte)
+   */
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final byte rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, char)
+   */
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final char rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, double)
+   */
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final double rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, float)
+   */
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final float rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, int)
+   */
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final int rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, long)
+   */
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final long rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, short)
+   */
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final short rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, java.math.BigDecimal)
+   */
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, java.math.BigInteger)
+   */
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final BigInteger rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, byte)
+   */
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final byte rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, char)
+   */
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final char rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, double)
+   */
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final double rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, float)
+   */
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final float rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, int)
+   */
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final int rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, long)
+   */
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final long rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, short)
+   */
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final short rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, java.math.BigDecimal)
+   */
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final BigDecimal rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, java.math.BigInteger)
+   */
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final BigInteger rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, byte)
+   */
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final byte rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, char)
+   */
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final char rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, double)
+   */
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final double rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, float)
+   */
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final float rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, int)
+   */
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final int rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, long)
+   */
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final long rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, short)
+   */
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final short rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, java.math.BigDecimal)
+   */
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final BigDecimal rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, java.math.BigInteger)
+   */
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final BigInteger rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, byte)
+   */
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final byte rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, char)
+   */
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final char rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, double)
+   */
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final double rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, float)
+   */
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final float rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, int)
+   */
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final int rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, long)
+   */
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final long rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, short)
+   */
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final short rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, java.math.BigDecimal)
+   */
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final BigDecimal rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, java.math.BigInteger)
+   */
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final BigInteger rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, byte)
+   */
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final byte rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, char)
+   */
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final char rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, double)
+   */
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final double rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, float)
+   */
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final float rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, int)
+   */
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final int rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, long)
+   */
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final long rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, short)
+   */
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final short rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, java.math.BigDecimal)
+   */
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, java.math.BigInteger)
+   */
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final BigInteger rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, byte)
+   */
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final byte rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, char)
+   */
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final char rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, double)
+   */
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final double rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, float)
+   */
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final float rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, int)
+   */
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final int rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, long)
+   */
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final long rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, short)
+   */
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final short rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, java.math.BigDecimal)
+   */
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, java.math.BigInteger)
+   */
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, byte)
+   */
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, char)
+   */
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, double)
+   */
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, float)
+   */
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, int)
+   */
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, long)
+   */
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, java.lang.Object)
+   */
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, short)
+   */
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, java.math.BigDecimal)
+   */
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final BigDecimal rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, java.math.BigInteger)
+   */
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final BigInteger rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, byte)
+   */
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final byte rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, char)
+   */
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final char rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, double)
+   */
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final double rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, float)
+   */
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final float rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, int)
+   */
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final int rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, long)
+   */
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final long rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, short)
+   */
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final short rhs) throws Throwable {
+    throw new NgRuntimeException("Operation not allowed on NgTyped");
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(java.math.BigDecimal, java.lang.Object)
+   */
+  public boolean reverseGreaterThanOrEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(java.math.BigInteger, java.lang.Object)
+   */
+  public boolean reverseGreaterThanOrEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(byte, java.lang.Object)
+   */
+  public boolean reverseGreaterThanOrEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(char, java.lang.Object)
+   */
+  public boolean reverseGreaterThanOrEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(double, java.lang.Object)
+   */
+  public boolean reverseGreaterThanOrEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(float, java.lang.Object)
+   */
+  public boolean reverseGreaterThanOrEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(int, java.lang.Object)
+   */
+  public boolean reverseGreaterThanOrEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(long, java.lang.Object)
+   */
+  public boolean reverseGreaterThanOrEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(short, java.lang.Object)
+   */
+  public boolean reverseGreaterThanOrEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
+    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+  }
+
   /**
    * @param lhs
    * @param rhs

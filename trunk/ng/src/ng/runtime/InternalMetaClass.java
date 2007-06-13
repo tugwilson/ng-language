@@ -6697,4 +6697,204 @@ public interface InternalMetaClass {
   Object doReverseGreaterThanOrEquals(BigInteger lhs, Object rhs) throws Throwable;
 
   Object doReverseGreaterThanOrEquals(BigDecimal lhs, Object rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(Object lhs, Object rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(byte lhs, byte rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(byte lhs, char rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(byte lhs, short rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(byte lhs, int rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(byte lhs, long rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(byte lhs, float rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(byte lhs, double rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(byte lhs, BigInteger rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(byte lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(char lhs, byte rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(char lhs, char rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(char lhs, short rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(char lhs, int rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(char lhs, long rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(char lhs, float rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(char lhs, double rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(char lhs, BigInteger rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(char lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(short lhs, byte rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(short lhs, char rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(short lhs, short rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(short lhs, int rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(short lhs, long rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(short lhs, float rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(short lhs, double rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(short lhs, BigInteger rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(short lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(int lhs, byte rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(int lhs, char rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(int lhs, short rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(int lhs, int rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(int lhs, long rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(int lhs, float rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(int lhs, double rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(int lhs, BigInteger rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(int lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(long lhs, byte rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(long lhs, char rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(long lhs, short rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(long lhs, int rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(long lhs, long rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(long lhs, float rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(long lhs, double rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(long lhs, BigInteger rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(long lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(float lhs, byte rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(float lhs, char rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(float lhs, short rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(float lhs, int rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(float lhs, long rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(float lhs, float rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(float lhs, double rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(float lhs, BigInteger rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(float lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(double lhs, byte rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(double lhs, char rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(double lhs, short rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(double lhs, int rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(double lhs, long rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(double lhs, float rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(double lhs, double rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(double lhs, BigInteger rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(double lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigInteger lhs, byte rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigInteger lhs, char rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigInteger lhs, short rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigInteger lhs, int rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigInteger lhs, long rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigInteger lhs, float rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigInteger lhs, double rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigInteger lhs, BigInteger rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigDecimal lhs, byte rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigDecimal lhs, char rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigDecimal lhs, short rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigDecimal lhs, int rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigDecimal lhs, long rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigDecimal lhs, float rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigDecimal lhs, double rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(Object lhs, byte rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(Object lhs, char rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(Object lhs, short rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(Object lhs, int rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(Object lhs, long rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(Object lhs, float rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(Object lhs, double rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(Object lhs, BigInteger rhs) throws Throwable;
+
+  boolean doGreaterThanOrEqualsBoolean(Object lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doReverseGreaterThanOrEqualsBoolean(byte lhs, Object rhs) throws Throwable;
+
+  boolean doReverseGreaterThanOrEqualsBoolean(char lhs, Object rhs) throws Throwable;
+
+  boolean doReverseGreaterThanOrEqualsBoolean(short lhs, Object rhs) throws Throwable;
+
+  boolean doReverseGreaterThanOrEqualsBoolean(int lhs, Object rhs) throws Throwable;
+
+  boolean doReverseGreaterThanOrEqualsBoolean(long lhs, Object rhs) throws Throwable;
+
+  boolean doReverseGreaterThanOrEqualsBoolean(float lhs, Object rhs) throws Throwable;
+
+  boolean doReverseGreaterThanOrEqualsBoolean(double lhs, Object rhs) throws Throwable;
+
+  boolean doReverseGreaterThanOrEqualsBoolean(BigInteger lhs, Object rhs) throws Throwable;
+
+  boolean doReverseGreaterThanOrEqualsBoolean(BigDecimal lhs, Object rhs) throws Throwable;
 }
