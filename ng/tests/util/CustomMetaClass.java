@@ -16153,6 +16153,806 @@ class CustomMetaClass implements RuntimeMetaClass {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, java.math.BigDecimal)
+   */
+  public boolean notEqualsBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, java.math.BigInteger)
+   */
+  public boolean notEqualsBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, byte)
+   */
+  public boolean notEqualsBoolean(BigDecimal lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, char)
+   */
+  public boolean notEqualsBoolean(BigDecimal lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, double)
+   */
+  public boolean notEqualsBoolean(BigDecimal lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, float)
+   */
+  public boolean notEqualsBoolean(BigDecimal lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, int)
+   */
+  public boolean notEqualsBoolean(BigDecimal lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, long)
+   */
+  public boolean notEqualsBoolean(BigDecimal lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, short)
+   */
+  public boolean notEqualsBoolean(BigDecimal lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, java.math.BigDecimal)
+   */
+  public boolean notEqualsBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, java.math.BigInteger)
+   */
+  public boolean notEqualsBoolean(BigInteger lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, byte)
+   */
+  public boolean notEqualsBoolean(BigInteger lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, char)
+   */
+  public boolean notEqualsBoolean(BigInteger lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, double)
+   */
+  public boolean notEqualsBoolean(BigInteger lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, float)
+   */
+  public boolean notEqualsBoolean(BigInteger lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, int)
+   */
+  public boolean notEqualsBoolean(BigInteger lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, long)
+   */
+  public boolean notEqualsBoolean(BigInteger lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, short)
+   */
+  public boolean notEqualsBoolean(BigInteger lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, java.math.BigDecimal)
+   */
+  public boolean notEqualsBoolean(byte lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, java.math.BigInteger)
+   */
+  public boolean notEqualsBoolean(byte lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, byte)
+   */
+  public boolean notEqualsBoolean(byte lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, char)
+   */
+  public boolean notEqualsBoolean(byte lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, double)
+   */
+  public boolean notEqualsBoolean(byte lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, float)
+   */
+  public boolean notEqualsBoolean(byte lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, int)
+   */
+  public boolean notEqualsBoolean(byte lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, long)
+   */
+  public boolean notEqualsBoolean(byte lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, short)
+   */
+  public boolean notEqualsBoolean(byte lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, java.math.BigDecimal)
+   */
+  public boolean notEqualsBoolean(char lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, java.math.BigInteger)
+   */
+  public boolean notEqualsBoolean(char lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, byte)
+   */
+  public boolean notEqualsBoolean(char lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, char)
+   */
+  public boolean notEqualsBoolean(char lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, double)
+   */
+  public boolean notEqualsBoolean(char lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, float)
+   */
+  public boolean notEqualsBoolean(char lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, int)
+   */
+  public boolean notEqualsBoolean(char lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, long)
+   */
+  public boolean notEqualsBoolean(char lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, short)
+   */
+  public boolean notEqualsBoolean(char lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, java.math.BigDecimal)
+   */
+  public boolean notEqualsBoolean(double lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, java.math.BigInteger)
+   */
+  public boolean notEqualsBoolean(double lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, byte)
+   */
+  public boolean notEqualsBoolean(double lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, char)
+   */
+  public boolean notEqualsBoolean(double lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, double)
+   */
+  public boolean notEqualsBoolean(double lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, float)
+   */
+  public boolean notEqualsBoolean(double lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, int)
+   */
+  public boolean notEqualsBoolean(double lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, long)
+   */
+  public boolean notEqualsBoolean(double lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, short)
+   */
+  public boolean notEqualsBoolean(double lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, java.math.BigDecimal)
+   */
+  public boolean notEqualsBoolean(float lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, java.math.BigInteger)
+   */
+  public boolean notEqualsBoolean(float lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, byte)
+   */
+  public boolean notEqualsBoolean(float lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, char)
+   */
+  public boolean notEqualsBoolean(float lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, double)
+   */
+  public boolean notEqualsBoolean(float lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, float)
+   */
+  public boolean notEqualsBoolean(float lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, int)
+   */
+  public boolean notEqualsBoolean(float lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, long)
+   */
+  public boolean notEqualsBoolean(float lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, short)
+   */
+  public boolean notEqualsBoolean(float lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, java.math.BigDecimal)
+   */
+  public boolean notEqualsBoolean(int lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, java.math.BigInteger)
+   */
+  public boolean notEqualsBoolean(int lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, byte)
+   */
+  public boolean notEqualsBoolean(int lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, char)
+   */
+  public boolean notEqualsBoolean(int lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, double)
+   */
+  public boolean notEqualsBoolean(int lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, float)
+   */
+  public boolean notEqualsBoolean(int lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, int)
+   */
+  public boolean notEqualsBoolean(int lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, long)
+   */
+  public boolean notEqualsBoolean(int lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, short)
+   */
+  public boolean notEqualsBoolean(int lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, java.math.BigDecimal)
+   */
+  public boolean notEqualsBoolean(long lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, java.math.BigInteger)
+   */
+  public boolean notEqualsBoolean(long lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, byte)
+   */
+  public boolean notEqualsBoolean(long lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, char)
+   */
+  public boolean notEqualsBoolean(long lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, double)
+   */
+  public boolean notEqualsBoolean(long lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, float)
+   */
+  public boolean notEqualsBoolean(long lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, int)
+   */
+  public boolean notEqualsBoolean(long lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, long)
+   */
+  public boolean notEqualsBoolean(long lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, short)
+   */
+  public boolean notEqualsBoolean(long lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, java.math.BigDecimal)
+   */
+  public boolean notEqualsBoolean(Object lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, java.math.BigInteger)
+   */
+  public boolean notEqualsBoolean(Object lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, byte)
+   */
+  public boolean notEqualsBoolean(Object lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, char)
+   */
+  public boolean notEqualsBoolean(Object lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, double)
+   */
+  public boolean notEqualsBoolean(Object lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, float)
+   */
+  public boolean notEqualsBoolean(Object lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, int)
+   */
+  public boolean notEqualsBoolean(Object lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, long)
+   */
+  public boolean notEqualsBoolean(Object lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, java.lang.Object)
+   */
+  public boolean notEqualsBoolean(Object lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, short)
+   */
+  public boolean notEqualsBoolean(Object lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, java.math.BigDecimal)
+   */
+  public boolean notEqualsBoolean(short lhs, BigDecimal rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, java.math.BigInteger)
+   */
+  public boolean notEqualsBoolean(short lhs, BigInteger rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, byte)
+   */
+  public boolean notEqualsBoolean(short lhs, byte rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, char)
+   */
+  public boolean notEqualsBoolean(short lhs, char rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, double)
+   */
+  public boolean notEqualsBoolean(short lhs, double rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, float)
+   */
+  public boolean notEqualsBoolean(short lhs, float rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, int)
+   */
+  public boolean notEqualsBoolean(short lhs, int rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, long)
+   */
+  public boolean notEqualsBoolean(short lhs, long rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, short)
+   */
+  public boolean notEqualsBoolean(short lhs, short rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(java.math.BigDecimal, java.lang.Object)
+   */
+  public boolean reverseNotEqualsBoolean(BigDecimal lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(java.math.BigInteger, java.lang.Object)
+   */
+  public boolean reverseNotEqualsBoolean(BigInteger lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(byte, java.lang.Object)
+   */
+  public boolean reverseNotEqualsBoolean(byte lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(char, java.lang.Object)
+   */
+  public boolean reverseNotEqualsBoolean(char lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(double, java.lang.Object)
+   */
+  public boolean reverseNotEqualsBoolean(double lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(float, java.lang.Object)
+   */
+  public boolean reverseNotEqualsBoolean(float lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(int, java.lang.Object)
+   */
+  public boolean reverseNotEqualsBoolean(int lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(long, java.lang.Object)
+   */
+  public boolean reverseNotEqualsBoolean(long lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(short, java.lang.Object)
+   */
+  public boolean reverseNotEqualsBoolean(short lhs, Object rhs) throws Throwable {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#or(java.math.BigInteger, java.math.BigInteger)
    */
   public Object or(final BigInteger lhs, final BigInteger rhs) {

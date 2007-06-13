@@ -3439,6 +3439,146 @@ class NgLongInternalMetaClass extends InternalMetaClassImpl {
   }
 
   @Override
+  public boolean doNotEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseNotEqualsBoolean(((NgLong)lhs).getLongValue(), rhs);
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final long lhs, final byte rhs) throws Throwable {
+    return lhs != rhs;
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final long lhs, final char rhs) throws Throwable {
+    return lhs != rhs;
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final long lhs, final short rhs) throws Throwable {
+    return lhs != rhs;
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final long lhs, final int rhs) throws Throwable {
+    return lhs != rhs;
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final long lhs, final long rhs) throws Throwable {
+    return lhs != rhs;
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final long lhs, final float rhs) throws Throwable {
+    return lhs != rhs;
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final long lhs, final double rhs) throws Throwable {
+    return lhs != rhs;
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final long lhs, final BigInteger rhs) throws Throwable {
+    return BigInteger.valueOf(lhs).compareTo(rhs) != 0;
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
+    return new BigDecimal(lhs).compareTo(rhs) != 0;
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
+    return doNotEqualsBoolean(((NgLong)lhs).getLongValue(), rhs);
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
+    return doNotEqualsBoolean(((NgLong)lhs).getLongValue(), rhs);
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
+    return doNotEqualsBoolean(((NgLong)lhs).getLongValue(), rhs);
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
+    return doNotEqualsBoolean(((NgLong)lhs).getLongValue(), rhs);
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
+    return doNotEqualsBoolean(((NgLong)lhs).getLongValue(), rhs);
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
+    return doNotEqualsBoolean(((NgLong)lhs).getLongValue(), rhs);
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
+    return doNotEqualsBoolean(((NgLong)lhs).getLongValue(), rhs);
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
+    return doNotEqualsBoolean(((NgLong)lhs).getLongValue(), rhs);
+  }
+
+  @Override
+  public boolean doNotEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
+    return doNotEqualsBoolean(((NgLong)lhs).getLongValue(), rhs);
+  }
+
+  @Override
+  public boolean doReverseNotEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getInternalMetaClass(byte.class).doNotEqualsBoolean(lhs, ((NgLong)rhs).getLongValue());
+  }
+
+  @Override
+  public boolean doReverseNotEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getInternalMetaClass(char.class).doNotEqualsBoolean(lhs, ((NgLong)rhs).getLongValue());
+  }
+
+  @Override
+  public boolean doReverseNotEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getInternalMetaClass(short.class).doNotEqualsBoolean(lhs, ((NgLong)rhs).getLongValue());
+  }
+
+  @Override
+  public boolean doReverseNotEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getInternalMetaClass(int.class).doNotEqualsBoolean(lhs, ((NgLong)rhs).getLongValue());
+  }
+
+  @Override
+  public boolean doReverseNotEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getInternalMetaClass(long.class).doNotEqualsBoolean(lhs, ((NgLong)rhs).getLongValue());
+  }
+
+  @Override
+  public boolean doReverseNotEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getInternalMetaClass(float.class).doNotEqualsBoolean(lhs, ((NgLong)rhs).getLongValue());
+  }
+
+  @Override
+  public boolean doReverseNotEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getInternalMetaClass(double.class).doNotEqualsBoolean(lhs, ((NgLong)rhs).getLongValue());
+  }
+
+  @Override
+  public boolean doReverseNotEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getInternalMetaClass(BigInteger.class).doNotEqualsBoolean(lhs, ((NgLong)rhs).getLongValue());
+  }
+
+  @Override
+  public boolean doReverseNotEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getInternalMetaClass(BigDecimal.class).doNotEqualsBoolean(lhs, ((NgLong)rhs).getLongValue());
+  }
+
+  @Override
   public Object doLessThan(final Object lhs, final Object rhs) throws Throwable {
     return NgSystem.metaClassRegistry.getInternalMetaClass(rhs).doReverseLessThan(((NgLong)lhs).getLongValue(), rhs);
   }

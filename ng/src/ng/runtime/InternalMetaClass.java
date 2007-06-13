@@ -5230,6 +5230,206 @@ public interface InternalMetaClass {
 
   Object doReverseNotEquals(BigDecimal lhs, Object rhs) throws Throwable;
 
+  boolean doNotEqualsBoolean(Object lhs, Object rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(byte lhs, byte rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(byte lhs, char rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(byte lhs, short rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(byte lhs, int rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(byte lhs, long rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(byte lhs, float rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(byte lhs, double rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(byte lhs, BigInteger rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(byte lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(char lhs, byte rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(char lhs, char rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(char lhs, short rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(char lhs, int rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(char lhs, long rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(char lhs, float rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(char lhs, double rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(char lhs, BigInteger rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(char lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(short lhs, byte rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(short lhs, char rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(short lhs, short rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(short lhs, int rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(short lhs, long rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(short lhs, float rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(short lhs, double rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(short lhs, BigInteger rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(short lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(int lhs, byte rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(int lhs, char rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(int lhs, short rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(int lhs, int rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(int lhs, long rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(int lhs, float rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(int lhs, double rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(int lhs, BigInteger rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(int lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(long lhs, byte rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(long lhs, char rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(long lhs, short rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(long lhs, int rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(long lhs, long rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(long lhs, float rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(long lhs, double rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(long lhs, BigInteger rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(long lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(float lhs, byte rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(float lhs, char rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(float lhs, short rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(float lhs, int rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(float lhs, long rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(float lhs, float rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(float lhs, double rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(float lhs, BigInteger rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(float lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(double lhs, byte rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(double lhs, char rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(double lhs, short rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(double lhs, int rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(double lhs, long rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(double lhs, float rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(double lhs, double rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(double lhs, BigInteger rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(double lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigInteger lhs, byte rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigInteger lhs, char rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigInteger lhs, short rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigInteger lhs, int rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigInteger lhs, long rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigInteger lhs, float rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigInteger lhs, double rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigInteger lhs, BigInteger rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigDecimal lhs, byte rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigDecimal lhs, char rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigDecimal lhs, short rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigDecimal lhs, int rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigDecimal lhs, long rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigDecimal lhs, float rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigDecimal lhs, double rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(Object lhs, byte rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(Object lhs, char rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(Object lhs, short rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(Object lhs, int rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(Object lhs, long rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(Object lhs, float rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(Object lhs, double rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(Object lhs, BigInteger rhs) throws Throwable;
+
+  boolean doNotEqualsBoolean(Object lhs, BigDecimal rhs) throws Throwable;
+
+  boolean doReverseNotEqualsBoolean(byte lhs, Object rhs) throws Throwable;
+
+  boolean doReverseNotEqualsBoolean(char lhs, Object rhs) throws Throwable;
+
+  boolean doReverseNotEqualsBoolean(short lhs, Object rhs) throws Throwable;
+
+  boolean doReverseNotEqualsBoolean(int lhs, Object rhs) throws Throwable;
+
+  boolean doReverseNotEqualsBoolean(long lhs, Object rhs) throws Throwable;
+
+  boolean doReverseNotEqualsBoolean(float lhs, Object rhs) throws Throwable;
+
+  boolean doReverseNotEqualsBoolean(double lhs, Object rhs) throws Throwable;
+
+  boolean doReverseNotEqualsBoolean(BigInteger lhs, Object rhs) throws Throwable;
+
+  boolean doReverseNotEqualsBoolean(BigDecimal lhs, Object rhs) throws Throwable;
+
   //
   //   Internal methods for operator <
   //   Do not generate calls to these
