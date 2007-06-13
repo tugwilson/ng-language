@@ -22340,4 +22340,404 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
         
     return result;
   }
+
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+  
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final byte rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final char rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final short rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final int rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final long rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final float rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final double rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final byte rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final char rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final short rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final int rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final long rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final float rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final double rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final BigInteger rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final byte rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final char rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final short rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final int rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final long rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final float rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final double rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final BigInteger rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final BigDecimal rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final byte rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final char rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final short rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final int rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final long rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final float rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final double rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final BigInteger rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final BigDecimal rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final byte rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final char rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final short rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final int rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final long rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final float rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final double rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final BigInteger rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final byte rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final char rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final short rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final int rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final long rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final float rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final double rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final BigInteger rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final BigDecimal rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final byte rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final char rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final short rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final int rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final long rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final float rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final double rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final BigInteger rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final BigDecimal rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final byte rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final char rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final short rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final int rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final long rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final float rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final double rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final BigInteger rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final byte rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final char rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final short rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final int rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final long rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final float rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final double rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
+    return this.internalMetaClass.doGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean reverseGreaterThanOrEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
+    return this.internalMetaClass.doReverseGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean reverseGreaterThanOrEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
+    return this.internalMetaClass.doReverseGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean reverseGreaterThanOrEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
+    return this.internalMetaClass.doReverseGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean reverseGreaterThanOrEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
+    return this.internalMetaClass.doReverseGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean reverseGreaterThanOrEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
+    return this.internalMetaClass.doReverseGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean reverseGreaterThanOrEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
+    return this.internalMetaClass.doReverseGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean reverseGreaterThanOrEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
+    return this.internalMetaClass.doReverseGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean reverseGreaterThanOrEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
+    return this.internalMetaClass.doReverseGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
+
+  public boolean reverseGreaterThanOrEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
+    return this.internalMetaClass.doReverseGreaterThanOrEqualsBoolean(lhs, rhs);
+  }
 }
