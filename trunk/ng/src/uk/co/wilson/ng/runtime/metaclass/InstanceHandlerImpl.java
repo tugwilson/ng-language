@@ -7,6 +7,7 @@ import java.util.Map;
 
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
+import ng.runtime.Callable;
 import ng.runtime.InstanceHandler;
 import ng.runtime.MetaClass;
 import ng.runtime.MetaMethod;
@@ -54,7 +55,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
     
   protected final Class theClass;
   protected final Class theSuperClass;
-  protected final MetaMethod anonMetaMethod = noMethod;
+  protected final Callable callable = noMethod;
     
   protected final Map<String, MetaMethod> zeroParameterMethods = new MetaMethodMap();
   protected final Map<String, MetaMethod> oneParameterMethods = new MetaMethodMap();
@@ -477,8 +478,8 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getDoCallMetaMethod()
    */
-  public MetaMethod getAnonMetaMethod() {
-    return this.anonMetaMethod;
+  public Callable getCallable() {
+    return this.callable;
   }
 
   /* (non-Javadoc)

@@ -96,6 +96,12 @@ public final class NgSystem {
   public static final RuntimeMetaClass bigDecimalMetaClass;
 
   /**
+   * The MetaClass for ng.lang.Closure
+   * 
+   */
+  public static final RuntimeMetaClass closureMetaClass;
+
+  /**
    * The registry used to map Classes to MetaClasses
    */
   public static final MetaClassRegistry metaClassRegistry;
@@ -138,6 +144,10 @@ public final class NgSystem {
 
   static {
     bigIntegerMetaClass = new BigIntegerMetaClass();
+  }
+
+  static {
+    closureMetaClass = new ClosureMetaClass();
   }
 
   static {

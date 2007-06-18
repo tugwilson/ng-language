@@ -316,8 +316,8 @@ public class InternalMetaClassImpl implements InternalMetaClass {
   /**
    * @return
    */
-  public MetaMethod doGetAnonMetaMethod() {
-    return this.instanceHandler.getAnonMetaMethod();
+  public Callable doGetCallable(final Object instance) {
+    return this.instanceHandler.getCallable();
   }
 
   public Object doComplement(final Object instance) throws Throwable {
