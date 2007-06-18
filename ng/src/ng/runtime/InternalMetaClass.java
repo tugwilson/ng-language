@@ -272,9 +272,10 @@ public interface InternalMetaClass {
   MetaMethod doGetSetFieldMetaMethod(Object instance, String fieldName, Object newValue) throws Throwable;
   
   /**
+   * @param instance
    * @return
    */
-  MetaMethod doGetAnonMetaMethod() throws Throwable;
+  Callable doGetCallable(Object instance) throws Throwable;
 
   /**
    * @param instance

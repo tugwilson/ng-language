@@ -28,6 +28,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.WeakHashMap;
 
+import uk.co.wilson.ng.lang.ClosureImpl;
+
 import ng.lang.NgObject;
 import ng.lang.NgSystem;
 import ng.runtime.InternalMetaClass;
@@ -167,6 +169,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
     this.registry.put(double.class, NgSystem.ngDoubleMetaClass);    
     this.registry.put(BigInteger.class, NgSystem.bigIntegerMetaClass);    
     this.registry.put(BigDecimal.class, NgSystem.bigDecimalMetaClass);    
+    this.registry.put(ClosureImpl.class, NgSystem.closureMetaClass);    
   }
 
   /**

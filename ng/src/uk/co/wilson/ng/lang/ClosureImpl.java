@@ -3,6 +3,7 @@ package uk.co.wilson.ng.lang;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import ng.lang.Closure;
 import ng.runtime.NgBoolean;
 import ng.runtime.NgByte;
 import ng.runtime.NgChar;
@@ -11,6 +12,7 @@ import ng.runtime.NgFloat;
 import ng.runtime.NgInt;
 import ng.runtime.NgLong;
 import ng.runtime.NgShort;
+import ng.runtime.RuntimeMetaClass;
 
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 
@@ -18,7 +20,14 @@ import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
  * @author John
  *
  */
-public class Closure implements ng.lang.Closure {
+public class ClosureImpl extends Closure {
+
+  /**
+   * @param metaClass
+   */
+  public ClosureImpl(final RuntimeMetaClass metaClass) {
+    super(metaClass);
+  }
 
   /* (non-Javadoc)
    * @see ng.lang.Closure#call(java.lang.Object, java.lang.Object[])

@@ -76,7 +76,7 @@ public interface InstanceHandler {
   /**
    * @return
    */
-  MetaMethod getAnonMetaMethod();
+  Callable getCallable();
 
   /**
    * @param instance

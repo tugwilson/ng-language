@@ -1,6 +1,5 @@
 package ng.runtime;
 
-import ng.lang.Closure;
 import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 /**
@@ -11,7 +10,7 @@ import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
  * @author John
  *
  */
-public interface MetaMethod extends Closure  {
+public interface MetaMethod extends Callable  {
   /**
    * @param metaMethod
    * @return
