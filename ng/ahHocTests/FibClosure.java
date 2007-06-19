@@ -58,7 +58,7 @@ public class FibClosure extends NgBaseObject {
          * @see uk.co.wilson.ng.lang.ClosureImpl#call(java.lang.Object, int)
          */
         @Override
-        public Object call(Object instance, int x) throws Throwable {
+        public Object callQuick(Object instance, int x) throws Throwable {
         final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
           
           // if (x <= 0) return 0;
@@ -80,8 +80,8 @@ public class FibClosure extends NgBaseObject {
          * @see uk.co.wilson.ng.lang.ClosureImpl#call(java.lang.Object, java.lang.Object)
          */
         @Override
-        public Object call(Object instance, Object x) throws Throwable {
-           return this.call(instance, NgSystem.metaClassRegistry.getRuntimeMetaClass(x).asInt(x));
+        public Object callQuick(Object instance, Object x) throws Throwable {
+           return this.callQuick(instance, NgSystem.metaClassRegistry.getRuntimeMetaClass(x).asInt(x));
         }
        };
        

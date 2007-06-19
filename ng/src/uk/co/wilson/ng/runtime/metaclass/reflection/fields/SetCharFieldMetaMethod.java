@@ -22,7 +22,7 @@ public class SetCharFieldMetaMethod extends SetUntypedFieldMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetUntypedFieldMetaMethod#call(java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(final Object instance, final Object value) {
+  public Object callQuick(final Object instance, final Object value) {
     try {
       this.field.setChar(instance, ((NgChar)value).getCharValue());
     } catch (final IllegalArgumentException e) {

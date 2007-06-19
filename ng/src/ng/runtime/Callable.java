@@ -37,84 +37,84 @@ public interface Callable {
    * @param instance
    * @return
    */
-  Object call(Object instance) throws Throwable;
+  Object callQuick(Object instance) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, Object p1) throws Throwable;
+  Object callQuick(Object instance, Object p1) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, boolean p1) throws Throwable;
+  Object callQuick(Object instance, boolean p1) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, char p1) throws Throwable;
+  Object callQuick(Object instance, char p1) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, byte p1) throws Throwable;
+  Object callQuick(Object instance, byte p1) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, short p1) throws Throwable;
+  Object callQuick(Object instance, short p1) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, int p1) throws Throwable;
+  Object callQuick(Object instance, int p1) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, long p1) throws Throwable;
+  Object callQuick(Object instance, long p1) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, float p1) throws Throwable;
+  Object callQuick(Object instance, float p1) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, double p1) throws Throwable;
+  Object callQuick(Object instance, double p1) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, BigInteger p1) throws Throwable;
+  Object callQuick(Object instance, BigInteger p1) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object call(Object instance, BigDecimal p1) throws Throwable;
+  Object callQuick(Object instance, BigDecimal p1) throws Throwable;
   
   /**
    * @param instance
@@ -122,7 +122,7 @@ public interface Callable {
    * @param p2
    * @return
    */
-  Object call(Object instance, Object p1, Object p2) throws Throwable;
+  Object callQuick(Object instance, Object p1, Object p2) throws Throwable;
   
   /**
    * @param instance
@@ -131,7 +131,7 @@ public interface Callable {
    * @param p3
    * @return
    */
-  Object call(Object instance, Object p1, Object p2, Object p3) throws Throwable;
+  Object callQuick(Object instance, Object p1, Object p2, Object p3) throws Throwable;
   
   /**
    * @param instance
@@ -141,5 +141,5 @@ public interface Callable {
    * @param p4
    * @return
    */
-  Object call(Object instance, Object p1, Object p2, Object p3, Object p4) throws Throwable;
+  Object callQuick(Object instance, Object p1, Object p2, Object p3, Object p4) throws Throwable;
 }

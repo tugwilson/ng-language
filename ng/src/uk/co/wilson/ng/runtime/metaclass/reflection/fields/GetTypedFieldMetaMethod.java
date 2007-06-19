@@ -25,8 +25,8 @@ public class GetTypedFieldMetaMethod extends GetUntypedFieldMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetUntypedFieldMetaMethod#call(java.lang.Object)
    */
   @Override
-  public Object call(final Object instance) {
-  final Object result = super.call(instance);
+  public Object callQuick(final Object instance) {
+  final Object result = super.callQuick(instance);
   
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   

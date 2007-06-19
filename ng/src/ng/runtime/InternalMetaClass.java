@@ -58,11 +58,12 @@ public interface InternalMetaClass {
   Object doInvokeConstructor(Class theClass, Object[] arguments) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param arguments
    * @return
    */
-  MetaMethod doGetMetaMethodFor(String methodName, Object[] arguments) throws Throwable;
+  Callable doGetCallable(Object instance, String methodName, Object[] arguments) throws Throwable;
   
   /**
    * @param currentSelection
@@ -118,111 +119,125 @@ public interface InternalMetaClass {
   MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
 
   /**
+   * @param instance
    * @param methodName
    * @return the result of invoking the method on the instance with no
    *         parameters.
    * @return
    */
-  MetaMethod doGetMetaMethodQuick(String methodName) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, Object p1) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, Object p1) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, boolean p1) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, boolean p1) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, char p1) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, char p1) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, byte p1) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, byte p1) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, short p1) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, short p1) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, int p1) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, int p1) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, long p1) throws Throwable;
+  Callable doCallableQuick(Object instance, String methodName, long p1) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, float p1) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, float p1) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, double p1) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, double p1) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, BigInteger p1) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, BigInteger p1) throws Throwable;
 
   /**
+   * @param instance
    * @param methodName
    * @param p1
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, BigDecimal p1) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, BigDecimal p1) throws Throwable;
 
   /**
+   * @param instance TODO
    * @param methodName
    * @param p1
    * @param p2
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, Object p1, Object p2) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, Object p1, Object p2) throws Throwable;
 
   /**
+   * @param instance TODO
    * @param methodName
    * @param p1
    * @param p2
@@ -230,23 +245,24 @@ public interface InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, Object p1, Object p2, Object p3) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, Object p1, Object p2, Object p3) throws Throwable;
 
   /**
+   * @param instance TODO
    * @param methodName
    * @param p1
    * @param p2
    * @param p3
    * @return
    */
-  MetaMethod doGetMetaMethodQuick(String methodName, Object p1, Object p2, Object p3, Object p4) throws Throwable;
+  Callable doGetCallableQuick(Object instance, String methodName, Object p1, Object p2, Object p3, Object p4) throws Throwable;
 
   /**
    * @param instance
    * @param propertyName
    * @return
    */
-  MetaMethod doGetGetPropertyMetaMethod(Object instance, String propertyName) throws Throwable;
+  Callable doGetGetPropertyCallable(Object instance, String propertyName) throws Throwable;
 
   /**
    * @param instance

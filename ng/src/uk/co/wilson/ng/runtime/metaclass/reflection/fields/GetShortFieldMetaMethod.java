@@ -22,7 +22,7 @@ public class GetShortFieldMetaMethod extends GetUntypedFieldMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetUntypedFieldMetaMethod#call(java.lang.Object)
    */
   @Override
-  public Object call(final Object instance) {
+  public Object callQuick(final Object instance) {
     try {
       return NgShort.valueOf(this.field.getShort(instance));
     } catch (final IllegalArgumentException e) {

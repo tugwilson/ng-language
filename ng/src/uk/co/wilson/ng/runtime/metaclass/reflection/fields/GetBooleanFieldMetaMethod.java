@@ -22,7 +22,7 @@ public class GetBooleanFieldMetaMethod extends GetUntypedFieldMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.fields.reflection.GetUntypedFieldMetaMethod#call(java.lang.Object)
    */
   @Override
-  public Object call(final Object instance) {
+  public Object callQuick(final Object instance) {
     try {
       return (this.field.getBoolean(instance)) ? NgBoolean.TRUE : NgBoolean.FALSE;
     } catch (final IllegalArgumentException e) {

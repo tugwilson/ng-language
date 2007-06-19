@@ -22,7 +22,7 @@ public class SetShortFieldMetaMethod extends SetUntypedFieldMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetUntypedFieldMetaMethod#call(java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(final Object instance, final Object value) {
+  public Object callQuick(final Object instance, final Object value) {
     try {
       this.field.setShort(instance, ((NgShort)value).getShortValue());
     } catch (final IllegalArgumentException e) {
