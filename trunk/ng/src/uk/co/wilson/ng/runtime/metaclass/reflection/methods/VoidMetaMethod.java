@@ -19,8 +19,8 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) throws Throwable {
-    super.call(instance, p1, p2, p3, p4);
+  public Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) throws Throwable {
+    super.callQuick(instance, p1, p2, p3, p4);
     
     return instance;
   }
@@ -29,8 +29,8 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(final Object instance, final Object p1, final Object p2, final Object p3) throws Throwable {
-    super.call(instance, p1, p2, p3);
+  public Object callQuick(final Object instance, final Object p1, final Object p2, final Object p3) throws Throwable {
+    super.callQuick(instance, p1, p2, p3);
     
     return instance;
   }
@@ -39,8 +39,8 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(final Object instance, final Object p1, final Object p2) throws Throwable {
-    super.call(instance, p1, p2);
+  public Object callQuick(final Object instance, final Object p1, final Object p2) throws Throwable {
+    super.callQuick(instance, p1, p2);
     
     return instance;
  }
@@ -49,8 +49,8 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object call(final Object instance, final Object p1) throws Throwable {
-    super.call(instance, p1);
+  public Object callQuick(final Object instance, final Object p1) throws Throwable {
+    super.callQuick(instance, p1);
     
     return instance;
   }
@@ -69,9 +69,9 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object)
    */
   @Override
-  public Object call(final Object instance) throws Throwable {
+  public Object callQuick(final Object instance) throws Throwable {
     // TODO Auto-generated method stub
-    return super.call(instance);
+    return super.callQuick(instance);
   }
 
 }
