@@ -117,7 +117,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param arguments
    * @return
    */
-  public Callable doGetCallable(Object instance, final String methodName, final Object[] arguments) {
+  public Callable doGetCallable(final Object instance, final String methodName, final Object[] arguments) {
     return this.instanceHandler.getMetaMethodFor(methodName, arguments);
   }
 
@@ -127,7 +127,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    *         parameters.
    * @return
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName) {
     return this.instanceHandler.getMetaMethodQuick(methodName);
   }
 
@@ -137,7 +137,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final Object p1) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final Object p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -147,7 +147,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final boolean p1) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final boolean p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -157,7 +157,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final char p1) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final char p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -167,7 +167,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final byte p1) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final byte p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -177,7 +177,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final short p1) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final short p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -187,7 +187,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final int p1) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final int p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -197,7 +197,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doCallableQuick(Object instance, final String methodName, final long p1) {
+  public Callable doCallableQuick(final Object instance, final String methodName, final long p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -207,7 +207,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final float p1) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final float p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -217,7 +217,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final double p1) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final double p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -227,7 +227,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final BigInteger p1) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final BigInteger p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -237,7 +237,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameter.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final BigDecimal p1) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final BigDecimal p1) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1);
   }
 
@@ -248,7 +248,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final Object p1, final Object p2) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final Object p1, final Object p2) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1, p2);
   }
 
@@ -260,7 +260,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1, p2, p3);
   }
 
@@ -271,7 +271,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param p3
    * @return
    */
-  public Callable doGetCallableQuick(Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
+  public Callable doGetCallableQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
     return this.instanceHandler.getMetaMethodQuick(methodName, p1, p2, p3, p4);
   }
 

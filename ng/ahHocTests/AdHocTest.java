@@ -1,10 +1,13 @@
+import util.CustomMetaClass;
 import ng.lang.NgSystem;
+import ng.runtime.NgBaseObject;
 import ng.runtime.NgByte;
 import ng.runtime.NgChar;
 import ng.runtime.NgInt;
 import ng.runtime.NgLong;
 import ng.runtime.NgShort;
 import ng.runtime.NgTyped;
+import ng.runtime.ThreadContext;
 
 /*
  * Created on 2 Apr 2007
@@ -31,116 +34,16 @@ import ng.runtime.NgTyped;
  */
 public class AdHocTest {
 
+  final Object o = new NgTyped(new NgBaseObject(new CustomMetaClass()), NgBaseObject.class);
 
   public static void main(String[] args) throws Throwable {
-    final Object t = new T();
-    final Object t1 = new T1();
-    final Object t2 = new T2();
-    final Object t2TypedAsT1 = new NgTyped(t2, T1.class);
-    final Object t1TypedAsT = new NgTyped(t1, T.class);
-    final Object int1 = NgInt.valueOf(1);
+    new AdHocTest().test();
+  }
+  
+  void test() throws Throwable {
+    final ThreadContext tc = NgSystem.metaClassRegistry.getThreadContext();
     
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).add(t, NgInt.valueOf(1))).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).add(t1, NgInt.valueOf(1))).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(int1).add(int1, t)).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(int1).add(int1, t1)).getIntValue());
-    
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).addEquals(t, NgInt.valueOf(1))).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).addEquals(t1, NgInt.valueOf(1))).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(int1).addEquals(int1, t)).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(int1).addEquals(int1, t1)).getIntValue());
-    
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethodQuick(t, "foo")).getIntValue());
-    
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethodQuick((I)t1, "foo")).getIntValue());
-    
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t2TypedAsT1).invokeMethodQuick(t2TypedAsT1, "foo")).getIntValue());
-    
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1TypedAsT).invokeMethodQuick(t1TypedAsT, "foo")).getIntValue());
-    
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethodQuick(t1, "bar")).getIntValue());
-    
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t2).invokeMethodQuick(t2, "bar")).getIntValue());
-    
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t2TypedAsT1).invokeMethodQuick(t2TypedAsT1, "bar")).getIntValue());
- 
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1)})).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), t})).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), new NgTyped(t1, T.class)})).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), t1})).getIntValue());
-    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1)})).getLongValue());
-    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), t})).getLongValue());
-    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), new NgTyped(t1, T.class)})).getLongValue());
-    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), t1})).getLongValue());
-    
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1)})).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), t})).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), new NgTyped(t1, T.class)})).getIntValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), NgInt.valueOf(1), t1})).getIntValue());
-    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1)})).getLongValue());
-    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), t})).getLongValue());
-    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), new NgTyped(t1, T.class)})).getLongValue());
-    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t1).invokeMethod(t1, "foo", new Object[]{NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), NgLong.valueOf(1), t1})).getLongValue());
-
-  
-    System.out.println(((NgLong)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{NgChar.valueOf((char)1), NgByte.valueOf((byte)1), NgShort.valueOf((short)1), NgInt.valueOf(1), NgLong.valueOf(1)})).getLongValue());
-    System.out.println(((NgInt)NgSystem.metaClassRegistry.getRuntimeMetaClass(t).invokeMethod(t, "foo", new Object[]{NgChar.valueOf((char)1), NgByte.valueOf((byte)1), NgShort.valueOf((short)1), NgInt.valueOf(1), NgInt.valueOf(1)})).getIntValue());
+    System.out.println(tc.call(this.o, new Object[]{}));
+    System.out.println(tc.callQuick(this.o, 1));
   }
-}
-
-
-class T {
-  public int foo() {
-    return -1;
-  }
-  
-  public int foo(int a, int b, int c, int d, int e) {
-    return a + b + c + d + e;
-  }
-  
-  public int foo(int a, int b, int c, int d, T t) {
-    return a + b + c + d;
-  }
-  
-  public int foo(int a, int b, int c, int d, T1 t) {
-    return a + b + c + d + 100;
-  }
-  
-  public long foo(long a, long b, long c, long d, long e) {
-    return a + b + c + d + e;
-  }
-  
-  public long foo(long a, long b, long c, long d, T e) {
-    return a + b + c + d;
-  }
-  
-  public long foo(long a, long b, long c, long d, T1 e) {
-    return a + b + c + d + 100;
-  }
-  
-  public int plus(int rhs) {
-    return rhs + 1000;
-  }
-  
-  public int reversePlus(int lhs) {
-    return lhs + 2000;
-  }
-}
-
-class T1 extends T implements I {
-  public int foo(int a, int b, int c, int d, int e) {
-    return 10000;
-  }
-  
-  public int bar() {
-    return 400;
-  }
-}
-
-class T2 extends T1 {
-  
-}
-
-interface I {
-  int foo();
 }

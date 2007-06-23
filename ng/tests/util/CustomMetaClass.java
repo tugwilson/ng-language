@@ -33,6 +33,7 @@ import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
  */
 public 
 class CustomMetaClass implements RuntimeMetaClass {
+  private final InternalMetaClass internalMetaClass = new CustomInternalMetaClass(Object.class);
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#getParamObject(java.lang.Object, java.lang.Class)
@@ -2875,7 +2876,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, java.math.BigDecimal)
    */
-  public Object callQuick(Object instance, BigDecimal p1) {
+  public Object callQuick(final Object instance, final BigDecimal p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2883,7 +2884,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, java.math.BigInteger)
    */
-  public Object callQuick(Object instance, BigInteger p1) {
+  public Object callQuick(final Object instance, final BigInteger p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2891,7 +2892,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, boolean)
    */
-  public Object callQuick(Object instance, boolean p1) {
+  public Object callQuick(final Object instance, final boolean p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2899,7 +2900,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, byte)
    */
-  public Object callQuick(Object instance, byte p1) {
+  public Object callQuick(final Object instance, final byte p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2907,7 +2908,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, char)
    */
-  public Object callQuick(Object instance, char p1) {
+  public Object callQuick(final Object instance, final char p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2915,7 +2916,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, double)
    */
-  public Object callQuick(Object instance, double p1) {
+  public Object callQuick(final Object instance, final double p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2923,7 +2924,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, float)
    */
-  public Object callQuick(Object instance, float p1) {
+  public Object callQuick(final Object instance, final float p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2931,7 +2932,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, int)
    */
-  public Object callQuick(Object instance, int p1) {
+  public Object callQuick(final Object instance, final int p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2939,7 +2940,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, long)
    */
-  public Object callQuick(Object instance, long p1) {
+  public Object callQuick(final Object instance, final long p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -2947,7 +2948,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#callQuick(java.lang.Object, short)
    */
-  public Object callQuick(Object instance, short p1) {
+  public Object callQuick(final Object instance, final short p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -5875,7 +5876,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigDecimal, java.math.BigDecimal)
    */
-  public boolean equalsBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable {
+  public boolean equalsBoolean(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5883,7 +5884,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigDecimal, java.math.BigInteger)
    */
-  public boolean equalsBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable {
+  public boolean equalsBoolean(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5891,7 +5892,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigDecimal, byte)
    */
-  public boolean equalsBoolean(BigDecimal lhs, byte rhs) throws Throwable {
+  public boolean equalsBoolean(final BigDecimal lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5899,7 +5900,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigDecimal, char)
    */
-  public boolean equalsBoolean(BigDecimal lhs, char rhs) throws Throwable {
+  public boolean equalsBoolean(final BigDecimal lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5907,7 +5908,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigDecimal, double)
    */
-  public boolean equalsBoolean(BigDecimal lhs, double rhs) throws Throwable {
+  public boolean equalsBoolean(final BigDecimal lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5915,7 +5916,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigDecimal, float)
    */
-  public boolean equalsBoolean(BigDecimal lhs, float rhs) throws Throwable {
+  public boolean equalsBoolean(final BigDecimal lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5923,7 +5924,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigDecimal, int)
    */
-  public boolean equalsBoolean(BigDecimal lhs, int rhs) throws Throwable {
+  public boolean equalsBoolean(final BigDecimal lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5931,7 +5932,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigDecimal, long)
    */
-  public boolean equalsBoolean(BigDecimal lhs, long rhs) throws Throwable {
+  public boolean equalsBoolean(final BigDecimal lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5939,7 +5940,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigDecimal, short)
    */
-  public boolean equalsBoolean(BigDecimal lhs, short rhs) throws Throwable {
+  public boolean equalsBoolean(final BigDecimal lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5947,7 +5948,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigInteger, java.math.BigDecimal)
    */
-  public boolean equalsBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable {
+  public boolean equalsBoolean(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5955,7 +5956,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigInteger, java.math.BigInteger)
    */
-  public boolean equalsBoolean(BigInteger lhs, BigInteger rhs) throws Throwable {
+  public boolean equalsBoolean(final BigInteger lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5963,7 +5964,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigInteger, byte)
    */
-  public boolean equalsBoolean(BigInteger lhs, byte rhs) throws Throwable {
+  public boolean equalsBoolean(final BigInteger lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5971,7 +5972,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigInteger, char)
    */
-  public boolean equalsBoolean(BigInteger lhs, char rhs) throws Throwable {
+  public boolean equalsBoolean(final BigInteger lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5979,7 +5980,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigInteger, double)
    */
-  public boolean equalsBoolean(BigInteger lhs, double rhs) throws Throwable {
+  public boolean equalsBoolean(final BigInteger lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5987,7 +5988,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigInteger, float)
    */
-  public boolean equalsBoolean(BigInteger lhs, float rhs) throws Throwable {
+  public boolean equalsBoolean(final BigInteger lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -5995,7 +5996,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigInteger, int)
    */
-  public boolean equalsBoolean(BigInteger lhs, int rhs) throws Throwable {
+  public boolean equalsBoolean(final BigInteger lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6003,7 +6004,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigInteger, long)
    */
-  public boolean equalsBoolean(BigInteger lhs, long rhs) throws Throwable {
+  public boolean equalsBoolean(final BigInteger lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6011,7 +6012,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.math.BigInteger, short)
    */
-  public boolean equalsBoolean(BigInteger lhs, short rhs) throws Throwable {
+  public boolean equalsBoolean(final BigInteger lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6019,7 +6020,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(byte, java.math.BigDecimal)
    */
-  public boolean equalsBoolean(byte lhs, BigDecimal rhs) throws Throwable {
+  public boolean equalsBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6027,7 +6028,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(byte, java.math.BigInteger)
    */
-  public boolean equalsBoolean(byte lhs, BigInteger rhs) throws Throwable {
+  public boolean equalsBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6035,7 +6036,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(byte, byte)
    */
-  public boolean equalsBoolean(byte lhs, byte rhs) throws Throwable {
+  public boolean equalsBoolean(final byte lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6043,7 +6044,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(byte, char)
    */
-  public boolean equalsBoolean(byte lhs, char rhs) throws Throwable {
+  public boolean equalsBoolean(final byte lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6051,7 +6052,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(byte, double)
    */
-  public boolean equalsBoolean(byte lhs, double rhs) throws Throwable {
+  public boolean equalsBoolean(final byte lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6059,7 +6060,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(byte, float)
    */
-  public boolean equalsBoolean(byte lhs, float rhs) throws Throwable {
+  public boolean equalsBoolean(final byte lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6067,7 +6068,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(byte, int)
    */
-  public boolean equalsBoolean(byte lhs, int rhs) throws Throwable {
+  public boolean equalsBoolean(final byte lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6075,7 +6076,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(byte, long)
    */
-  public boolean equalsBoolean(byte lhs, long rhs) throws Throwable {
+  public boolean equalsBoolean(final byte lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6083,7 +6084,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(byte, short)
    */
-  public boolean equalsBoolean(byte lhs, short rhs) throws Throwable {
+  public boolean equalsBoolean(final byte lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6091,7 +6092,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(char, java.math.BigDecimal)
    */
-  public boolean equalsBoolean(char lhs, BigDecimal rhs) throws Throwable {
+  public boolean equalsBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6099,7 +6100,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(char, java.math.BigInteger)
    */
-  public boolean equalsBoolean(char lhs, BigInteger rhs) throws Throwable {
+  public boolean equalsBoolean(final char lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6107,7 +6108,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(char, byte)
    */
-  public boolean equalsBoolean(char lhs, byte rhs) throws Throwable {
+  public boolean equalsBoolean(final char lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6115,7 +6116,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(char, char)
    */
-  public boolean equalsBoolean(char lhs, char rhs) throws Throwable {
+  public boolean equalsBoolean(final char lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6123,7 +6124,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(char, double)
    */
-  public boolean equalsBoolean(char lhs, double rhs) throws Throwable {
+  public boolean equalsBoolean(final char lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6131,7 +6132,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(char, float)
    */
-  public boolean equalsBoolean(char lhs, float rhs) throws Throwable {
+  public boolean equalsBoolean(final char lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6139,7 +6140,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(char, int)
    */
-  public boolean equalsBoolean(char lhs, int rhs) throws Throwable {
+  public boolean equalsBoolean(final char lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6147,7 +6148,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(char, long)
    */
-  public boolean equalsBoolean(char lhs, long rhs) throws Throwable {
+  public boolean equalsBoolean(final char lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6155,7 +6156,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(char, short)
    */
-  public boolean equalsBoolean(char lhs, short rhs) throws Throwable {
+  public boolean equalsBoolean(final char lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6163,7 +6164,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(double, java.math.BigDecimal)
    */
-  public boolean equalsBoolean(double lhs, BigDecimal rhs) throws Throwable {
+  public boolean equalsBoolean(final double lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6171,7 +6172,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(double, java.math.BigInteger)
    */
-  public boolean equalsBoolean(double lhs, BigInteger rhs) throws Throwable {
+  public boolean equalsBoolean(final double lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6179,7 +6180,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(double, byte)
    */
-  public boolean equalsBoolean(double lhs, byte rhs) throws Throwable {
+  public boolean equalsBoolean(final double lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6187,7 +6188,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(double, char)
    */
-  public boolean equalsBoolean(double lhs, char rhs) throws Throwable {
+  public boolean equalsBoolean(final double lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6195,7 +6196,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(double, double)
    */
-  public boolean equalsBoolean(double lhs, double rhs) throws Throwable {
+  public boolean equalsBoolean(final double lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6203,7 +6204,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(double, float)
    */
-  public boolean equalsBoolean(double lhs, float rhs) throws Throwable {
+  public boolean equalsBoolean(final double lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6211,7 +6212,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(double, int)
    */
-  public boolean equalsBoolean(double lhs, int rhs) throws Throwable {
+  public boolean equalsBoolean(final double lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6219,7 +6220,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(double, long)
    */
-  public boolean equalsBoolean(double lhs, long rhs) throws Throwable {
+  public boolean equalsBoolean(final double lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6227,7 +6228,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(double, short)
    */
-  public boolean equalsBoolean(double lhs, short rhs) throws Throwable {
+  public boolean equalsBoolean(final double lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6235,7 +6236,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(float, java.math.BigDecimal)
    */
-  public boolean equalsBoolean(float lhs, BigDecimal rhs) throws Throwable {
+  public boolean equalsBoolean(final float lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6243,7 +6244,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(float, java.math.BigInteger)
    */
-  public boolean equalsBoolean(float lhs, BigInteger rhs) throws Throwable {
+  public boolean equalsBoolean(final float lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6251,7 +6252,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(float, byte)
    */
-  public boolean equalsBoolean(float lhs, byte rhs) throws Throwable {
+  public boolean equalsBoolean(final float lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6259,7 +6260,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(float, char)
    */
-  public boolean equalsBoolean(float lhs, char rhs) throws Throwable {
+  public boolean equalsBoolean(final float lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6267,7 +6268,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(float, double)
    */
-  public boolean equalsBoolean(float lhs, double rhs) throws Throwable {
+  public boolean equalsBoolean(final float lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6275,7 +6276,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(float, float)
    */
-  public boolean equalsBoolean(float lhs, float rhs) throws Throwable {
+  public boolean equalsBoolean(final float lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6283,7 +6284,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(float, int)
    */
-  public boolean equalsBoolean(float lhs, int rhs) throws Throwable {
+  public boolean equalsBoolean(final float lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6291,7 +6292,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(float, long)
    */
-  public boolean equalsBoolean(float lhs, long rhs) throws Throwable {
+  public boolean equalsBoolean(final float lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6299,7 +6300,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(float, short)
    */
-  public boolean equalsBoolean(float lhs, short rhs) throws Throwable {
+  public boolean equalsBoolean(final float lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6307,7 +6308,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(int, java.math.BigDecimal)
    */
-  public boolean equalsBoolean(int lhs, BigDecimal rhs) throws Throwable {
+  public boolean equalsBoolean(final int lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6315,7 +6316,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(int, java.math.BigInteger)
    */
-  public boolean equalsBoolean(int lhs, BigInteger rhs) throws Throwable {
+  public boolean equalsBoolean(final int lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6323,7 +6324,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(int, byte)
    */
-  public boolean equalsBoolean(int lhs, byte rhs) throws Throwable {
+  public boolean equalsBoolean(final int lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6331,7 +6332,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(int, char)
    */
-  public boolean equalsBoolean(int lhs, char rhs) throws Throwable {
+  public boolean equalsBoolean(final int lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6339,7 +6340,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(int, double)
    */
-  public boolean equalsBoolean(int lhs, double rhs) throws Throwable {
+  public boolean equalsBoolean(final int lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6347,7 +6348,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(int, float)
    */
-  public boolean equalsBoolean(int lhs, float rhs) throws Throwable {
+  public boolean equalsBoolean(final int lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6355,7 +6356,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(int, int)
    */
-  public boolean equalsBoolean(int lhs, int rhs) throws Throwable {
+  public boolean equalsBoolean(final int lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6363,7 +6364,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(int, long)
    */
-  public boolean equalsBoolean(int lhs, long rhs) throws Throwable {
+  public boolean equalsBoolean(final int lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6371,7 +6372,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(int, short)
    */
-  public boolean equalsBoolean(int lhs, short rhs) throws Throwable {
+  public boolean equalsBoolean(final int lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6379,7 +6380,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(long, java.math.BigDecimal)
    */
-  public boolean equalsBoolean(long lhs, BigDecimal rhs) throws Throwable {
+  public boolean equalsBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6387,7 +6388,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(long, java.math.BigInteger)
    */
-  public boolean equalsBoolean(long lhs, BigInteger rhs) throws Throwable {
+  public boolean equalsBoolean(final long lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6395,7 +6396,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(long, byte)
    */
-  public boolean equalsBoolean(long lhs, byte rhs) throws Throwable {
+  public boolean equalsBoolean(final long lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6403,7 +6404,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(long, char)
    */
-  public boolean equalsBoolean(long lhs, char rhs) throws Throwable {
+  public boolean equalsBoolean(final long lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6411,7 +6412,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(long, double)
    */
-  public boolean equalsBoolean(long lhs, double rhs) throws Throwable {
+  public boolean equalsBoolean(final long lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6419,7 +6420,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(long, float)
    */
-  public boolean equalsBoolean(long lhs, float rhs) throws Throwable {
+  public boolean equalsBoolean(final long lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6427,7 +6428,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(long, int)
    */
-  public boolean equalsBoolean(long lhs, int rhs) throws Throwable {
+  public boolean equalsBoolean(final long lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6435,7 +6436,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(long, long)
    */
-  public boolean equalsBoolean(long lhs, long rhs) throws Throwable {
+  public boolean equalsBoolean(final long lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6443,7 +6444,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(long, short)
    */
-  public boolean equalsBoolean(long lhs, short rhs) throws Throwable {
+  public boolean equalsBoolean(final long lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6451,7 +6452,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, java.math.BigDecimal)
    */
-  public boolean equalsBoolean(Object lhs, BigDecimal rhs) throws Throwable {
+  public boolean equalsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6459,7 +6460,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, java.math.BigInteger)
    */
-  public boolean equalsBoolean(Object lhs, BigInteger rhs) throws Throwable {
+  public boolean equalsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6467,7 +6468,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, byte)
    */
-  public boolean equalsBoolean(Object lhs, byte rhs) throws Throwable {
+  public boolean equalsBoolean(final Object lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6475,7 +6476,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, char)
    */
-  public boolean equalsBoolean(Object lhs, char rhs) throws Throwable {
+  public boolean equalsBoolean(final Object lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6483,7 +6484,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, double)
    */
-  public boolean equalsBoolean(Object lhs, double rhs) throws Throwable {
+  public boolean equalsBoolean(final Object lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6491,7 +6492,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, float)
    */
-  public boolean equalsBoolean(Object lhs, float rhs) throws Throwable {
+  public boolean equalsBoolean(final Object lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6499,7 +6500,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, int)
    */
-  public boolean equalsBoolean(Object lhs, int rhs) throws Throwable {
+  public boolean equalsBoolean(final Object lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6507,7 +6508,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, long)
    */
-  public boolean equalsBoolean(Object lhs, long rhs) throws Throwable {
+  public boolean equalsBoolean(final Object lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6515,7 +6516,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, java.lang.Object)
    */
-  public boolean equalsBoolean(Object lhs, Object rhs) throws Throwable {
+  public boolean equalsBoolean(final Object lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6523,7 +6524,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, short)
    */
-  public boolean equalsBoolean(Object lhs, short rhs) throws Throwable {
+  public boolean equalsBoolean(final Object lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6531,7 +6532,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(short, java.math.BigDecimal)
    */
-  public boolean equalsBoolean(short lhs, BigDecimal rhs) throws Throwable {
+  public boolean equalsBoolean(final short lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6539,7 +6540,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(short, java.math.BigInteger)
    */
-  public boolean equalsBoolean(short lhs, BigInteger rhs) throws Throwable {
+  public boolean equalsBoolean(final short lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6547,7 +6548,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(short, byte)
    */
-  public boolean equalsBoolean(short lhs, byte rhs) throws Throwable {
+  public boolean equalsBoolean(final short lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6555,7 +6556,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(short, char)
    */
-  public boolean equalsBoolean(short lhs, char rhs) throws Throwable {
+  public boolean equalsBoolean(final short lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6563,7 +6564,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(short, double)
    */
-  public boolean equalsBoolean(short lhs, double rhs) throws Throwable {
+  public boolean equalsBoolean(final short lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6571,7 +6572,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(short, float)
    */
-  public boolean equalsBoolean(short lhs, float rhs) throws Throwable {
+  public boolean equalsBoolean(final short lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6579,7 +6580,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(short, int)
    */
-  public boolean equalsBoolean(short lhs, int rhs) throws Throwable {
+  public boolean equalsBoolean(final short lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6587,7 +6588,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(short, long)
    */
-  public boolean equalsBoolean(short lhs, long rhs) throws Throwable {
+  public boolean equalsBoolean(final short lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6595,7 +6596,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(short, short)
    */
-  public boolean equalsBoolean(short lhs, short rhs) throws Throwable {
+  public boolean equalsBoolean(final short lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6603,7 +6604,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(java.math.BigDecimal, java.lang.Object)
    */
-  public boolean reverseEqualsBoolean(BigDecimal lhs, Object rhs) throws Throwable {
+  public boolean reverseEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6611,7 +6612,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(java.math.BigInteger, java.lang.Object)
    */
-  public boolean reverseEqualsBoolean(BigInteger lhs, Object rhs) throws Throwable {
+  public boolean reverseEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6619,7 +6620,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(byte, java.lang.Object)
    */
-  public boolean reverseEqualsBoolean(byte lhs, Object rhs) throws Throwable {
+  public boolean reverseEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6627,7 +6628,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(char, java.lang.Object)
    */
-  public boolean reverseEqualsBoolean(char lhs, Object rhs) throws Throwable {
+  public boolean reverseEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6635,7 +6636,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(double, java.lang.Object)
    */
-  public boolean reverseEqualsBoolean(double lhs, Object rhs) throws Throwable {
+  public boolean reverseEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6643,7 +6644,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(float, java.lang.Object)
    */
-  public boolean reverseEqualsBoolean(float lhs, Object rhs) throws Throwable {
+  public boolean reverseEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6651,7 +6652,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(int, java.lang.Object)
    */
-  public boolean reverseEqualsBoolean(int lhs, Object rhs) throws Throwable {
+  public boolean reverseEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6659,7 +6660,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(long, java.lang.Object)
    */
-  public boolean reverseEqualsBoolean(long lhs, Object rhs) throws Throwable {
+  public boolean reverseEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6667,7 +6668,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(short, java.lang.Object)
    */
-  public boolean reverseEqualsBoolean(short lhs, Object rhs) throws Throwable {
+  public boolean reverseEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -6692,8 +6693,7 @@ class CustomMetaClass implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#getInternalMetaClass()
    */
   public InternalMetaClass getInternalMetaClass() {
-    // TODO Auto-generated method stub
-    return null;
+    return this.internalMetaClass;
   }
 
   /* (non-Javadoc)
@@ -7419,7 +7419,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, java.math.BigDecimal)
    */
-  public boolean greaterThanBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7427,7 +7427,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, java.math.BigInteger)
    */
-  public boolean greaterThanBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7435,7 +7435,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, byte)
    */
-  public boolean greaterThanBoolean(BigDecimal lhs, byte rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigDecimal lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7443,7 +7443,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, char)
    */
-  public boolean greaterThanBoolean(BigDecimal lhs, char rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigDecimal lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7451,7 +7451,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, double)
    */
-  public boolean greaterThanBoolean(BigDecimal lhs, double rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigDecimal lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7459,7 +7459,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, float)
    */
-  public boolean greaterThanBoolean(BigDecimal lhs, float rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigDecimal lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7467,7 +7467,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, int)
    */
-  public boolean greaterThanBoolean(BigDecimal lhs, int rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigDecimal lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7475,7 +7475,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, long)
    */
-  public boolean greaterThanBoolean(BigDecimal lhs, long rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigDecimal lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7483,7 +7483,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigDecimal, short)
    */
-  public boolean greaterThanBoolean(BigDecimal lhs, short rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigDecimal lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7491,7 +7491,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, java.math.BigDecimal)
    */
-  public boolean greaterThanBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7499,7 +7499,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, java.math.BigInteger)
    */
-  public boolean greaterThanBoolean(BigInteger lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigInteger lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7507,7 +7507,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, byte)
    */
-  public boolean greaterThanBoolean(BigInteger lhs, byte rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigInteger lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7515,7 +7515,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, char)
    */
-  public boolean greaterThanBoolean(BigInteger lhs, char rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigInteger lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7523,7 +7523,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, double)
    */
-  public boolean greaterThanBoolean(BigInteger lhs, double rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigInteger lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7531,7 +7531,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, float)
    */
-  public boolean greaterThanBoolean(BigInteger lhs, float rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigInteger lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7539,7 +7539,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, int)
    */
-  public boolean greaterThanBoolean(BigInteger lhs, int rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigInteger lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7547,7 +7547,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, long)
    */
-  public boolean greaterThanBoolean(BigInteger lhs, long rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigInteger lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7555,7 +7555,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.math.BigInteger, short)
    */
-  public boolean greaterThanBoolean(BigInteger lhs, short rhs) throws Throwable {
+  public boolean greaterThanBoolean(final BigInteger lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7563,7 +7563,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, java.math.BigDecimal)
    */
-  public boolean greaterThanBoolean(byte lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7571,7 +7571,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, java.math.BigInteger)
    */
-  public boolean greaterThanBoolean(byte lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7579,7 +7579,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, byte)
    */
-  public boolean greaterThanBoolean(byte lhs, byte rhs) throws Throwable {
+  public boolean greaterThanBoolean(final byte lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7587,7 +7587,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, char)
    */
-  public boolean greaterThanBoolean(byte lhs, char rhs) throws Throwable {
+  public boolean greaterThanBoolean(final byte lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7595,7 +7595,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, double)
    */
-  public boolean greaterThanBoolean(byte lhs, double rhs) throws Throwable {
+  public boolean greaterThanBoolean(final byte lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7603,7 +7603,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, float)
    */
-  public boolean greaterThanBoolean(byte lhs, float rhs) throws Throwable {
+  public boolean greaterThanBoolean(final byte lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7611,7 +7611,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, int)
    */
-  public boolean greaterThanBoolean(byte lhs, int rhs) throws Throwable {
+  public boolean greaterThanBoolean(final byte lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7619,7 +7619,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, long)
    */
-  public boolean greaterThanBoolean(byte lhs, long rhs) throws Throwable {
+  public boolean greaterThanBoolean(final byte lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7627,7 +7627,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(byte, short)
    */
-  public boolean greaterThanBoolean(byte lhs, short rhs) throws Throwable {
+  public boolean greaterThanBoolean(final byte lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7635,7 +7635,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, java.math.BigDecimal)
    */
-  public boolean greaterThanBoolean(char lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7643,7 +7643,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, java.math.BigInteger)
    */
-  public boolean greaterThanBoolean(char lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanBoolean(final char lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7651,7 +7651,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, byte)
    */
-  public boolean greaterThanBoolean(char lhs, byte rhs) throws Throwable {
+  public boolean greaterThanBoolean(final char lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7659,7 +7659,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, char)
    */
-  public boolean greaterThanBoolean(char lhs, char rhs) throws Throwable {
+  public boolean greaterThanBoolean(final char lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7667,7 +7667,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, double)
    */
-  public boolean greaterThanBoolean(char lhs, double rhs) throws Throwable {
+  public boolean greaterThanBoolean(final char lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7675,7 +7675,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, float)
    */
-  public boolean greaterThanBoolean(char lhs, float rhs) throws Throwable {
+  public boolean greaterThanBoolean(final char lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7683,7 +7683,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, int)
    */
-  public boolean greaterThanBoolean(char lhs, int rhs) throws Throwable {
+  public boolean greaterThanBoolean(final char lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7691,7 +7691,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, long)
    */
-  public boolean greaterThanBoolean(char lhs, long rhs) throws Throwable {
+  public boolean greaterThanBoolean(final char lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7699,7 +7699,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(char, short)
    */
-  public boolean greaterThanBoolean(char lhs, short rhs) throws Throwable {
+  public boolean greaterThanBoolean(final char lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7707,7 +7707,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, java.math.BigDecimal)
    */
-  public boolean greaterThanBoolean(double lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanBoolean(final double lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7715,7 +7715,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, java.math.BigInteger)
    */
-  public boolean greaterThanBoolean(double lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanBoolean(final double lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7723,7 +7723,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, byte)
    */
-  public boolean greaterThanBoolean(double lhs, byte rhs) throws Throwable {
+  public boolean greaterThanBoolean(final double lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7731,7 +7731,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, char)
    */
-  public boolean greaterThanBoolean(double lhs, char rhs) throws Throwable {
+  public boolean greaterThanBoolean(final double lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7739,7 +7739,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, double)
    */
-  public boolean greaterThanBoolean(double lhs, double rhs) throws Throwable {
+  public boolean greaterThanBoolean(final double lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7747,7 +7747,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, float)
    */
-  public boolean greaterThanBoolean(double lhs, float rhs) throws Throwable {
+  public boolean greaterThanBoolean(final double lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7755,7 +7755,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, int)
    */
-  public boolean greaterThanBoolean(double lhs, int rhs) throws Throwable {
+  public boolean greaterThanBoolean(final double lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7763,7 +7763,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, long)
    */
-  public boolean greaterThanBoolean(double lhs, long rhs) throws Throwable {
+  public boolean greaterThanBoolean(final double lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7771,7 +7771,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(double, short)
    */
-  public boolean greaterThanBoolean(double lhs, short rhs) throws Throwable {
+  public boolean greaterThanBoolean(final double lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7779,7 +7779,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, java.math.BigDecimal)
    */
-  public boolean greaterThanBoolean(float lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanBoolean(final float lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7787,7 +7787,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, java.math.BigInteger)
    */
-  public boolean greaterThanBoolean(float lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanBoolean(final float lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7795,7 +7795,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, byte)
    */
-  public boolean greaterThanBoolean(float lhs, byte rhs) throws Throwable {
+  public boolean greaterThanBoolean(final float lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7803,7 +7803,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, char)
    */
-  public boolean greaterThanBoolean(float lhs, char rhs) throws Throwable {
+  public boolean greaterThanBoolean(final float lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7811,7 +7811,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, double)
    */
-  public boolean greaterThanBoolean(float lhs, double rhs) throws Throwable {
+  public boolean greaterThanBoolean(final float lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7819,7 +7819,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, float)
    */
-  public boolean greaterThanBoolean(float lhs, float rhs) throws Throwable {
+  public boolean greaterThanBoolean(final float lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7827,7 +7827,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, int)
    */
-  public boolean greaterThanBoolean(float lhs, int rhs) throws Throwable {
+  public boolean greaterThanBoolean(final float lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7835,7 +7835,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, long)
    */
-  public boolean greaterThanBoolean(float lhs, long rhs) throws Throwable {
+  public boolean greaterThanBoolean(final float lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7843,7 +7843,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(float, short)
    */
-  public boolean greaterThanBoolean(float lhs, short rhs) throws Throwable {
+  public boolean greaterThanBoolean(final float lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7851,7 +7851,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, java.math.BigDecimal)
    */
-  public boolean greaterThanBoolean(int lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanBoolean(final int lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7859,7 +7859,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, java.math.BigInteger)
    */
-  public boolean greaterThanBoolean(int lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanBoolean(final int lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7867,7 +7867,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, byte)
    */
-  public boolean greaterThanBoolean(int lhs, byte rhs) throws Throwable {
+  public boolean greaterThanBoolean(final int lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7875,7 +7875,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, char)
    */
-  public boolean greaterThanBoolean(int lhs, char rhs) throws Throwable {
+  public boolean greaterThanBoolean(final int lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7883,7 +7883,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, double)
    */
-  public boolean greaterThanBoolean(int lhs, double rhs) throws Throwable {
+  public boolean greaterThanBoolean(final int lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7891,7 +7891,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, float)
    */
-  public boolean greaterThanBoolean(int lhs, float rhs) throws Throwable {
+  public boolean greaterThanBoolean(final int lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7899,7 +7899,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, int)
    */
-  public boolean greaterThanBoolean(int lhs, int rhs) throws Throwable {
+  public boolean greaterThanBoolean(final int lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7907,7 +7907,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, long)
    */
-  public boolean greaterThanBoolean(int lhs, long rhs) throws Throwable {
+  public boolean greaterThanBoolean(final int lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7915,7 +7915,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(int, short)
    */
-  public boolean greaterThanBoolean(int lhs, short rhs) throws Throwable {
+  public boolean greaterThanBoolean(final int lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7923,7 +7923,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, java.math.BigDecimal)
    */
-  public boolean greaterThanBoolean(long lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7931,7 +7931,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, java.math.BigInteger)
    */
-  public boolean greaterThanBoolean(long lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanBoolean(final long lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7939,7 +7939,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, byte)
    */
-  public boolean greaterThanBoolean(long lhs, byte rhs) throws Throwable {
+  public boolean greaterThanBoolean(final long lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7947,7 +7947,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, char)
    */
-  public boolean greaterThanBoolean(long lhs, char rhs) throws Throwable {
+  public boolean greaterThanBoolean(final long lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7955,7 +7955,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, double)
    */
-  public boolean greaterThanBoolean(long lhs, double rhs) throws Throwable {
+  public boolean greaterThanBoolean(final long lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7963,7 +7963,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, float)
    */
-  public boolean greaterThanBoolean(long lhs, float rhs) throws Throwable {
+  public boolean greaterThanBoolean(final long lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7971,7 +7971,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, int)
    */
-  public boolean greaterThanBoolean(long lhs, int rhs) throws Throwable {
+  public boolean greaterThanBoolean(final long lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7979,7 +7979,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, long)
    */
-  public boolean greaterThanBoolean(long lhs, long rhs) throws Throwable {
+  public boolean greaterThanBoolean(final long lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7987,7 +7987,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(long, short)
    */
-  public boolean greaterThanBoolean(long lhs, short rhs) throws Throwable {
+  public boolean greaterThanBoolean(final long lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -7995,7 +7995,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, java.math.BigDecimal)
    */
-  public boolean greaterThanBoolean(Object lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8003,7 +8003,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, java.math.BigInteger)
    */
-  public boolean greaterThanBoolean(Object lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8011,7 +8011,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, byte)
    */
-  public boolean greaterThanBoolean(Object lhs, byte rhs) throws Throwable {
+  public boolean greaterThanBoolean(final Object lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8019,7 +8019,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, char)
    */
-  public boolean greaterThanBoolean(Object lhs, char rhs) throws Throwable {
+  public boolean greaterThanBoolean(final Object lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8027,7 +8027,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, double)
    */
-  public boolean greaterThanBoolean(Object lhs, double rhs) throws Throwable {
+  public boolean greaterThanBoolean(final Object lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8035,7 +8035,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, float)
    */
-  public boolean greaterThanBoolean(Object lhs, float rhs) throws Throwable {
+  public boolean greaterThanBoolean(final Object lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8043,7 +8043,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, int)
    */
-  public boolean greaterThanBoolean(Object lhs, int rhs) throws Throwable {
+  public boolean greaterThanBoolean(final Object lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8051,7 +8051,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, long)
    */
-  public boolean greaterThanBoolean(Object lhs, long rhs) throws Throwable {
+  public boolean greaterThanBoolean(final Object lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8059,7 +8059,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, java.lang.Object)
    */
-  public boolean greaterThanBoolean(Object lhs, Object rhs) throws Throwable {
+  public boolean greaterThanBoolean(final Object lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8067,7 +8067,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, short)
    */
-  public boolean greaterThanBoolean(Object lhs, short rhs) throws Throwable {
+  public boolean greaterThanBoolean(final Object lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8075,7 +8075,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, java.math.BigDecimal)
    */
-  public boolean greaterThanBoolean(short lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanBoolean(final short lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8083,7 +8083,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, java.math.BigInteger)
    */
-  public boolean greaterThanBoolean(short lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanBoolean(final short lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8091,7 +8091,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, byte)
    */
-  public boolean greaterThanBoolean(short lhs, byte rhs) throws Throwable {
+  public boolean greaterThanBoolean(final short lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8099,7 +8099,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, char)
    */
-  public boolean greaterThanBoolean(short lhs, char rhs) throws Throwable {
+  public boolean greaterThanBoolean(final short lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8107,7 +8107,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, double)
    */
-  public boolean greaterThanBoolean(short lhs, double rhs) throws Throwable {
+  public boolean greaterThanBoolean(final short lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8115,7 +8115,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, float)
    */
-  public boolean greaterThanBoolean(short lhs, float rhs) throws Throwable {
+  public boolean greaterThanBoolean(final short lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8123,7 +8123,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, int)
    */
-  public boolean greaterThanBoolean(short lhs, int rhs) throws Throwable {
+  public boolean greaterThanBoolean(final short lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8131,7 +8131,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, long)
    */
-  public boolean greaterThanBoolean(short lhs, long rhs) throws Throwable {
+  public boolean greaterThanBoolean(final short lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8139,7 +8139,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(short, short)
    */
-  public boolean greaterThanBoolean(short lhs, short rhs) throws Throwable {
+  public boolean greaterThanBoolean(final short lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8147,7 +8147,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(java.math.BigDecimal, java.lang.Object)
    */
-  public boolean reverseGreaterThanBoolean(BigDecimal lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8155,7 +8155,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(java.math.BigInteger, java.lang.Object)
    */
-  public boolean reverseGreaterThanBoolean(BigInteger lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8163,7 +8163,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(byte, java.lang.Object)
    */
-  public boolean reverseGreaterThanBoolean(byte lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanBoolean(final byte lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8171,7 +8171,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(char, java.lang.Object)
    */
-  public boolean reverseGreaterThanBoolean(char lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanBoolean(final char lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8179,7 +8179,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(double, java.lang.Object)
    */
-  public boolean reverseGreaterThanBoolean(double lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanBoolean(final double lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8187,7 +8187,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(float, java.lang.Object)
    */
-  public boolean reverseGreaterThanBoolean(float lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanBoolean(final float lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8195,7 +8195,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(int, java.lang.Object)
    */
-  public boolean reverseGreaterThanBoolean(int lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanBoolean(final int lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8203,7 +8203,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(long, java.lang.Object)
    */
-  public boolean reverseGreaterThanBoolean(long lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanBoolean(final long lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -8211,7 +8211,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(short, java.lang.Object)
    */
-  public boolean reverseGreaterThanBoolean(short lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanBoolean(final short lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -10411,7 +10411,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, java.math.BigDecimal)
    */
-  public Object invokeMethodQuick(Object instance, String methodName, BigDecimal p1) {
+  public Object invokeMethodQuick(final Object instance, final String methodName, final BigDecimal p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -10419,7 +10419,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, java.math.BigInteger)
    */
-  public Object invokeMethodQuick(Object instance, String methodName, BigInteger p1) {
+  public Object invokeMethodQuick(final Object instance, final String methodName, final BigInteger p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -10427,7 +10427,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, boolean)
    */
-  public Object invokeMethodQuick(Object instance, String methodName, boolean p1) {
+  public Object invokeMethodQuick(final Object instance, final String methodName, final boolean p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -10435,7 +10435,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, byte)
    */
-  public Object invokeMethodQuick(Object instance, String methodName, byte p1) {
+  public Object invokeMethodQuick(final Object instance, final String methodName, final byte p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -10443,7 +10443,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, char)
    */
-  public Object invokeMethodQuick(Object instance, String methodName, char p1) {
+  public Object invokeMethodQuick(final Object instance, final String methodName, final char p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -10451,7 +10451,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, double)
    */
-  public Object invokeMethodQuick(Object instance, String methodName, double p1) {
+  public Object invokeMethodQuick(final Object instance, final String methodName, final double p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -10459,7 +10459,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, float)
    */
-  public Object invokeMethodQuick(Object instance, String methodName, float p1) {
+  public Object invokeMethodQuick(final Object instance, final String methodName, final float p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -10467,7 +10467,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, int)
    */
-  public Object invokeMethodQuick(Object instance, String methodName, int p1) {
+  public Object invokeMethodQuick(final Object instance, final String methodName, final int p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -10475,7 +10475,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, long)
    */
-  public Object invokeMethodQuick(Object instance, String methodName, long p1) {
+  public Object invokeMethodQuick(final Object instance, final String methodName, final long p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -10483,7 +10483,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#invokeMethodQuick(java.lang.Object, java.lang.String, short)
    */
-  public Object invokeMethodQuick(Object instance, String methodName, short p1) {
+  public Object invokeMethodQuick(final Object instance, final String methodName, final short p1) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -11891,7 +11891,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigDecimal, java.math.BigDecimal)
    */
-  public boolean lessThanBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11899,7 +11899,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigDecimal, java.math.BigInteger)
    */
-  public boolean lessThanBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11907,7 +11907,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigDecimal, byte)
    */
-  public boolean lessThanBoolean(BigDecimal lhs, byte rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigDecimal lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11915,7 +11915,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigDecimal, char)
    */
-  public boolean lessThanBoolean(BigDecimal lhs, char rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigDecimal lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11923,7 +11923,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigDecimal, double)
    */
-  public boolean lessThanBoolean(BigDecimal lhs, double rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigDecimal lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11931,7 +11931,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigDecimal, float)
    */
-  public boolean lessThanBoolean(BigDecimal lhs, float rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigDecimal lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11939,7 +11939,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigDecimal, int)
    */
-  public boolean lessThanBoolean(BigDecimal lhs, int rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigDecimal lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11947,7 +11947,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigDecimal, long)
    */
-  public boolean lessThanBoolean(BigDecimal lhs, long rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigDecimal lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11955,7 +11955,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigDecimal, short)
    */
-  public boolean lessThanBoolean(BigDecimal lhs, short rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigDecimal lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11963,7 +11963,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigInteger, java.math.BigDecimal)
    */
-  public boolean lessThanBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11971,7 +11971,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigInteger, java.math.BigInteger)
    */
-  public boolean lessThanBoolean(BigInteger lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigInteger lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11979,7 +11979,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigInteger, byte)
    */
-  public boolean lessThanBoolean(BigInteger lhs, byte rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigInteger lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11987,7 +11987,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigInteger, char)
    */
-  public boolean lessThanBoolean(BigInteger lhs, char rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigInteger lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -11995,7 +11995,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigInteger, double)
    */
-  public boolean lessThanBoolean(BigInteger lhs, double rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigInteger lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12003,7 +12003,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigInteger, float)
    */
-  public boolean lessThanBoolean(BigInteger lhs, float rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigInteger lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12011,7 +12011,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigInteger, int)
    */
-  public boolean lessThanBoolean(BigInteger lhs, int rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigInteger lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12019,7 +12019,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigInteger, long)
    */
-  public boolean lessThanBoolean(BigInteger lhs, long rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigInteger lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12027,7 +12027,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.math.BigInteger, short)
    */
-  public boolean lessThanBoolean(BigInteger lhs, short rhs) throws Throwable {
+  public boolean lessThanBoolean(final BigInteger lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12035,7 +12035,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(byte, java.math.BigDecimal)
    */
-  public boolean lessThanBoolean(byte lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12043,7 +12043,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(byte, java.math.BigInteger)
    */
-  public boolean lessThanBoolean(byte lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12051,7 +12051,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(byte, byte)
    */
-  public boolean lessThanBoolean(byte lhs, byte rhs) throws Throwable {
+  public boolean lessThanBoolean(final byte lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12059,7 +12059,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(byte, char)
    */
-  public boolean lessThanBoolean(byte lhs, char rhs) throws Throwable {
+  public boolean lessThanBoolean(final byte lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12067,7 +12067,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(byte, double)
    */
-  public boolean lessThanBoolean(byte lhs, double rhs) throws Throwable {
+  public boolean lessThanBoolean(final byte lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12075,7 +12075,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(byte, float)
    */
-  public boolean lessThanBoolean(byte lhs, float rhs) throws Throwable {
+  public boolean lessThanBoolean(final byte lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12083,7 +12083,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(byte, int)
    */
-  public boolean lessThanBoolean(byte lhs, int rhs) throws Throwable {
+  public boolean lessThanBoolean(final byte lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12091,7 +12091,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(byte, long)
    */
-  public boolean lessThanBoolean(byte lhs, long rhs) throws Throwable {
+  public boolean lessThanBoolean(final byte lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12099,7 +12099,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(byte, short)
    */
-  public boolean lessThanBoolean(byte lhs, short rhs) throws Throwable {
+  public boolean lessThanBoolean(final byte lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12107,7 +12107,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(char, java.math.BigDecimal)
    */
-  public boolean lessThanBoolean(char lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12115,7 +12115,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(char, java.math.BigInteger)
    */
-  public boolean lessThanBoolean(char lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanBoolean(final char lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12123,7 +12123,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(char, byte)
    */
-  public boolean lessThanBoolean(char lhs, byte rhs) throws Throwable {
+  public boolean lessThanBoolean(final char lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12131,7 +12131,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(char, char)
    */
-  public boolean lessThanBoolean(char lhs, char rhs) throws Throwable {
+  public boolean lessThanBoolean(final char lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12139,7 +12139,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(char, double)
    */
-  public boolean lessThanBoolean(char lhs, double rhs) throws Throwable {
+  public boolean lessThanBoolean(final char lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12147,7 +12147,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(char, float)
    */
-  public boolean lessThanBoolean(char lhs, float rhs) throws Throwable {
+  public boolean lessThanBoolean(final char lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12155,7 +12155,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(char, int)
    */
-  public boolean lessThanBoolean(char lhs, int rhs) throws Throwable {
+  public boolean lessThanBoolean(final char lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12163,7 +12163,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(char, long)
    */
-  public boolean lessThanBoolean(char lhs, long rhs) throws Throwable {
+  public boolean lessThanBoolean(final char lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12171,7 +12171,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(char, short)
    */
-  public boolean lessThanBoolean(char lhs, short rhs) throws Throwable {
+  public boolean lessThanBoolean(final char lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12179,7 +12179,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(double, java.math.BigDecimal)
    */
-  public boolean lessThanBoolean(double lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanBoolean(final double lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12187,7 +12187,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(double, java.math.BigInteger)
    */
-  public boolean lessThanBoolean(double lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanBoolean(final double lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12195,7 +12195,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(double, byte)
    */
-  public boolean lessThanBoolean(double lhs, byte rhs) throws Throwable {
+  public boolean lessThanBoolean(final double lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12203,7 +12203,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(double, char)
    */
-  public boolean lessThanBoolean(double lhs, char rhs) throws Throwable {
+  public boolean lessThanBoolean(final double lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12211,7 +12211,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(double, double)
    */
-  public boolean lessThanBoolean(double lhs, double rhs) throws Throwable {
+  public boolean lessThanBoolean(final double lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12219,7 +12219,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(double, float)
    */
-  public boolean lessThanBoolean(double lhs, float rhs) throws Throwable {
+  public boolean lessThanBoolean(final double lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12227,7 +12227,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(double, int)
    */
-  public boolean lessThanBoolean(double lhs, int rhs) throws Throwable {
+  public boolean lessThanBoolean(final double lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12235,7 +12235,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(double, long)
    */
-  public boolean lessThanBoolean(double lhs, long rhs) throws Throwable {
+  public boolean lessThanBoolean(final double lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12243,7 +12243,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(double, short)
    */
-  public boolean lessThanBoolean(double lhs, short rhs) throws Throwable {
+  public boolean lessThanBoolean(final double lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12251,7 +12251,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(float, java.math.BigDecimal)
    */
-  public boolean lessThanBoolean(float lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanBoolean(final float lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12259,7 +12259,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(float, java.math.BigInteger)
    */
-  public boolean lessThanBoolean(float lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanBoolean(final float lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12267,7 +12267,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(float, byte)
    */
-  public boolean lessThanBoolean(float lhs, byte rhs) throws Throwable {
+  public boolean lessThanBoolean(final float lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12275,7 +12275,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(float, char)
    */
-  public boolean lessThanBoolean(float lhs, char rhs) throws Throwable {
+  public boolean lessThanBoolean(final float lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12283,7 +12283,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(float, double)
    */
-  public boolean lessThanBoolean(float lhs, double rhs) throws Throwable {
+  public boolean lessThanBoolean(final float lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12291,7 +12291,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(float, float)
    */
-  public boolean lessThanBoolean(float lhs, float rhs) throws Throwable {
+  public boolean lessThanBoolean(final float lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12299,7 +12299,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(float, int)
    */
-  public boolean lessThanBoolean(float lhs, int rhs) throws Throwable {
+  public boolean lessThanBoolean(final float lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12307,7 +12307,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(float, long)
    */
-  public boolean lessThanBoolean(float lhs, long rhs) throws Throwable {
+  public boolean lessThanBoolean(final float lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12315,7 +12315,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(float, short)
    */
-  public boolean lessThanBoolean(float lhs, short rhs) throws Throwable {
+  public boolean lessThanBoolean(final float lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12323,7 +12323,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(int, java.math.BigDecimal)
    */
-  public boolean lessThanBoolean(int lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanBoolean(final int lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12331,7 +12331,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(int, java.math.BigInteger)
    */
-  public boolean lessThanBoolean(int lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanBoolean(final int lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12339,7 +12339,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(int, byte)
    */
-  public boolean lessThanBoolean(int lhs, byte rhs) throws Throwable {
+  public boolean lessThanBoolean(final int lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12347,7 +12347,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(int, char)
    */
-  public boolean lessThanBoolean(int lhs, char rhs) throws Throwable {
+  public boolean lessThanBoolean(final int lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12355,7 +12355,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(int, double)
    */
-  public boolean lessThanBoolean(int lhs, double rhs) throws Throwable {
+  public boolean lessThanBoolean(final int lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12363,7 +12363,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(int, float)
    */
-  public boolean lessThanBoolean(int lhs, float rhs) throws Throwable {
+  public boolean lessThanBoolean(final int lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12371,7 +12371,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(int, int)
    */
-  public boolean lessThanBoolean(int lhs, int rhs) throws Throwable {
+  public boolean lessThanBoolean(final int lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12379,7 +12379,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(int, long)
    */
-  public boolean lessThanBoolean(int lhs, long rhs) throws Throwable {
+  public boolean lessThanBoolean(final int lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12387,7 +12387,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(int, short)
    */
-  public boolean lessThanBoolean(int lhs, short rhs) throws Throwable {
+  public boolean lessThanBoolean(final int lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12395,7 +12395,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(long, java.math.BigDecimal)
    */
-  public boolean lessThanBoolean(long lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12403,7 +12403,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(long, java.math.BigInteger)
    */
-  public boolean lessThanBoolean(long lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanBoolean(final long lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12411,7 +12411,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(long, byte)
    */
-  public boolean lessThanBoolean(long lhs, byte rhs) throws Throwable {
+  public boolean lessThanBoolean(final long lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12419,7 +12419,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(long, char)
    */
-  public boolean lessThanBoolean(long lhs, char rhs) throws Throwable {
+  public boolean lessThanBoolean(final long lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12427,7 +12427,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(long, double)
    */
-  public boolean lessThanBoolean(long lhs, double rhs) throws Throwable {
+  public boolean lessThanBoolean(final long lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12435,7 +12435,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(long, float)
    */
-  public boolean lessThanBoolean(long lhs, float rhs) throws Throwable {
+  public boolean lessThanBoolean(final long lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12443,7 +12443,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(long, int)
    */
-  public boolean lessThanBoolean(long lhs, int rhs) throws Throwable {
+  public boolean lessThanBoolean(final long lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12451,7 +12451,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(long, long)
    */
-  public boolean lessThanBoolean(long lhs, long rhs) throws Throwable {
+  public boolean lessThanBoolean(final long lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12459,7 +12459,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(long, short)
    */
-  public boolean lessThanBoolean(long lhs, short rhs) throws Throwable {
+  public boolean lessThanBoolean(final long lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12467,7 +12467,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, java.math.BigDecimal)
    */
-  public boolean lessThanBoolean(Object lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12475,7 +12475,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, java.math.BigInteger)
    */
-  public boolean lessThanBoolean(Object lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12483,7 +12483,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, byte)
    */
-  public boolean lessThanBoolean(Object lhs, byte rhs) throws Throwable {
+  public boolean lessThanBoolean(final Object lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12491,7 +12491,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, char)
    */
-  public boolean lessThanBoolean(Object lhs, char rhs) throws Throwable {
+  public boolean lessThanBoolean(final Object lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12499,7 +12499,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, double)
    */
-  public boolean lessThanBoolean(Object lhs, double rhs) throws Throwable {
+  public boolean lessThanBoolean(final Object lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12507,7 +12507,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, float)
    */
-  public boolean lessThanBoolean(Object lhs, float rhs) throws Throwable {
+  public boolean lessThanBoolean(final Object lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12515,7 +12515,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, int)
    */
-  public boolean lessThanBoolean(Object lhs, int rhs) throws Throwable {
+  public boolean lessThanBoolean(final Object lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12523,7 +12523,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, long)
    */
-  public boolean lessThanBoolean(Object lhs, long rhs) throws Throwable {
+  public boolean lessThanBoolean(final Object lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12531,7 +12531,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, java.lang.Object)
    */
-  public boolean lessThanBoolean(Object lhs, Object rhs) throws Throwable {
+  public boolean lessThanBoolean(final Object lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12539,7 +12539,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, short)
    */
-  public boolean lessThanBoolean(Object lhs, short rhs) throws Throwable {
+  public boolean lessThanBoolean(final Object lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12547,7 +12547,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(short, java.math.BigDecimal)
    */
-  public boolean lessThanBoolean(short lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanBoolean(final short lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12555,7 +12555,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(short, java.math.BigInteger)
    */
-  public boolean lessThanBoolean(short lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanBoolean(final short lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12563,7 +12563,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(short, byte)
    */
-  public boolean lessThanBoolean(short lhs, byte rhs) throws Throwable {
+  public boolean lessThanBoolean(final short lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12571,7 +12571,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(short, char)
    */
-  public boolean lessThanBoolean(short lhs, char rhs) throws Throwable {
+  public boolean lessThanBoolean(final short lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12579,7 +12579,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(short, double)
    */
-  public boolean lessThanBoolean(short lhs, double rhs) throws Throwable {
+  public boolean lessThanBoolean(final short lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12587,7 +12587,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(short, float)
    */
-  public boolean lessThanBoolean(short lhs, float rhs) throws Throwable {
+  public boolean lessThanBoolean(final short lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12595,7 +12595,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(short, int)
    */
-  public boolean lessThanBoolean(short lhs, int rhs) throws Throwable {
+  public boolean lessThanBoolean(final short lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12603,7 +12603,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(short, long)
    */
-  public boolean lessThanBoolean(short lhs, long rhs) throws Throwable {
+  public boolean lessThanBoolean(final short lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12611,7 +12611,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(short, short)
    */
-  public boolean lessThanBoolean(short lhs, short rhs) throws Throwable {
+  public boolean lessThanBoolean(final short lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12619,7 +12619,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(java.math.BigDecimal, java.lang.Object)
    */
-  public boolean reverseLessThanBoolean(BigDecimal lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12627,7 +12627,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(java.math.BigInteger, java.lang.Object)
    */
-  public boolean reverseLessThanBoolean(BigInteger lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12635,7 +12635,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(byte, java.lang.Object)
    */
-  public boolean reverseLessThanBoolean(byte lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanBoolean(final byte lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12643,7 +12643,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(char, java.lang.Object)
    */
-  public boolean reverseLessThanBoolean(char lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanBoolean(final char lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12651,7 +12651,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(double, java.lang.Object)
    */
-  public boolean reverseLessThanBoolean(double lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanBoolean(final double lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12659,7 +12659,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(float, java.lang.Object)
    */
-  public boolean reverseLessThanBoolean(float lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanBoolean(final float lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12667,7 +12667,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(int, java.lang.Object)
    */
-  public boolean reverseLessThanBoolean(int lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanBoolean(final int lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12675,7 +12675,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(long, java.lang.Object)
    */
-  public boolean reverseLessThanBoolean(long lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanBoolean(final long lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -12683,7 +12683,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(short, java.lang.Object)
    */
-  public boolean reverseLessThanBoolean(short lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanBoolean(final short lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13411,7 +13411,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigDecimal, java.math.BigDecimal)
    */
-  public boolean lessThanOrEqualsBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13419,7 +13419,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigDecimal, java.math.BigInteger)
    */
-  public boolean lessThanOrEqualsBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13427,7 +13427,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigDecimal, byte)
    */
-  public boolean lessThanOrEqualsBoolean(BigDecimal lhs, byte rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigDecimal lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13435,7 +13435,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigDecimal, char)
    */
-  public boolean lessThanOrEqualsBoolean(BigDecimal lhs, char rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigDecimal lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13443,7 +13443,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigDecimal, double)
    */
-  public boolean lessThanOrEqualsBoolean(BigDecimal lhs, double rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigDecimal lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13451,7 +13451,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigDecimal, float)
    */
-  public boolean lessThanOrEqualsBoolean(BigDecimal lhs, float rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigDecimal lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13459,7 +13459,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigDecimal, int)
    */
-  public boolean lessThanOrEqualsBoolean(BigDecimal lhs, int rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigDecimal lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13467,7 +13467,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigDecimal, long)
    */
-  public boolean lessThanOrEqualsBoolean(BigDecimal lhs, long rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigDecimal lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13475,7 +13475,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigDecimal, short)
    */
-  public boolean lessThanOrEqualsBoolean(BigDecimal lhs, short rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigDecimal lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13483,7 +13483,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigInteger, java.math.BigDecimal)
    */
-  public boolean lessThanOrEqualsBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13491,7 +13491,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigInteger, java.math.BigInteger)
    */
-  public boolean lessThanOrEqualsBoolean(BigInteger lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigInteger lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13499,7 +13499,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigInteger, byte)
    */
-  public boolean lessThanOrEqualsBoolean(BigInteger lhs, byte rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigInteger lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13507,7 +13507,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigInteger, char)
    */
-  public boolean lessThanOrEqualsBoolean(BigInteger lhs, char rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigInteger lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13515,7 +13515,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigInteger, double)
    */
-  public boolean lessThanOrEqualsBoolean(BigInteger lhs, double rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigInteger lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13523,7 +13523,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigInteger, float)
    */
-  public boolean lessThanOrEqualsBoolean(BigInteger lhs, float rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigInteger lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13531,7 +13531,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigInteger, int)
    */
-  public boolean lessThanOrEqualsBoolean(BigInteger lhs, int rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigInteger lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13539,7 +13539,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigInteger, long)
    */
-  public boolean lessThanOrEqualsBoolean(BigInteger lhs, long rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigInteger lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13547,7 +13547,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.math.BigInteger, short)
    */
-  public boolean lessThanOrEqualsBoolean(BigInteger lhs, short rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final BigInteger lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13555,7 +13555,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(byte, java.math.BigDecimal)
    */
-  public boolean lessThanOrEqualsBoolean(byte lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13563,7 +13563,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(byte, java.math.BigInteger)
    */
-  public boolean lessThanOrEqualsBoolean(byte lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13571,7 +13571,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(byte, byte)
    */
-  public boolean lessThanOrEqualsBoolean(byte lhs, byte rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final byte lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13579,7 +13579,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(byte, char)
    */
-  public boolean lessThanOrEqualsBoolean(byte lhs, char rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final byte lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13587,7 +13587,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(byte, double)
    */
-  public boolean lessThanOrEqualsBoolean(byte lhs, double rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final byte lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13595,7 +13595,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(byte, float)
    */
-  public boolean lessThanOrEqualsBoolean(byte lhs, float rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final byte lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13603,7 +13603,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(byte, int)
    */
-  public boolean lessThanOrEqualsBoolean(byte lhs, int rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final byte lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13611,7 +13611,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(byte, long)
    */
-  public boolean lessThanOrEqualsBoolean(byte lhs, long rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final byte lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13619,7 +13619,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(byte, short)
    */
-  public boolean lessThanOrEqualsBoolean(byte lhs, short rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final byte lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13627,7 +13627,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(char, java.math.BigDecimal)
    */
-  public boolean lessThanOrEqualsBoolean(char lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13635,7 +13635,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(char, java.math.BigInteger)
    */
-  public boolean lessThanOrEqualsBoolean(char lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final char lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13643,7 +13643,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(char, byte)
    */
-  public boolean lessThanOrEqualsBoolean(char lhs, byte rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final char lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13651,7 +13651,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(char, char)
    */
-  public boolean lessThanOrEqualsBoolean(char lhs, char rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final char lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13659,7 +13659,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(char, double)
    */
-  public boolean lessThanOrEqualsBoolean(char lhs, double rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final char lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13667,7 +13667,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(char, float)
    */
-  public boolean lessThanOrEqualsBoolean(char lhs, float rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final char lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13675,7 +13675,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(char, int)
    */
-  public boolean lessThanOrEqualsBoolean(char lhs, int rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final char lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13683,7 +13683,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(char, long)
    */
-  public boolean lessThanOrEqualsBoolean(char lhs, long rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final char lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13691,7 +13691,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(char, short)
    */
-  public boolean lessThanOrEqualsBoolean(char lhs, short rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final char lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13699,7 +13699,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(double, java.math.BigDecimal)
    */
-  public boolean lessThanOrEqualsBoolean(double lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final double lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13707,7 +13707,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(double, java.math.BigInteger)
    */
-  public boolean lessThanOrEqualsBoolean(double lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final double lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13715,7 +13715,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(double, byte)
    */
-  public boolean lessThanOrEqualsBoolean(double lhs, byte rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final double lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13723,7 +13723,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(double, char)
    */
-  public boolean lessThanOrEqualsBoolean(double lhs, char rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final double lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13731,7 +13731,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(double, double)
    */
-  public boolean lessThanOrEqualsBoolean(double lhs, double rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final double lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13739,7 +13739,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(double, float)
    */
-  public boolean lessThanOrEqualsBoolean(double lhs, float rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final double lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13747,7 +13747,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(double, int)
    */
-  public boolean lessThanOrEqualsBoolean(double lhs, int rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final double lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13755,7 +13755,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(double, long)
    */
-  public boolean lessThanOrEqualsBoolean(double lhs, long rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final double lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13763,7 +13763,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(double, short)
    */
-  public boolean lessThanOrEqualsBoolean(double lhs, short rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final double lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13771,7 +13771,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(float, java.math.BigDecimal)
    */
-  public boolean lessThanOrEqualsBoolean(float lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final float lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13779,7 +13779,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(float, java.math.BigInteger)
    */
-  public boolean lessThanOrEqualsBoolean(float lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final float lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13787,7 +13787,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(float, byte)
    */
-  public boolean lessThanOrEqualsBoolean(float lhs, byte rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final float lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13795,7 +13795,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(float, char)
    */
-  public boolean lessThanOrEqualsBoolean(float lhs, char rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final float lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13803,7 +13803,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(float, double)
    */
-  public boolean lessThanOrEqualsBoolean(float lhs, double rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final float lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13811,7 +13811,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(float, float)
    */
-  public boolean lessThanOrEqualsBoolean(float lhs, float rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final float lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13819,7 +13819,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(float, int)
    */
-  public boolean lessThanOrEqualsBoolean(float lhs, int rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final float lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13827,7 +13827,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(float, long)
    */
-  public boolean lessThanOrEqualsBoolean(float lhs, long rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final float lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13835,7 +13835,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(float, short)
    */
-  public boolean lessThanOrEqualsBoolean(float lhs, short rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final float lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13843,7 +13843,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(int, java.math.BigDecimal)
    */
-  public boolean lessThanOrEqualsBoolean(int lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final int lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13851,7 +13851,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(int, java.math.BigInteger)
    */
-  public boolean lessThanOrEqualsBoolean(int lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final int lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13859,7 +13859,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(int, byte)
    */
-  public boolean lessThanOrEqualsBoolean(int lhs, byte rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final int lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13867,7 +13867,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(int, char)
    */
-  public boolean lessThanOrEqualsBoolean(int lhs, char rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final int lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13875,7 +13875,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(int, double)
    */
-  public boolean lessThanOrEqualsBoolean(int lhs, double rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final int lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13883,7 +13883,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(int, float)
    */
-  public boolean lessThanOrEqualsBoolean(int lhs, float rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final int lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13891,7 +13891,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(int, int)
    */
-  public boolean lessThanOrEqualsBoolean(int lhs, int rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final int lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13899,7 +13899,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(int, long)
    */
-  public boolean lessThanOrEqualsBoolean(int lhs, long rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final int lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13907,7 +13907,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(int, short)
    */
-  public boolean lessThanOrEqualsBoolean(int lhs, short rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final int lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13915,7 +13915,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(long, java.math.BigDecimal)
    */
-  public boolean lessThanOrEqualsBoolean(long lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13923,7 +13923,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(long, java.math.BigInteger)
    */
-  public boolean lessThanOrEqualsBoolean(long lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final long lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13931,7 +13931,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(long, byte)
    */
-  public boolean lessThanOrEqualsBoolean(long lhs, byte rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final long lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13939,7 +13939,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(long, char)
    */
-  public boolean lessThanOrEqualsBoolean(long lhs, char rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final long lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13947,7 +13947,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(long, double)
    */
-  public boolean lessThanOrEqualsBoolean(long lhs, double rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final long lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13955,7 +13955,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(long, float)
    */
-  public boolean lessThanOrEqualsBoolean(long lhs, float rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final long lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13963,7 +13963,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(long, int)
    */
-  public boolean lessThanOrEqualsBoolean(long lhs, int rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final long lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13971,7 +13971,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(long, long)
    */
-  public boolean lessThanOrEqualsBoolean(long lhs, long rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final long lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13979,7 +13979,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(long, short)
    */
-  public boolean lessThanOrEqualsBoolean(long lhs, short rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final long lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13987,7 +13987,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, java.math.BigDecimal)
    */
-  public boolean lessThanOrEqualsBoolean(Object lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -13995,7 +13995,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, java.math.BigInteger)
    */
-  public boolean lessThanOrEqualsBoolean(Object lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14003,7 +14003,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, byte)
    */
-  public boolean lessThanOrEqualsBoolean(Object lhs, byte rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14011,7 +14011,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, char)
    */
-  public boolean lessThanOrEqualsBoolean(Object lhs, char rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14019,7 +14019,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, double)
    */
-  public boolean lessThanOrEqualsBoolean(Object lhs, double rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14027,7 +14027,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, float)
    */
-  public boolean lessThanOrEqualsBoolean(Object lhs, float rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14035,7 +14035,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, int)
    */
-  public boolean lessThanOrEqualsBoolean(Object lhs, int rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14043,7 +14043,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, long)
    */
-  public boolean lessThanOrEqualsBoolean(Object lhs, long rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14051,7 +14051,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, java.lang.Object)
    */
-  public boolean lessThanOrEqualsBoolean(Object lhs, Object rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14059,7 +14059,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, short)
    */
-  public boolean lessThanOrEqualsBoolean(Object lhs, short rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14067,7 +14067,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(short, java.math.BigDecimal)
    */
-  public boolean lessThanOrEqualsBoolean(short lhs, BigDecimal rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final short lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14075,7 +14075,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(short, java.math.BigInteger)
    */
-  public boolean lessThanOrEqualsBoolean(short lhs, BigInteger rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final short lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14083,7 +14083,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(short, byte)
    */
-  public boolean lessThanOrEqualsBoolean(short lhs, byte rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final short lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14091,7 +14091,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(short, char)
    */
-  public boolean lessThanOrEqualsBoolean(short lhs, char rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final short lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14099,7 +14099,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(short, double)
    */
-  public boolean lessThanOrEqualsBoolean(short lhs, double rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final short lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14107,7 +14107,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(short, float)
    */
-  public boolean lessThanOrEqualsBoolean(short lhs, float rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final short lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14115,7 +14115,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(short, int)
    */
-  public boolean lessThanOrEqualsBoolean(short lhs, int rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final short lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14123,7 +14123,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(short, long)
    */
-  public boolean lessThanOrEqualsBoolean(short lhs, long rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final short lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14131,7 +14131,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(short, short)
    */
-  public boolean lessThanOrEqualsBoolean(short lhs, short rhs) throws Throwable {
+  public boolean lessThanOrEqualsBoolean(final short lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14139,7 +14139,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(java.math.BigDecimal, java.lang.Object)
    */
-  public boolean reverseLessThanOrEqualsBoolean(BigDecimal lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanOrEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14147,7 +14147,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(java.math.BigInteger, java.lang.Object)
    */
-  public boolean reverseLessThanOrEqualsBoolean(BigInteger lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanOrEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14155,7 +14155,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(byte, java.lang.Object)
    */
-  public boolean reverseLessThanOrEqualsBoolean(byte lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanOrEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14163,7 +14163,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(char, java.lang.Object)
    */
-  public boolean reverseLessThanOrEqualsBoolean(char lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanOrEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14171,7 +14171,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(double, java.lang.Object)
    */
-  public boolean reverseLessThanOrEqualsBoolean(double lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanOrEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14179,7 +14179,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(float, java.lang.Object)
    */
-  public boolean reverseLessThanOrEqualsBoolean(float lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanOrEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14187,7 +14187,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(int, java.lang.Object)
    */
-  public boolean reverseLessThanOrEqualsBoolean(int lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanOrEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14195,7 +14195,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(long, java.lang.Object)
    */
-  public boolean reverseLessThanOrEqualsBoolean(long lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanOrEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -14203,7 +14203,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(short, java.lang.Object)
    */
-  public boolean reverseLessThanOrEqualsBoolean(short lhs, Object rhs) throws Throwable {
+  public boolean reverseLessThanOrEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -16955,7 +16955,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, java.math.BigDecimal)
    */
-  public boolean notEqualsBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -16963,7 +16963,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, java.math.BigInteger)
    */
-  public boolean notEqualsBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -16971,7 +16971,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, byte)
    */
-  public boolean notEqualsBoolean(BigDecimal lhs, byte rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigDecimal lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -16979,7 +16979,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, char)
    */
-  public boolean notEqualsBoolean(BigDecimal lhs, char rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigDecimal lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -16987,7 +16987,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, double)
    */
-  public boolean notEqualsBoolean(BigDecimal lhs, double rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigDecimal lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -16995,7 +16995,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, float)
    */
-  public boolean notEqualsBoolean(BigDecimal lhs, float rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigDecimal lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17003,7 +17003,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, int)
    */
-  public boolean notEqualsBoolean(BigDecimal lhs, int rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigDecimal lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17011,7 +17011,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, long)
    */
-  public boolean notEqualsBoolean(BigDecimal lhs, long rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigDecimal lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17019,7 +17019,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigDecimal, short)
    */
-  public boolean notEqualsBoolean(BigDecimal lhs, short rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigDecimal lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17027,7 +17027,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, java.math.BigDecimal)
    */
-  public boolean notEqualsBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17035,7 +17035,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, java.math.BigInteger)
    */
-  public boolean notEqualsBoolean(BigInteger lhs, BigInteger rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigInteger lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17043,7 +17043,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, byte)
    */
-  public boolean notEqualsBoolean(BigInteger lhs, byte rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigInteger lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17051,7 +17051,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, char)
    */
-  public boolean notEqualsBoolean(BigInteger lhs, char rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigInteger lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17059,7 +17059,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, double)
    */
-  public boolean notEqualsBoolean(BigInteger lhs, double rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigInteger lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17067,7 +17067,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, float)
    */
-  public boolean notEqualsBoolean(BigInteger lhs, float rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigInteger lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17075,7 +17075,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, int)
    */
-  public boolean notEqualsBoolean(BigInteger lhs, int rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigInteger lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17083,7 +17083,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, long)
    */
-  public boolean notEqualsBoolean(BigInteger lhs, long rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigInteger lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17091,7 +17091,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.math.BigInteger, short)
    */
-  public boolean notEqualsBoolean(BigInteger lhs, short rhs) throws Throwable {
+  public boolean notEqualsBoolean(final BigInteger lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17099,7 +17099,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, java.math.BigDecimal)
    */
-  public boolean notEqualsBoolean(byte lhs, BigDecimal rhs) throws Throwable {
+  public boolean notEqualsBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17107,7 +17107,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, java.math.BigInteger)
    */
-  public boolean notEqualsBoolean(byte lhs, BigInteger rhs) throws Throwable {
+  public boolean notEqualsBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17115,7 +17115,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, byte)
    */
-  public boolean notEqualsBoolean(byte lhs, byte rhs) throws Throwable {
+  public boolean notEqualsBoolean(final byte lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17123,7 +17123,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, char)
    */
-  public boolean notEqualsBoolean(byte lhs, char rhs) throws Throwable {
+  public boolean notEqualsBoolean(final byte lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17131,7 +17131,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, double)
    */
-  public boolean notEqualsBoolean(byte lhs, double rhs) throws Throwable {
+  public boolean notEqualsBoolean(final byte lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17139,7 +17139,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, float)
    */
-  public boolean notEqualsBoolean(byte lhs, float rhs) throws Throwable {
+  public boolean notEqualsBoolean(final byte lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17147,7 +17147,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, int)
    */
-  public boolean notEqualsBoolean(byte lhs, int rhs) throws Throwable {
+  public boolean notEqualsBoolean(final byte lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17155,7 +17155,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, long)
    */
-  public boolean notEqualsBoolean(byte lhs, long rhs) throws Throwable {
+  public boolean notEqualsBoolean(final byte lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17163,7 +17163,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(byte, short)
    */
-  public boolean notEqualsBoolean(byte lhs, short rhs) throws Throwable {
+  public boolean notEqualsBoolean(final byte lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17171,7 +17171,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, java.math.BigDecimal)
    */
-  public boolean notEqualsBoolean(char lhs, BigDecimal rhs) throws Throwable {
+  public boolean notEqualsBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17179,7 +17179,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, java.math.BigInteger)
    */
-  public boolean notEqualsBoolean(char lhs, BigInteger rhs) throws Throwable {
+  public boolean notEqualsBoolean(final char lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17187,7 +17187,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, byte)
    */
-  public boolean notEqualsBoolean(char lhs, byte rhs) throws Throwable {
+  public boolean notEqualsBoolean(final char lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17195,7 +17195,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, char)
    */
-  public boolean notEqualsBoolean(char lhs, char rhs) throws Throwable {
+  public boolean notEqualsBoolean(final char lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17203,7 +17203,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, double)
    */
-  public boolean notEqualsBoolean(char lhs, double rhs) throws Throwable {
+  public boolean notEqualsBoolean(final char lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17211,7 +17211,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, float)
    */
-  public boolean notEqualsBoolean(char lhs, float rhs) throws Throwable {
+  public boolean notEqualsBoolean(final char lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17219,7 +17219,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, int)
    */
-  public boolean notEqualsBoolean(char lhs, int rhs) throws Throwable {
+  public boolean notEqualsBoolean(final char lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17227,7 +17227,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, long)
    */
-  public boolean notEqualsBoolean(char lhs, long rhs) throws Throwable {
+  public boolean notEqualsBoolean(final char lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17235,7 +17235,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(char, short)
    */
-  public boolean notEqualsBoolean(char lhs, short rhs) throws Throwable {
+  public boolean notEqualsBoolean(final char lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17243,7 +17243,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, java.math.BigDecimal)
    */
-  public boolean notEqualsBoolean(double lhs, BigDecimal rhs) throws Throwable {
+  public boolean notEqualsBoolean(final double lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17251,7 +17251,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, java.math.BigInteger)
    */
-  public boolean notEqualsBoolean(double lhs, BigInteger rhs) throws Throwable {
+  public boolean notEqualsBoolean(final double lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17259,7 +17259,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, byte)
    */
-  public boolean notEqualsBoolean(double lhs, byte rhs) throws Throwable {
+  public boolean notEqualsBoolean(final double lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17267,7 +17267,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, char)
    */
-  public boolean notEqualsBoolean(double lhs, char rhs) throws Throwable {
+  public boolean notEqualsBoolean(final double lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17275,7 +17275,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, double)
    */
-  public boolean notEqualsBoolean(double lhs, double rhs) throws Throwable {
+  public boolean notEqualsBoolean(final double lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17283,7 +17283,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, float)
    */
-  public boolean notEqualsBoolean(double lhs, float rhs) throws Throwable {
+  public boolean notEqualsBoolean(final double lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17291,7 +17291,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, int)
    */
-  public boolean notEqualsBoolean(double lhs, int rhs) throws Throwable {
+  public boolean notEqualsBoolean(final double lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17299,7 +17299,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, long)
    */
-  public boolean notEqualsBoolean(double lhs, long rhs) throws Throwable {
+  public boolean notEqualsBoolean(final double lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17307,7 +17307,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(double, short)
    */
-  public boolean notEqualsBoolean(double lhs, short rhs) throws Throwable {
+  public boolean notEqualsBoolean(final double lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17315,7 +17315,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, java.math.BigDecimal)
    */
-  public boolean notEqualsBoolean(float lhs, BigDecimal rhs) throws Throwable {
+  public boolean notEqualsBoolean(final float lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17323,7 +17323,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, java.math.BigInteger)
    */
-  public boolean notEqualsBoolean(float lhs, BigInteger rhs) throws Throwable {
+  public boolean notEqualsBoolean(final float lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17331,7 +17331,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, byte)
    */
-  public boolean notEqualsBoolean(float lhs, byte rhs) throws Throwable {
+  public boolean notEqualsBoolean(final float lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17339,7 +17339,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, char)
    */
-  public boolean notEqualsBoolean(float lhs, char rhs) throws Throwable {
+  public boolean notEqualsBoolean(final float lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17347,7 +17347,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, double)
    */
-  public boolean notEqualsBoolean(float lhs, double rhs) throws Throwable {
+  public boolean notEqualsBoolean(final float lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17355,7 +17355,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, float)
    */
-  public boolean notEqualsBoolean(float lhs, float rhs) throws Throwable {
+  public boolean notEqualsBoolean(final float lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17363,7 +17363,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, int)
    */
-  public boolean notEqualsBoolean(float lhs, int rhs) throws Throwable {
+  public boolean notEqualsBoolean(final float lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17371,7 +17371,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, long)
    */
-  public boolean notEqualsBoolean(float lhs, long rhs) throws Throwable {
+  public boolean notEqualsBoolean(final float lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17379,7 +17379,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(float, short)
    */
-  public boolean notEqualsBoolean(float lhs, short rhs) throws Throwable {
+  public boolean notEqualsBoolean(final float lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17387,7 +17387,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, java.math.BigDecimal)
    */
-  public boolean notEqualsBoolean(int lhs, BigDecimal rhs) throws Throwable {
+  public boolean notEqualsBoolean(final int lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17395,7 +17395,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, java.math.BigInteger)
    */
-  public boolean notEqualsBoolean(int lhs, BigInteger rhs) throws Throwable {
+  public boolean notEqualsBoolean(final int lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17403,7 +17403,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, byte)
    */
-  public boolean notEqualsBoolean(int lhs, byte rhs) throws Throwable {
+  public boolean notEqualsBoolean(final int lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17411,7 +17411,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, char)
    */
-  public boolean notEqualsBoolean(int lhs, char rhs) throws Throwable {
+  public boolean notEqualsBoolean(final int lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17419,7 +17419,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, double)
    */
-  public boolean notEqualsBoolean(int lhs, double rhs) throws Throwable {
+  public boolean notEqualsBoolean(final int lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17427,7 +17427,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, float)
    */
-  public boolean notEqualsBoolean(int lhs, float rhs) throws Throwable {
+  public boolean notEqualsBoolean(final int lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17435,7 +17435,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, int)
    */
-  public boolean notEqualsBoolean(int lhs, int rhs) throws Throwable {
+  public boolean notEqualsBoolean(final int lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17443,7 +17443,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, long)
    */
-  public boolean notEqualsBoolean(int lhs, long rhs) throws Throwable {
+  public boolean notEqualsBoolean(final int lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17451,7 +17451,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(int, short)
    */
-  public boolean notEqualsBoolean(int lhs, short rhs) throws Throwable {
+  public boolean notEqualsBoolean(final int lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17459,7 +17459,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, java.math.BigDecimal)
    */
-  public boolean notEqualsBoolean(long lhs, BigDecimal rhs) throws Throwable {
+  public boolean notEqualsBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17467,7 +17467,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, java.math.BigInteger)
    */
-  public boolean notEqualsBoolean(long lhs, BigInteger rhs) throws Throwable {
+  public boolean notEqualsBoolean(final long lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17475,7 +17475,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, byte)
    */
-  public boolean notEqualsBoolean(long lhs, byte rhs) throws Throwable {
+  public boolean notEqualsBoolean(final long lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17483,7 +17483,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, char)
    */
-  public boolean notEqualsBoolean(long lhs, char rhs) throws Throwable {
+  public boolean notEqualsBoolean(final long lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17491,7 +17491,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, double)
    */
-  public boolean notEqualsBoolean(long lhs, double rhs) throws Throwable {
+  public boolean notEqualsBoolean(final long lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17499,7 +17499,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, float)
    */
-  public boolean notEqualsBoolean(long lhs, float rhs) throws Throwable {
+  public boolean notEqualsBoolean(final long lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17507,7 +17507,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, int)
    */
-  public boolean notEqualsBoolean(long lhs, int rhs) throws Throwable {
+  public boolean notEqualsBoolean(final long lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17515,7 +17515,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, long)
    */
-  public boolean notEqualsBoolean(long lhs, long rhs) throws Throwable {
+  public boolean notEqualsBoolean(final long lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17523,7 +17523,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(long, short)
    */
-  public boolean notEqualsBoolean(long lhs, short rhs) throws Throwable {
+  public boolean notEqualsBoolean(final long lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17531,7 +17531,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, java.math.BigDecimal)
    */
-  public boolean notEqualsBoolean(Object lhs, BigDecimal rhs) throws Throwable {
+  public boolean notEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17539,7 +17539,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, java.math.BigInteger)
    */
-  public boolean notEqualsBoolean(Object lhs, BigInteger rhs) throws Throwable {
+  public boolean notEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17547,7 +17547,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, byte)
    */
-  public boolean notEqualsBoolean(Object lhs, byte rhs) throws Throwable {
+  public boolean notEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17555,7 +17555,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, char)
    */
-  public boolean notEqualsBoolean(Object lhs, char rhs) throws Throwable {
+  public boolean notEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17563,7 +17563,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, double)
    */
-  public boolean notEqualsBoolean(Object lhs, double rhs) throws Throwable {
+  public boolean notEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17571,7 +17571,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, float)
    */
-  public boolean notEqualsBoolean(Object lhs, float rhs) throws Throwable {
+  public boolean notEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17579,7 +17579,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, int)
    */
-  public boolean notEqualsBoolean(Object lhs, int rhs) throws Throwable {
+  public boolean notEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17587,7 +17587,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, long)
    */
-  public boolean notEqualsBoolean(Object lhs, long rhs) throws Throwable {
+  public boolean notEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17595,7 +17595,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, java.lang.Object)
    */
-  public boolean notEqualsBoolean(Object lhs, Object rhs) throws Throwable {
+  public boolean notEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17603,7 +17603,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, short)
    */
-  public boolean notEqualsBoolean(Object lhs, short rhs) throws Throwable {
+  public boolean notEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17611,7 +17611,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, java.math.BigDecimal)
    */
-  public boolean notEqualsBoolean(short lhs, BigDecimal rhs) throws Throwable {
+  public boolean notEqualsBoolean(final short lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17619,7 +17619,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, java.math.BigInteger)
    */
-  public boolean notEqualsBoolean(short lhs, BigInteger rhs) throws Throwable {
+  public boolean notEqualsBoolean(final short lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17627,7 +17627,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, byte)
    */
-  public boolean notEqualsBoolean(short lhs, byte rhs) throws Throwable {
+  public boolean notEqualsBoolean(final short lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17635,7 +17635,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, char)
    */
-  public boolean notEqualsBoolean(short lhs, char rhs) throws Throwable {
+  public boolean notEqualsBoolean(final short lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17643,7 +17643,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, double)
    */
-  public boolean notEqualsBoolean(short lhs, double rhs) throws Throwable {
+  public boolean notEqualsBoolean(final short lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17651,7 +17651,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, float)
    */
-  public boolean notEqualsBoolean(short lhs, float rhs) throws Throwable {
+  public boolean notEqualsBoolean(final short lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17659,7 +17659,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, int)
    */
-  public boolean notEqualsBoolean(short lhs, int rhs) throws Throwable {
+  public boolean notEqualsBoolean(final short lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17667,7 +17667,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, long)
    */
-  public boolean notEqualsBoolean(short lhs, long rhs) throws Throwable {
+  public boolean notEqualsBoolean(final short lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17675,7 +17675,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(short, short)
    */
-  public boolean notEqualsBoolean(short lhs, short rhs) throws Throwable {
+  public boolean notEqualsBoolean(final short lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17683,7 +17683,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(java.math.BigDecimal, java.lang.Object)
    */
-  public boolean reverseNotEqualsBoolean(BigDecimal lhs, Object rhs) throws Throwable {
+  public boolean reverseNotEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17691,7 +17691,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(java.math.BigInteger, java.lang.Object)
    */
-  public boolean reverseNotEqualsBoolean(BigInteger lhs, Object rhs) throws Throwable {
+  public boolean reverseNotEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17699,7 +17699,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(byte, java.lang.Object)
    */
-  public boolean reverseNotEqualsBoolean(byte lhs, Object rhs) throws Throwable {
+  public boolean reverseNotEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17707,7 +17707,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(char, java.lang.Object)
    */
-  public boolean reverseNotEqualsBoolean(char lhs, Object rhs) throws Throwable {
+  public boolean reverseNotEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17715,7 +17715,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(double, java.lang.Object)
    */
-  public boolean reverseNotEqualsBoolean(double lhs, Object rhs) throws Throwable {
+  public boolean reverseNotEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17723,7 +17723,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(float, java.lang.Object)
    */
-  public boolean reverseNotEqualsBoolean(float lhs, Object rhs) throws Throwable {
+  public boolean reverseNotEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17731,7 +17731,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(int, java.lang.Object)
    */
-  public boolean reverseNotEqualsBoolean(int lhs, Object rhs) throws Throwable {
+  public boolean reverseNotEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17739,7 +17739,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(long, java.lang.Object)
    */
-  public boolean reverseNotEqualsBoolean(long lhs, Object rhs) throws Throwable {
+  public boolean reverseNotEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -17747,7 +17747,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(short, java.lang.Object)
    */
-  public boolean reverseNotEqualsBoolean(short lhs, Object rhs) throws Throwable {
+  public boolean reverseNotEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23459,7 +23459,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#asBoolean(java.lang.Object)
    */
-  public boolean asBoolean(Object instance) {
+  public boolean asBoolean(final Object instance) {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23467,7 +23467,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#asByte(java.lang.Object)
    */
-  public byte asByte(Object instance) {
+  public byte asByte(final Object instance) {
     // TODO Auto-generated method stub
     return 0;
   }
@@ -23475,7 +23475,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#asChar(java.lang.Object)
    */
-  public char asChar(Object instance) {
+  public char asChar(final Object instance) {
     // TODO Auto-generated method stub
     return 0;
   }
@@ -23483,7 +23483,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#asDouble(java.lang.Object)
    */
-  public double asDouble(Object instance) {
+  public double asDouble(final Object instance) {
     // TODO Auto-generated method stub
     return 0;
   }
@@ -23491,7 +23491,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#asFloat(java.lang.Object)
    */
-  public float asFloat(Object instance) {
+  public float asFloat(final Object instance) {
     // TODO Auto-generated method stub
     return 0;
   }
@@ -23499,7 +23499,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#asInt(java.lang.Object)
    */
-  public int asInt(Object instance) {
+  public int asInt(final Object instance) {
     // TODO Auto-generated method stub
     return 0;
   }
@@ -23507,7 +23507,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#asLong(java.lang.Object)
    */
-  public long asLong(Object instance) {
+  public long asLong(final Object instance) {
     // TODO Auto-generated method stub
     return 0;
   }
@@ -23515,7 +23515,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#asShort(java.lang.Object)
    */
-  public short asShort(Object instance) {
+  public short asShort(final Object instance) {
     // TODO Auto-generated method stub
     return 0;
   }
@@ -23618,7 +23618,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, java.math.BigDecimal)
    */
-  public boolean greaterThanOrEqualsBoolean(BigDecimal lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23626,7 +23626,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, java.math.BigInteger)
    */
-  public boolean greaterThanOrEqualsBoolean(BigDecimal lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23634,7 +23634,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, byte)
    */
-  public boolean greaterThanOrEqualsBoolean(BigDecimal lhs, byte rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23642,7 +23642,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, char)
    */
-  public boolean greaterThanOrEqualsBoolean(BigDecimal lhs, char rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23650,7 +23650,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, double)
    */
-  public boolean greaterThanOrEqualsBoolean(BigDecimal lhs, double rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23658,7 +23658,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, float)
    */
-  public boolean greaterThanOrEqualsBoolean(BigDecimal lhs, float rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23666,7 +23666,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, int)
    */
-  public boolean greaterThanOrEqualsBoolean(BigDecimal lhs, int rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23674,7 +23674,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, long)
    */
-  public boolean greaterThanOrEqualsBoolean(BigDecimal lhs, long rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23682,7 +23682,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigDecimal, short)
    */
-  public boolean greaterThanOrEqualsBoolean(BigDecimal lhs, short rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigDecimal lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23690,7 +23690,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, java.math.BigDecimal)
    */
-  public boolean greaterThanOrEqualsBoolean(BigInteger lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23698,7 +23698,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, java.math.BigInteger)
    */
-  public boolean greaterThanOrEqualsBoolean(BigInteger lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23706,7 +23706,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, byte)
    */
-  public boolean greaterThanOrEqualsBoolean(BigInteger lhs, byte rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23714,7 +23714,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, char)
    */
-  public boolean greaterThanOrEqualsBoolean(BigInteger lhs, char rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23722,7 +23722,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, double)
    */
-  public boolean greaterThanOrEqualsBoolean(BigInteger lhs, double rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23730,7 +23730,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, float)
    */
-  public boolean greaterThanOrEqualsBoolean(BigInteger lhs, float rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23738,7 +23738,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, int)
    */
-  public boolean greaterThanOrEqualsBoolean(BigInteger lhs, int rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23746,7 +23746,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, long)
    */
-  public boolean greaterThanOrEqualsBoolean(BigInteger lhs, long rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23754,7 +23754,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.math.BigInteger, short)
    */
-  public boolean greaterThanOrEqualsBoolean(BigInteger lhs, short rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final BigInteger lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23762,7 +23762,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, java.math.BigDecimal)
    */
-  public boolean greaterThanOrEqualsBoolean(byte lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23770,7 +23770,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, java.math.BigInteger)
    */
-  public boolean greaterThanOrEqualsBoolean(byte lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23778,7 +23778,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, byte)
    */
-  public boolean greaterThanOrEqualsBoolean(byte lhs, byte rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23786,7 +23786,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, char)
    */
-  public boolean greaterThanOrEqualsBoolean(byte lhs, char rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23794,7 +23794,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, double)
    */
-  public boolean greaterThanOrEqualsBoolean(byte lhs, double rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23802,7 +23802,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, float)
    */
-  public boolean greaterThanOrEqualsBoolean(byte lhs, float rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23810,7 +23810,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, int)
    */
-  public boolean greaterThanOrEqualsBoolean(byte lhs, int rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23818,7 +23818,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, long)
    */
-  public boolean greaterThanOrEqualsBoolean(byte lhs, long rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23826,7 +23826,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(byte, short)
    */
-  public boolean greaterThanOrEqualsBoolean(byte lhs, short rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final byte lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23834,7 +23834,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, java.math.BigDecimal)
    */
-  public boolean greaterThanOrEqualsBoolean(char lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23842,7 +23842,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, java.math.BigInteger)
    */
-  public boolean greaterThanOrEqualsBoolean(char lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23850,7 +23850,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, byte)
    */
-  public boolean greaterThanOrEqualsBoolean(char lhs, byte rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23858,7 +23858,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, char)
    */
-  public boolean greaterThanOrEqualsBoolean(char lhs, char rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23866,7 +23866,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, double)
    */
-  public boolean greaterThanOrEqualsBoolean(char lhs, double rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23874,7 +23874,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, float)
    */
-  public boolean greaterThanOrEqualsBoolean(char lhs, float rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23882,7 +23882,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, int)
    */
-  public boolean greaterThanOrEqualsBoolean(char lhs, int rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23890,7 +23890,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, long)
    */
-  public boolean greaterThanOrEqualsBoolean(char lhs, long rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23898,7 +23898,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(char, short)
    */
-  public boolean greaterThanOrEqualsBoolean(char lhs, short rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final char lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23906,7 +23906,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, java.math.BigDecimal)
    */
-  public boolean greaterThanOrEqualsBoolean(double lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23914,7 +23914,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, java.math.BigInteger)
    */
-  public boolean greaterThanOrEqualsBoolean(double lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23922,7 +23922,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, byte)
    */
-  public boolean greaterThanOrEqualsBoolean(double lhs, byte rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23930,7 +23930,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, char)
    */
-  public boolean greaterThanOrEqualsBoolean(double lhs, char rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23938,7 +23938,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, double)
    */
-  public boolean greaterThanOrEqualsBoolean(double lhs, double rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23946,7 +23946,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, float)
    */
-  public boolean greaterThanOrEqualsBoolean(double lhs, float rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23954,7 +23954,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, int)
    */
-  public boolean greaterThanOrEqualsBoolean(double lhs, int rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23962,7 +23962,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, long)
    */
-  public boolean greaterThanOrEqualsBoolean(double lhs, long rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23970,7 +23970,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(double, short)
    */
-  public boolean greaterThanOrEqualsBoolean(double lhs, short rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final double lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23978,7 +23978,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, java.math.BigDecimal)
    */
-  public boolean greaterThanOrEqualsBoolean(float lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23986,7 +23986,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, java.math.BigInteger)
    */
-  public boolean greaterThanOrEqualsBoolean(float lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -23994,7 +23994,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, byte)
    */
-  public boolean greaterThanOrEqualsBoolean(float lhs, byte rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24002,7 +24002,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, char)
    */
-  public boolean greaterThanOrEqualsBoolean(float lhs, char rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24010,7 +24010,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, double)
    */
-  public boolean greaterThanOrEqualsBoolean(float lhs, double rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24018,7 +24018,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, float)
    */
-  public boolean greaterThanOrEqualsBoolean(float lhs, float rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24026,7 +24026,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, int)
    */
-  public boolean greaterThanOrEqualsBoolean(float lhs, int rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24034,7 +24034,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, long)
    */
-  public boolean greaterThanOrEqualsBoolean(float lhs, long rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24042,7 +24042,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(float, short)
    */
-  public boolean greaterThanOrEqualsBoolean(float lhs, short rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final float lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24050,7 +24050,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, java.math.BigDecimal)
    */
-  public boolean greaterThanOrEqualsBoolean(int lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24058,7 +24058,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, java.math.BigInteger)
    */
-  public boolean greaterThanOrEqualsBoolean(int lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24066,7 +24066,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, byte)
    */
-  public boolean greaterThanOrEqualsBoolean(int lhs, byte rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24074,7 +24074,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, char)
    */
-  public boolean greaterThanOrEqualsBoolean(int lhs, char rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24082,7 +24082,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, double)
    */
-  public boolean greaterThanOrEqualsBoolean(int lhs, double rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24090,7 +24090,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, float)
    */
-  public boolean greaterThanOrEqualsBoolean(int lhs, float rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24098,7 +24098,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, int)
    */
-  public boolean greaterThanOrEqualsBoolean(int lhs, int rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24106,7 +24106,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, long)
    */
-  public boolean greaterThanOrEqualsBoolean(int lhs, long rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24114,7 +24114,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(int, short)
    */
-  public boolean greaterThanOrEqualsBoolean(int lhs, short rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final int lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24122,7 +24122,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, java.math.BigDecimal)
    */
-  public boolean greaterThanOrEqualsBoolean(long lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24130,7 +24130,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, java.math.BigInteger)
    */
-  public boolean greaterThanOrEqualsBoolean(long lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24138,7 +24138,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, byte)
    */
-  public boolean greaterThanOrEqualsBoolean(long lhs, byte rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24146,7 +24146,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, char)
    */
-  public boolean greaterThanOrEqualsBoolean(long lhs, char rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24154,7 +24154,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, double)
    */
-  public boolean greaterThanOrEqualsBoolean(long lhs, double rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24162,7 +24162,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, float)
    */
-  public boolean greaterThanOrEqualsBoolean(long lhs, float rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24170,7 +24170,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, int)
    */
-  public boolean greaterThanOrEqualsBoolean(long lhs, int rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24178,7 +24178,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, long)
    */
-  public boolean greaterThanOrEqualsBoolean(long lhs, long rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24186,7 +24186,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(long, short)
    */
-  public boolean greaterThanOrEqualsBoolean(long lhs, short rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final long lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24194,7 +24194,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, java.math.BigDecimal)
    */
-  public boolean greaterThanOrEqualsBoolean(Object lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24202,7 +24202,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, java.math.BigInteger)
    */
-  public boolean greaterThanOrEqualsBoolean(Object lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24210,7 +24210,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, byte)
    */
-  public boolean greaterThanOrEqualsBoolean(Object lhs, byte rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24218,7 +24218,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, char)
    */
-  public boolean greaterThanOrEqualsBoolean(Object lhs, char rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24226,7 +24226,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, double)
    */
-  public boolean greaterThanOrEqualsBoolean(Object lhs, double rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24234,7 +24234,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, float)
    */
-  public boolean greaterThanOrEqualsBoolean(Object lhs, float rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24242,7 +24242,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, int)
    */
-  public boolean greaterThanOrEqualsBoolean(Object lhs, int rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24250,7 +24250,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, long)
    */
-  public boolean greaterThanOrEqualsBoolean(Object lhs, long rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24258,7 +24258,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, java.lang.Object)
    */
-  public boolean greaterThanOrEqualsBoolean(Object lhs, Object rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24266,7 +24266,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, short)
    */
-  public boolean greaterThanOrEqualsBoolean(Object lhs, short rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24274,7 +24274,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, java.math.BigDecimal)
    */
-  public boolean greaterThanOrEqualsBoolean(short lhs, BigDecimal rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final BigDecimal rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24282,7 +24282,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, java.math.BigInteger)
    */
-  public boolean greaterThanOrEqualsBoolean(short lhs, BigInteger rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final BigInteger rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24290,7 +24290,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, byte)
    */
-  public boolean greaterThanOrEqualsBoolean(short lhs, byte rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final byte rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24298,7 +24298,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, char)
    */
-  public boolean greaterThanOrEqualsBoolean(short lhs, char rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final char rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24306,7 +24306,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, double)
    */
-  public boolean greaterThanOrEqualsBoolean(short lhs, double rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final double rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24314,7 +24314,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, float)
    */
-  public boolean greaterThanOrEqualsBoolean(short lhs, float rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final float rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24322,7 +24322,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, int)
    */
-  public boolean greaterThanOrEqualsBoolean(short lhs, int rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final int rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24330,7 +24330,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, long)
    */
-  public boolean greaterThanOrEqualsBoolean(short lhs, long rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final long rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24338,7 +24338,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(short, short)
    */
-  public boolean greaterThanOrEqualsBoolean(short lhs, short rhs) throws Throwable {
+  public boolean greaterThanOrEqualsBoolean(final short lhs, final short rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24346,7 +24346,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(java.math.BigDecimal, java.lang.Object)
    */
-  public boolean reverseGreaterThanOrEqualsBoolean(BigDecimal lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanOrEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24354,7 +24354,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(java.math.BigInteger, java.lang.Object)
    */
-  public boolean reverseGreaterThanOrEqualsBoolean(BigInteger lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanOrEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24362,7 +24362,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(byte, java.lang.Object)
    */
-  public boolean reverseGreaterThanOrEqualsBoolean(byte lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanOrEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24370,7 +24370,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(char, java.lang.Object)
    */
-  public boolean reverseGreaterThanOrEqualsBoolean(char lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanOrEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24378,7 +24378,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(double, java.lang.Object)
    */
-  public boolean reverseGreaterThanOrEqualsBoolean(double lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanOrEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24386,7 +24386,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(float, java.lang.Object)
    */
-  public boolean reverseGreaterThanOrEqualsBoolean(float lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanOrEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24394,7 +24394,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(int, java.lang.Object)
    */
-  public boolean reverseGreaterThanOrEqualsBoolean(int lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanOrEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24402,7 +24402,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(long, java.lang.Object)
    */
-  public boolean reverseGreaterThanOrEqualsBoolean(long lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanOrEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
@@ -24410,7 +24410,7 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(short, java.lang.Object)
    */
-  public boolean reverseGreaterThanOrEqualsBoolean(short lhs, Object rhs) throws Throwable {
+  public boolean reverseGreaterThanOrEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
     // TODO Auto-generated method stub
     return false;
   }
