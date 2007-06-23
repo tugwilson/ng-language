@@ -44,6 +44,7 @@ public interface MetaClass {
    * @return an instance of the Class represented by the MetaClass
    */
   Object invokeConstructor(Class theClass, Object[] arguments) throws Throwable;
+  
   /**
    * @param instance
    * @param methodName

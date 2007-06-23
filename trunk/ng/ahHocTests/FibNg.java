@@ -51,7 +51,7 @@ public class FibNg extends NgBaseObject {
      }
     
      int calculate() throws Throwable {
-         Object $tmp = this.metaClass.invokeMethodQuick(this, "fib", this.metaClass.getField(this, "series"));
+         Object $tmp = NgSystem.metaClassRegistry.getThreadContext().invokeMethodQuick(this.metaClass, this, "fib", this.metaClass.getField(this, "series"));
          return NgSystem.metaClassRegistry.getRuntimeMetaClass($tmp).asInt($tmp);
      }
     
@@ -69,7 +69,7 @@ public class FibNg extends NgBaseObject {
          }
     
          // return (fib(x-1) + fib(x-2));
-         Object $tmp = this.metaClass.invokeMethodQuick(this, "fib", NgSystem.ngIntMetaClass.subtract(x, 1));
-         return NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, this.metaClass.invokeMethodQuick(this, "fib", NgSystem.ngIntMetaClass.subtract(x, 2)));
+         Object $tmp = $tc.invokeMethodQuick(this.metaClass, this, "fib", NgSystem.ngIntMetaClass.subtract(x, 1));
+         return NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, $tc.invokeMethodQuick(this.metaClass, this, "fib", NgSystem.ngIntMetaClass.subtract(x, 2)));
      }
 }

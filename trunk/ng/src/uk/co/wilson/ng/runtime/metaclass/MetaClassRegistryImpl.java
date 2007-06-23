@@ -61,7 +61,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
   private final ThreadLocal threadContext = new ThreadLocal() {
     @Override
     protected Object initialValue() {
-      return new ThreadContext() {
+      return new ThreadContextImpl() {
         private static final int ngMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC | Modifier.FINAL;
         private final Map threadRegistry = new WeakHashMap() {
           @Override

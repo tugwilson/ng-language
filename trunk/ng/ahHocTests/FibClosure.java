@@ -53,14 +53,14 @@ public class FibClosure extends NgBaseObject {
      }
     
      int calculate() throws Throwable {
-       Closure c = new ClosureImpl(NgSystem.closureMetaClass) {
+     final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
+     Closure c = new ClosureImpl(NgSystem.closureMetaClass) {
         /* (non-Javadoc)
-         * @see uk.co.wilson.ng.lang.ClosureImpl#call(java.lang.Object, int)
+         * @see uk.co.wilson.ng.lang.ClosureImpl#callQuick(ng.runtime.ThreadContext, java.lang.Object, int)
          */
         @Override
-        public Object callQuick(Object instance, int x) throws Throwable {
-        final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
-          
+        public Object callQuick(ThreadContext tc, Object instance, int x) throws Throwable {
+        
           // if (x <= 0) return 0;
           if (NgSystem.ngIntMetaClass.lessThanOrEqualsBoolean(x, 0)) {
             return NgInt.valueOf(0);
@@ -72,20 +72,20 @@ public class FibClosure extends NgBaseObject {
           }
      
           // return (self(x-1) + self(x-2));
-          Object $tmp = this.metaClass.callQuick(this, NgSystem.ngIntMetaClass.subtract(x, 1));
-          return NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, this.metaClass.callQuick(this, NgSystem.ngIntMetaClass.subtract(x, 2)));
+          Object $tmp = $tc.callQuick(this.metaClass, this, NgSystem.ngIntMetaClass.subtract(x, 1));
+          return NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, $tc.callQuick(this.metaClass, this, NgSystem.ngIntMetaClass.subtract(x, 2)));
         }
 
         /* (non-Javadoc)
-         * @see uk.co.wilson.ng.lang.ClosureImpl#call(java.lang.Object, java.lang.Object)
+         * @see uk.co.wilson.ng.lang.ClosureImpl#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
          */
         @Override
-        public Object callQuick(Object instance, Object x) throws Throwable {
-           return this.callQuick(instance, NgSystem.metaClassRegistry.getRuntimeMetaClass(x).asInt(x));
+        public Object callQuick(ThreadContext tc, Object instance, Object x) throws Throwable {
+           return this.callQuick(tc, instance, NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, x).asInt(x));
         }
        };
        
-       Object $tmp = NgSystem.closureMetaClass.callQuick(c, this.metaClass.getField(this, "series"));
-       return NgSystem.metaClassRegistry.getRuntimeMetaClass($tmp).asInt($tmp);
+       Object $tmp = $tc.callQuick(NgSystem.closureMetaClass, c, this.metaClass.getField(this, "series"));
+       return NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).asInt($tmp);
      }
 }

@@ -879,6 +879,118 @@ public interface InstanceHandler {
     }
 
     /* (non-Javadoc)
+     * @see ng.runtime.Callable#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])
+     */
+    public Object call(ThreadContext tc, Object instance, Object[] arguments) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.math.BigDecimal)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, BigDecimal p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.math.BigInteger)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, BigInteger p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, boolean)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, boolean p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, byte)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, byte p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, char)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, char p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, double)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, double p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, float)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, float p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, int)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, int p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, long)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, long p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, Object p1, Object p2, Object p3, Object p4) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, Object p1, Object p2, Object p3) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object, java.lang.Object)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, Object p1, Object p2) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, Object p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, short)
+     */
+    public Object callQuick(ThreadContext tc, Object instance, short p1) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
+     * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object)
+     */
+    public Object callQuick(ThreadContext tc, Object instance) throws Throwable {
+      return RuntimeMetaClassImpl.NOT_CALLED;
+    }
+
+    /* (non-Javadoc)
      * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection)
      */
     public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection) {
