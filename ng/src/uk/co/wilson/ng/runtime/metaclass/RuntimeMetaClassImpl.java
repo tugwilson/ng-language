@@ -241,34 +241,14 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.MetaClass#getProperty(java.lang.Object, java.lang.String)
    */
   public Object getProperty(final Object instance, final String propertyName) throws  Throwable {
-  final InternalMetaClass internalMetaClass = this.internalMetaClass;
-  Object result = internalMetaClass.doGetGetPropertyCallable(instance, propertyName).callQuick(instance);
-    
-    if (result == NOT_CALLED) {
-      result = internalMetaClass.doGetGetFieldMetaMethod(instance, propertyName).callQuick(instance);
-      
-      // TODO: make this error more detailed.
-      if (result == NOT_CALLED) throw new NgRuntimeException("The property " +  propertyName + " was not found");
-    }
-    
-    return result;
+    return NgSystem.metaClassRegistry.getThreadContext().getProperty(instance, propertyName);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#setProperty(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object setProperty(final Object instance, final String propertyName, final Object newValue) throws Throwable {
-  final InternalMetaClass internalMetaClass = this.internalMetaClass;
-  Object result = internalMetaClass.doGetSetPropertyMetaMethod(instance, propertyName, newValue).callQuick(instance, newValue);
-    
-  if (result == NOT_CALLED) {
-    result = internalMetaClass.doGetSetFieldMetaMethod(instance, propertyName, newValue).callQuick(instance, newValue);
-    
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException("The property " +  propertyName + " was not found");
-  }
-
-    return result;
+    return NgSystem.metaClassRegistry.getThreadContext().setProperty(instance, propertyName, newValue);
   }
 
   /* (non-Javadoc)

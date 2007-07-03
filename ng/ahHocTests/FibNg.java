@@ -38,10 +38,10 @@ public class FibNg extends NgBaseObject {
     //
     // main is not translated
     //
-    public static void main(String args[]) throws Throwable {
+    public static void main(final String args[]) throws Throwable {
       new FibNg(10).calculate(); // warm up the JVM
-      long start = System.currentTimeMillis();
-      int result = new FibNg(35).calculate();
+      final long start = System.currentTimeMillis();
+      final int result = new FibNg(35).calculate();
       System.out.println(System.currentTimeMillis() - start);
       System.out.println(result);
     }
@@ -49,17 +49,17 @@ public class FibNg extends NgBaseObject {
     //
     // the rest of the class approximates to what the Ng compiler will generate
     //
-    FibNg(int x) throws Throwable {
+    FibNg(final int x) throws Throwable {
       super(ngMetaClass);
       this.metaClass.setField(this, "series", NgInt.valueOf(x));
      }
     
      int calculate() throws Throwable {
-         Object $tmp = NgSystem.metaClassRegistry.getThreadContext().invokeMethodQuick(this.metaClass, this, "fib", this.metaClass.getField(this, "series"));
+         final Object $tmp = NgSystem.metaClassRegistry.getThreadContext().invokeMethodQuick(this.metaClass, this, "fib", this.metaClass.getField(this, "series"));
          return NgSystem.metaClassRegistry.getRuntimeMetaClass($tmp).asInt($tmp);
      }
     
-     Object fib(int x) throws Throwable {
+     Object fib(final int x) throws Throwable {
      final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
      
          // if (x <= 0) return 0;
@@ -73,7 +73,7 @@ public class FibNg extends NgBaseObject {
          }
     
          // return (fib(x-1) + fib(x-2));
-         Object $tmp = $tc.invokeMethodQuick(this.metaClass, this, "fib", NgSystem.ngIntMetaClass.subtract(x, 1));
+         final Object $tmp = $tc.invokeMethodQuick(this.metaClass, this, "fib", NgSystem.ngIntMetaClass.subtract(x, 1));
          return NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, $tc.invokeMethodQuick(this.metaClass, this, "fib", NgSystem.ngIntMetaClass.subtract(x, 2)));
      }
 }

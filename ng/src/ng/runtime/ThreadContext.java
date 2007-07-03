@@ -30,6 +30,40 @@ public interface ThreadContext {
   
   /**
    * @param instance
+   * @param propertyName
+   * @return
+   */
+  Object getProperty(Object instance, String propertyName) throws Throwable;
+
+  /**
+   * @param instance
+   * @param propertyName
+   * @param newValue
+   * @return
+   */
+  Object setProperty(Object instance, String propertyName, Object newValue) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @param propertyName
+   * @return
+   * @throws Throwable
+   */
+  Object getProperty(RuntimeMetaClass metaClass, Object instance, String propertyName) throws Throwable;
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param propertyName
+   * @param newValue
+   * @return
+   * @throws Throwable
+   */
+  Object setProperty(RuntimeMetaClass metaClass, Object instance, String propertyName, Object newValue) throws Throwable;
+  
+  /**
+   * @param instance
    * @param methodName
    * @param arguments
    * @return the result of invoking the method on the instance with the supplied

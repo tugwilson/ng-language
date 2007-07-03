@@ -49,6 +49,7 @@ public abstract class ScriptImpl extends Script {
   /**
    * @return the binding
    */
+  @Override
   public Object getBinding() {
     return this.binding;
   }
@@ -56,6 +57,7 @@ public abstract class ScriptImpl extends Script {
   /**
    * @param binding the binding to set
    */
+  @Override
   public void setBinding(final Object binding) {
     this.binding = binding;
   }
