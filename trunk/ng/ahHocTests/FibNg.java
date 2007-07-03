@@ -28,8 +28,12 @@ import ng.runtime.ThreadContext;
  *
  */
 public class FibNg extends NgBaseObject {
-  private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(FibNg.class);
-    int series;
+  private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(NgBaseObject.class).createMetaClassFor(FibNg.class);
+  int series;
+  
+    public FibNg() {
+      super(ngMetaClass);
+    }
     
     //
     // main is not translated
