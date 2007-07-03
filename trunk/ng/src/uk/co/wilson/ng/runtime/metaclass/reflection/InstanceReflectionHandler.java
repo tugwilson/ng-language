@@ -57,15 +57,16 @@ public class InstanceReflectionHandler extends InstanceHandlerImpl {
       final PropertyDescriptor propertyDescriptors[] = beanInfo.getPropertyDescriptors();
      
       for (int i = 0; i!= propertyDescriptors.length; i++) {
-      final Method readMethod = propertyDescriptors[i].getReadMethod();
-      final Method writeMethod = propertyDescriptors[i].getWriteMethod();
+      final PropertyDescriptor propertyDescriptor = propertyDescriptors[i];
+      final Method readMethod = propertyDescriptor.getReadMethod();
+      final Method writeMethod = propertyDescriptor.getWriteMethod();
          
         if (readMethod != null && readMethod.getDeclaringClass() == theClass) {
-          this.getPropertyMethods.put(readMethod.getName(), createMetaMethod(readMethod));
+          this.getPropertyMethods.put(propertyDescriptor.getName(), createMetaMethod(readMethod));
         }
          
         if (writeMethod != null && writeMethod.getDeclaringClass() == theClass) {
-          this.getPropertyMethods.put(writeMethod.getName(), createMetaMethod(writeMethod));
+          this.getPropertyMethods.put(propertyDescriptor.getName(), createMetaMethod(writeMethod));
         }
       }
      

@@ -9,11 +9,17 @@ import ng.runtime.RuntimeMetaClass;
  *
  */
 public abstract class Closure extends NgBaseObject implements Callable {
-
+  /**
+   * 
+   */
+  public Closure() {
+    super(NgSystem.closureMetaClass);
+  }
+  
   /**
    * @param metaClass
    */
   public Closure(final RuntimeMetaClass metaClass) {
     super(metaClass);
-  }  
+  }
 }

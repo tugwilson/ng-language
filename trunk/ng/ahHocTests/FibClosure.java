@@ -58,7 +58,7 @@ public class FibClosure extends NgBaseObject {
     
      int calculate() throws Throwable {
      final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
-     Closure c = new ClosureImpl(NgSystem.closureMetaClass) {
+     Closure c = new ClosureImpl() {
         /* (non-Javadoc)
          * @see uk.co.wilson.ng.lang.ClosureImpl#callQuick(ng.runtime.ThreadContext, java.lang.Object, int)
          */

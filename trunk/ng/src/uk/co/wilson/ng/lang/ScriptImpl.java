@@ -3,29 +3,61 @@ package uk.co.wilson.ng.lang;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.lang.Closure;
-import ng.lang.NgSystem;
-import ng.runtime.*;
-
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
+import ng.lang.NgSystem;
+import ng.lang.Script;
+import ng.runtime.*;
 
 /**
  * @author John
  *
  */
-public abstract class ClosureImpl extends Closure {
+public abstract class ScriptImpl extends Script {
+  private Object binding = null;
+
   /**
    * 
    */
-  public ClosureImpl() {
-    super(NgSystem.closureMetaClass);
+  public ScriptImpl() {
+    super(NgSystem.scriptMetaClass);
+  }
+
+  /**
+   * @param metaClass
+   */
+  public ScriptImpl(final RuntimeMetaClass metaClass) {
+    super(metaClass);
   }
   
   /**
    * @param metaClass
+   * @param binding
    */
-  public ClosureImpl(final RuntimeMetaClass metaClass) {
+  public ScriptImpl(final RuntimeMetaClass metaClass, final Object binding) {
     super(metaClass);
+    this.binding = binding;
+  }
+
+  /**
+   * @param binding
+   */
+  public ScriptImpl(final Object binding) {
+    super(NgSystem.scriptMetaClass);
+    this.binding = binding;
+  }
+
+  /**
+   * @return the binding
+   */
+  public Object getBinding() {
+    return this.binding;
+  }
+
+  /**
+   * @param binding the binding to set
+   */
+  public void setBinding(final Object binding) {
+    this.binding = binding;
   }
 
   /* (non-Javadoc)
@@ -158,7 +190,7 @@ public abstract class ClosureImpl extends Closure {
    * @see ng.lang.Closure#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
   public Object callQuick(final ThreadContext tc, final Object instance, final Object p1) throws Throwable {
-    return RuntimeMetaClassImpl.NOT_CALLED;
+    return run();
   }
 
   /* (non-Javadoc)

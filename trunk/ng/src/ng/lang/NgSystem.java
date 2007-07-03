@@ -102,6 +102,12 @@ public final class NgSystem {
   public static final RuntimeMetaClass closureMetaClass;
 
   /**
+   * The MetaClass for ng.lang.Script
+   * 
+   */
+  public static final RuntimeMetaClass scriptMetaClass;
+
+  /**
    * The registry used to map Classes to MetaClasses
    */
   public static final MetaClassRegistry metaClassRegistry;
@@ -147,11 +153,15 @@ public final class NgSystem {
   }
 
   static {
+    bigDecimalMetaClass = new BigDecimalMetaClass();
+  }
+
+  static {
     closureMetaClass = new ClosureMetaClass();
   }
 
   static {
-    bigDecimalMetaClass = new BigDecimalMetaClass();
+    scriptMetaClass = new ScriptMetaClass();
   }
 
   static {
