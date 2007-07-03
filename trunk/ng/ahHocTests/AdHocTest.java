@@ -1,11 +1,6 @@
 import util.CustomMetaClass;
 import ng.lang.NgSystem;
 import ng.runtime.NgBaseObject;
-import ng.runtime.NgByte;
-import ng.runtime.NgChar;
-import ng.runtime.NgInt;
-import ng.runtime.NgLong;
-import ng.runtime.NgShort;
 import ng.runtime.NgTyped;
 import ng.runtime.ThreadContext;
 
@@ -36,7 +31,7 @@ public class AdHocTest {
 
   final Object o = new NgTyped(new NgBaseObject(new CustomMetaClass()), NgBaseObject.class);
 
-  public static void main(String[] args) throws Throwable {
+  public static void main(final String[] args) throws Throwable {
     new AdHocTest().test();
   }
   

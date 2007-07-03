@@ -35,11 +35,11 @@ public class MandelbrotNgUntyped extends NgBaseObject {
   static int BAILOUT = 16;
   static int MAX_ITERATIONS = 1000;
   
-  private Object iterate(Object x, Object y) throws Throwable {
+  private Object iterate(final Object x, final Object y) throws Throwable {
       final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
       Object $tmp;
-      Object cr = NgSystem.metaClassRegistry.getRuntimeMetaClass(y).subtract(y, 0.5f);
-      Object ci = x;
+      final Object cr = NgSystem.metaClassRegistry.getRuntimeMetaClass(y).subtract(y, 0.5f);
+      final Object ci = x;
       Object zi = NgFloat.valueOf(0.0f);
       Object zr = NgFloat.valueOf(0.0f);
       Object i = NgInt.valueOf(0);
@@ -48,13 +48,13 @@ public class MandelbrotNgUntyped extends NgBaseObject {
            i = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, i).postfixIncrement(i);
           
           //  def temp = zr * zi;
-          Object temp = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, zr).multiply(zr, zi);
+          final Object temp = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, zr).multiply(zr, zi);
           
           //  def zr2 = zr * zr;
-          Object zr2 = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, zr).multiply(zr, zr);
+          final Object zr2 = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, zr).multiply(zr, zr);
           
           //  def zi2 = zi * zi;          
-          Object zi2 = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, zi).multiply(zi, zi);
+          final Object zi2 = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, zi).multiply(zi, zi);
           
           //  zr = zr2 - zi2 + cr;
           $tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, zr2).subtract(zr2, zi2);
@@ -80,14 +80,14 @@ public class MandelbrotNgUntyped extends NgBaseObject {
     super(ngMetaClass);
   }
 
-  public static void main(String args[]) throws Throwable {
-      Date d1 = new Date();
-      MandelbrotNgUntyped instance = new MandelbrotNgUntyped();
+  public static void main(final String args[]) throws Throwable {
+      final Date d1 = new Date();
+      final MandelbrotNgUntyped instance = new MandelbrotNgUntyped();
       int x,y;
       for (y = -39; y < 39; y++) {
 ;//          System.out.print("\n");
           for (x = -39; x < 39; x++) {
-              Object tmp = instance.iterate(NgSystem.ngIntMetaClass.divide(x, 40.0f), NgSystem.ngIntMetaClass.divide(y, 40.0f)) ;
+              final Object tmp = instance.iterate(NgSystem.ngIntMetaClass.divide(x, 40.0f), NgSystem.ngIntMetaClass.divide(y, 40.0f)) ;
               if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp).asInt(tmp) == 0) 
 ;//                  System.out.print("*");
               else
@@ -95,8 +95,8 @@ public class MandelbrotNgUntyped extends NgBaseObject {
 
           }
       }
-      Date d2 = new Date();
-      long diff = d2.getTime() - d1.getTime();
+      final Date d2 = new Date();
+      final long diff = d2.getTime() - d1.getTime();
       System.out.println("\nNg untyped Elapsed " + diff/1000.0f);
       
   }

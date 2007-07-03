@@ -280,7 +280,7 @@ public class InternalMetaClassImpl implements InternalMetaClass {
    * @param propertyName
    * @return
    */
-  public Callable doGetGetPropertyCallable(final Object instance, final String propertyName) {
+  public Callable doGetGetPropertyCallable(final Object instance, final String propertyName) throws Throwable {
     return this.instanceHandler.getGetPropertyMetaMethod(instance, propertyName);
   }
 

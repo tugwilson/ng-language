@@ -23,6 +23,74 @@ public abstract class ThreadContextImpl implements ThreadContext {
   }
 
   /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getProperty(java.lang.Object, java.lang.String)
+   */
+  public Object getProperty(final Object instance, final String propertyName) throws Throwable {
+    return getProperty(getInternalMetaClassFor(instance), instance, propertyName);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#setProperty(java.lang.Object, java.lang.String, java.lang.Object)
+   */
+  public Object setProperty(final Object instance, final String propertyName, final Object newValue) throws Throwable {
+    return setProperty(getInternalMetaClassFor(instance), instance, propertyName, newValue);
+  }
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getProperty(ng.runtime.RuntimeMetaClass, java.lang.Object, java.lang.String)
+   */
+  public Object getProperty(final RuntimeMetaClass metaClass, final Object instance, final String propertyName) throws Throwable {
+    return getProperty(getInternalMetaClassFor(metaClass), instance, propertyName);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#setProperty(ng.runtime.RuntimeMetaClass, java.lang.Object, java.lang.String, java.lang.Object)
+   */
+  public Object setProperty(final RuntimeMetaClass metaClass, final Object instance, final String propertyName, final Object newValue) throws Throwable {
+    return setProperty(getInternalMetaClassFor(metaClass), instance, propertyName, newValue);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param propertyName
+   * @return
+   * @throws Throwable
+   */
+  protected Object getProperty(final InternalMetaClass metaClass, final Object instance, final String propertyName) throws Throwable {
+  Object result = metaClass.doGetGetPropertyCallable(instance, propertyName).callQuick(instance);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      result = metaClass.doGetGetFieldMetaMethod(instance, propertyName).callQuick(instance);
+      
+      // TODO: make this error more detailed.
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException("The property " +  propertyName + " was not found");
+    }
+    
+    return result;
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param propertyName
+   * @param newValue
+   * @return
+   * @throws Throwable
+   */
+  protected Object setProperty(final InternalMetaClass metaClass, final Object instance, final String propertyName, final Object newValue) throws Throwable {
+    Object result = metaClass.doGetSetPropertyMetaMethod(instance, propertyName, newValue).callQuick(instance, newValue);
+    
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
+      result = metaClass.doGetSetFieldMetaMethod(instance, propertyName, newValue).callQuick(instance, newValue);
+      
+      // TODO: make this error more detailed.
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException("The property " +  propertyName + " was not found");
+    }
+
+      return result;
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.ThreadContext#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object[])
    */
   public Object invokeMethod(final Object instance, final String methodName, final Object[] arguments) throws Throwable {

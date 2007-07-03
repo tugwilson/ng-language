@@ -24,15 +24,15 @@
 public class FibJava {
     int series;
     
-    public static void main(String args[]) {
+    public static void main(final String args[]) {
       new FibJava(10).calculate();
-      long start = System.currentTimeMillis();
-      int result = new FibJava(35).calculate();
+      final long start = System.currentTimeMillis();
+      final int result = new FibJava(35).calculate();
       System.out.println(System.currentTimeMillis() - start);
       System.out.println(result);
     }
 
-    FibJava(int x) {
+    FibJava(final int x) {
            this.series = x;
        }
       
@@ -40,7 +40,7 @@ public class FibJava {
            return fib(this.series);
        }
       
-       int fib(int x) {
+       int fib(final int x) {
            if (x <= 0) {
                return 0;
            }
