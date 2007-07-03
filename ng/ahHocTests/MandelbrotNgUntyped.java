@@ -31,7 +31,7 @@ import ng.runtime.ThreadContext;
  *
  */
 public class MandelbrotNgUntyped extends NgBaseObject {
-  private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(MandelbrotNgUntyped.class);
+  private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(NgBaseObject.class).createMetaClassFor(MandelbrotNgUntyped.class);
   static int BAILOUT = 16;
   static int MAX_ITERATIONS = 1000;
   

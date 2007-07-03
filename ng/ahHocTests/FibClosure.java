@@ -30,8 +30,12 @@ import uk.co.wilson.ng.lang.ClosureImpl;
  *
  */
 public class FibClosure extends NgBaseObject {
-  private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(FibClosure.class);
+  private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getRuntimeMetaClass(NgBaseObject.class).createMetaClassFor(FibClosure.class);
   int series;
+    
+    public FibClosure() {
+      super(ngMetaClass);
+    }
     
     //
     // main is not translated
