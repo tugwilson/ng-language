@@ -454,6 +454,118 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
   }
   
   /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCall(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])
+   */
+  public Object doCall(ThreadContext tc, Object instance, Object[] arguments) throws Throwable {
+    return doGetCallable(instance).call(tc, instance, arguments);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, java.math.BigDecimal)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, BigDecimal p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, java.math.BigInteger)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, BigInteger p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, boolean)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, boolean p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, byte)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, byte p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, char)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, char p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, double)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, double p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, float)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, float p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, int)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, int p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, long)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, long p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, Object p1, Object p2, Object p3, Object p4) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1, p2, p3, p4);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, Object p1, Object p2, Object p3) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1, p2, p3);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object, java.lang.Object)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, Object p1, Object p2) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1, p2);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, Object p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, short)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance, short p1) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object)
+   */
+  public Object doCallQuick(ThreadContext tc, Object instance) throws Throwable {
+    return doGetCallable(instance).callQuick(tc, instance);
+  }
+
+  /* (non-Javadoc)
    * @see ng.runtime.InternalMetaClass#doGetCallable(java.lang.Object)
    */
   public Callable doGetCallable(final Object instance) {

@@ -691,7 +691,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
       return callQuick(metaClass, instance, arguments[0], arguments[1], arguments[2], arguments[3]);
 
     default:
-      final Object result = metaClass.doGetCallable(instance).call(this, instance, arguments);
+      final Object result = metaClass.doCall(this, instance, arguments);
 
       // TODO: make this error more detailed.
       if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -701,7 +701,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final BigDecimal p1) throws Throwable {
-  final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1);
+  final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -710,7 +710,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final BigInteger p1) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(instance, p1);
+    final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -719,7 +719,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final boolean p1) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1);
+    final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -728,7 +728,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final byte p1) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1);
+    final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -737,7 +737,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final char p1) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1);
+    final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -746,7 +746,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final double p1) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1);
+    final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -755,7 +755,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final float p1) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1);
+    final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -764,7 +764,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final int p1) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1);
+    final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -773,7 +773,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final long p1) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1);
+    final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -782,7 +782,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1, p2, p3, p4);
+    final Object result = metaClass.doCallQuick(this, instance, p1, p2, p3, p4);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -791,7 +791,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final Object p1, final Object p2, final Object p3) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1, p2, p3);
+    final Object result = metaClass.doCallQuick(this, instance, p1, p2, p3);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -800,7 +800,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final Object p1, final Object p2) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1, p2);
+    final Object result = metaClass.doCallQuick(this, instance, p1, p2);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -809,7 +809,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final Object p1) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1);
+    final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -818,7 +818,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final short p1) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance, p1);
+    final Object result = metaClass.doCallQuick(this, instance, p1);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
@@ -827,7 +827,7 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance) throws Throwable {
-    final Object result = metaClass.doGetCallable(instance).callQuick(this, instance);
+    final Object result = metaClass.doCallQuick(this, instance);
 
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " is not callable");
