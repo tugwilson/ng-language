@@ -6,7 +6,6 @@ import java.math.BigInteger;
 import ng.lang.Closure;
 import ng.lang.NgSystem;
 import ng.runtime.*;
-
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 
 /**

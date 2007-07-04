@@ -1,8 +1,8 @@
-import util.CustomMetaClass;
 import ng.lang.NgSystem;
 import ng.runtime.NgBaseObject;
 import ng.runtime.NgTyped;
 import ng.runtime.ThreadContext;
+import util.CustomMetaClass;
 
 /*
  * Created on 2 Apr 2007

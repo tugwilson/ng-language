@@ -280,15 +280,7 @@ public class CustomInternalMetaClass extends InternalMetaClassImpl {
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallable(java.lang.Object, java.lang.String, java.lang.Object[])
-   */
-  @Override
-  public Callable doGetCallable(final Object instance, final String methodName, final Object[] arguments) {
-    return this.callable;
-  }
-
-  /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallable(java.lang.Object)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doGetCallable(java.lang.Object)
    */
   @Override
   public Callable doGetCallable(final Object instance) {
@@ -296,114 +288,162 @@ public class CustomInternalMetaClass extends InternalMetaClassImpl {
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, java.math.BigDecimal)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethod(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.lang.Object[])
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final BigDecimal p1) {
-    return this.callable;
+  public Object doInvokeMethod(final ThreadContext tc, final Object instance, final String methodName, final Object[] arguments) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, java.math.BigInteger)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.math.BigDecimal)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final BigInteger p1) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final BigDecimal p1) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, boolean)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.math.BigInteger)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final boolean p1) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final BigInteger p1) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, byte)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, boolean)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final byte p1) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final boolean p1) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, char)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, byte)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final char p1) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final byte p1) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, double)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, char)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final double p1) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final char p1) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, float)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, double)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final float p1) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final double p1) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, int)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, float)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final int p1) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final float p1) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, int)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final int p1) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, long)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final long p1) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final Object p1, final Object p2) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, java.lang.Object)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final Object p1) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String, short)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName, final short p1) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final Object p1, final Object p2) throws Throwable {
+    return null;
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl#doGetCallableQuick(java.lang.Object, java.lang.String)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.lang.Object)
    */
   @Override
-  public Callable doGetCallableQuick(final Object instance, final String methodName) {
-    return this.callable;
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final Object p1) throws Throwable {
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, short)
+   */
+  @Override
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final short p1) throws Throwable {
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String)
+   */
+  @Override
+  public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName) throws Throwable {
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doGetField(ng.runtime.ThreadContext, java.lang.Object, java.lang.String)
+   */
+  @Override
+  public Object doGetField(final ThreadContext tc, final Object instance, final String fieldName) throws Throwable {
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doGetProperty(ng.runtime.ThreadContext, java.lang.Object, java.lang.String)
+   */
+  @Override
+  public Object doGetProperty(final ThreadContext tc, final Object instance, final String propertyName) throws Throwable {
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doSetField(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.lang.Object)
+   */
+  @Override
+  public Object doSetField(final ThreadContext tc, final Object instance, final String fieldName, final Object newValue) throws Throwable {
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doSetProperty(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.lang.Object)
+   */
+  @Override
+  public Object doSetProperty(final ThreadContext tc, final Object instance, final String propertyName, final Object newValue) throws Throwable {
+    return null;
   }
 }

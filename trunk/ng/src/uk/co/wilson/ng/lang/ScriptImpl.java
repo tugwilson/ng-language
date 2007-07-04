@@ -3,10 +3,10 @@ package uk.co.wilson.ng.lang;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 import ng.lang.NgSystem;
 import ng.lang.Script;
 import ng.runtime.*;
+import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 
 /**
  * @author John

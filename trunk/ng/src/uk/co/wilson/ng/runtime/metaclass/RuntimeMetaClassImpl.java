@@ -255,24 +255,14 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    * @see ng.runtime.MetaClass#getField(java.lang.Object, java.lang.String)
    */
   public Object getField(final Object instance, final String fieldName) throws Throwable {
-  final Object result = this.internalMetaClass.doGetGetFieldMetaMethod(instance, fieldName).callQuick(instance);
-    
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException("The field " +  fieldName + " was not found");
-
-    return result;
+    return NgSystem.metaClassRegistry.getThreadContext().getField(instance, fieldName);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#setField(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object setField(final Object instance, final String fieldName, final Object newValue) throws  Throwable {
-  final Object result = this.internalMetaClass.doGetSetFieldMetaMethod(instance, fieldName, newValue).callQuick(instance, newValue);
-    
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException("The field " +  fieldName + " was not found");
-
-    return result;
+    return NgSystem.metaClassRegistry.getThreadContext().setField(instance, fieldName, newValue);
   }
 
   /* (non-Javadoc)
