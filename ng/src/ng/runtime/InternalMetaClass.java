@@ -314,10 +314,153 @@ public interface InternalMetaClass {
   Object doSetField(ThreadContext tc, Object instance, String fieldName, Object newValue) throws Throwable;
   
   /**
+   * @param tc
+   * @param instance
+   * @param arguments
+   * @return
+   * @throws Throwable
+   */
+  Object doCall(ThreadContext tc, Object instance, Object[] arguments) throws Throwable;
+  
+  /**
+   * @param tc
    * @param instance
    * @return
+   * @throws Throwable
    */
-  Callable doGetCallable(Object instance) throws Throwable;
+  Object doCallQuick(ThreadContext tc, Object instance) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, Object p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, boolean p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, char p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, byte p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, short p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, int p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, long p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, float p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, double p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, BigInteger p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, BigDecimal p1) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @param p2
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, Object p1, Object p2) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, Object p1, Object p2, Object p3) throws Throwable;
+  
+  /**
+   * @param tc
+   * @param instance
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   * @throws Throwable
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, Object p1, Object p2, Object p3, Object p4) throws Throwable;
 
   /**
    * @param instance
