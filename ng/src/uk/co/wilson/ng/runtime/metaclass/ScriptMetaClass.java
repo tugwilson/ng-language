@@ -1,8 +1,7 @@
 package uk.co.wilson.ng.runtime.metaclass;
 
-import ng.lang.NgSystem;
 import ng.lang.Script;
-import ng.runtime.Callable;
+import ng.runtime.ThreadContext;
 import uk.co.wilson.ng.lang.ScriptImpl;
 
 /**
@@ -25,10 +24,8 @@ class ScriptInternalMetaClass extends InternalMetaClassImpl {
   }
   
   @Override
-  public Callable doGetGetPropertyCallable(final Object instance, final String propertyName) throws Throwable {
-  final Object binding = ((Script)instance).getBinding();
-  
-    return NgSystem.metaClassRegistry.getInternalMetaClass(binding).doGetGetPropertyCallable(binding, propertyName);
+  public Object doGetProperty(final ThreadContext tc, final Object instance, final String propertyName) throws Throwable {
+    return tc.getProperty(((Script)instance).getBinding(), propertyName);
   }
   
   //

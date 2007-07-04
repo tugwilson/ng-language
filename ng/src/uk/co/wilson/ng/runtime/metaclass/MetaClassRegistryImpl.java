@@ -28,8 +28,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-import uk.co.wilson.ng.lang.ClosureImpl;
-
 import ng.lang.NgObject;
 import ng.lang.NgSystem;
 import ng.runtime.InternalMetaClass;
@@ -38,6 +36,7 @@ import ng.runtime.MetaClassRegistry;
 import ng.runtime.NgNull;
 import ng.runtime.RuntimeMetaClass;
 import ng.runtime.ThreadContext;
+import uk.co.wilson.ng.lang.ClosureImpl;
 
 public class MetaClassRegistryImpl implements MetaClassRegistry {
   private final Map registry = new HashMap() {

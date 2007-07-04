@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.ThreadContext;
-
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.reflection.ReflectionMetaMethod;
 

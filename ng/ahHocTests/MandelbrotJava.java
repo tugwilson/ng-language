@@ -1,5 +1,5 @@
 /// by Erik Wrenholt
-import java.util.*;
+import java.util.Date;
 
 class MandelbrotJava
 {  

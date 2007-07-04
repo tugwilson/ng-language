@@ -1927,7 +1927,7 @@ public class LogicalTest extends TestCase {
     o = this.registry.getRuntimeMetaClass(BigInteger.class).xor(this.oneBigInt, (long)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(BigInteger.class).xor((BigInteger)this.oneBigInt, (BigInteger)this.oneBigInt);   
+    o = this.registry.getRuntimeMetaClass(BigInteger.class).xor(this.oneBigInt, this.oneBigInt);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
 
@@ -1944,7 +1944,7 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((int) 1, (byte) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(1, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
@@ -1952,11 +1952,11 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigInteger)this.oneBigInt, (byte) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigInt, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigDecimal)this.oneBigDecimal, (byte) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigDecimal, (byte) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
@@ -1972,7 +1972,7 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((int) 1, (char) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(1, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
@@ -1980,11 +1980,11 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigInteger)this.oneBigInt, (char) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigInt, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigDecimal)this.oneBigDecimal, (char) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigDecimal, (char) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
@@ -2000,7 +2000,7 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((int) 1, (short) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(1, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
@@ -2008,42 +2008,42 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigInteger)this.oneBigInt, (short) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigInt, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigDecimal)this.oneBigDecimal, (short) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigDecimal, (short) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((byte) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor((byte) 1, 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((char) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor((char) 1, 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {
     }
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((short) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor((short) 1, 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {
     }
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((int) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(1, 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {
     }
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((long) 1, (int) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor((long) 1, 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigInteger)this.oneBigInt, (int) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigInt, 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigDecimal)this.oneBigDecimal, (int) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigDecimal, 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
@@ -2059,7 +2059,7 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((int) 1, (long) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(1, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
@@ -2067,47 +2067,47 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigInteger)this.oneBigInt, (long) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigInt, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigDecimal)this.oneBigDecimal, (long) 1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigDecimal, (long) 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((byte) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(Object.class).xor((byte) 1, this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((char) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(Object.class).xor((char) 1, this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((short) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(Object.class).xor((short) 1, this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((int) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(Object.class).xor(1, this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((long) 1, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(Object.class).xor((long) 1, this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigInteger) this.oneBigInt, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigInt, this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {} 
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigInteger) this.oneBigInt, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigInt, this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {} 
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigDecimal) this.oneBigDecimal, (BigInteger) this.oneBigInt);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigDecimal, this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {} 
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor((BigDecimal) this.oneBigDecimal, (BigDecimal) this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(Object.class).xor(this.oneBigDecimal, this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {} 
 
@@ -2122,13 +2122,13 @@ public class LogicalTest extends TestCase {
       o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xor(this.integralOnes[i], (short)1);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(short.class),  this.registry.getRuntimeMetaClass(o).getTheClass(o));
-      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xor(this.integralOnes[i], (int)1);   
+      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xor(this.integralOnes[i], 1);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(int.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
       o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xor(this.integralOnes[i], (long)1);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(long.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
-      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xor(this.integralOnes[i], (BigInteger)this.oneBigInt);   
+      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xor(this.integralOnes[i], this.oneBigInt);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(BigInteger.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
       
@@ -2141,13 +2141,13 @@ public class LogicalTest extends TestCase {
       o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXor((short)1, this.integralOnes[i]);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(short.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
-      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXor((int)1, this.integralOnes[i]);   
+      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXor(1, this.integralOnes[i]);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(int.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
       o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXor((long)1, this.integralOnes[i]);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(long.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
-      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXor((BigInteger)this.oneBigInt, this.integralOnes[i]);   
+      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXor(this.oneBigInt, this.integralOnes[i]);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(BigInteger.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
       
@@ -2175,7 +2175,7 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor(new Object(), (int)1);
+      this.registry.getRuntimeMetaClass(Object.class).xor(new Object(), 1);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
@@ -2183,11 +2183,11 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor(new Object(), (BigInteger)this.oneBigInt);
+      this.registry.getRuntimeMetaClass(Object.class).xor(new Object(), this.oneBigInt);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).xor(new Object(), (BigDecimal)this.oneBigDecimal);
+      this.registry.getRuntimeMetaClass(Object.class).xor(new Object(), this.oneBigDecimal);
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     
@@ -2204,7 +2204,7 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseXor((int)1, new Object());
+      this.registry.getRuntimeMetaClass(Object.class).reverseXor(1, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
@@ -2212,7 +2212,7 @@ public class LogicalTest extends TestCase {
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
     try {
-      this.registry.getRuntimeMetaClass(Object.class).reverseXor((BigInteger)this.oneBigInt, new Object());
+      this.registry.getRuntimeMetaClass(Object.class).reverseXor(this.oneBigInt, new Object());
       assertTrue(false);
     } catch (final NgRuntimeException e) {}
   }
@@ -2229,7 +2229,7 @@ public class LogicalTest extends TestCase {
     o = this.registry.getRuntimeMetaClass(short.class).xorEquals((short)1, (byte)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(int.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(int.class).xorEquals((int)1, (byte)1);   
+    o = this.registry.getRuntimeMetaClass(int.class).xorEquals(1, (byte)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(int.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
     o = this.registry.getRuntimeMetaClass(long.class).xorEquals((long)1, (byte)1);   
@@ -2244,7 +2244,7 @@ public class LogicalTest extends TestCase {
     o = this.registry.getRuntimeMetaClass(short.class).xorEquals((short)1, (char)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(int.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(int.class).xorEquals((int)1, (char)1);   
+    o = this.registry.getRuntimeMetaClass(int.class).xorEquals(1, (char)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(int.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
     o = this.registry.getRuntimeMetaClass(long.class).xorEquals((long)1, (char)1);   
@@ -2259,25 +2259,25 @@ public class LogicalTest extends TestCase {
     o = this.registry.getRuntimeMetaClass(short.class).xorEquals((short)1, (short)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(int.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(int.class).xorEquals((int)1, (short)1);   
+    o = this.registry.getRuntimeMetaClass(int.class).xorEquals(1, (short)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(int.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
     o = this.registry.getRuntimeMetaClass(long.class).xorEquals((long)1, (short)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(long.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(byte.class).xorEquals((byte)1, (int)1);   
+    o = this.registry.getRuntimeMetaClass(byte.class).xorEquals((byte)1, 1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(int.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(char.class).xorEquals((char)1, (int)1);   
+    o = this.registry.getRuntimeMetaClass(char.class).xorEquals((char)1, 1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(int.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(short.class).xorEquals((short)1, (int)1);   
+    o = this.registry.getRuntimeMetaClass(short.class).xorEquals((short)1, 1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(int.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(int.class).xorEquals((int)1, (int)1);   
+    o = this.registry.getRuntimeMetaClass(int.class).xorEquals(1, 1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(int.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(long.class).xorEquals((long)1, (int)1);   
+    o = this.registry.getRuntimeMetaClass(long.class).xorEquals((long)1, 1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(long.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
     o = this.registry.getRuntimeMetaClass(byte.class).xorEquals((byte)1, (long)1);   
@@ -2289,44 +2289,44 @@ public class LogicalTest extends TestCase {
     o = this.registry.getRuntimeMetaClass(short.class).xorEquals((short)1, (long)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(long.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(int.class).xorEquals((int)1, (long)1);   
+    o = this.registry.getRuntimeMetaClass(int.class).xorEquals(1, (long)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(long.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
     o = this.registry.getRuntimeMetaClass(long.class).xorEquals((long)1, (long)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(long.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(byte.class).xorEquals((byte)1, (BigInteger)this.oneBigInt);   
+    o = this.registry.getRuntimeMetaClass(byte.class).xorEquals((byte)1, this.oneBigInt);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(char.class).xorEquals((char)1, (BigInteger)this.oneBigInt);   
+    o = this.registry.getRuntimeMetaClass(char.class).xorEquals((char)1, this.oneBigInt);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(short.class).xorEquals((short)1, (BigInteger)this.oneBigInt);   
+    o = this.registry.getRuntimeMetaClass(short.class).xorEquals((short)1, this.oneBigInt);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(int.class).xorEquals((int)1, (BigInteger)this.oneBigInt);   
+    o = this.registry.getRuntimeMetaClass(int.class).xorEquals(1, this.oneBigInt);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(long.class).xorEquals((long)1, (BigInteger)this.oneBigInt);   
+    o = this.registry.getRuntimeMetaClass(long.class).xorEquals((long)1, this.oneBigInt);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
 
-    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals((BigInteger)this.oneBigInt, (byte)1);   
+    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals(this.oneBigInt, (byte)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals((BigInteger)this.oneBigInt, (char)1);   
+    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals(this.oneBigInt, (char)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals((BigInteger)this.oneBigInt, (short)1);   
+    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals(this.oneBigInt, (short)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals((BigInteger)this.oneBigInt, (int)1);   
+    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals(this.oneBigInt, 1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals((BigInteger)this.oneBigInt, (long)1);   
+    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals(this.oneBigInt, (long)1);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
-    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals((BigInteger)this.oneBigInt, (BigInteger)this.oneBigInt);   
+    o = this.registry.getRuntimeMetaClass(BigInteger.class).xorEquals(this.oneBigInt, this.oneBigInt);   
     assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
     assertEquals(BigInteger.class, this.registry.getRuntimeMetaClass(o).getTheClass(o));
 
@@ -2341,13 +2341,13 @@ public class LogicalTest extends TestCase {
       o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xorEquals(this.integralOnes[i], (short)1);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(short.class),  this.registry.getRuntimeMetaClass(o).getTheClass(o));
-      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xorEquals(this.integralOnes[i], (int)1);   
+      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xorEquals(this.integralOnes[i], 1);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(int.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
       o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xorEquals(this.integralOnes[i], (long)1);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(long.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
-      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xorEquals(this.integralOnes[i], (BigInteger)this.oneBigInt);   
+      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).xorEquals(this.integralOnes[i], this.oneBigInt);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(BigInteger.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
       
@@ -2360,13 +2360,13 @@ public class LogicalTest extends TestCase {
       o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXorEquals((short)1, this.integralOnes[i]);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(short.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
-      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXorEquals((int)1, this.integralOnes[i]);   
+      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXorEquals(1, this.integralOnes[i]);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(int.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
       o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXorEquals((long)1, this.integralOnes[i]);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(long.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
-      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXorEquals((BigInteger)this.oneBigInt, this.integralOnes[i]);   
+      o = this.registry.getRuntimeMetaClass(this.integralOnes[i]).reverseXorEquals(this.oneBigInt, this.integralOnes[i]);   
       assertTrue(((NgBoolean)this.registry.getRuntimeMetaClass(o).equals(o, this.zeroInt)).getBooleanValue());
       assertEquals(((Map)this.typeConverter.get(this.registry.getRuntimeMetaClass(this.integralOnes[i]).getTheClass(o))).get(BigInteger.class), this.registry.getRuntimeMetaClass(o).getTheClass(o));
 
@@ -2383,7 +2383,7 @@ public class LogicalTest extends TestCase {
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((int) 1, (byte) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(1, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
@@ -2391,11 +2391,11 @@ public class LogicalTest extends TestCase {
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((BigInteger)this.oneBigInt, (byte) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(this.oneBigInt, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((BigDecimal)this.oneBigDecimal, (byte) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(this.oneBigDecimal, (byte) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
@@ -2411,7 +2411,7 @@ public class LogicalTest extends TestCase {
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((int) 1, (char) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(1, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
@@ -2419,11 +2419,11 @@ public class LogicalTest extends TestCase {
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((BigInteger)this.oneBigInt, (char) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(this.oneBigInt, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((BigDecimal)this.oneBigDecimal, (char) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(this.oneBigDecimal, (char) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
@@ -2439,7 +2439,7 @@ public class LogicalTest extends TestCase {
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((int) 1, (short) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(1, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
@@ -2447,42 +2447,42 @@ public class LogicalTest extends TestCase {
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((BigInteger)this.oneBigInt, (short) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(this.oneBigInt, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((BigDecimal)this.oneBigDecimal, (short) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(this.oneBigDecimal, (short) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((byte) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals((byte) 1, 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((char) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals((char) 1, 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {
       }
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((short) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals((short) 1, 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {
       }
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((int) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(1, 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {
       }
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((long) 1, (int) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals((long) 1, 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((BigInteger)this.oneBigInt, (int) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(this.oneBigInt, 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((BigDecimal)this.oneBigDecimal, (int) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(this.oneBigDecimal, 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
@@ -2498,7 +2498,7 @@ public class LogicalTest extends TestCase {
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((int) 1, (long) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(1, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
@@ -2506,23 +2506,23 @@ public class LogicalTest extends TestCase {
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((BigInteger)this.oneBigInt, (long) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(this.oneBigInt, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((BigDecimal)this.oneBigDecimal, (long) 1);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals(this.oneBigDecimal, (long) 1);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((byte) 1, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals((byte) 1, this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((char) 1, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals((char) 1, this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
-        this.registry.getRuntimeMetaClass(Object.class).xorEquals((short) 1, (BigInteger) this.oneBigInt);
+        this.registry.getRuntimeMetaClass(Object.class).xorEquals((short) 1, this.oneBigInt);
         assertTrue(false);
       } catch (final NgRuntimeException e) {}
       try {
