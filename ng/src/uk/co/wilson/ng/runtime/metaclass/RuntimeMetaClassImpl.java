@@ -469,139 +469,19 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
   }
 
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClass#asType(java.lang.Object, java.lang.Class)
+   */
   public Object asType(final Object instance, final Class type) throws Throwable {
-  final Object result = this.internalMetaClass.doAsType(instance, type);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to " + type.getClass().getName());
-
-    return result;
-  }
-
-  public byte asByte(final Object instance) throws Throwable {
-  final Object result = this.internalMetaClass.doAsType(instance, byte.class);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to byte");
-
-    return ((NgByte)result).getByteValue();
-  }
-
-  public char asChar(final Object instance) throws Throwable {
-  final Object result = this.internalMetaClass.doAsType(instance, char.class);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to char");
-
-    return ((NgChar)result).getCharValue();
-  }
-
-  public short asShort(final Object instance) throws Throwable {
-  final Object result = this.internalMetaClass.doAsType(instance, short.class);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to short");
-
-    return ((NgShort)result).getShortValue();
-  }
-
-  public int asInt(final Object instance) throws Throwable {
-  final Object result = this.internalMetaClass.doAsType(instance, int.class);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to int");
-
-    return ((NgInt)result).getIntValue();
-  }
-
-  public long asLong(final Object instance) throws Throwable {
-  final Object result = this.internalMetaClass.doAsType(instance, long.class);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to long");
-
-    return ((NgLong)result).getLongValue();
-  }
-
-  public float asFloat(final Object instance) throws Throwable {
-  final Object result = this.internalMetaClass.doAsType(instance, float.class);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to float");
-
-    return ((NgFloat)result).getFloatValue();
-  }
-
-  public double asDouble(final Object instance) throws Throwable {
-  final Object result = this.internalMetaClass.doAsType(instance, double.class);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to double");
-
-    return ((NgDouble)result).getDoubleValue();
-  }
-
-  public boolean asBoolean(final Object instance) throws Throwable {
-  final Object result = this.internalMetaClass.doAsType(instance, boolean.class);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be converted to boolean");
-
-    return ((NgBoolean)result).getBooleanValue();
+    return NgSystem.metaClassRegistry.getThreadContext().asType(instance, type);
   }
 
   public Object getAt(final Object instance, final Object index) throws Throwable {
-  final Object result = this.internalMetaClass.doGetAt(instance, index);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
-
-    return result;
-  }
-
-  public Object getAt(final Object instance, final int index) throws Throwable {
-  final Object result = this.internalMetaClass.doGetAt(instance, index);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
-
-    return result;
-  }
-
-  public Object getAt(final Object instance, final BigInteger index) throws Throwable {
-  final Object result = this.internalMetaClass.doGetAt(instance, index);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
-
-    return result;
+    return NgSystem.metaClassRegistry.getThreadContext().getAt(instance, index);
   }
 
   public Object putAt(final Object instance, final Object index) throws Throwable {
-  final Object result = this.internalMetaClass.doPutAt(instance, index);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
-
-    return result;
-  }
-
-  public Object putAt(final Object instance, final int index) throws Throwable {
-  final Object result = this.internalMetaClass.doPutAt(instance, index);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
-
-    return result;
-  }
-
-  public Object putAt(final Object instance, final BigInteger index) throws Throwable {
-  final Object result = this.internalMetaClass.doPutAt(instance, index);
-
-    // TODO: make this error more detailed.
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot be subscripted");
-
-    return result;
+    return NgSystem.metaClassRegistry.getThreadContext().putAt(instance, index);
   }
 
   public Object prefixIncrement(final Object operand) throws Throwable {

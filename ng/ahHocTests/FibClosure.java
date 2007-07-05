@@ -85,11 +85,10 @@ public class FibClosure extends NgBaseObject {
          */
         @Override
         public Object callQuick(ThreadContext tc, Object instance, Object x) throws Throwable {
-           return this.callQuick(tc, instance, NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, x).asInt(x));
+           return this.callQuick(tc, instance, $tc.asInt(x));
         }
        };
        
-       final Object $tmp = $tc.callQuick(NgSystem.closureMetaClass, c, this.metaClass.getField(this, "series"));
-       return NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).asInt($tmp);
+       return $tc.asInt($tc.callQuick(NgSystem.closureMetaClass, c, this.metaClass.getField(this, "series")));
      }
 }

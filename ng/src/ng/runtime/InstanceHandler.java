@@ -358,25 +358,31 @@ public interface InstanceHandler {
   Object isCase(Object instance, Object ths) throws Throwable;
   
   /**
+   * @param tc
    * @param instance
    * @param type
    * @return
+   * @throws Throwable
    */
-  Object asType(Object instance, Class type) throws Throwable;
+  Object asType(ThreadContext tc, Object instance, Class type) throws Throwable;
   
   /**
+   * @param tc
    * @param instance
    * @param index
    * @return
+   * @throws Throwable
    */
-  Object getAt(Object instance, Object index) throws Throwable;
+  Object getAt(ThreadContext tc, Object instance, Object index) throws Throwable;
   
   /**
+   * @param tc
    * @param instance
    * @param index
    * @return
+   * @throws Throwable
    */
-  Object putAt(Object instance, Object index) throws Throwable;
+  Object putAt(ThreadContext tc, Object instance, Object index) throws Throwable;
 
   /**
    * @param parameterType

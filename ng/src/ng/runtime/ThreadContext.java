@@ -613,4 +613,211 @@ public interface ThreadContext {
    * @return
    */
   Object callQuick(RuntimeMetaClass metaClass, Object instance, Object p1, Object p2, Object p3, Object p4) throws Throwable;
+  
+  /**
+   * @param instance
+   * @param type
+   * @return
+   * @throws Throwable
+   */
+  Object asType(Object instance, Class type) throws Throwable;
+  
+  /**
+   * @param instance
+   * @return
+   */
+  byte asByte(Object instance) throws Throwable;
+  
+  /**
+   * @param instance
+   * @return
+   */
+  char asChar(Object instance) throws Throwable;
+  
+  /**
+   * @param instance
+   * @return
+   */
+  short asShort(Object instance) throws Throwable;
+  
+  /**
+   * @param instance
+   * @return
+   */
+  int asInt(Object instance) throws Throwable;
+  
+  /**
+   * @param instance
+   * @return
+   */
+  long asLong(Object instance) throws Throwable;
+  
+  /**
+   * @param instance
+   * @return
+   */
+  float asFloat(Object instance) throws Throwable;
+  
+  /**
+   * @param instance
+   * @return
+   */
+  double asDouble(Object instance) throws Throwable;
+  
+  /**
+   * @param instance
+   * @return
+   */
+  boolean asBoolean(Object instance) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @param type
+   * @return
+   * @throws Throwable
+   */
+  Object asType(RuntimeMetaClass metaClass, Object instance, Class type) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  byte asByte(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  char asChar(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  short asShort(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  int asInt(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  long asLong(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  float asFloat(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  double asDouble(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  boolean asBoolean(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+
+  /**
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  Object getAt(Object instance, Object index) throws Throwable;
+  
+  /**
+   * @param instance
+   * @param index
+   * @return
+   */
+  Object getAt(Object instance, int index) throws Throwable;
+  
+  /**
+   * @param instance
+   * @param index
+   * @return
+   */
+  Object getAt(Object instance, BigInteger index) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  Object getAt(RuntimeMetaClass metaClass, Object instance, int index) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  Object getAt(RuntimeMetaClass metaClass, Object instance, BigInteger index) throws Throwable;
+  
+  /**
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  Object putAt(Object instance, Object index) throws Throwable;
+  
+  /**
+   * @param instance
+   * @param index
+   */
+  Object putAt(Object instance, int index) throws Throwable;
+  
+  /**
+   * @param instance
+   * @param index
+   */
+  Object putAt(Object instance, BigInteger index) throws Throwable; 
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  Object putAt(RuntimeMetaClass metaClass, Object instance, int index) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  Object putAt(RuntimeMetaClass metaClass, Object instance, BigInteger index) throws Throwable; 
 }

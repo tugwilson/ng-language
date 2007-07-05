@@ -12,6 +12,7 @@ import ng.runtime.InstanceHandler;
 import ng.runtime.MetaClass;
 import ng.runtime.MetaMethod;
 import ng.runtime.RuntimeMetaClass;
+import ng.runtime.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 
@@ -710,20 +711,17 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
     }
   }
 
-  /* (non-Javadoc)
-   * @see ng.runtime.MetaClass#asType(java.lang.Object, java.lang.Class)
-   */
-  public Object asType(final Object instance, final Class type) throws Throwable {
+  public Object asType(final ThreadContext tc, final Object instance, final Class type) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doAsType(instance, type);
+    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doAsType(tc, instance, type);
       
       if (result != RuntimeMetaClassImpl.NOT_CALLED) return result;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.getInternalMetaClass().doAsType(instance, type);
+      return this.superClassMetaClass.getInternalMetaClass().doAsType(tc, instance, type);
     } else {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
@@ -901,19 +899,19 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.MetaClass#getAt(java.lang.Object, java.lang.Object)
+   * @see ng.runtime.InstanceHandler#getAt(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object getAt(final Object instance, final Object index) throws Throwable {
+  public Object getAt(final ThreadContext tc, final Object instance, final Object index) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doGetAt(instance, index);
+    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doGetAt(tc, instance, index);
       
       if (result != RuntimeMetaClassImpl.NOT_CALLED) return result;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.getInternalMetaClass().doGetAt(instance, index);
+      return this.superClassMetaClass.getInternalMetaClass().doGetAt(tc, instance, index);
     } else {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
@@ -1623,19 +1621,19 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.MetaClass#putAt(java.lang.Object, java.lang.Object)
+   * @see ng.runtime.InstanceHandler#putAt(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object putAt(final Object instance, final Object index) throws Throwable {
+  public Object putAt(final ThreadContext tc, final Object instance, final Object index) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doPutAt(instance, index);
+    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doPutAt(tc, instance, index);
       
       if (result != RuntimeMetaClassImpl.NOT_CALLED) return result;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.getInternalMetaClass().doPutAt(instance, index);
+      return this.superClassMetaClass.getInternalMetaClass().doPutAt(tc, instance, index);
     } else {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }

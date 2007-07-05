@@ -25,6 +25,7 @@ import ng.lang.NgSystem;
 import ng.runtime.NgBoolean;
 import ng.runtime.NgDouble;
 import ng.runtime.NgInt;
+import ng.runtime.ThreadContext;
 
 public class NgDoubleMetaClass extends RuntimeMetaClassImpl {
   public NgDoubleMetaClass() {
@@ -3215,10 +3216,10 @@ class NgDoubleInternalMetaClass extends InternalMetaClassImpl {
   }
   
   @Override
-  public Object doAsType(final Object instance, final Class type) throws Throwable {
+  public Object doAsType(final ThreadContext tc, final Object instance, final Class type) throws Throwable {
     
     if (type == double.class) return instance;
     
-    return super.doAsType(instance, type);
+    return super.doAsType(tc, instance, type);
   }
 }

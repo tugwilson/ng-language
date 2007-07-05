@@ -19,6 +19,7 @@
 package uk.co.wilson.ng.runtime.metaclass;
 
 import ng.runtime.NgBoolean;
+import ng.runtime.ThreadContext;
 
 
 public class NgBooleanMetaClass extends RuntimeMetaClassImpl {
@@ -51,10 +52,10 @@ class NgBooleanInternalMetaClass extends InternalMetaClassImpl {
   }
   
   @Override
-  public Object doAsType(final Object instance, final Class type) throws Throwable {
+  public Object doAsType(final ThreadContext tc, final Object instance, final Class type) throws Throwable {
     
     if (type == boolean.class) return instance;
     
-    return super.doAsType(instance, type);
+    return super.doAsType(tc, instance, type);
   }
 }

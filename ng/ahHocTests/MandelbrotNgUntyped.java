@@ -81,6 +81,7 @@ public class MandelbrotNgUntyped extends NgBaseObject {
   }
 
   public static void main(final String args[]) throws Throwable {
+    final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
       final Date d1 = new Date();
       final MandelbrotNgUntyped instance = new MandelbrotNgUntyped();
       int x,y;
@@ -88,7 +89,7 @@ public class MandelbrotNgUntyped extends NgBaseObject {
 ;//          System.out.print("\n");
           for (x = -39; x < 39; x++) {
               final Object tmp = instance.iterate(NgSystem.ngIntMetaClass.divide(x, 40.0f), NgSystem.ngIntMetaClass.divide(y, 40.0f)) ;
-              if (NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp).asInt(tmp) == 0) 
+              if ($tc.asInt(tmp) == 0) 
 ;//                  System.out.print("*");
               else
 ;//                  System.out.print(" ");

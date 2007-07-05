@@ -111,6 +111,139 @@ public interface InternalMetaClass {
   MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
 
   /**
+   * @param methodName
+   * @param instance
+   * @param arguments
+   * @return
+   */
+  Callable doGetMetaMethodFor(String methodName, Object[] arguments);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, boolean p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, byte p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, char p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, short p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, int p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, long p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, float p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, double p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, BigInteger p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, BigDecimal p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, Object p1);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @param p2
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, Object p1, Object p2);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, Object p1, Object p2, Object p3);
+
+  /**
+   * @param methodName
+   * @param instance
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  Callable doGetMetaMethodQuick(String methodName, Object p1, Object p2, Object p3, Object p4);
+  
+  /**
    * @param tc
    * @param instance
    * @param methodName
@@ -312,6 +445,12 @@ public interface InternalMetaClass {
    * @throws Throwable
    */
   Object doSetField(ThreadContext tc, Object instance, String fieldName, Object newValue) throws Throwable;
+  
+  /**
+   * @param instance
+   * @return
+   */
+  Callable doGetCallable(Object instance);
   
   /**
    * @param tc
@@ -597,53 +736,67 @@ public interface InternalMetaClass {
   Object doIsCase(Object instance, Object rhs) throws Throwable;
 
   /**
+   * @param tc
    * @param instance
    * @param type
    * @return
+   * @throws Throwable
    */
-  Object doAsType(Object instance, Class type) throws Throwable;
+  Object doAsType(ThreadContext tc, Object instance, Class type) throws Throwable;
 
   /**
+   * @param tc
    * @param instance
    * @param index
    * @return
+   * @throws Throwable
    */
-  Object doGetAt(Object instance, Object index) throws Throwable;
+  Object doGetAt(ThreadContext tc, Object instance, Object index) throws Throwable;
 
   /**
+   * @param tc
    * @param instance
    * @param index
    * @return
+   * @throws Throwable
    */
-  Object doGetAt(Object instance, int index) throws Throwable;
+  Object doGetAt(ThreadContext tc, Object instance, int index) throws Throwable;
 
   /**
+   * @param tc
    * @param instance
    * @param index
    * @return
+   * @throws Throwable
    */
-  Object doGetAt(Object instance, BigInteger index) throws Throwable;
+  Object doGetAt(ThreadContext tc, Object instance, BigInteger index) throws Throwable;
 
   /**
+   * @param tc
    * @param instance
    * @param index
    * @return
+   * @throws Throwable
    */
-  Object doPutAt(Object instance, Object index) throws Throwable;
+  Object doPutAt(ThreadContext tc, Object instance, Object index) throws Throwable;
 
   /**
+   * @param tc
    * @param instance
    * @param index
    * @return
+   * @throws Throwable
    */
-  Object doPutAt(Object instance, int index) throws Throwable;
+  Object doPutAt(ThreadContext tc, Object instance, int index) throws Throwable;
 
   /**
+   * @param tc
    * @param instance
    * @param index
    * @return
+   * @throws Throwable
    */
-  Object doPutAt(Object instance, BigInteger index) throws Throwable;
+  Object doPutAt(ThreadContext tc, Object instance, BigInteger index) throws Throwable;
   
   /**
    * @param instance
