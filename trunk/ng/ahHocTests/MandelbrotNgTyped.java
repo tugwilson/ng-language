@@ -32,38 +32,31 @@ public class MandelbrotNgTyped extends NgBaseObject {
   private int iterate(final float x, final float y) throws Throwable
   {
       final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
-      Object $tmp = NgSystem.ngFloatMetaClass.subtract(y, 0.5f);
-      final float cr = NgSystem.metaClassRegistry.getRuntimeMetaClass($tmp).asFloat($tmp);
+      final float cr = $tc.asFloat(NgSystem.ngFloatMetaClass.subtract(y, 0.5f));
       final float ci = x;
       float zi = 0.0f;
       float zr = 0.0f;
       int i = 0;
       while (true) {
           // i++;
-          $tmp = NgSystem.ngIntMetaClass.postfixIncrement(i);
-          i = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).asInt($tmp);
+          i = $tc.asInt(NgSystem.ngIntMetaClass.postfixIncrement(i));
           
           //  float temp = zr * zi;
-          $tmp = NgSystem.ngFloatMetaClass.multiply(zr, zi);
-          final float temp = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).asFloat($tmp);
+          final float temp = $tc.asFloat(NgSystem.ngFloatMetaClass.multiply(zr, zi));
           
           //  float zr2 = zr * zr;
-          $tmp = NgSystem.ngFloatMetaClass.multiply(zr, zr);
-          final float zr2 = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).asFloat($tmp);
+          final float zr2 = $tc.asFloat(NgSystem.ngFloatMetaClass.multiply(zr, zr));
           
           //  float zi2 = zi * zi;          
-          $tmp = NgSystem.ngFloatMetaClass.multiply(zi, zi);
-          final float zi2 = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).asFloat($tmp);
+          final float zi2 = $tc.asFloat(NgSystem.ngFloatMetaClass.multiply(zi, zi));
           
           //  zr = zr2 - zi2 + cr;
-          $tmp = NgSystem.ngFloatMetaClass.subtract(zr2, zi2);
-          $tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, cr);
-          zr = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).asFloat($tmp);
+          Object $tmp = NgSystem.ngFloatMetaClass.subtract(zr2, zi2);
+          zr = $tc.asFloat(NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, cr));
           
           // zi = temp + temp + ci;
           $tmp = NgSystem.ngFloatMetaClass.add(temp, temp);
-          $tmp = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, ci);
-          zi = NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).asFloat($tmp);
+          zi = $tc.asFloat(NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, ci));
           
           // if (zi2 + zr2 > BAILOUT)
           //    return i;
@@ -83,6 +76,7 @@ public class MandelbrotNgTyped extends NgBaseObject {
 
   public static void main(final String args[]) throws Throwable
   {
+    final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
       final Date d1 = new Date();
       final MandelbrotNgTyped instance = new MandelbrotNgTyped();
       int x,y;
@@ -91,7 +85,7 @@ public class MandelbrotNgTyped extends NgBaseObject {
           for (x = -39; x < 39; x++) {
               final Object tmp1 = NgSystem.ngIntMetaClass.divide(x, 40.0f);
               final Object tmp2 = NgSystem.ngIntMetaClass.divide(y, 40.0f);
-              if (instance.iterate(NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp1).asFloat(tmp1), NgSystem.metaClassRegistry.getRuntimeMetaClass(tmp2).asFloat(tmp2)) == 0) 
+              if (instance.iterate($tc.asFloat(tmp1), $tc.asFloat(tmp2)) == 0) 
 ;//                  System.out.print("*");
               else
 ;//                  System.out.print(" ");

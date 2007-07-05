@@ -26,6 +26,7 @@ import ng.runtime.NgBoolean;
 import ng.runtime.NgDouble;
 import ng.runtime.NgFloat;
 import ng.runtime.NgInt;
+import ng.runtime.ThreadContext;
 
 public class NgFloatMetaClass extends RuntimeMetaClassImpl {
   public NgFloatMetaClass() {
@@ -3215,10 +3216,10 @@ class NgFloatInternalMetaClass extends InternalMetaClassImpl {
   }
   
   @Override
-  public Object doAsType(final Object instance, final Class type) throws Throwable {
+  public Object doAsType(final ThreadContext tc, final Object instance, final Class type) throws Throwable {
     
     if (type == float.class) return instance;
     
-    return super.doAsType(instance, type);
+    return super.doAsType(tc, instance, type);
   }
 }

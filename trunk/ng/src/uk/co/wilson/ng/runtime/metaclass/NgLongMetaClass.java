@@ -27,6 +27,7 @@ import ng.runtime.NgDouble;
 import ng.runtime.NgFloat;
 import ng.runtime.NgInt;
 import ng.runtime.NgLong;
+import ng.runtime.ThreadContext;
 
 public class NgLongMetaClass extends RuntimeMetaClassImpl {
   public NgLongMetaClass() {
@@ -4559,11 +4560,11 @@ class NgLongInternalMetaClass extends InternalMetaClassImpl {
   }
   
   @Override
-  public Object doAsType(final Object instance, final Class type) throws Throwable {
+  public Object doAsType(final ThreadContext tc, final Object instance, final Class type) throws Throwable {
     
     if (type == long.class) return instance;
     
-    return super.doAsType(instance, type);
+    return super.doAsType(tc, instance, type);
   }
 
 }

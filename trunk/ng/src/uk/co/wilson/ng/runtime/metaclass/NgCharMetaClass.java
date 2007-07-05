@@ -28,6 +28,7 @@ import ng.runtime.NgDouble;
 import ng.runtime.NgFloat;
 import ng.runtime.NgInt;
 import ng.runtime.NgLong;
+import ng.runtime.ThreadContext;
 
 public class NgCharMetaClass extends RuntimeMetaClassImpl {
   public NgCharMetaClass() {
@@ -4567,10 +4568,10 @@ class NgCharInternalMetaClass extends InternalMetaClassImpl {
   }
   
   @Override
-  public Object doAsType(final Object instance, final Class type) throws Throwable {
+  public Object doAsType(final ThreadContext tc, final Object instance, final Class type) throws Throwable {
     
     if (type == char.class) return instance;
     
-    return super.doAsType(instance, type);
+    return super.doAsType(tc, instance, type);
   }
 }

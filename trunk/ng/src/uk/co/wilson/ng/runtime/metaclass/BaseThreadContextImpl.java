@@ -5,9 +5,7 @@ import java.math.BigInteger;
 
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
-import ng.runtime.InternalMetaClass;
-import ng.runtime.RuntimeMetaClass;
-import ng.runtime.ThreadContext;
+import ng.runtime.*;
 
 /**
  * @author John
@@ -254,6 +252,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return invokeMethodQuick(getInternalMetaClassFor(metaClass), instance, methodName);
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param arguments
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethod(final InternalMetaClass metaClass, final Object instance, final String methodName, final Object[] arguments) throws Throwable {
     final Object result = metaClass.doInvokeMethod(this, instance, methodName, arguments);
 
@@ -266,6 +272,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final BigDecimal p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -278,6 +292,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final BigInteger p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -290,6 +312,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final boolean p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -302,6 +332,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final byte p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -314,6 +352,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final char p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -326,6 +372,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final double p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -338,6 +392,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final float p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -350,6 +412,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final int p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -362,6 +432,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final long p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -374,6 +452,17 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1, p2, p3, p4);
 
@@ -386,6 +475,16 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final Object p1, final Object p2, final Object p3) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1, p2, p3);
 
@@ -398,6 +497,15 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final Object p1, final Object p2) throws Throwable {
     final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1, p2);
 
@@ -410,6 +518,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final Object p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -422,6 +538,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName, final short p1) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName, p1);
 
@@ -434,6 +558,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param methodName
+   * @return
+   * @throws Throwable
+   */
   protected Object invokeMethodQuick(final InternalMetaClass metaClass, final Object instance, final String methodName) throws Throwable {
   final Object result = metaClass.doInvokeMethodQuick(this, instance, methodName);
 
@@ -700,6 +831,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     }
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final BigDecimal p1) throws Throwable {
   final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -709,6 +847,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final BigInteger p1) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -718,6 +863,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final boolean p1) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -727,6 +879,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final byte p1) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -736,6 +895,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final char p1) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -745,6 +911,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final double p1) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -754,6 +927,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final float p1) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -763,6 +943,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final int p1) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -772,6 +959,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final long p1) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -781,6 +975,16 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1, p2, p3, p4);
 
@@ -790,6 +994,15 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final Object p1, final Object p2, final Object p3) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1, p2, p3);
 
@@ -799,6 +1012,14 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @param p2
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final Object p1, final Object p2) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1, p2);
 
@@ -808,6 +1029,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final Object p1) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -817,6 +1045,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance, final short p1) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance, p1);
 
@@ -826,6 +1061,12 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     return result;
   }
 
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
   protected Object callQuick(final InternalMetaClass metaClass, final Object instance) throws Throwable {
     final Object result = metaClass.doCallQuick(this, instance);
 
@@ -951,6 +1192,454 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     
     // TODO: make this error more detailed.
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException("The field " +  fieldName + " was not found");
+
+    return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asType(java.lang.Object, java.lang.Class)
+   */
+  public Object asType(Object instance, Class type) throws Throwable {
+    return asType(getInternalMetaClassFor(instance), instance, type);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asBoolean(java.lang.Object)
+   */
+  public boolean asBoolean(Object instance) throws Throwable {
+    return asBoolean(getInternalMetaClassFor(instance), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asByte(java.lang.Object)
+   */
+  public byte asByte(Object instance) throws Throwable {
+    return asByte(getInternalMetaClassFor(instance), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asChar(java.lang.Object)
+   */
+  public char asChar(Object instance) throws Throwable {
+    return asChar(getInternalMetaClassFor(instance), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asDouble(java.lang.Object)
+   */
+  public double asDouble(Object instance) throws Throwable {
+    return asDouble(getInternalMetaClassFor(instance), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asFloat(java.lang.Object)
+   */
+  public float asFloat(Object instance) throws Throwable {
+    return asFloat(getInternalMetaClassFor(instance), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asInt(java.lang.Object)
+   */
+  public int asInt(Object instance) throws Throwable {
+    return asInt(getInternalMetaClassFor(instance), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asLong(java.lang.Object)
+   */
+  public long asLong(Object instance) throws Throwable {
+    return asLong(getInternalMetaClassFor(instance), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asShort(java.lang.Object)
+   */
+  public short asShort(Object instance) throws Throwable {
+    return asShort(getInternalMetaClassFor(instance), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asType(ng.runtime.RuntimeMetaClass, java.lang.Object, java.lang.Class)
+   */
+  public Object asType(RuntimeMetaClass metaClass, Object instance, Class type) throws Throwable {
+    return asType(getInternalMetaClassFor(metaClass), instance, type);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asBoolean(ng.runtime.RuntimeMetaClass, java.lang.Object)
+   */
+  public boolean asBoolean(RuntimeMetaClass metaClass, Object instance) throws Throwable {
+    return asBoolean(getInternalMetaClassFor(metaClass), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asByte(ng.runtime.RuntimeMetaClass, java.lang.Object)
+   */
+  public byte asByte(RuntimeMetaClass metaClass, Object instance) throws Throwable {
+    return asByte(getInternalMetaClassFor(metaClass), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asChar(ng.runtime.RuntimeMetaClass, java.lang.Object)
+   */
+  public char asChar(RuntimeMetaClass metaClass, Object instance) throws Throwable {
+    return asChar(getInternalMetaClassFor(metaClass), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asDouble(ng.runtime.RuntimeMetaClass, java.lang.Object)
+   */
+  public double asDouble(RuntimeMetaClass metaClass, Object instance) throws Throwable {
+    return asDouble(getInternalMetaClassFor(metaClass), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asFloat(ng.runtime.RuntimeMetaClass, java.lang.Object)
+   */
+  public float asFloat(RuntimeMetaClass metaClass, Object instance) throws Throwable {
+    return asFloat(getInternalMetaClassFor(metaClass), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asInt(ng.runtime.RuntimeMetaClass, java.lang.Object)
+   */
+  public int asInt(RuntimeMetaClass metaClass, Object instance) throws Throwable {
+    return asInt(getInternalMetaClassFor(metaClass), instance);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asLong(ng.runtime.RuntimeMetaClass, java.lang.Object)
+   */
+  public long asLong(RuntimeMetaClass metaClass, Object instance) throws Throwable {
+    return asLong(getInternalMetaClassFor(metaClass), instance);
+  }
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#asShort(ng.runtime.RuntimeMetaClass, java.lang.Object)
+   */
+  public short asShort(RuntimeMetaClass metaClass, Object instance) throws Throwable {
+    return asShort(getInternalMetaClassFor(metaClass), instance);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param type
+   * @return
+   * @throws Throwable
+   */
+  protected Object asType(InternalMetaClass metaClass, Object instance, Class type) throws Throwable {
+    final Object result = metaClass.doAsType(this, instance, type);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be converted to " + type.getClass().getName());
+
+    return result;
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  protected boolean asBoolean(InternalMetaClass metaClass, Object instance) throws Throwable {
+  final Object result = metaClass.doAsType(this, instance, boolean.class);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be converted to boolean");
+
+    return ((NgBoolean)result).getBooleanValue();
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  protected byte asByte(InternalMetaClass metaClass, Object instance) throws Throwable {
+    final Object result = metaClass.doAsType(this, instance, byte.class);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be converted to byte");
+
+    return ((NgByte)result).getByteValue();
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  protected char asChar(InternalMetaClass metaClass, Object instance) throws Throwable {
+    final Object result = metaClass.doAsType(this, instance, char.class);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be converted to char");
+
+    return ((NgChar)result).getCharValue();
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  protected double asDouble(InternalMetaClass metaClass, Object instance) throws Throwable {
+    final Object result = metaClass.doAsType(this, instance, double.class);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be converted to double");
+
+    return ((NgDouble)result).getDoubleValue();
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  protected float asFloat(InternalMetaClass metaClass, Object instance) throws Throwable {
+    final Object result = metaClass.doAsType(this, instance, float.class);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be converted to float");
+
+    return ((NgFloat)result).getFloatValue();
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  protected int asInt(InternalMetaClass metaClass, Object instance) throws Throwable {
+    final Object result = metaClass.doAsType(this, instance, int.class);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be converted to int");
+
+    return ((NgInt)result).getIntValue();
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  protected long asLong(InternalMetaClass metaClass, Object instance) throws Throwable {
+    final Object result = metaClass.doAsType(this, instance, long.class);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be converted to long");
+
+    return ((NgLong)result).getLongValue();
+  }
+  /**
+   * @param metaClass
+   * @param instance
+   * @return
+   * @throws Throwable
+   */
+  protected short asShort(InternalMetaClass metaClass, Object instance) throws Throwable {
+    final Object result = metaClass.doAsType(this, instance, short.class);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be converted to short");
+
+    return ((NgShort)result).getShortValue();
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getAt(java.lang.Object, java.lang.Object)
+   */
+  public Object getAt(Object instance, Object index) throws Throwable {
+    return getAt(getInternalMetaClassFor(instance), instance, index);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getAt(java.lang.Object, java.math.BigInteger)
+   */
+  public Object getAt(Object instance, BigInteger index) throws Throwable {
+    return getAt(getInternalMetaClassFor(instance), instance, index);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getAt(java.lang.Object, int)
+   */
+  public Object getAt(Object instance, int index) throws Throwable {
+    return getAt(getInternalMetaClassFor(instance), instance, index);
+  }
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  public Object getAt(RuntimeMetaClass metaClass, Object instance, Object index) throws Throwable {
+    return getAt(getInternalMetaClassFor(metaClass), instance, index);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getAt(ng.runtime.RuntimeMetaClass, java.lang.Object, java.math.BigInteger)
+   */
+  public Object getAt(RuntimeMetaClass metaClass, Object instance, BigInteger index) throws Throwable {
+    return getAt(getInternalMetaClassFor(metaClass), instance, index);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getAt(ng.runtime.RuntimeMetaClass, java.lang.Object, int)
+   */
+  public Object getAt(RuntimeMetaClass metaClass, Object instance, int index) throws Throwable {
+    return getAt(getInternalMetaClassFor(metaClass), instance, index);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#putAt(java.lang.Object, java.lang.Object)
+   */
+  public Object putAt(Object instance, Object index) throws Throwable {
+    return putAt(getInternalMetaClassFor(instance), instance, index);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#putAt(java.lang.Object, java.math.BigInteger)
+   */
+  public Object putAt(Object instance, BigInteger index) throws Throwable {
+    return putAt(getInternalMetaClassFor(instance), instance, index);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#putAt(java.lang.Object, int)
+   */
+  public Object putAt(Object instance, int index) throws Throwable {
+    return putAt(getInternalMetaClassFor(instance), instance, index);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  public Object putAt(RuntimeMetaClass metaClass, Object instance, Object index) throws Throwable {
+    return putAt(getInternalMetaClassFor(metaClass), instance, index);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#putAt(ng.runtime.RuntimeMetaClass, java.lang.Object, java.math.BigInteger)
+   */
+  public Object putAt(RuntimeMetaClass metaClass, Object instance, BigInteger index) throws Throwable {
+    return putAt(getInternalMetaClassFor(metaClass), instance, index);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#putAt(ng.runtime.RuntimeMetaClass, java.lang.Object, int)
+   */
+  public Object putAt(RuntimeMetaClass metaClass, Object instance, int index) throws Throwable {
+    return putAt(getInternalMetaClassFor(metaClass), instance, index);
+  }
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  protected Object getAt(InternalMetaClass metaClass, Object instance, Object index) throws Throwable {
+  final Object result = metaClass.doGetAt(this, instance, index);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be subscripted");
+
+    return result;
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  protected Object getAt(InternalMetaClass metaClass, Object instance, int index) throws Throwable {
+  final Object result = metaClass.doGetAt(this, instance, index);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be subscripted");
+
+    return result;
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  protected Object getAt(InternalMetaClass metaClass, Object instance, BigInteger index) throws Throwable {
+  final Object result = metaClass.doGetAt(this, instance, index);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be subscripted");
+
+    return result;
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  protected Object putAt(InternalMetaClass metaClass, Object instance, Object index) throws Throwable {
+  final Object result = metaClass.doPutAt(this, instance, index);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be subscripted");
+
+    return result;
+  }
+    
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  protected Object putAt(InternalMetaClass metaClass, Object instance, int index) throws Throwable {
+  final Object result = metaClass.doPutAt(this, instance, index);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be subscripted");
+
+    return result;
+  }
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @param index
+   * @return
+   * @throws Throwable
+   */
+  protected Object putAt(InternalMetaClass metaClass, Object instance, BigInteger index) throws Throwable {
+  final Object result = metaClass.doPutAt(this, instance, index);
+
+    // TODO: make this error more detailed.
+    if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be subscripted");
 
     return result;
   }

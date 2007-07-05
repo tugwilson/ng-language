@@ -111,54 +111,6 @@ public interface RuntimeMetaClass extends MetaClass {
    * @return
    */
   MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
-  
-  /**
-   * @param instance
-   * @return
-   */
-  byte asByte(Object instance) throws Throwable;
-  
-  /**
-   * @param instance
-   * @return
-   */
-  char asChar(Object instance) throws Throwable;
-  
-  /**
-   * @param instance
-   * @return
-   */
-  short asShort(Object instance) throws Throwable;
-  
-  /**
-   * @param instance
-   * @return
-   */
-  int asInt(Object instance) throws Throwable;
-  
-  /**
-   * @param instance
-   * @return
-   */
-  long asLong(Object instance) throws Throwable;
-  
-  /**
-   * @param instance
-   * @return
-   */
-  float asFloat(Object instance) throws Throwable;
-  
-  /**
-   * @param instance
-   * @return
-   */
-  double asDouble(Object instance) throws Throwable;
-  
-  /**
-   * @param instance
-   * @return
-   */
-  boolean asBoolean(Object instance) throws Throwable;
    
   /**
    * @param instance
@@ -255,32 +207,6 @@ public interface RuntimeMetaClass extends MetaClass {
    * @return
    */
   Object unaryMinus(BigDecimal instance) throws Throwable;
- 
-  /**
-   * @param instance
-   * @param index
-   * @return
-   */
-  Object getAt(Object instance, int index) throws Throwable;
-  
-  /**
-   * @param instance
-   * @param index
-   * @return
-   */
-  Object getAt(Object instance, BigInteger index) throws Throwable;
-  
-  /**
-   * @param instance
-   * @param index
-   */
-  Object putAt(Object instance, int index) throws Throwable;
-  
-  /**
-   * @param instance
-   * @param index
-   */
-  Object putAt(Object instance, BigInteger index) throws Throwable; 
 
   /**
    * @param instance
