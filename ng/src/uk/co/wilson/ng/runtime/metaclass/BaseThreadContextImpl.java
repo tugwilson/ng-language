@@ -3,6 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
+
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
 import ng.runtime.*;
@@ -26,6 +28,19 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
    */
   protected InternalMetaClass getInternalMetaClassFor(final RuntimeMetaClass metaClass) {
     return metaClass.getInternalMetaClass();
+  }
+  
+  public RuntimeMetaClass createMetaClassFor(Class theClass) {
+    return createMetaClassFor(getInternalMetaClassFor(theClass), theClass);
+  }
+  
+  public RuntimeMetaClass createMetaClassFor(RuntimeMetaClass metaClass, Class theClass) {
+    return createMetaClassFor(getInternalMetaClassFor(metaClass), theClass);
+        
+  }
+  
+  protected RuntimeMetaClass createMetaClassFor(InternalMetaClass metaClass, Class theClass) {
+    return metaClass.doCreateMetaClassFor(theClass);
   }
 
   /* (non-Javadoc)
@@ -1642,5 +1657,308 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
     if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgRuntimeException(metaClass.doGetTheClass(instance).getName() + " cannot be subscripted");
 
     return result;
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#selectMethod(ng.runtime.RuntimeMetaClass, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4) {
+    return selectMethod(getInternalMetaClassFor(metaClass), currentSelection, methodName, p1, p2, p3, p4);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#selectMethod(ng.runtime.RuntimeMetaClass, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3) {
+    return selectMethod(getInternalMetaClassFor(metaClass), currentSelection, methodName, p1, p2, p3);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#selectMethod(ng.runtime.RuntimeMetaClass, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2) {
+    return selectMethod(getInternalMetaClassFor(metaClass), currentSelection, methodName, p1, p2);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#selectMethod(ng.runtime.RuntimeMetaClass, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass)
+   */
+  public MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1) {
+    return selectMethod(getInternalMetaClassFor(metaClass), currentSelection, methodName, p1);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#selectMethod(ng.runtime.RuntimeMetaClass, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
+   */
+  public MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses) {
+    return selectMethod(getInternalMetaClassFor(metaClass), currentSelection, methodName, argumentMetaClasses);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#selectMethod(ng.runtime.RuntimeMetaClass, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String)
+   */
+  public MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName) {
+    return selectMethod(getInternalMetaClassFor(metaClass), currentSelection, methodName);
+  }
+
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  protected MetaMethodSelection selectMethod(InternalMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4) {
+    return metaClass.doSelectMethod(this, currentSelection, methodName, p1, p2, p3, p4);
+  }
+
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  protected MetaMethodSelection selectMethod(InternalMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3) {
+    return metaClass.doSelectMethod(this, currentSelection, methodName, p1, p2, p3);
+  }
+
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @return
+   */
+  protected MetaMethodSelection selectMethod(InternalMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2) {
+    return metaClass.doSelectMethod(this, currentSelection, methodName, p1, p2);
+  }
+
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  protected MetaMethodSelection selectMethod(InternalMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1) {
+    return metaClass.doSelectMethod(this, currentSelection, methodName, p1);
+  }
+
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @param argumentMetaClasses
+   * @return
+   */
+  protected MetaMethodSelection selectMethod(InternalMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses) {
+    return metaClass.doSelectMethod(this, currentSelection, methodName, argumentMetaClasses);
+  }
+
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @return
+   */
+  protected MetaMethodSelection selectMethod(InternalMetaClass metaClass, MetaMethodSelection currentSelection, String methodName) {
+    return metaClass.doSelectMethod(this, currentSelection, methodName);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#calculateConversionCost(ng.runtime.RuntimeMetaClass, java.lang.Class)
+   */
+  public int calculateConversionCost(RuntimeMetaClass metaClass, Class parameterType) {
+    return calculateConversionCost(getInternalMetaClassFor(metaClass), parameterType);
+  }
+
+  /**
+   * @param metaClass
+   * @param parameterType
+   * @return
+   */
+  protected int calculateConversionCost(InternalMetaClass metaClass, Class parameterType) {
+    return metaClass.doCalculateConversionCost(parameterType);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(java.lang.Object, java.lang.Class)
+   */
+  public Object getParamObject(Object instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(instance), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(ng.runtime.RuntimeMetaClass, java.lang.Object, java.lang.Class)
+   */
+  public Object getParamObject(RuntimeMetaClass metaClass, Object instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(metaClass), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(boolean, java.lang.Class)
+   */
+  public Object getParamObject(boolean instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(NgSystem.ngBooleanMetaClass), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(char, java.lang.Class)
+   */
+  public Object getParamObject(char instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(NgSystem.ngCharMetaClass), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(byte, java.lang.Class)
+   */
+  public Object getParamObject(byte instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(NgSystem.ngByteMetaClass), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(short, java.lang.Class)
+   */
+  public Object getParamObject(short instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(NgSystem.ngShortMetaClass), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(int, java.lang.Class)
+   */
+  public Object getParamObject(int instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(NgSystem.ngIntMetaClass), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(long, java.lang.Class)
+   */
+  public Object getParamObject(long instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(NgSystem.ngLongMetaClass), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(float, java.lang.Class)
+   */
+  public Object getParamObject(float instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(NgSystem.ngFloatMetaClass), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(double, java.lang.Class)
+   */
+  public Object getParamObject(double instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(NgSystem.ngDoubleMetaClass), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(java.math.BigInteger, java.lang.Class)
+   */
+  public Object getParamObject(BigInteger instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(NgSystem.bigIntegerMetaClass), instance, theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see ng.runtime.ThreadContext#getParamObject(java.math.BigDecimal, java.lang.Class)
+   */
+  public Object getParamObject(BigDecimal instance, Class theClass) {
+    return getParamObject(getInternalMetaClassFor(NgSystem.bigDecimalMetaClass), instance, theClass);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  protected Object getParamObject(InternalMetaClass metaClass, Object instance, Class theClass) {
+    return metaClass.doGetParamObject(instance, theClass);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  protected Object getParamObject(InternalMetaClass metaClass, boolean instance, Class theClass) {
+    return metaClass.doGetParamObject(instance, theClass);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  protected Object getParamObject(InternalMetaClass metaClass, char instance, Class theClass) {
+    return metaClass.doGetParamObject(instance, theClass);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  protected Object getParamObject(InternalMetaClass metaClass, byte instance, Class theClass) {
+    return metaClass.doGetParamObject(instance, theClass);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  protected Object getParamObject(InternalMetaClass metaClass, short instance, Class theClass) {
+    return metaClass.doGetParamObject(instance, theClass);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  protected Object getParamObject(InternalMetaClass metaClass, int instance, Class theClass) {
+    return metaClass.doGetParamObject(instance, theClass);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  protected Object getParamObject(InternalMetaClass metaClass, long instance, Class theClass) {
+    return metaClass.doGetParamObject(instance, theClass);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  protected Object getParamObject(InternalMetaClass metaClass, float instance, Class theClass) {
+    return metaClass.doGetParamObject(instance, theClass);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  protected Object getParamObject(InternalMetaClass metaClass, double instance, Class theClass) {
+    return metaClass.doGetParamObject(instance, theClass);
   }
 }

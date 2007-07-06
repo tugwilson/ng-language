@@ -3,6 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.reflection.fields;
 import java.lang.reflect.Field;
 
 import ng.runtime.NgByte;
+import ng.runtime.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 
 /**
@@ -19,10 +20,10 @@ public class SetByteFieldMetaMethod extends SetUntypedFieldMetaMethod {
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetUntypedFieldMetaMethod#call(java.lang.Object, java.lang.Object)
+   * @see uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetUntypedFieldMetaMethod#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object callQuick(final Object instance, final Object value) {
+  public Object callQuick(final ThreadContext tc, final Object instance, final Object value) {
     try {
       this.field.setByte(instance, ((NgByte)value).getByteValue());
     } catch (final IllegalArgumentException e) {

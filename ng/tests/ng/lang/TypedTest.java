@@ -8659,8 +8659,6 @@ public class TypedTest extends TestCase {
     assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).putAt(this.o, 1), null);
     assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).putAt(this.o, this.bi), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).createMetaClassFor(this.o.getClass()), null);
-    
     assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getInternalMetaClass().getClass(), CustomInternalMetaClass.class);
     
     assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getTheClass(this.o), Object.class);

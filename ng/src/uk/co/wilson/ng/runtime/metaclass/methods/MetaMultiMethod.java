@@ -38,11 +38,11 @@ public class MetaMultiMethod implements MetaMethod {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass[])
+   * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass[])
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final RuntimeMetaClass[] argumentMetaClasses) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final RuntimeMetaClass[] argumentMetaClasses) {
     for (int i = 0; i != this.methodList.size(); i++) {
-      currentSelection = this.methodList.get(i).selectMethod(currentSelection, argumentMetaClasses);
+      currentSelection = this.methodList.get(i).selectMethod(tc, currentSelection, argumentMetaClasses);
       
       if (currentSelection.score == 0) return currentSelection;
     }
@@ -51,11 +51,11 @@ public class MetaMultiMethod implements MetaMethod {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection)
+   * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection)
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection) {
     for (int i = 0; i != this.methodList.size(); i++) {
-      currentSelection = this.methodList.get(i).selectMethod(currentSelection);
+      currentSelection = this.methodList.get(i).selectMethod(tc, currentSelection);
       
       if (currentSelection.score == 0) return currentSelection;
     }
@@ -64,11 +64,11 @@ public class MetaMultiMethod implements MetaMethod {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass)
+   * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final RuntimeMetaClass p1) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final RuntimeMetaClass p1) {
     for (int i = 0; i != this.methodList.size(); i++) {
-      currentSelection = this.methodList.get(i).selectMethod(currentSelection, p1);
+      currentSelection = this.methodList.get(i).selectMethod(tc, currentSelection, p1);
       
       if (currentSelection.score == 0) return currentSelection;
     }
@@ -77,11 +77,11 @@ public class MetaMultiMethod implements MetaMethod {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
     for (int i = 0; i != this.methodList.size(); i++) {
-      currentSelection = this.methodList.get(i).selectMethod(currentSelection, p1, p2);
+      currentSelection = this.methodList.get(i).selectMethod(tc, currentSelection, p1, p2);
       
       if (currentSelection.score == 0) return currentSelection;
     }
@@ -90,11 +90,11 @@ public class MetaMultiMethod implements MetaMethod {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
     for (int i = 0; i != this.methodList.size(); i++) {
-      currentSelection = this.methodList.get(i).selectMethod(currentSelection, p1, p2, p3);
+      currentSelection = this.methodList.get(i).selectMethod(tc, currentSelection, p1, p2, p3);
       
       if (currentSelection.score == 0) return currentSelection;
     }
@@ -103,11 +103,11 @@ public class MetaMultiMethod implements MetaMethod {
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.MetaMethod#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
+   * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
     for (int i = 0; i != this.methodList.size(); i++) {
-      currentSelection = this.methodList.get(i).selectMethod(currentSelection, p1, p2, p3, p4);
+      currentSelection = this.methodList.get(i).selectMethod(tc, currentSelection, p1, p2, p3, p4);
       
       if (currentSelection.score == 0) return currentSelection;
     }

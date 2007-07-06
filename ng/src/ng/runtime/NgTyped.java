@@ -31,13 +31,6 @@ private final RuntimeMetaClass delegate;
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#getParamObject(java.lang.Object, java.lang.Class)
-   */
-  public Object getParamObject(final Object instance, final Class theClass) {
-    return this.delegate.getParamObject(this.instance, theClass);
-  }
-
-  /* (non-Javadoc)
    * @see ng.runtime.MetaClass#getMetaClassFor(java.lang.Class)
    */
   public MetaClass getMetaClassFor(final Class theClass) {
@@ -4555,15 +4548,6 @@ private final RuntimeMetaClass delegate;
    */
   public Object complement(final Object instance) throws Throwable {
     return this.delegate.getRuntimeMetaClass().complement(instance);
-  }
-
-  /**
-   * @param theClass
-   * @return
-   * @see ng.runtime.RuntimeMetaClass#createMetaClassFor(java.lang.Class)
-   */
-  public RuntimeMetaClass createMetaClassFor(final Class theClass) {
-    return this.delegate.getRuntimeMetaClass().createMetaClassFor(theClass);
   }
 
   /**
@@ -13103,13 +13087,6 @@ private final RuntimeMetaClass delegate;
     throw new NgRuntimeException("Operation not allowed on NgTyped");
   }
 
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#calculateConversionCost(java.lang.Class)
-   */
-  public int calculateConversionCost(final Class parameterType) {
-    return this.delegate.getRuntimeMetaClass().calculateConversionCost(parameterType);
-  }
-
   /**
    * @param theClass
    * @param arguments
@@ -13129,48 +13106,6 @@ private final RuntimeMetaClass delegate;
    */
   public Object invokeMethod(final Object instance, final String methodName, final Object[] arguments) throws Throwable {
     return this.delegate.getRuntimeMetaClass().invokeMethod(this.instance, methodName, arguments);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {
-    return this.delegate.getRuntimeMetaClass().selectMethod(currentSelection, methodName, argumentMetaClasses);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String)
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName) {
-    return this.delegate.getRuntimeMetaClass().selectMethod(currentSelection, methodName);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass)
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1) {
-    return this.delegate.getRuntimeMetaClass().selectMethod(currentSelection, methodName, p1);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
-    return this.delegate.getRuntimeMetaClass().selectMethod(currentSelection, methodName, p1, p2);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
-    return this.delegate.getRuntimeMetaClass().selectMethod(currentSelection, methodName, p1, p2, p3);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
-    return this.delegate.getRuntimeMetaClass().selectMethod(currentSelection, methodName, p1, p2, p3, p4);
   }
 
   /**

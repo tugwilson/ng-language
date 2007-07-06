@@ -2,6 +2,8 @@ package uk.co.wilson.ng.runtime.metaclass.reflection.methods;
 
 import java.lang.reflect.Method;
 
+import ng.runtime.ThreadContext;
+
 
 /**
  * @author John
@@ -17,11 +19,11 @@ public class VoidSetPropertyMetaMethod extends UntypedMetaMethod {
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(java.lang.Object, java.lang.Object)
+   * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object callQuick(final Object instance, final Object newValue) throws Throwable {
-    super.callQuick(instance, newValue);
+  public Object callQuick(final ThreadContext tc, final Object instance, final Object newValue) throws Throwable {
+    super.callQuick(tc, instance, newValue);
     
     return newValue;
   }
