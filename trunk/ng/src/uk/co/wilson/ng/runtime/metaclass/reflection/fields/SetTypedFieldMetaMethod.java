@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 
 import ng.runtime.NgNull;
 import ng.runtime.NgTyped;
+import ng.runtime.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 
 /**
@@ -22,11 +23,11 @@ public class SetTypedFieldMetaMethod extends SetUntypedFieldMetaMethod {
   }
 
   /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.fields.reflection.SetUntypedFieldMetaMethod#call(java.lang.Object, java.lang.Object)
+   * @see uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetUntypedFieldMetaMethod#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object callQuick(final Object instance, final Object value) {
-  final Object result = super.callQuick(instance, value);
+  public Object callQuick(final ThreadContext tc, final Object instance, final Object value) {
+  final Object result = super.callQuick(tc, instance, value);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   

@@ -18,43 +18,49 @@ public interface MetaMethod extends Callable  {
   MetaMethod addMetaMethod(MetaMethod metaMethod);
   
   /**
+   * @param tc
    * @param currentSelection
    * @param argumentMetaClasses
    * @return
    */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass[] argumentMetaClasses);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, RuntimeMetaClass[] argumentMetaClasses);
   
   /**
+   * @param tc
    * @param currentSelection
    * @return
    */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection);
   
   /**
+   * @param tc
    * @param currentSelection
    * @param p1
    * @return
    */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass p1);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, RuntimeMetaClass p1);
   
   /**
+   * @param tc
    * @param currentSelection
    * @param p1
    * @param p2
    * @return
    */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2);
   
   /**
+   * @param tc
    * @param currentSelection
    * @param p1
    * @param p2
    * @param p3
    * @return
    */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
   
   /**
+   * @param tc
    * @param currentSelection
    * @param p1
    * @param p2
@@ -62,5 +68,5 @@ public interface MetaMethod extends Callable  {
    * @param p4
    * @return
    */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
 }

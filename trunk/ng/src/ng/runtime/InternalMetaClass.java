@@ -26,11 +26,73 @@ import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 public interface InternalMetaClass {
   /**
+   * @param theClass
+   * @return
+   */
+  RuntimeMetaClass doCreateMetaClassFor(Class theClass);
+  
+  /**
    * @param instance
    * @param theClass
    * @return
    */
   Object doGetParamObject(Object instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object doGetParamObject(boolean instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object doGetParamObject(char instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object doGetParamObject(byte instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object doGetParamObject(short instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object doGetParamObject(int instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object doGetParamObject(long instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object doGetParamObject(float instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object doGetParamObject(double instance, Class theClass);
   
   /**
    * @param theClass
@@ -58,38 +120,43 @@ public interface InternalMetaClass {
   Object doInvokeConstructor(Class theClass, Object[] arguments) throws Throwable;
   
   /**
+   * @param tc
    * @param currentSelection
    * @param methodName
    * @param argumentMetaClasses
    * @return
    */
-  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
 
   /**
+   * @param tc
    * @param currentSelection
    * @param methodName
    * @return
    */
-  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName);
 
   /**
+   * @param tc
    * @param currentSelection
    * @param methodName
    * @param p1
    * @return
    */
-  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1);
 
   /**
+   * @param tc
    * @param currentSelection
    * @param methodName
    * @param p1
    * @param p2
    * @return
    */
-  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2);
 
   /**
+   * @param tc
    * @param currentSelection
    * @param methodName
    * @param p1
@@ -97,9 +164,10 @@ public interface InternalMetaClass {
    * @param p3
    * @return
    */
-  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
 
   /**
+   * @param tc
    * @param currentSelection
    * @param methodName
    * @param p1
@@ -108,140 +176,140 @@ public interface InternalMetaClass {
    * @param p4
    * @return
    */
-  MetaMethodSelection doSelectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param arguments
    * @return
    */
-  Callable doGetMetaMethodFor(String methodName, Object[] arguments);
+  Callable doGetMetaMethodFor(ThreadContext tc, String methodName, Object[] arguments);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, boolean p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, boolean p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, byte p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, byte p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, char p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, char p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, short p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, short p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, int p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, int p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, long p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, long p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, float p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, float p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, double p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, double p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, BigInteger p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, BigInteger p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, BigDecimal p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, BigDecimal p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, Object p1);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, Object p1);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @param p2
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, Object p1, Object p2);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, Object p1, Object p2);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @param p2
    * @param p3
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, Object p1, Object p2, Object p3);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, Object p1, Object p2, Object p3);
 
   /**
+   * @param tc
    * @param methodName
-   * @param instance
    * @param p1
    * @param p2
    * @param p3
    * @param p4
    * @return
    */
-  Callable doGetMetaMethodQuick(String methodName, Object p1, Object p2, Object p3, Object p4);
+  Callable doGetMetaMethodQuick(ThreadContext tc, String methodName, Object p1, Object p2, Object p3, Object p4);
   
   /**
    * @param tc

@@ -127,9 +127,9 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
                 final Class superClass = theClass.getSuperclass();
     
                   if (superClass == null) {
-                    metaClass = getRuntimeMetaClass(Object.class).createMetaClassFor(theClass);
+                    metaClass = createMetaClassFor(NgSystem.objectMetaClass, theClass);
                   } else {
-                    metaClass = getRuntimeMetaClass(superClass).createMetaClassFor(theClass);
+                    metaClass = createMetaClassFor(getRuntimeMetaClass(superClass), theClass);
                   }
                 }
                 

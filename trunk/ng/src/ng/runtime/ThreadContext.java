@@ -3,12 +3,31 @@ package ng.runtime;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
+
 /**
  * @author John
  *
  */
 public interface ThreadContext {
+  /**
+   * @param theClass
+   * @return
+   */
   RuntimeMetaClass getRuntimeMetaClass(Class theClass);
+  
+  /**
+   * @param theClass
+   * @return The MetaClass which represents the behaviour of this class
+   */
+  RuntimeMetaClass createMetaClassFor(Class theClass);
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @return
+   */
+  RuntimeMetaClass createMetaClassFor(RuntimeMetaClass metaClass, Class theClass);
   
   /**
    * @param instance
@@ -820,4 +839,155 @@ public interface ThreadContext {
    * @throws Throwable
    */
   Object putAt(RuntimeMetaClass metaClass, Object instance, BigInteger index) throws Throwable; 
+  
+  /**
+   * @param metaClass
+   * @param parameterType
+   * @return
+   */
+  int calculateConversionCost(RuntimeMetaClass metaClass, Class parameterType);
+  
+  /**
+   * @param the actual parameter
+   * @param the required type
+   * @return the Object to be used whan passing this instance as a parameter
+   */
+  Object getParamObject(Object instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object getParamObject(boolean instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object getParamObject(char instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object getParamObject(byte instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object getParamObject(short instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object getParamObject(int instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object getParamObject(long instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object getParamObject(float instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object getParamObject(double instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object getParamObject(BigInteger instance, Class theClass);
+  
+  /**
+   * @param instance
+   * @param theClass
+   * @return
+   */
+  Object getParamObject(BigDecimal instance, Class theClass);
+  
+  /**
+   * @param the MetaClass for the actual parameter
+   * @param the actual parameter
+   * @param the required type
+   * @return the Object to be used whan passing this instance as a parameter
+   */
+  Object getParamObject(RuntimeMetaClass metaClass, Object instance, Class theClass);
+
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @param argumentMetaClasses
+   * @return
+   */
+  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
+  
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @return
+   */
+  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName);
+  
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1);
+  
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @return
+   */
+  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2);
+  
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
+
+  /**
+   * @param metaClass
+   * @param currentSelection
+   * @param methodName
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
 }

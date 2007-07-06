@@ -22,27 +22,11 @@ package ng.runtime;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
-
 /**
  * @author John Wilson tug@wilson.co.uk
  *
  */
-public interface RuntimeMetaClass extends MetaClass {
-  /**
-   * @param the actual parameter
-   * @param the required type
-   * @return the Object to be used whan passing this instance as a parameter
-   */
-  Object getParamObject(Object instance, Class theClass);
-  
-  
-  /**
-   * @param theClass
-   * @return The MetaClass which represents the behaviour of this class
-   */
-  RuntimeMetaClass createMetaClassFor(Class theClass);
-  
+public interface RuntimeMetaClass extends MetaClass {  
   /**
    * @return
    */
@@ -52,65 +36,6 @@ public interface RuntimeMetaClass extends MetaClass {
    * @param internalMetaClass
    */
   void setInternalMetaClass(InternalMetaClass internalMetaClass);
-  
-  /**
-   * @param parameterType
-   * @return
-   */
-  int calculateConversionCost(Class parameterType);
-  
-  /**
-   * @param currentSelection
-   * @param methodName
-   * @param argumentMetaClasses
-   * @return
-   */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
-  
-  /**
-   * @param currentSelection
-   * @param methodName
-   * @return
-   */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName);
-  
-  /**
-   * @param currentSelection
-   * @param methodName
-   * @param p1
-   * @return
-   */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1);
-  
-  /**
-   * @param currentSelection
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @return
-   */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2);
-  
-  /**
-   * @param currentSelection
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @param p3
-   * @return
-   */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
-  
-  /**
-   * @param currentSelection
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @param p3
-   * @param p4
-   * @return
-   */
-  MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
    
   /**
    * @param instance

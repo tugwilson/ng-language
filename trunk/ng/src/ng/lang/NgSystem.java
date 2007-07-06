@@ -113,7 +113,7 @@ public final class NgSystem {
   public static final MetaClassRegistry metaClassRegistry;
 
   static {
-    objectMetaClass = new ObjectMetaClassImpl();
+    objectMetaClass = new ObjectRuntimeMetaClassImpl();
   }
 
   static {

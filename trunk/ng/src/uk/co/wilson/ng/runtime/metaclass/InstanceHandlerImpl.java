@@ -158,9 +158,9 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object[])
+   * @see ng.runtime.InstanceHandler#getMetaMethodFor(ng.runtime.ThreadContext, java.lang.String, java.lang.Object[])
    */
-  public MetaMethod getMetaMethodFor(final String methodName, final Object[] arguments) {
+  public MetaMethod getMetaMethodFor(final ThreadContext tc, final String methodName, final Object[] arguments) {
     if(arguments.length <= 4)
       throw new NgRuntimeException("Internal Error invokeMethod called with an array of " + arguments.length +" parameters");
     
@@ -170,278 +170,263 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
       argumentMetaClasses[i] = NgSystem.metaClassRegistry.getRuntimeMetaClass(arguments[i]);
     }
        
-    return selectMethod(new MetaMethodSelection(), methodName, argumentMetaClasses).metaMethod;
+    return selectMethod(tc, new MetaMethodSelection(), methodName, argumentMetaClasses).metaMethod;
   }
 
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
+   * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {
     setUpMetaClasses();
     
-    currentSelection = this.multiParameterMethods.get(methodName).selectMethod(currentSelection, argumentMetaClasses);
+    currentSelection = this.multiParameterMethods.get(methodName).selectMethod(tc, currentSelection, argumentMetaClasses);
 
     
     if (currentSelection.score == 0) return currentSelection;
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-      currentSelection = this.interfaceMetaClasses[i].selectMethod(currentSelection, methodName, argumentMetaClasses);
+      currentSelection = tc.selectMethod(this.interfaceMetaClasses[i], currentSelection, methodName, argumentMetaClasses);
       
       if (currentSelection.score == 0) return currentSelection;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.selectMethod(currentSelection, methodName, argumentMetaClasses);
+      return tc.selectMethod(this.superClassMetaClass, currentSelection, methodName, argumentMetaClasses);
     }
     
     return currentSelection;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName) {
-    return selectMethod(new MetaMethodSelection(), methodName).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName).metaMethod;
   }
 
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final String methodName) {
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String)
+   */
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName) {
     setUpMetaClasses();
     
-    currentSelection = this.zeroParameterMethods.get(methodName).selectMethod(currentSelection);
+    currentSelection = this.zeroParameterMethods.get(methodName).selectMethod(tc, currentSelection);
 
     
     if (currentSelection.score == 0) return currentSelection;
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-      currentSelection = this.interfaceMetaClasses[i].selectMethod(currentSelection, methodName);
+      currentSelection = tc.selectMethod(this.interfaceMetaClasses[i], currentSelection, methodName);
       
       if (currentSelection.score == 0) return currentSelection;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.selectMethod(currentSelection, methodName);
+      return tc.selectMethod(this.superClassMetaClass, currentSelection, methodName);
     }
     
     return currentSelection;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.lang.Object)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final Object p1) {
-    return selectMethod(new MetaMethodSelection(), methodName,
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName,
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p1)).metaMethod;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, boolean)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, boolean)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final boolean p1) {
-    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngBooleanMetaClass).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final boolean p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngBooleanMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, char)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, char)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final char p1) {
-    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngCharMetaClass).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final char p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngCharMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, byte)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, byte)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final byte p1) {
-    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngByteMetaClass).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final byte p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngByteMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, short)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, short)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final short p1) {
-    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngShortMetaClass).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final short p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngShortMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, int)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, int)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final int p1) {
-    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngIntMetaClass).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final int p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngIntMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, long)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, long)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final long p1) {
-    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngLongMetaClass).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final long p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngLongMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, float)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, float)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final float p1) {
-    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngFloatMetaClass).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final float p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngFloatMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, double)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, double)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final double p1) {
-    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.ngDoubleMetaClass).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final double p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngDoubleMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.math.BigInteger)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.math.BigInteger)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final BigInteger p1) {
-    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.bigIntegerMetaClass).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final BigInteger p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.bigIntegerMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.math.BigDecimal)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.math.BigDecimal)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final BigDecimal p1) {
-    return selectMethod(new MetaMethodSelection(), methodName, NgSystem.bigDecimalMetaClass).metaMethod;
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final BigDecimal p1) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.bigDecimalMetaClass).metaMethod;
   }
 
-  /**
-   * @param currentSelection
-   * @param methodName
-   * @param p1
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1) {
     setUpMetaClasses();
     
-    currentSelection = this.oneParameterMethods.get(methodName).selectMethod(currentSelection, p1);
+    currentSelection = this.oneParameterMethods.get(methodName).selectMethod(tc, currentSelection, p1);
 
     
     if (currentSelection.score == 0) return currentSelection;
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-      currentSelection = this.interfaceMetaClasses[i].selectMethod(currentSelection, methodName, p1);
+      currentSelection = tc.selectMethod(this.interfaceMetaClasses[i], currentSelection, methodName, p1);
       
       if (currentSelection.score == 0) return currentSelection;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.selectMethod(currentSelection, methodName, p1);
+      return tc.selectMethod(this.superClassMetaClass, currentSelection, methodName, p1);
     }
     
     return currentSelection;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final Object p1, final Object p2) {
-    return selectMethod(new MetaMethodSelection(), methodName,
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1, final Object p2) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName,
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p1),
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p2)).metaMethod;
   }
 
-  /**
-   * @param currentSelection
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
     setUpMetaClasses();
     
-    currentSelection = this.twoParameterMethods.get(methodName).selectMethod(currentSelection, p1, p2);
+    currentSelection = this.twoParameterMethods.get(methodName).selectMethod(tc, currentSelection, p1, p2);
 
     
     if (currentSelection.score == 0) return currentSelection;
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-      currentSelection = this.interfaceMetaClasses[i].selectMethod(currentSelection, methodName, p1, p2);
+      currentSelection = tc.selectMethod(this.interfaceMetaClasses[i], currentSelection, methodName, p1, p2);
       
       if (currentSelection.score == 0) return currentSelection;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.selectMethod(currentSelection, methodName, p1, p2);
+      return tc.selectMethod(this.superClassMetaClass, currentSelection, methodName, p1, p2);
     }
     
     return currentSelection;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final Object p1, final Object p2, final Object p3) {
-    return selectMethod(new MetaMethodSelection(), methodName,
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1, final Object p2, final Object p3) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName,
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p1),
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p2),
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p3)).metaMethod;
   }
 
-  /**
-   * @param currentSelection
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @param p3
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
     setUpMetaClasses();
     
-    currentSelection = this.threeParameterMethods.get(methodName).selectMethod(currentSelection, p1, p2, p3);
+    currentSelection = this.threeParameterMethods.get(methodName).selectMethod(tc, currentSelection, p1, p2, p3);
 
     
     if (currentSelection.score == 0) return currentSelection;
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-      currentSelection = this.interfaceMetaClasses[i].selectMethod(currentSelection, methodName, p1, p2, p3);
+      currentSelection = tc.selectMethod(this.interfaceMetaClasses[i], currentSelection, methodName, p1, p2, p3);
       
       if (currentSelection.score == 0) return currentSelection;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.selectMethod(currentSelection, methodName, p1, p2, p3);
+      return tc.selectMethod(this.superClassMetaClass, currentSelection, methodName, p1, p2, p3);
     }
     
     return currentSelection;
   }
   
   /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeMethod(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public MetaMethod getMetaMethodQuick(final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return selectMethod(new MetaMethodSelection(), methodName,
+  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
+    return selectMethod(tc, new MetaMethodSelection(), methodName,
                         NgSystem.metaClassRegistry.getRuntimeMetaClass(p1),
                         NgSystem.metaClassRegistry.getRuntimeMetaClass(p2),
                         NgSystem.metaClassRegistry.getRuntimeMetaClass(p3),
                         NgSystem.metaClassRegistry.getRuntimeMetaClass(p4)).metaMethod;
   }
   
-  /**
-   * @param currentSelection
-   * @param methodName
-   * @param p1
-   * @param p2
-   * @param p3
-   * @param p4
-   * @return
+  /* (non-Javadoc)
+   * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
     setUpMetaClasses();
     
-    currentSelection = this.fourParameterMethods.get(methodName).selectMethod(currentSelection, p1, p2, p3, p4);
+    currentSelection = this.fourParameterMethods.get(methodName).selectMethod(tc, currentSelection, p1, p2, p3, p4);
 
     
     if (currentSelection.score == 0) return currentSelection;
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-      currentSelection = this.interfaceMetaClasses[i].selectMethod(currentSelection, methodName, p1, p2, p3, p4);
+      currentSelection = tc.selectMethod(this.interfaceMetaClasses[i], currentSelection, methodName, p1, p2, p3, p4);
       
       if (currentSelection.score == 0) return currentSelection;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.selectMethod(currentSelection, methodName, p1, p2, p3, p4);
+      return tc.selectMethod(this.superClassMetaClass, currentSelection, methodName, p1, p2, p3, p4);
     }
     
     return currentSelection;

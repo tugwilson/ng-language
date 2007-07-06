@@ -19,13 +19,14 @@ package uk.co.wilson.ng.runtime.metaclass;
  *
  */
 
-import java.lang.reflect.Constructor;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
-import ng.runtime.*;
+import ng.runtime.InternalMetaClass;
+import ng.runtime.MetaClass;
+import ng.runtime.RuntimeMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 public class RuntimeMetaClassImpl implements RuntimeMetaClass {
@@ -126,40 +127,6 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     this.internalMetaClass = internalMetaClass;
   }
 
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#createMetaClassFor(java.lang.Class)
-   */
-  public RuntimeMetaClass createMetaClassFor(final Class theClass) {
-  final RuntimeMetaClass customMetaClass = lookForCustomMetaClass(theClass);
-
-    if (customMetaClass == null) {
-      return new RuntimeMetaClassImpl(theClass);
-    } else {
-      return customMetaClass;
-    }
-  }
-  
-  /**
-   * 
-   * See if a custom Metaclass is present if so return an instance of it if not
-   * return null
-   * 
-   * @param theClass
-   * @return The custom MetaClass for the class or null if none exists
-   */
-  protected RuntimeMetaClass lookForCustomMetaClass(final Class theClass) {
-    try {
-      final Class customMetaClass = Class.forName("ng.runtime.metaclass." + theClass.getName() + "MetaClass");
-      final Constructor customMetaClassConstructor = customMetaClass.getConstructor(new Class[] {Class.class});
-
-      return (RuntimeMetaClass)customMetaClassConstructor.newInstance(new Object[] {theClass});
-    } catch (final ClassNotFoundException e) {
-      return null;
-    } catch (final Exception e) {
-      throw new NgRuntimeException("Could not instantiate custom Metaclass for class: " + theClass.getName() + ". Reason: " + e, e);
-    }
-  }
-
   /*
    * (non-Javadoc)
    * 
@@ -194,49 +161,7 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
   public  Object invokeMethod(final Object instance, final String methodName, final Object[] arguments) throws  Throwable {
     return NgSystem.metaClassRegistry.getThreadContext().invokeMethod(instance, methodName, arguments);
   }
-  
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {
-    return this.internalMetaClass.doSelectMethod(currentSelection, methodName, argumentMetaClasses);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String)
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName) {
-    return this.internalMetaClass.doSelectMethod(currentSelection, methodName);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass)
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1) {
-    return this.internalMetaClass.doSelectMethod(currentSelection, methodName, p1);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
-    return this.internalMetaClass.doSelectMethod(currentSelection, methodName, p1, p2);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
-    return this.internalMetaClass.doSelectMethod(currentSelection, methodName, p1, p2, p3);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#selectMethod(uk.co.wilson.ng.runtime.metaclass.reflection.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
-   */
-  public MetaMethodSelection selectMethod(final MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
-    return this.internalMetaClass.doSelectMethod(currentSelection, methodName, p1, p2, p3, p4);
-  }
-
+ 
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#getProperty(java.lang.Object, java.lang.String)
    */

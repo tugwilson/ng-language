@@ -21,20 +21,33 @@ package uk.co.wilson.ng.runtime.metaclass;
 import ng.lang.NgRuntimeException;
 import ng.runtime.RuntimeMetaClass;
 
-public class ObjectMetaClassImpl extends RuntimeMetaClassImpl {
-  public ObjectMetaClassImpl(final Class theClass) {
-    super(Object.class);
+public class ObjectRuntimeMetaClassImpl extends RuntimeMetaClassImpl {
+  public ObjectRuntimeMetaClassImpl(final Class theClass) {
+    super(Object.class, new ObjectInternalMetaClassImpl(Object.class));
 
     if (theClass != Object.class)
       throw new NgMetaClassConstuctionException(Object.class, theClass);
   }
 
-  public ObjectMetaClassImpl() {
+  public ObjectRuntimeMetaClassImpl() {
     this(Object.class);
   }
+}
 
+
+class ObjectInternalMetaClassImpl extends InternalMetaClassImpl {
+  /**
+   * @param theClass
+   */
+  public ObjectInternalMetaClassImpl(Class theClass) {
+    super(theClass);
+  }
+
+  /* (non-Javadoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseInternalMetaClassImpl#doCreateMetaClassFor(java.lang.Class)
+   */
   @Override
-  public RuntimeMetaClass createMetaClassFor(final Class theClass) {
+  public RuntimeMetaClass doCreateMetaClassFor(final Class theClass) {
     if (Object.class != theClass.getSuperclass() && !theClass.isInterface())
       throw new NgRuntimeException("Error when constucting MetaClass for " + theClass.getName()
                                    + " using the java.lang.Object MetaClass"
@@ -48,5 +61,5 @@ public class ObjectMetaClassImpl extends RuntimeMetaClassImpl {
     } else {
       return customMetaClass;
     }
-  }
+  }  
 }
