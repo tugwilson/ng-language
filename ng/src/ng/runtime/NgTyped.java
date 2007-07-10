@@ -27,7 +27,7 @@ private final RuntimeMetaClass delegate;
   public NgTypedMetaClass(final Object instance, final Class type) {
     this.instance = instance;
     this.type = type;
-    this.delegate = NgSystem.metaClassRegistry.getMetaClass(instance).getMetaClassFor(type).getRuntimeMetaClass();
+    this.delegate = (RuntimeMetaClass)NgSystem.metaClassRegistry.getMetaClass(instance).getMetaClassFor(type);
   }
 
   /* (non-Javadoc)
@@ -771,7 +771,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#add(java.lang.Object, java.math.BigDecimal)
    */
   public Object add(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().add(this.instance, rhs);
+    return this.delegate.add(this.instance, rhs);
   }
 
   /**
@@ -781,7 +781,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#add(java.lang.Object, java.math.BigInteger)
    */
   public Object add(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().add(this.instance, rhs);
+    return this.delegate.add(this.instance, rhs);
   }
 
   /**
@@ -791,7 +791,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#add(java.lang.Object, byte)
    */
   public Object add(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().add(this.instance, rhs);
+    return this.delegate.add(this.instance, rhs);
   }
 
   /**
@@ -801,7 +801,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#add(java.lang.Object, char)
    */
   public Object add(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().add(this.instance, rhs);
+    return this.delegate.add(this.instance, rhs);
   }
 
   /**
@@ -811,7 +811,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#add(java.lang.Object, double)
    */
   public Object add(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().add(this.instance, rhs);
+    return this.delegate.add(this.instance, rhs);
   }
 
   /**
@@ -821,7 +821,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#add(java.lang.Object, float)
    */
   public Object add(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().add(this.instance, rhs);
+    return this.delegate.add(this.instance, rhs);
   }
 
   /**
@@ -831,7 +831,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#add(java.lang.Object, int)
    */
   public Object add(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().add(this.instance, rhs);
+    return this.delegate.add(this.instance, rhs);
   }
 
   /**
@@ -841,7 +841,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#add(java.lang.Object, long)
    */
   public Object add(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().add(this.instance, rhs);
+    return this.delegate.add(this.instance, rhs);
   }
 
   /**
@@ -851,7 +851,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#add(java.lang.Object, java.lang.Object)
    */
   public Object add(final Object operand, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().add(this.instance, rhs);
+    return this.delegate.add(this.instance, rhs);
   }
 
   /**
@@ -861,7 +861,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#add(java.lang.Object, short)
    */
   public Object add(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().add(this.instance, rhs);
+    return this.delegate.add(this.instance, rhs);
   }
 
   /**
@@ -1681,7 +1681,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#addEquals(java.lang.Object, java.math.BigDecimal)
    */
   public Object addEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().addEquals(this.instance, rhs);
+    return this.delegate.addEquals(this.instance, rhs);
   }
 
   /**
@@ -1691,7 +1691,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#addEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object addEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().addEquals(this.instance, rhs);
+    return this.delegate.addEquals(this.instance, rhs);
   }
 
   /**
@@ -1701,7 +1701,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#addEquals(java.lang.Object, byte)
    */
   public Object addEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().addEquals(this.instance, rhs);
+    return this.delegate.addEquals(this.instance, rhs);
   }
 
   /**
@@ -1711,7 +1711,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#addEquals(java.lang.Object, char)
    */
   public Object addEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().addEquals(this.instance, rhs);
+    return this.delegate.addEquals(this.instance, rhs);
   }
 
   /**
@@ -1721,7 +1721,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#addEquals(java.lang.Object, double)
    */
   public Object addEquals(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().addEquals(this.instance, rhs);
+    return this.delegate.addEquals(this.instance, rhs);
   }
 
   /**
@@ -1731,7 +1731,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#addEquals(java.lang.Object, float)
    */
   public Object addEquals(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().addEquals(this.instance, rhs);
+    return this.delegate.addEquals(this.instance, rhs);
   }
 
   /**
@@ -1741,7 +1741,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#addEquals(java.lang.Object, int)
    */
   public Object addEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().addEquals(this.instance, rhs);
+    return this.delegate.addEquals(this.instance, rhs);
   }
 
   /**
@@ -1751,7 +1751,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#addEquals(java.lang.Object, long)
    */
   public Object addEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().addEquals(this.instance, rhs);
+    return this.delegate.addEquals(this.instance, rhs);
   }
 
   /**
@@ -1761,7 +1761,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#addEquals(java.lang.Object, java.lang.Object)
    */
   public Object addEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().addEquals(this.instance, rhs);
+    return this.delegate.addEquals(this.instance, rhs);
   }
 
   /**
@@ -1771,7 +1771,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#addEquals(java.lang.Object, short)
    */
   public Object addEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().addEquals(this.instance, rhs);
+    return this.delegate.addEquals(this.instance, rhs);
   }
 
   /**
@@ -2171,7 +2171,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#and(java.lang.Object, java.math.BigInteger)
    */
   public Object and(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().and(this.instance, rhs);
+    return this.delegate.and(this.instance, rhs);
   }
 
   /**
@@ -2181,7 +2181,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#and(java.lang.Object, byte)
    */
   public Object and(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().and(this.instance, rhs);
+    return this.delegate.and(this.instance, rhs);
   }
 
   /**
@@ -2191,7 +2191,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#and(java.lang.Object, char)
    */
   public Object and(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().and(this.instance, rhs);
+    return this.delegate.and(this.instance, rhs);
   }
 
   /**
@@ -2201,7 +2201,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#and(java.lang.Object, int)
    */
   public Object and(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().and(this.instance, rhs);
+    return this.delegate.and(this.instance, rhs);
   }
 
   /**
@@ -2211,7 +2211,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#and(java.lang.Object, long)
    */
   public Object and(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().and(this.instance, rhs);
+    return this.delegate.and(this.instance, rhs);
   }
 
   /**
@@ -2221,7 +2221,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#and(java.lang.Object, java.lang.Object)
    */
   public Object and(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().and(this.instance, rhs);
+    return this.delegate.and(this.instance, rhs);
   }
 
   /**
@@ -2231,7 +2231,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#and(java.lang.Object, short)
    */
   public Object and(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().and(this.instance, rhs);
+    return this.delegate.and(this.instance, rhs);
   }
 
   /**
@@ -2601,7 +2601,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#andEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object andEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().andEquals(this.instance, rhs);
+    return this.delegate.andEquals(this.instance, rhs);
   }
 
   /**
@@ -2611,7 +2611,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#andEquals(java.lang.Object, byte)
    */
   public Object andEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().andEquals(this.instance, rhs);
+    return this.delegate.andEquals(this.instance, rhs);
   }
 
   /**
@@ -2621,7 +2621,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#andEquals(java.lang.Object, char)
    */
   public Object andEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().andEquals(this.instance, rhs);
+    return this.delegate.andEquals(this.instance, rhs);
   }
 
   /**
@@ -2631,7 +2631,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#andEquals(java.lang.Object, int)
    */
   public Object andEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().andEquals(this.instance, rhs);
+    return this.delegate.andEquals(this.instance, rhs);
   }
 
   /**
@@ -2641,7 +2641,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#andEquals(java.lang.Object, long)
    */
   public Object andEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().andEquals(this.instance, rhs);
+    return this.delegate.andEquals(this.instance, rhs);
   }
 
   /**
@@ -2651,7 +2651,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#andEquals(java.lang.Object, java.lang.Object)
    */
   public Object andEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().andEquals(this.instance, rhs);
+    return this.delegate.andEquals(this.instance, rhs);
   }
 
   /**
@@ -2661,7 +2661,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#andEquals(java.lang.Object, short)
    */
   public Object andEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().andEquals(this.instance, rhs);
+    return this.delegate.andEquals(this.instance, rhs);
   }
 
   /**
@@ -3031,7 +3031,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShift(java.lang.Object, java.math.BigInteger)
    */
   public Object arithmeticRightShift(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShift(this.instance, rhs);
+    return this.delegate.arithmeticRightShift(this.instance, rhs);
   }
 
   /**
@@ -3041,7 +3041,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShift(java.lang.Object, byte)
    */
   public Object arithmeticRightShift(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShift(this.instance, rhs);
+    return this.delegate.arithmeticRightShift(this.instance, rhs);
   }
 
   /**
@@ -3051,7 +3051,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShift(java.lang.Object, char)
    */
   public Object arithmeticRightShift(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShift(this.instance, rhs);
+    return this.delegate.arithmeticRightShift(this.instance, rhs);
   }
 
   /**
@@ -3061,7 +3061,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShift(java.lang.Object, int)
    */
   public Object arithmeticRightShift(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShift(this.instance, rhs);
+    return this.delegate.arithmeticRightShift(this.instance, rhs);
   }
 
   /**
@@ -3071,7 +3071,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShift(java.lang.Object, long)
    */
   public Object arithmeticRightShift(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShift(this.instance, rhs);
+    return this.delegate.arithmeticRightShift(this.instance, rhs);
   }
 
   /**
@@ -3081,7 +3081,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#arithmeticRightShift(java.lang.Object, java.lang.Object)
    */
   public Object arithmeticRightShift(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShift(this.instance, rhs);
+    return this.delegate.arithmeticRightShift(this.instance, rhs);
   }
 
   /**
@@ -3091,7 +3091,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShift(java.lang.Object, short)
    */
   public Object arithmeticRightShift(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShift(this.instance, rhs);
+    return this.delegate.arithmeticRightShift(this.instance, rhs);
   }
 
   /**
@@ -3461,7 +3461,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShiftEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object arithmeticRightShiftEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShiftEquals(this.instance, rhs);
+    return this.delegate.arithmeticRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -3471,7 +3471,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShiftEquals(java.lang.Object, byte)
    */
   public Object arithmeticRightShiftEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShiftEquals(this.instance, rhs);
+    return this.delegate.arithmeticRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -3481,7 +3481,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShiftEquals(java.lang.Object, char)
    */
   public Object arithmeticRightShiftEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShiftEquals(this.instance, rhs);
+    return this.delegate.arithmeticRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -3491,7 +3491,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShiftEquals(java.lang.Object, int)
    */
   public Object arithmeticRightShiftEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShiftEquals(this.instance, rhs);
+    return this.delegate.arithmeticRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -3501,7 +3501,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShiftEquals(java.lang.Object, long)
    */
   public Object arithmeticRightShiftEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShiftEquals(this.instance, rhs);
+    return this.delegate.arithmeticRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -3511,7 +3511,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#arithmeticRightShiftEquals(java.lang.Object, java.lang.Object)
    */
   public Object arithmeticRightShiftEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShiftEquals(this.instance, rhs);
+    return this.delegate.arithmeticRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -3521,7 +3521,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#arithmeticRightShiftEquals(java.lang.Object, short)
    */
   public Object arithmeticRightShiftEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().arithmeticRightShiftEquals(this.instance, rhs);
+    return this.delegate.arithmeticRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -3591,7 +3591,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#asType(java.lang.Object, java.lang.Class)
    */
   public Object asType(final Object instance, final Class type) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().asType(this.instance, type);
+    return this.delegate.asType(this.instance, type);
   }
 
   /**
@@ -3601,7 +3601,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#call(java.lang.Object, java.lang.Object[])
    */
   public Object call(final Object instance, final Object[] arguments) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().call(this.instance, arguments);
+    return this.delegate.call(this.instance, arguments);
   }
 
   /**
@@ -4331,7 +4331,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#compare(java.lang.Object, java.math.BigDecimal)
    */
   public Object compare(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().compare(this.instance, rhs);
+    return this.delegate.compare(this.instance, rhs);
   }
 
   /**
@@ -4341,7 +4341,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#compare(java.lang.Object, java.math.BigInteger)
    */
   public Object compare(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().compare(this.instance, rhs);
+    return this.delegate.compare(this.instance, rhs);
   }
 
   /**
@@ -4351,7 +4351,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#compare(java.lang.Object, byte)
    */
   public Object compare(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().compare(this.instance, rhs);
+    return this.delegate.compare(this.instance, rhs);
   }
 
   /**
@@ -4361,7 +4361,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#compare(java.lang.Object, char)
    */
   public Object compare(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().compare(this.instance, rhs);
+    return this.delegate.compare(this.instance, rhs);
   }
 
   /**
@@ -4371,7 +4371,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#compare(java.lang.Object, double)
    */
   public Object compare(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().compare(this.instance, rhs);
+    return this.delegate.compare(this.instance, rhs);
   }
 
   /**
@@ -4381,7 +4381,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#compare(java.lang.Object, float)
    */
   public Object compare(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().compare(this.instance, rhs);
+    return this.delegate.compare(this.instance, rhs);
   }
 
   /**
@@ -4391,7 +4391,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#compare(java.lang.Object, int)
    */
   public Object compare(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().compare(this.instance, rhs);
+    return this.delegate.compare(this.instance, rhs);
   }
 
   /**
@@ -4401,7 +4401,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#compare(java.lang.Object, long)
    */
   public Object compare(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().compare(this.instance, rhs);
+    return this.delegate.compare(this.instance, rhs);
   }
 
   /**
@@ -4411,7 +4411,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#compare(java.lang.Object, java.lang.Object)
    */
   public Object compare(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().compare(this.instance, rhs);
+    return this.delegate.compare(this.instance, rhs);
   }
 
   /**
@@ -4421,7 +4421,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#compare(java.lang.Object, short)
    */
   public Object compare(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().compare(this.instance, rhs);
+    return this.delegate.compare(this.instance, rhs);
   }
 
   /**
@@ -4547,7 +4547,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#complement(java.lang.Object)
    */
   public Object complement(final Object instance) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().complement(instance);
+    return this.delegate.complement(instance);
   }
 
   /**
@@ -5277,7 +5277,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divide(java.lang.Object, java.math.BigDecimal)
    */
   public Object divide(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divide(this.instance, rhs);
+    return this.delegate.divide(this.instance, rhs);
   }
 
   /**
@@ -5287,7 +5287,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divide(java.lang.Object, java.math.BigInteger)
    */
   public Object divide(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divide(this.instance, rhs);
+    return this.delegate.divide(this.instance, rhs);
   }
 
   /**
@@ -5297,7 +5297,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divide(java.lang.Object, byte)
    */
   public Object divide(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divide(this.instance, rhs);
+    return this.delegate.divide(this.instance, rhs);
   }
 
   /**
@@ -5307,7 +5307,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divide(java.lang.Object, char)
    */
   public Object divide(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divide(this.instance, rhs);
+    return this.delegate.divide(this.instance, rhs);
   }
 
   /**
@@ -5317,7 +5317,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divide(java.lang.Object, double)
    */
   public Object divide(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divide(this.instance, rhs);
+    return this.delegate.divide(this.instance, rhs);
   }
 
   /**
@@ -5327,7 +5327,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divide(java.lang.Object, float)
    */
   public Object divide(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divide(this.instance, rhs);
+    return this.delegate.divide(this.instance, rhs);
   }
 
   /**
@@ -5337,7 +5337,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divide(java.lang.Object, int)
    */
   public Object divide(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divide(this.instance, rhs);
+    return this.delegate.divide(this.instance, rhs);
   }
 
   /**
@@ -5347,7 +5347,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divide(java.lang.Object, long)
    */
   public Object divide(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divide(this.instance, rhs);
+    return this.delegate.divide(this.instance, rhs);
   }
 
   /**
@@ -5357,7 +5357,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#divide(java.lang.Object, java.lang.Object)
    */
   public Object divide(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divide(this.instance, rhs);
+    return this.delegate.divide(this.instance, rhs);
   }
 
   /**
@@ -5367,7 +5367,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divide(java.lang.Object, short)
    */
   public Object divide(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divide(this.instance, rhs);
+    return this.delegate.divide(this.instance, rhs);
   }
 
   /**
@@ -6187,7 +6187,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divideEquals(java.lang.Object, java.math.BigDecimal)
    */
   public Object divideEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divideEquals(this.instance, rhs);
+    return this.delegate.divideEquals(this.instance, rhs);
   }
 
   /**
@@ -6197,7 +6197,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divideEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object divideEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divideEquals(this.instance, rhs);
+    return this.delegate.divideEquals(this.instance, rhs);
   }
 
   /**
@@ -6207,7 +6207,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divideEquals(java.lang.Object, byte)
    */
   public Object divideEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divideEquals(this.instance, rhs);
+    return this.delegate.divideEquals(this.instance, rhs);
   }
 
   /**
@@ -6217,7 +6217,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divideEquals(java.lang.Object, char)
    */
   public Object divideEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divideEquals(this.instance, rhs);
+    return this.delegate.divideEquals(this.instance, rhs);
   }
 
   /**
@@ -6227,7 +6227,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divideEquals(java.lang.Object, double)
    */
   public Object divideEquals(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divideEquals(this.instance, rhs);
+    return this.delegate.divideEquals(this.instance, rhs);
   }
 
   /**
@@ -6237,7 +6237,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divideEquals(java.lang.Object, float)
    */
   public Object divideEquals(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divideEquals(this.instance, rhs);
+    return this.delegate.divideEquals(this.instance, rhs);
   }
 
   /**
@@ -6247,7 +6247,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divideEquals(java.lang.Object, int)
    */
   public Object divideEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divideEquals(this.instance, rhs);
+    return this.delegate.divideEquals(this.instance, rhs);
   }
 
   /**
@@ -6257,7 +6257,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divideEquals(java.lang.Object, long)
    */
   public Object divideEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divideEquals(this.instance, rhs);
+    return this.delegate.divideEquals(this.instance, rhs);
   }
 
   /**
@@ -6267,7 +6267,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#divideEquals(java.lang.Object, java.lang.Object)
    */
   public Object divideEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divideEquals(this.instance, rhs);
+    return this.delegate.divideEquals(this.instance, rhs);
   }
 
   /**
@@ -6277,7 +6277,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#divideEquals(java.lang.Object, short)
    */
   public Object divideEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().divideEquals(this.instance, rhs);
+    return this.delegate.divideEquals(this.instance, rhs);
   }
 
   /**
@@ -7097,7 +7097,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#equals(java.lang.Object, java.math.BigDecimal)
    */
   public Object equals(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equals(this.instance, rhs);
+    return this.delegate.equals(this.instance, rhs);
   }
 
   /**
@@ -7107,7 +7107,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#equals(java.lang.Object, java.math.BigInteger)
    */
   public Object equals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equals(this.instance, rhs);
+    return this.delegate.equals(this.instance, rhs);
   }
 
   /**
@@ -7117,7 +7117,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#equals(java.lang.Object, byte)
    */
   public Object equals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equals(this.instance, rhs);
+    return this.delegate.equals(this.instance, rhs);
   }
 
   /**
@@ -7127,7 +7127,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#equals(java.lang.Object, char)
    */
   public Object equals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equals(this.instance, rhs);
+    return this.delegate.equals(this.instance, rhs);
   }
 
   /**
@@ -7137,7 +7137,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#equals(java.lang.Object, double)
    */
   public Object equals(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equals(this.instance, rhs);
+    return this.delegate.equals(this.instance, rhs);
   }
 
   /**
@@ -7147,7 +7147,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#equals(java.lang.Object, float)
    */
   public Object equals(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equals(this.instance, rhs);
+    return this.delegate.equals(this.instance, rhs);
   }
 
   /**
@@ -7157,7 +7157,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#equals(java.lang.Object, int)
    */
   public Object equals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equals(this.instance, rhs);
+    return this.delegate.equals(this.instance, rhs);
   }
 
   /**
@@ -7167,7 +7167,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#equals(java.lang.Object, long)
    */
   public Object equals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equals(this.instance, rhs);
+    return this.delegate.equals(this.instance, rhs);
   }
 
   /**
@@ -7177,7 +7177,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#equals(java.lang.Object, java.lang.Object)
    */
   public Object equals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equals(this.instance, rhs);
+    return this.delegate.equals(this.instance, rhs);
   }
 
   /**
@@ -7187,7 +7187,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#equals(java.lang.Object, short)
    */
   public Object equals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equals(this.instance, rhs);
+    return this.delegate.equals(this.instance, rhs);
   }
 
   /**
@@ -7788,70 +7788,70 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, java.math.BigDecimal)
    */
   public boolean equalsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equalsBoolean(this.instance, rhs);
+    return this.delegate.equalsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, java.math.BigInteger)
    */
   public boolean equalsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equalsBoolean(this.instance, rhs);
+    return this.delegate.equalsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, byte)
    */
   public boolean equalsBoolean(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equalsBoolean(this.instance, rhs);
+    return this.delegate.equalsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, char)
    */
   public boolean equalsBoolean(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equalsBoolean(this.instance, rhs);
+    return this.delegate.equalsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, double)
    */
   public boolean equalsBoolean(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equalsBoolean(this.instance, rhs);
+    return this.delegate.equalsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, float)
    */
   public boolean equalsBoolean(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equalsBoolean(this.instance, rhs);
+    return this.delegate.equalsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, int)
    */
   public boolean equalsBoolean(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equalsBoolean(this.instance, rhs);
+    return this.delegate.equalsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, long)
    */
   public boolean equalsBoolean(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equalsBoolean(this.instance, rhs);
+    return this.delegate.equalsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, java.lang.Object)
    */
   public boolean equalsBoolean(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equalsBoolean(this.instance, rhs);
+    return this.delegate.equalsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#equalsBoolean(java.lang.Object, short)
    */
   public boolean equalsBoolean(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().equalsBoolean(this.instance, rhs);
+    return this.delegate.equalsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
@@ -7921,63 +7921,63 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(java.math.BigDecimal, java.lang.Object)
    */
   public boolean reverseEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(java.math.BigInteger, java.lang.Object)
    */
   public boolean reverseEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(byte, java.lang.Object)
    */
   public boolean reverseEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(char, java.lang.Object)
    */
   public boolean reverseEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(double, java.lang.Object)
    */
   public boolean reverseEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(float, java.lang.Object)
    */
   public boolean reverseEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(int, java.lang.Object)
    */
   public boolean reverseEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(long, java.lang.Object)
    */
   public boolean reverseEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseEqualsBoolean(short, java.lang.Object)
    */
   public boolean reverseEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseEqualsBoolean(lhs, this.instance);
   }
 
   /**
@@ -7987,7 +7987,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#getAt(java.lang.Object, java.math.BigInteger)
    */
   public Object getAt(final Object instance, final BigInteger index) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().getAt(this.instance, index);
+    return this.delegate.getAt(this.instance, index);
   }
 
   /**
@@ -7997,7 +7997,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#getAt(java.lang.Object, int)
    */
   public Object getAt(final Object instance, final int index) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().getAt(this.instance, index);
+    return this.delegate.getAt(this.instance, index);
   }
 
   /**
@@ -8007,7 +8007,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#getAt(java.lang.Object, java.lang.Object)
    */
   public Object getAt(final Object instance, final Object index) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().getAt(this.instance, index);
+    return this.delegate.getAt(this.instance, index);
   }
 
   /**
@@ -8017,7 +8017,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#getField(java.lang.Object, java.lang.String)
    */
   public Object getField(final Object instance, final String fieldName) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().getField(this.instance, fieldName);
+    return this.delegate.getField(this.instance, fieldName);
   }
 
   /**
@@ -8025,7 +8025,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#getInternalMetaClass()
    */
   public InternalMetaClass getInternalMetaClass() {
-    return this.delegate.getRuntimeMetaClass().getInternalMetaClass();
+    return this.delegate.getInternalMetaClass();
   }
 
   /**
@@ -8035,7 +8035,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#getProperty(java.lang.Object, java.lang.String)
    */
   public Object getProperty(final Object instance, final String propertyName) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().getProperty(this.instance, propertyName);
+    return this.delegate.getProperty(this.instance, propertyName);
   }
 
   /**
@@ -8044,7 +8044,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#getTheClass(java.lang.Object)
    */
   public Class getTheClass(final Object instance) {
-    return this.delegate.getRuntimeMetaClass().getTheClass(this.instance);
+    return this.delegate.getTheClass(this.instance);
   }
 
   /**
@@ -8774,7 +8774,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThan(java.lang.Object, java.math.BigDecimal)
    */
   public Object greaterThan(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThan(this.instance, rhs);
+    return this.delegate.greaterThan(this.instance, rhs);
   }
 
   /**
@@ -8784,7 +8784,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThan(java.lang.Object, java.math.BigInteger)
    */
   public Object greaterThan(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThan(this.instance, rhs);
+    return this.delegate.greaterThan(this.instance, rhs);
   }
 
   /**
@@ -8794,7 +8794,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThan(java.lang.Object, byte)
    */
   public Object greaterThan(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThan(this.instance, rhs);
+    return this.delegate.greaterThan(this.instance, rhs);
   }
 
   /**
@@ -8804,7 +8804,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThan(java.lang.Object, char)
    */
   public Object greaterThan(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThan(this.instance, rhs);
+    return this.delegate.greaterThan(this.instance, rhs);
   }
 
   /**
@@ -8814,7 +8814,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThan(java.lang.Object, double)
    */
   public Object greaterThan(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThan(this.instance, rhs);
+    return this.delegate.greaterThan(this.instance, rhs);
   }
 
   /**
@@ -8824,7 +8824,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThan(java.lang.Object, float)
    */
   public Object greaterThan(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThan(this.instance, rhs);
+    return this.delegate.greaterThan(this.instance, rhs);
   }
 
   /**
@@ -8834,7 +8834,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThan(java.lang.Object, int)
    */
   public Object greaterThan(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThan(this.instance, rhs);
+    return this.delegate.greaterThan(this.instance, rhs);
   }
 
   /**
@@ -8844,7 +8844,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThan(java.lang.Object, long)
    */
   public Object greaterThan(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThan(this.instance, rhs);
+    return this.delegate.greaterThan(this.instance, rhs);
   }
 
   /**
@@ -8854,7 +8854,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#greaterThan(java.lang.Object, java.lang.Object)
    */
   public Object greaterThan(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThan(this.instance, rhs);
+    return this.delegate.greaterThan(this.instance, rhs);
   }
 
   /**
@@ -8864,7 +8864,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThan(java.lang.Object, short)
    */
   public Object greaterThan(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThan(this.instance, rhs);
+    return this.delegate.greaterThan(this.instance, rhs);
   }
 
   /**
@@ -9465,70 +9465,70 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, java.math.BigDecimal)
    */
   public boolean greaterThanBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanBoolean(this.instance, rhs);
+    return this.delegate.greaterThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, java.math.BigInteger)
    */
   public boolean greaterThanBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanBoolean(this.instance, rhs);
+    return this.delegate.greaterThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, byte)
    */
   public boolean greaterThanBoolean(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanBoolean(this.instance, rhs);
+    return this.delegate.greaterThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, char)
    */
   public boolean greaterThanBoolean(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanBoolean(this.instance, rhs);
+    return this.delegate.greaterThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, double)
    */
   public boolean greaterThanBoolean(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanBoolean(this.instance, rhs);
+    return this.delegate.greaterThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, float)
    */
   public boolean greaterThanBoolean(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanBoolean(this.instance, rhs);
+    return this.delegate.greaterThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, int)
    */
   public boolean greaterThanBoolean(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanBoolean(this.instance, rhs);
+    return this.delegate.greaterThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, long)
    */
   public boolean greaterThanBoolean(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanBoolean(this.instance, rhs);
+    return this.delegate.greaterThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, java.lang.Object)
    */
   public boolean greaterThanBoolean(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanBoolean(this.instance, rhs);
+    return this.delegate.greaterThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanBoolean(java.lang.Object, short)
    */
   public boolean greaterThanBoolean(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanBoolean(this.instance, rhs);
+    return this.delegate.greaterThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
@@ -9598,63 +9598,63 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(java.math.BigDecimal, java.lang.Object)
    */
   public boolean reverseGreaterThanBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(java.math.BigInteger, java.lang.Object)
    */
   public boolean reverseGreaterThanBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(byte, java.lang.Object)
    */
   public boolean reverseGreaterThanBoolean(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(char, java.lang.Object)
    */
   public boolean reverseGreaterThanBoolean(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(double, java.lang.Object)
    */
   public boolean reverseGreaterThanBoolean(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(float, java.lang.Object)
    */
   public boolean reverseGreaterThanBoolean(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(int, java.lang.Object)
    */
   public boolean reverseGreaterThanBoolean(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(long, java.lang.Object)
    */
   public boolean reverseGreaterThanBoolean(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanBoolean(short, java.lang.Object)
    */
   public boolean reverseGreaterThanBoolean(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanBoolean(lhs, this.instance);
   }
 
   /**
@@ -10384,7 +10384,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEquals(java.lang.Object, java.math.BigDecimal)
    */
   public Object greaterThanOrEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEquals(this.instance, rhs);
+    return this.delegate.greaterThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -10394,7 +10394,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object greaterThanOrEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEquals(this.instance, rhs);
+    return this.delegate.greaterThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -10404,7 +10404,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEquals(java.lang.Object, byte)
    */
   public Object greaterThanOrEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEquals(this.instance, rhs);
+    return this.delegate.greaterThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -10414,7 +10414,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEquals(java.lang.Object, char)
    */
   public Object greaterThanOrEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEquals(this.instance, rhs);
+    return this.delegate.greaterThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -10424,7 +10424,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEquals(java.lang.Object, double)
    */
   public Object greaterThanOrEquals(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEquals(this.instance, rhs);
+    return this.delegate.greaterThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -10434,7 +10434,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEquals(java.lang.Object, float)
    */
   public Object greaterThanOrEquals(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEquals(this.instance, rhs);
+    return this.delegate.greaterThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -10444,7 +10444,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEquals(java.lang.Object, int)
    */
   public Object greaterThanOrEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEquals(this.instance, rhs);
+    return this.delegate.greaterThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -10454,7 +10454,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEquals(java.lang.Object, long)
    */
   public Object greaterThanOrEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEquals(this.instance, rhs);
+    return this.delegate.greaterThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -10464,7 +10464,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#greaterThanOrEquals(java.lang.Object, java.lang.Object)
    */
   public Object greaterThanOrEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEquals(this.instance, rhs);
+    return this.delegate.greaterThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -10474,7 +10474,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEquals(java.lang.Object, short)
    */
   public Object greaterThanOrEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEquals(this.instance, rhs);
+    return this.delegate.greaterThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -11075,70 +11075,70 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, java.math.BigDecimal)
    */
   public boolean greaterThanOrEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.greaterThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, java.math.BigInteger)
    */
   public boolean greaterThanOrEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.greaterThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, byte)
    */
   public boolean greaterThanOrEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.greaterThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, char)
    */
   public boolean greaterThanOrEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.greaterThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, double)
    */
   public boolean greaterThanOrEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.greaterThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, float)
    */
   public boolean greaterThanOrEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.greaterThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, int)
    */
   public boolean greaterThanOrEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.greaterThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, long)
    */
   public boolean greaterThanOrEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.greaterThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, java.lang.Object)
    */
   public boolean greaterThanOrEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.greaterThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#greaterThanOrEqualsBoolean(java.lang.Object, short)
    */
   public boolean greaterThanOrEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().greaterThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.greaterThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
@@ -11208,63 +11208,63 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(java.math.BigDecimal, java.lang.Object)
    */
   public boolean reverseGreaterThanOrEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(java.math.BigInteger, java.lang.Object)
    */
   public boolean reverseGreaterThanOrEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(byte, java.lang.Object)
    */
   public boolean reverseGreaterThanOrEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(char, java.lang.Object)
    */
   public boolean reverseGreaterThanOrEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(double, java.lang.Object)
    */
   public boolean reverseGreaterThanOrEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(float, java.lang.Object)
    */
   public boolean reverseGreaterThanOrEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(int, java.lang.Object)
    */
   public boolean reverseGreaterThanOrEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(long, java.lang.Object)
    */
   public boolean reverseGreaterThanOrEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEqualsBoolean(short, java.lang.Object)
    */
   public boolean reverseGreaterThanOrEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /**
@@ -11994,7 +11994,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivide(java.lang.Object, java.math.BigDecimal)
    */
   public Object integerDivide(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivide(this.instance, rhs);
+    return this.delegate.integerDivide(this.instance, rhs);
   }
 
   /**
@@ -12004,7 +12004,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivide(java.lang.Object, java.math.BigInteger)
    */
   public Object integerDivide(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivide(this.instance, rhs);
+    return this.delegate.integerDivide(this.instance, rhs);
   }
 
   /**
@@ -12014,7 +12014,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivide(java.lang.Object, byte)
    */
   public Object integerDivide(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivide(this.instance, rhs);
+    return this.delegate.integerDivide(this.instance, rhs);
   }
 
   /**
@@ -12024,7 +12024,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivide(java.lang.Object, char)
    */
   public Object integerDivide(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivide(this.instance, rhs);
+    return this.delegate.integerDivide(this.instance, rhs);
   }
 
   /**
@@ -12034,7 +12034,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivide(java.lang.Object, double)
    */
   public Object integerDivide(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivide(this.instance, rhs);
+    return this.delegate.integerDivide(this.instance, rhs);
   }
 
   /**
@@ -12044,7 +12044,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivide(java.lang.Object, float)
    */
   public Object integerDivide(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivide(this.instance, rhs);
+    return this.delegate.integerDivide(this.instance, rhs);
   }
 
   /**
@@ -12054,7 +12054,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivide(java.lang.Object, int)
    */
   public Object integerDivide(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivide(this.instance, rhs);
+    return this.delegate.integerDivide(this.instance, rhs);
   }
 
   /**
@@ -12064,7 +12064,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivide(java.lang.Object, long)
    */
   public Object integerDivide(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivide(this.instance, rhs);
+    return this.delegate.integerDivide(this.instance, rhs);
   }
 
   /**
@@ -12074,7 +12074,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#integerDivide(java.lang.Object, java.lang.Object)
    */
   public Object integerDivide(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivide(this.instance, rhs);
+    return this.delegate.integerDivide(this.instance, rhs);
   }
 
   /**
@@ -12084,7 +12084,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivide(java.lang.Object, short)
    */
   public Object integerDivide(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivide(this.instance, rhs);
+    return this.delegate.integerDivide(this.instance, rhs);
   }
 
   /**
@@ -12904,7 +12904,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivideEquals(java.lang.Object, java.math.BigDecimal)
    */
   public Object integerDivideEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivideEquals(this.instance, rhs);
+    return this.delegate.integerDivideEquals(this.instance, rhs);
   }
 
   /**
@@ -12914,7 +12914,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivideEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object integerDivideEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivideEquals(this.instance, rhs);
+    return this.delegate.integerDivideEquals(this.instance, rhs);
   }
 
   /**
@@ -12924,7 +12924,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivideEquals(java.lang.Object, byte)
    */
   public Object integerDivideEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivideEquals(this.instance, rhs);
+    return this.delegate.integerDivideEquals(this.instance, rhs);
   }
 
   /**
@@ -12934,7 +12934,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivideEquals(java.lang.Object, char)
    */
   public Object integerDivideEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivideEquals(this.instance, rhs);
+    return this.delegate.integerDivideEquals(this.instance, rhs);
   }
 
   /**
@@ -12944,7 +12944,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivideEquals(java.lang.Object, double)
    */
   public Object integerDivideEquals(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivideEquals(this.instance, rhs);
+    return this.delegate.integerDivideEquals(this.instance, rhs);
   }
 
   /**
@@ -12954,7 +12954,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivideEquals(java.lang.Object, float)
    */
   public Object integerDivideEquals(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivideEquals(this.instance, rhs);
+    return this.delegate.integerDivideEquals(this.instance, rhs);
   }
 
   /**
@@ -12964,7 +12964,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivideEquals(java.lang.Object, int)
    */
   public Object integerDivideEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivideEquals(this.instance, rhs);
+    return this.delegate.integerDivideEquals(this.instance, rhs);
   }
 
   /**
@@ -12974,7 +12974,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivideEquals(java.lang.Object, long)
    */
   public Object integerDivideEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivideEquals(this.instance, rhs);
+    return this.delegate.integerDivideEquals(this.instance, rhs);
   }
 
   /**
@@ -12984,7 +12984,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#integerDivideEquals(java.lang.Object, java.lang.Object)
    */
   public Object integerDivideEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivideEquals(this.instance, rhs);
+    return this.delegate.integerDivideEquals(this.instance, rhs);
   }
 
   /**
@@ -12994,7 +12994,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#integerDivideEquals(java.lang.Object, short)
    */
   public Object integerDivideEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().integerDivideEquals(this.instance, rhs);
+    return this.delegate.integerDivideEquals(this.instance, rhs);
   }
 
   /**
@@ -13094,7 +13094,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#invokeConstructor(java.lang.Class, java.lang.Object[])
    */
   public Object invokeConstructor(final Class theClass, final Object[] arguments) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().invokeConstructor(theClass, arguments);
+    return this.delegate.invokeConstructor(theClass, arguments);
   }
 
   /**
@@ -13105,7 +13105,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object[])
    */
   public Object invokeMethod(final Object instance, final String methodName, final Object[] arguments) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().invokeMethod(this.instance, methodName, arguments);
+    return this.delegate.invokeMethod(this.instance, methodName, arguments);
   }
 
   /**
@@ -13115,7 +13115,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#isCase(java.lang.Object, java.lang.Object)
    */
   public Object isCase(final Object instance, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().isCase(this.instance, rhs);
+    return this.delegate.isCase(this.instance, rhs);
   }
 
   /**
@@ -13125,7 +13125,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#isInstanceof(java.lang.Object, java.lang.Class)
    */
   public Object isInstanceof(final Object instance, final Class type) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().isInstanceof(this.instance, type);
+    return this.delegate.isInstanceof(this.instance, type);
   }
 
   /**
@@ -13435,7 +13435,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShift(java.lang.Object, java.math.BigInteger)
    */
   public Object leftShift(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShift(this.instance, rhs);
+    return this.delegate.leftShift(this.instance, rhs);
   }
 
   /**
@@ -13445,7 +13445,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShift(java.lang.Object, byte)
    */
   public Object leftShift(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShift(this.instance, rhs);
+    return this.delegate.leftShift(this.instance, rhs);
   }
 
   /**
@@ -13455,7 +13455,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShift(java.lang.Object, char)
    */
   public Object leftShift(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShift(this.instance, rhs);
+    return this.delegate.leftShift(this.instance, rhs);
   }
 
   /**
@@ -13465,7 +13465,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShift(java.lang.Object, int)
    */
   public Object leftShift(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShift(this.instance, rhs);
+    return this.delegate.leftShift(this.instance, rhs);
   }
 
   /**
@@ -13475,7 +13475,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShift(java.lang.Object, long)
    */
   public Object leftShift(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShift(this.instance, rhs);
+    return this.delegate.leftShift(this.instance, rhs);
   }
 
   /**
@@ -13485,7 +13485,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#leftShift(java.lang.Object, java.lang.Object)
    */
   public Object leftShift(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShift(this.instance, rhs);
+    return this.delegate.leftShift(this.instance, rhs);
   }
 
   /**
@@ -13495,7 +13495,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShift(java.lang.Object, short)
    */
   public Object leftShift(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShift(this.instance, rhs);
+    return this.delegate.leftShift(this.instance, rhs);
   }
 
   /**
@@ -13865,7 +13865,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShiftEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object leftShiftEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShiftEquals(this.instance, rhs);
+    return this.delegate.leftShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -13875,7 +13875,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShiftEquals(java.lang.Object, byte)
    */
   public Object leftShiftEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShiftEquals(this.instance, rhs);
+    return this.delegate.leftShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -13885,7 +13885,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShiftEquals(java.lang.Object, char)
    */
   public Object leftShiftEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShiftEquals(this.instance, rhs);
+    return this.delegate.leftShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -13895,7 +13895,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShiftEquals(java.lang.Object, int)
    */
   public Object leftShiftEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShiftEquals(this.instance, rhs);
+    return this.delegate.leftShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -13905,7 +13905,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShiftEquals(java.lang.Object, long)
    */
   public Object leftShiftEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShiftEquals(this.instance, rhs);
+    return this.delegate.leftShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -13915,7 +13915,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#leftShiftEquals(java.lang.Object, java.lang.Object)
    */
   public Object leftShiftEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShiftEquals(this.instance, rhs);
+    return this.delegate.leftShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -13925,7 +13925,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#leftShiftEquals(java.lang.Object, short)
    */
   public Object leftShiftEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().leftShiftEquals(this.instance, rhs);
+    return this.delegate.leftShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -14715,7 +14715,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThan(java.lang.Object, java.math.BigDecimal)
    */
   public Object lessThan(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThan(this.instance, rhs);
+    return this.delegate.lessThan(this.instance, rhs);
   }
 
   /**
@@ -14725,7 +14725,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThan(java.lang.Object, java.math.BigInteger)
    */
   public Object lessThan(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThan(this.instance, rhs);
+    return this.delegate.lessThan(this.instance, rhs);
   }
 
   /**
@@ -14735,7 +14735,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThan(java.lang.Object, byte)
    */
   public Object lessThan(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThan(this.instance, rhs);
+    return this.delegate.lessThan(this.instance, rhs);
   }
 
   /**
@@ -14745,7 +14745,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThan(java.lang.Object, char)
    */
   public Object lessThan(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThan(this.instance, rhs);
+    return this.delegate.lessThan(this.instance, rhs);
   }
 
   /**
@@ -14755,7 +14755,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThan(java.lang.Object, double)
    */
   public Object lessThan(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThan(this.instance, rhs);
+    return this.delegate.lessThan(this.instance, rhs);
   }
 
   /**
@@ -14765,7 +14765,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThan(java.lang.Object, float)
    */
   public Object lessThan(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThan(this.instance, rhs);
+    return this.delegate.lessThan(this.instance, rhs);
   }
 
   /**
@@ -14775,7 +14775,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThan(java.lang.Object, int)
    */
   public Object lessThan(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThan(this.instance, rhs);
+    return this.delegate.lessThan(this.instance, rhs);
   }
 
   /**
@@ -14785,7 +14785,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThan(java.lang.Object, long)
    */
   public Object lessThan(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThan(this.instance, rhs);
+    return this.delegate.lessThan(this.instance, rhs);
   }
 
   /**
@@ -14795,7 +14795,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#lessThan(java.lang.Object, java.lang.Object)
    */
   public Object lessThan(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThan(this.instance, rhs);
+    return this.delegate.lessThan(this.instance, rhs);
   }
 
   /**
@@ -14805,7 +14805,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThan(java.lang.Object, short)
    */
   public Object lessThan(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThan(this.instance, rhs);
+    return this.delegate.lessThan(this.instance, rhs);
   }
 
   /**
@@ -15406,70 +15406,70 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, java.math.BigDecimal)
    */
   public boolean lessThanBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanBoolean(this.instance, rhs);
+    return this.delegate.lessThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, java.math.BigInteger)
    */
   public boolean lessThanBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanBoolean(this.instance, rhs);
+    return this.delegate.lessThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, byte)
    */
   public boolean lessThanBoolean(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanBoolean(this.instance, rhs);
+    return this.delegate.lessThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, char)
    */
   public boolean lessThanBoolean(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanBoolean(this.instance, rhs);
+    return this.delegate.lessThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, double)
    */
   public boolean lessThanBoolean(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanBoolean(this.instance, rhs);
+    return this.delegate.lessThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, float)
    */
   public boolean lessThanBoolean(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanBoolean(this.instance, rhs);
+    return this.delegate.lessThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, int)
    */
   public boolean lessThanBoolean(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanBoolean(this.instance, rhs);
+    return this.delegate.lessThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, long)
    */
   public boolean lessThanBoolean(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanBoolean(this.instance, rhs);
+    return this.delegate.lessThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, java.lang.Object)
    */
   public boolean lessThanBoolean(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanBoolean(this.instance, rhs);
+    return this.delegate.lessThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanBoolean(java.lang.Object, short)
    */
   public boolean lessThanBoolean(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanBoolean(this.instance, rhs);
+    return this.delegate.lessThanBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
@@ -15539,63 +15539,63 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(java.math.BigDecimal, java.lang.Object)
    */
   public boolean reverseLessThanBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(java.math.BigInteger, java.lang.Object)
    */
   public boolean reverseLessThanBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(byte, java.lang.Object)
    */
   public boolean reverseLessThanBoolean(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(char, java.lang.Object)
    */
   public boolean reverseLessThanBoolean(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(double, java.lang.Object)
    */
   public boolean reverseLessThanBoolean(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(float, java.lang.Object)
    */
   public boolean reverseLessThanBoolean(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(int, java.lang.Object)
    */
   public boolean reverseLessThanBoolean(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(long, java.lang.Object)
    */
   public boolean reverseLessThanBoolean(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanBoolean(short, java.lang.Object)
    */
   public boolean reverseLessThanBoolean(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanBoolean(lhs, this.instance);
   }
 
   /**
@@ -16325,7 +16325,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEquals(java.lang.Object, java.math.BigDecimal)
    */
   public Object lessThanOrEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEquals(this.instance, rhs);
+    return this.delegate.lessThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -16335,7 +16335,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object lessThanOrEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEquals(this.instance, rhs);
+    return this.delegate.lessThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -16345,7 +16345,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEquals(java.lang.Object, byte)
    */
   public Object lessThanOrEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEquals(this.instance, rhs);
+    return this.delegate.lessThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -16355,7 +16355,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEquals(java.lang.Object, char)
    */
   public Object lessThanOrEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEquals(this.instance, rhs);
+    return this.delegate.lessThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -16365,7 +16365,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEquals(java.lang.Object, double)
    */
   public Object lessThanOrEquals(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEquals(this.instance, rhs);
+    return this.delegate.lessThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -16375,7 +16375,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEquals(java.lang.Object, float)
    */
   public Object lessThanOrEquals(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEquals(this.instance, rhs);
+    return this.delegate.lessThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -16385,7 +16385,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEquals(java.lang.Object, int)
    */
   public Object lessThanOrEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEquals(this.instance, rhs);
+    return this.delegate.lessThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -16395,7 +16395,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEquals(java.lang.Object, long)
    */
   public Object lessThanOrEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEquals(this.instance, rhs);
+    return this.delegate.lessThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -16405,7 +16405,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#lessThanOrEquals(java.lang.Object, java.lang.Object)
    */
   public Object lessThanOrEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEquals(this.instance, rhs);
+    return this.delegate.lessThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -16415,7 +16415,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEquals(java.lang.Object, short)
    */
   public Object lessThanOrEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEquals(this.instance, rhs);
+    return this.delegate.lessThanOrEquals(this.instance, rhs);
   }
 
   /**
@@ -17016,70 +17016,70 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, java.math.BigDecimal)
    */
   public boolean lessThanOrEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.lessThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, java.math.BigInteger)
    */
   public boolean lessThanOrEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.lessThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, byte)
    */
   public boolean lessThanOrEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.lessThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, char)
    */
   public boolean lessThanOrEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.lessThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, double)
    */
   public boolean lessThanOrEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.lessThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, float)
    */
   public boolean lessThanOrEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.lessThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, int)
    */
   public boolean lessThanOrEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.lessThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, long)
    */
   public boolean lessThanOrEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.lessThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, java.lang.Object)
    */
   public boolean lessThanOrEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.lessThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#lessThanOrEqualsBoolean(java.lang.Object, short)
    */
   public boolean lessThanOrEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().lessThanOrEqualsBoolean(this.instance, rhs);
+    return this.delegate.lessThanOrEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
@@ -17149,63 +17149,63 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(java.math.BigDecimal, java.lang.Object)
    */
   public boolean reverseLessThanOrEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(java.math.BigInteger, java.lang.Object)
    */
   public boolean reverseLessThanOrEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(byte, java.lang.Object)
    */
   public boolean reverseLessThanOrEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(char, java.lang.Object)
    */
   public boolean reverseLessThanOrEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(double, java.lang.Object)
    */
   public boolean reverseLessThanOrEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(float, java.lang.Object)
    */
   public boolean reverseLessThanOrEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(int, java.lang.Object)
    */
   public boolean reverseLessThanOrEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(long, java.lang.Object)
    */
   public boolean reverseLessThanOrEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEqualsBoolean(short, java.lang.Object)
    */
   public boolean reverseLessThanOrEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEqualsBoolean(lhs, this.instance);
   }
 
   /**
@@ -17455,7 +17455,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShift(java.lang.Object, java.math.BigInteger)
    */
   public Object logicalRightShift(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShift(this.instance, rhs);
+    return this.delegate.logicalRightShift(this.instance, rhs);
   }
 
   /**
@@ -17465,7 +17465,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShift(java.lang.Object, byte)
    */
   public Object logicalRightShift(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShift(this.instance, rhs);
+    return this.delegate.logicalRightShift(this.instance, rhs);
   }
 
   /**
@@ -17475,7 +17475,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShift(java.lang.Object, char)
    */
   public Object logicalRightShift(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShift(this.instance, rhs);
+    return this.delegate.logicalRightShift(this.instance, rhs);
   }
 
   /**
@@ -17485,7 +17485,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShift(java.lang.Object, int)
    */
   public Object logicalRightShift(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShift(this.instance, rhs);
+    return this.delegate.logicalRightShift(this.instance, rhs);
   }
 
   /**
@@ -17495,7 +17495,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShift(java.lang.Object, long)
    */
   public Object logicalRightShift(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShift(this.instance, rhs);
+    return this.delegate.logicalRightShift(this.instance, rhs);
   }
 
   /**
@@ -17505,7 +17505,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#logicalRightShift(java.lang.Object, java.lang.Object)
    */
   public Object logicalRightShift(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShift(this.instance, rhs);
+    return this.delegate.logicalRightShift(this.instance, rhs);
   }
 
   /**
@@ -17515,7 +17515,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShift(java.lang.Object, short)
    */
   public Object logicalRightShift(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShift(this.instance, rhs);
+    return this.delegate.logicalRightShift(this.instance, rhs);
   }
 
   /**
@@ -17825,7 +17825,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShiftEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object logicalRightShiftEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShiftEquals(this.instance, rhs);
+    return this.delegate.logicalRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -17835,7 +17835,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShiftEquals(java.lang.Object, byte)
    */
   public Object logicalRightShiftEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShiftEquals(this.instance, rhs);
+    return this.delegate.logicalRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -17845,7 +17845,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShiftEquals(java.lang.Object, char)
    */
   public Object logicalRightShiftEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShiftEquals(this.instance, rhs);
+    return this.delegate.logicalRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -17855,7 +17855,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShiftEquals(java.lang.Object, int)
    */
   public Object logicalRightShiftEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShiftEquals(this.instance, rhs);
+    return this.delegate.logicalRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -17865,7 +17865,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShiftEquals(java.lang.Object, long)
    */
   public Object logicalRightShiftEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShiftEquals(this.instance, rhs);
+    return this.delegate.logicalRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -17875,7 +17875,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#logicalRightShiftEquals(java.lang.Object, java.lang.Object)
    */
   public Object logicalRightShiftEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShiftEquals(this.instance, rhs);
+    return this.delegate.logicalRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -17885,7 +17885,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#logicalRightShiftEquals(java.lang.Object, short)
    */
   public Object logicalRightShiftEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().logicalRightShiftEquals(this.instance, rhs);
+    return this.delegate.logicalRightShiftEquals(this.instance, rhs);
   }
 
   /**
@@ -18675,7 +18675,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiply(java.lang.Object, java.math.BigDecimal)
    */
   public Object multiply(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiply(this.instance, rhs);
+    return this.delegate.multiply(this.instance, rhs);
   }
 
   /**
@@ -18685,7 +18685,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiply(java.lang.Object, java.math.BigInteger)
    */
   public Object multiply(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiply(this.instance, rhs);
+    return this.delegate.multiply(this.instance, rhs);
   }
 
   /**
@@ -18695,7 +18695,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiply(java.lang.Object, byte)
    */
   public Object multiply(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiply(this.instance, rhs);
+    return this.delegate.multiply(this.instance, rhs);
   }
 
   /**
@@ -18705,7 +18705,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiply(java.lang.Object, char)
    */
   public Object multiply(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiply(this.instance, rhs);
+    return this.delegate.multiply(this.instance, rhs);
   }
 
   /**
@@ -18715,7 +18715,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiply(java.lang.Object, double)
    */
   public Object multiply(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiply(this.instance, rhs);
+    return this.delegate.multiply(this.instance, rhs);
   }
 
   /**
@@ -18725,7 +18725,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiply(java.lang.Object, float)
    */
   public Object multiply(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiply(this.instance, rhs);
+    return this.delegate.multiply(this.instance, rhs);
   }
 
   /**
@@ -18735,7 +18735,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiply(java.lang.Object, int)
    */
   public Object multiply(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiply(this.instance, rhs);
+    return this.delegate.multiply(this.instance, rhs);
   }
 
   /**
@@ -18745,7 +18745,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiply(java.lang.Object, long)
    */
   public Object multiply(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiply(this.instance, rhs);
+    return this.delegate.multiply(this.instance, rhs);
   }
 
   /**
@@ -18755,7 +18755,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#multiply(java.lang.Object, java.lang.Object)
    */
   public Object multiply(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiply(this.instance, rhs);
+    return this.delegate.multiply(this.instance, rhs);
   }
 
   /**
@@ -18765,7 +18765,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiply(java.lang.Object, short)
    */
   public Object multiply(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiply(this.instance, rhs);
+    return this.delegate.multiply(this.instance, rhs);
   }
 
   /**
@@ -19585,7 +19585,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiplyEquals(java.lang.Object, java.math.BigDecimal)
    */
   public Object multiplyEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiplyEquals(this.instance, rhs);
+    return this.delegate.multiplyEquals(this.instance, rhs);
   }
 
   /**
@@ -19595,7 +19595,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiplyEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object multiplyEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiplyEquals(this.instance, rhs);
+    return this.delegate.multiplyEquals(this.instance, rhs);
   }
 
   /**
@@ -19605,7 +19605,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiplyEquals(java.lang.Object, byte)
    */
   public Object multiplyEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiplyEquals(this.instance, rhs);
+    return this.delegate.multiplyEquals(this.instance, rhs);
   }
 
   /**
@@ -19615,7 +19615,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiplyEquals(java.lang.Object, char)
    */
   public Object multiplyEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiplyEquals(this.instance, rhs);
+    return this.delegate.multiplyEquals(this.instance, rhs);
   }
 
   /**
@@ -19625,7 +19625,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiplyEquals(java.lang.Object, double)
    */
   public Object multiplyEquals(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiplyEquals(this.instance, rhs);
+    return this.delegate.multiplyEquals(this.instance, rhs);
   }
 
   /**
@@ -19635,7 +19635,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiplyEquals(java.lang.Object, float)
    */
   public Object multiplyEquals(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiplyEquals(this.instance, rhs);
+    return this.delegate.multiplyEquals(this.instance, rhs);
   }
 
   /**
@@ -19645,7 +19645,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiplyEquals(java.lang.Object, int)
    */
   public Object multiplyEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiplyEquals(this.instance, rhs);
+    return this.delegate.multiplyEquals(this.instance, rhs);
   }
 
   /**
@@ -19655,7 +19655,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiplyEquals(java.lang.Object, long)
    */
   public Object multiplyEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiplyEquals(this.instance, rhs);
+    return this.delegate.multiplyEquals(this.instance, rhs);
   }
 
   /**
@@ -19665,7 +19665,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#multiplyEquals(java.lang.Object, java.lang.Object)
    */
   public Object multiplyEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiplyEquals(this.instance, rhs);
+    return this.delegate.multiplyEquals(this.instance, rhs);
   }
 
   /**
@@ -19675,7 +19675,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#multiplyEquals(java.lang.Object, short)
    */
   public Object multiplyEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().multiplyEquals(this.instance, rhs);
+    return this.delegate.multiplyEquals(this.instance, rhs);
   }
 
   /**
@@ -19783,7 +19783,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#not(java.lang.Object)
    */
   public Object not(final Object operand) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().not(this.instance);
+    return this.delegate.not(this.instance);
   }
 
   /**
@@ -20513,7 +20513,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#notEquals(java.lang.Object, java.math.BigDecimal)
    */
   public Object notEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEquals(this.instance, rhs);
+    return this.delegate.notEquals(this.instance, rhs);
   }
 
   /**
@@ -20523,7 +20523,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#notEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object notEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEquals(this.instance, rhs);
+    return this.delegate.notEquals(this.instance, rhs);
   }
 
   /**
@@ -20533,7 +20533,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#notEquals(java.lang.Object, byte)
    */
   public Object notEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEquals(this.instance, rhs);
+    return this.delegate.notEquals(this.instance, rhs);
   }
 
   /**
@@ -20543,7 +20543,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#notEquals(java.lang.Object, char)
    */
   public Object notEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEquals(this.instance, rhs);
+    return this.delegate.notEquals(this.instance, rhs);
   }
 
   /**
@@ -20553,7 +20553,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#notEquals(java.lang.Object, double)
    */
   public Object notEquals(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEquals(this.instance, rhs);
+    return this.delegate.notEquals(this.instance, rhs);
   }
 
   /**
@@ -20563,7 +20563,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#notEquals(java.lang.Object, float)
    */
   public Object notEquals(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEquals(this.instance, rhs);
+    return this.delegate.notEquals(this.instance, rhs);
   }
 
   /**
@@ -20573,7 +20573,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#notEquals(java.lang.Object, int)
    */
   public Object notEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEquals(this.instance, rhs);
+    return this.delegate.notEquals(this.instance, rhs);
   }
 
   /**
@@ -20583,7 +20583,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#notEquals(java.lang.Object, long)
    */
   public Object notEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEquals(this.instance, rhs);
+    return this.delegate.notEquals(this.instance, rhs);
   }
 
   /**
@@ -20593,7 +20593,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#notEquals(java.lang.Object, java.lang.Object)
    */
   public Object notEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEquals(this.instance, rhs);
+    return this.delegate.notEquals(this.instance, rhs);
   }
 
   /**
@@ -20603,7 +20603,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#notEquals(java.lang.Object, short)
    */
   public Object notEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEquals(this.instance, rhs);
+    return this.delegate.notEquals(this.instance, rhs);
   }
 
   /**
@@ -21204,70 +21204,70 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, java.math.BigDecimal)
    */
   public boolean notEqualsBoolean(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEqualsBoolean(this.instance, rhs);
+    return this.delegate.notEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, java.math.BigInteger)
    */
   public boolean notEqualsBoolean(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEqualsBoolean(this.instance, rhs);
+    return this.delegate.notEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, byte)
    */
   public boolean notEqualsBoolean(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEqualsBoolean(this.instance, rhs);
+    return this.delegate.notEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, char)
    */
   public boolean notEqualsBoolean(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEqualsBoolean(this.instance, rhs);
+    return this.delegate.notEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, double)
    */
   public boolean notEqualsBoolean(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEqualsBoolean(this.instance, rhs);
+    return this.delegate.notEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, float)
    */
   public boolean notEqualsBoolean(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEqualsBoolean(this.instance, rhs);
+    return this.delegate.notEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, int)
    */
   public boolean notEqualsBoolean(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEqualsBoolean(this.instance, rhs);
+    return this.delegate.notEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, long)
    */
   public boolean notEqualsBoolean(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEqualsBoolean(this.instance, rhs);
+    return this.delegate.notEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, java.lang.Object)
    */
   public boolean notEqualsBoolean(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEqualsBoolean(this.instance, rhs);
+    return this.delegate.notEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#notEqualsBoolean(java.lang.Object, short)
    */
   public boolean notEqualsBoolean(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().notEqualsBoolean(this.instance, rhs);
+    return this.delegate.notEqualsBoolean(this.instance, rhs);
   }
 
   /* (non-Javadoc)
@@ -21337,63 +21337,63 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(java.math.BigDecimal, java.lang.Object)
    */
   public boolean reverseNotEqualsBoolean(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseNotEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(java.math.BigInteger, java.lang.Object)
    */
   public boolean reverseNotEqualsBoolean(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseNotEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(byte, java.lang.Object)
    */
   public boolean reverseNotEqualsBoolean(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseNotEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(char, java.lang.Object)
    */
   public boolean reverseNotEqualsBoolean(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseNotEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(double, java.lang.Object)
    */
   public boolean reverseNotEqualsBoolean(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseNotEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(float, java.lang.Object)
    */
   public boolean reverseNotEqualsBoolean(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseNotEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(int, java.lang.Object)
    */
   public boolean reverseNotEqualsBoolean(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseNotEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(long, java.lang.Object)
    */
   public boolean reverseNotEqualsBoolean(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseNotEqualsBoolean(lhs, this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#reverseNotEqualsBoolean(short, java.lang.Object)
    */
   public boolean reverseNotEqualsBoolean(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEqualsBoolean(lhs, this.instance);
+    return this.delegate.reverseNotEqualsBoolean(lhs, this.instance);
   }
 
   /**
@@ -21703,7 +21703,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#or(java.lang.Object, java.math.BigInteger)
    */
   public Object or(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().or(this.instance, rhs);
+    return this.delegate.or(this.instance, rhs);
   }
 
   /**
@@ -21713,7 +21713,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#or(java.lang.Object, byte)
    */
   public Object or(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().or(this.instance, rhs);
+    return this.delegate.or(this.instance, rhs);
   }
 
   /**
@@ -21723,7 +21723,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#or(java.lang.Object, char)
    */
   public Object or(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().or(this.instance, rhs);
+    return this.delegate.or(this.instance, rhs);
   }
 
   /**
@@ -21733,7 +21733,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#or(java.lang.Object, int)
    */
   public Object or(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().or(this.instance, rhs);
+    return this.delegate.or(this.instance, rhs);
   }
 
   /**
@@ -21743,7 +21743,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#or(java.lang.Object, long)
    */
   public Object or(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().or(this.instance, rhs);
+    return this.delegate.or(this.instance, rhs);
   }
 
   /**
@@ -21753,7 +21753,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#or(java.lang.Object, java.lang.Object)
    */
   public Object or(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().or(this.instance, rhs);
+    return this.delegate.or(this.instance, rhs);
   }
 
   /**
@@ -21763,7 +21763,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#or(java.lang.Object, short)
    */
   public Object or(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().or(this.instance, rhs);
+    return this.delegate.or(this.instance, rhs);
   }
 
   /**
@@ -22133,7 +22133,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#orEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object orEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().orEquals(this.instance, rhs);
+    return this.delegate.orEquals(this.instance, rhs);
   }
 
   /**
@@ -22143,7 +22143,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#orEquals(java.lang.Object, byte)
    */
   public Object orEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().orEquals(this.instance, rhs);
+    return this.delegate.orEquals(this.instance, rhs);
   }
 
   /**
@@ -22153,7 +22153,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#orEquals(java.lang.Object, char)
    */
   public Object orEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().orEquals(this.instance, rhs);
+    return this.delegate.orEquals(this.instance, rhs);
   }
 
   /**
@@ -22163,7 +22163,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#orEquals(java.lang.Object, int)
    */
   public Object orEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().orEquals(this.instance, rhs);
+    return this.delegate.orEquals(this.instance, rhs);
   }
 
   /**
@@ -22173,7 +22173,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#orEquals(java.lang.Object, long)
    */
   public Object orEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().orEquals(this.instance, rhs);
+    return this.delegate.orEquals(this.instance, rhs);
   }
 
   /**
@@ -22183,7 +22183,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#orEquals(java.lang.Object, java.lang.Object)
    */
   public Object orEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().orEquals(this.instance, rhs);
+    return this.delegate.orEquals(this.instance, rhs);
   }
 
   /**
@@ -22193,7 +22193,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#orEquals(java.lang.Object, short)
    */
   public Object orEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().orEquals(this.instance, rhs);
+    return this.delegate.orEquals(this.instance, rhs);
   }
 
   /**
@@ -22316,7 +22316,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#postfixDecrement(java.lang.Object)
    */
   public Object postfixDecrement(final Object operand) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().postfixDecrement(operand);
+    return this.delegate.postfixDecrement(operand);
   }
 
   /**
@@ -22379,7 +22379,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#postfixIncrement(java.lang.Object)
    */
   public Object postfixIncrement(final Object operand) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().postfixIncrement(operand);
+    return this.delegate.postfixIncrement(operand);
   }
 
   /**
@@ -22442,7 +22442,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#prefixDecrement(java.lang.Object)
    */
   public Object prefixDecrement(final Object operand) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().prefixDecrement(this.instance);
+    return this.delegate.prefixDecrement(this.instance);
   }
 
   /**
@@ -22505,21 +22505,21 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#prefixIncrement(java.lang.Object)
    */
   public Object prefixIncrement(final Object operand) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().prefixIncrement(this.instance);
+    return this.delegate.prefixIncrement(this.instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#putAt(java.lang.Object, java.math.BigInteger)
    */
   public Object putAt(final Object instance, final BigInteger index) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().putAt(this.instance, index);
+    return this.delegate.putAt(this.instance, index);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#putAt(java.lang.Object, int)
    */
   public Object putAt(final Object instance, final int index) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().putAt(this.instance, index);
+    return this.delegate.putAt(this.instance, index);
   }
 
   /**
@@ -22529,7 +22529,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#putAt(java.lang.Object, java.lang.Object)
    */
   public Object putAt(final Object instance, final Object index) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().putAt(this.instance, index);
+    return this.delegate.putAt(this.instance, index);
   }
 
   /**
@@ -22839,7 +22839,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainder(java.lang.Object, java.math.BigInteger)
    */
   public Object remainder(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainder(this.instance, rhs);
+    return this.delegate.remainder(this.instance, rhs);
   }
 
   /**
@@ -22849,7 +22849,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainder(java.lang.Object, byte)
    */
   public Object remainder(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainder(this.instance, rhs);
+    return this.delegate.remainder(this.instance, rhs);
   }
 
   /**
@@ -22859,7 +22859,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainder(java.lang.Object, char)
    */
   public Object remainder(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainder(this.instance, rhs);
+    return this.delegate.remainder(this.instance, rhs);
   }
 
   /**
@@ -22869,7 +22869,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainder(java.lang.Object, int)
    */
   public Object remainder(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainder(this.instance, rhs);
+    return this.delegate.remainder(this.instance, rhs);
   }
 
   /**
@@ -22879,7 +22879,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainder(java.lang.Object, long)
    */
   public Object remainder(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainder(this.instance, rhs);
+    return this.delegate.remainder(this.instance, rhs);
   }
 
   /**
@@ -22889,7 +22889,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#remainder(java.lang.Object, java.lang.Object)
    */
   public Object remainder(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainder(this.instance, rhs);
+    return this.delegate.remainder(this.instance, rhs);
   }
 
   /**
@@ -22899,7 +22899,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainder(java.lang.Object, short)
    */
   public Object remainder(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainder(this.instance, rhs);
+    return this.delegate.remainder(this.instance, rhs);
   }
 
   /**
@@ -23269,7 +23269,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainderEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object remainderEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainderEquals(this.instance, rhs);
+    return this.delegate.remainderEquals(this.instance, rhs);
   }
 
   /**
@@ -23279,7 +23279,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainderEquals(java.lang.Object, byte)
    */
   public Object remainderEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainderEquals(this.instance, rhs);
+    return this.delegate.remainderEquals(this.instance, rhs);
   }
 
   /**
@@ -23289,7 +23289,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainderEquals(java.lang.Object, char)
    */
   public Object remainderEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainderEquals(this.instance, rhs);
+    return this.delegate.remainderEquals(this.instance, rhs);
   }
 
   /**
@@ -23299,7 +23299,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainderEquals(java.lang.Object, int)
    */
   public Object remainderEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainderEquals(this.instance, rhs);
+    return this.delegate.remainderEquals(this.instance, rhs);
   }
 
   /**
@@ -23309,7 +23309,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainderEquals(java.lang.Object, long)
    */
   public Object remainderEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainderEquals(this.instance, rhs);
+    return this.delegate.remainderEquals(this.instance, rhs);
   }
 
   /**
@@ -23319,7 +23319,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#remainderEquals(java.lang.Object, java.lang.Object)
    */
   public Object remainderEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainderEquals(this.instance, rhs);
+    return this.delegate.remainderEquals(this.instance, rhs);
   }
 
   /**
@@ -23329,7 +23329,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#remainderEquals(java.lang.Object, short)
    */
   public Object remainderEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().remainderEquals(this.instance, rhs);
+    return this.delegate.remainderEquals(this.instance, rhs);
   }
 
   /**
@@ -23399,7 +23399,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAdd(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseAdd(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAdd(lhs, this.instance);
+    return this.delegate.reverseAdd(lhs, this.instance);
   }
 
   /**
@@ -23409,7 +23409,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAdd(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseAdd(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAdd(lhs, this.instance);
+    return this.delegate.reverseAdd(lhs, this.instance);
   }
 
   /**
@@ -23419,7 +23419,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAdd(byte, java.lang.Object)
    */
   public Object reverseAdd(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAdd(lhs, this.instance);
+    return this.delegate.reverseAdd(lhs, this.instance);
   }
 
   /**
@@ -23429,7 +23429,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAdd(char, java.lang.Object)
    */
   public Object reverseAdd(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAdd(lhs, this.instance);
+    return this.delegate.reverseAdd(lhs, this.instance);
   }
 
   /**
@@ -23439,7 +23439,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAdd(double, java.lang.Object)
    */
   public Object reverseAdd(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAdd(lhs, this.instance);
+    return this.delegate.reverseAdd(lhs, this.instance);
   }
 
   /**
@@ -23449,7 +23449,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAdd(float, java.lang.Object)
    */
   public Object reverseAdd(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAdd(lhs, this.instance);
+    return this.delegate.reverseAdd(lhs, this.instance);
   }
 
   /**
@@ -23459,7 +23459,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAdd(int, java.lang.Object)
    */
   public Object reverseAdd(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAdd(lhs, this.instance);
+    return this.delegate.reverseAdd(lhs, this.instance);
   }
 
   /**
@@ -23469,7 +23469,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAdd(long, java.lang.Object)
    */
   public Object reverseAdd(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAdd(lhs, this.instance);
+    return this.delegate.reverseAdd(lhs, this.instance);
   }
 
   /**
@@ -23479,7 +23479,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAdd(short, java.lang.Object)
    */
   public Object reverseAdd(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAdd(lhs, this.instance);
+    return this.delegate.reverseAdd(lhs, this.instance);
   }
 
   /**
@@ -23489,7 +23489,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAddEquals(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseAddEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAddEquals(lhs, this.instance);
+    return this.delegate.reverseAddEquals(lhs, this.instance);
   }
 
   /**
@@ -23499,7 +23499,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAddEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseAddEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAddEquals(lhs, this.instance);
+    return this.delegate.reverseAddEquals(lhs, this.instance);
   }
 
   /**
@@ -23509,7 +23509,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAddEquals(byte, java.lang.Object)
    */
   public Object reverseAddEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAddEquals(lhs, this.instance);
+    return this.delegate.reverseAddEquals(lhs, this.instance);
   }
 
   /**
@@ -23519,7 +23519,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAddEquals(char, java.lang.Object)
    */
   public Object reverseAddEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAddEquals(lhs, this.instance);
+    return this.delegate.reverseAddEquals(lhs, this.instance);
   }
 
   /**
@@ -23529,7 +23529,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAddEquals(double, java.lang.Object)
    */
   public Object reverseAddEquals(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAddEquals(lhs, this.instance);
+    return this.delegate.reverseAddEquals(lhs, this.instance);
   }
 
   /**
@@ -23539,7 +23539,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAddEquals(float, java.lang.Object)
    */
   public Object reverseAddEquals(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAddEquals(lhs, this.instance);
+    return this.delegate.reverseAddEquals(lhs, this.instance);
   }
 
   /**
@@ -23549,7 +23549,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAddEquals(int, java.lang.Object)
    */
   public Object reverseAddEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAddEquals(lhs, this.instance);
+    return this.delegate.reverseAddEquals(lhs, this.instance);
   }
 
   /**
@@ -23559,7 +23559,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAddEquals(long, java.lang.Object)
    */
   public Object reverseAddEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAddEquals(lhs, this.instance);
+    return this.delegate.reverseAddEquals(lhs, this.instance);
   }
 
   /**
@@ -23569,7 +23569,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAddEquals(short, java.lang.Object)
    */
   public Object reverseAddEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAddEquals(lhs, this.instance);
+    return this.delegate.reverseAddEquals(lhs, this.instance);
   }
 
   /**
@@ -23579,7 +23579,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAnd(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseAnd(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAnd(lhs, this.instance);
+    return this.delegate.reverseAnd(lhs, this.instance);
   }
 
   /**
@@ -23589,7 +23589,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAnd(byte, java.lang.Object)
    */
   public Object reverseAnd(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAnd(lhs, this.instance);
+    return this.delegate.reverseAnd(lhs, this.instance);
   }
 
   /**
@@ -23599,7 +23599,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAnd(char, java.lang.Object)
    */
   public Object reverseAnd(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAnd(lhs, this.instance);
+    return this.delegate.reverseAnd(lhs, this.instance);
   }
 
   /**
@@ -23609,7 +23609,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAnd(int, java.lang.Object)
    */
   public Object reverseAnd(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAnd(lhs, this.instance);
+    return this.delegate.reverseAnd(lhs, this.instance);
   }
 
   /**
@@ -23619,7 +23619,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAnd(long, java.lang.Object)
    */
   public Object reverseAnd(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAnd(lhs, this.instance);
+    return this.delegate.reverseAnd(lhs, this.instance);
   }
 
   /**
@@ -23629,7 +23629,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAnd(short, java.lang.Object)
    */
   public Object reverseAnd(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAnd(lhs, this.instance);
+    return this.delegate.reverseAnd(lhs, this.instance);
   }
 
   /**
@@ -23639,7 +23639,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAndEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseAndEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAndEquals(lhs, this.instance);
+    return this.delegate.reverseAndEquals(lhs, this.instance);
   }
 
   /**
@@ -23649,7 +23649,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAndEquals(byte, java.lang.Object)
    */
   public Object reverseAndEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAndEquals(lhs, this.instance);
+    return this.delegate.reverseAndEquals(lhs, this.instance);
   }
 
   /**
@@ -23659,7 +23659,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAndEquals(char, java.lang.Object)
    */
   public Object reverseAndEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAndEquals(lhs, this.instance);
+    return this.delegate.reverseAndEquals(lhs, this.instance);
   }
 
   /**
@@ -23669,7 +23669,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAndEquals(int, java.lang.Object)
    */
   public Object reverseAndEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAndEquals(lhs, this.instance);
+    return this.delegate.reverseAndEquals(lhs, this.instance);
   }
 
   /**
@@ -23679,7 +23679,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAndEquals(long, java.lang.Object)
    */
   public Object reverseAndEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAndEquals(lhs, this.instance);
+    return this.delegate.reverseAndEquals(lhs, this.instance);
   }
 
   /**
@@ -23689,7 +23689,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseAndEquals(short, java.lang.Object)
    */
   public Object reverseAndEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseAndEquals(lhs, this.instance);
+    return this.delegate.reverseAndEquals(lhs, this.instance);
   }
 
   /**
@@ -23699,7 +23699,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShift(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseArithmeticRightShift(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShift(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShift(lhs, this.instance);
   }
 
   /**
@@ -23709,7 +23709,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShift(byte, java.lang.Object)
    */
   public Object reverseArithmeticRightShift(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShift(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShift(lhs, this.instance);
   }
 
   /**
@@ -23719,7 +23719,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShift(char, java.lang.Object)
    */
   public Object reverseArithmeticRightShift(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShift(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShift(lhs, this.instance);
   }
 
   /**
@@ -23729,7 +23729,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShift(int, java.lang.Object)
    */
   public Object reverseArithmeticRightShift(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShift(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShift(lhs, this.instance);
   }
 
   /**
@@ -23739,7 +23739,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShift(long, java.lang.Object)
    */
   public Object reverseArithmeticRightShift(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShift(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShift(lhs, this.instance);
   }
 
   /**
@@ -23749,7 +23749,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShift(short, java.lang.Object)
    */
   public Object reverseArithmeticRightShift(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShift(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShift(lhs, this.instance);
   }
 
   /**
@@ -23759,7 +23759,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShiftEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseArithmeticRightShiftEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -23769,7 +23769,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShiftEquals(byte, java.lang.Object)
    */
   public Object reverseArithmeticRightShiftEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -23779,7 +23779,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShiftEquals(char, java.lang.Object)
    */
   public Object reverseArithmeticRightShiftEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -23789,7 +23789,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShiftEquals(int, java.lang.Object)
    */
   public Object reverseArithmeticRightShiftEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -23799,7 +23799,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShiftEquals(long, java.lang.Object)
    */
   public Object reverseArithmeticRightShiftEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -23809,7 +23809,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseArithmeticRightShiftEquals(short, java.lang.Object)
    */
   public Object reverseArithmeticRightShiftEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseArithmeticRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseArithmeticRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -23819,7 +23819,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseCompare(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseCompare(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseCompare(lhs, this.instance);
+    return this.delegate.reverseCompare(lhs, this.instance);
   }
 
   /**
@@ -23829,7 +23829,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseCompare(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseCompare(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseCompare(lhs, this.instance);
+    return this.delegate.reverseCompare(lhs, this.instance);
   }
 
   /**
@@ -23839,7 +23839,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseCompare(byte, java.lang.Object)
    */
   public Object reverseCompare(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseCompare(lhs, this.instance);
+    return this.delegate.reverseCompare(lhs, this.instance);
   }
 
   /**
@@ -23849,7 +23849,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseCompare(char, java.lang.Object)
    */
   public Object reverseCompare(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseCompare(lhs, this.instance);
+    return this.delegate.reverseCompare(lhs, this.instance);
   }
 
   /**
@@ -23859,7 +23859,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseCompare(double, java.lang.Object)
    */
   public Object reverseCompare(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseCompare(lhs, this.instance);
+    return this.delegate.reverseCompare(lhs, this.instance);
   }
 
   /**
@@ -23869,7 +23869,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseCompare(float, java.lang.Object)
    */
   public Object reverseCompare(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseCompare(lhs, this.instance);
+    return this.delegate.reverseCompare(lhs, this.instance);
   }
 
   /**
@@ -23879,7 +23879,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseCompare(int, java.lang.Object)
    */
   public Object reverseCompare(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseCompare(lhs, this.instance);
+    return this.delegate.reverseCompare(lhs, this.instance);
   }
 
   /**
@@ -23889,7 +23889,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseCompare(long, java.lang.Object)
    */
   public Object reverseCompare(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseCompare(lhs, this.instance);
+    return this.delegate.reverseCompare(lhs, this.instance);
   }
 
   /**
@@ -23899,7 +23899,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseCompare(short, java.lang.Object)
    */
   public Object reverseCompare(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseCompare(lhs, this.instance);
+    return this.delegate.reverseCompare(lhs, this.instance);
   }
 
   /**
@@ -23909,7 +23909,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivide(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseDivide(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivide(lhs, this.instance);
+    return this.delegate.reverseDivide(lhs, this.instance);
   }
 
   /**
@@ -23919,7 +23919,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivide(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseDivide(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivide(lhs, this.instance);
+    return this.delegate.reverseDivide(lhs, this.instance);
   }
 
   /**
@@ -23929,7 +23929,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivide(byte, java.lang.Object)
    */
   public Object reverseDivide(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivide(lhs, this.instance);
+    return this.delegate.reverseDivide(lhs, this.instance);
   }
 
   /**
@@ -23939,7 +23939,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivide(char, java.lang.Object)
    */
   public Object reverseDivide(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivide(lhs, this.instance);
+    return this.delegate.reverseDivide(lhs, this.instance);
   }
 
   /**
@@ -23949,7 +23949,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivide(double, java.lang.Object)
    */
   public Object reverseDivide(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivide(lhs, this.instance);
+    return this.delegate.reverseDivide(lhs, this.instance);
   }
 
   /**
@@ -23959,7 +23959,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivide(float, java.lang.Object)
    */
   public Object reverseDivide(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivide(lhs, this.instance);
+    return this.delegate.reverseDivide(lhs, this.instance);
   }
 
   /**
@@ -23969,7 +23969,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivide(int, java.lang.Object)
    */
   public Object reverseDivide(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivide(lhs, this.instance);
+    return this.delegate.reverseDivide(lhs, this.instance);
   }
 
   /**
@@ -23979,7 +23979,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivide(long, java.lang.Object)
    */
   public Object reverseDivide(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivide(lhs, this.instance);
+    return this.delegate.reverseDivide(lhs, this.instance);
   }
 
   /**
@@ -23989,7 +23989,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivide(short, java.lang.Object)
    */
   public Object reverseDivide(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivide(lhs, this.instance);
+    return this.delegate.reverseDivide(lhs, this.instance);
   }
 
   /**
@@ -23999,7 +23999,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivideEquals(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseDivideEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivideEquals(lhs, this.instance);
+    return this.delegate.reverseDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24009,7 +24009,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivideEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseDivideEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivideEquals(lhs, this.instance);
+    return this.delegate.reverseDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24019,7 +24019,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivideEquals(byte, java.lang.Object)
    */
   public Object reverseDivideEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivideEquals(lhs, this.instance);
+    return this.delegate.reverseDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24029,7 +24029,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivideEquals(char, java.lang.Object)
    */
   public Object reverseDivideEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivideEquals(lhs, this.instance);
+    return this.delegate.reverseDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24039,7 +24039,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivideEquals(double, java.lang.Object)
    */
   public Object reverseDivideEquals(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivideEquals(lhs, this.instance);
+    return this.delegate.reverseDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24049,7 +24049,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivideEquals(float, java.lang.Object)
    */
   public Object reverseDivideEquals(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivideEquals(lhs, this.instance);
+    return this.delegate.reverseDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24059,7 +24059,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivideEquals(int, java.lang.Object)
    */
   public Object reverseDivideEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivideEquals(lhs, this.instance);
+    return this.delegate.reverseDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24069,7 +24069,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivideEquals(long, java.lang.Object)
    */
   public Object reverseDivideEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivideEquals(lhs, this.instance);
+    return this.delegate.reverseDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24079,7 +24079,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseDivideEquals(short, java.lang.Object)
    */
   public Object reverseDivideEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseDivideEquals(lhs, this.instance);
+    return this.delegate.reverseDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24089,7 +24089,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseEquals(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEquals(lhs, this.instance);
+    return this.delegate.reverseEquals(lhs, this.instance);
   }
 
   /**
@@ -24099,7 +24099,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEquals(lhs, this.instance);
+    return this.delegate.reverseEquals(lhs, this.instance);
   }
 
   /**
@@ -24109,7 +24109,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseEquals(byte, java.lang.Object)
    */
   public Object reverseEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEquals(lhs, this.instance);
+    return this.delegate.reverseEquals(lhs, this.instance);
   }
 
   /**
@@ -24119,7 +24119,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseEquals(char, java.lang.Object)
    */
   public Object reverseEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEquals(lhs, this.instance);
+    return this.delegate.reverseEquals(lhs, this.instance);
   }
 
   /**
@@ -24129,7 +24129,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseEquals(double, java.lang.Object)
    */
   public Object reverseEquals(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEquals(lhs, this.instance);
+    return this.delegate.reverseEquals(lhs, this.instance);
   }
 
   /**
@@ -24139,7 +24139,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseEquals(float, java.lang.Object)
    */
   public Object reverseEquals(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEquals(lhs, this.instance);
+    return this.delegate.reverseEquals(lhs, this.instance);
   }
 
   /**
@@ -24149,7 +24149,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseEquals(int, java.lang.Object)
    */
   public Object reverseEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEquals(lhs, this.instance);
+    return this.delegate.reverseEquals(lhs, this.instance);
   }
 
   /**
@@ -24159,7 +24159,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseEquals(long, java.lang.Object)
    */
   public Object reverseEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEquals(lhs, this.instance);
+    return this.delegate.reverseEquals(lhs, this.instance);
   }
 
   /**
@@ -24169,7 +24169,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseEquals(short, java.lang.Object)
    */
   public Object reverseEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseEquals(lhs, this.instance);
+    return this.delegate.reverseEquals(lhs, this.instance);
   }
 
   /**
@@ -24179,7 +24179,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThan(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseGreaterThan(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThan(lhs, this.instance);
+    return this.delegate.reverseGreaterThan(lhs, this.instance);
   }
 
   /**
@@ -24189,7 +24189,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThan(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseGreaterThan(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThan(lhs, this.instance);
+    return this.delegate.reverseGreaterThan(lhs, this.instance);
   }
 
   /**
@@ -24199,7 +24199,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThan(byte, java.lang.Object)
    */
   public Object reverseGreaterThan(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThan(lhs, this.instance);
+    return this.delegate.reverseGreaterThan(lhs, this.instance);
   }
 
   /**
@@ -24209,7 +24209,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThan(char, java.lang.Object)
    */
   public Object reverseGreaterThan(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThan(lhs, this.instance);
+    return this.delegate.reverseGreaterThan(lhs, this.instance);
   }
 
   /**
@@ -24219,7 +24219,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThan(double, java.lang.Object)
    */
   public Object reverseGreaterThan(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThan(lhs, this.instance);
+    return this.delegate.reverseGreaterThan(lhs, this.instance);
   }
 
   /**
@@ -24229,7 +24229,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThan(float, java.lang.Object)
    */
   public Object reverseGreaterThan(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThan(lhs, this.instance);
+    return this.delegate.reverseGreaterThan(lhs, this.instance);
   }
 
   /**
@@ -24239,7 +24239,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThan(int, java.lang.Object)
    */
   public Object reverseGreaterThan(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThan(lhs, this.instance);
+    return this.delegate.reverseGreaterThan(lhs, this.instance);
   }
 
   /**
@@ -24249,7 +24249,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThan(long, java.lang.Object)
    */
   public Object reverseGreaterThan(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThan(lhs, this.instance);
+    return this.delegate.reverseGreaterThan(lhs, this.instance);
   }
 
   /**
@@ -24259,7 +24259,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThan(short, java.lang.Object)
    */
   public Object reverseGreaterThan(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThan(lhs, this.instance);
+    return this.delegate.reverseGreaterThan(lhs, this.instance);
   }
 
   /**
@@ -24269,7 +24269,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEquals(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseGreaterThanOrEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24279,7 +24279,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseGreaterThanOrEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24289,7 +24289,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEquals(byte, java.lang.Object)
    */
   public Object reverseGreaterThanOrEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24299,7 +24299,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEquals(char, java.lang.Object)
    */
   public Object reverseGreaterThanOrEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24309,7 +24309,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEquals(double, java.lang.Object)
    */
   public Object reverseGreaterThanOrEquals(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24319,7 +24319,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEquals(float, java.lang.Object)
    */
   public Object reverseGreaterThanOrEquals(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24329,7 +24329,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEquals(int, java.lang.Object)
    */
   public Object reverseGreaterThanOrEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24339,7 +24339,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEquals(long, java.lang.Object)
    */
   public Object reverseGreaterThanOrEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24349,7 +24349,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseGreaterThanOrEquals(short, java.lang.Object)
    */
   public Object reverseGreaterThanOrEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseGreaterThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseGreaterThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24359,7 +24359,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivide(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseIntegerDivide(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivide(lhs, this.instance);
+    return this.delegate.reverseIntegerDivide(lhs, this.instance);
   }
 
   /**
@@ -24369,7 +24369,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivide(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseIntegerDivide(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivide(lhs, this.instance);
+    return this.delegate.reverseIntegerDivide(lhs, this.instance);
   }
 
   /**
@@ -24379,7 +24379,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivide(byte, java.lang.Object)
    */
   public Object reverseIntegerDivide(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivide(lhs, this.instance);
+    return this.delegate.reverseIntegerDivide(lhs, this.instance);
   }
 
   /**
@@ -24389,7 +24389,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivide(char, java.lang.Object)
    */
   public Object reverseIntegerDivide(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivide(lhs, this.instance);
+    return this.delegate.reverseIntegerDivide(lhs, this.instance);
   }
 
   /**
@@ -24399,7 +24399,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivide(double, java.lang.Object)
    */
   public Object reverseIntegerDivide(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivide(lhs, this.instance);
+    return this.delegate.reverseIntegerDivide(lhs, this.instance);
   }
 
   /**
@@ -24409,7 +24409,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivide(float, java.lang.Object)
    */
   public Object reverseIntegerDivide(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivide(lhs, this.instance);
+    return this.delegate.reverseIntegerDivide(lhs, this.instance);
   }
 
   /**
@@ -24419,7 +24419,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivide(int, java.lang.Object)
    */
   public Object reverseIntegerDivide(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivide(lhs, this.instance);
+    return this.delegate.reverseIntegerDivide(lhs, this.instance);
   }
 
   /**
@@ -24429,7 +24429,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivide(long, java.lang.Object)
    */
   public Object reverseIntegerDivide(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivide(lhs, this.instance);
+    return this.delegate.reverseIntegerDivide(lhs, this.instance);
   }
 
   /**
@@ -24439,7 +24439,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivide(short, java.lang.Object)
    */
   public Object reverseIntegerDivide(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivide(lhs, this.instance);
+    return this.delegate.reverseIntegerDivide(lhs, this.instance);
   }
 
   /**
@@ -24449,7 +24449,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivideEquals(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseIntegerDivideEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivideEquals(lhs, this.instance);
+    return this.delegate.reverseIntegerDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24459,7 +24459,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivideEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseIntegerDivideEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivideEquals(lhs, this.instance);
+    return this.delegate.reverseIntegerDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24469,7 +24469,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivideEquals(byte, java.lang.Object)
    */
   public Object reverseIntegerDivideEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivideEquals(lhs, this.instance);
+    return this.delegate.reverseIntegerDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24479,7 +24479,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivideEquals(char, java.lang.Object)
    */
   public Object reverseIntegerDivideEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivideEquals(lhs, this.instance);
+    return this.delegate.reverseIntegerDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24489,7 +24489,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivideEquals(double, java.lang.Object)
    */
   public Object reverseIntegerDivideEquals(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivideEquals(lhs, this.instance);
+    return this.delegate.reverseIntegerDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24499,7 +24499,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivideEquals(float, java.lang.Object)
    */
   public Object reverseIntegerDivideEquals(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivideEquals(lhs, this.instance);
+    return this.delegate.reverseIntegerDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24509,7 +24509,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivideEquals(int, java.lang.Object)
    */
   public Object reverseIntegerDivideEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivideEquals(lhs, this.instance);
+    return this.delegate.reverseIntegerDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24519,7 +24519,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivideEquals(long, java.lang.Object)
    */
   public Object reverseIntegerDivideEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivideEquals(lhs, this.instance);
+    return this.delegate.reverseIntegerDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24529,7 +24529,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseIntegerDivideEquals(short, java.lang.Object)
    */
   public Object reverseIntegerDivideEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseIntegerDivideEquals(lhs, this.instance);
+    return this.delegate.reverseIntegerDivideEquals(lhs, this.instance);
   }
 
   /**
@@ -24539,7 +24539,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShift(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseLeftShift(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShift(lhs, this.instance);
+    return this.delegate.reverseLeftShift(lhs, this.instance);
   }
 
   /**
@@ -24549,7 +24549,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShift(byte, java.lang.Object)
    */
   public Object reverseLeftShift(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShift(lhs, this.instance);
+    return this.delegate.reverseLeftShift(lhs, this.instance);
   }
 
   /**
@@ -24559,7 +24559,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShift(char, java.lang.Object)
    */
   public Object reverseLeftShift(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShift(lhs, this.instance);
+    return this.delegate.reverseLeftShift(lhs, this.instance);
   }
 
   /**
@@ -24569,7 +24569,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShift(int, java.lang.Object)
    */
   public Object reverseLeftShift(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShift(lhs, this.instance);
+    return this.delegate.reverseLeftShift(lhs, this.instance);
   }
 
   /**
@@ -24579,7 +24579,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShift(long, java.lang.Object)
    */
   public Object reverseLeftShift(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShift(lhs, this.instance);
+    return this.delegate.reverseLeftShift(lhs, this.instance);
   }
 
   /**
@@ -24589,7 +24589,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShift(short, java.lang.Object)
    */
   public Object reverseLeftShift(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShift(lhs, this.instance);
+    return this.delegate.reverseLeftShift(lhs, this.instance);
   }
 
   /**
@@ -24599,7 +24599,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShiftEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseLeftShiftEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLeftShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24609,7 +24609,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShiftEquals(byte, java.lang.Object)
    */
   public Object reverseLeftShiftEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLeftShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24619,7 +24619,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShiftEquals(char, java.lang.Object)
    */
   public Object reverseLeftShiftEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLeftShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24629,7 +24629,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShiftEquals(int, java.lang.Object)
    */
   public Object reverseLeftShiftEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLeftShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24639,7 +24639,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShiftEquals(long, java.lang.Object)
    */
   public Object reverseLeftShiftEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLeftShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24649,7 +24649,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLeftShiftEquals(short, java.lang.Object)
    */
   public Object reverseLeftShiftEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLeftShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLeftShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24659,7 +24659,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThan(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseLessThan(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThan(lhs, this.instance);
+    return this.delegate.reverseLessThan(lhs, this.instance);
   }
 
   /**
@@ -24669,7 +24669,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThan(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseLessThan(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThan(lhs, this.instance);
+    return this.delegate.reverseLessThan(lhs, this.instance);
   }
 
   /**
@@ -24679,7 +24679,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThan(byte, java.lang.Object)
    */
   public Object reverseLessThan(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThan(lhs, this.instance);
+    return this.delegate.reverseLessThan(lhs, this.instance);
   }
 
   /**
@@ -24689,7 +24689,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThan(char, java.lang.Object)
    */
   public Object reverseLessThan(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThan(lhs, this.instance);
+    return this.delegate.reverseLessThan(lhs, this.instance);
   }
 
   /**
@@ -24699,7 +24699,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThan(double, java.lang.Object)
    */
   public Object reverseLessThan(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThan(lhs, this.instance);
+    return this.delegate.reverseLessThan(lhs, this.instance);
   }
 
   /**
@@ -24709,7 +24709,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThan(float, java.lang.Object)
    */
   public Object reverseLessThan(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThan(lhs, this.instance);
+    return this.delegate.reverseLessThan(lhs, this.instance);
   }
 
   /**
@@ -24719,7 +24719,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThan(int, java.lang.Object)
    */
   public Object reverseLessThan(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThan(lhs, this.instance);
+    return this.delegate.reverseLessThan(lhs, this.instance);
   }
 
   /**
@@ -24729,7 +24729,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThan(long, java.lang.Object)
    */
   public Object reverseLessThan(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThan(lhs, this.instance);
+    return this.delegate.reverseLessThan(lhs, this.instance);
   }
 
   /**
@@ -24739,7 +24739,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThan(short, java.lang.Object)
    */
   public Object reverseLessThan(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThan(lhs, this.instance);
+    return this.delegate.reverseLessThan(lhs, this.instance);
   }
 
   /**
@@ -24749,7 +24749,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEquals(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseLessThanOrEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24759,7 +24759,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseLessThanOrEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24769,7 +24769,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEquals(byte, java.lang.Object)
    */
   public Object reverseLessThanOrEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24779,7 +24779,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEquals(char, java.lang.Object)
    */
   public Object reverseLessThanOrEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24789,7 +24789,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEquals(double, java.lang.Object)
    */
   public Object reverseLessThanOrEquals(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24799,7 +24799,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEquals(float, java.lang.Object)
    */
   public Object reverseLessThanOrEquals(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24809,7 +24809,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEquals(int, java.lang.Object)
    */
   public Object reverseLessThanOrEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24819,7 +24819,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEquals(long, java.lang.Object)
    */
   public Object reverseLessThanOrEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24829,7 +24829,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLessThanOrEquals(short, java.lang.Object)
    */
   public Object reverseLessThanOrEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLessThanOrEquals(lhs, this.instance);
+    return this.delegate.reverseLessThanOrEquals(lhs, this.instance);
   }
 
   /**
@@ -24839,7 +24839,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLogicalRightShift(byte, java.lang.Object)
    */
   public Object reverseLogicalRightShift(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLogicalRightShift(lhs, this.instance);
+    return this.delegate.reverseLogicalRightShift(lhs, this.instance);
   }
 
   /**
@@ -24849,7 +24849,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLogicalRightShift(char, java.lang.Object)
    */
   public Object reverseLogicalRightShift(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLogicalRightShift(lhs, this.instance);
+    return this.delegate.reverseLogicalRightShift(lhs, this.instance);
   }
 
   /**
@@ -24859,7 +24859,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLogicalRightShift(int, java.lang.Object)
    */
   public Object reverseLogicalRightShift(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLogicalRightShift(lhs, this.instance);
+    return this.delegate.reverseLogicalRightShift(lhs, this.instance);
   }
 
   /**
@@ -24869,7 +24869,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLogicalRightShift(long, java.lang.Object)
    */
   public Object reverseLogicalRightShift(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLogicalRightShift(lhs, this.instance);
+    return this.delegate.reverseLogicalRightShift(lhs, this.instance);
   }
 
   /**
@@ -24879,7 +24879,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLogicalRightShift(short, java.lang.Object)
    */
   public Object reverseLogicalRightShift(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLogicalRightShift(lhs, this.instance);
+    return this.delegate.reverseLogicalRightShift(lhs, this.instance);
   }
 
   /**
@@ -24889,7 +24889,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLogicalRightShiftEquals(byte, java.lang.Object)
    */
   public Object reverseLogicalRightShiftEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLogicalRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLogicalRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24899,7 +24899,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLogicalRightShiftEquals(char, java.lang.Object)
    */
   public Object reverseLogicalRightShiftEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLogicalRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLogicalRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24909,7 +24909,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLogicalRightShiftEquals(int, java.lang.Object)
    */
   public Object reverseLogicalRightShiftEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLogicalRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLogicalRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24919,7 +24919,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLogicalRightShiftEquals(long, java.lang.Object)
    */
   public Object reverseLogicalRightShiftEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLogicalRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLogicalRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24929,7 +24929,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseLogicalRightShiftEquals(short, java.lang.Object)
    */
   public Object reverseLogicalRightShiftEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseLogicalRightShiftEquals(lhs, this.instance);
+    return this.delegate.reverseLogicalRightShiftEquals(lhs, this.instance);
   }
 
   /**
@@ -24939,7 +24939,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiply(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseMultiply(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiply(lhs, this.instance);
+    return this.delegate.reverseMultiply(lhs, this.instance);
   }
 
   /**
@@ -24949,7 +24949,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiply(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseMultiply(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiply(lhs, this.instance);
+    return this.delegate.reverseMultiply(lhs, this.instance);
   }
 
   /**
@@ -24959,7 +24959,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiply(byte, java.lang.Object)
    */
   public Object reverseMultiply(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiply(lhs, this.instance);
+    return this.delegate.reverseMultiply(lhs, this.instance);
   }
 
   /**
@@ -24969,7 +24969,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiply(char, java.lang.Object)
    */
   public Object reverseMultiply(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiply(lhs, this.instance);
+    return this.delegate.reverseMultiply(lhs, this.instance);
   }
 
   /**
@@ -24979,7 +24979,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiply(double, java.lang.Object)
    */
   public Object reverseMultiply(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiply(lhs, this.instance);
+    return this.delegate.reverseMultiply(lhs, this.instance);
   }
 
   /**
@@ -24989,7 +24989,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiply(float, java.lang.Object)
    */
   public Object reverseMultiply(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiply(lhs, this.instance);
+    return this.delegate.reverseMultiply(lhs, this.instance);
   }
 
   /**
@@ -24999,7 +24999,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiply(int, java.lang.Object)
    */
   public Object reverseMultiply(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiply(lhs, this.instance);
+    return this.delegate.reverseMultiply(lhs, this.instance);
   }
 
   /**
@@ -25009,7 +25009,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiply(long, java.lang.Object)
    */
   public Object reverseMultiply(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiply(lhs, this.instance);
+    return this.delegate.reverseMultiply(lhs, this.instance);
   }
 
   /**
@@ -25019,7 +25019,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiply(short, java.lang.Object)
    */
   public Object reverseMultiply(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiply(lhs, this.instance);
+    return this.delegate.reverseMultiply(lhs, this.instance);
   }
 
   /**
@@ -25029,7 +25029,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiplyEquals(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseMultiplyEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiplyEquals(lhs, this.instance);
+    return this.delegate.reverseMultiplyEquals(lhs, this.instance);
   }
 
   /**
@@ -25039,7 +25039,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiplyEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseMultiplyEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiplyEquals(lhs, this.instance);
+    return this.delegate.reverseMultiplyEquals(lhs, this.instance);
   }
 
   /**
@@ -25049,7 +25049,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiplyEquals(byte, java.lang.Object)
    */
   public Object reverseMultiplyEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiplyEquals(lhs, this.instance);
+    return this.delegate.reverseMultiplyEquals(lhs, this.instance);
   }
 
   /**
@@ -25059,7 +25059,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiplyEquals(char, java.lang.Object)
    */
   public Object reverseMultiplyEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiplyEquals(lhs, this.instance);
+    return this.delegate.reverseMultiplyEquals(lhs, this.instance);
   }
 
   /**
@@ -25069,7 +25069,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiplyEquals(double, java.lang.Object)
    */
   public Object reverseMultiplyEquals(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiplyEquals(lhs, this.instance);
+    return this.delegate.reverseMultiplyEquals(lhs, this.instance);
   }
 
   /**
@@ -25079,7 +25079,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiplyEquals(float, java.lang.Object)
    */
   public Object reverseMultiplyEquals(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiplyEquals(lhs, this.instance);
+    return this.delegate.reverseMultiplyEquals(lhs, this.instance);
   }
 
   /**
@@ -25089,7 +25089,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiplyEquals(int, java.lang.Object)
    */
   public Object reverseMultiplyEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiplyEquals(lhs, this.instance);
+    return this.delegate.reverseMultiplyEquals(lhs, this.instance);
   }
 
   /**
@@ -25099,7 +25099,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiplyEquals(long, java.lang.Object)
    */
   public Object reverseMultiplyEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiplyEquals(lhs, this.instance);
+    return this.delegate.reverseMultiplyEquals(lhs, this.instance);
   }
 
   /**
@@ -25109,7 +25109,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseMultiplyEquals(short, java.lang.Object)
    */
   public Object reverseMultiplyEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseMultiplyEquals(lhs, this.instance);
+    return this.delegate.reverseMultiplyEquals(lhs, this.instance);
   }
 
   /**
@@ -25119,7 +25119,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseNotEquals(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseNotEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEquals(lhs, this.instance);
+    return this.delegate.reverseNotEquals(lhs, this.instance);
   }
 
   /**
@@ -25129,7 +25129,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseNotEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseNotEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEquals(lhs, this.instance);
+    return this.delegate.reverseNotEquals(lhs, this.instance);
   }
 
   /**
@@ -25139,7 +25139,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseNotEquals(byte, java.lang.Object)
    */
   public Object reverseNotEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEquals(lhs, this.instance);
+    return this.delegate.reverseNotEquals(lhs, this.instance);
   }
 
   /**
@@ -25149,7 +25149,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseNotEquals(char, java.lang.Object)
    */
   public Object reverseNotEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEquals(lhs, this.instance);
+    return this.delegate.reverseNotEquals(lhs, this.instance);
   }
 
   /**
@@ -25159,7 +25159,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseNotEquals(double, java.lang.Object)
    */
   public Object reverseNotEquals(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEquals(lhs, this.instance);
+    return this.delegate.reverseNotEquals(lhs, this.instance);
   }
 
   /**
@@ -25169,7 +25169,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseNotEquals(float, java.lang.Object)
    */
   public Object reverseNotEquals(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEquals(lhs, this.instance);
+    return this.delegate.reverseNotEquals(lhs, this.instance);
   }
 
   /**
@@ -25179,7 +25179,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseNotEquals(int, java.lang.Object)
    */
   public Object reverseNotEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEquals(lhs, this.instance);
+    return this.delegate.reverseNotEquals(lhs, this.instance);
   }
 
   /**
@@ -25189,7 +25189,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseNotEquals(long, java.lang.Object)
    */
   public Object reverseNotEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEquals(lhs, this.instance);
+    return this.delegate.reverseNotEquals(lhs, this.instance);
   }
 
   /**
@@ -25199,7 +25199,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseNotEquals(short, java.lang.Object)
    */
   public Object reverseNotEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseNotEquals(lhs, this.instance);
+    return this.delegate.reverseNotEquals(lhs, this.instance);
   }
 
   /**
@@ -25209,7 +25209,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOr(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseOr(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOr(lhs, this.instance);
+    return this.delegate.reverseOr(lhs, this.instance);
   }
 
   /**
@@ -25219,7 +25219,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOr(byte, java.lang.Object)
    */
   public Object reverseOr(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOr(lhs, this.instance);
+    return this.delegate.reverseOr(lhs, this.instance);
   }
 
   /**
@@ -25229,7 +25229,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOr(char, java.lang.Object)
    */
   public Object reverseOr(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOr(lhs, this.instance);
+    return this.delegate.reverseOr(lhs, this.instance);
   }
 
   /**
@@ -25239,7 +25239,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOr(int, java.lang.Object)
    */
   public Object reverseOr(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOr(lhs, this.instance);
+    return this.delegate.reverseOr(lhs, this.instance);
   }
 
   /**
@@ -25249,7 +25249,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOr(long, java.lang.Object)
    */
   public Object reverseOr(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOr(lhs, this.instance);
+    return this.delegate.reverseOr(lhs, this.instance);
   }
 
   /**
@@ -25259,7 +25259,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOr(short, java.lang.Object)
    */
   public Object reverseOr(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOr(lhs, this.instance);
+    return this.delegate.reverseOr(lhs, this.instance);
   }
 
   /**
@@ -25269,7 +25269,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOrEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseOrEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOrEquals(lhs, this.instance);
+    return this.delegate.reverseOrEquals(lhs, this.instance);
   }
 
   /**
@@ -25279,7 +25279,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOrEquals(byte, java.lang.Object)
    */
   public Object reverseOrEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOrEquals(lhs, this.instance);
+    return this.delegate.reverseOrEquals(lhs, this.instance);
   }
 
   /**
@@ -25289,7 +25289,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOrEquals(char, java.lang.Object)
    */
   public Object reverseOrEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOrEquals(lhs, this.instance);
+    return this.delegate.reverseOrEquals(lhs, this.instance);
   }
 
   /**
@@ -25299,7 +25299,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOrEquals(int, java.lang.Object)
    */
   public Object reverseOrEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOrEquals(lhs, this.instance);
+    return this.delegate.reverseOrEquals(lhs, this.instance);
   }
 
   /**
@@ -25309,7 +25309,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOrEquals(long, java.lang.Object)
    */
   public Object reverseOrEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOrEquals(lhs, this.instance);
+    return this.delegate.reverseOrEquals(lhs, this.instance);
   }
 
   /**
@@ -25319,7 +25319,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseOrEquals(short, java.lang.Object)
    */
   public Object reverseOrEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseOrEquals(lhs, this.instance);
+    return this.delegate.reverseOrEquals(lhs, this.instance);
   }
 
   /**
@@ -25329,7 +25329,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainder(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseRemainder(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainder(lhs, this.instance);
+    return this.delegate.reverseRemainder(lhs, this.instance);
   }
 
   /**
@@ -25339,7 +25339,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainder(byte, java.lang.Object)
    */
   public Object reverseRemainder(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainder(lhs, this.instance);
+    return this.delegate.reverseRemainder(lhs, this.instance);
   }
 
   /**
@@ -25349,7 +25349,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainder(char, java.lang.Object)
    */
   public Object reverseRemainder(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainder(lhs, this.instance);
+    return this.delegate.reverseRemainder(lhs, this.instance);
   }
 
   /**
@@ -25359,7 +25359,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainder(int, java.lang.Object)
    */
   public Object reverseRemainder(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainder(lhs, this.instance);
+    return this.delegate.reverseRemainder(lhs, this.instance);
   }
 
   /**
@@ -25369,7 +25369,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainder(long, java.lang.Object)
    */
   public Object reverseRemainder(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainder(lhs, this.instance);
+    return this.delegate.reverseRemainder(lhs, this.instance);
   }
 
   /**
@@ -25379,7 +25379,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainder(short, java.lang.Object)
    */
   public Object reverseRemainder(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainder(lhs, this.instance);
+    return this.delegate.reverseRemainder(lhs, this.instance);
   }
 
   /**
@@ -25389,7 +25389,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainderEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseRemainderEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainderEquals(lhs, this.instance);
+    return this.delegate.reverseRemainderEquals(lhs, this.instance);
   }
 
   /**
@@ -25399,7 +25399,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainderEquals(byte, java.lang.Object)
    */
   public Object reverseRemainderEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainderEquals(lhs, this.instance);
+    return this.delegate.reverseRemainderEquals(lhs, this.instance);
   }
 
   /**
@@ -25409,7 +25409,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainderEquals(char, java.lang.Object)
    */
   public Object reverseRemainderEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainderEquals(lhs, this.instance);
+    return this.delegate.reverseRemainderEquals(lhs, this.instance);
   }
 
   /**
@@ -25419,7 +25419,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainderEquals(int, java.lang.Object)
    */
   public Object reverseRemainderEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainderEquals(lhs, this.instance);
+    return this.delegate.reverseRemainderEquals(lhs, this.instance);
   }
 
   /**
@@ -25429,7 +25429,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainderEquals(long, java.lang.Object)
    */
   public Object reverseRemainderEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainderEquals(lhs, this.instance);
+    return this.delegate.reverseRemainderEquals(lhs, this.instance);
   }
 
   /**
@@ -25439,7 +25439,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseRemainderEquals(short, java.lang.Object)
    */
   public Object reverseRemainderEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseRemainderEquals(lhs, this.instance);
+    return this.delegate.reverseRemainderEquals(lhs, this.instance);
   }
 
   /**
@@ -25449,7 +25449,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtract(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseSubtract(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtract(lhs, this.instance);
+    return this.delegate.reverseSubtract(lhs, this.instance);
   }
 
   /**
@@ -25459,7 +25459,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtract(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseSubtract(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtract(lhs, this.instance);
+    return this.delegate.reverseSubtract(lhs, this.instance);
   }
 
   /**
@@ -25469,7 +25469,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtract(byte, java.lang.Object)
    */
   public Object reverseSubtract(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtract(lhs, this.instance);
+    return this.delegate.reverseSubtract(lhs, this.instance);
   }
 
   /**
@@ -25479,7 +25479,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtract(char, java.lang.Object)
    */
   public Object reverseSubtract(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtract(lhs, this.instance);
+    return this.delegate.reverseSubtract(lhs, this.instance);
   }
 
   /**
@@ -25489,7 +25489,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtract(double, java.lang.Object)
    */
   public Object reverseSubtract(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtract(lhs, this.instance);
+    return this.delegate.reverseSubtract(lhs, this.instance);
   }
 
   /**
@@ -25499,7 +25499,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtract(float, java.lang.Object)
    */
   public Object reverseSubtract(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtract(lhs, this.instance);
+    return this.delegate.reverseSubtract(lhs, this.instance);
   }
 
   /**
@@ -25509,7 +25509,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtract(int, java.lang.Object)
    */
   public Object reverseSubtract(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtract(lhs, this.instance);
+    return this.delegate.reverseSubtract(lhs, this.instance);
   }
 
   /**
@@ -25519,7 +25519,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtract(long, java.lang.Object)
    */
   public Object reverseSubtract(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtract(lhs, this.instance);
+    return this.delegate.reverseSubtract(lhs, this.instance);
   }
 
   /**
@@ -25529,7 +25529,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtract(short, java.lang.Object)
    */
   public Object reverseSubtract(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtract(lhs, this.instance);
+    return this.delegate.reverseSubtract(lhs, this.instance);
   }
 
   /**
@@ -25539,7 +25539,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtractEquals(java.math.BigDecimal, java.lang.Object)
    */
   public Object reverseSubtractEquals(final BigDecimal lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtractEquals(lhs, this.instance);
+    return this.delegate.reverseSubtractEquals(lhs, this.instance);
   }
 
   /**
@@ -25549,7 +25549,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtractEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseSubtractEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtractEquals(lhs, this.instance);
+    return this.delegate.reverseSubtractEquals(lhs, this.instance);
   }
 
   /**
@@ -25559,7 +25559,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtractEquals(byte, java.lang.Object)
    */
   public Object reverseSubtractEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtractEquals(lhs, this.instance);
+    return this.delegate.reverseSubtractEquals(lhs, this.instance);
   }
 
   /**
@@ -25569,7 +25569,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtractEquals(char, java.lang.Object)
    */
   public Object reverseSubtractEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtractEquals(lhs, this.instance);
+    return this.delegate.reverseSubtractEquals(lhs, this.instance);
   }
 
   /**
@@ -25579,7 +25579,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtractEquals(double, java.lang.Object)
    */
   public Object reverseSubtractEquals(final double lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtractEquals(lhs, this.instance);
+    return this.delegate.reverseSubtractEquals(lhs, this.instance);
   }
 
   /**
@@ -25589,7 +25589,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtractEquals(float, java.lang.Object)
    */
   public Object reverseSubtractEquals(final float lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtractEquals(lhs, this.instance);
+    return this.delegate.reverseSubtractEquals(lhs, this.instance);
   }
 
   /**
@@ -25599,7 +25599,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtractEquals(int, java.lang.Object)
    */
   public Object reverseSubtractEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtractEquals(lhs, this.instance);
+    return this.delegate.reverseSubtractEquals(lhs, this.instance);
   }
 
   /**
@@ -25609,7 +25609,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtractEquals(long, java.lang.Object)
    */
   public Object reverseSubtractEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtractEquals(lhs, this.instance);
+    return this.delegate.reverseSubtractEquals(lhs, this.instance);
   }
 
   /**
@@ -25619,7 +25619,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseSubtractEquals(short, java.lang.Object)
    */
   public Object reverseSubtractEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseSubtractEquals(lhs, this.instance);
+    return this.delegate.reverseSubtractEquals(lhs, this.instance);
   }
 
   /**
@@ -25629,7 +25629,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXor(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseXor(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXor(lhs, this.instance);
+    return this.delegate.reverseXor(lhs, this.instance);
   }
 
   /**
@@ -25639,7 +25639,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXor(byte, java.lang.Object)
    */
   public Object reverseXor(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXor(lhs, this.instance);
+    return this.delegate.reverseXor(lhs, this.instance);
   }
 
   /**
@@ -25649,7 +25649,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXor(char, java.lang.Object)
    */
   public Object reverseXor(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXor(lhs, this.instance);
+    return this.delegate.reverseXor(lhs, this.instance);
   }
 
   /**
@@ -25659,7 +25659,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXor(int, java.lang.Object)
    */
   public Object reverseXor(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXor(lhs, this.instance);
+    return this.delegate.reverseXor(lhs, this.instance);
   }
 
   /**
@@ -25669,7 +25669,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXor(long, java.lang.Object)
    */
   public Object reverseXor(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXor(lhs, this.instance);
+    return this.delegate.reverseXor(lhs, this.instance);
   }
 
   /**
@@ -25679,7 +25679,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXor(short, java.lang.Object)
    */
   public Object reverseXor(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXor(lhs, this.instance);
+    return this.delegate.reverseXor(lhs, this.instance);
   }
 
   /**
@@ -25689,7 +25689,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXorEquals(java.math.BigInteger, java.lang.Object)
    */
   public Object reverseXorEquals(final BigInteger lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXorEquals(lhs, this.instance);
+    return this.delegate.reverseXorEquals(lhs, this.instance);
   }
 
   /**
@@ -25699,7 +25699,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXorEquals(byte, java.lang.Object)
    */
   public Object reverseXorEquals(final byte lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXorEquals(lhs, this.instance);
+    return this.delegate.reverseXorEquals(lhs, this.instance);
   }
 
   /**
@@ -25709,7 +25709,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXorEquals(char, java.lang.Object)
    */
   public Object reverseXorEquals(final char lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXorEquals(lhs, this.instance);
+    return this.delegate.reverseXorEquals(lhs, this.instance);
   }
 
   /**
@@ -25719,7 +25719,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXorEquals(int, java.lang.Object)
    */
   public Object reverseXorEquals(final int lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXorEquals(lhs, this.instance);
+    return this.delegate.reverseXorEquals(lhs, this.instance);
   }
 
   /**
@@ -25729,7 +25729,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXorEquals(long, java.lang.Object)
    */
   public Object reverseXorEquals(final long lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXorEquals(lhs, this.instance);
+    return this.delegate.reverseXorEquals(lhs, this.instance);
   }
 
   /**
@@ -25739,7 +25739,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#reverseXorEquals(short, java.lang.Object)
    */
   public Object reverseXorEquals(final short lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().reverseXorEquals(lhs, this.instance);
+    return this.delegate.reverseXorEquals(lhs, this.instance);
   }
 
   /**
@@ -25750,7 +25750,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#setField(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object setField(final Object instance, final String fieldName, final Object newValue) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().setField(this.instance, fieldName, newValue);
+    return this.delegate.setField(this.instance, fieldName, newValue);
   }
 
   /**
@@ -25758,7 +25758,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#setInternalMetaClass(ng.runtime.InternalMetaClass)
    */
   public void setInternalMetaClass(final InternalMetaClass internalMetaClass) {
-    this.delegate.getRuntimeMetaClass().setInternalMetaClass(internalMetaClass);
+    this.delegate.setInternalMetaClass(internalMetaClass);
   }
 
   /**
@@ -25769,7 +25769,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#setProperty(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object setProperty(final Object instance, final String propertyName, final Object newValue) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().setProperty(this.instance, propertyName, newValue);
+    return this.delegate.setProperty(this.instance, propertyName, newValue);
   }
 
   /**
@@ -26499,7 +26499,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtract(java.lang.Object, java.math.BigDecimal)
    */
   public Object subtract(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtract(this.instance, rhs);
+    return this.delegate.subtract(this.instance, rhs);
   }
 
   /**
@@ -26509,7 +26509,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtract(java.lang.Object, java.math.BigInteger)
    */
   public Object subtract(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtract(this.instance, rhs);
+    return this.delegate.subtract(this.instance, rhs);
   }
 
   /**
@@ -26519,7 +26519,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtract(java.lang.Object, byte)
    */
   public Object subtract(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtract(this.instance, rhs);
+    return this.delegate.subtract(this.instance, rhs);
   }
 
   /**
@@ -26529,7 +26529,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtract(java.lang.Object, char)
    */
   public Object subtract(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtract(this.instance, rhs);
+    return this.delegate.subtract(this.instance, rhs);
   }
 
   /**
@@ -26539,7 +26539,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtract(java.lang.Object, double)
    */
   public Object subtract(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtract(this.instance, rhs);
+    return this.delegate.subtract(this.instance, rhs);
   }
 
   /**
@@ -26549,7 +26549,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtract(java.lang.Object, float)
    */
   public Object subtract(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtract(this.instance, rhs);
+    return this.delegate.subtract(this.instance, rhs);
   }
 
   /**
@@ -26559,7 +26559,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtract(java.lang.Object, int)
    */
   public Object subtract(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtract(this.instance, rhs);
+    return this.delegate.subtract(this.instance, rhs);
   }
 
   /**
@@ -26569,7 +26569,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtract(java.lang.Object, long)
    */
   public Object subtract(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtract(this.instance, rhs);
+    return this.delegate.subtract(this.instance, rhs);
   }
 
   /**
@@ -26579,7 +26579,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#subtract(java.lang.Object, java.lang.Object)
    */
   public Object subtract(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtract(this.instance, rhs);
+    return this.delegate.subtract(this.instance, rhs);
   }
 
   /**
@@ -26589,7 +26589,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtract(java.lang.Object, short)
    */
   public Object subtract(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtract(this.instance, rhs);
+    return this.delegate.subtract(this.instance, rhs);
   }
 
   /**
@@ -27409,7 +27409,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtractEquals(java.lang.Object, java.math.BigDecimal)
    */
   public Object subtractEquals(final Object lhs, final BigDecimal rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtractEquals(this.instance, rhs);
+    return this.delegate.subtractEquals(this.instance, rhs);
   }
 
   /**
@@ -27419,7 +27419,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtractEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object subtractEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtractEquals(this.instance, rhs);
+    return this.delegate.subtractEquals(this.instance, rhs);
   }
 
   /**
@@ -27429,7 +27429,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtractEquals(java.lang.Object, byte)
    */
   public Object subtractEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtractEquals(this.instance, rhs);
+    return this.delegate.subtractEquals(this.instance, rhs);
   }
 
   /**
@@ -27439,7 +27439,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtractEquals(java.lang.Object, char)
    */
   public Object subtractEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtractEquals(this.instance, rhs);
+    return this.delegate.subtractEquals(this.instance, rhs);
   }
 
   /**
@@ -27449,7 +27449,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtractEquals(java.lang.Object, double)
    */
   public Object subtractEquals(final Object lhs, final double rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtractEquals(this.instance, rhs);
+    return this.delegate.subtractEquals(this.instance, rhs);
   }
 
   /**
@@ -27459,7 +27459,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtractEquals(java.lang.Object, float)
    */
   public Object subtractEquals(final Object lhs, final float rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtractEquals(this.instance, rhs);
+    return this.delegate.subtractEquals(this.instance, rhs);
   }
 
   /**
@@ -27469,7 +27469,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtractEquals(java.lang.Object, int)
    */
   public Object subtractEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtractEquals(this.instance, rhs);
+    return this.delegate.subtractEquals(this.instance, rhs);
   }
 
   /**
@@ -27479,7 +27479,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtractEquals(java.lang.Object, long)
    */
   public Object subtractEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtractEquals(this.instance, rhs);
+    return this.delegate.subtractEquals(this.instance, rhs);
   }
 
   /**
@@ -27489,7 +27489,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#subtractEquals(java.lang.Object, java.lang.Object)
    */
   public Object subtractEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtractEquals(this.instance, rhs);
+    return this.delegate.subtractEquals(this.instance, rhs);
   }
 
   /**
@@ -27499,7 +27499,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#subtractEquals(java.lang.Object, short)
    */
   public Object subtractEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().subtractEquals(this.instance, rhs);
+    return this.delegate.subtractEquals(this.instance, rhs);
   }
 
   /**
@@ -27652,7 +27652,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#unaryMinus(java.lang.Object)
    */
   public Object unaryMinus(final Object operand) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().unaryMinus(this.instance);
+    return this.delegate.unaryMinus(this.instance);
   }
 
   /**
@@ -27715,7 +27715,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#unaryPlus(java.lang.Object)
    */
   public Object unaryPlus(final Object operand) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().unaryPlus(this.instance);
+    return this.delegate.unaryPlus(this.instance);
   }
 
   /**
@@ -28025,7 +28025,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xor(java.lang.Object, java.math.BigInteger)
    */
   public Object xor(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xor(this.instance, rhs);
+    return this.delegate.xor(this.instance, rhs);
   }
 
   /**
@@ -28035,7 +28035,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xor(java.lang.Object, byte)
    */
   public Object xor(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xor(this.instance, rhs);
+    return this.delegate.xor(this.instance, rhs);
   }
 
   /**
@@ -28045,7 +28045,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xor(java.lang.Object, char)
    */
   public Object xor(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xor(this.instance, rhs);
+    return this.delegate.xor(this.instance, rhs);
   }
 
   /**
@@ -28055,7 +28055,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xor(java.lang.Object, int)
    */
   public Object xor(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xor(this.instance, rhs);
+    return this.delegate.xor(this.instance, rhs);
   }
 
   /**
@@ -28065,7 +28065,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xor(java.lang.Object, long)
    */
   public Object xor(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xor(this.instance, rhs);
+    return this.delegate.xor(this.instance, rhs);
   }
 
   /**
@@ -28075,7 +28075,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#xor(java.lang.Object, java.lang.Object)
    */
   public Object xor(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xor(this.instance, rhs);
+    return this.delegate.xor(this.instance, rhs);
   }
 
   /**
@@ -28085,7 +28085,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xor(java.lang.Object, short)
    */
   public Object xor(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xor(this.instance, rhs);
+    return this.delegate.xor(this.instance, rhs);
   }
 
   /**
@@ -28455,7 +28455,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xorEquals(java.lang.Object, java.math.BigInteger)
    */
   public Object xorEquals(final Object lhs, final BigInteger rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xorEquals(this.instance, rhs);
+    return this.delegate.xorEquals(this.instance, rhs);
   }
 
   /**
@@ -28465,7 +28465,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xorEquals(java.lang.Object, byte)
    */
   public Object xorEquals(final Object lhs, final byte rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xorEquals(this.instance, rhs);
+    return this.delegate.xorEquals(this.instance, rhs);
   }
 
   /**
@@ -28475,7 +28475,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xorEquals(java.lang.Object, char)
    */
   public Object xorEquals(final Object lhs, final char rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xorEquals(this.instance, rhs);
+    return this.delegate.xorEquals(this.instance, rhs);
   }
 
   /**
@@ -28485,7 +28485,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xorEquals(java.lang.Object, int)
    */
   public Object xorEquals(final Object lhs, final int rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xorEquals(this.instance, rhs);
+    return this.delegate.xorEquals(this.instance, rhs);
   }
 
   /**
@@ -28495,7 +28495,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xorEquals(java.lang.Object, long)
    */
   public Object xorEquals(final Object lhs, final long rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xorEquals(this.instance, rhs);
+    return this.delegate.xorEquals(this.instance, rhs);
   }
 
   /**
@@ -28505,7 +28505,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.MetaClass#xorEquals(java.lang.Object, java.lang.Object)
    */
   public Object xorEquals(final Object lhs, final Object rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xorEquals(this.instance, rhs);
+    return this.delegate.xorEquals(this.instance, rhs);
   }
 
   /**
@@ -28515,7 +28515,7 @@ private final RuntimeMetaClass delegate;
    * @see ng.runtime.RuntimeMetaClass#xorEquals(java.lang.Object, short)
    */
   public Object xorEquals(final Object lhs, final short rhs) throws Throwable {
-    return this.delegate.getRuntimeMetaClass().xorEquals(this.instance, rhs);
+    return this.delegate.xorEquals(this.instance, rhs);
   }
 
   /**

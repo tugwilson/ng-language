@@ -8621,10 +8621,6 @@ public class TypedTest extends TestCase {
       NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getMetaClassFor(this.o.getClass());
       assertTrue(false);
     } catch(final NgRuntimeException e) {}
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getRuntimeMetaClass();
-      assertTrue(false);
-    } catch(final NgRuntimeException e) {}
   }
   
   public void testSupportedMetaClassMiscMethods() throws Throwable {
