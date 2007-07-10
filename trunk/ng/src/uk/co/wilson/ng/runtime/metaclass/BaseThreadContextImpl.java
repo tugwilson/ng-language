@@ -14,6 +14,7 @@ import ng.runtime.*;
  *
  */
 public abstract class BaseThreadContextImpl implements ThreadContext {
+  protected boolean hasThreadLocalBehaviour = false;
   /**
    * @param instance
    * @return
@@ -27,7 +28,12 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
    * @return
    */
   protected InternalMetaClass getInternalMetaClassFor(final RuntimeMetaClass metaClass) {
-    return metaClass.getInternalMetaClass();
+    if (hasThreadLocalBehaviour) {
+      // TODO: implement categories
+      return null;
+    } else {
+      return metaClass.getInternalMetaClass();
+    }
   }
   
   public RuntimeMetaClass createMetaClassFor(Class theClass) {
