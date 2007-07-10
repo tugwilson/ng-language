@@ -33,8 +33,6 @@ import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
  */
 public 
 class CustomMetaClass implements RuntimeMetaClass {
-  private final InternalMetaClass internalMetaClass = new CustomInternalMetaClass(Object.class);
-
   /* (non-Javadoc)
    * @see ng.runtime.RuntimeMetaClass#getParamObject(java.lang.Object, java.lang.Class)
    */
@@ -6693,7 +6691,7 @@ class CustomMetaClass implements RuntimeMetaClass {
    * @see ng.runtime.RuntimeMetaClass#getInternalMetaClass()
    */
   public InternalMetaClass getInternalMetaClass() {
-    return this.internalMetaClass;
+    return null;
   }
 
   /* (non-Javadoc)

@@ -28,16 +28,6 @@ import java.math.BigInteger;
  */
 public interface RuntimeMetaClass extends MetaClass {  
   /**
-   * @return
-   */
-  InternalMetaClass getInternalMetaClass();
-
-  /**
-   * @param internalMetaClass
-   */
-  void setInternalMetaClass(InternalMetaClass internalMetaClass);
-   
-  /**
    * @param instance
    * @return
    */

@@ -29,14 +29,7 @@ import ng.runtime.MetaClass;
 import ng.runtime.RuntimeMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
-public class RuntimeMetaClassImpl implements RuntimeMetaClass {
-  public static final Object NOT_CONSTRUCTED = new Object();
-  public static final Object NOT_CALLED = new Object();
-  
-  protected static final Object[] NO_PARAMETERS = new Object[] {};
-
-  private volatile InternalMetaClass internalMetaClass;
-
+public class RuntimeMetaClassImpl extends MetaClassImpl implements RuntimeMetaClass {
   protected static class NgPrefixUnaryOperatorException extends NgRuntimeException {
     private static final long serialVersionUID = 1L;
 
@@ -104,13 +97,6 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
    */
   public MetaClass getMetaClassFor(final Class theClass) {
     return this.internalMetaClass.doGetMetaClassFor(theClass);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.MetaClass#getRuntimeMetaClass()
-   */
-  public RuntimeMetaClass getRuntimeMetaClass() {
-    return this;
   }
 
   /* (non-Javadoc)
@@ -660,20 +646,6 @@ public class RuntimeMetaClassImpl implements RuntimeMetaClass {
     return result;
   }
 
-  //
-  //   MetaClass method for operator +
-  //
-
-  /* (non-Javadoc)
-   * @see ng.runtime.RuntimeMetaClass#add(java.lang.Object, java.lang.Object)
-   */
-  public Object add(final Object lhs, final Object rhs) throws Throwable {
-  final Object result = this.internalMetaClass.doAdd(lhs, rhs);
-      
-    if (result == NOT_CALLED) throw new NgBinaryOperatorException(lhs.getClass(), "+", NgSystem.metaClassRegistry.getMetaClass(rhs).getTheClass(rhs));
-      
-    return result;
-  }
 
   //
   //   Methods callable from compiler generated code for operator +

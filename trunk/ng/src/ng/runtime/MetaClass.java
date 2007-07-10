@@ -20,7 +20,6 @@ package ng.runtime;
 
 
 public interface MetaClass {
-
   /**
    * @param instance 
    * @return The class which is represented by this MetaClass
@@ -32,11 +31,6 @@ public interface MetaClass {
    * @return The MetaClass which is to be used when this class is cast to theClass.
    */
   MetaClass getMetaClassFor(Class theClass);
-  
-  /**
-   * @return the RuntimeMetaClass for this MetaClass
-   */
-  RuntimeMetaClass getRuntimeMetaClass();
   
   /**
    * @param theClass 
@@ -390,4 +384,8 @@ public interface MetaClass {
    * @return
    */
   Object putAt(Object instance, Object index) throws Throwable;
+
+  public InternalMetaClass getInternalMetaClass();
+
+  public void setInternalMetaClass(final InternalMetaClass internalMetaClass);
 }
