@@ -31,14 +31,6 @@ public class ClosureMetaClass extends RuntimeMetaClassImpl {
   public ClosureMetaClass(final Class theClass) {
     super(theClass, new ClosureInternalMetaClass(ClosureImpl.class));
   }
-
-  /* (non-Javadoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl#getMetaClassFor(java.lang.Class)
-   */
-  @Override
-  public MetaClass getMetaClassFor(final Class theClass) {
-    return this;
-  }
 }
 
 

@@ -49,7 +49,7 @@ public class MetaClassImpl implements MetaClass {
     this.internalMetaClass = new InternalMetaClassImpl(theClass);
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#getInternalMetaClass()
    */
   public InternalMetaClass getInternalMetaClass() {
@@ -60,114 +60,86 @@ public class MetaClassImpl implements MetaClass {
     }
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#setInternalMetaClass(ng.runtime.InternalMetaClass)
    */
   public void setInternalMetaClass(final InternalMetaClass internalMetaClass) {
     this.alternateInternalMetaClass = internalMetaClass;
   }
-  
-  /**
-   * @param instance
-   * @param theClass
-   * @return
-   */
-  public Object getParamObject(final Object instance, final Class theClass) {
-    return getInternalMetaClass().doGetParamObject(instance, theClass);
-  }
-
-  /* (non-Javadoc)
-   * @see ng.runtime.MetaClass#getMetaClassFor(java.lang.Class)
-   */
-  public MetaClass getMetaClassFor(final Class theClass) {
-    return getInternalMetaClass().doGetMetaClassFor(theClass);
-  }
 
   /*
-   * (non-Javadoc)
+   * (non-JavaDoc)
    * 
    * @see ng.lang.MetaClass#getTheClass()
    */
   public Class getTheClass(final Object instance) {
-    return getInternalMetaClass().doGetTheClass(instance);
+    return NgSystem.metaClassRegistry.getThreadContext().getTheClass(this, instance);
   }
   
-  /**
-   * @param parameterType
-   * @return
-   */
-  public int calculateConversionCost(final Class parameterType) {
-    return getInternalMetaClass().doCalculateConversionCost(parameterType);
-  }
-  
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#invokeConstructor(java.lang.Class, java.lang.Object[])
    */
   public  Object invokeConstructor(final Class theClass, final Object[] arguments) throws Throwable {
-  final Object result = getInternalMetaClass().doInvokeConstructor(theClass, arguments);
-  
-    if (result == NOT_CONSTRUCTED) throw new NgRuntimeException("The constructor for " +  theClass.getName() + " was not found");
-
-    return result;
+    return NgSystem.metaClassRegistry.getThreadContext().invokeConstructor(this, theClass, arguments);
   
   }
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#invokeMethod(java.lang.Object, java.lang.String, java.lang.Object[])
    */
   public  Object invokeMethod(final Object instance, final String methodName, final Object[] arguments) throws  Throwable {
-    return NgSystem.metaClassRegistry.getThreadContext().invokeMethod(instance, methodName, arguments);
+    return NgSystem.metaClassRegistry.getThreadContext().invokeMethod(this, instance, methodName, arguments);
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#call(java.lang.Object, java.lang.Object[])
    */
   public  Object call(final Object instance, final Object[] arguments) throws  Throwable {
-    return NgSystem.metaClassRegistry.getThreadContext().call(instance, arguments);
+    return NgSystem.metaClassRegistry.getThreadContext().call(this, instance, arguments);
   }
   
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#getProperty(java.lang.Object, java.lang.String)
    */
   public Object getProperty(final Object instance, final String propertyName) throws  Throwable {
-    return NgSystem.metaClassRegistry.getThreadContext().getProperty(instance, propertyName);
+    return NgSystem.metaClassRegistry.getThreadContext().getProperty(this, instance, propertyName);
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#setProperty(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object setProperty(final Object instance, final String propertyName, final Object newValue) throws Throwable {
-    return NgSystem.metaClassRegistry.getThreadContext().setProperty(instance, propertyName, newValue);
+    return NgSystem.metaClassRegistry.getThreadContext().setProperty(this, instance, propertyName, newValue);
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#getField(java.lang.Object, java.lang.String)
    */
   public Object getField(final Object instance, final String fieldName) throws Throwable {
-    return NgSystem.metaClassRegistry.getThreadContext().getField(instance, fieldName);
+    return NgSystem.metaClassRegistry.getThreadContext().getField(this, instance, fieldName);
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#setField(java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object setField(final Object instance, final String fieldName, final Object newValue) throws  Throwable {
-    return NgSystem.metaClassRegistry.getThreadContext().setField(instance, fieldName, newValue);
+    return NgSystem.metaClassRegistry.getThreadContext().setField(this, instance, fieldName, newValue);
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#getAt(java.lang.Object, java.lang.Object)
    */
   public Object getAt(final Object instance, final Object index) throws Throwable {
     return NgSystem.metaClassRegistry.getThreadContext().getAt(instance, index);
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#putAt(java.lang.Object, java.lang.Object)
    */
   public Object putAt(final Object instance, final Object index) throws Throwable {
     return NgSystem.metaClassRegistry.getThreadContext().putAt(instance, index);
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#isInstanceof(java.lang.Object, java.lang.Class)
    */
   public Object isInstanceof(final Object instance, final Class type) throws Throwable {
@@ -178,7 +150,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#isCase(java.lang.Object, java.lang.Object)
    */
   public Object isCase(final Object instance, final Object rhs) throws Throwable {
@@ -189,11 +161,11 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#asType(java.lang.Object, java.lang.Class)
    */
   public Object asType(final Object instance, final Class type) throws Throwable {
-    return NgSystem.metaClassRegistry.getThreadContext().asType(instance, type);
+    return NgSystem.metaClassRegistry.getThreadContext().asType(this, instance, type);
   }
 
   public Object add(final Object lhs, final Object rhs) throws Throwable {
@@ -204,7 +176,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#addEquals(java.lang.Object, java.lang.Object)
    */
   public Object addEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -215,7 +187,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
   
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#and(java.lang.Object, java.lang.Object)
    */
   public Object and(final Object lhs, final Object rhs) throws Throwable {
@@ -226,7 +198,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#andEquals(java.lang.Object, java.lang.Object)
    */
   public Object andEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -237,7 +209,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
   
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#arithmeticRightShift(java.lang.Object, java.lang.Object)
    */
   public Object arithmeticRightShift(final Object lhs, final Object rhs) throws Throwable {
@@ -248,7 +220,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#arithmeticRightShiftEquals(java.lang.Object, java.lang.Object)
    */
   public Object arithmeticRightShiftEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -259,7 +231,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#compare(java.lang.Object, java.lang.Object)
    */
   public Object compare(final Object lhs, final Object rhs) throws Throwable {
@@ -270,7 +242,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#complement(java.lang.Object)
    */
   public Object complement(final Object instance) throws  Throwable {
@@ -281,7 +253,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#divide(java.lang.Object, java.lang.Object)
    */
   public Object divide(final Object lhs, final Object rhs) throws Throwable {
@@ -292,7 +264,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#divideEquals(java.lang.Object, java.lang.Object)
    */
   public Object divideEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -303,7 +275,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#equals(java.lang.Object, java.lang.Object)
    */
   public Object equals(final Object lhs, final Object rhs) throws Throwable {
@@ -314,7 +286,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
   
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#greaterThan(java.lang.Object, java.lang.Object)
    */
   public Object greaterThan(final Object lhs, final Object rhs) throws Throwable {
@@ -325,7 +297,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#greaterThanOrEquals(java.lang.Object, java.lang.Object)
    */
   public Object greaterThanOrEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -336,7 +308,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#integerDivide(java.lang.Object, java.lang.Object)
    */
   public Object integerDivide(final Object lhs, final Object rhs) throws Throwable {
@@ -347,7 +319,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#integerDivideEquals(java.lang.Object, java.lang.Object)
    */
   public Object integerDivideEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -358,7 +330,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#leftShift(java.lang.Object, java.lang.Object)
    */
   public Object leftShift(final Object lhs, final Object rhs) throws Throwable {
@@ -369,7 +341,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#leftShiftEquals(java.lang.Object, java.lang.Object)
    */
   public Object leftShiftEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -380,7 +352,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#lessThan(java.lang.Object, java.lang.Object)
    */
   public Object lessThan(final Object lhs, final Object rhs) throws Throwable {
@@ -391,7 +363,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#lessThanOrEquals(java.lang.Object, java.lang.Object)
    */
   public Object lessThanOrEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -402,7 +374,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#logicalRightShift(java.lang.Object, java.lang.Object)
    */
   public Object logicalRightShift(final Object lhs, final Object rhs) throws Throwable {
@@ -413,7 +385,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#logicalRightShiftEquals(java.lang.Object, java.lang.Object)
    */
   public Object logicalRightShiftEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -424,7 +396,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#multiply(java.lang.Object, java.lang.Object)
    */
   public Object multiply(final Object lhs, final Object rhs) throws Throwable {
@@ -435,7 +407,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#multiplyEquals(java.lang.Object, java.lang.Object)
    */
   public Object multiplyEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -446,7 +418,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#not(java.lang.Object)
    */
   public Object not(final Object instance) throws  Throwable {
@@ -457,7 +429,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#notEquals(java.lang.Object, java.lang.Object)
    */
   public Object notEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -468,7 +440,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#or(java.lang.Object, java.lang.Object)
    */
   public Object or(final Object lhs, final Object rhs) throws Throwable {
@@ -479,7 +451,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#orEquals(java.lang.Object, java.lang.Object)
    */
   public Object orEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -490,7 +462,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#postfixDecrement(java.lang.Object)
    */
   public Object postfixDecrement(final Object operand) throws Throwable {
@@ -501,7 +473,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#postfixIncrement(java.lang.Object)
    */
   public Object postfixIncrement(final Object operand) throws Throwable {
@@ -512,7 +484,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#prefixDecrement(java.lang.Object)
    */
   public Object prefixDecrement(final Object operand) throws Throwable {
@@ -523,7 +495,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#prefixIncrement(java.lang.Object)
    */
   public Object prefixIncrement(final Object operand) throws Throwable {
@@ -534,7 +506,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#remainder(java.lang.Object, java.lang.Object)
    */
   public Object remainder(final Object lhs, final Object rhs) throws Throwable {
@@ -545,7 +517,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#remainderEquals(java.lang.Object, java.lang.Object)
    */
   public Object remainderEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -556,7 +528,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#subtract(java.lang.Object, java.lang.Object)
    */
   public Object subtract(final Object lhs, final Object rhs) throws Throwable {
@@ -567,7 +539,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#subtractEquals(java.lang.Object, java.lang.Object)
    */
   public Object subtractEquals(final Object lhs, final Object rhs) throws Throwable {
@@ -578,7 +550,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#unaryMinus(java.lang.Object)
    */
   public Object unaryMinus(final Object instance) throws Throwable {
@@ -589,7 +561,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#unaryPlus(java.lang.Object)
    */
   public Object unaryPlus(final Object instance) throws  Throwable {
@@ -600,7 +572,7 @@ public class MetaClassImpl implements MetaClass {
       return result;
     }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#xor(java.lang.Object, java.lang.Object)
    */
   public Object xor(final Object lhs, final Object rhs) throws Throwable {
@@ -611,7 +583,7 @@ public class MetaClassImpl implements MetaClass {
     return result;
   }
 
-  /* (non-Javadoc)
+  /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#xorEquals(java.lang.Object, java.lang.Object)
    */
   public Object xorEquals(final Object lhs, final Object rhs) throws Throwable {

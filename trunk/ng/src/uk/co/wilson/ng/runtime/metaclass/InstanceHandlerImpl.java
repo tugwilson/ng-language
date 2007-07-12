@@ -128,13 +128,6 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
     return 100;
   }
 
-  /* (non-Javadoc)
-   * @see ng.runtime.InstanceHandler#invokeConstructor(java.lang.Class, java.lang.Object[])
-   */
-  public Object invokeConstructor(final Class theClass, final Object[] arguments) {
-    return RuntimeMetaClassImpl.NOT_CONSTRUCTED;
-  }
-
   /**
    * This code should really be in the constructor
    * However this causes problems with the initial class loading
@@ -160,7 +153,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodFor(ng.runtime.ThreadContext, java.lang.String, java.lang.Object[])
    */
-  public MetaMethod getMetaMethodFor(final ThreadContext tc, final String methodName, final Object[] arguments) {
+  public Callable getMetaMethod(final ThreadContext tc, final String methodName, final Object[] arguments) {
     if(arguments.length <= 4)
       throw new NgRuntimeException("Internal Error invokeMethod called with an array of " + arguments.length +" parameters");
     
@@ -176,7 +169,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass[])
    */
-  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass[] argumentMetaClasses) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final MetaClass[] argumentMetaClasses) {
     setUpMetaClasses();
     
     currentSelection = this.multiParameterMethods.get(methodName).selectMethod(tc, currentSelection, argumentMetaClasses);
@@ -200,7 +193,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName) {
     return selectMethod(tc, new MetaMethodSelection(), methodName).metaMethod;
   }
 
@@ -231,7 +224,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.lang.Object)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName,
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p1)).metaMethod;
   }
@@ -239,77 +232,77 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, boolean)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final boolean p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final boolean p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngBooleanMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, char)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final char p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final char p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngCharMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, byte)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final byte p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final byte p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngByteMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, short)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final short p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final short p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngShortMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, int)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final int p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final int p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngIntMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, long)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final long p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final long p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngLongMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, float)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final float p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final float p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngFloatMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, double)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final double p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final double p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.ngDoubleMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.math.BigInteger)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final BigInteger p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final BigInteger p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.bigIntegerMetaClass).metaMethod;
   }
   
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.math.BigDecimal)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final BigDecimal p1) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final BigDecimal p1) {
     return selectMethod(tc, new MetaMethodSelection(), methodName, NgSystem.bigDecimalMetaClass).metaMethod;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final MetaClass p1) {
     setUpMetaClasses();
     
     currentSelection = this.oneParameterMethods.get(methodName).selectMethod(tc, currentSelection, p1);
@@ -333,7 +326,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1, final Object p2) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1, final Object p2) {
     return selectMethod(tc, new MetaMethodSelection(), methodName,
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p1),
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p2)).metaMethod;
@@ -342,7 +335,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final MetaClass p1, final MetaClass p2) {
     setUpMetaClasses();
     
     currentSelection = this.twoParameterMethods.get(methodName).selectMethod(tc, currentSelection, p1, p2);
@@ -366,7 +359,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1, final Object p2, final Object p3) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1, final Object p2, final Object p3) {
     return selectMethod(tc, new MetaMethodSelection(), methodName,
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p1),
         NgSystem.metaClassRegistry.getRuntimeMetaClass(p2),
@@ -376,7 +369,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final MetaClass p1, final MetaClass p2, final MetaClass p3) {
     setUpMetaClasses();
     
     currentSelection = this.threeParameterMethods.get(methodName).selectMethod(tc, currentSelection, p1, p2, p3);
@@ -400,7 +393,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getMetaMethodQuick(ng.runtime.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public MetaMethod getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
+  public Callable getMetaMethodQuick(final ThreadContext tc, final String methodName, final Object p1, final Object p2, final Object p3, final Object p4) {
     return selectMethod(tc, new MetaMethodSelection(), methodName,
                         NgSystem.metaClassRegistry.getRuntimeMetaClass(p1),
                         NgSystem.metaClassRegistry.getRuntimeMetaClass(p2),
@@ -411,7 +404,7 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, java.lang.String, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, final String methodName, final MetaClass p1, final MetaClass p2, final MetaClass p3, final MetaClass p4) {
     setUpMetaClasses();
     
     currentSelection = this.fourParameterMethods.get(methodName).selectMethod(tc, currentSelection, p1, p2, p3, p4);
@@ -432,6 +425,134 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
     return currentSelection;
   }
   
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructor(ng.runtime.ThreadContext, java.lang.Class, java.lang.Object[])
+   */
+  public Callable getMetaConstructor(ThreadContext tc, Class theClass, Object[] arguments) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, java.math.BigDecimal)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, BigDecimal p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, java.math.BigInteger)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, BigInteger p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, boolean)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, boolean p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, byte)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, byte p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, char)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, char p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, double)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, double p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, float)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, float p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, int)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, int p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, long)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, long p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2, Object p3, Object p4) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, java.lang.Object, java.lang.Object, java.lang.Object)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2, Object p3) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, java.lang.Object, java.lang.Object)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, java.lang.Object)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, short)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, short p1) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#getMetaConstructorQuick(ng.runtime.ThreadContext, java.lang.Class)
+   */
+  public Callable getMetaConstructorQuick(ThreadContext tc, Class theClass) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
   /* (non-Javadoc)
    * @see ng.runtime.InstanceHandler#getPropertyMetaMethod(java.lang.Object, java.lang.String)
    */

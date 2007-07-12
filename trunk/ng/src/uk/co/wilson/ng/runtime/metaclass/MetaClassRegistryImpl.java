@@ -42,6 +42,9 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
   private final Map registry = new HashMap() {
     private static final long serialVersionUID = 1L;
 
+    /* (non-Javadoc)
+     * @see java.util.HashMap#get(java.lang.Object)
+     */
     @Override
     public Object get(final Object key) {
     final Object result = super.get(key);
@@ -51,6 +54,9 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
       return ((SoftReference)result).get();
     }
     
+    /* (non-Javadoc)
+     * @see java.util.HashMap#put(java.lang.Object, java.lang.Object)
+     */
     @Override
     public Object put(final Object key, final Object value) {
       return super.put(key, new SoftReference(value));
@@ -58,11 +64,17 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
   };
   
   private final ThreadLocal threadContext = new ThreadLocal() {
+    /* (non-Javadoc)
+     * @see java.lang.ThreadLocal#initialValue()
+     */
     @Override
     protected Object initialValue() {
       return new ThreadContextImpl() {
         private static final int ngMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC | Modifier.FINAL;
         private final Map threadRegistry = new WeakHashMap() {
+          /* (non-Javadoc)
+           * @see java.util.WeakHashMap#get(java.lang.Object)
+           */
           @Override
           public Object get(final Object key) {
           final Object result = super.get(key);
@@ -72,12 +84,18 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
             return ((WeakReference)result).get();
           }
           
+          /* (non-Javadoc)
+           * @see java.util.WeakHashMap#put(java.lang.Object, java.lang.Object)
+           */
           @Override
           public Object put(final Object key, final Object value) {
             return super.put(key, new WeakReference(value));
           }
         };
         
+        /* (non-Javadoc)
+         * @see ng.runtime.ThreadContext#getRuntimeMetaClass(java.lang.Class)
+         */
         public RuntimeMetaClass getRuntimeMetaClass(final Class theClass) { 
         //
         // First try and get the MetaClass from the thread local registry cache
@@ -88,7 +106,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
           if (metaClass == null) {        
             //
             // If the class has a static ngMetaClass then use this value as the MetaClass
-            // The refection is an expensive operation so put the MetaClass in the thread local cache
+            // The reflection is an expensive operation so put the MetaClass in the thread local cache
             // to speed up subsequent fetches
             //
             try {
@@ -171,8 +189,8 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
     this.registry.put(ClosureImpl.class, NgSystem.closureMetaClass);    
   }
 
-  /**
-   * @return the threadContext
+  /* (non-Javadoc)
+   * @see ng.runtime.MetaClassRegistry#getThreadContext()
    */
   public ThreadContext getThreadContext() {
     return (ThreadContext)this.threadContext.get();

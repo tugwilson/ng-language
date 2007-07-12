@@ -11,6 +11,18 @@ import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
  */
 public interface ThreadContext {
   /**
+   * @param instance 
+   * @return The class which is represented by this MetaClass
+   */
+  Class getTheClass(Object instance);
+  
+  /**
+   * @param instance 
+   * @return The class which is represented by this MetaClass
+   */
+  Class getTheClass(MetaClass metaClass, Object instance);
+  
+  /**
    * @param theClass
    * @return
    */
@@ -27,7 +39,259 @@ public interface ThreadContext {
    * @param theClass
    * @return
    */
-  RuntimeMetaClass createMetaClassFor(RuntimeMetaClass metaClass, Class theClass);
+  RuntimeMetaClass createMetaClassFor(MetaClass metaClass, Class theClass);
+  
+  /**
+   * @param theClass
+   * @param arguments
+   * @return the constructed instance.
+   */
+  Object invokeConstructor(Class theClass, Object[] arguments) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, Object p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, boolean p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, char p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, byte p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, short p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, int p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, long p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, float p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, double p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, BigInteger p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, BigDecimal p1) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, Object p1, Object p2) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, Object p1, Object p2, Object p3) throws Throwable;
+  
+  /**
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  Object invokeConstructorQuick(Class theClass, Object p1, Object p2, Object p3, Object p4) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param arguments
+   * @return the result of invoking the method on the instance with the supplied
+   *         parameters.
+   */
+  Object invokeConstructor(MetaClass metaClass,Class theClass, Object[] arguments) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @return
+   * @throws Throwable
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, Object p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, boolean p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, char p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, byte p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, short p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, int p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, long p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, float p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, double p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, BigInteger p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, BigDecimal p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, Object p1, Object p2) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, Object p1, Object p2, Object p3) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  Object invokeConstructorQuick(MetaClass metaClass, Class theClass, Object p1, Object p2, Object p3, Object p4) throws Throwable;
   
   /**
    * @param instance
@@ -51,7 +315,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  Object getProperty(RuntimeMetaClass metaClass, Object instance, String propertyName) throws Throwable;
+  Object getProperty(MetaClass metaClass, Object instance, String propertyName) throws Throwable;
 
   /**
    * @param metaClass
@@ -61,7 +325,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  Object setProperty(RuntimeMetaClass metaClass, Object instance, String propertyName, Object newValue) throws Throwable;
+  Object setProperty(MetaClass metaClass, Object instance, String propertyName, Object newValue) throws Throwable;
 
   /**
    * @param instance
@@ -87,7 +351,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  Object getField(RuntimeMetaClass metaClass, Object instance, String fieldName) throws Throwable;
+  Object getField(MetaClass metaClass, Object instance, String fieldName) throws Throwable;
 
   /**
    * @param metaClass
@@ -97,7 +361,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  Object setField(RuntimeMetaClass metaClass, Object instance, String fieldName, Object newValue) throws Throwable;
+  Object setField(MetaClass metaClass, Object instance, String fieldName, Object newValue) throws Throwable;
   
   /**
    * @param instance
@@ -241,7 +505,7 @@ public interface ThreadContext {
    * @return the result of invoking the method on the instance with the supplied
    *         parameters.
    */
-  Object invokeMethod(RuntimeMetaClass metaClass,Object instance, String methodName, Object[] arguments) throws Throwable;
+  Object invokeMethod(MetaClass metaClass,Object instance, String methodName, Object[] arguments) throws Throwable;
   
   /**
    * @param metaClass
@@ -250,7 +514,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName) throws Throwable;
   
   /**
    * @param metaClass
@@ -259,7 +523,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, Object p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, Object p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -268,7 +532,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, boolean p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, boolean p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -277,7 +541,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, char p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, char p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -286,7 +550,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, byte p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, byte p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -295,7 +559,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, short p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, short p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -304,7 +568,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, int p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, int p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -313,7 +577,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, long p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, long p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -322,7 +586,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, float p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, float p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -331,7 +595,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, double p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, double p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -340,7 +604,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, BigInteger p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, BigInteger p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -349,7 +613,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, BigDecimal p1) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, BigDecimal p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -359,7 +623,7 @@ public interface ThreadContext {
    * @param p2
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, Object p1, Object p2) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, Object p1, Object p2) throws Throwable;
   
   /**
    * @param metaClass
@@ -370,7 +634,7 @@ public interface ThreadContext {
    * @param p3
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, Object p1, Object p2, Object p3) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, Object p1, Object p2, Object p3) throws Throwable;
   
   /**
    * @param metaClass
@@ -382,7 +646,7 @@ public interface ThreadContext {
    * @param p4
    * @return
    */
-  Object invokeMethodQuick(RuntimeMetaClass metaClass, Object instance, String methodName, Object p1, Object p2, Object p3, Object p4) throws Throwable;
+  Object invokeMethodQuick(MetaClass metaClass, Object instance, String methodName, Object p1, Object p2, Object p3, Object p4) throws Throwable;
   
   /**
    * @param instance
@@ -507,21 +771,13 @@ public interface ThreadContext {
    * @param arguments
    * @return
    */
-  Object call(RuntimeMetaClass metaClass, Object instance, Object[] arguments) throws Throwable;
+  Object call(MetaClass metaClass, Object instance, Object[] arguments) throws Throwable;
   
   /**
    * @param instance
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance) throws Throwable;
-  
-  /**
-   * @param metaClass
-   * @param instance
-   * @param p1
-   * @return
-   */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, Object p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance) throws Throwable;
   
   /**
    * @param metaClass
@@ -529,7 +785,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, boolean p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, Object p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -537,7 +793,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, char p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, boolean p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -545,7 +801,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, byte p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, char p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -553,7 +809,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, short p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, byte p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -561,7 +817,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, int p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, short p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -569,7 +825,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, long p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, int p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -577,7 +833,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, float p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, long p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -585,7 +841,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, double p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, float p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -593,7 +849,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, BigInteger p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, double p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -601,7 +857,15 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, BigDecimal p1) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, BigInteger p1) throws Throwable;
+  
+  /**
+   * @param metaClass
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object callQuick(MetaClass metaClass, Object instance, BigDecimal p1) throws Throwable;
   
   /**
    * @param metaClass
@@ -610,7 +874,7 @@ public interface ThreadContext {
    * @param p2
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, Object p1, Object p2) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, Object p1, Object p2) throws Throwable;
   
   /**
    * @param metaClass
@@ -620,7 +884,7 @@ public interface ThreadContext {
    * @param p3
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, Object p1, Object p2, Object p3) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, Object p1, Object p2, Object p3) throws Throwable;
   
   /**
    * @param metaClass
@@ -631,7 +895,7 @@ public interface ThreadContext {
    * @param p4
    * @return
    */
-  Object callQuick(RuntimeMetaClass metaClass, Object instance, Object p1, Object p2, Object p3, Object p4) throws Throwable;
+  Object callQuick(MetaClass metaClass, Object instance, Object p1, Object p2, Object p3, Object p4) throws Throwable;
   
   /**
    * @param instance
@@ -696,7 +960,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  Object asType(RuntimeMetaClass metaClass, Object instance, Class type) throws Throwable;
+  Object asType(MetaClass metaClass, Object instance, Class type) throws Throwable;
   
   /**
    * @param metaClass
@@ -704,7 +968,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  byte asByte(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  byte asByte(MetaClass metaClass, Object instance) throws Throwable;
   
   /**
    * @param metaClass
@@ -712,7 +976,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  char asChar(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  char asChar(MetaClass metaClass, Object instance) throws Throwable;
   
   /**
    * @param metaClass
@@ -720,7 +984,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  short asShort(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  short asShort(MetaClass metaClass, Object instance) throws Throwable;
   
   /**
    * @param metaClass
@@ -728,7 +992,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  int asInt(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  int asInt(MetaClass metaClass, Object instance) throws Throwable;
   
   /**
    * @param metaClass
@@ -736,7 +1000,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  long asLong(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  long asLong(MetaClass metaClass, Object instance) throws Throwable;
   
   /**
    * @param metaClass
@@ -744,7 +1008,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  float asFloat(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  float asFloat(MetaClass metaClass, Object instance) throws Throwable;
   
   /**
    * @param metaClass
@@ -752,7 +1016,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  double asDouble(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  double asDouble(MetaClass metaClass, Object instance) throws Throwable;
   
   /**
    * @param metaClass
@@ -760,7 +1024,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  boolean asBoolean(RuntimeMetaClass metaClass, Object instance) throws Throwable;
+  boolean asBoolean(MetaClass metaClass, Object instance) throws Throwable;
 
   /**
    * @param instance
@@ -791,7 +1055,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  Object getAt(RuntimeMetaClass metaClass, Object instance, int index) throws Throwable;
+  Object getAt(MetaClass metaClass, Object instance, int index) throws Throwable;
   
   /**
    * @param metaClass
@@ -800,7 +1064,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  Object getAt(RuntimeMetaClass metaClass, Object instance, BigInteger index) throws Throwable;
+  Object getAt(MetaClass metaClass, Object instance, BigInteger index) throws Throwable;
   
   /**
    * @param instance
@@ -829,7 +1093,7 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  Object putAt(RuntimeMetaClass metaClass, Object instance, int index) throws Throwable;
+  Object putAt(MetaClass metaClass, Object instance, int index) throws Throwable;
   
   /**
    * @param metaClass
@@ -838,14 +1102,14 @@ public interface ThreadContext {
    * @return
    * @throws Throwable
    */
-  Object putAt(RuntimeMetaClass metaClass, Object instance, BigInteger index) throws Throwable; 
+  Object putAt(MetaClass metaClass, Object instance, BigInteger index) throws Throwable; 
   
   /**
    * @param metaClass
    * @param parameterType
    * @return
    */
-  int calculateConversionCost(RuntimeMetaClass metaClass, Class parameterType);
+  int calculateConversionCost(MetaClass metaClass, Class parameterType);
   
   /**
    * @param the actual parameter
@@ -930,7 +1194,7 @@ public interface ThreadContext {
    * @param the required type
    * @return the Object to be used whan passing this instance as a parameter
    */
-  Object getParamObject(RuntimeMetaClass metaClass, Object instance, Class theClass);
+  Object getParamObject(MetaClass metaClass, Object instance, Class theClass);
 
   /**
    * @param metaClass
@@ -939,7 +1203,7 @@ public interface ThreadContext {
    * @param argumentMetaClasses
    * @return
    */
-  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
+  MetaMethodSelection selectMethod(MetaClass metaClass, MetaMethodSelection currentSelection, String methodName, MetaClass[] argumentMetaClasses);
   
   /**
    * @param metaClass
@@ -947,7 +1211,7 @@ public interface ThreadContext {
    * @param methodName
    * @return
    */
-  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName);
+  MetaMethodSelection selectMethod(MetaClass metaClass, MetaMethodSelection currentSelection, String methodName);
   
   /**
    * @param metaClass
@@ -956,7 +1220,7 @@ public interface ThreadContext {
    * @param p1
    * @return
    */
-  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1);
+  MetaMethodSelection selectMethod(MetaClass metaClass, MetaMethodSelection currentSelection, String methodName, MetaClass p1);
   
   /**
    * @param metaClass
@@ -966,7 +1230,7 @@ public interface ThreadContext {
    * @param p2
    * @return
    */
-  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2);
+  MetaMethodSelection selectMethod(MetaClass metaClass, MetaMethodSelection currentSelection, String methodName, MetaClass p1, MetaClass p2);
   
   /**
    * @param metaClass
@@ -977,7 +1241,7 @@ public interface ThreadContext {
    * @param p3
    * @return
    */
-  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
+  MetaMethodSelection selectMethod(MetaClass metaClass, MetaMethodSelection currentSelection, String methodName, MetaClass p1, MetaClass p2, MetaClass p3);
 
   /**
    * @param metaClass
@@ -989,5 +1253,5 @@ public interface ThreadContext {
    * @param p4
    * @return
    */
-  MetaMethodSelection selectMethod(RuntimeMetaClass metaClass, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
+  MetaMethodSelection selectMethod(MetaClass metaClass, MetaMethodSelection currentSelection, String methodName, MetaClass p1, MetaClass p2, MetaClass p3, MetaClass p4);
 }

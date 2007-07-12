@@ -30,13 +30,6 @@ public interface InstanceHandler {
   RuntimeMetaClass getRuntimeMetaClass();
   
   /**
-   * @param theClass 
-   * @param arguments
-   * @return an instance of the Class represented by the MetaClass
-   */
-  Object invokeConstructor(Class theClass, Object[] arguments);
-  
-  /**
    * @param instance
    * @param propertyName
    * @return
@@ -382,6 +375,139 @@ public interface InstanceHandler {
    * @return
    */
   int calculateConversionCost(Class parameterType);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param arguments
+   * @return
+   */
+  Callable getMetaConstructor(ThreadContext tc, Class theClass, Object[] arguments);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, boolean p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, char p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, byte p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, short p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, int p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, long p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, float p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, double p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, BigInteger p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, BigDecimal p1);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2, Object p3);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  Callable getMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2, Object p3, Object p4);
   
   /**
    * @param tc
@@ -390,7 +516,7 @@ public interface InstanceHandler {
    * @param argumentMetaClasses
    * @return
    */
-  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, MetaClass[] argumentMetaClasses);
   
   /**
    * @param tc
@@ -407,7 +533,7 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, MetaClass p1);
   
   /**
    * @param tc
@@ -417,7 +543,7 @@ public interface InstanceHandler {
    * @param p2
    * @return
    */
-  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, MetaClass p1, MetaClass p2);
   
   /**
    * @param tc
@@ -428,7 +554,7 @@ public interface InstanceHandler {
    * @param p3
    * @return
    */
-  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, MetaClass p1, MetaClass p2, MetaClass p3);
   
   /**
    * @param tc
@@ -440,7 +566,7 @@ public interface InstanceHandler {
    * @param p4
    * @return
    */
-  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
+  MetaMethodSelection selectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, MetaClass p1, MetaClass p2, MetaClass p3, MetaClass p4);
 
   /**
    * @param tc
@@ -448,22 +574,14 @@ public interface InstanceHandler {
    * @param arguments
    * @return
    */
-  MetaMethod getMetaMethodFor(ThreadContext tc, String methodName, Object[] arguments);
+  Callable getMetaMethod(ThreadContext tc, String methodName, Object[] arguments);
   
   /**
    * @param tc
    * @param methodName
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName);
-  
-  /**
-   * @param tc
-   * @param methodName
-   * @param p1
-   * @return
-   */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, Object p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName);
   
   /**
    * @param tc
@@ -471,7 +589,7 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, boolean p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, Object p1);
   
   /**
    * @param tc
@@ -479,7 +597,7 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, char p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, boolean p1);
   
   /**
    * @param tc
@@ -487,7 +605,7 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, byte p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, char p1);
   
   /**
    * @param tc
@@ -495,7 +613,7 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, short p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, byte p1);
   
   /**
    * @param tc
@@ -503,7 +621,7 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, int p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, short p1);
   
   /**
    * @param tc
@@ -511,7 +629,7 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, long p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, int p1);
   
   /**
    * @param tc
@@ -519,7 +637,7 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, float p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, long p1);
   
   /**
    * @param tc
@@ -527,7 +645,7 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, double p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, float p1);
   
   /**
    * @param tc
@@ -535,7 +653,7 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, BigInteger p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, double p1);
   
   /**
    * @param tc
@@ -543,7 +661,15 @@ public interface InstanceHandler {
    * @param p1
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, BigDecimal p1);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, BigInteger p1);
+  
+  /**
+   * @param tc
+   * @param methodName
+   * @param p1
+   * @return
+   */
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, BigDecimal p1);
   
   /**
    * @param tc
@@ -552,7 +678,7 @@ public interface InstanceHandler {
    * @param p2
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, Object p1, Object p2);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, Object p1, Object p2);
   
   /**
    * @param tc
@@ -562,7 +688,7 @@ public interface InstanceHandler {
    * @param p3
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, Object p1, Object p2, Object p3);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, Object p1, Object p2, Object p3);
   
   /**
    * @param tc
@@ -573,7 +699,7 @@ public interface InstanceHandler {
    * @param p4
    * @return
    */
-  MetaMethod getMetaMethodQuick(ThreadContext tc, String methodName, Object p1, Object p2, Object p3, Object p4);
+  Callable getMetaMethodQuick(ThreadContext tc, String methodName, Object p1, Object p2, Object p3, Object p4);
   
   /**
    * @param lhs
@@ -919,35 +1045,35 @@ public interface InstanceHandler {
     /* (non-Javadoc)
      * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass)
      */
-    public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, RuntimeMetaClass p1) {
+    public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, MetaClass p1) {
       return currentSelection;
     }
 
     /* (non-Javadoc)
      * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
      */
-    public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2) {
+    public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, MetaClass p1, MetaClass p2) {
       return currentSelection;
     }
 
     /* (non-Javadoc)
      * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
      */
-    public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3) {
+    public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, MetaClass p1, MetaClass p2, MetaClass p3) {
       return currentSelection;
     }
 
     /* (non-Javadoc)
      * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
      */
-    public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4) {
+    public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, MetaClass p1, MetaClass p2, MetaClass p3, MetaClass p4) {
       return currentSelection;
     }
 
     /* (non-Javadoc)
      * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass[])
      */
-    public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, RuntimeMetaClass[] argumentMetaClasses) {
+    public MetaMethodSelection selectMethod(final ThreadContext tc, MetaMethodSelection currentSelection, MetaClass[] argumentMetaClasses) {
       return currentSelection;
     }
   };
