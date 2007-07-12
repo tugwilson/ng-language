@@ -27,12 +27,6 @@ public interface MetaClass {
   Class getTheClass(Object instance);
   
   /**
-   * @param theClass
-   * @return The MetaClass which is to be used when this class is cast to theClass.
-   */
-  MetaClass getMetaClassFor(Class theClass);
-  
-  /**
    * @param theClass 
    * @param arguments
    * @return an instance of the Class represented by the MetaClass

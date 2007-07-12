@@ -8615,13 +8615,6 @@ public class TypedTest extends TestCase {
     assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixIncrement(this.o), null);
     assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).prefixDecrement(this.o), null);    
   }
-
-  public void testunSupportedMetaClassMiscMethods() throws Throwable {
-    try {
-      NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getMetaClassFor(this.o.getClass());
-      assertTrue(false);
-    } catch(final NgRuntimeException e) {}
-  }
   
   public void testSupportedMetaClassMiscMethods() throws Throwable {
     final ThreadContext tc = NgSystem.metaClassRegistry.getThreadContext();

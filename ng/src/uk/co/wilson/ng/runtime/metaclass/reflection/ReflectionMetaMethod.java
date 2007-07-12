@@ -1,6 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.reflection;
 
-import ng.runtime.RuntimeMetaClass;
+import ng.runtime.MetaClass;
 import ng.runtime.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.methods.BaseMetaMethod;
 import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
@@ -29,7 +29,7 @@ public abstract class ReflectionMetaMethod extends BaseMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass[])
    */
-  public MetaMethodSelection selectMethod(final ThreadContext tc, final MetaMethodSelection currentSelection, final RuntimeMetaClass[] argumentMetaClasses) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, final MetaMethodSelection currentSelection, final MetaClass[] argumentMetaClasses) {
   int score = 0;
   
     for (int i = 0; i != argumentMetaClasses.length; i++) {
@@ -57,7 +57,7 @@ public abstract class ReflectionMetaMethod extends BaseMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(final ThreadContext tc, final MetaMethodSelection currentSelection, final RuntimeMetaClass p1) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, final MetaMethodSelection currentSelection, final MetaClass p1) {
   final int score = tc.calculateConversionCost(p1, this.parameterTypes[0]);
     
     if (currentSelection.score > score) {
@@ -71,7 +71,7 @@ public abstract class ReflectionMetaMethod extends BaseMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(final ThreadContext tc, final MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, final MetaMethodSelection currentSelection, final MetaClass p1, final MetaClass p2) {
   final int score = tc.calculateConversionCost(p1, this.parameterTypes[0])
                    + tc.calculateConversionCost(p2, this.parameterTypes[1]);
     
@@ -86,7 +86,7 @@ public abstract class ReflectionMetaMethod extends BaseMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(final ThreadContext tc, final MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, final MetaMethodSelection currentSelection, final MetaClass p1, final MetaClass p2, final MetaClass p3) {
   final int score = tc.calculateConversionCost(p1, this.parameterTypes[0])
                   + tc.calculateConversionCost(p2, this.parameterTypes[1])
                   + tc.calculateConversionCost(p3, this.parameterTypes[2]);
@@ -102,7 +102,7 @@ public abstract class ReflectionMetaMethod extends BaseMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#selectMethod(ng.runtime.ThreadContext, uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass, ng.runtime.RuntimeMetaClass)
    */
-  public MetaMethodSelection selectMethod(final ThreadContext tc, final MetaMethodSelection currentSelection, final RuntimeMetaClass p1, final RuntimeMetaClass p2, final RuntimeMetaClass p3, final RuntimeMetaClass p4) {
+  public MetaMethodSelection selectMethod(final ThreadContext tc, final MetaMethodSelection currentSelection, final MetaClass p1, final MetaClass p2, final MetaClass p3, final MetaClass p4) {
   final int score = tc.calculateConversionCost(p1, this.parameterTypes[0])
                   + tc.calculateConversionCost(p2, this.parameterTypes[1])
                   + tc.calculateConversionCost(p3, this.parameterTypes[2])

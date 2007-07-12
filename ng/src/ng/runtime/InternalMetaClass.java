@@ -111,13 +111,290 @@ public interface InternalMetaClass {
    * @return
    */
   int doCalculateConversionCost(Class parameterType);
-  
+
   /**
-   * @param theClass 
+   * @param tc
+   * @param theClass
    * @param arguments
    * @return
    */
-  Object doInvokeConstructor(Class theClass, Object[] arguments) throws Throwable;
+  Callable doGetMetaConstructor(ThreadContext tc, Class theClass, Object[] arguments);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, boolean p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, byte p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, char p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, short p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, int p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, long p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, float p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, double p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, BigInteger p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, BigDecimal p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2, Object p3);
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
+  Callable doGetMetaConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2, Object p3, Object p4);
+  
+  /**
+   * @param tc
+   * @param theClass
+   * @param arguments
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructor(ThreadContext tc, Class theClass, Object[] arguments) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, Object p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, boolean p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, char p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, byte p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, short p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass,  int p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param methodName
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass,  long p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, float p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, double p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, BigInteger p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, BigDecimal p1) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2, Object p3) throws Throwable;
+
+  /**
+   * @param tc
+   * @param theClass
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   * @throws Throwable
+   */
+  Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, Object p1, Object p2, Object p3, Object p4) throws Throwable;
   
   /**
    * @param tc
@@ -126,7 +403,7 @@ public interface InternalMetaClass {
    * @param argumentMetaClasses
    * @return
    */
-  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass[] argumentMetaClasses);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, MetaClass[] argumentMetaClasses);
 
   /**
    * @param tc
@@ -143,7 +420,7 @@ public interface InternalMetaClass {
    * @param p1
    * @return
    */
-  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, MetaClass p1);
 
   /**
    * @param tc
@@ -153,7 +430,7 @@ public interface InternalMetaClass {
    * @param p2
    * @return
    */
-  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, MetaClass p1, MetaClass p2);
 
   /**
    * @param tc
@@ -164,7 +441,7 @@ public interface InternalMetaClass {
    * @param p3
    * @return
    */
-  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, MetaClass p1, MetaClass p2, MetaClass p3);
 
   /**
    * @param tc
@@ -176,7 +453,7 @@ public interface InternalMetaClass {
    * @param p4
    * @return
    */
-  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, RuntimeMetaClass p1, RuntimeMetaClass p2, RuntimeMetaClass p3, RuntimeMetaClass p4);
+  MetaMethodSelection doSelectMethod(ThreadContext tc, MetaMethodSelection currentSelection, String methodName, MetaClass p1, MetaClass p2, MetaClass p3, MetaClass p4);
 
   /**
    * @param tc
@@ -184,7 +461,7 @@ public interface InternalMetaClass {
    * @param arguments
    * @return
    */
-  Callable doGetMetaMethodFor(ThreadContext tc, String methodName, Object[] arguments);
+  Callable doGetMetaMethod(ThreadContext tc, String methodName, Object[] arguments);
 
   /**
    * @param tc
