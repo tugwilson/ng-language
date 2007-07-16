@@ -13,7 +13,7 @@ import uk.co.wilson.ng.runtime.metaclass.InternalMetaClassImpl;
  *
  */
 public class CustomInternalMetaClass extends InternalMetaClassImpl {
-  private final Callable callable = new ClosureImpl(null) {
+  private final Callable callable = new ClosureImpl() {
 
     /* (non-Javadoc)
      * @see uk.co.wilson.ng.lang.ClosureImpl#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])
