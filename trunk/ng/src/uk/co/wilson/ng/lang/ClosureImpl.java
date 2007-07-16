@@ -4,8 +4,15 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.lang.Closure;
-import ng.lang.NgSystem;
-import ng.runtime.*;
+import ng.runtime.NgBoolean;
+import ng.runtime.NgByte;
+import ng.runtime.NgChar;
+import ng.runtime.NgDouble;
+import ng.runtime.NgFloat;
+import ng.runtime.NgInt;
+import ng.runtime.NgLong;
+import ng.runtime.NgShort;
+import ng.runtime.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 
 /**
@@ -13,19 +20,6 @@ import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
  *
  */
 public abstract class ClosureImpl extends Closure {
-  /**
-   * 
-   */
-  public ClosureImpl() {
-    super(NgSystem.closureMetaClass);
-  }
-  
-  /**
-   * @param metaClass
-   */
-  public ClosureImpl(final RuntimeMetaClass metaClass) {
-    super(metaClass);
-  }
 
   /* (non-Javadoc)
    * @see ng.lang.Closure#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])

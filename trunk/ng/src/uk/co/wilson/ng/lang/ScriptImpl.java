@@ -3,9 +3,16 @@ package uk.co.wilson.ng.lang;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.lang.NgSystem;
 import ng.lang.Script;
-import ng.runtime.*;
+import ng.runtime.NgBoolean;
+import ng.runtime.NgByte;
+import ng.runtime.NgChar;
+import ng.runtime.NgDouble;
+import ng.runtime.NgFloat;
+import ng.runtime.NgInt;
+import ng.runtime.NgLong;
+import ng.runtime.NgShort;
+import ng.runtime.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.RuntimeMetaClassImpl;
 
 /**
@@ -16,33 +23,9 @@ public abstract class ScriptImpl extends Script {
   private Object binding = null;
 
   /**
-   * 
-   */
-  public ScriptImpl() {
-    super(NgSystem.scriptMetaClass);
-  }
-
-  /**
-   * @param metaClass
-   */
-  public ScriptImpl(final RuntimeMetaClass metaClass) {
-    super(metaClass);
-  }
-  
-  /**
-   * @param metaClass
-   * @param binding
-   */
-  public ScriptImpl(final RuntimeMetaClass metaClass, final Object binding) {
-    super(metaClass);
-    this.binding = binding;
-  }
-
-  /**
    * @param binding
    */
   public ScriptImpl(final Object binding) {
-    super(NgSystem.scriptMetaClass);
     this.binding = binding;
   }
 
