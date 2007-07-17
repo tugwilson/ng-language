@@ -142,23 +142,15 @@ public class MetaClassImpl implements MetaClass {
   /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#isInstanceof(java.lang.Object, java.lang.Class)
    */
-  public Object isInstanceof(final Object instance, final Class type) throws Throwable {
-  final Object result = getInternalMetaClass().doIsInstanceof(instance, type);
-
-    if (result == NOT_CALLED) throw new NgPrefixUnaryOperatorException("instanceof", this.getTheClass(instance).getName());
-
-    return result;
+  public boolean isInstanceof(final Object instance, final Class type) throws Throwable {
+    return NgSystem.metaClassRegistry.getThreadContext().isInstanceof(this, instance, type);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.MetaClass#isCase(java.lang.Object, java.lang.Object)
    */
-  public Object isCase(final Object instance, final Object rhs) throws Throwable {
-  final Object result = getInternalMetaClass().doIsCase(instance, rhs);
-
-    if (result == NOT_CALLED) throw new NgRuntimeException(this.getTheClass(instance).getName() + " cannot appear as a case value");
-
-    return result;
+  public boolean isCase(final Object instance, final Object rhs) throws Throwable {
+    return NgSystem.metaClassRegistry.getThreadContext().isCase(this, instance, rhs);
   }
 
   /* (non-JavaDoc)

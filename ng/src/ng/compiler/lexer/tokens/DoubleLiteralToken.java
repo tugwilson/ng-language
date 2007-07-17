@@ -23,7 +23,7 @@ package ng.compiler.lexer.tokens;
  *
  */
 public class DoubleLiteralToken extends RealLiteralToken {
-  public DoubleLiteralToken(final Double value) {
+  public DoubleLiteralToken(final double value) {
     
   }
 }

@@ -142,26 +142,6 @@ public class InternalMetaClassImpl extends BaseInternalMetaClassImpl {
     return doUnaryMinus((Object)instance);
   }
 
-  public Object doIsCase(final Object instance, final Object rhs) throws Throwable {
-  final Object result = this.instanceHandler.isCase(instance, rhs);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return this.instanceHandler.getMetaMethodQuick(NgSystem.metaClassRegistry.getThreadContext(), "isCase", rhs).callQuick(NgSystem.metaClassRegistry.getThreadContext(), instance, rhs);
-    } else {
-      return result;
-    }
-  }
-
-  public Object doIsInstanceof(final Object instance, final Class type) throws Throwable {
-  final Object result = this.instanceHandler.isInstanceof(instance, type);
-    
-    if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return this.instanceHandler.getMetaMethodQuick(NgSystem.metaClassRegistry.getThreadContext(), "isInstanceof", type).callQuick(NgSystem.metaClassRegistry.getThreadContext(), instance, type);
-    } else {
-      return result;
-    }
-  }
-
   public Object doPrefixIncrement(final Object instance) throws Throwable {
   Object result = this.instanceHandler.prefixIncrement(instance);
     
@@ -9483,7 +9463,7 @@ public class InternalMetaClassImpl extends BaseInternalMetaClassImpl {
     public boolean doEqualsBoolean(final byte lhs, final byte rhs) throws Throwable {
     final Object result = doEquals(lhs, rhs);
       
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(byte.class, "==", byte.class);
       
       return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }
@@ -9491,7 +9471,7 @@ public class InternalMetaClassImpl extends BaseInternalMetaClassImpl {
     public boolean doEqualsBoolean(final byte lhs, final char rhs) throws Throwable {
     final Object result = doEquals(lhs, rhs);
       
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(byte.class, "==", char.class);
       
       return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }
@@ -9499,7 +9479,7 @@ public class InternalMetaClassImpl extends BaseInternalMetaClassImpl {
     public boolean doEqualsBoolean(final byte lhs, final short rhs) throws Throwable {
     final Object result = doEquals(lhs, rhs);
       
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(byte.class, "==", short.class);
       
       return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }
@@ -9507,7 +9487,7 @@ public class InternalMetaClassImpl extends BaseInternalMetaClassImpl {
     public boolean doEqualsBoolean(final byte lhs, final int rhs) throws Throwable {
     final Object result = doEquals(lhs, rhs);
       
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(byte.class, "==", int.class);
       
       return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }
@@ -9515,19 +9495,23 @@ public class InternalMetaClassImpl extends BaseInternalMetaClassImpl {
     public boolean doEqualsBoolean(final byte lhs, final long rhs) throws Throwable {
     final Object result = doEquals(lhs, rhs);
       
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(byte.class, "==", long.class);
       
       return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }
 
     public boolean doEqualsBoolean(final byte lhs, final float rhs) throws Throwable {
-      return doEqualsBoolean(NgByte.valueOf(lhs), NgFloat.valueOf(rhs));
+    final Object result = doEquals(lhs, rhs);
+      
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(byte.class, "==", float.class);
+      
+      return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }
 
     public boolean doEqualsBoolean(final byte lhs, final double rhs) throws Throwable {
     final Object result = doEquals(lhs, rhs);
       
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(byte.class, "==", double.class);
       
       return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }
@@ -9535,7 +9519,7 @@ public class InternalMetaClassImpl extends BaseInternalMetaClassImpl {
     public boolean doEqualsBoolean(final byte lhs, final BigInteger rhs) throws Throwable {
     final Object result = doEquals(lhs, rhs);
       
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(byte.class, "==", BigInteger.class);
       
       return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }
@@ -9543,7 +9527,7 @@ public class InternalMetaClassImpl extends BaseInternalMetaClassImpl {
     public boolean doEqualsBoolean(final byte lhs, final BigDecimal rhs) throws Throwable {
     final Object result = doEquals(lhs, rhs);
       
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(byte.class, "==", BigDecimal.class);
       
       return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }
@@ -9603,7 +9587,7 @@ public class InternalMetaClassImpl extends BaseInternalMetaClassImpl {
     public boolean doEqualsBoolean(final char lhs, final BigInteger rhs) throws Throwable {
     final Object result = doEquals(lhs, rhs);
       
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(char.class, "==", BigInteger.class);
       
       return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }
@@ -9611,7 +9595,7 @@ public class InternalMetaClassImpl extends BaseInternalMetaClassImpl {
     public boolean doEqualsBoolean(final char lhs, final BigDecimal rhs) throws Throwable {
     final Object result = doEquals(lhs, rhs);
       
-      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(NgSystem.metaClassRegistry.getMetaClass(lhs).getTheClass(lhs), "==", float.class);
+      if (result == RuntimeMetaClassImpl.NOT_CALLED) throw new NgBinaryOperatorException(char.class, "==", BigDecimal.class);
       
       return NgSystem.metaClassRegistry.getThreadContext().asBoolean(result);
     }

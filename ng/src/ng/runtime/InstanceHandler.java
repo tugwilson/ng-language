@@ -334,14 +334,14 @@ public interface InstanceHandler {
    * @param type
    * @return
    */
-  Object isInstanceof(Object instance, Class type) throws Throwable;
+  boolean isInstanceof(ThreadContext tc, Object instance, Class type) throws Throwable;
   
   /**
    * @param instance
    * @param rhs
    * @return
    */
-  Object isCase(Object instance, Object ths) throws Throwable;
+  boolean isCase(ThreadContext tc, Object instance, Object ths) throws Throwable;
   
   /**
    * @param tc

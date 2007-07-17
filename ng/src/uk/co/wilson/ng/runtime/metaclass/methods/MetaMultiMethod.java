@@ -220,10 +220,17 @@ public class MetaMultiMethod implements MetaMethod {
     return selectMethod(p1, p2, p3, p4).callQuick(tc, instance, p1, p2, p3, p4);
   }
 
+  /**
+   * @param arguments
+   * @return
+   */
   private MetaMethod selectMethod(final Object[] arguments) {
     return null;
   }
 
+  /**
+   * @return
+   */
   private MetaMethod selectMethod() {
     if (this.methodList.size() == 1) {
       return this.methodList.get(0);
@@ -232,18 +239,120 @@ public class MetaMultiMethod implements MetaMethod {
     }
   }
 
+  /**
+   * @param p1
+   * @return
+   */
+  private MetaMethod selectMethod(final boolean p1) {
+    return null;
+  }
+
+  /**
+   * @param p1
+   * @return
+   */
+  private MetaMethod selectMethod(final char p1) {
+    return null;
+  }
+
+  /**
+   * @param p1
+   * @return
+   */
+  private MetaMethod selectMethod(final byte p1) {
+    return null;
+  }
+
+  /**
+   * @param p1
+   * @return
+   */
+  private MetaMethod selectMethod(final short p1) {
+    return null;
+  }
+
+  /**
+   * @param p1
+   * @return
+   */
+  private MetaMethod selectMethod(final int p1) {
+    return null;
+  }
+
+  /**
+   * @param p1
+   * @return
+   */
+  private MetaMethod selectMethod(final long p1) {
+    return null;
+  }
+
+  /**
+   * @param p1
+   * @return
+   */
+  private MetaMethod selectMethod(final float p1) {
+    return null;
+  }
+
+  /**
+   * @param p1
+   * @return
+   */
+  private MetaMethod selectMethod(final double p1) {
+    return null;
+  }
+
+  /**
+   * @param p1
+   * @return
+   */
+  private MetaMethod selectMethod(final BigInteger p1) {
+    return null;
+  }
+
+  /**
+   * @param p1
+   * @return
+   */
+  private MetaMethod selectMethod(final BigDecimal p1) {
+    return null;
+  }
+
+  /**
+   * @param p1
+   * @return
+   */
   private MetaMethod selectMethod(final Object p1) {
     return null;
   }
 
+  /**
+   * @param p1
+   * @param p2
+   * @return
+   */
   private MetaMethod selectMethod(final Object p1, final Object p2) {
     return null;
   }
 
+  /**
+   * @param p1
+   * @param p2
+   * @param p3
+   * @return
+   */
   private MetaMethod selectMethod(final Object p1, final Object p2, final Object p3) {
     return null;
   }
 
+  /**
+   * @param p1
+   * @param p2
+   * @param p3
+   * @param p4
+   * @return
+   */
   private MetaMethod selectMethod(final Object p1, final Object p2, final Object p3, final Object p4) {
     return null;
   }
