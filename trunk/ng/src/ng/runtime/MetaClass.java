@@ -349,14 +349,14 @@ public interface MetaClass {
    * @param type
    * @return
    */
-  Object isInstanceof(Object instance, Class type) throws Throwable;
+  boolean isInstanceof(Object instance, Class type) throws Throwable;
   
   /**
    * @param instance
    * @param rhs
    * @return
    */
-  Object isCase(Object instance, Object rhs) throws Throwable;
+  boolean isCase(Object instance, Object rhs) throws Throwable;
   
   /**
    * @param instance

@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.lang.NgRuntimeException;
+import ng.lang.NgSystem;
 import ng.runtime.*;
 import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 import uk.co.wilson.ng.runtime.metaclass.reflection.InstanceReflectionHandler;
@@ -985,6 +986,20 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    */
   public Callable doGetCallable(final Object instance) {
     return this.instanceHandler.getCallable();
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InternalMetaClass#doIsCase(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
+   */
+  public boolean doIsCase(final ThreadContext tc, final Object instance, final Object rhs) throws Throwable {
+    return this.instanceHandler.isCase(tc, instance, rhs);
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.InternalMetaClass#doIsInstanceof(ng.runtime.ThreadContext, java.lang.Object, java.lang.Class)
+   */
+  public boolean doIsInstanceof(final ThreadContext tc, final Object instance, final Class type) throws Throwable {
+    return this.instanceHandler.isInstanceof(tc, instance, type);
   }
 
   /* (non-JavaDoc)

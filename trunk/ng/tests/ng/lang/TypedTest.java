@@ -8641,22 +8641,22 @@ public class TypedTest extends TestCase {
     assertEquals(tc.getField(this.o, "test"), null);
     assertEquals(tc.setField(this.o, "test", null), null);
   
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getAt(this.o, this.o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getAt(this.o, 1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getAt(this.o, this.bi), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).putAt(this.o, this.o), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).putAt(this.o, 1), null);
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).putAt(this.o, this.bi), null);
+    assertEquals(tc.getAt(this.o, this.o), null);
+    assertEquals(tc.getAt(this.o, 1), null);
+    assertEquals(tc.getAt(this.o, this.bi), null);
+    assertEquals(tc.putAt(this.o, this.o), null);
+    assertEquals(tc.putAt(this.o, 1), null);
+    assertEquals(tc.putAt(this.o, this.bi), null);
     
     assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getInternalMetaClass().getClass(), CustomInternalMetaClass.class);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).getTheClass(this.o), Object.class);
+    assertEquals(tc.getTheClass(this.o), Object.class);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).isCase(this.o, null), null);
+    assertEquals(tc.isCase(this.o, null), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).isInstanceof(this.o, this.o.getClass()), null);
+    assertEquals(tc.isInstanceof(this.o, this.o.getClass()), null);
     
-    assertEquals(NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).asType(this.o, this.o.getClass()), null);
+    assertEquals(tc.asType(this.o, this.o.getClass()), null);
     
     NgSystem.metaClassRegistry.getRuntimeMetaClass(this.o).setInternalMetaClass(null);
   }

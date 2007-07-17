@@ -13114,7 +13114,7 @@ private final RuntimeMetaClass delegate;
    * @return
    * @see ng.runtime.MetaClass#isCase(java.lang.Object, java.lang.Object)
    */
-  public Object isCase(final Object instance, final Object rhs) throws Throwable {
+  public boolean isCase(final Object instance, final Object rhs) throws Throwable {
     return this.delegate.isCase(this.instance, rhs);
   }
 
@@ -13124,7 +13124,7 @@ private final RuntimeMetaClass delegate;
    * @return
    * @see ng.runtime.MetaClass#isInstanceof(java.lang.Object, java.lang.Class)
    */
-  public Object isInstanceof(final Object instance, final Class type) throws Throwable {
+  public boolean isInstanceof(final Object instance, final Class type) throws Throwable {
     return this.delegate.isInstanceof(this.instance, type);
   }
 

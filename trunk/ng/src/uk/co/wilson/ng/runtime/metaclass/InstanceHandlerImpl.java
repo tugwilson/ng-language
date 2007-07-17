@@ -1175,41 +1175,34 @@ public abstract class InstanceHandlerImpl implements InstanceHandler {
     }
   }
 
-  /* (non-Javadoc)
-   * @see ng.runtime.MetaClass#isCase(java.lang.Object, java.lang.Object)
+  /* (non-JavaDoc)
+   * @see ng.runtime.InstanceHandler#isCase(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object isCase(final Object instance, final Object rhs) throws Throwable {
+  public boolean isCase(final ThreadContext tc, final Object instance, final Object rhs) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doIsCase(instance, rhs);
-      
-      if (result != RuntimeMetaClassImpl.NOT_CALLED) return result;
+      if (tc.isCase(this.interfaceMetaClasses[i], instance, rhs)) return true;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.getInternalMetaClass().doIsCase(instance, rhs);
+      return tc.isCase(this.superClassMetaClass, instance, rhs);
     } else {
-      return RuntimeMetaClassImpl.NOT_CALLED;
+      return false;
     }
   }
 
-  /* (non-Javadoc)
-   * @see ng.runtime.MetaClass#isInstanceof(java.lang.Object, java.lang.Class)
-   */
-  public Object isInstanceof(final Object instance, final Class type) throws Throwable {
+  public boolean isInstanceof(final ThreadContext tc, final Object instance, final Class type) throws Throwable {
     setUpMetaClasses();
     
     for (int i = 0; i != this.interfaceMetaClasses.length; i++) {
-    final Object result = this.interfaceMetaClasses[i].getInternalMetaClass().doIsInstanceof(instance, type);
-      
-      if (result != RuntimeMetaClassImpl.NOT_CALLED) return result;
+      if (tc.isInstanceof(this.interfaceMetaClasses[i], instance, type)) return true;
     }
     
     if (this.theSuperClass != null) {
-      return this.superClassMetaClass.getInternalMetaClass().doIsInstanceof(instance, type);
+      return tc.isInstanceof(this.superClassMetaClass, instance, type);
     } else {
-      return RuntimeMetaClassImpl.NOT_CALLED;
+      return false;
     }
   }
 

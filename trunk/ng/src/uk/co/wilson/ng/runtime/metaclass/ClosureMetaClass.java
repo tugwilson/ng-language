@@ -2,7 +2,6 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import ng.runtime.Callable;
 import ng.runtime.InternalMetaClass;
-import ng.runtime.MetaClass;
 import uk.co.wilson.ng.lang.ClosureImpl;
 
 /**

@@ -1067,18 +1067,22 @@ public interface InternalMetaClass {
   Object doUnaryMinus(BigDecimal instance) throws Throwable;
 
   /**
+   * @param tc
    * @param instance
    * @param type
    * @return
+   * @throws Throwable
    */
-  Object doIsInstanceof(Object instance, Class type) throws Throwable;
+  boolean doIsInstanceof(ThreadContext tc, Object instance, Class type) throws Throwable;
 
   /**
+   * @param tc
    * @param instance
    * @param rhs
    * @return
+   * @throws Throwable
    */
-  Object doIsCase(Object instance, Object rhs) throws Throwable;
+  boolean doIsCase(ThreadContext tc, Object instance, Object rhs) throws Throwable;
 
   /**
    * @param tc

@@ -896,6 +896,38 @@ public interface ThreadContext {
    * @return
    */
   Object callQuick(MetaClass metaClass, Object instance, Object p1, Object p2, Object p3, Object p4) throws Throwable;
+
+  /**
+   * @param instance
+   * @param type
+   * @return
+   */
+  boolean isInstanceof(Object instance, Class type) throws Throwable;
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param type
+   * @return
+   * @throws Throwable
+   */
+  boolean isInstanceof(MetaClass metaClass, Object instance, Class type) throws Throwable;
+
+  /**
+   * @param instance
+   * @param rhs
+   * @return
+   */
+  boolean isCase(Object instance, Object rhs) throws Throwable;
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param rhs
+   * @return
+   * @throws Throwable
+   */
+  boolean isCase(MetaClass metaClass, Object instance, Object rhs) throws Throwable;
   
   /**
    * @param instance

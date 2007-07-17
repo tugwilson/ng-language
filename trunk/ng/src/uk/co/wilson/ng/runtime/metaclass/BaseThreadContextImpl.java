@@ -1495,6 +1495,56 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   /* (non-JavaDoc)
+   * @see ng.runtime.ThreadContext#isCase(java.lang.Object, java.lang.Object)
+   */
+  public boolean isCase(final Object instance, final Object rhs) throws Throwable {
+    return isCase(getInternalMetaClassFor(instance), instance, rhs);
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.ThreadContext#isCase(ng.runtime.MetaClass, java.lang.Object, java.lang.Object)
+   */
+  public boolean isCase(final MetaClass metaClass, Object instance, final Object rhs) throws Throwable {
+    return isCase(getInternalMetaClassFor(metaClass), instance, rhs);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param rhs
+   * @return
+   * @throws Throwable
+   */
+  protected boolean isCase(final InternalMetaClass metaClass, final Object instance, final Object rhs) throws Throwable {
+    return metaClass.doIsCase(this, instance, rhs);
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.ThreadContext#isInstanceof(java.lang.Object, java.lang.Class)
+   */
+  public boolean isInstanceof(Object instance, Class type) throws Throwable {
+    return isInstanceof(getInternalMetaClassFor(instance), instance, type);
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.ThreadContext#isInstanceof(ng.runtime.MetaClass, java.lang.Object, java.lang.Class)
+   */
+  public boolean isInstanceof(MetaClass metaClass, Object instance, Class type) throws Throwable {
+    return isInstanceof(getInternalMetaClassFor(instance), instance, type);
+  }
+
+  /**
+   * @param metaClass
+   * @param instance
+   * @param type
+   * @return
+   * @throws Throwable
+   */
+  protected boolean isInstanceof(InternalMetaClass metaClass, Object instance, Class type) throws Throwable {
+    return metaClass.doIsInstanceof(this, instance, type);
+  }
+
+  /* (non-JavaDoc)
    * @see ng.runtime.ThreadContext#asType(java.lang.Object, java.lang.Class)
    */
   public Object asType(Object instance, Class type) throws Throwable {

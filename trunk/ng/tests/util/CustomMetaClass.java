@@ -24504,17 +24504,17 @@ class CustomMetaClass implements RuntimeMetaClass {
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#isCase(java.lang.Object, java.lang.Object)
    */
-  public Object isCase(final Object instance, final Object rhs) {
+  public boolean isCase(final Object instance, final Object rhs) {
     // TODO Auto-generated method stub
-    return null;
+    return false;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaClass#isInstanceof(java.lang.Object, java.lang.Class)
    */
-  public Object isInstanceof(final Object instance, final Class type) {
+  public boolean isInstanceof(final Object instance, final Class type) {
     // TODO Auto-generated method stub
-    return null;
+    return false;
   }
 
   /* (non-Javadoc)
