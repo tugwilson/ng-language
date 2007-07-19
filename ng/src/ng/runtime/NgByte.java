@@ -18,10 +18,16 @@
  */
 package ng.runtime;
 
+import ng.lang.NgObject;
 import ng.lang.NgSystem;
 
-public class NgByte extends NgBaseObject {
-  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngByteMetaClass;
+public class NgByte implements NgObject {
+  /**
+   * @return
+   */
+  public static RuntimeMetaClass get$MetaClass() {
+    return NgSystem.ngByteMetaClass;
+  }
   
   public static NgByte valueOf(final byte value) {
     return new NgByte(value);
@@ -30,8 +36,14 @@ public class NgByte extends NgBaseObject {
   private final byte value;
 
   private NgByte(final byte value) {
-    super(ngMetaClass);
     this.value = value;
+  }
+  
+  /* (non-JavaDoc)
+   * @see ng.lang.NgObject#getMetaClass()
+   */
+  public RuntimeMetaClass getMetaClass() {
+    return get$MetaClass();
   }
 
   public byte getByteValue() {

@@ -18,12 +18,22 @@
  */
 package ng.runtime;
 
+import ng.lang.NgObject;
 import ng.lang.NgSystem;
 
 
-public class NgShort extends NgBaseObject {
-  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngShortMetaClass;
+public class NgShort implements NgObject {
+  /**
+   * @return
+   */
+  public static RuntimeMetaClass get$MetaClass() {
+    return NgSystem.ngShortMetaClass;
+  }
   
+  /**
+   * @param value
+   * @return
+   */
   public static NgShort valueOf(final short value) {
     return new NgShort(value);
   }
@@ -31,10 +41,19 @@ public class NgShort extends NgBaseObject {
   private final short value;
 
   private NgShort(final short value) {
-    super(ngMetaClass);
     this.value = value;
   }
+  
+  /* (non-JavaDoc)
+   * @see ng.lang.NgObject#getMetaClass()
+   */
+  public RuntimeMetaClass getMetaClass() {
+    return get$MetaClass();
+  }
 
+  /**
+   * @return
+   */
   public short getShortValue() {
     return this.value;
   }
