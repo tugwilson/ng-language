@@ -8,6 +8,13 @@ import ng.runtime.RuntimeMetaClass;
  *
  */
 public abstract class Closure implements NgObject, Callable {
+  /**
+   * @return
+   */
+  public static RuntimeMetaClass get$MetaClass() {
+    return NgSystem.closureMetaClass;
+  }
+  
   /* (non-JavaDoc)
    * @see ng.lang.NgObject#getMetaClass()
    */
