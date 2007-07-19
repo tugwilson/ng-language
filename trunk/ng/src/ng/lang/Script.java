@@ -8,6 +8,13 @@ import ng.runtime.RuntimeMetaClass;
  *
  */
 public abstract class Script extends Closure {
+  /**
+   * @return
+   */
+  public static RuntimeMetaClass get$MetaClass() {
+    return NgSystem.scriptMetaClass;
+  }
+  
 
   /* (non-JavaDoc)
    * @see ng.lang.Closure#getMetaClass()
