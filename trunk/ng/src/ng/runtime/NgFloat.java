@@ -18,12 +18,22 @@
  */
 package ng.runtime;
 
+import ng.lang.NgObject;
 import ng.lang.NgSystem;
 
 
-public class NgFloat extends NgBaseObject {
-  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngFloatMetaClass;
+public class NgFloat implements NgObject {
+  /**
+   * @return
+   */
+  public static RuntimeMetaClass get$MetaClass() {
+    return NgSystem.ngFloatMetaClass;
+  }
   
+  /**
+   * @param value
+   * @return
+   */
   public static NgFloat valueOf(final float value) {
     return new NgFloat(value);
   }
@@ -31,10 +41,19 @@ public class NgFloat extends NgBaseObject {
   private final float value;
 
   private NgFloat(final float value) {
-    super(ngMetaClass);
     this.value = value;
   }
+  
+  /* (non-JavaDoc)
+   * @see ng.lang.NgObject#getMetaClass()
+   */
+  public RuntimeMetaClass getMetaClass() {
+    return get$MetaClass();
+  }
 
+  /**
+   * @return
+   */
   public float getFloatValue() {
     return this.value;
   }

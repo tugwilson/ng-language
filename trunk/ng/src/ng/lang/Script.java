@@ -21,7 +21,7 @@ public abstract class Script extends Closure {
    */
   @Override
   public RuntimeMetaClass getMetaClass() {
-    return NgSystem.scriptMetaClass;
+    return get$MetaClass();
   }
   
   /**

@@ -18,12 +18,22 @@
  */
 package ng.runtime;
 
+import ng.lang.NgObject;
 import ng.lang.NgSystem;
 
 
-public class NgChar extends NgBaseObject {
-  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngCharMetaClass;
+public class NgChar implements NgObject {
+  /**
+   * @return
+   */
+  public static RuntimeMetaClass get$MetaClass() {
+    return NgSystem.ngCharMetaClass;
+  }
   
+  /**
+   * @param value
+   * @return
+   */
   public static NgChar valueOf(final char value) {
     return new NgChar(value);
   }
@@ -31,10 +41,19 @@ public class NgChar extends NgBaseObject {
   private final char value;
 
   private NgChar(final char value) {
-    super(ngMetaClass);
     this.value = value;
   }
+  
+  /* (non-JavaDoc)
+   * @see ng.lang.NgObject#getMetaClass()
+   */
+  public RuntimeMetaClass getMetaClass() {
+    return get$MetaClass();
+  }
 
+  /**
+   * @return
+   */
   public char getCharValue() {
     return this.value;
   }

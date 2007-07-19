@@ -18,14 +18,25 @@
  */
 package ng.runtime;
 
+import ng.lang.NgObject;
 import ng.lang.NgSystem;
 
 
-public class NgBoolean extends NgBaseObject {
-  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngBooleanMetaClass;
+public class NgBoolean implements NgObject {
   public static final NgBoolean TRUE = new NgBoolean(true);
   public static final NgBoolean FALSE = new NgBoolean(false);
   
+  /**
+   * @return
+   */
+  public static RuntimeMetaClass get$MetaClass() {
+    return NgSystem.ngBooleanMetaClass;
+  }
+  
+  /**
+   * @param value
+   * @return
+   */
   public static NgBoolean valueOf(final boolean value) {
     return (value) ? TRUE : FALSE;
   }
@@ -33,10 +44,19 @@ public class NgBoolean extends NgBaseObject {
   private final boolean value;
 
   private NgBoolean(final boolean value) {
-    super(ngMetaClass);
     this.value = value;
   }
+  
+  /* (non-JavaDoc)
+   * @see ng.lang.NgObject#getMetaClass()
+   */
+  public RuntimeMetaClass getMetaClass() {
+    return get$MetaClass();
+  }
 
+  /**
+   * @return
+   */
   public boolean getBooleanValue() {
     return this.value;
   }

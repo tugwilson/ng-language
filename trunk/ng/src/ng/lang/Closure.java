@@ -19,6 +19,6 @@ public abstract class Closure implements NgObject, Callable {
    * @see ng.lang.NgObject#getMetaClass()
    */
   public RuntimeMetaClass getMetaClass() {
-    return NgSystem.closureMetaClass;
+    return get$MetaClass();
   }
 }

@@ -18,12 +18,22 @@
  */
 package ng.runtime;
 
+import ng.lang.NgObject;
 import ng.lang.NgSystem;
 
 
-public class NgDouble extends NgBaseObject {
-  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngDoubleMetaClass;
+public class NgDouble implements NgObject {
+  /**
+   * @return
+   */
+  public static RuntimeMetaClass get$MetaClass() {
+    return NgSystem.ngDoubleMetaClass;
+  }
   
+  /**
+   * @param value
+   * @return
+   */
   public static NgDouble valueOf(final double value) {
     return new NgDouble(value);
   }
@@ -31,10 +41,19 @@ public class NgDouble extends NgBaseObject {
   private final double value;
 
   private NgDouble(final double value) {
-    super(ngMetaClass);
     this.value = value;
   }
+  
+  /* (non-JavaDoc)
+   * @see ng.lang.NgObject#getMetaClass()
+   */
+  public RuntimeMetaClass getMetaClass() {
+    return get$MetaClass();
+  }
 
+  /**
+   * @return
+   */
   public double getDoubleValue() {
     return this.value;
   }

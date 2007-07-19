@@ -18,12 +18,22 @@
  */
 package ng.runtime;
 
+import ng.lang.NgObject;
 import ng.lang.NgSystem;
 
 
-public class NgLong extends NgBaseObject {
-  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngLongMetaClass;
+public class NgLong implements NgObject {
+  /**
+   * @return
+   */
+  public static RuntimeMetaClass get$MetaClass() {
+    return NgSystem.ngLongMetaClass;
+  }
   
+  /**
+   * @param value
+   * @return
+   */
   public static NgLong valueOf(final long value) {
     return new NgLong(value);
   }
@@ -31,10 +41,19 @@ public class NgLong extends NgBaseObject {
   private final long value;
 
   private NgLong(final long value) {
-    super(ngMetaClass);
     this.value = value;
   }
+  
+  /* (non-JavaDoc)
+   * @see ng.lang.NgObject#getMetaClass()
+   */
+  public RuntimeMetaClass getMetaClass() {
+    return get$MetaClass();
+  }
 
+  /**
+   * @return
+   */
   public long getLongValue() {
     return this.value;
   }

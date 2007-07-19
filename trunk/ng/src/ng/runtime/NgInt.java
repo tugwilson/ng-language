@@ -18,16 +18,27 @@
  */
 package ng.runtime;
 
+import ng.lang.NgObject;
 import ng.lang.NgSystem;
 
 
-public class NgInt extends NgBaseObject {
-  public static final RuntimeMetaClass ngMetaClass = NgSystem.ngIntMetaClass;
+public class NgInt implements NgObject {
   public static final NgInt MINUS_ONE = new NgInt(-1);
   public static final NgInt ZERO = new NgInt(0);
   public static final NgInt ONE = new NgInt(1);
   private static final NgInt preAllocatedValues[] = new NgInt[]{MINUS_ONE, ZERO, ONE};
   
+  /**
+   * @return
+   */
+  public static RuntimeMetaClass get$MetaClass() {
+    return NgSystem.ngIntMetaClass;
+  }
+  
+  /**
+   * @param value
+   * @return
+   */
   public static NgInt valueOf(final int value) {
     if (value < -1 || value > 1) return new NgInt(value);
     return preAllocatedValues[value + 1];
@@ -36,10 +47,19 @@ public class NgInt extends NgBaseObject {
   private final int value;
 
   private NgInt(final int value) {
-    super(ngMetaClass);
     this.value = value;
   }
+  
+  /* (non-JavaDoc)
+   * @see ng.lang.NgObject#getMetaClass()
+   */
+  public RuntimeMetaClass getMetaClass() {
+    return get$MetaClass();
+  }
 
+  /**
+   * @return
+   */
   public int getIntValue() {
     return this.value;
   }
