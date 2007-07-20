@@ -2,19 +2,25 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-
-import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
 
 import ng.lang.NgRuntimeException;
 import ng.lang.NgSystem;
 import ng.runtime.*;
+import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
 /**
  * @author John
  *
  */
 public abstract class BaseThreadContextImpl implements ThreadContext {
-  protected boolean hasThreadLocalBehaviour = false;
+  protected int numberOfCategoriesInForce = 0;
+  protected Map<MetaClass, InternalMetaClass> categoryMetaClassMap = null;
+  protected Stack<Map<MetaClass, InternalMetaClass>> categoryMetaClassMapStack = new Stack<Map<MetaClass, InternalMetaClass>>();
+
   /**
    * @param instance
    * @return
@@ -36,12 +42,13 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
    * @return
    */
   protected InternalMetaClass getInternalMetaClassFor(final MetaClass metaClass) {
-    if (hasThreadLocalBehaviour) {
-      // TODO: implement categories
-      return null;
-    } else {
-      return metaClass.getInternalMetaClass();
+    if (this.numberOfCategoriesInForce != 0) {
+    final InternalMetaClass result = this.categoryMetaClassMap.get(metaClass);
+    
+      if (result != null) return result;
     }
+
+    return metaClass.getInternalMetaClass();
   }
 
   /* (non-JavaDoc)
@@ -60,6 +67,38 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
 
   protected Class getTheClass(final InternalMetaClass metaClass, final Object instance) {
     return metaClass.doGetTheClass(instance);
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.ThreadContext#setCategory(java.lang.Class)
+   */
+  public void setCategory(Class category) {
+    this.categoryMetaClassMapStack.push(this.categoryMetaClassMap);
+    this.categoryMetaClassMap = new HashMap<MetaClass, InternalMetaClass>();
+    this.numberOfCategoriesInForce++;
+    
+    // TODO: populate the Map
+    
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.ThreadContext#setCategories(java.util.List)
+   */
+  public void setCategory(List<Class> categories) {
+    this.categoryMetaClassMapStack.push(this.categoryMetaClassMap);
+    this.categoryMetaClassMap = new HashMap<MetaClass, InternalMetaClass>();
+    this.numberOfCategoriesInForce++;
+    
+    // TODO: populate the Map
+    
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.ThreadContext#removeLastCategory()
+   */
+  public void removeLastCategory() {
+    this.categoryMetaClassMap = this.categoryMetaClassMapStack.pop();
+    this.numberOfCategoriesInForce--;
   }
 
   /* (non-JavaDoc)

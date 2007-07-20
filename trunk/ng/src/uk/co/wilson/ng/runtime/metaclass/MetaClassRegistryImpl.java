@@ -20,7 +20,8 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -70,7 +71,7 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
     @Override
     protected Object initialValue() {
       return new ThreadContextImpl() {
-        private static final int ngMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC | Modifier.FINAL;
+        private static final int getMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC;
         private final Map threadRegistry = new WeakHashMap() {
           /* (non-Javadoc)
            * @see java.util.WeakHashMap#get(java.lang.Object)
@@ -105,28 +106,29 @@ public class MetaClassRegistryImpl implements MetaClassRegistry {
 
           if (metaClass == null) {        
             //
-            // If the class has a static ngMetaClass then use this value as the MetaClass
+            // If the class has a static method get$MetaClass then use this to get the MetaClass
             // The reflection is an expensive operation so put the MetaClass in the thread local cache
             // to speed up subsequent fetches
             //
             try {
-            final Field ngMetaClass = theClass.getField("ngMetaClass");
+            final Method getMetaClass = theClass.getMethod("get$MetaClass", null);
               
               try {
-                ngMetaClass.setAccessible(true);
+                getMetaClass.setAccessible(true);
               } catch (final SecurityException e) {
               }
             
-              if (ngMetaClass.getDeclaringClass() == theClass &&
-                  (ngMetaClass.getModifiers() & ngMetaClassModifiers) == ngMetaClassModifiers &&
-                  ngMetaClass.getType() == RuntimeMetaClass.class) {
+              if (getMetaClass.getDeclaringClass() == theClass &&
+                  (getMetaClass.getModifiers() & getMetaClassModifiers) == getMetaClassModifiers &&
+                  getMetaClass.getReturnType() == RuntimeMetaClass.class) {
                 
-                metaClass = (RuntimeMetaClass)ngMetaClass.get(null);              
+                metaClass = (RuntimeMetaClass)getMetaClass.invoke(null, null);              
               }
             } catch (final SecurityException e) {
             } catch (final IllegalArgumentException e) {
-            } catch (final NoSuchFieldException e) {
             } catch (final IllegalAccessException e) {
+            } catch (InvocationTargetException e) {
+            } catch (NoSuchMethodException e) {
             }
             
             if (metaClass == null) {
