@@ -39,11 +39,15 @@ public class FibNg extends NgBaseObject {
     // main is not translated
     //
     public static void main(final String args[]) throws Throwable {
+    final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
+    
+      $tc.setCategory(Object.class);
       new FibNg(10).calculate(); // warm up the JVM
       final long start = System.currentTimeMillis();
       final int result = new FibNg(35).calculate();
       System.out.println(System.currentTimeMillis() - start);
       System.out.println(result);
+      $tc.removeLastCategory();
     }
 
     //

@@ -16926,7 +16926,9 @@ public class LogicalTest extends TestCase {
 }
 
 class ObjectWhichDoesNotDoEquals {
-  public static final RuntimeMetaClass ngMetaClass = new ObjectWhichDoesNotDoEqualsMetaClass();
+  public static RuntimeMetaClass get$MetaClass() {
+    return new ObjectWhichDoesNotDoEqualsMetaClass();
+  }
 }
 
 class ObjectWhichDoesNotDoEqualsMetaClass extends RuntimeMetaClassImpl {

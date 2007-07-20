@@ -2,6 +2,7 @@ package ng.runtime;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.List;
 
 import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
 
@@ -10,6 +11,21 @@ import uk.co.wilson.ng.runtime.metaclass.methods.MetaMethodSelection;
  *
  */
 public interface ThreadContext {
+  /**
+   * @param category
+   */
+  void setCategory(Class category);
+  
+  /**
+   * @param categories
+   */
+  void setCategory(List<Class> categories);
+  
+  /**
+   * 
+   */
+  void removeLastCategory();
+  
   /**
    * @param instance 
    * @return The class which is represented by this MetaClass
