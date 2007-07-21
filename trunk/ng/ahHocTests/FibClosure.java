@@ -1,7 +1,9 @@
 import ng.lang.Closure;
+import ng.lang.NgObject;
 import ng.lang.NgSystem;
 import ng.runtime.NgBaseObject;
 import ng.runtime.NgInt;
+import ng.runtime.RuntimeMetaClass;
 import ng.runtime.ThreadContext;
 import uk.co.wilson.ng.lang.ClosureImpl;
 
@@ -28,8 +30,13 @@ import uk.co.wilson.ng.lang.ClosureImpl;
  * @author John
  *
  */
-public class FibClosure extends NgBaseObject {
+public class FibClosure implements NgObject {
+  private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getThreadContext().createMetaClassFor(NgSystem.metaClassRegistry.getRuntimeMetaClass(Object.class), FibClosure.class);
   int series;
+
+  public static RuntimeMetaClass get$MetaClass() {
+    return ngMetaClass;
+  }
     
     //
     // main is not translated
@@ -49,8 +56,16 @@ public class FibClosure extends NgBaseObject {
     //
     // the rest of the class approximates to what the Ng compiler will generate
     //
+
+    /* (non-JavaDoc)
+     * @see ng.lang.NgObject#getMetaClass()
+     */
+    public RuntimeMetaClass getMetaClass() {
+      return get$MetaClass();
+    }
+
     FibClosure(final int x) throws Throwable {
-      this.metaClass.setField(this, "series", NgInt.valueOf(x));
+      NgSystem.metaClassRegistry.getThreadContext().setField(getMetaClass(), this, "series", NgInt.valueOf(x));
      }
     
      int calculate() throws Throwable {
@@ -86,6 +101,6 @@ public class FibClosure extends NgBaseObject {
         }
        };
        
-       return $tc.asInt($tc.callQuick(NgSystem.closureMetaClass, c, this.metaClass.getField(this, "series")));
+       return $tc.asInt($tc.callQuick(NgSystem.closureMetaClass, c, $tc.getField(getMetaClass(), this, "series")));
      }
 }

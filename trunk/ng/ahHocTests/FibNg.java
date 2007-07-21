@@ -1,5 +1,5 @@
+import ng.lang.NgObject;
 import ng.lang.NgSystem;
-import ng.runtime.NgBaseObject;
 import ng.runtime.NgInt;
 import ng.runtime.RuntimeMetaClass;
 import ng.runtime.ThreadContext;
@@ -27,12 +27,12 @@ import ng.runtime.ThreadContext;
  * @author John
  *
  */
-public class FibNg extends NgBaseObject {
-  private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getThreadContext().createMetaClassFor(NgSystem.metaClassRegistry.getRuntimeMetaClass(NgBaseObject.class), FibNg.class);
+public class FibNg implements NgObject {
+  private final static RuntimeMetaClass ngMetaClass = NgSystem.metaClassRegistry.getThreadContext().createMetaClassFor(NgSystem.metaClassRegistry.getRuntimeMetaClass(Object.class), FibNg.class);
   int series;
-  
-    public FibNg() {
-      super(ngMetaClass);
+
+    public static RuntimeMetaClass get$MetaClass() {
+      return ngMetaClass;
     }
     
     //
@@ -53,15 +53,22 @@ public class FibNg extends NgBaseObject {
     //
     // the rest of the class approximates to what the Ng compiler will generate
     //
+
+    /* (non-JavaDoc)
+     * @see ng.lang.NgObject#getMetaClass()
+     */
+    public RuntimeMetaClass getMetaClass() {
+      return get$MetaClass();
+    }
+    
     FibNg(final int x) throws Throwable {
-      super(ngMetaClass);
-      this.metaClass.setField(this, "series", NgInt.valueOf(x));
+      NgSystem.metaClassRegistry.getThreadContext().setField(getMetaClass(), this, "series", NgInt.valueOf(x));
      }
     
      int calculate() throws Throwable {
      final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
 
-         return $tc.asInt($tc.invokeMethodQuick(this.metaClass, this, "fib", this.metaClass.getField(this, "series")));
+         return $tc.asInt($tc.invokeMethodQuick(getMetaClass(), this, "fib", $tc.getField(getMetaClass(), this, "series")));
      }
     
      Object fib(final int x) throws Throwable {
@@ -78,7 +85,7 @@ public class FibNg extends NgBaseObject {
          }
     
          // return (fib(x-1) + fib(x-2));
-         final Object $tmp = $tc.invokeMethodQuick(this.metaClass, this, "fib", NgSystem.ngIntMetaClass.subtract(x, 1));
-         return NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, $tc.invokeMethodQuick(this.metaClass, this, "fib", NgSystem.ngIntMetaClass.subtract(x, 2)));
+         final Object $tmp = $tc.invokeMethodQuick(getMetaClass(), this, "fib", NgSystem.ngIntMetaClass.subtract(x, 1));
+         return NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, $tc.invokeMethodQuick(getMetaClass(), this, "fib", NgSystem.ngIntMetaClass.subtract(x, 2)));
      }
 }
