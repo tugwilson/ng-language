@@ -1,7 +1,6 @@
 import ng.lang.Closure;
 import ng.lang.NgObject;
 import ng.lang.NgSystem;
-import ng.runtime.NgBaseObject;
 import ng.runtime.NgInt;
 import ng.runtime.RuntimeMetaClass;
 import ng.runtime.ThreadContext;
