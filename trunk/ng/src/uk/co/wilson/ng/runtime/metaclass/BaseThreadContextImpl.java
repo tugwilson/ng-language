@@ -3,6 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Stack;
@@ -70,27 +71,38 @@ public abstract class BaseThreadContextImpl implements ThreadContext {
   }
 
   /* (non-JavaDoc)
-   * @see ng.runtime.ThreadContext#setCategory(java.lang.Class)
+   * @see ng.runtime.ThreadContext#setCategory(ng.runtime.Category)
    */
-  public void setCategory(Class category) {
-    this.categoryMetaClassMapStack.push(this.categoryMetaClassMap);
-    this.categoryMetaClassMap = new HashMap<MetaClass, InternalMetaClass>();
-    this.numberOfCategoriesInForce++;
+  public void setCategory(final Category category) {
+    saveCategoryMetaClassMap();
     
-    // TODO: populate the Map
-    
+    category.addCategory(this.categoryMetaClassMap);   
   }
 
   /* (non-JavaDoc)
-   * @see ng.runtime.ThreadContext#setCategories(java.util.List)
+   * @see ng.runtime.ThreadContext#setCategory(java.util.List)
    */
-  public void setCategory(List<Class> categories) {
+  public void setCategory(final List<Category> categories) {
+    saveCategoryMetaClassMap();
+    
+    for (final Iterator<Category> iterator = categories.iterator(); iterator.hasNext();) {
+      iterator.next().addCategory(this.categoryMetaClassMap);
+    }
+  }
+  
+  /**
+   * 
+   */
+  private void saveCategoryMetaClassMap() {
     this.categoryMetaClassMapStack.push(this.categoryMetaClassMap);
-    this.categoryMetaClassMap = new HashMap<MetaClass, InternalMetaClass>();
+    
+    if (this.categoryMetaClassMap == null) {
+      this.categoryMetaClassMap = new HashMap<MetaClass, InternalMetaClass>();
+    } else {
+      this.categoryMetaClassMap = new HashMap<MetaClass, InternalMetaClass>(this.categoryMetaClassMap);
+    }
+    
     this.numberOfCategoriesInForce++;
-    
-    // TODO: populate the Map
-    
   }
 
   /* (non-JavaDoc)

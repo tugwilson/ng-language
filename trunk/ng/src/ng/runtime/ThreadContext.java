@@ -14,12 +14,12 @@ public interface ThreadContext {
   /**
    * @param category
    */
-  void setCategory(Class category);
+  void setCategory(Category category);
   
   /**
    * @param categories
    */
-  void setCategory(List<Class> categories);
+  void setCategory(List<Category> categories);
   
   /**
    * 
