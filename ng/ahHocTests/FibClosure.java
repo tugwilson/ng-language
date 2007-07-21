@@ -5,6 +5,7 @@ import ng.runtime.NgInt;
 import ng.runtime.RuntimeMetaClass;
 import ng.runtime.ThreadContext;
 import uk.co.wilson.ng.lang.ClosureImpl;
+import util.DummyCategory;
 
 /*
  * Created on 18 Jun 2007
@@ -43,7 +44,7 @@ public class FibClosure implements NgObject {
     public static void main(final String args[]) throws Throwable {
     final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
       
-      $tc.setCategory(Object.class);
+      $tc.setCategory(new DummyCategory());
       new FibClosure(10).calculate(); // warm up the JVM
       final long start = System.currentTimeMillis();
       final int result = new FibClosure(35).calculate();

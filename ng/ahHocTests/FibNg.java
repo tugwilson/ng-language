@@ -1,3 +1,4 @@
+import util.DummyCategory;
 import ng.lang.NgObject;
 import ng.lang.NgSystem;
 import ng.runtime.NgInt;
@@ -41,7 +42,7 @@ public class FibNg implements NgObject {
     public static void main(final String args[]) throws Throwable {
     final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
     
-      $tc.setCategory(Object.class);
+      $tc.setCategory(new DummyCategory());
       new FibNg(10).calculate(); // warm up the JVM
       final long start = System.currentTimeMillis();
       final int result = new FibNg(35).calculate();
