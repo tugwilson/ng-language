@@ -926,7 +926,7 @@ public interface InstanceHandler {
     /* (non-Javadoc)
      * @see ng.runtime.Callable#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])
      */
-    public Object call(ThreadContext tc, Object instance, Object[] arguments) throws Throwable {
+    public Object doCall(ThreadContext tc, Object instance, Object[] arguments) throws Throwable {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
 
@@ -947,7 +947,7 @@ public interface InstanceHandler {
     /* (non-Javadoc)
      * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, boolean)
      */
-    public Object callQuick(ThreadContext tc, Object instance, boolean p1) throws Throwable {
+    public Object doCallQuick(ThreadContext tc, Object instance, boolean p1) throws Throwable {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
 
@@ -982,7 +982,7 @@ public interface InstanceHandler {
     /* (non-Javadoc)
      * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, int)
      */
-    public Object callQuick(ThreadContext tc, Object instance, int p1) throws Throwable {
+    public Object doCallQuick(ThreadContext tc, Object instance, int p1) throws Throwable {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
 
@@ -1017,7 +1017,7 @@ public interface InstanceHandler {
     /* (non-Javadoc)
      * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
      */
-    public Object callQuick(ThreadContext tc, Object instance, Object p1) throws Throwable {
+    public Object doCallQuick(ThreadContext tc, Object instance, Object p1) throws Throwable {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
 
@@ -1031,7 +1031,7 @@ public interface InstanceHandler {
     /* (non-Javadoc)
      * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object)
      */
-    public Object callQuick(ThreadContext tc, Object instance) throws Throwable {
+    public Object doCallQuick(ThreadContext tc, Object instance) throws Throwable {
       return RuntimeMetaClassImpl.NOT_CALLED;
     }
 

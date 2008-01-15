@@ -23,7 +23,7 @@ public class SetIntFieldMetaMethod extends SetUntypedFieldMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetUntypedFieldMetaMethod#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object callQuick(final ThreadContext tc, final Object instance, final Object value) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final Object value) {
     try {
       this.field.setInt(instance, ((NgInt)value).getIntValue());
     } catch (final IllegalArgumentException e) {

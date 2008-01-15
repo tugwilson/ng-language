@@ -23,14 +23,14 @@ public class GetUntypedFieldMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])
    */
-  public Object call(final ThreadContext tc, final Object instance, final Object[] arguments) {
+  public Object doCall(final ThreadContext tc, final Object instance, final Object[] arguments) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance) {
     try {
       return this.field.get(instance);
     } catch (final IllegalArgumentException e) {
@@ -43,14 +43,14 @@ public class GetUntypedFieldMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final Object p1) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final Object p1) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, boolean)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final boolean p1) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final boolean p1) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 
@@ -78,7 +78,7 @@ public class GetUntypedFieldMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, int)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final int p1) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final int p1) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 

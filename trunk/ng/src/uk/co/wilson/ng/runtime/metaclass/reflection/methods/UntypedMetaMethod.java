@@ -26,7 +26,7 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])
    */
-  public Object call(final ThreadContext tc, final Object instance, final Object[] arguments) throws Throwable {
+  public Object doCall(final ThreadContext tc, final Object instance, final Object[] arguments) throws Throwable {
     if (this.numberOfParameters != arguments.length) return RuntimeMetaClassImpl.NOT_CALLED;
     
     final Object[] actualParams = new Object[arguments.length];
@@ -51,7 +51,7 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance) throws Throwable {
+  public Object doCallQuick(final ThreadContext tc, final Object instance) throws Throwable {
     if (this.numberOfParameters != 0) return RuntimeMetaClassImpl.NOT_CALLED;
     
     try {
@@ -68,7 +68,7 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final Object p1) throws Throwable {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final Object p1) throws Throwable {
     if (this.numberOfParameters != 1) return RuntimeMetaClassImpl.NOT_CALLED;
     
     try {
@@ -85,7 +85,7 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, boolean)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final boolean p1) throws Throwable {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final boolean p1) throws Throwable {
     if (this.numberOfParameters != 1) return RuntimeMetaClassImpl.NOT_CALLED;
     
     try {
@@ -153,7 +153,7 @@ public class UntypedMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, int)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final int p1) throws Throwable {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final int p1) throws Throwable {
     if (this.numberOfParameters != 1) return RuntimeMetaClassImpl.NOT_CALLED;
     
     try {

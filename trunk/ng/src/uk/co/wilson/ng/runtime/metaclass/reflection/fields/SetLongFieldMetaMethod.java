@@ -23,7 +23,7 @@ public class SetLongFieldMetaMethod extends SetUntypedFieldMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetUntypedFieldMetaMethod#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object callQuick(final ThreadContext tc, final Object instance, final Object value) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final Object value) {
     try {
       this.field.setLong(instance, ((NgLong)value).getLongValue());
     } catch (final IllegalArgumentException e) {

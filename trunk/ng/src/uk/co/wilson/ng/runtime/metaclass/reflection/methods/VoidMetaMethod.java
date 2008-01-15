@@ -51,8 +51,8 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object callQuick(final ThreadContext tc, final Object instance, final Object p1) throws Throwable {
-    super.callQuick(tc, instance, p1);
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final Object p1) throws Throwable {
+    super.doCallQuick(tc, instance, p1);
     
     return instance;
   }
@@ -61,8 +61,8 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])
    */
   @Override
-  public Object call(final ThreadContext tc, final Object instance, final Object[] arguments) throws Throwable {
-    super.call(tc, instance, arguments);
+  public Object doCall(final ThreadContext tc, final Object instance, final Object[] arguments) throws Throwable {
+    super.doCall(tc, instance, arguments);
     
     return instance;
   }
@@ -71,8 +71,8 @@ public class VoidMetaMethod extends UntypedMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.methods.UntypedMetaMethod#callQuick(ng.runtime.ThreadContext, java.lang.Object)
    */
   @Override
-  public Object callQuick(final ThreadContext tc, final Object instance) throws Throwable {
-    return super.callQuick(tc, instance);
+  public Object doCallQuick(final ThreadContext tc, final Object instance) throws Throwable {
+    return super.doCallQuick(tc, instance);
   }
 
 }

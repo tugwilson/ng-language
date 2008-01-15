@@ -40,27 +40,21 @@ import ng.runtime.ThreadContext;
 import uk.co.wilson.ng.lang.ClosureImpl;
 
 public class MetaClassRegistryImpl implements MetaClassRegistry {
-  private final Map registry = new HashMap() {
+  private final Map registry = new HashMap<Class, MetaClass>() {
     private static final long serialVersionUID = 1L;
 
-    /* (non-Javadoc)
-     * @see java.util.HashMap#get(java.lang.Object)
-     */
     @Override
-    public Object get(final Object key) {
+    public MetaClass get(final Object key) {
     final Object result = super.get(key);
     
       if (result == null) return null;
       
-      return ((SoftReference)result).get();
+      return ((SoftReference<MetaClass>)result).get();
     }
     
-    /* (non-Javadoc)
-     * @see java.util.HashMap#put(java.lang.Object, java.lang.Object)
-     */
     @Override
-    public Object put(final Object key, final Object value) {
-      return super.put(key, new SoftReference(value));
+    public MetaClass put(final Class key, final MetaClass value) {
+      return super.put(key, new SoftReference<MetaClass>(value));
     }
   };
   
