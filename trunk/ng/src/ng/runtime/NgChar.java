@@ -1,59 +1,32 @@
-/*
- * Created on Feb 25, 2007
- *
- * Copyright 2007 John G. Wilson
- *
- *   Licensed under the Apache License, Version 2.0 (the "License");
- *   you may not use this file except in compliance with the License.
- *   You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *   Unless required by applicable law or agreed to in writing, software
- *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- *
- */
 package ng.runtime;
 
 import ng.lang.NgObject;
-import ng.lang.NgSystem;
+import ng.runtime.metaclass.MetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.CharMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClassImpl;
 
+public class NgChar extends NgObject {
+  private static final CharMetaClass metaclass = new CharMetaClassImpl();
 
-public class NgChar implements NgObject {
-  /**
-   * @return
-   */
-  public static RuntimeMetaClass get$MetaClass() {
-    return NgSystem.ngCharMetaClass;
+  public static CharMetaClass get$MetaClass() {
+    return metaclass;
   }
-  
-  /**
-   * @param value
-   * @return
-   */
+
   public static NgChar valueOf(final char value) {
     return new NgChar(value);
   }
-  
+
   private final char value;
 
   private NgChar(final char value) {
     this.value = value;
   }
-  
-  /* (non-JavaDoc)
-   * @see ng.lang.NgObject#getMetaClass()
-   */
-  public RuntimeMetaClass getMetaClass() {
+
+  @Override
+  public MetaClass getMetaClass() {
     return get$MetaClass();
   }
 
-  /**
-   * @return
-   */
   public char getCharValue() {
     return this.value;
   }

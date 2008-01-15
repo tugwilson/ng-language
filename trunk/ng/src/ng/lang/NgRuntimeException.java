@@ -21,7 +21,7 @@ package ng.lang;
 public class NgRuntimeException extends RuntimeException {
 
   /**
-   * 
+   *
    */
   private static final long serialVersionUID = 1L;
 
