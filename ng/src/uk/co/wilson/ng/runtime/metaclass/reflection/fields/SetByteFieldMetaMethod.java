@@ -23,7 +23,7 @@ public class SetByteFieldMetaMethod extends SetUntypedFieldMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetUntypedFieldMetaMethod#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object callQuick(final ThreadContext tc, final Object instance, final Object value) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final Object value) {
     try {
       this.field.setByte(instance, ((NgByte)value).getByteValue());
     } catch (final IllegalArgumentException e) {

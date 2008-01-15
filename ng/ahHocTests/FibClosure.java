@@ -70,13 +70,12 @@ public class FibClosure implements NgObject {
     
      int calculate() throws Throwable {
      final ThreadContext $tc = NgSystem.metaClassRegistry.getThreadContext();
-     final Closure c = new ClosureImpl() {
+     final Closure c = new ClosureImpl(Closure.class) {
         /* (non-Javadoc)
          * @see uk.co.wilson.ng.lang.ClosureImpl#callQuick(ng.runtime.ThreadContext, java.lang.Object, int)
          */
         @Override
-        public Object callQuick(ThreadContext tc, Object instance, int x) throws Throwable {
-        
+        public Object doCallQuick(ThreadContext tc, Object instance, int x) throws Throwable {
           // if (x <= 0) return 0;
           if (NgSystem.ngIntMetaClass.lessThanOrEqualsBoolean(x, 0)) {
             return NgInt.valueOf(0);
@@ -88,19 +87,19 @@ public class FibClosure implements NgObject {
           }
      
           // return (self(x-1) + self(x-2));
-          Object $tmp = $tc.callQuick(NgSystem.closureMetaClass, this, NgSystem.ngIntMetaClass.subtract(x, 1));
-          return NgSystem.metaClassRegistry.getRuntimeMetaClass($tc, $tmp).add($tmp, $tc.callQuick(NgSystem.closureMetaClass, this, NgSystem.ngIntMetaClass.subtract(x, 2)));
+          Object $tmp = tc.callQuick(getMetaClass(), this, NgSystem.ngIntMetaClass.subtract(x, 1));
+          return NgSystem.metaClassRegistry.getRuntimeMetaClass(tc, $tmp).add($tmp, tc.callQuick(getMetaClass(), this, NgSystem.ngIntMetaClass.subtract(x, 2)));
         }
 
         /* (non-Javadoc)
          * @see uk.co.wilson.ng.lang.ClosureImpl#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
          */
         @Override
-        public Object callQuick(ThreadContext tc, Object instance, Object x) throws Throwable {
-           return this.callQuick(tc, instance, $tc.asInt(x));
+        public Object doCallQuick(ThreadContext tc, Object instance, Object x) throws Throwable {
+           return this.doCallQuick(tc, instance, tc.asInt(x));
         }
        };
        
-       return $tc.asInt($tc.callQuick(NgSystem.closureMetaClass, c, $tc.getField(getMetaClass(), this, "series")));
+       return $tc.asInt($tc.callQuick(c.getMetaClass(), c, $tc.getField(getMetaClass(), this, "series")));
      }
 }

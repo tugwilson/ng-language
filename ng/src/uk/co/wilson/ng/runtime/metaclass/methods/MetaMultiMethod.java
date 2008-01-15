@@ -33,8 +33,8 @@ public class MetaMultiMethod implements MetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])
    */
-  public Object call(final ThreadContext tc, final Object instance, final Object[] arguments) throws Throwable {
-    return selectMethod(arguments).call(tc, instance, arguments);
+  public Object doCall(final ThreadContext tc, final Object instance, final Object[] arguments) throws Throwable {
+    return selectMethod(arguments).doCall(tc, instance, arguments);
   }
 
   /* (non-Javadoc)
@@ -118,22 +118,22 @@ public class MetaMultiMethod implements MetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(ng.runtime.ThreadContext, java.lang.Object)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance) throws Throwable {
-    return selectMethod().callQuick(tc, instance);
+  public Object doCallQuick(final ThreadContext tc, final Object instance) throws Throwable {
+    return selectMethod().doCallQuick(tc, instance);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final Object p1) throws Throwable {
-    return selectMethod(p1).callQuick(tc, instance, p1);
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final Object p1) throws Throwable {
+    return selectMethod(p1).doCallQuick(tc, instance, p1);
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(ng.runtime.ThreadContext, java.lang.Object, boolean)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final boolean p1) throws Throwable {
-    return selectMethod(p1).callQuick(tc, instance, p1);
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final boolean p1) throws Throwable {
+    return selectMethod(p1).doCallQuick(tc, instance, p1);
   }
 
   /* (non-Javadoc)
@@ -160,8 +160,8 @@ public class MetaMultiMethod implements MetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.MetaMethod#call(ng.runtime.ThreadContext, java.lang.Object, int)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final int p1) throws Throwable {
-    return selectMethod(p1).callQuick(tc, instance, p1);
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final int p1) throws Throwable {
+    return selectMethod(p1).doCallQuick(tc, instance, p1);
   }
 
   /* (non-Javadoc)

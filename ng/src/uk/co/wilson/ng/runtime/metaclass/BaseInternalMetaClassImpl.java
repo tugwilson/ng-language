@@ -165,28 +165,28 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doInvokeConstructor(ng.runtime.ThreadContext, java.lang.Class, java.lang.Object[])
    */
   public Object doInvokeConstructor(final ThreadContext tc, final Class theClass, final Object[] arguments) throws Throwable {
-    return doGetMetaConstructor(tc, theClass, arguments).callQuick(tc, theClass, arguments);
+    return doGetMetaConstructor(tc, theClass, arguments).doCallQuick(tc, theClass, arguments);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.InternalMetaClass#doInvokeConstructorQuick(ng.runtime.ThreadContext, java.lang.Class)
    */
   public Object doInvokeConstructorQuick(ThreadContext tc, Class theClass) throws Throwable {
-    return doGetMetaConstructorQuick(tc, theClass).callQuick(tc, theClass);
+    return doGetMetaConstructorQuick(tc, theClass).doCallQuick(tc, theClass);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.InternalMetaClass#doInvokeConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, java.lang.Object)
    */
   public Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, Object p1) throws Throwable {
-    return doGetMetaConstructorQuick(tc, theClass, p1).callQuick(tc, theClass, p1);
+    return doGetMetaConstructorQuick(tc, theClass, p1).doCallQuick(tc, theClass, p1);
   }
   
   /* (non-JavaDoc)
    * @see ng.runtime.InternalMetaClass#doInvokeConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, boolean)
    */
   public Object doInvokeConstructorQuick(ThreadContext tc, Class theClass, boolean p1) throws Throwable {
-    return doGetMetaConstructorQuick(tc, theClass, p1).callQuick(tc, theClass, p1);
+    return doGetMetaConstructorQuick(tc, theClass, p1).doCallQuick(tc, theClass, p1);
   }
 
   /* (non-JavaDoc)
@@ -214,7 +214,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doInvokeConstructorQuick(ng.runtime.ThreadContext, java.lang.Class, int)
    */
   public Object doInvokeConstructorQuick(ThreadContext tc, Class theClass,  int p1) throws Throwable {
-    return doGetMetaConstructorQuick(tc, theClass, p1).callQuick(tc, theClass, p1);
+    return doGetMetaConstructorQuick(tc, theClass, p1).doCallQuick(tc, theClass, p1);
   }
 
   /* (non-JavaDoc)
@@ -448,7 +448,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
       return doInvokeMethodQuick(tc, instance, methodName, arguments[0], arguments[1], arguments[2], arguments[3]);
 
     default:
-      Object result = doGetMetaMethod(tc, methodName, arguments).call(tc, instance, arguments);
+      Object result = doGetMetaMethod(tc, methodName, arguments).doCall(tc, instance, arguments);
 
       if (result == RuntimeMetaClassImpl.NOT_CALLED) {
         result = doGetProperty(tc, instance, methodName);
@@ -466,7 +466,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String)
    */
   public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName) throws Throwable {
-  Object result = doGetMetaMethodQuick(tc, methodName).callQuick(tc, instance);
+  Object result = doGetMetaMethodQuick(tc, methodName).doCallQuick(tc, instance);
 
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       result = doGetProperty(tc, instance, methodName);
@@ -483,7 +483,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final Object p1) throws Throwable {
-  Object result = doGetMetaMethodQuick(tc, methodName, p1).callQuick(tc, instance, p1);
+  Object result = doGetMetaMethodQuick(tc, methodName, p1).doCallQuick(tc, instance, p1);
 
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       result = doGetProperty(tc, instance, methodName);
@@ -500,7 +500,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, boolean)
    */
   public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final boolean p1) throws Throwable {
-  Object result = doGetMetaMethodQuick(tc, methodName, p1).callQuick(tc, instance, p1);
+  Object result = doGetMetaMethodQuick(tc, methodName, p1).doCallQuick(tc, instance, p1);
 
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       result = doGetProperty(tc, instance, methodName);
@@ -568,7 +568,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doInvokeMethodQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, int)
    */
   public Object doInvokeMethodQuick(final ThreadContext tc, final Object instance, final String methodName, final int p1) throws Throwable {
-  Object result = doGetMetaMethodQuick(tc, methodName, p1).callQuick(tc, instance, p1);
+  Object result = doGetMetaMethodQuick(tc, methodName, p1).doCallQuick(tc, instance, p1);
 
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       result = doGetProperty(tc, instance, methodName);
@@ -833,7 +833,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doGetProperty(ng.runtime.ThreadContext, java.lang.Object, java.lang.String)
    */
   public Object doGetProperty(final ThreadContext tc, final Object instance, final String propertyName) throws Throwable {
-  final Object result = this.instanceHandler.getGetPropertyMetaMethod(instance, propertyName).callQuick(tc, instance);
+  final Object result = this.instanceHandler.getGetPropertyMetaMethod(instance, propertyName).doCallQuick(tc, instance);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return doGetField(tc, instance, propertyName);
@@ -846,7 +846,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doSetProperty(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object doSetProperty(final ThreadContext tc, final Object instance, final String propertyName, final Object newValue) throws Throwable {
-  final Object result = this.instanceHandler.getSetPropertyMetaMethod(instance, propertyName, newValue).callQuick(tc, instance, newValue);
+  final Object result = this.instanceHandler.getSetPropertyMetaMethod(instance, propertyName, newValue).doCallQuick(tc, instance, newValue);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
       return doSetField(tc, instance, propertyName, newValue);
@@ -859,21 +859,21 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doGetField(ng.runtime.ThreadContext, java.lang.Object, java.lang.String)
    */
   public Object doGetField(final ThreadContext tc, final Object instance, final String fieldName) throws Throwable {
-    return this.instanceHandler.getGetFieldMetaMethod(instance, fieldName).callQuick(tc, instance);
+    return this.instanceHandler.getGetFieldMetaMethod(instance, fieldName).doCallQuick(tc, instance);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.InternalMetaClass#doSetField(ng.runtime.ThreadContext, java.lang.Object, java.lang.String, java.lang.Object)
    */
   public Object doSetField(final ThreadContext tc, final Object instance, final String fieldName, final Object newValue) throws Throwable {
-    return this.instanceHandler.getSetFieldMetaMethod(instance, fieldName, newValue).callQuick(tc, instance, newValue);
+    return this.instanceHandler.getSetFieldMetaMethod(instance, fieldName, newValue).doCallQuick(tc, instance, newValue);
   }
   
   /* (non-JavaDoc)
    * @see ng.runtime.InternalMetaClass#doCall(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])
    */
   public Object doCall(ThreadContext tc, Object instance, Object[] arguments) throws Throwable {
-    return doGetCallable(instance).call(tc, instance, arguments);
+    return doGetCallable(instance).doCall(tc, instance, arguments);
   }
 
   /* (non-JavaDoc)
@@ -894,7 +894,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, boolean)
    */
   public Object doCallQuick(ThreadContext tc, Object instance, boolean p1) throws Throwable {
-    return doGetCallable(instance).callQuick(tc, instance, p1);
+    return doGetCallable(instance).doCallQuick(tc, instance, p1);
   }
 
   /* (non-JavaDoc)
@@ -929,7 +929,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, int)
    */
   public Object doCallQuick(ThreadContext tc, Object instance, int p1) throws Throwable {
-    return doGetCallable(instance).callQuick(tc, instance, p1);
+    return doGetCallable(instance).doCallQuick(tc, instance, p1);
   }
 
   /* (non-JavaDoc)
@@ -964,7 +964,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
   public Object doCallQuick(ThreadContext tc, Object instance, Object p1) throws Throwable {
-    return doGetCallable(instance).callQuick(tc, instance, p1);
+    return doGetCallable(instance).doCallQuick(tc, instance, p1);
   }
 
   /* (non-JavaDoc)
@@ -978,7 +978,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
    * @see ng.runtime.InternalMetaClass#doCallQuick(ng.runtime.ThreadContext, java.lang.Object)
    */
   public Object doCallQuick(ThreadContext tc, Object instance) throws Throwable {
-    return doGetCallable(instance).callQuick(tc, instance);
+    return doGetCallable(instance).doCallQuick(tc, instance);
   }
 
   /* (non-JavaDoc)
@@ -1009,7 +1009,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
   final Object result = this.instanceHandler.asType(tc, instance, type);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return this.instanceHandler.getMetaMethodQuick(tc, "asType", type).callQuick(tc, instance, type);
+      return this.instanceHandler.getMetaMethodQuick(tc, "asType", type).doCallQuick(tc, instance, type);
     } else {
       return result;
     }
@@ -1022,7 +1022,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
   final Object result = this.instanceHandler.getAt(tc, instance, index);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return this.instanceHandler.getMetaMethodQuick(tc, "getAt", index).callQuick(tc, instance, index);
+      return this.instanceHandler.getMetaMethodQuick(tc, "getAt", index).doCallQuick(tc, instance, index);
     } else {
       return result;
     }
@@ -1049,7 +1049,7 @@ public abstract class BaseInternalMetaClassImpl implements InternalMetaClass {
   final Object result = this.instanceHandler.putAt(tc, instance, index);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) {
-      return this.instanceHandler.getMetaMethodQuick(tc, "putAt", index).callQuick(tc, instance, index);
+      return this.instanceHandler.getMetaMethodQuick(tc, "putAt", index).doCallQuick(tc, instance, index);
     } else {
       return result;
     }

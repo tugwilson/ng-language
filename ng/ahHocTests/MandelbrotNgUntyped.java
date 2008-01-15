@@ -86,7 +86,7 @@ public class MandelbrotNgUntyped extends NgBaseObject {
       final MandelbrotNgUntyped instance = new MandelbrotNgUntyped();
       int x,y;
       for (y = -39; y < 39; y++) {
-;//          System.out.print("\n");
+//          System.out.print("\n");
           for (x = -39; x < 39; x++) {
               final Object tmp = instance.iterate(NgSystem.ngIntMetaClass.divide(x, 40.0f), NgSystem.ngIntMetaClass.divide(y, 40.0f)) ;
               if ($tc.asInt(tmp) == 0) 

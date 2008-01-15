@@ -13,27 +13,27 @@ public interface Callable {
    * @param arguments
    * @return
    */
-  Object call(ThreadContext tc, Object instance, Object[] arguments) throws Throwable;
+  Object doCall(ThreadContext tc, Object instance, Object[] arguments) throws Throwable;
   
   /**
    * @param instance
    * @return
    */
-  Object callQuick(ThreadContext tc, Object instance) throws Throwable;
-  
-  /**
-   * @param instance
-   * @param p1
-   * @return
-   */
-  Object callQuick(ThreadContext tc, Object instance, Object p1) throws Throwable;
+  Object doCallQuick(ThreadContext tc, Object instance) throws Throwable;
   
   /**
    * @param instance
    * @param p1
    * @return
    */
-  Object callQuick(ThreadContext tc, Object instance, boolean p1) throws Throwable;
+  Object doCallQuick(ThreadContext tc, Object instance, Object p1) throws Throwable;
+  
+  /**
+   * @param instance
+   * @param p1
+   * @return
+   */
+  Object doCallQuick(ThreadContext tc, Object instance, boolean p1) throws Throwable;
   
   /**
    * @param instance
@@ -61,7 +61,7 @@ public interface Callable {
    * @param p1
    * @return
    */
-  Object callQuick(ThreadContext tc, Object instance, int p1) throws Throwable;
+  Object doCallQuick(ThreadContext tc, Object instance, int p1) throws Throwable;
   
   /**
    * @param instance

@@ -23,7 +23,7 @@ public class GetDoubleFieldMetaMethod extends GetUntypedFieldMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.fields.GetUntypedFieldMetaMethod#callQuick(ng.runtime.ThreadContext, java.lang.Object)
    */
   @Override
-  public Object callQuick(final ThreadContext tc, final Object instance) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance) {
     try {
       return NgDouble.valueOf(this.field.getDouble(instance));
     } catch (final IllegalArgumentException e) {

@@ -26,8 +26,8 @@ public class SetTypedFieldMetaMethod extends SetUntypedFieldMetaMethod {
    * @see uk.co.wilson.ng.runtime.metaclass.reflection.fields.SetUntypedFieldMetaMethod#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object callQuick(final ThreadContext tc, final Object instance, final Object value) {
-  final Object result = super.callQuick(tc, instance, value);
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final Object value) {
+  final Object result = super.doCallQuick(tc, instance, value);
     
     if (result == RuntimeMetaClassImpl.NOT_CALLED) return result;
   

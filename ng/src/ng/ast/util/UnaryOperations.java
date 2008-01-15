@@ -23,5 +23,5 @@ package ng.ast.util;
  *
  */
 public enum UnaryOperations {
-  plus, munis, preIncrement, preDecrement, postIncrement, postDecrement, complement, not
+  plus, minus, preIncrement, preDecrement, postIncrement, postDecrement, complement, not
 }

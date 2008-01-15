@@ -34,21 +34,21 @@ public class SetUntypedFieldMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#call(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object[])
    */
-  public Object call(final ThreadContext tc, final Object instance, final Object[] arguments) {
+  public Object doCall(final ThreadContext tc, final Object instance, final Object[] arguments) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance) {
     return RuntimeMetaClassImpl.NOT_CALLED;
   }
 
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final Object value) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final Object value) {
     try {
       this.field.set(instance, value);
     } catch (final IllegalArgumentException e) {
@@ -63,7 +63,7 @@ public class SetUntypedFieldMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, boolean)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final boolean value) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final boolean value) {
     try {
       this.field.set(instance, value);
     } catch (final IllegalArgumentException e) {
@@ -123,7 +123,7 @@ public class SetUntypedFieldMetaMethod extends ReflectionMetaMethod {
   /* (non-Javadoc)
    * @see ng.runtime.Callable#callQuick(ng.runtime.ThreadContext, java.lang.Object, int)
    */
-  public Object callQuick(final ThreadContext tc, final Object instance, final int value) {
+  public Object doCallQuick(final ThreadContext tc, final Object instance, final int value) {
     try {
       this.field.set(instance, value);
     } catch (final IllegalArgumentException e) {
