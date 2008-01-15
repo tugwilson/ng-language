@@ -1,47 +1,19 @@
-/*
- * Created on Feb 23, 2007
- *
- * Copyright 2007 John G. Wilson
- *
- *   Licensed under the Apache License, Version 2.0 (the "License");
- *   you may not use this file except in compliance with the License.
- *   You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *   Unless required by applicable law or agreed to in writing, software
- *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- *
- */
 package ng.runtime;
 
 import ng.lang.NgObject;
-import ng.lang.NgSystem;
+import ng.runtime.metaclass.MetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.IntMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClassImpl;
 
+public class NgInt extends NgObject {
+  private static final IntMetaClass metaclass = new IntMetaClassImpl();
 
-public class NgInt implements NgObject {
-  public static final NgInt MINUS_ONE = new NgInt(-1);
-  public static final NgInt ZERO = new NgInt(0);
-  public static final NgInt ONE = new NgInt(1);
-  private static final NgInt preAllocatedValues[] = new NgInt[]{MINUS_ONE, ZERO, ONE};
-  
-  /**
-   * @return
-   */
-  public static RuntimeMetaClass get$MetaClass() {
-    return NgSystem.ngIntMetaClass;
+  public static IntMetaClass get$MetaClass() {
+    return metaclass;
   }
-  
-  /**
-   * @param value
-   * @return
-   */
+
   public static NgInt valueOf(final int value) {
-    if (value < -1 || value > 1) return new NgInt(value);
-    return preAllocatedValues[value + 1];
+    return new NgInt(value);
   }
 
   private final int value;
@@ -49,17 +21,12 @@ public class NgInt implements NgObject {
   private NgInt(final int value) {
     this.value = value;
   }
-  
-  /* (non-JavaDoc)
-   * @see ng.lang.NgObject#getMetaClass()
-   */
-  public RuntimeMetaClass getMetaClass() {
+
+  @Override
+  public MetaClass getMetaClass() {
     return get$MetaClass();
   }
 
-  /**
-   * @return
-   */
   public int getIntValue() {
     return this.value;
   }
