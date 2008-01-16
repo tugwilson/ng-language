@@ -1,5 +1,8 @@
 package ng.ast;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 import ng.ast.util.BinaryOperations;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
@@ -10,6 +13,12 @@ import ng.runtime.threadcontext.ThreadContext;
  *
  */
 public interface Node {
+  /**
+   * @param instance
+   * @param metaClass
+   * @param tc
+   * @return
+   */
   Object evaluate(Object instance, MetaClass metaClass, ThreadContext tc);
   
   /**
@@ -31,6 +40,16 @@ public interface Node {
    * @return
    */
   Assert newAssert();
+  
+  /**
+   * @return
+   */
+  BigDecimalConstant newBigDecimalConstant(BigDecimal value);
+  
+  /**
+   * @return
+   */
+  BigIntegerConstant newBigIntegerConstant(BigInteger value);
 
   /**
    * @return
@@ -41,12 +60,37 @@ public interface Node {
    * @return
    */
   Block newBlock();
+  
+  /**
+   * @return
+   */
+  BooleanConstant newBooleanConstant(boolean value);
 
+  /**
+   * @return
+   */
+  Break newBreak();
+  
+  /**
+   * @return
+   */
+  ByteConstant newByteConstant(byte value);
+  
   /**
    * @return
    */
   Case newCase();
 
+  /**
+   * @return
+   */
+  Catch newCatch();
+  
+  /**
+   * @return
+   */
+  CharConstant newCharConstant(char value);
+  
   /**
    * @return
    */
@@ -57,6 +101,11 @@ public interface Node {
    */
   Closure newClosure();
 
+  /**
+   * @return
+   */
+  CompilationUnit newCompilationUnit();
+  
   /**
    * @return
    */
@@ -81,7 +130,7 @@ public interface Node {
    * @return
    */
   Continue newContinue();
-
+  
   /**
    * @return
    */
@@ -95,6 +144,11 @@ public interface Node {
   /**
    * @return
    */
+  DoubleConstant newDoubleConstant(double value);
+  
+  /**
+   * @return
+   */
   Empty newEmpty();
 
   /**
@@ -102,6 +156,16 @@ public interface Node {
    */
   FieldDeclaration newFieldDeclaration();
 
+  /**
+   * @return
+   */
+  Finally newFinally();
+  
+  /**
+   * @return
+   */
+  FloatConstant newFloatConstant(float value);
+  
   /**
    * @return
    */
@@ -125,6 +189,11 @@ public interface Node {
   /**
    * @return
    */
+  IntegerConstant newIntegerConstant(int value);
+  
+  /**
+   * @return
+   */
   InterfaceDeclaration newInterfaceDeclaration();
 
   /**
@@ -140,11 +209,6 @@ public interface Node {
   /**
    * @return
    */
-  NumericValue newNumericValue();
-
-  /**
-   * @return
-   */
   ParameterDeclaration newParameterDeclaration();
 
   /**
@@ -155,7 +219,7 @@ public interface Node {
   /**
    * @return
    */
-  StringValue newStringValue();
+  StringConstant newStringConstant(String value);
 
   /**
    * @return
