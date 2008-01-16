@@ -38,27 +38,27 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
 
   private final BigDecimalBinaryArithmeticOperation add = new Add();
 
-  private final BigDecimalBinaryArithmeticOperation subtract = null;
+  private final BigDecimalBinaryArithmeticOperation subtract = new Subtract();
 
-  private final BigDecimalBinaryArithmeticOperation multiply = null;
+  private final BigDecimalBinaryArithmeticOperation multiply = new Multiply();
 
-  private final BigDecimalBinaryArithmeticOperation divide = null;
+  private final BigDecimalBinaryArithmeticOperation divide = new Divide();
 
-  private final BigDecimalBinaryArithmeticOperation modulo = null;
+  private final BigDecimalBinaryArithmeticOperation modulo = new Modulo();
 
   private final BigDecimalBinaryArithmeticOperation remainderDivide = null;
 
   private final BigDecimalBooleanComparison equals = new Equals();
 
-  private final BigDecimalBooleanComparison notEquals = null;
+  private final BigDecimalBooleanComparison notEquals = new NotEquals();
 
-  private final BigDecimalBooleanComparison lessThan = null;
+  private final BigDecimalBooleanComparison lessThan = new LessThan();
 
-  private final BigDecimalBooleanComparison greaterThan = null;
+  private final BigDecimalBooleanComparison greaterThan = new GreaterThan();
 
-  private final BigDecimalBooleanComparison lessThanOrEquals = null;
+  private final BigDecimalBooleanComparison lessThanOrEquals = new LessThanOrEquals();
 
-  private final BigDecimalBooleanComparison greaterThanOrEquals = null;
+  private final BigDecimalBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public BigDecimalMetaClassImpl() {
     super(BigDecimal.class);
