@@ -1,41 +1,9 @@
 package uk.co.wilson.ng.ast;
 
-import ng.ast.AbstractMethodDeclaration;
-import ng.ast.AbstractPropertyDeclaration;
-import ng.ast.Annotation;
-import ng.ast.Assert;
-import ng.ast.BinaryOperation;
-import ng.ast.Block;
-import ng.ast.Case;
-import ng.ast.ClassDeclaration;
-import ng.ast.Closure;
-import ng.ast.ConcreteMethodDeclaration;
-import ng.ast.ConcretePropertyDeclaration;
-import ng.ast.ConditionalExpression;
-import ng.ast.Constructor;
-import ng.ast.Continue;
-import ng.ast.Default;
-import ng.ast.Do;
-import ng.ast.Empty;
-import ng.ast.FieldDeclaration;
-import ng.ast.For;
-import ng.ast.Identifier;
-import ng.ast.If;
-import ng.ast.Import;
-import ng.ast.InterfaceDeclaration;
-import ng.ast.LocalDeclaration;
-import ng.ast.MethodCall;
-import ng.ast.Node;
-import ng.ast.NumericValue;
-import ng.ast.ParameterDeclaration;
-import ng.ast.Return;
-import ng.ast.StringValue;
-import ng.ast.Switch;
-import ng.ast.Synchronized;
-import ng.ast.Throw;
-import ng.ast.Try;
-import ng.ast.UnaryOperation;
-import ng.ast.While;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
+import ng.ast.*;
 import ng.ast.util.BinaryOperations;
 
 /**
@@ -75,6 +43,20 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newBigDecimalConstant()
+   */
+  public BigDecimalConstant newBigDecimalConstant(BigDecimal value) {
+    return new BigDecimalConstantImpl(value);
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newBigIntegerConstant()
+   */
+  public BigIntegerConstant newBigIntegerConstant(BigInteger value) {
+    return new BigIntegerConstantImpl(value);
+  }
+
   /* (non-Javadoc)
    * @see ng.ast.Node#newBinaryOperation()
    */
@@ -90,12 +72,50 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newBooleanConstant()
+   */
+  public BooleanConstant newBooleanConstant(boolean value) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newBreak()
+   */
+  public Break newBreak() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newByteConstant()
+   */
+  public ByteConstant newByteConstant(byte value) {
+    return new ByteConstantImpl(value);
+  }
+
   /* (non-Javadoc)
    * @see ng.ast.Node#newCase()
    */
   public Case newCase() {
     // TODO Auto-generated method stub
     return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newCatch()
+   */
+  public Catch newCatch() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newCharConstant(char)
+   */
+  public CharConstant newCharConstant(char value) {
+    return new CharConstantImpl(value);
   }
 
   /* (non-Javadoc)
@@ -110,6 +130,14 @@ public abstract class NodeImpl implements Node {
    * @see ng.ast.Node#newClosure()
    */
   public Closure newClosure() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newCompilationUnit()
+   */
+  public CompilationUnit newCompilationUnit() {
     // TODO Auto-generated method stub
     return null;
   }
@@ -170,6 +198,13 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newDoubleConstant()
+   */
+  public DoubleConstant newDoubleConstant(double value) {
+    return new DoubleConstantImpl(value);
+  }
+
   /* (non-Javadoc)
    * @see ng.ast.Node#newEmpty()
    */
@@ -184,6 +219,21 @@ public abstract class NodeImpl implements Node {
   public FieldDeclaration newFieldDeclaration() {
     // TODO Auto-generated method stub
     return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newFinally()
+   */
+  public Finally newFinally() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newFloatConstant()
+   */
+  public FloatConstant newFloatConstant(float value) {
+    return new FloatConstantImpl(value);
   }
 
   /* (non-Javadoc)
@@ -218,6 +268,13 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
+  /* (non-JavaDoc)
+   * @see ng.ast.Node#newIntegerConstant()
+   */
+  public IntegerConstant newIntegerConstant(int value) {
+    return new IntegerConstantImpl(value);
+  }
+
   /* (non-Javadoc)
    * @see ng.ast.Node#newInterfaceDeclaration()
    */
@@ -243,14 +300,6 @@ public abstract class NodeImpl implements Node {
   }
 
   /* (non-Javadoc)
-   * @see ng.ast.Node#newNumericValue()
-   */
-  public NumericValue newNumericValue() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  /* (non-Javadoc)
    * @see ng.ast.Node#newParameterDeclaration()
    */
   public ParameterDeclaration newParameterDeclaration() {
@@ -267,11 +316,10 @@ public abstract class NodeImpl implements Node {
   }
 
   /* (non-Javadoc)
-   * @see ng.ast.Node#newStringValue()
+   * @see ng.ast.Node#newStringConstant()
    */
-  public StringValue newStringValue() {
-    // TODO Auto-generated method stub
-    return null;
+  public StringConstant newStringConstant(String value) {
+    return new StringConstantImpl(value);
   }
 
   /* (non-Javadoc)

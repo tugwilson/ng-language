@@ -1,6 +1,9 @@
-import java.math.BigInteger;
-
+import ng.ast.BinaryOperation;
+import ng.ast.Node;
+import ng.ast.util.BinaryOperations;
+import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
+import uk.co.wilson.ng.ast.NodeImpl;
 
 
 public class AdHocTest1 {
@@ -11,16 +14,23 @@ public class AdHocTest1 {
   public static void main(final String[] args) {
     final ThreadContext tc = ThreadContext.getThreadContext();
 
-    final Object a = tc.wrap(14);
-    final Object b = tc.wrap(1.4d);
-    System.out.println("a + b = " + tc.unwrapToDouble(tc.add().apply(a, b)));
-    System.out.println("b + a = " + tc.unwrapToDouble(tc.add().apply(b, a)));
-    System.out.println("14 + b = " + tc.unwrapToDouble(tc.add().apply(14, b)));
-    System.out.println("b + 14 = " + tc.unwrapToDouble(tc.add().apply(b, 14)));
-    System.out.println("a + 1.4d = " + tc.unwrapToDouble(tc.add().apply(a, 1.4d)));
-    System.out.println("1.4d + a = " + tc.unwrapToDouble(tc.add().apply(1.4d, a)));
-    System.out.println("14 + 1.4d = " + tc.unwrapToDouble(tc.add().apply(14, 1.4d)));
-    System.out.println("1.4d + 14 = " + tc.unwrapToDouble(tc.add().apply(1.4d, 14)));
-    System.out.println(tc.add().apply(0, new BigInteger("10000000000000000000000000000000000000000")));
+    Node n = new NodeImpl() {
+
+      /* (non-JavaDoc)
+       * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass, ng.runtime.threadcontext.ThreadContext)
+       */
+      public Object evaluate(Object instance, MetaClass metaClass, ThreadContext tc) {
+        // TODO Auto-generated method stub
+        return null;
+      }
+    };
+    
+    BinaryOperation p1 = n.newBinaryOperation(BinaryOperations.plus);
+    BinaryOperation p2 = n.newBinaryOperation(BinaryOperations.plus);
+    p1.setLhs(n.newIntegerConstant(1));
+    p1.setRhs(n.newIntegerConstant(3));
+    p2.setLhs(p1);
+    p2.setRhs(n.newFloatConstant(10.5f));
+    System.out.println(tc.unwrapToFloat(p2.evaluate(null, null, tc)));
   }
 }

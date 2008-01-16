@@ -1,8 +1,8 @@
 package ng.ast;
 /*
- * Created on 23 Apr 2007
+ * Created on 16 Jan 2008
  *
- * Copyright 2007 John G. Wilson
+ * Copyright 2008 John G. Wilson
  *
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
@@ -22,6 +22,6 @@ package ng.ast;
  * @author John
  *
  */
-public interface StringValue extends Expression {
+public interface DoubleConstant extends NumericValue {
 
 }
