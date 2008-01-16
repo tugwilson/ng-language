@@ -223,7 +223,27 @@ public class ThreadContextImpl extends ThreadContext {
 
   private final BinaryArithmeticOperation add = new Add(this);
 
+  private final BinaryArithmeticOperation subtract = new Subtract(this);
+
+  private final BinaryArithmeticOperation mutiply = new Multiply(this);
+
+  private final BinaryArithmeticOperation divide = new Divide(this);
+
+  private final BinaryArithmeticOperation remainderDivide = new RemainderDivide(this);
+
+  private final BinaryArithmeticOperation modulo = new Modulo(this);
+
   private final BooleanComparison equals = new Equals(this);
+
+  private final BooleanComparison notEquals = new NotEquals(this);
+
+  private final BooleanComparison lessThan = new LessThan(this);
+
+  private final BooleanComparison greaterThan = new GreaterThan(this);
+
+  private final BooleanComparison lessThanOrEquals = new LessThanOrEquals(this);
+
+  private final BooleanComparison greaterThanOrEquals = new GreaterThanOrEquals(this);
 
   @Override
   public MetaClass getMetaClassFor(final Object instance) {
@@ -541,8 +561,88 @@ public class ThreadContextImpl extends ThreadContext {
     return this.add;
   }
 
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#subtract()
+   */
+  @Override
+  public BinaryArithmeticOperation subtract() {
+    return this.subtract;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#multiply()
+   */
+  @Override
+  public BinaryArithmeticOperation multiply() {
+    return this.mutiply;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#divide()
+   */
+  @Override
+  public BinaryArithmeticOperation divide() {
+    return this.divide;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#remainderDivide()
+   */
+  @Override
+  public BinaryArithmeticOperation remainderDivide() {
+    return this.remainderDivide;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#modulo()
+   */
+  @Override
+  public BinaryArithmeticOperation modulo() {
+    return this.modulo;
+  }
+
   @Override
   public BooleanComparison equals() {
     return this.equals;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#notEquals()
+   */
+  @Override
+  public BooleanComparison notEquals() {
+    return this.notEquals;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#lessThan()
+   */
+  @Override
+  public BooleanComparison lessThan() {
+    return this.lessThan;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#greaterThan()
+   */
+  @Override
+  public BooleanComparison greaterThan() {
+    return this.greaterThan;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#lessThanOrEquals()
+   */
+  @Override
+  public BooleanComparison lessThanOrEquals() {
+    return this.lessThanOrEquals;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#greaterThanOrEquals()
+   */
+  @Override
+  public BooleanComparison greaterThanOrEquals() {
+    return this.greaterThanOrEquals;
   }
 }

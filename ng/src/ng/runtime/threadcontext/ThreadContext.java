@@ -62,5 +62,25 @@ public abstract class ThreadContext {
 
   public abstract BinaryArithmeticOperation add();
 
+  public abstract BinaryArithmeticOperation subtract();
+
+  public abstract BinaryArithmeticOperation multiply();
+
+  public abstract BinaryArithmeticOperation divide();
+
+  public abstract BinaryArithmeticOperation remainderDivide();
+
+  public abstract BinaryArithmeticOperation modulo();
+
   public abstract BooleanComparison equals();
+
+  public abstract BooleanComparison notEquals();
+
+  public abstract BooleanComparison lessThan();
+
+  public abstract BooleanComparison greaterThan();
+
+  public abstract BooleanComparison lessThanOrEquals();
+
+  public abstract BooleanComparison greaterThanOrEquals();
 }
