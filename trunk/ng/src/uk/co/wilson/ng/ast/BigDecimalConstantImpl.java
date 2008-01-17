@@ -13,15 +13,15 @@ import ng.runtime.threadcontext.ThreadContext;
  */
 public class BigDecimalConstantImpl extends NodeImpl implements BigDecimalConstant {
   public final BigDecimal value;
-  
+
   public BigDecimalConstantImpl(final BigDecimal value) {
     this.value = value;
   }
-  
+
   /* (non-JavaDoc)
    * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass, ng.runtime.threadcontext.ThreadContext)
    */
-  public Object evaluate(Object instance, MetaClass metaClass, ThreadContext tc) {
+  public Object evaluate(final Object instance, final MetaClass metaClass, final ThreadContext tc) {
     return this.value;
   }
 }

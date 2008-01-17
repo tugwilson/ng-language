@@ -29,8 +29,8 @@ import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.Coversion;
 import ng.runtime.threadcontext.InterpreterSupport;
 import ng.runtime.threadcontext.Misc;
-import ng.runtime.threadcontext.ValueAccess;
 import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ValueAccess;
 
 public class ThreadContextImpl extends ThreadContext {
   private static final int getMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC;
@@ -216,9 +216,9 @@ public class ThreadContextImpl extends ThreadContext {
   private final InterpreterSupport interpreterSupport = null;  // TODO: implement this
 
   private final ValueAccess propertyAccess = null;  // TODO: implement this
-  
-  private final ValueAccess fieldAccess = null;  // TODO: implement this 
-  
+
+  private final ValueAccess fieldAccess = null;  // TODO: implement this
+
   private final Coversion convert = new BaseConversion(this);
 
   private final BinaryArithmeticOperation add = new Add(this);
@@ -548,7 +548,7 @@ public class ThreadContextImpl extends ThreadContext {
    */
   @Override
   public ValueAccess fieldAccess() {
-    return fieldAccess;
+    return this.fieldAccess;
   }
 
   @Override

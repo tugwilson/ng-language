@@ -9,88 +9,88 @@ public class BinaryOperationImpl extends NodeImpl implements ng.ast.BinaryOperat
   private final BinaryOperations operation;
   private Expression lhs;
   private Expression rhs;
-  
+
   public BinaryOperationImpl(final BinaryOperations operation) {
     this.operation = operation;
   }
 
-  public void setLhs(Expression lhs) {
+  public void setLhs(final Expression lhs) {
     this.lhs = lhs;
   }
 
-  public void setRhs(Expression rhs) {
+  public void setRhs(final Expression rhs) {
     this.rhs = rhs;
   }
-  
+
   public Object evaluate(final Object instance, final MetaClass metaClass, final ThreadContext tc) {
     switch (this.operation) {
     case plus:
       return tc.add().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
-    
+
     case minus:
-      break;
-    
-    case mutiply:
-      break;
-    
+      return tc.subtract().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
+
+    case multiply:
+      return tc.multiply().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
+
     case divide:
-      break;
-    
+      return tc.divide().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
+
     case integerDivide:
-      break;
-    
+      return tc.modulo().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
+
     case remainderDivide:
-      break;
-    
+      return tc.remainderDivide().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
+
     case power:
       break;
-    
+
     case or:
       break;
-    
+
     case and:
       break;
-    
+
     case xor:
       break;
-    
+
     case leftShift:
       break;
-    
+
     case rightShift:
       break;
-    
+
     case unsignedRightShift:
       break;
-    
+
     case equals:
       return tc.equals().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
-    
+
     case notEquals:
-      break;
-    
+      return tc.notEquals().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
+
     case compare:
       break;
-    
+
     case greaterThan:
-      break;
-    
+      return tc.greaterThan().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
+
     case lessThan:
-      break;
-    
+      return tc.lessThan().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
+
     case greaterThanOrEquals:
-      break;
-    
+      return tc.greaterThanOrEquals().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
+
     case lessThanOrEquals:
-      break;
-    
+      return tc.lessThanOrEquals().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
+
     case as:
       return tc.convert().asType(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
-      
+
     case instanceOf:
       break;
     }
-    
+
     return null;  // TODO: remove when all the operations are implemented
   }
 }

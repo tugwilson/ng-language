@@ -23,7 +23,7 @@ package ng.ast.util;
  *
  */
 public enum BinaryOperations {
-  plus, minus, mutiply, divide, integerDivide, remainderDivide,
+  plus, minus, multiply, divide, integerDivide, remainderDivide,
   power, or, and, xor, leftShift, rightShift, unsignedRightShift,
   equals, notEquals, compare, greaterThan, lessThan,
   greaterThanOrEquals, lessThanOrEquals, as, instanceOf

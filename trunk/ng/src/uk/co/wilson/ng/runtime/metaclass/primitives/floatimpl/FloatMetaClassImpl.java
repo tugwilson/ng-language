@@ -26,18 +26,18 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
   private final Conversion convert = new Convert();
 
   private final FloatBinaryArithmeticOperation add = new Add();
-  private final FloatBinaryArithmeticOperation subtract = null;
-  private final FloatBinaryArithmeticOperation multiply = null;
-  private final FloatBinaryArithmeticOperation divide = null;
-  private final FloatBinaryArithmeticOperation modulo = null;
+  private final FloatBinaryArithmeticOperation subtract = new Subtract();
+  private final FloatBinaryArithmeticOperation multiply = new Multiply();
+  private final FloatBinaryArithmeticOperation divide = new Divide();
+  private final FloatBinaryArithmeticOperation modulo = new Modulo();
   private final FloatBinaryArithmeticOperation remainderDivide = null;
 
   private final FloatBooleanComparison equals = new Equals();
-  private final FloatBooleanComparison notEquals = null;
-  private final FloatBooleanComparison lessThan = null;
-  private final FloatBooleanComparison greaterThan = null;
-  private final FloatBooleanComparison lessThanOrEquals = null;
-  private final FloatBooleanComparison greaterThanOrEquals = null;
+  private final FloatBooleanComparison notEquals = new NotEquals();
+  private final FloatBooleanComparison lessThan = new LessThan();
+  private final FloatBooleanComparison greaterThan = new GreaterThan();
+  private final FloatBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+  private final FloatBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public FloatMetaClassImpl() {
     super(float.class);

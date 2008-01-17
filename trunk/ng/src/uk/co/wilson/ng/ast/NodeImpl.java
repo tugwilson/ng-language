@@ -46,14 +46,14 @@ public abstract class NodeImpl implements Node {
   /* (non-JavaDoc)
    * @see ng.ast.Node#newBigDecimalConstant()
    */
-  public BigDecimalConstant newBigDecimalConstant(BigDecimal value) {
+  public BigDecimalConstant newBigDecimalConstant(final BigDecimal value) {
     return new BigDecimalConstantImpl(value);
   }
 
   /* (non-JavaDoc)
    * @see ng.ast.Node#newBigIntegerConstant()
    */
-  public BigIntegerConstant newBigIntegerConstant(BigInteger value) {
+  public BigIntegerConstant newBigIntegerConstant(final BigInteger value) {
     return new BigIntegerConstantImpl(value);
   }
 
@@ -75,7 +75,7 @@ public abstract class NodeImpl implements Node {
   /* (non-JavaDoc)
    * @see ng.ast.Node#newBooleanConstant()
    */
-  public BooleanConstant newBooleanConstant(boolean value) {
+  public BooleanConstant newBooleanConstant(final boolean value) {
     // TODO Auto-generated method stub
     return null;
   }
@@ -91,7 +91,7 @@ public abstract class NodeImpl implements Node {
   /* (non-JavaDoc)
    * @see ng.ast.Node#newByteConstant()
    */
-  public ByteConstant newByteConstant(byte value) {
+  public ByteConstant newByteConstant(final byte value) {
     return new ByteConstantImpl(value);
   }
 
@@ -114,7 +114,7 @@ public abstract class NodeImpl implements Node {
   /* (non-JavaDoc)
    * @see ng.ast.Node#newCharConstant(char)
    */
-  public CharConstant newCharConstant(char value) {
+  public CharConstant newCharConstant(final char value) {
     return new CharConstantImpl(value);
   }
 
@@ -201,7 +201,7 @@ public abstract class NodeImpl implements Node {
   /* (non-JavaDoc)
    * @see ng.ast.Node#newDoubleConstant()
    */
-  public DoubleConstant newDoubleConstant(double value) {
+  public DoubleConstant newDoubleConstant(final double value) {
     return new DoubleConstantImpl(value);
   }
 
@@ -232,7 +232,7 @@ public abstract class NodeImpl implements Node {
   /* (non-JavaDoc)
    * @see ng.ast.Node#newFloatConstant()
    */
-  public FloatConstant newFloatConstant(float value) {
+  public FloatConstant newFloatConstant(final float value) {
     return new FloatConstantImpl(value);
   }
 
@@ -271,7 +271,7 @@ public abstract class NodeImpl implements Node {
   /* (non-JavaDoc)
    * @see ng.ast.Node#newIntegerConstant()
    */
-  public IntegerConstant newIntegerConstant(int value) {
+  public IntegerConstant newIntegerConstant(final int value) {
     return new IntegerConstantImpl(value);
   }
 
@@ -318,7 +318,7 @@ public abstract class NodeImpl implements Node {
   /* (non-Javadoc)
    * @see ng.ast.Node#newStringConstant()
    */
-  public StringConstant newStringConstant(String value) {
+  public StringConstant newStringConstant(final String value) {
     return new StringConstantImpl(value);
   }
 
