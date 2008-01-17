@@ -81,19 +81,19 @@ public class Modulo extends BaseBinaryOperation implements ByteBinaryArithmeticO
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final float rhs) {
-    return tc.wrap(lhs / rhs);
+    return tc.wrap((float)Math.floor(lhs / rhs));
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final double rhs) {
-    return tc.wrap(lhs / rhs);
+    return tc.wrap(Math.floor(lhs / rhs));
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final BigInteger rhs) {
-    return BigInteger.valueOf(lhs).add(rhs);
+    return BigInteger.valueOf(lhs).divide(rhs);
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs).add(rhs);
+    return BigDecimal.valueOf(lhs).divideToIntegralValue(rhs);
   }
 
   public int doIntApply(final ThreadContext tc, final byte lhs, final char rhs) {
