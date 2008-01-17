@@ -8,35 +8,35 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.CharMetaClass;
 
 public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
 
-  private final CharBinaryArithmeticOperation modifiedAdd = null;
-  private final CharBinaryArithmeticOperation modifiedSubtract = null;
-  private final CharBinaryArithmeticOperation modifiedMultiply = null;
-  private final CharBinaryArithmeticOperation modifiedDivide = null;
-  private final CharBinaryArithmeticOperation modifiedModulo = null;
-  private final CharBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile CharBinaryArithmeticOperation modifiedAdd = null;
+  private volatile CharBinaryArithmeticOperation modifiedSubtract = null;
+  private volatile CharBinaryArithmeticOperation modifiedMultiply = null;
+  private volatile CharBinaryArithmeticOperation modifiedDivide = null;
+  private volatile CharBinaryArithmeticOperation modifiedModulo = null;
+  private volatile CharBinaryArithmeticOperation modifiedRemainderDivide = null;
 
-  private final CharBooleanComparison modifiedEquals = null;
-  private final CharBooleanComparison modifiedNotEquals = null;
-  private final CharBooleanComparison modifiedLessThan = null;
-  private final CharBooleanComparison modifiedGreaterThan = null;
-  private final CharBooleanComparison modifiedLessThanOrEquals = null;
-  private final CharBooleanComparison modifiedGreaterThanOrEquals = null;
+  private volatile CharBooleanComparison modifiedEquals = null;
+  private volatile CharBooleanComparison modifiedNotEquals = null;
+  private volatile CharBooleanComparison modifiedLessThan = null;
+  private volatile CharBooleanComparison modifiedGreaterThan = null;
+  private volatile CharBooleanComparison modifiedLessThanOrEquals = null;
+  private volatile CharBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 
   private final CharBinaryArithmeticOperation add = new Add();
-  private final CharBinaryArithmeticOperation subtract = null;
-  private final CharBinaryArithmeticOperation multiply = null;
-  private final CharBinaryArithmeticOperation divide = null;
-  private final CharBinaryArithmeticOperation modulo = null;
+  private final CharBinaryArithmeticOperation subtract = new Subtract();
+  private final CharBinaryArithmeticOperation multiply = new Multiply();
+  private final CharBinaryArithmeticOperation divide = new Divide();
+  private final CharBinaryArithmeticOperation modulo = new Modulo();
   private final CharBinaryArithmeticOperation remainderDivide = null;
 
   private final CharBooleanComparison equals = new Equals();
-  private final CharBooleanComparison notEquals = null;
-  private final CharBooleanComparison lessThan = null;
-  private final CharBooleanComparison greaterThan = null;
-  private final CharBooleanComparison lessThanOrEquals = null;
-  private final CharBooleanComparison greaterThanOrEquals = null;
+  private final CharBooleanComparison notEquals = new NotEquals();
+  private final CharBooleanComparison lessThan = new LessThan();
+  private final CharBooleanComparison greaterThan = new GreaterThan();
+  private final CharBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+  private final CharBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public CharMetaClassImpl() {
     super(char.class);
