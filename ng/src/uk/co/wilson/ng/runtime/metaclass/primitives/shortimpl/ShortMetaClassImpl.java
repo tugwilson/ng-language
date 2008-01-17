@@ -8,35 +8,35 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.ShortMetaClass;
 
 public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass {
 
-  private final ShortBinaryArithmeticOperation modifiedAdd = null;
-  private final ShortBinaryArithmeticOperation modifiedSubtract = null;
-  private final ShortBinaryArithmeticOperation modifiedMultiply = null;
-  private final ShortBinaryArithmeticOperation modifiedDivide = null;
-  private final ShortBinaryArithmeticOperation modifiedModulo = null;
-  private final ShortBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile ShortBinaryArithmeticOperation modifiedAdd = null;
+  private volatile ShortBinaryArithmeticOperation modifiedSubtract = null;
+  private volatile ShortBinaryArithmeticOperation modifiedMultiply = null;
+  private volatile ShortBinaryArithmeticOperation modifiedDivide = null;
+  private volatile ShortBinaryArithmeticOperation modifiedModulo = null;
+  private volatile ShortBinaryArithmeticOperation modifiedRemainderDivide = null;
 
-  private final ShortBooleanComparison modifiedEquals = null;
-  private final ShortBooleanComparison modifiedNotEquals = null;
-  private final ShortBooleanComparison modifiedLessThan = null;
-  private final ShortBooleanComparison modifiedGreaterThan = null;
-  private final ShortBooleanComparison modifiedLessThanOrEquals = null;
-  private final ShortBooleanComparison modifiedGreaterThanOrEquals = null;
+  private volatile ShortBooleanComparison modifiedEquals = null;
+  private volatile ShortBooleanComparison modifiedNotEquals = null;
+  private volatile ShortBooleanComparison modifiedLessThan = null;
+  private volatile ShortBooleanComparison modifiedGreaterThan = null;
+  private volatile ShortBooleanComparison modifiedLessThanOrEquals = null;
+  private volatile ShortBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 
   private final ShortBinaryArithmeticOperation add = new Add();
-  private final ShortBinaryArithmeticOperation subtract = null;
-  private final ShortBinaryArithmeticOperation multiply = null;
-  private final ShortBinaryArithmeticOperation divide = null;
-  private final ShortBinaryArithmeticOperation modulo = null;
+  private final ShortBinaryArithmeticOperation subtract = new Subtract();
+  private final ShortBinaryArithmeticOperation multiply = new Multiply();
+  private final ShortBinaryArithmeticOperation divide = new Divide();
+  private final ShortBinaryArithmeticOperation modulo = new Modulo();
   private final ShortBinaryArithmeticOperation remainderDivide = null;
 
   private final ShortBooleanComparison equals = new Equals();
-  private final ShortBooleanComparison notEquals = null;
-  private final ShortBooleanComparison lessThan = null;
-  private final ShortBooleanComparison greaterThan = null;
-  private final ShortBooleanComparison lessThanOrEquals = null;
-  private final ShortBooleanComparison greaterThanOrEquals = null;
+  private final ShortBooleanComparison notEquals = new NotEquals();
+  private final ShortBooleanComparison lessThan = new LessThan();
+  private final ShortBooleanComparison greaterThan = new GreaterThan();
+  private final ShortBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+  private final ShortBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public ShortMetaClassImpl() {
     super(short.class);
