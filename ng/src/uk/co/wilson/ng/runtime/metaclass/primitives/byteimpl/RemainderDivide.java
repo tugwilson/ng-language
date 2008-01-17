@@ -5,6 +5,7 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBinaryArithmeticOperation;
 
 /**
@@ -61,31 +62,35 @@ public class RemainderDivide extends BaseBinaryOperation implements ByteBinaryAr
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final char rhs) {
-    return tc.wrap(lhs / rhs);
+    return BigDecimal.valueOf(lhs).divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final byte rhs) {
-    return tc.wrap(lhs / rhs);
+    return BigDecimal.valueOf(lhs).divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final short rhs) {
-    return tc.wrap(lhs / rhs);
+    return BigDecimal.valueOf(lhs).divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final int rhs) {
-    return tc.wrap(lhs / rhs);
+    return BigDecimal.valueOf(lhs).divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final long rhs) {
-    return tc.wrap(lhs / rhs);
+    return BigDecimal.valueOf(lhs).divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final float rhs) {
-    return tc.wrap(lhs / rhs);
+  final double tmp = lhs / rhs;
+    
+    return tc.wrap((float)(tmp - Math.floor(tmp)));
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final double rhs) {
-    return tc.wrap(lhs / rhs);
+  final double tmp = lhs / rhs;
+    
+    return tc.wrap((tmp - Math.floor(tmp)));
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final BigInteger rhs) {
@@ -97,23 +102,23 @@ public class RemainderDivide extends BaseBinaryOperation implements ByteBinaryAr
   }
 
   public int doIntApply(final ThreadContext tc, final byte lhs, final char rhs) {
-    return lhs / rhs;
+    throw new NotImplementedException();
   }
 
   public int doIntApply(final ThreadContext tc, final byte lhs, final byte rhs) {
-    return lhs / rhs;
+    throw new NotImplementedException();
   }
 
   public int doIntApply(final ThreadContext tc, final byte lhs, final short rhs) {
-    return lhs / rhs;
+    throw new NotImplementedException();
   }
 
   public int doIntApply(final ThreadContext tc, final byte lhs, final int rhs) {
-    return lhs / rhs;
+    throw new NotImplementedException();
   }
 
   public long doLongApply(final ThreadContext tc, final byte lhs, final long rhs) {
-    return lhs / rhs;
+    throw new NotImplementedException();
   }
 
   public float doFloatApply(final ThreadContext tc, final byte lhs, final float rhs) {
