@@ -2,41 +2,45 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl;
 
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ByteMetaClass;
 
 public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
 
-  private final ByteBinaryArithmeticOperation modifiedAdd = null;
-  private final ByteBinaryArithmeticOperation modifiedSubtract = null;
-  private final ByteBinaryArithmeticOperation modifiedMultiply = null;
-  private final ByteBinaryArithmeticOperation modifiedDivide = null;
-  private final ByteBinaryArithmeticOperation modifiedModulo = null;
-  private final ByteBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile ByteBinaryArithmeticOperation modifiedAdd = null;
+  private volatile ByteBinaryArithmeticOperation modifiedSubtract = null;
+  private volatile ByteBinaryArithmeticOperation modifiedMultiply = null;
+  private volatile ByteBinaryArithmeticOperation modifiedDivide = null;
+  private volatile ByteBinaryArithmeticOperation modifiedModulo = null;
+  private volatile ByteBinaryArithmeticOperation modifiedRemainderDivide = null;
 
-  private final ByteBooleanComparison modifiedEquals = null;
-  private final ByteBooleanComparison modifiedNotEquals = null;
-  private final ByteBooleanComparison modifiedLessThan = null;
-  private final ByteBooleanComparison modifiedGreaterThan = null;
-  private final ByteBooleanComparison modifiedLessThanOrEquals = null;
-  private final ByteBooleanComparison modifiedGreaterThanOrEquals = null;
+  private volatile ByteBooleanComparison modifiedEquals = null;
+  private volatile ByteBooleanComparison modifiedNotEquals = null;
+  private volatile ByteBooleanComparison modifiedLessThan = null;
+  private volatile ByteBooleanComparison modifiedGreaterThan = null;
+  private volatile ByteBooleanComparison modifiedLessThanOrEquals = null;
+  private volatile ByteBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 
   private final ByteBinaryArithmeticOperation add = new Add();
-  private final ByteBinaryArithmeticOperation subtract = null;
-  private final ByteBinaryArithmeticOperation multiply = null;
-  private final ByteBinaryArithmeticOperation divide = null;
-  private final ByteBinaryArithmeticOperation modulo = null;
+  private final ByteBinaryArithmeticOperation subtract = new Subtract();
+  private final ByteBinaryArithmeticOperation multiply = new Multiply();
+  private final ByteBinaryArithmeticOperation divide = new Divide();
+  private final ByteBinaryArithmeticOperation modulo = new Modulo();
   private final ByteBinaryArithmeticOperation remainderDivide = null;
 
   private final ByteBooleanComparison equals = new Equals();
-  private final ByteBooleanComparison notEquals = null;
-  private final ByteBooleanComparison lessThan = null;
-  private final ByteBooleanComparison greaterThan = null;
-  private final ByteBooleanComparison lessThanOrEquals = null;
-  private final ByteBooleanComparison greaterThanOrEquals = null;
+  private final ByteBooleanComparison notEquals = new NotEquals();
+  private final ByteBooleanComparison lessThan = new LessThan();
+  private final ByteBooleanComparison greaterThan = new GreaterThan();
+  private final ByteBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+  private final ByteBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public ByteMetaClassImpl() {
     super(byte.class);

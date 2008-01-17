@@ -10,54 +10,34 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalMetaClass;
 
 public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimalMetaClass {
 
-  private final BigDecimalBinaryArithmeticOperation modifiedAdd = null;
+  private volatile BigDecimalBinaryArithmeticOperation modifiedAdd = null;
+  private volatile BigDecimalBinaryArithmeticOperation modifiedSubtract = null;
+  private volatile BigDecimalBinaryArithmeticOperation modifiedMultiply = null;
+  private volatile BigDecimalBinaryArithmeticOperation modifiedDivide = null;
+  private volatile BigDecimalBinaryArithmeticOperation modifiedModulo = null;
 
-  private final BigDecimalBinaryArithmeticOperation modifiedSubtract = null;
-
-  private final BigDecimalBinaryArithmeticOperation modifiedMultiply = null;
-
-  private final BigDecimalBinaryArithmeticOperation modifiedDivide = null;
-
-  private final BigDecimalBinaryArithmeticOperation modifiedModulo = null;
-
-  private final BigDecimalBinaryArithmeticOperation modifiedRemainderDivide = null;
-
-  private final BigDecimalBooleanComparison modifiedEquals = null;
-
-  private final BigDecimalBooleanComparison modifiedNotEquals = null;
-
-  private final BigDecimalBooleanComparison modifiedLessThan = null;
-
-  private final BigDecimalBooleanComparison modifiedGreaterThan = null;
-
-  private final BigDecimalBooleanComparison modifiedLessThanOrEquals = null;
-
-  private final BigDecimalBooleanComparison modifiedGreaterThanOrEquals = null;
+  private volatile BigDecimalBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile BigDecimalBooleanComparison modifiedEquals = null;
+  private volatile BigDecimalBooleanComparison modifiedNotEquals = null;
+  private volatile BigDecimalBooleanComparison modifiedLessThan = null;
+  private volatile BigDecimalBooleanComparison modifiedGreaterThan = null;
+  private volatile BigDecimalBooleanComparison modifiedLessThanOrEquals = null;
+  private volatile BigDecimalBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 
   private final BigDecimalBinaryArithmeticOperation add = new Add();
-
   private final BigDecimalBinaryArithmeticOperation subtract = new Subtract();
-
   private final BigDecimalBinaryArithmeticOperation multiply = new Multiply();
-
   private final BigDecimalBinaryArithmeticOperation divide = new Divide();
-
   private final BigDecimalBinaryArithmeticOperation modulo = new Modulo();
-
   private final BigDecimalBinaryArithmeticOperation remainderDivide = null;
 
   private final BigDecimalBooleanComparison equals = new Equals();
-
   private final BigDecimalBooleanComparison notEquals = new NotEquals();
-
   private final BigDecimalBooleanComparison lessThan = new LessThan();
-
   private final BigDecimalBooleanComparison greaterThan = new GreaterThan();
-
   private final BigDecimalBooleanComparison lessThanOrEquals = new LessThanOrEquals();
-
   private final BigDecimalBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public BigDecimalMetaClassImpl() {

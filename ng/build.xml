@@ -5,6 +5,7 @@
     </description>
   <!-- set global properties for this build -->
   <property name="src.dir" location="src"/>
+  <property name="gen.dir" location="../NgSourceGenerator/generated"/>
   <property name="unitTests.dir" location="tests"/>
   <property name="build.dir" location="build"/>
   <property name="dist.dir"  location="dist"/>
@@ -41,8 +42,10 @@
   </target>
 
   <target name="compile" depends="init" description="compile the source " >
-    <!-- Compile the java code from ${src.dir} into ${build.dir} -->
-    <javac srcdir="${src.dir}" destdir="${build.dir}" debug="yes">
+    <!-- Compile the java code from ${src.dir} and ${gen.dir} into ${build.dir} -->
+    <javac destdir="${build.dir}" debug="yes">
+      <src path="${src.dir}"/>
+      <src path="${gen.dir}"/>
       <classpath refid="cobertura.classpath" />
     </javac>
     <!-- Compile the Unit Tests from ${unitTests.dir} into ${tmp.dir} -->

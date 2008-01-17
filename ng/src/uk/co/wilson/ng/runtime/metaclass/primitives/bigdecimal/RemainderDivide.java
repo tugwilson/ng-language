@@ -79,39 +79,39 @@ public class RemainderDivide extends BaseBinaryOperation implements BigDecimalBi
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final char rhs) {
-    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs));
+    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final byte rhs) {
-    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs));
+    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final short rhs) {
-    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs));
+    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final int rhs) {
-    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs));
+    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final long rhs) {
-    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs));
+    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final float rhs) {
-    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs));
+    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final double rhs) {
-    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs));
+    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs))[1];
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final BigInteger rhs) {
-    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs.longValue()));
+    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs.longValue()))[1];
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final BigDecimal rhs) {
-    return lhs.divideAndRemainder(rhs);
+    return lhs.divideAndRemainder(rhs)[1];
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigDecimal lhs, final char rhs) {

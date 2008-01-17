@@ -10,35 +10,35 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerMetaClass;
 
 public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigIntegerMetaClass {
 
-  private final BigIntegerBinaryArithmeticOperation modifiedAdd = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedSubtract = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedMultiply = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedDivide = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedModulo = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedAdd = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedSubtract = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedMultiply = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedDivide = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedModulo = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedRemainderDivide = null;
 
-  private final BigIntegerBooleanComparison modifiedEquals = null;
-  private final BigIntegerBooleanComparison modifiedNotEquals = null;
-  private final BigIntegerBooleanComparison modifiedLessThan = null;
-  private final BigIntegerBooleanComparison modifiedGreaterThan = null;
-  private final BigIntegerBooleanComparison modifiedLessThanOrEquals = null;
-  private final BigIntegerBooleanComparison modifiedGreaterThanOrEquals = null;
+  private volatile BigIntegerBooleanComparison modifiedEquals = null;
+  private volatile BigIntegerBooleanComparison modifiedNotEquals = null;
+  private volatile BigIntegerBooleanComparison modifiedLessThan = null;
+  private volatile BigIntegerBooleanComparison modifiedGreaterThan = null;
+  private volatile BigIntegerBooleanComparison modifiedLessThanOrEquals = null;
+  private volatile BigIntegerBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 
   private final BigIntegerBinaryArithmeticOperation add = new Add();
-  private final BigIntegerBinaryArithmeticOperation subtract = null;
-  private final BigIntegerBinaryArithmeticOperation multiply = null;
-  private final BigIntegerBinaryArithmeticOperation divide = null;
-  private final BigIntegerBinaryArithmeticOperation modulo = null;
-  private final BigIntegerBinaryArithmeticOperation remainderDivide = null;
+  private final BigIntegerBinaryArithmeticOperation subtract = new Subtract();
+  private final BigIntegerBinaryArithmeticOperation multiply = new Multiply();
+  private final BigIntegerBinaryArithmeticOperation divide = new Divide();
+  private final BigIntegerBinaryArithmeticOperation modulo = new Modulo();
+  private final BigIntegerBinaryArithmeticOperation remainderDivide = new RemainderDivide();
 
   private final BigIntegerBooleanComparison equals = new Equals();
-  private final BigIntegerBooleanComparison notEquals = null;
-  private final BigIntegerBooleanComparison lessThan = null;
-  private final BigIntegerBooleanComparison greaterThan = null;
-  private final BigIntegerBooleanComparison lessThanOrEquals = null;
-  private final BigIntegerBooleanComparison greaterThanOrEquals = null;
+  private final BigIntegerBooleanComparison notEquals = new NotEquals();
+  private final BigIntegerBooleanComparison lessThan = new LessThan();
+  private final BigIntegerBooleanComparison greaterThan = new GreaterThan();
+  private final BigIntegerBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+  private final BigIntegerBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public BigIntegerMetaClassImpl() {
     super(BigInteger.class);
