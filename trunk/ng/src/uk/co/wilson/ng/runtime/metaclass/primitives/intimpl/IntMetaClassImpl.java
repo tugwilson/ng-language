@@ -8,35 +8,35 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.IntMetaClass;
 
 public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
 
-  private final IntBinaryArithmeticOperation modifiedAdd = null;
-  private final IntBinaryArithmeticOperation modifiedSubtract = null;
-  private final IntBinaryArithmeticOperation modifiedMultiply = null;
-  private final IntBinaryArithmeticOperation modifiedDivide = null;
-  private final IntBinaryArithmeticOperation modifiedModulo = null;
-  private final IntBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile IntBinaryArithmeticOperation modifiedAdd = null;
+  private volatile IntBinaryArithmeticOperation modifiedSubtract = null;
+  private volatile IntBinaryArithmeticOperation modifiedMultiply = null;
+  private volatile IntBinaryArithmeticOperation modifiedDivide = null;
+  private volatile IntBinaryArithmeticOperation modifiedModulo = null;
+  private volatile IntBinaryArithmeticOperation modifiedRemainderDivide = null;
 
-  private final IntBooleanComparison modifiedEquals = null;
-  private final IntBooleanComparison modifiedNotEquals = null;
-  private final IntBooleanComparison modifiedLessThan = null;
-  private final IntBooleanComparison modifiedGreaterThan = null;
-  private final IntBooleanComparison modifiedLessThanOrEquals = null;
-  private final IntBooleanComparison modifiedGreaterThanOrEquals = null;
+  private volatile IntBooleanComparison modifiedEquals = null;
+  private volatile IntBooleanComparison modifiedNotEquals = null;
+  private volatile IntBooleanComparison modifiedLessThan = null;
+  private volatile IntBooleanComparison modifiedGreaterThan = null;
+  private volatile IntBooleanComparison modifiedLessThanOrEquals = null;
+  private volatile IntBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 
   private final IntBinaryArithmeticOperation add = new Add();
-  private final IntBinaryArithmeticOperation subtract = null;
-  private final IntBinaryArithmeticOperation multiply = null;
-  private final IntBinaryArithmeticOperation divide = null;
-  private final IntBinaryArithmeticOperation modulo = null;
+  private final IntBinaryArithmeticOperation subtract = new Subtract();
+  private final IntBinaryArithmeticOperation multiply = new Multiply();
+  private final IntBinaryArithmeticOperation divide = new Divide();
+  private final IntBinaryArithmeticOperation modulo = new Modulo();
   private final IntBinaryArithmeticOperation remainderDivide = null;
 
   private final IntBooleanComparison equals = new Equals();
-  private final IntBooleanComparison notEquals = null;
-  private final IntBooleanComparison lessThan = null;
-  private final IntBooleanComparison greaterThan = null;
-  private final IntBooleanComparison lessThanOrEquals = null;
-  private final IntBooleanComparison greaterThanOrEquals = null;
+  private final IntBooleanComparison notEquals = new NotEquals();
+  private final IntBooleanComparison lessThan = new LessThan();
+  private final IntBooleanComparison greaterThan = new GreaterThan();
+  private final IntBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+  private final IntBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public IntMetaClassImpl() {
     super(int.class);

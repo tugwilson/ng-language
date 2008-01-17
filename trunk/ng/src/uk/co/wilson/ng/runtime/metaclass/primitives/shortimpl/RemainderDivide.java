@@ -122,11 +122,15 @@ public class RemainderDivide extends BaseBinaryOperation implements ShortBinaryA
   }
 
   public float doFloatApply(final ThreadContext tc, final short lhs, final float rhs) {
-    throw new NotImplementedException();
+    final double tmp = lhs / rhs;
+    
+    return (float)(tmp - Math.floor(tmp));
   }
 
   public double doDoubleApply(final ThreadContext tc, final short lhs, final double rhs) {
-    throw new NotImplementedException();
+    final double tmp = lhs / rhs;
+    
+    return tmp - Math.floor(tmp);
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final short lhs, final BigInteger rhs) {

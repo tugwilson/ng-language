@@ -2,10 +2,6 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl;
 
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ByteMetaClass;
