@@ -53,11 +53,11 @@ public class Multiply extends BaseBinaryOperation implements CharBinaryArithmeti
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return lhs.multiply(BigInteger.valueOf(tc.unwrapToChar(rhs)));
+    return tc.multiply().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return lhs.multiply(new BigDecimal(tc.unwrapToChar(rhs)));
+    return tc.multiply().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final char rhs) {

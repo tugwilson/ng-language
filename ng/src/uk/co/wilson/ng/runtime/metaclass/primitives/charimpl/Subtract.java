@@ -53,11 +53,11 @@ public class Subtract extends BaseBinaryOperation implements CharBinaryArithmeti
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return lhs.subtract(BigInteger.valueOf(tc.unwrapToChar(rhs)));
+    return tc.subtract().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return lhs.subtract(new BigDecimal(tc.unwrapToChar(rhs)));
+    return tc.subtract().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final char rhs) {

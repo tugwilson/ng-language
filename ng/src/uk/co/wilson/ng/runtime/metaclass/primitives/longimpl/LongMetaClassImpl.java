@@ -8,35 +8,35 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.LongMetaClass;
 
 public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
 
-  private final LongBinaryArithmeticOperation modifiedAdd = null;
-  private final LongBinaryArithmeticOperation modifiedSubtract = null;
-  private final LongBinaryArithmeticOperation modifiedMultiply = null;
-  private final LongBinaryArithmeticOperation modifiedDivide = null;
-  private final LongBinaryArithmeticOperation modifiedModulo = null;
-  private final LongBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile LongBinaryArithmeticOperation modifiedAdd = null;
+  private volatile LongBinaryArithmeticOperation modifiedSubtract = null;
+  private volatile LongBinaryArithmeticOperation modifiedMultiply = null;
+  private volatile LongBinaryArithmeticOperation modifiedDivide = null;
+  private volatile LongBinaryArithmeticOperation modifiedModulo = null;
+  private volatile LongBinaryArithmeticOperation modifiedRemainderDivide = null;
 
-  private final LongBooleanComparison modifiedEquals = null;
-  private final LongBooleanComparison modifiedNotEquals = null;
-  private final LongBooleanComparison modifiedLessThan = null;
-  private final LongBooleanComparison modifiedGreaterThan = null;
-  private final LongBooleanComparison modifiedLessThanOrEquals = null;
-  private final LongBooleanComparison modifiedGreaterThanOrEquals = null;
+  private volatile LongBooleanComparison modifiedEquals = null;
+  private volatile LongBooleanComparison modifiedNotEquals = null;
+  private volatile LongBooleanComparison modifiedLessThan = null;
+  private volatile LongBooleanComparison modifiedGreaterThan = null;
+  private volatile LongBooleanComparison modifiedLessThanOrEquals = null;
+  private volatile LongBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 
   private final LongBinaryArithmeticOperation add = new Add();
-  private final LongBinaryArithmeticOperation subtract = null;
-  private final LongBinaryArithmeticOperation multiply = null;
-  private final LongBinaryArithmeticOperation divide = null;
-  private final LongBinaryArithmeticOperation modulo = null;
+  private final LongBinaryArithmeticOperation subtract = new Subtract();
+  private final LongBinaryArithmeticOperation multiply = new Multiply();
+  private final LongBinaryArithmeticOperation divide = new Divide();
+  private final LongBinaryArithmeticOperation modulo = new Modulo();
   private final LongBinaryArithmeticOperation remainderDivide = null;
 
   private final LongBooleanComparison equals = new Equals();
-  private final LongBooleanComparison notEquals = null;
-  private final LongBooleanComparison lessThan = null;
-  private final LongBooleanComparison greaterThan = null;
-  private final LongBooleanComparison lessThanOrEquals = null;
-  private final LongBooleanComparison greaterThanOrEquals = null;
+  private final LongBooleanComparison notEquals = new NotEquals();
+  private final LongBooleanComparison lessThan = new LessThan();
+  private final LongBooleanComparison greaterThan = new GreaterThan();
+  private final LongBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+  private final LongBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public LongMetaClassImpl() {
     super(long.class);
