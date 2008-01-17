@@ -7,45 +7,49 @@ import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.CharBinaryArithmeticOperation;
 
-class Add extends BaseBinaryOperation implements CharBinaryArithmeticOperation {
+/**
+ * @author John
+ *
+ */
+public class Modulo extends BaseBinaryOperation implements CharBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.add().apply(tc.unwrapToChar(lhs), rhs);
+    return tc.modulo().apply(tc.unwrapToChar(lhs), rhs);
   }
 
   public Object doApply(final ThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.add().apply(tc.unwrapToChar(lhs), rhsMetaClass, rhs);
+    return tc.modulo().apply(tc.unwrapToChar(lhs), rhsMetaClass, rhs);
   }
 
   public Object doReverseApply(final ThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.add().apply(lhs, tc.unwrapToChar(rhs));
+    return tc.modulo().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final Object rhs) {
-    return tc.add().apply(lhs, tc.unwrapToChar(rhs));
+    return tc.modulo().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final Object rhs) {
-    return tc.add().apply(lhs, tc.unwrapToChar(rhs));
+    return tc.modulo().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final short lhs, final Object rhs) {
-    return tc.add().apply(lhs, tc.unwrapToChar(rhs));
+    return tc.modulo().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final Object rhs) {
-    return tc.add().apply(lhs, tc.unwrapToChar(rhs));
+    return tc.modulo().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final long lhs, final Object rhs) {
-    return tc.add().apply(lhs, tc.unwrapToChar(rhs));
+    return tc.modulo().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final Object rhs) {
-    return tc.add().apply(lhs, tc.unwrapToChar(rhs));
+    return tc.modulo().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final double lhs, final Object rhs) {
-    return tc.add().apply(lhs, tc.unwrapToChar(rhs));
+    return tc.modulo().apply(lhs, tc.unwrapToChar(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final Object rhs) {
@@ -57,31 +61,31 @@ class Add extends BaseBinaryOperation implements CharBinaryArithmeticOperation {
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final char rhs) {
-    return tc.wrap(lhs + rhs);
+    return tc.modulo().apply(lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final byte rhs) {
-    return tc.wrap(lhs + rhs);
+    return tc.modulo().apply(lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final short rhs) {
-    return tc.wrap(lhs + rhs);
+    return tc.modulo().apply(lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final int rhs) {
-    return tc.wrap(lhs + rhs);
+    return tc.modulo().apply(lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final long rhs) {
-    return tc.wrap(lhs + rhs);
+    return tc.modulo().apply(lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final float rhs) {
-    return tc.wrap(lhs + rhs);
+    return tc.modulo().apply(lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final double rhs) {
-    return tc.wrap(lhs + rhs);
+    return tc.modulo().apply(lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final BigInteger rhs) {
