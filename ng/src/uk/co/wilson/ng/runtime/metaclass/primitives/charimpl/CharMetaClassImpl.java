@@ -8,19 +8,19 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.CharMetaClass;
 
 public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
 
-  private volatile CharBinaryArithmeticOperation modifiedAdd = null;
-  private volatile CharBinaryArithmeticOperation modifiedSubtract = null;
-  private volatile CharBinaryArithmeticOperation modifiedMultiply = null;
-  private volatile CharBinaryArithmeticOperation modifiedDivide = null;
-  private volatile CharBinaryArithmeticOperation modifiedModulo = null;
-  private volatile CharBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private final CharBinaryArithmeticOperation modifiedAdd = null;
+  private final CharBinaryArithmeticOperation modifiedSubtract = null;
+  private final CharBinaryArithmeticOperation modifiedMultiply = null;
+  private final CharBinaryArithmeticOperation modifiedDivide = null;
+  private final CharBinaryArithmeticOperation modifiedModulo = null;
+  private final CharBinaryArithmeticOperation modifiedRemainderDivide = null;
 
-  private volatile CharBooleanComparison modifiedEquals = null;
-  private volatile CharBooleanComparison modifiedNotEquals = null;
-  private volatile CharBooleanComparison modifiedLessThan = null;
-  private volatile CharBooleanComparison modifiedGreaterThan = null;
-  private volatile CharBooleanComparison modifiedLessThanOrEquals = null;
-  private volatile CharBooleanComparison modifiedGreaterThanOrEquals = null;
+  private final CharBooleanComparison modifiedEquals = null;
+  private final CharBooleanComparison modifiedNotEquals = null;
+  private final CharBooleanComparison modifiedLessThan = null;
+  private final CharBooleanComparison modifiedGreaterThan = null;
+  private final CharBooleanComparison modifiedLessThanOrEquals = null;
+  private final CharBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 

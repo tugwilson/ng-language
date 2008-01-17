@@ -83,13 +83,13 @@ public class RemainderDivide extends BaseBinaryOperation implements IntBinaryAri
 
   public Object doApply(final ThreadContext tc, final int lhs, final float rhs) {
   final double tmp = lhs / rhs;
-    
+
     return tc.wrap((float)(tmp - Math.floor(tmp)));
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final double rhs) {
   final double tmp = lhs / rhs;
-    
+
     return tc.wrap(tmp - Math.floor(tmp));
   }
 
@@ -123,13 +123,13 @@ public class RemainderDivide extends BaseBinaryOperation implements IntBinaryAri
 
   public float doFloatApply(final ThreadContext tc, final int lhs, final float rhs) {
     final double tmp = lhs / rhs;
-    
+
     return (float)(tmp - Math.floor(tmp));
   }
 
   public double doDoubleApply(final ThreadContext tc, final int lhs, final double rhs) {
     final double tmp = lhs / rhs;
-    
+
     return tmp - Math.floor(tmp);
   }
 

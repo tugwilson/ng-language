@@ -138,29 +138,29 @@ public class BaseConversion implements Coversion {
 
   public Object asType(final MetaClass metaClass, final Object instance, final Object type) {
     Object result;
-    
+
     if (type instanceof Class) {
       try {
         if (type == boolean.class) {
           return this.tc.wrap(metaClass.convert().doAsBoolean(this.tc, instance));
         } else if (type == char.class) {
-          return this.tc.wrap(metaClass.convert().doAsChar(this.tc, instance));         
+          return this.tc.wrap(metaClass.convert().doAsChar(this.tc, instance));
         } else if (type == byte.class) {
-          return this.tc.wrap(metaClass.convert().doAsByte(this.tc, instance));         
+          return this.tc.wrap(metaClass.convert().doAsByte(this.tc, instance));
         } else if (type == short.class) {
-          return this.tc.wrap(metaClass.convert().doAsShort(this.tc, instance));         
+          return this.tc.wrap(metaClass.convert().doAsShort(this.tc, instance));
         } else if (type == int.class) {
-          return this.tc.wrap(metaClass.convert().doAsInt(this.tc, instance));         
+          return this.tc.wrap(metaClass.convert().doAsInt(this.tc, instance));
         } else if (type == long.class) {
-          return this.tc.wrap(metaClass.convert().doAsLong(this.tc, instance));         
+          return this.tc.wrap(metaClass.convert().doAsLong(this.tc, instance));
         } else if (type == float.class) {
-          return this.tc.wrap(metaClass.convert().doAsFloat(this.tc, instance));         
+          return this.tc.wrap(metaClass.convert().doAsFloat(this.tc, instance));
         } else if (type == double.class) {
-          return this.tc.wrap(metaClass.convert().doAsDouble(this.tc, instance));         
+          return this.tc.wrap(metaClass.convert().doAsDouble(this.tc, instance));
         } else if (type == BigInteger.class) {
-          return metaClass.convert().doAsBigInteger(this.tc, instance);         
+          return metaClass.convert().doAsBigInteger(this.tc, instance);
         } else if (type == BigDecimal.class) {
-          return metaClass.convert().doAsBigDecimal(this.tc, instance);         
+          return metaClass.convert().doAsBigDecimal(this.tc, instance);
         } else {
           result = metaClass.convert().doAsType(this.tc, instance, (Class<?>)type);
         }

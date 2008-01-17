@@ -8,19 +8,19 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.IntMetaClass;
 
 public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
 
-  private volatile IntBinaryArithmeticOperation modifiedAdd = null;
-  private volatile IntBinaryArithmeticOperation modifiedSubtract = null;
-  private volatile IntBinaryArithmeticOperation modifiedMultiply = null;
-  private volatile IntBinaryArithmeticOperation modifiedDivide = null;
-  private volatile IntBinaryArithmeticOperation modifiedModulo = null;
-  private volatile IntBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private final IntBinaryArithmeticOperation modifiedAdd = null;
+  private final IntBinaryArithmeticOperation modifiedSubtract = null;
+  private final IntBinaryArithmeticOperation modifiedMultiply = null;
+  private final IntBinaryArithmeticOperation modifiedDivide = null;
+  private final IntBinaryArithmeticOperation modifiedModulo = null;
+  private final IntBinaryArithmeticOperation modifiedRemainderDivide = null;
 
-  private volatile IntBooleanComparison modifiedEquals = null;
-  private volatile IntBooleanComparison modifiedNotEquals = null;
-  private volatile IntBooleanComparison modifiedLessThan = null;
-  private volatile IntBooleanComparison modifiedGreaterThan = null;
-  private volatile IntBooleanComparison modifiedLessThanOrEquals = null;
-  private volatile IntBooleanComparison modifiedGreaterThanOrEquals = null;
+  private final IntBooleanComparison modifiedEquals = null;
+  private final IntBooleanComparison modifiedNotEquals = null;
+  private final IntBooleanComparison modifiedLessThan = null;
+  private final IntBooleanComparison modifiedGreaterThan = null;
+  private final IntBooleanComparison modifiedLessThanOrEquals = null;
+  private final IntBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 

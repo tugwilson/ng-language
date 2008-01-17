@@ -20,7 +20,7 @@ public interface Node {
    * @return
    */
   Object evaluate(Object instance, MetaClass metaClass, ThreadContext tc);
-  
+
   /**
    * @return
    */
@@ -40,12 +40,12 @@ public interface Node {
    * @return
    */
   Assert newAssert();
-  
+
   /**
    * @return
    */
   BigDecimalConstant newBigDecimalConstant(BigDecimal value);
-  
+
   /**
    * @return
    */
@@ -60,7 +60,7 @@ public interface Node {
    * @return
    */
   Block newBlock();
-  
+
   /**
    * @return
    */
@@ -70,12 +70,12 @@ public interface Node {
    * @return
    */
   Break newBreak();
-  
+
   /**
    * @return
    */
   ByteConstant newByteConstant(byte value);
-  
+
   /**
    * @return
    */
@@ -85,12 +85,12 @@ public interface Node {
    * @return
    */
   Catch newCatch();
-  
+
   /**
    * @return
    */
   CharConstant newCharConstant(char value);
-  
+
   /**
    * @return
    */
@@ -105,7 +105,7 @@ public interface Node {
    * @return
    */
   CompilationUnit newCompilationUnit();
-  
+
   /**
    * @return
    */
@@ -130,7 +130,7 @@ public interface Node {
    * @return
    */
   Continue newContinue();
-  
+
   /**
    * @return
    */
@@ -145,7 +145,7 @@ public interface Node {
    * @return
    */
   DoubleConstant newDoubleConstant(double value);
-  
+
   /**
    * @return
    */
@@ -160,12 +160,12 @@ public interface Node {
    * @return
    */
   Finally newFinally();
-  
+
   /**
    * @return
    */
   FloatConstant newFloatConstant(float value);
-  
+
   /**
    * @return
    */
@@ -190,7 +190,7 @@ public interface Node {
    * @return
    */
   IntegerConstant newIntegerConstant(int value);
-  
+
   /**
    * @return
    */

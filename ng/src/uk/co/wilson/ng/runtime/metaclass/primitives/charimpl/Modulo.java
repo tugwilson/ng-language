@@ -89,46 +89,46 @@ public class Modulo extends BaseBinaryOperation implements CharBinaryArithmeticO
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final BigInteger rhs) {
-    return BigInteger.valueOf(lhs).add(rhs);
+    return BigInteger.valueOf(lhs).divide(rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs).add(rhs);
+    return BigDecimal.valueOf(lhs).divideToIntegralValue(rhs);
   }
 
   public int doIntApply(final ThreadContext tc, final char lhs, final char rhs) {
-    return lhs + rhs;
+    return lhs / rhs;
   }
 
   public int doIntApply(final ThreadContext tc, final char lhs, final byte rhs) {
-    return lhs + rhs;
+    return lhs / rhs;
   }
 
   public int doIntApply(final ThreadContext tc, final char lhs, final short rhs) {
-    return lhs + rhs;
+    return lhs / rhs;
   }
 
   public int doIntApply(final ThreadContext tc, final char lhs, final int rhs) {
-    return lhs + rhs;
+    return lhs / rhs;
   }
 
   public long doLongApply(final ThreadContext tc, final char lhs, final long rhs) {
-    return lhs + rhs;
+    return lhs / rhs;
   }
 
   public float doFloatApply(final ThreadContext tc, final char lhs, final float rhs) {
-    return lhs + rhs;
+    return (float)Math.floor(lhs / rhs);
   }
 
   public double doDoubleApply(final ThreadContext tc, final char lhs, final double rhs) {
-    return lhs + rhs;
+    return Math.floor(lhs / rhs);
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final char lhs, final BigInteger rhs) {
-    return BigInteger.valueOf(lhs).add(rhs);
+    return BigInteger.valueOf(lhs).divide(rhs);
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final char lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs).add(rhs);
+    return BigDecimal.valueOf(lhs).divideToIntegralValue(rhs);
   }
 }

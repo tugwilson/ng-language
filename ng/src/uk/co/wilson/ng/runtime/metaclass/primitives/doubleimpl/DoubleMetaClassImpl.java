@@ -25,18 +25,18 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
   private final Conversion convert = new Convert();
 
   private final DoubleBinaryArithmeticOperation add = new Add();
-  private final DoubleBinaryArithmeticOperation subtract = null;
-  private final DoubleBinaryArithmeticOperation multiply = null;
-  private final DoubleBinaryArithmeticOperation divide = null;
-  private final DoubleBinaryArithmeticOperation modulo = null;
+  private final DoubleBinaryArithmeticOperation subtract = new Subtract();
+  private final DoubleBinaryArithmeticOperation multiply = new Multiply();
+  private final DoubleBinaryArithmeticOperation divide = new Divide();
+  private final DoubleBinaryArithmeticOperation modulo = new Modulo();
   private final DoubleBinaryArithmeticOperation remainderDivide = null;
 
   private final DoubleBooleanComparison equals = new Equals();
-  private final DoubleBooleanComparison notEquals = null;
-  private final DoubleBooleanComparison lessThan = null;
-  private final DoubleBooleanComparison greaterThan = null;
-  private final DoubleBooleanComparison lessThanOrEquals = null;
-  private final DoubleBooleanComparison greaterThanOrEquals = null;
+  private final DoubleBooleanComparison notEquals = new NotEquals();
+  private final DoubleBooleanComparison lessThan = new LessThan();
+  private final DoubleBooleanComparison greaterThan = new GreaterThan();
+  private final DoubleBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+  private final DoubleBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public DoubleMetaClassImpl() {
     super(double.class);

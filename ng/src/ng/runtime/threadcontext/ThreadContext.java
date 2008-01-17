@@ -51,11 +51,11 @@ public abstract class ThreadContext {
   public abstract double unwrapToDouble(Object wrapped);
 
   public abstract Misc misc();
-  
+
   public abstract InterpreterSupport interpreterSupport();
-  
+
   public abstract ValueAccess propertyAccess();
-  
+
   public abstract ValueAccess fieldAccess();
 
   public abstract Coversion convert();

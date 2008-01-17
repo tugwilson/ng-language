@@ -83,13 +83,13 @@ public class RemainderDivide extends BaseBinaryOperation implements CharBinaryAr
 
   public Object doApply(final ThreadContext tc, final char lhs, final float rhs) {
   final double tmp = lhs / rhs;
-    
+
     return tc.wrap((float)(tmp - Math.floor(tmp)));
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final double rhs) {
   final double tmp = lhs / rhs;
-    
+
     return tc.wrap(tmp - Math.floor(tmp));
   }
 

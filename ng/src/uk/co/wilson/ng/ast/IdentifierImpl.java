@@ -12,11 +12,11 @@ public class IdentifierImpl extends NodeImpl implements Identifier {
     this.name = name;
     this.type = type;
   }
-  
+
   public IdentifierImpl(final String name) {
     this(name, null);
   }
-  
+
   public String getName() {
     return this.name;
   }
@@ -29,7 +29,7 @@ public class IdentifierImpl extends NodeImpl implements Identifier {
     return this.type != null;
   }
 
-  public Object evaluate(Object instance, MetaClass metaClass, ThreadContext tc) {
+  public Object evaluate(final Object instance, final MetaClass metaClass, final ThreadContext tc) {
     if (tc.interpreterSupport().isLocalVariable(this.name)) {
       return tc.interpreterSupport().getLocalVariable(this.name);
     } else {

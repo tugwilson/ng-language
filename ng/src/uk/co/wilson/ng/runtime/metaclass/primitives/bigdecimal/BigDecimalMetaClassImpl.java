@@ -10,19 +10,19 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalMetaClass;
 
 public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimalMetaClass {
 
-  private volatile BigDecimalBinaryArithmeticOperation modifiedAdd = null;
-  private volatile BigDecimalBinaryArithmeticOperation modifiedSubtract = null;
-  private volatile BigDecimalBinaryArithmeticOperation modifiedMultiply = null;
-  private volatile BigDecimalBinaryArithmeticOperation modifiedDivide = null;
-  private volatile BigDecimalBinaryArithmeticOperation modifiedModulo = null;
+  private final BigDecimalBinaryArithmeticOperation modifiedAdd = null;
+  private final BigDecimalBinaryArithmeticOperation modifiedSubtract = null;
+  private final BigDecimalBinaryArithmeticOperation modifiedMultiply = null;
+  private final BigDecimalBinaryArithmeticOperation modifiedDivide = null;
+  private final BigDecimalBinaryArithmeticOperation modifiedModulo = null;
 
-  private volatile BigDecimalBinaryArithmeticOperation modifiedRemainderDivide = null;
-  private volatile BigDecimalBooleanComparison modifiedEquals = null;
-  private volatile BigDecimalBooleanComparison modifiedNotEquals = null;
-  private volatile BigDecimalBooleanComparison modifiedLessThan = null;
-  private volatile BigDecimalBooleanComparison modifiedGreaterThan = null;
-  private volatile BigDecimalBooleanComparison modifiedLessThanOrEquals = null;
-  private volatile BigDecimalBooleanComparison modifiedGreaterThanOrEquals = null;
+  private final BigDecimalBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private final BigDecimalBooleanComparison modifiedEquals = null;
+  private final BigDecimalBooleanComparison modifiedNotEquals = null;
+  private final BigDecimalBooleanComparison modifiedLessThan = null;
+  private final BigDecimalBooleanComparison modifiedGreaterThan = null;
+  private final BigDecimalBooleanComparison modifiedLessThanOrEquals = null;
+  private final BigDecimalBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 
