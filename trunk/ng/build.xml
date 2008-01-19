@@ -134,7 +134,14 @@
 			Generate an XML file containing the coverage data using
 			the "srcdir" attribute.
 		-->
-		<cobertura-report srcdir="${src.dir}:${generated.dir}" destdir="${coverage.xml.dir}" format="xml" />
+		<cobertura-report srcdir="${src.dir}:${generated.dir}" destdir="${coverage.xml.dir}" format="xml">
+			<fileset dir="${src.dir}">
+				<include name="**/*.java"/>
+			</fileset>
+			<fileset dir="${gen.dir}">
+				<include name="**/*.java"/>
+			</fileset>
+		</cobertura-report>
 	</target>
 
 	<target name="alternate-coverage-report">
@@ -144,6 +151,9 @@
 		-->
 		<cobertura-report destdir="${coverage.html.dir}">
 			<fileset dir="${src.dir}">
+				<include name="**/*.java"/>
+			</fileset>
+			<fileset dir="${gen.dir}">
 				<include name="**/*.java"/>
 			</fileset>
 		</cobertura-report>

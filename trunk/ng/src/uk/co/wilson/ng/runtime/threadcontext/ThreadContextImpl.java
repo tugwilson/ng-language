@@ -38,6 +38,14 @@ public class ThreadContextImpl extends ThreadContext {
   private static final Map<Class<?>, MetaClass> registry = new HashMap<Class<?>, MetaClass>();
 
   static {
+    registry.put(boolean.class, PrimitiveMetaClasses.getBooleanMetaClass());
+    registry.put(byte.class, PrimitiveMetaClasses.getByteMetaClass());
+    registry.put(char.class, PrimitiveMetaClasses.getCharMetaClass());
+    registry.put(short.class, PrimitiveMetaClasses.getShortMetaClass());
+    registry.put(int.class, PrimitiveMetaClasses.getIntMetaClass());
+    registry.put(long.class, PrimitiveMetaClasses.getLongMetaClass());
+    registry.put(float.class, PrimitiveMetaClasses.getFloatMetaClass());
+    registry.put(double.class, PrimitiveMetaClasses.getDoubleMetaClass());
     registry.put(BigInteger.class, PrimitiveMetaClasses.getBigIntegerMetaClass());
     registry.put(BigDecimal.class, PrimitiveMetaClasses.getBigDecimalMetaClass());
   }
