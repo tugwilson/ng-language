@@ -89,7 +89,7 @@ public class Multiply extends BaseBinaryOperation implements FloatBinaryArithmet
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final BigInteger rhs) {
-    return tc.wrap(BigDecimal.valueOf(lhs).multiply(new BigDecimal(rhs.toString())).floatValue());
+    return tc.wrap(lhs * rhs.floatValue());
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final BigDecimal rhs) {
@@ -125,7 +125,7 @@ public class Multiply extends BaseBinaryOperation implements FloatBinaryArithmet
   }
 
   public float doFloatApply(final ThreadContext tc, final float lhs, final BigInteger rhs) {
-    return BigDecimal.valueOf(lhs).multiply(new BigDecimal(rhs.toString())).floatValue();
+    return lhs * rhs.floatValue();
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final float lhs, final BigDecimal rhs) {

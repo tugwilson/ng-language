@@ -89,7 +89,7 @@ public class Subtract extends BaseBinaryOperation implements DoubleBinaryArithme
   }
 
   public Object doApply(final ThreadContext tc, final double lhs, final BigInteger rhs) {
-    return tc.wrap(BigDecimal.valueOf(lhs).subtract(new BigDecimal(rhs.toString())).doubleValue());
+    return tc.wrap(lhs - rhs.doubleValue());
   }
 
   public Object doApply(final ThreadContext tc, final double lhs, final BigDecimal rhs) {
@@ -125,7 +125,7 @@ public class Subtract extends BaseBinaryOperation implements DoubleBinaryArithme
   }
 
   public double doDoubleApply(final ThreadContext tc, final double lhs, final BigInteger rhs) {
-    return BigDecimal.valueOf(lhs).subtract(new BigDecimal(rhs.toString())).doubleValue();
+    return lhs - rhs.doubleValue();
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final double lhs, final BigDecimal rhs) {

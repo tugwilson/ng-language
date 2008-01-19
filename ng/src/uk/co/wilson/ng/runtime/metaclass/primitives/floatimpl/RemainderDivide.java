@@ -63,47 +63,49 @@ public class RemainderDivide extends BaseBinaryOperation implements FloatBinaryA
   public Object doApply(final ThreadContext tc, final float lhs, final char rhs) {
   final double tmp = lhs / rhs;
 
-    return tc.wrap((float)(tmp - Math.floor(tmp)));
+  return tc.wrap((float)(lhs - Math.floor(tmp) * rhs));
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final byte rhs) {
   final double tmp = lhs / rhs;
 
-    return tc.wrap((float)(tmp - Math.floor(tmp)));
+    return tc.wrap((float)(lhs - Math.floor(tmp) * rhs));
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final short rhs) {
   final double tmp = lhs / rhs;
 
-    return tc.wrap((float)(tmp - Math.floor(tmp)));
+    return tc.wrap((float)(lhs - Math.floor(tmp) * rhs));
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final int rhs) {
   final double tmp = lhs / rhs;
 
-    return tc.wrap((float)(tmp - Math.floor(tmp)));
+    return tc.wrap((float)(lhs - Math.floor(tmp) * rhs));
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final long rhs) {
   final double tmp = lhs / rhs;
 
-    return tc.wrap((float)(tmp - Math.floor(tmp)));
+    return tc.wrap((float)(lhs - Math.floor(tmp) * rhs));
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final float rhs) {
   final double tmp = lhs / rhs;
 
-    return tc.wrap((float)(tmp - Math.floor(tmp)));
+    return tc.wrap((float)(lhs - Math.floor(tmp) * rhs));
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final double rhs) {
   final double tmp = lhs / rhs;
 
-    return tc.wrap(tmp - Math.floor(tmp));
+    return tc.wrap(lhs - Math.floor(tmp) * rhs);
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final BigInteger rhs) {
-    return tc.wrap(BigDecimal.valueOf(lhs).divideAndRemainder(new BigDecimal(rhs.toString()))[1].floatValue());
+  final double tmp = lhs / rhs.longValue();
+
+    return tc.wrap((float)(lhs - Math.floor(tmp) * rhs.longValue()));
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final BigDecimal rhs) {
@@ -113,47 +115,49 @@ public class RemainderDivide extends BaseBinaryOperation implements FloatBinaryA
   public float doFloatApply(final ThreadContext tc, final float lhs, final char rhs) {
   final double tmp = lhs / rhs;
 
-    return (float)(tmp - Math.floor(tmp));
+    return (float)(lhs - Math.floor(tmp) * rhs);
   }
 
   public float doFloatApply(final ThreadContext tc, final float lhs, final byte rhs) {
   final double tmp = lhs / rhs;
 
-    return (float)(tmp - Math.floor(tmp));
+    return (float)(lhs - Math.floor(tmp) * rhs);
   }
 
   public float doFloatApply(final ThreadContext tc, final float lhs, final short rhs) {
   final double tmp = lhs / rhs;
 
-    return (float)(tmp - Math.floor(tmp));
+    return (float)(lhs - Math.floor(tmp) * rhs);
   }
 
   public float doFloatApply(final ThreadContext tc, final float lhs, final int rhs) {
   final double tmp = lhs / rhs;
 
-    return (float)(tmp - Math.floor(tmp));
+    return (float)(lhs - Math.floor(tmp) * rhs);
   }
 
   public float doFloatApply(final ThreadContext tc, final float lhs, final long rhs) {
   final double tmp = lhs / rhs;
 
-    return (float)(tmp - Math.floor(tmp));
+    return (float)(lhs - Math.floor(tmp) * rhs);
   }
 
   public float doFloatApply(final ThreadContext tc, final float lhs, final float rhs) {
   final double tmp = lhs / rhs;
 
-    return (float)(tmp - Math.floor(tmp));
+    return (float)(lhs - Math.floor(tmp) * rhs);
   }
 
   public double doDoubleApply(final ThreadContext tc, final float lhs, final double rhs) {
   final double tmp = lhs / rhs;
 
-    return tmp - Math.floor(tmp);
+    return lhs - Math.floor(tmp) * rhs;
   }
 
   public float doFloatApply(final ThreadContext tc, final float lhs, final BigInteger rhs) {
-    return BigDecimal.valueOf(lhs).divideAndRemainder(new BigDecimal(rhs.toString()))[1].floatValue();
+  final double tmp = lhs / rhs.longValue();
+
+    return (float)(lhs - Math.floor(tmp) * rhs.longValue());
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final float lhs, final BigDecimal rhs) {

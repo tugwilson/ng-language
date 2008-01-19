@@ -5,7 +5,6 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import uk.co.wilson.ng.runtime.metaclass.primitives.IntBinaryArithmeticOperation;
 
 /**
@@ -54,83 +53,83 @@ public class RemainderDivide extends BaseBinaryOperation implements IntBinaryAri
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return lhs.add(BigInteger.valueOf(tc.unwrapToInt(rhs)));
+    return lhs.divideAndRemainder(BigInteger.valueOf(tc.unwrapToInt(rhs)))[1];
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return lhs.add(new BigDecimal(tc.unwrapToInt(rhs)));
+    return lhs.divideAndRemainder(new BigDecimal(tc.unwrapToInt(rhs)))[1];
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final char rhs) {
-    return BigDecimal.valueOf(lhs).divideAndRemainder(BigDecimal.valueOf(rhs))[1];
+    return tc.wrap(lhs - (lhs / rhs) * rhs);
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final byte rhs) {
-    return BigDecimal.valueOf(lhs).divideAndRemainder(BigDecimal.valueOf(rhs))[1];
+    return tc.wrap(lhs - (lhs / rhs) * rhs);
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final short rhs) {
-    return BigDecimal.valueOf(lhs).divideAndRemainder(BigDecimal.valueOf(rhs))[1];
+    return tc.wrap(lhs - (lhs / rhs) * rhs);
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final int rhs) {
-    return BigDecimal.valueOf(lhs).divideAndRemainder(BigDecimal.valueOf(rhs))[1];
+    return tc.wrap(lhs - (lhs / rhs) * rhs);
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final long rhs) {
-    return BigDecimal.valueOf(lhs).divideAndRemainder(BigDecimal.valueOf(rhs))[1];
+    return tc.wrap(lhs - (lhs / rhs) * rhs);
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final float rhs) {
   final double tmp = lhs / rhs;
 
-    return tc.wrap((float)(tmp - Math.floor(tmp)));
+    return tc.wrap((float)(lhs - Math.floor(tmp) * rhs));
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final double rhs) {
   final double tmp = lhs / rhs;
 
-    return tc.wrap(tmp - Math.floor(tmp));
+    return tc.wrap(lhs - Math.floor(tmp) * rhs);
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final BigInteger rhs) {
-    return BigInteger.valueOf(lhs).divideAndRemainder(rhs);
+    return BigInteger.valueOf(lhs).divideAndRemainder(rhs)[1];
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs).divideAndRemainder(rhs);
+    return BigDecimal.valueOf(lhs).divideAndRemainder(rhs)[1];
   }
 
   public int doIntApply(final ThreadContext tc, final int lhs, final char rhs) {
-    throw new NotImplementedException();
+    return lhs - (lhs / rhs) * rhs;
   }
 
   public int doIntApply(final ThreadContext tc, final int lhs, final byte rhs) {
-    throw new NotImplementedException();
+    return lhs - (lhs / rhs) * rhs;
   }
 
   public int doIntApply(final ThreadContext tc, final int lhs, final short rhs) {
-    throw new NotImplementedException();
+    return lhs - (lhs / rhs) * rhs;
   }
 
   public int doIntApply(final ThreadContext tc, final int lhs, final int rhs) {
-    throw new NotImplementedException();
+    return lhs - (lhs / rhs) * rhs;
   }
 
   public long doLongApply(final ThreadContext tc, final int lhs, final long rhs) {
-    throw new NotImplementedException();
+    return lhs - (lhs / rhs) * rhs;
   }
 
   public float doFloatApply(final ThreadContext tc, final int lhs, final float rhs) {
     final double tmp = lhs / rhs;
 
-    return (float)(tmp - Math.floor(tmp));
+    return (float)(lhs - Math.floor(tmp) * rhs);
   }
 
   public double doDoubleApply(final ThreadContext tc, final int lhs, final double rhs) {
     final double tmp = lhs / rhs;
 
-    return tmp - Math.floor(tmp);
+    return lhs - Math.floor(tmp) * rhs;
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final int lhs, final BigInteger rhs) {

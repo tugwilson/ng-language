@@ -29,7 +29,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   private final ShortBinaryArithmeticOperation multiply = new Multiply();
   private final ShortBinaryArithmeticOperation divide = new Divide();
   private final ShortBinaryArithmeticOperation modulo = new Modulo();
-  private final ShortBinaryArithmeticOperation remainderDivide = null;
+  private final ShortBinaryArithmeticOperation remainderDivide = new RemainderDivide();
 
   private final ShortBooleanComparison equals = new Equals();
   private final ShortBooleanComparison notEquals = new NotEquals();

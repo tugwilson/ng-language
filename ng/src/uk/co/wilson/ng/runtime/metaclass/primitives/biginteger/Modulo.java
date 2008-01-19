@@ -61,39 +61,39 @@ public class Modulo extends BaseBinaryOperation implements BigIntegerBinaryArith
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final char rhs) {
-    return lhs.add(BigInteger.valueOf(rhs));
+    return lhs.divide(BigInteger.valueOf(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final byte rhs) {
-    return lhs.add(BigInteger.valueOf(rhs));
+    return lhs.divide(BigInteger.valueOf(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final short rhs) {
-    return lhs.add(BigInteger.valueOf(rhs));
+    return lhs.divide(BigInteger.valueOf(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final int rhs) {
-    return lhs.add(BigInteger.valueOf(rhs));
+    return lhs.divide(BigInteger.valueOf(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final long rhs) {
-    return lhs.add(BigInteger.valueOf(rhs));
+    return lhs.divide(BigInteger.valueOf(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
-    return tc.wrap(lhs.add(BigInteger.valueOf((long)rhs)).floatValue());
+    return tc.wrap((float)Math.floor(lhs.floatValue()/ rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
-    return tc.wrap(lhs.add(BigInteger.valueOf((long)rhs)).doubleValue());
+    return tc.wrap(Math.floor(lhs.doubleValue()/ rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
-    return lhs.add(rhs);
+    return lhs.divide(rhs);
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs.longValue()).add(rhs);
+    return BigDecimal.valueOf(lhs.longValue()).divideToIntegralValue(rhs);
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final char rhs) {
@@ -117,11 +117,11 @@ public class Modulo extends BaseBinaryOperation implements BigIntegerBinaryArith
   }
 
   public float doFloatApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
-    return lhs.divide(BigInteger.valueOf((long)rhs)).floatValue();
+    return (float)Math.floor(lhs.floatValue()/ rhs);
   }
 
   public double doDoubleApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
-    return lhs.divide(BigInteger.valueOf((long)rhs)).doubleValue();
+    return Math.floor(lhs.doubleValue()/ rhs);
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {

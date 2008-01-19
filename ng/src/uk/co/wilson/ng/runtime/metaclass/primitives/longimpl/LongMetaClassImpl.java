@@ -29,7 +29,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   private final LongBinaryArithmeticOperation multiply = new Multiply();
   private final LongBinaryArithmeticOperation divide = new Divide();
   private final LongBinaryArithmeticOperation modulo = new Modulo();
-  private final LongBinaryArithmeticOperation remainderDivide = null;
+  private final LongBinaryArithmeticOperation remainderDivide = new RemainderDivide();
 
   private final LongBooleanComparison equals = new Equals();
   private final LongBooleanComparison notEquals = new NotEquals();

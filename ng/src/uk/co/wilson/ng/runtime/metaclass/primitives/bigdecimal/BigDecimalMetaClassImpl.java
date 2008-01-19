@@ -31,7 +31,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
   private final BigDecimalBinaryArithmeticOperation multiply = new Multiply();
   private final BigDecimalBinaryArithmeticOperation divide = new Divide();
   private final BigDecimalBinaryArithmeticOperation modulo = new Modulo();
-  private final BigDecimalBinaryArithmeticOperation remainderDivide = null;
+  private final BigDecimalBinaryArithmeticOperation remainderDivide = new RemainderDivide();
 
   private final BigDecimalBooleanComparison equals = new Equals();
   private final BigDecimalBooleanComparison notEquals = new NotEquals();

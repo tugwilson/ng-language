@@ -81,11 +81,15 @@ public class RemainderDivide extends BaseBinaryOperation implements BigIntegerBi
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
-    return tc.wrap(lhs.divideAndRemainder(BigInteger.valueOf((long)rhs))[1].floatValue());
+  final float tmp = lhs.floatValue() / rhs;
+
+    return tc.wrap((float)(lhs.floatValue() - Math.floor(tmp) * rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
-    return tc.wrap(lhs.divideAndRemainder(BigInteger.valueOf((long)rhs))[1].doubleValue());
+  final double tmp = lhs.doubleValue() / rhs;
+
+    return tc.wrap(lhs.doubleValue() - Math.floor(tmp) * rhs);
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
@@ -117,11 +121,15 @@ public class RemainderDivide extends BaseBinaryOperation implements BigIntegerBi
   }
 
   public float doFloatApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
-    return lhs.divideAndRemainder(BigInteger.valueOf((long)rhs))[1].floatValue();
+  final float tmp = lhs.floatValue() / rhs;
+
+    return (float)(lhs.floatValue() - Math.floor(tmp) * rhs);
   }
 
   public double doDoubleApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
-    return lhs.divideAndRemainder(BigInteger.valueOf((long)rhs))[1].doubleValue();
+  final double tmp = lhs.doubleValue() / rhs;
+
+    return lhs.doubleValue() - Math.floor(tmp) * rhs;
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {

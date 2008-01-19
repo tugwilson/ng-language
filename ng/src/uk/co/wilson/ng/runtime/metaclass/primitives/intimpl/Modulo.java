@@ -53,11 +53,11 @@ public class Modulo extends BaseBinaryOperation implements IntBinaryArithmeticOp
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return lhs.add(BigInteger.valueOf(tc.unwrapToInt(rhs)));
+    return lhs.divide(BigInteger.valueOf(tc.unwrapToInt(rhs)));
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return lhs.add(new BigDecimal(tc.unwrapToInt(rhs)));
+    return lhs.divideToIntegralValue(new BigDecimal(tc.unwrapToInt(rhs)));
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final char rhs) {
