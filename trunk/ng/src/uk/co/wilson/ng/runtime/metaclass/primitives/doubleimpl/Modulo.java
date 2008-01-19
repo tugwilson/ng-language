@@ -89,7 +89,7 @@ public class Modulo extends BaseBinaryOperation implements DoubleBinaryArithmeti
   }
 
   public Object doApply(final ThreadContext tc, final double lhs, final BigInteger rhs) {
-    return tc.wrap(BigDecimal.valueOf(lhs).divideToIntegralValue(new BigDecimal(rhs.toString())).doubleValue());
+    return tc.wrap(Math.floor(lhs / rhs.doubleValue()));
   }
 
   public Object doApply(final ThreadContext tc, final double lhs, final BigDecimal rhs) {
@@ -125,7 +125,7 @@ public class Modulo extends BaseBinaryOperation implements DoubleBinaryArithmeti
   }
 
   public double doDoubleApply(final ThreadContext tc, final double lhs, final BigInteger rhs) {
-    return BigDecimal.valueOf(lhs).divideToIntegralValue(new BigDecimal(rhs.toString())).doubleValue();
+    return Math.floor(lhs / rhs.doubleValue());
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final double lhs, final BigDecimal rhs) {

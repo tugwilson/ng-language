@@ -29,7 +29,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   private final IntBinaryArithmeticOperation multiply = new Multiply();
   private final IntBinaryArithmeticOperation divide = new Divide();
   private final IntBinaryArithmeticOperation modulo = new Modulo();
-  private final IntBinaryArithmeticOperation remainderDivide = null;
+  private final IntBinaryArithmeticOperation remainderDivide = new RemainderDivide();
 
   private final IntBooleanComparison equals = new Equals();
   private final IntBooleanComparison notEquals = new NotEquals();

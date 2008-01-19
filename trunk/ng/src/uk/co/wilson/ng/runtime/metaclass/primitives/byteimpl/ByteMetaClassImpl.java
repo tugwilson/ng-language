@@ -29,7 +29,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
   private final ByteBinaryArithmeticOperation multiply = new Multiply();
   private final ByteBinaryArithmeticOperation divide = new Divide();
   private final ByteBinaryArithmeticOperation modulo = new Modulo();
-  private final ByteBinaryArithmeticOperation remainderDivide = null;
+  private final ByteBinaryArithmeticOperation remainderDivide = new RemainderDivide();
 
   private final ByteBooleanComparison equals = new Equals();
   private final ByteBooleanComparison notEquals = new NotEquals();

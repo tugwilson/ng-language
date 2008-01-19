@@ -85,7 +85,7 @@ class Add extends BaseBinaryOperation implements FloatBinaryArithmeticOperation 
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final BigInteger rhs) {
-    return tc.wrap(BigDecimal.valueOf(lhs).add(new BigDecimal(rhs.toString())).floatValue());
+    return tc.wrap(lhs + rhs.floatValue());
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final BigDecimal rhs) {
@@ -121,7 +121,7 @@ class Add extends BaseBinaryOperation implements FloatBinaryArithmeticOperation 
   }
 
   public float doFloatApply(final ThreadContext tc, final float lhs, final BigInteger rhs) {
-    return BigDecimal.valueOf(lhs).add(new BigDecimal(rhs.toString())).floatValue();
+    return lhs + rhs.floatValue();
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final float lhs, final BigDecimal rhs) {

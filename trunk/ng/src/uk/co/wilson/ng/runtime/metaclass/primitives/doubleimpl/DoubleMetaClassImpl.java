@@ -29,7 +29,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
   private final DoubleBinaryArithmeticOperation multiply = new Multiply();
   private final DoubleBinaryArithmeticOperation divide = new Divide();
   private final DoubleBinaryArithmeticOperation modulo = new Modulo();
-  private final DoubleBinaryArithmeticOperation remainderDivide = null;
+  private final DoubleBinaryArithmeticOperation remainderDivide = new RemainderDivide();
 
   private final DoubleBooleanComparison equals = new Equals();
   private final DoubleBooleanComparison notEquals = new NotEquals();

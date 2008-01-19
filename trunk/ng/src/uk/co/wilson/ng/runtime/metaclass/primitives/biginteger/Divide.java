@@ -81,11 +81,11 @@ public class Divide extends BaseBinaryOperation implements BigIntegerBinaryArith
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
-    return tc.wrap(lhs.divide(BigInteger.valueOf((long)rhs)).floatValue());
+    return tc.wrap(lhs.floatValue() / rhs);
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
-    return tc.wrap(lhs.divide(BigInteger.valueOf((long)rhs)).doubleValue());
+    return tc.wrap(lhs.doubleValue() / rhs);
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
@@ -117,11 +117,11 @@ public class Divide extends BaseBinaryOperation implements BigIntegerBinaryArith
   }
 
   public float doFloatApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
-    return lhs.divide(BigInteger.valueOf((long)rhs)).floatValue();
+    return lhs.floatValue()/rhs;
   }
 
   public double doDoubleApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
-    return lhs.divide(BigInteger.valueOf((long)rhs)).doubleValue();
+    return lhs.doubleValue() / rhs;
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {

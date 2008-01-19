@@ -30,7 +30,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
   private final FloatBinaryArithmeticOperation multiply = new Multiply();
   private final FloatBinaryArithmeticOperation divide = new Divide();
   private final FloatBinaryArithmeticOperation modulo = new Modulo();
-  private final FloatBinaryArithmeticOperation remainderDivide = null;
+  private final FloatBinaryArithmeticOperation remainderDivide = new RemainderDivide();
 
   private final FloatBooleanComparison equals = new Equals();
   private final FloatBooleanComparison notEquals = new NotEquals();

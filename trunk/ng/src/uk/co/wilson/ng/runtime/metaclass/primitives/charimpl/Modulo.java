@@ -61,31 +61,31 @@ public class Modulo extends BaseBinaryOperation implements CharBinaryArithmeticO
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final char rhs) {
-    return tc.modulo().apply(lhs, rhs);
+    return tc.wrap(lhs / rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final byte rhs) {
-    return tc.modulo().apply(lhs, rhs);
+    return tc.wrap(lhs / rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final short rhs) {
-    return tc.modulo().apply(lhs, rhs);
+    return tc.wrap(lhs / rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final int rhs) {
-    return tc.modulo().apply(lhs, rhs);
+    return tc.wrap(lhs / rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final long rhs) {
-    return tc.modulo().apply(lhs, rhs);
+    return tc.wrap(lhs / rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final float rhs) {
-    return tc.modulo().apply(lhs, rhs);
+    return tc.wrap((float)Math.floor(lhs / rhs));
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final double rhs) {
-    return tc.modulo().apply(lhs, rhs);
+    return tc.wrap(Math.floor(lhs / rhs));
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final BigInteger rhs) {

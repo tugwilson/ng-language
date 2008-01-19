@@ -29,7 +29,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private final CharBinaryArithmeticOperation multiply = new Multiply();
   private final CharBinaryArithmeticOperation divide = new Divide();
   private final CharBinaryArithmeticOperation modulo = new Modulo();
-  private final CharBinaryArithmeticOperation remainderDivide = null;
+  private final CharBinaryArithmeticOperation remainderDivide = new RemainderDivide();
 
   private final CharBooleanComparison equals = new Equals();
   private final CharBooleanComparison notEquals = new NotEquals();

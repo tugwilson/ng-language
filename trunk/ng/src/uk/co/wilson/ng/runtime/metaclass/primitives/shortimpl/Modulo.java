@@ -97,23 +97,23 @@ public class Modulo extends BaseBinaryOperation implements ShortBinaryArithmetic
   }
 
   public int doIntApply(final ThreadContext tc, final short lhs, final char rhs) {
-    return lhs + rhs;
+    return lhs / rhs;
   }
 
   public int doIntApply(final ThreadContext tc, final short lhs, final byte rhs) {
-    return lhs + rhs;
+    return lhs / rhs;
   }
 
   public int doIntApply(final ThreadContext tc, final short lhs, final short rhs) {
-    return lhs + rhs;
+    return lhs / rhs;
   }
 
   public int doIntApply(final ThreadContext tc, final short lhs, final int rhs) {
-    return lhs + rhs;
+    return lhs / rhs;
   }
 
   public long doLongApply(final ThreadContext tc, final short lhs, final long rhs) {
-    return lhs + rhs;
+    return lhs / rhs;
   }
 
   public float doFloatApply(final ThreadContext tc, final short lhs, final float rhs) {
