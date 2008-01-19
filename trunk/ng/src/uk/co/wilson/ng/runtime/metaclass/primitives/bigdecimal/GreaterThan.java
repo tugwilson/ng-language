@@ -12,7 +12,7 @@ import ng.runtime.threadcontext.ThreadContext;
  */
 public class GreaterThan extends BaseBooleanComparison {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.equals().apply((BigDecimal)lhs, rhs);
+    return tc.greaterThan().apply((BigDecimal)lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
