@@ -64,7 +64,7 @@ class Equals extends BaseBooleanComparison {
   }
 
   public boolean doApplyBoolean(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return lhs.compareTo((BigDecimal)rhs) == 0;
+    return lhs.compareTo(BigDecimal.valueOf(((BigInteger)rhs).longValue())) == 0;
   }
 
   public boolean doApplyBoolean(final ThreadContext tc, final BigInteger lhs, final char rhs) {
