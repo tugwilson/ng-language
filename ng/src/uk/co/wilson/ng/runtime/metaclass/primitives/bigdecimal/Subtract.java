@@ -13,7 +13,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOp
  */
 public class Subtract extends BaseBinaryOperation implements BigDecimalBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.add().apply((BigDecimal)lhs, rhs);
+    return tc.subtract().apply((BigDecimal)lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {

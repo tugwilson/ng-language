@@ -13,7 +13,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOp
  */
 public class Divide extends BaseBinaryOperation implements BigIntegerBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.add().apply((BigInteger)lhs, rhs);
+    return tc.divide().apply((BigInteger)lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
