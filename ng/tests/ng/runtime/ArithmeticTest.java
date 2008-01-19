@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import junit.framework.TestCase;
+import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
@@ -207,6 +208,16 @@ public class ArithmeticTest extends TestCase {
   }
   
   private static void doNormalTest(final ThreadContext tc, BinaryArithmeticOperation op, int result) throws NotPerformed {
+    final MetaClass byteMetaClass = tc.getMetaClassFor(byte.class);
+    final MetaClass charMetaClass = tc.getMetaClassFor(char.class);
+    final MetaClass shortMetaClass = tc.getMetaClassFor(short.class);
+    final MetaClass intMetaClass = tc.getMetaClassFor(int.class);
+    final MetaClass longMetaClass = tc.getMetaClassFor(long.class);
+    final MetaClass floatMetaClass = tc.getMetaClassFor(float.class);
+    final MetaClass doubleMetaClass = tc.getMetaClassFor(double.class);
+    final MetaClass bigIntegerMetaClass = tc.getMetaClassFor(BigInteger.class);
+    final MetaClass bigDecimalMetaClass = tc.getMetaClassFor(BigDecimal.class);
+
     assertTrue(op.intApply((byte)6, (byte)2) == result);    
     assertTrue(op.intApply((char)6, (byte)2) == result);    
     assertTrue(op.intApply((short)6, (byte)2) == result);    
@@ -285,6 +296,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), (Object)NgByte.valueOf((byte)2))).longValue() == result);    
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (Object)NgByte.valueOf((byte)2))).doubleValue() == result);
     
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), byteMetaClass, (Object)NgByte.valueOf((byte)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), byteMetaClass, (Object)NgByte.valueOf((byte)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), byteMetaClass, (Object)NgByte.valueOf((byte)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), byteMetaClass, (Object)NgByte.valueOf((byte)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), byteMetaClass, (Object)NgByte.valueOf((byte)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), byteMetaClass, (Object)NgByte.valueOf((byte)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), byteMetaClass, (Object)NgByte.valueOf((byte)2))) == result); 
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), byteMetaClass, (Object)NgByte.valueOf((byte)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), byteMetaClass, (Object)NgByte.valueOf((byte)2))).doubleValue() == result);
+    
     assertTrue(op.intApply((byte)6, (char)2) == result);    
     assertTrue(op.intApply((char)6, (char)2) == result);    
     assertTrue(op.intApply((short)6, (char)2) == result);    
@@ -313,6 +334,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToFloat(op.apply(NgFloat.valueOf((float)6), (char)2)) == result);    
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), (char)2)) == result);    
     
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), (char)2)) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), (char)2)) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), (char)2)) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), (char)2)) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), (char)2)) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (char)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (char)2)) == result);    
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), (char)2)).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (char)2)).doubleValue() == result);
+    
     assertTrue(tc.unwrapToInt(op.apply((byte)6, NgChar.valueOf((char)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply((char)6, NgChar.valueOf((char)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply((short)6, NgChar.valueOf((char)2))) == result);    
@@ -323,6 +354,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), NgChar.valueOf((char)2))).longValue() == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgChar.valueOf((char)2))).doubleValue() == result);
     
+    assertTrue(tc.unwrapToInt(op.apply((byte)6, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((char)6, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((short)6, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((int)6, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((long)6, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((float)6, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((double)6, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), (Object)NgChar.valueOf((char)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), (Object)NgChar.valueOf((char)2))).doubleValue() == result);
+    
     assertTrue(tc.unwrapToInt(op.apply(NgByte.valueOf((byte)6), NgChar.valueOf((char)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply(NgChar.valueOf((char)6), NgChar.valueOf((char)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply(NgShort.valueOf((short)6), NgChar.valueOf((char)2))) == result);    
@@ -332,6 +373,36 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), NgChar.valueOf((char)2))) == result); 
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), NgChar.valueOf((char)2))).longValue() == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgChar.valueOf((char)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (Object)NgChar.valueOf((char)2))) == result); 
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), (Object)NgChar.valueOf((char)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (Object)NgChar.valueOf((char)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), charMetaClass, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), charMetaClass, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), charMetaClass, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), charMetaClass, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), charMetaClass, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), charMetaClass, (Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), charMetaClass, (Object)NgChar.valueOf((char)2))) == result); 
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), charMetaClass, (Object)NgChar.valueOf((char)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), charMetaClass, (Object)NgChar.valueOf((char)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), charMetaClass,(Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), charMetaClass,(Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), charMetaClass,(Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), charMetaClass,(Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), charMetaClass,(Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), charMetaClass,(Object)NgChar.valueOf((char)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), charMetaClass,(Object)NgChar.valueOf((char)2))) == result); 
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), charMetaClass,(Object)NgChar.valueOf((char)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), charMetaClass,(Object)NgChar.valueOf((char)2))).doubleValue() == result);
     
     assertTrue(op.intApply((byte)6, (short)2) == result);    
     assertTrue(op.intApply((char)6, (short)2) == result);    
@@ -361,6 +432,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToFloat(op.apply(NgFloat.valueOf((float)6), (short)2)) == result);    
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), (short)2)) == result);    
     
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), (short)2)) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), (short)2)) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), (short)2)) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), (short)2)) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), (short)2)) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (short)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (short)2)) == result);    
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), (short)2)).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (short)2)).doubleValue() == result);
+    
     assertTrue(tc.unwrapToInt(op.apply((byte)6, NgShort.valueOf((short)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply((char)6, NgShort.valueOf((short)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply((short)6, NgShort.valueOf((short)2))) == result);    
@@ -371,6 +452,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), NgShort.valueOf((short)2))).longValue() == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgShort.valueOf((short)2))).doubleValue() == result);
     
+    assertTrue(tc.unwrapToInt(op.apply((byte)6, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((char)6, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((short)6, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((int)6, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((long)6, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((float)6, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((double)6, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), (Object)NgShort.valueOf((short)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), (Object)NgShort.valueOf((short)2))).doubleValue() == result);
+    
     assertTrue(tc.unwrapToInt(op.apply(NgByte.valueOf((byte)6), NgShort.valueOf((short)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply(NgChar.valueOf((char)6), NgShort.valueOf((short)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply(NgShort.valueOf((short)6), NgShort.valueOf((short)2))) == result);    
@@ -380,6 +471,26 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), NgShort.valueOf((short)2))) == result); 
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), NgShort.valueOf((short)2))).longValue() == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgShort.valueOf((short)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (Object)NgShort.valueOf((short)2))) == result); 
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), (Object)NgShort.valueOf((short)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (Object)NgShort.valueOf((short)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), shortMetaClass, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), shortMetaClass, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), shortMetaClass, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), shortMetaClass, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), shortMetaClass, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), shortMetaClass, (Object)NgShort.valueOf((short)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), shortMetaClass, (Object)NgShort.valueOf((short)2))) == result); 
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), shortMetaClass, (Object)NgShort.valueOf((short)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), shortMetaClass, (Object)NgShort.valueOf((short)2))).doubleValue() == result);
     
     assertTrue(op.intApply((byte)6, (int)2) == result);    
     assertTrue(op.intApply((char)6, (int)2) == result);    
@@ -409,6 +520,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToFloat(op.apply(NgFloat.valueOf((float)6), (int)2)) == result);    
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), (int)2)) == result);    
     
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), (int)2)) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), (int)2)) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), (int)2)) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), (int)2)) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), (int)2)) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (int)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (int)2)) == result);    
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), (int)2)).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (int)2)).doubleValue() == result);
+    
     assertTrue(tc.unwrapToInt(op.apply((byte)6, NgInt.valueOf((int)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply((char)6, NgInt.valueOf((int)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply((short)6, NgInt.valueOf((int)2))) == result);    
@@ -419,6 +540,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), NgInt.valueOf((int)2))).longValue() == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgInt.valueOf((int)2))).doubleValue() == result);
     
+    assertTrue(tc.unwrapToInt(op.apply((byte)6, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((char)6, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((short)6, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((int)6, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((long)6, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((float)6, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((double)6, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), (Object)NgInt.valueOf((int)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), (Object)NgInt.valueOf((int)2))).doubleValue() == result);
+    
     assertTrue(tc.unwrapToInt(op.apply(NgByte.valueOf((byte)6), NgInt.valueOf((int)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply(NgChar.valueOf((char)6), NgInt.valueOf((int)2))) == result);    
     assertTrue(tc.unwrapToInt(op.apply(NgShort.valueOf((short)6), NgInt.valueOf((int)2))) == result);    
@@ -428,6 +559,26 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), NgInt.valueOf((int)2))) == result); 
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), NgInt.valueOf((int)2))).longValue() == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgInt.valueOf((int)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (Object)NgInt.valueOf((int)2))) == result); 
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), (Object)NgInt.valueOf((int)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (Object)NgInt.valueOf((int)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgByte.valueOf((byte)6), intMetaClass, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgChar.valueOf((char)6), intMetaClass, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgShort.valueOf((short)6), intMetaClass, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToInt(op.apply((Object)NgInt.valueOf((int)6), intMetaClass, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), intMetaClass, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), intMetaClass, (Object)NgInt.valueOf((int)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), intMetaClass, (Object)NgInt.valueOf((int)2))) == result); 
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), intMetaClass, (Object)NgInt.valueOf((int)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), intMetaClass, (Object)NgInt.valueOf((int)2))).doubleValue() == result);
     
     assertTrue(op.longApply((byte)6, (long)2) == result);    
     assertTrue(op.longApply((char)6, (long)2) == result);    
@@ -457,6 +608,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToFloat(op.apply(NgFloat.valueOf((float)6), (long)2)) == result);    
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), (long)2)) == result);    
     
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgByte.valueOf((byte)6), (long)2)) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgChar.valueOf((char)6), (long)2)) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgShort.valueOf((short)6), (long)2)) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgInt.valueOf((int)6), (long)2)) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), (long)2)) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (long)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (long)2)) == result);    
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), (long)2)).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (long)2)).doubleValue() == result);
+    
     assertTrue(tc.unwrapToLong(op.apply((byte)6, NgLong.valueOf((long)2))) == result);    
     assertTrue(tc.unwrapToLong(op.apply((char)6, NgLong.valueOf((long)2))) == result);    
     assertTrue(tc.unwrapToLong(op.apply((short)6, NgLong.valueOf((long)2))) == result);    
@@ -467,6 +628,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), NgLong.valueOf((long)2))).longValue() == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgLong.valueOf((long)2))).doubleValue() == result);
     
+    assertTrue(tc.unwrapToLong(op.apply((byte)6, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((char)6, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((short)6, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((int)6, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((long)6, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((float)6, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((double)6, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), (Object)NgLong.valueOf((long)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), (Object)NgLong.valueOf((long)2))).doubleValue() == result);
+    
     assertTrue(tc.unwrapToLong(op.apply(NgByte.valueOf((byte)6), NgLong.valueOf((long)2))) == result);    
     assertTrue(tc.unwrapToLong(op.apply(NgChar.valueOf((char)6), NgLong.valueOf((long)2))) == result);    
     assertTrue(tc.unwrapToLong(op.apply(NgShort.valueOf((short)6), NgLong.valueOf((long)2))) == result);    
@@ -476,6 +647,26 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), NgLong.valueOf((long)2))) == result); 
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(6), NgLong.valueOf((long)2))).longValue() == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgLong.valueOf((long)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgByte.valueOf((byte)6), (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgChar.valueOf((char)6), (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgShort.valueOf((short)6), (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgInt.valueOf((int)6), (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (Object)NgLong.valueOf((long)2))) == result); 
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), (Object)NgLong.valueOf((long)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (Object)NgLong.valueOf((long)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgByte.valueOf((byte)6), longMetaClass, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgChar.valueOf((char)6), longMetaClass, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgShort.valueOf((short)6), longMetaClass, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgInt.valueOf((int)6), longMetaClass, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToLong(op.apply((Object)NgLong.valueOf((long)6), longMetaClass, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), longMetaClass, (Object)NgLong.valueOf((long)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), longMetaClass, (Object)NgLong.valueOf((long)2))) == result); 
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), longMetaClass, (Object)NgLong.valueOf((long)2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), longMetaClass, (Object)NgLong.valueOf((long)2))).doubleValue() == result);
     
     assertTrue(op.floatApply((byte)6, (float)2) == result);    
     assertTrue(op.floatApply((char)6, (float)2) == result);    
@@ -505,6 +696,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToFloat(op.apply(NgFloat.valueOf((float)6), (float)2)) == result);    
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), (float)2)) == result);    
     
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgByte.valueOf((byte)6), (float)2)) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgChar.valueOf((char)6), (float)2)) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgShort.valueOf((short)6), (float)2)) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgInt.valueOf((int)6), (float)2)) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgLong.valueOf((long)6), (float)2)) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (float)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (float)2)) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)BigInteger.valueOf(6), (float)2)) == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (float)2)).doubleValue() == result);  
+    
     assertTrue(tc.unwrapToFloat(op.apply((byte)6, NgFloat.valueOf((float)2))) == result);    
     assertTrue(tc.unwrapToFloat(op.apply((char)6, NgFloat.valueOf((float)2))) == result);    
     assertTrue(tc.unwrapToFloat(op.apply((short)6, NgFloat.valueOf((float)2))) == result);    
@@ -515,6 +716,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToFloat(op.apply(BigInteger.valueOf(6), NgFloat.valueOf((float)2))) == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgFloat.valueOf((float)2))).doubleValue() == result);  
     
+    assertTrue(tc.unwrapToFloat(op.apply((byte)6, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((char)6, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((short)6, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((int)6, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((long)6, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((float)6, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((double)6, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply(BigInteger.valueOf(6), (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), (Object)NgFloat.valueOf((float)2))).doubleValue() == result);  
+    
     assertTrue(tc.unwrapToFloat(op.apply(NgByte.valueOf((byte)6), NgFloat.valueOf((float)2))) == result);    
     assertTrue(tc.unwrapToFloat(op.apply(NgChar.valueOf((char)6), NgFloat.valueOf((float)2))) == result);    
     assertTrue(tc.unwrapToFloat(op.apply(NgShort.valueOf((short)6), NgFloat.valueOf((float)2))) == result);    
@@ -524,6 +735,26 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), NgFloat.valueOf((float)2))) == result); 
     assertTrue(tc.unwrapToFloat(op.apply(BigInteger.valueOf(6), NgFloat.valueOf((float)2))) == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgFloat.valueOf((float)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgByte.valueOf((byte)6), (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgChar.valueOf((char)6), (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgShort.valueOf((short)6), (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgInt.valueOf((int)6), (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgLong.valueOf((long)6), (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (Object)NgFloat.valueOf((float)2))) == result); 
+    assertTrue(tc.unwrapToFloat(op.apply((Object)BigInteger.valueOf(6), (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (Object)NgFloat.valueOf((float)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgByte.valueOf((byte)6), floatMetaClass, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgChar.valueOf((char)6), floatMetaClass, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgShort.valueOf((short)6), floatMetaClass, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgInt.valueOf((int)6), floatMetaClass, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgLong.valueOf((long)6), floatMetaClass, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), floatMetaClass, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), floatMetaClass, (Object)NgFloat.valueOf((float)2))) == result); 
+    assertTrue(tc.unwrapToFloat(op.apply((Object)BigInteger.valueOf(6), floatMetaClass, (Object)NgFloat.valueOf((float)2))) == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), floatMetaClass, (Object)NgFloat.valueOf((float)2))).doubleValue() == result);
     
     assertTrue(op.doubleApply((byte)6, (double)2) == result);    
     assertTrue(op.doubleApply((char)6, (double)2) == result);    
@@ -553,6 +784,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToDouble(op.apply(NgFloat.valueOf((float)6), (double)2)) == result);    
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), (double)2)) == result);    
     
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgByte.valueOf((byte)6), (double)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgChar.valueOf((char)6), (double)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgShort.valueOf((short)6), (double)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgInt.valueOf((int)6), (double)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgLong.valueOf((long)6), (double)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgFloat.valueOf((float)6), (double)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (double)2)) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(6), (double)2)) == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (double)2)).doubleValue() == result);
+    
     assertTrue(tc.unwrapToDouble(op.apply((byte)6, NgDouble.valueOf((double)2))) == result);    
     assertTrue(tc.unwrapToDouble(op.apply((char)6, NgDouble.valueOf((double)2))) == result);    
     assertTrue(tc.unwrapToDouble(op.apply((short)6, NgDouble.valueOf((double)2))) == result);    
@@ -563,6 +804,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(6), NgDouble.valueOf((double)2))) == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgDouble.valueOf((double)2))).doubleValue() == result);
     
+    assertTrue(tc.unwrapToDouble(op.apply((byte)6, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((char)6, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((short)6, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((int)6, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((long)6, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((float)6, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((double)6, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(6), (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), (Object)NgDouble.valueOf((double)2))).doubleValue() == result);
+    
     assertTrue(tc.unwrapToDouble(op.apply(NgByte.valueOf((byte)6), NgDouble.valueOf((double)2))) == result);    
     assertTrue(tc.unwrapToDouble(op.apply(NgChar.valueOf((char)6), NgDouble.valueOf((double)2))) == result);    
     assertTrue(tc.unwrapToDouble(op.apply(NgShort.valueOf((short)6), NgDouble.valueOf((double)2))) == result);    
@@ -572,6 +823,26 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), NgDouble.valueOf((double)2))) == result); 
     assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(6), NgDouble.valueOf((double)2))) == result); 
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), NgDouble.valueOf((double)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgByte.valueOf((byte)6), (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgChar.valueOf((char)6), (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgShort.valueOf((short)6), (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgInt.valueOf((int)6), (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgLong.valueOf((long)6), (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgFloat.valueOf((float)6), (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (Object)NgDouble.valueOf((double)2))) == result); 
+    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(6), (Object)NgDouble.valueOf((double)2))) == result); 
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (Object)NgDouble.valueOf((double)2))).doubleValue() == result);
+    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgByte.valueOf((byte)6), doubleMetaClass, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgChar.valueOf((char)6), doubleMetaClass, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgShort.valueOf((short)6), doubleMetaClass, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgInt.valueOf((int)6), doubleMetaClass, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgLong.valueOf((long)6), doubleMetaClass, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgFloat.valueOf((float)6), doubleMetaClass, (Object)NgDouble.valueOf((double)2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), doubleMetaClass, (Object)NgDouble.valueOf((double)2))) == result); 
+    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(6), doubleMetaClass, (Object)NgDouble.valueOf((double)2))) == result); 
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), doubleMetaClass, (Object)NgDouble.valueOf((double)2))).doubleValue() == result);
     
     assertTrue(op.bigIntegerApply((byte)6, BigInteger.valueOf(2)).longValue() == result);    
     assertTrue(op.bigIntegerApply((char)6, BigInteger.valueOf(2)).longValue() == result);    
@@ -601,6 +872,36 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToFloat(op.apply(NgFloat.valueOf((float)6), BigInteger.valueOf(2))) == result);    
     assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)6), BigInteger.valueOf(2))) == result);    
     
+    assertTrue(((BigInteger)op.apply((Object)NgByte.valueOf((byte)6), BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgChar.valueOf((char)6), BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgShort.valueOf((short)6), BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgInt.valueOf((int)6), BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgLong.valueOf((long)6), BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), BigInteger.valueOf(2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), BigInteger.valueOf(2))) == result);    
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), BigInteger.valueOf(2))).doubleValue() == result);   
+    
+    assertTrue(((BigInteger)op.apply((Object)NgByte.valueOf((byte)6), (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgChar.valueOf((char)6), (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgShort.valueOf((short)6), (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgInt.valueOf((int)6), (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgLong.valueOf((long)6), (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), (Object)BigInteger.valueOf(2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), (Object)BigInteger.valueOf(2))) == result);    
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (Object)BigInteger.valueOf(2))).doubleValue() == result);   
+    
+    assertTrue(((BigInteger)op.apply((Object)NgByte.valueOf((byte)6), bigIntegerMetaClass, (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgChar.valueOf((char)6), bigIntegerMetaClass, (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgShort.valueOf((short)6), bigIntegerMetaClass, (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgInt.valueOf((int)6), bigIntegerMetaClass, (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigInteger)op.apply((Object)NgLong.valueOf((long)6), bigIntegerMetaClass, (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)6), bigIntegerMetaClass, (Object)BigInteger.valueOf(2))) == result);    
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)6), bigIntegerMetaClass, (Object)BigInteger.valueOf(2))) == result);    
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(6), bigIntegerMetaClass, (Object)BigInteger.valueOf(2))).longValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), bigIntegerMetaClass, (Object)BigInteger.valueOf(2))).doubleValue() == result);   
+    
     assertTrue(op.bigDecimalApply((byte)6, BigDecimal.valueOf(2)).doubleValue() == result);    
     assertTrue(op.bigDecimalApply((char)6, BigDecimal.valueOf(2)).doubleValue() == result);    
     assertTrue(op.bigDecimalApply((short)6, BigDecimal.valueOf(2)).doubleValue() == result);    
@@ -621,6 +922,16 @@ public class ArithmeticTest extends TestCase {
     assertTrue(((BigDecimal)op.apply(BigInteger.valueOf(6), BigDecimal.valueOf(2))).doubleValue() == result);    
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), BigDecimal.valueOf(2))).doubleValue() == result);   
     
+    assertTrue(((BigDecimal)op.apply((byte)6, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((char)6, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((short)6, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((int)6, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((long)6, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((float)6, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((double)6, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply(BigInteger.valueOf(6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);   
+    
     assertTrue(((BigDecimal)op.apply(NgByte.valueOf((byte)6), BigDecimal.valueOf(2))).doubleValue() == result);    
     assertTrue(((BigDecimal)op.apply(NgChar.valueOf((char)6), BigDecimal.valueOf(2))).doubleValue() == result);    
     assertTrue(((BigDecimal)op.apply(NgShort.valueOf((short)6), BigDecimal.valueOf(2))).doubleValue() == result);    
@@ -628,6 +939,36 @@ public class ArithmeticTest extends TestCase {
     assertTrue(((BigDecimal)op.apply(NgLong.valueOf((long)6), BigDecimal.valueOf(2))).doubleValue() == result);    
     assertTrue(((BigDecimal)op.apply(NgFloat.valueOf((float)6), BigDecimal.valueOf(2))).doubleValue() == result);    
     assertTrue(((BigDecimal)op.apply(NgDouble.valueOf((double)6), BigDecimal.valueOf(2))).doubleValue() == result);    
+    
+    assertTrue(((BigDecimal)op.apply((Object)NgByte.valueOf((byte)6), BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgChar.valueOf((char)6), BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgShort.valueOf((short)6), BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgInt.valueOf((int)6), BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgLong.valueOf((long)6), BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgFloat.valueOf((float)6), BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgDouble.valueOf((double)6), BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigInteger.valueOf(6), BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), BigDecimal.valueOf(2))).doubleValue() == result);   
+    
+    assertTrue(((BigDecimal)op.apply((Object)NgByte.valueOf((byte)6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgChar.valueOf((char)6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgShort.valueOf((short)6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgInt.valueOf((int)6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgLong.valueOf((long)6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgFloat.valueOf((float)6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgDouble.valueOf((double)6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigInteger.valueOf(6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), (Object)BigDecimal.valueOf(2))).doubleValue() == result);   
+    
+    assertTrue(((BigDecimal)op.apply((Object)NgByte.valueOf((byte)6), bigDecimalMetaClass, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgChar.valueOf((char)6), bigDecimalMetaClass, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgShort.valueOf((short)6), bigDecimalMetaClass, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgInt.valueOf((int)6), bigDecimalMetaClass, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgLong.valueOf((long)6), bigDecimalMetaClass, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgFloat.valueOf((float)6), bigDecimalMetaClass, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)NgDouble.valueOf((double)6), bigDecimalMetaClass, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigInteger.valueOf(6), bigDecimalMetaClass, (Object)BigDecimal.valueOf(2))).doubleValue() == result);    
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(6), bigDecimalMetaClass, (Object)BigDecimal.valueOf(2))).doubleValue() == result);   
   }
   
   public void testAdd() throws Throwable {
