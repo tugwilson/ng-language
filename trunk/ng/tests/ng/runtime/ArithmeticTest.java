@@ -10,7 +10,7 @@ import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
 
 public class ArithmeticTest extends TestCase {
-  private static void doNormalTest(final ThreadContext tc, BinaryArithmeticOperation op, int iResult, double dResult) throws NotPerformed {
+  private static void doTest(final ThreadContext tc, BinaryArithmeticOperation op, int iResult, double dResult) throws NotPerformed {
     final MetaClass byteMetaClass = tc.getMetaClassFor(byte.class);
     final MetaClass charMetaClass = tc.getMetaClassFor(char.class);
     final MetaClass shortMetaClass = tc.getMetaClassFor(short.class);
@@ -776,30 +776,30 @@ public class ArithmeticTest extends TestCase {
   
   public void testAdd() throws Throwable {
     final ThreadContext tc = ThreadContext.getThreadContext();
-    doNormalTest(tc, tc.add(), 22, 22.0);
+    doTest(tc, tc.add(), 22, 22.0);
   }
   
   public void testSubtract() throws Throwable {
     final ThreadContext tc = ThreadContext.getThreadContext();
-    doNormalTest(tc, tc.subtract(), 14, 14.0);
+    doTest(tc, tc.subtract(), 14, 14.0);
   }
   
   public void testMultiply() throws Throwable {
     final ThreadContext tc = ThreadContext.getThreadContext();
-    doNormalTest(tc, tc.multiply(), 72, 72.0);
+    doTest(tc, tc.multiply(), 72, 72.0);
   }
   
   public void testDivide() throws Throwable {
     final ThreadContext tc = ThreadContext.getThreadContext();
-    doNormalTest(tc, tc.divide(), 4, 4.5);
+    doTest(tc, tc.divide(), 4, 4.5);
   }
   
   public void testModulo() throws Throwable {
     final ThreadContext tc = ThreadContext.getThreadContext();
-    doNormalTest(tc, tc.modulo(), 4, 4.0);
+    doTest(tc, tc.modulo(), 4, 4.0);
   }  
   public void testRemainderDivide() throws Throwable {
     final ThreadContext tc = ThreadContext.getThreadContext();
-    doNormalTest(tc, tc.remainderDivide(), 2, 2.0);
+    doTest(tc, tc.remainderDivide(), 2, 2.0);
   }
 }
