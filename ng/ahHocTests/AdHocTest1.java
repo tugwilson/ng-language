@@ -14,7 +14,7 @@ public class AdHocTest1 {
   public static void main(final String[] args) {
     final ThreadContext tc = ThreadContext.getThreadContext();
 
-    Node n = new NodeImpl() {
+    final Node n = new NodeImpl() {
 
       /* (non-JavaDoc)
        * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass, ng.runtime.threadcontext.ThreadContext)
@@ -24,9 +24,9 @@ public class AdHocTest1 {
         return null;
       }
     };
-    
-    BinaryOperation p1 = n.newBinaryOperation(BinaryOperations.plus);
-    BinaryOperation p2 = n.newBinaryOperation(BinaryOperations.plus);
+
+    final BinaryOperation p1 = n.newBinaryOperation(BinaryOperations.plus);
+    final BinaryOperation p2 = n.newBinaryOperation(BinaryOperations.plus);
     p1.setLhs(n.newIntegerConstant(1));
     p1.setRhs(n.newIntegerConstant(3));
     p2.setLhs(p1);

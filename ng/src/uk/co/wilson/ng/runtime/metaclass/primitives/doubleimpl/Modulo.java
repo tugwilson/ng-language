@@ -5,13 +5,12 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleBinaryArithmeticOperation;
 
 /**
  * @author John
  *
  */
-public class Modulo extends BaseBinaryOperation implements DoubleBinaryArithmeticOperation {
+public class Modulo extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.modulo().apply(tc.unwrapToDouble(lhs), rhs);
   }
@@ -58,42 +57,6 @@ public class Modulo extends BaseBinaryOperation implements DoubleBinaryArithmeti
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.modulo().apply(lhs, tc.unwrapToDouble(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final char rhs) {
-    return tc.wrap(Math.floor(lhs / rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final byte rhs) {
-    return tc.wrap(Math.floor(lhs / rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final short rhs) {
-    return tc.wrap(Math.floor(lhs / rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final int rhs) {
-    return tc.wrap(Math.floor(lhs / rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final long rhs) {
-    return tc.wrap(Math.floor(lhs / rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final float rhs) {
-    return tc.wrap(Math.floor(lhs / rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final double rhs) {
-    return tc.wrap(Math.floor(lhs / rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final BigInteger rhs) {
-    return tc.wrap(Math.floor(lhs / rhs.doubleValue()));
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs).divideToIntegralValue(rhs);
   }
 
   public double doDoubleApply(final ThreadContext tc, final double lhs, final char rhs) {

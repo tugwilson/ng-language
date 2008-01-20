@@ -5,13 +5,12 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
 
 /**
  * @author John
  *
  */
-public class Multiply extends BaseBinaryOperation implements BigIntegerBinaryArithmeticOperation {
+public class Multiply extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.multiply().apply((BigInteger)lhs, rhs);
   }
@@ -60,38 +59,7 @@ public class Multiply extends BaseBinaryOperation implements BigIntegerBinaryAri
     return tc.multiply().apply(lhs, (BigInteger)rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final char rhs) {
-    return lhs.multiply(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final byte rhs) {
-    return lhs.multiply(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final short rhs) {
-    return lhs.multiply(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final int rhs) {
-    return lhs.multiply(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final long rhs) {
-    return lhs.multiply(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
-    return tc.wrap(lhs.floatValue() * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
-    return tc.wrap(lhs.doubleValue() * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
-    return lhs.multiply(rhs);
-  }
-
+  @Override
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
     return BigDecimal.valueOf(lhs.longValue()).multiply(rhs);
   }

@@ -5,9 +5,8 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
 
-class Add extends BaseBinaryOperation implements BigDecimalBinaryArithmeticOperation {
+class Add extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.add().apply((BigDecimal)lhs, rhs);
   }
@@ -54,42 +53,6 @@ class Add extends BaseBinaryOperation implements BigDecimalBinaryArithmeticOpera
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.add().apply(lhs, (BigDecimal)rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final char rhs) {
-    return lhs.add(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final byte rhs) {
-    return lhs.add(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final short rhs) {
-    return lhs.add(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final int rhs) {
-    return lhs.add(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final long rhs) {
-    return lhs.add(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final float rhs) {
-    return lhs.add(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final double rhs) {
-    return lhs.add(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final BigInteger rhs) {
-    return lhs.add(BigDecimal.valueOf(rhs.longValue()));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final BigDecimal rhs) {
-    return lhs.add(rhs);
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigDecimal lhs, final char rhs) {

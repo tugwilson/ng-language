@@ -5,9 +5,8 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharBinaryArithmeticOperation;
 
-class Add extends BaseBinaryOperation implements CharBinaryArithmeticOperation {
+class Add extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.add().apply(tc.unwrapToChar(lhs), rhs);
   }
@@ -54,42 +53,6 @@ class Add extends BaseBinaryOperation implements CharBinaryArithmeticOperation {
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.add().apply(lhs, tc.unwrapToChar(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final char lhs, final char rhs) {
-    return tc.wrap(lhs + rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final char lhs, final byte rhs) {
-    return tc.wrap(lhs + rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final char lhs, final short rhs) {
-    return tc.wrap(lhs + rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final char lhs, final int rhs) {
-    return tc.wrap(lhs + rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final char lhs, final long rhs) {
-    return tc.wrap(lhs + rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final char lhs, final float rhs) {
-    return tc.wrap(lhs + rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final char lhs, final double rhs) {
-    return tc.wrap(lhs + rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final char lhs, final BigInteger rhs) {
-    return BigInteger.valueOf(lhs).add(rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final char lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs).add(rhs);
   }
 
   public int doIntApply(final ThreadContext tc, final char lhs, final char rhs) {
