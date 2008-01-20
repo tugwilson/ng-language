@@ -5,13 +5,12 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.IntBinaryArithmeticOperation;
 
 /**
  * @author John
  *
  */
-public class RemainderDivide extends BaseBinaryOperation implements IntBinaryArithmeticOperation {
+public class RemainderDivide extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.remainderDivide().apply(tc.unwrapToInt(lhs), rhs);
   }
@@ -62,42 +61,6 @@ public class RemainderDivide extends BaseBinaryOperation implements IntBinaryAri
 
   public Object doApply(final ThreadContext tc, final int lhs, final char rhs) {
     return tc.wrap(lhs - (lhs / rhs) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final int lhs, final byte rhs) {
-    return tc.wrap(lhs - (lhs / rhs) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final int lhs, final short rhs) {
-    return tc.wrap(lhs - (lhs / rhs) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final int lhs, final int rhs) {
-    return tc.wrap(lhs - (lhs / rhs) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final int lhs, final long rhs) {
-    return tc.wrap(lhs - (lhs / rhs) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final int lhs, final float rhs) {
-  final double tmp = lhs / rhs;
-
-    return tc.wrap((float)(lhs - Math.floor(tmp) * rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final int lhs, final double rhs) {
-  final double tmp = lhs / rhs;
-
-    return tc.wrap(lhs - Math.floor(tmp) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final int lhs, final BigInteger rhs) {
-    return BigInteger.valueOf(lhs).divideAndRemainder(rhs)[1];
-  }
-
-  public Object doApply(final ThreadContext tc, final int lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs).divideAndRemainder(rhs)[1];
   }
 
   public int doIntApply(final ThreadContext tc, final int lhs, final char rhs) {

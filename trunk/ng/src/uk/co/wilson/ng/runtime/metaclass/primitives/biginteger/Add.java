@@ -5,9 +5,8 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
 
-class Add extends BaseBinaryOperation implements BigIntegerBinaryArithmeticOperation {
+class Add extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.add().apply((BigInteger)lhs, rhs);
   }
@@ -54,42 +53,6 @@ class Add extends BaseBinaryOperation implements BigIntegerBinaryArithmeticOpera
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.add().apply(lhs, (BigInteger)rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final char rhs) {
-    return lhs.add(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final byte rhs) {
-    return lhs.add(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final short rhs) {
-    return lhs.add(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final int rhs) {
-    return lhs.add(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final long rhs) {
-    return lhs.add(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
-    return tc.wrap(lhs.floatValue() + rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
-    return tc.wrap(lhs.doubleValue() + rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
-    return lhs.add(rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs.longValue()).add(rhs);
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final char rhs) {

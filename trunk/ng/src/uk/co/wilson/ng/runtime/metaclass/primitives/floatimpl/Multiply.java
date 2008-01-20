@@ -5,13 +5,12 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBinaryArithmeticOperation;
 
 /**
  * @author John
  *
  */
-public class Multiply extends BaseBinaryOperation implements FloatBinaryArithmeticOperation {
+public class Multiply extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.multiply().apply(tc.unwrapToFloat(lhs), rhs);
   }
@@ -58,42 +57,6 @@ public class Multiply extends BaseBinaryOperation implements FloatBinaryArithmet
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.multiply().apply(lhs, tc.unwrapToFloat(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final float lhs, final char rhs) {
-    return tc.wrap(lhs * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final float lhs, final byte rhs) {
-    return tc.wrap(lhs * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final float lhs, final short rhs) {
-    return tc.wrap(lhs * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final float lhs, final int rhs) {
-    return tc.wrap(lhs * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final float lhs, final long rhs) {
-    return tc.wrap(lhs * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final float lhs, final float rhs) {
-    return tc.wrap(lhs * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final float lhs, final double rhs) {
-    return tc.wrap(lhs * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final float lhs, final BigInteger rhs) {
-    return tc.wrap(lhs * rhs.floatValue());
-  }
-
-  public Object doApply(final ThreadContext tc, final float lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs).multiply(rhs);
   }
 
   public float doFloatApply(final ThreadContext tc, final float lhs, final char rhs) {

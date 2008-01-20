@@ -5,13 +5,12 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
 
 /**
  * @author John
  *
  */
-public class Modulo extends BaseBinaryOperation implements BigIntegerBinaryArithmeticOperation {
+public class Modulo extends BaseBinaryArithmeticOperation{
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.modulo().apply((BigInteger)lhs, rhs);
   }
@@ -58,42 +57,6 @@ public class Modulo extends BaseBinaryOperation implements BigIntegerBinaryArith
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.modulo().apply(lhs, (BigInteger)rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final char rhs) {
-    return lhs.divide(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final byte rhs) {
-    return lhs.divide(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final short rhs) {
-    return lhs.divide(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final int rhs) {
-    return lhs.divide(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final long rhs) {
-    return lhs.divide(BigInteger.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
-    return tc.wrap((float)Math.floor(lhs.floatValue()/ rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
-    return tc.wrap(Math.floor(lhs.doubleValue()/ rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
-    return lhs.divide(rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs.longValue()).divideToIntegralValue(rhs);
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final char rhs) {

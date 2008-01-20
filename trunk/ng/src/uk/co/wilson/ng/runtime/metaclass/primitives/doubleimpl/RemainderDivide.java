@@ -5,13 +5,12 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleBinaryArithmeticOperation;
 
 /**
  * @author John
  *
  */
-public class RemainderDivide extends BaseBinaryOperation implements DoubleBinaryArithmeticOperation {
+public class RemainderDivide extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.remainderDivide().apply(tc.unwrapToDouble(lhs), rhs);
   }
@@ -58,58 +57,6 @@ public class RemainderDivide extends BaseBinaryOperation implements DoubleBinary
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.remainderDivide().apply(lhs, tc.unwrapToDouble(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final char rhs) {
-  final double tmp = lhs / rhs;
-
-    return tc.wrap((tmp - Math.floor(tmp)) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final byte rhs) {
-  final double tmp = lhs / rhs;
-
-    return tc.wrap((tmp - Math.floor(tmp)) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final short rhs) {
-  final double tmp = lhs / rhs;
-
-    return tc.wrap((tmp - Math.floor(tmp)) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final int rhs) {
-  final double tmp = lhs / rhs;
-
-    return tc.wrap((tmp - Math.floor(tmp)) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final long rhs) {
-  final double tmp = lhs / rhs;
-
-    return tc.wrap((tmp - Math.floor(tmp)) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final float rhs) {
-  final double tmp = lhs / rhs;
-
-    return tc.wrap((tmp - Math.floor(tmp)) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final double rhs) {
-  final double tmp = lhs / rhs;
-
-    return tc.wrap((tmp - Math.floor(tmp)) * rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final BigInteger rhs) {
-  final double tmp = lhs / rhs.longValue();
-
-    return tc.wrap((tmp - Math.floor(tmp)) * rhs.longValue());
-  }
-
-  public Object doApply(final ThreadContext tc, final double lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs).divideAndRemainder(rhs)[1];
   }
 
   public double doDoubleApply(final ThreadContext tc, final double lhs, final char rhs) {

@@ -5,13 +5,12 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.ShortBinaryArithmeticOperation;
 
 /**
  * @author John
  *
  */
-public class Modulo extends BaseBinaryOperation implements ShortBinaryArithmeticOperation {
+public class Modulo extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.modulo().apply(tc.unwrapToShort(lhs), rhs);
   }
@@ -58,42 +57,6 @@ public class Modulo extends BaseBinaryOperation implements ShortBinaryArithmetic
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.modulo().apply(lhs, tc.unwrapToShort(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final short lhs, final char rhs) {
-    return tc.wrap(lhs / rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final short lhs, final byte rhs) {
-    return tc.wrap(lhs / rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final short lhs, final short rhs) {
-    return tc.wrap(lhs / rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final short lhs, final int rhs) {
-    return tc.wrap(lhs / rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final short lhs, final long rhs) {
-    return tc.wrap(lhs / rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final short lhs, final float rhs) {
-    return tc.wrap((float)Math.floor(lhs / rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final short lhs, final double rhs) {
-    return tc.wrap(Math.floor(lhs / rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final short lhs, final BigInteger rhs) {
-    return BigInteger.valueOf(lhs).divide(rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final short lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs).divideToIntegralValue(rhs);
   }
 
   public int doIntApply(final ThreadContext tc, final short lhs, final char rhs) {

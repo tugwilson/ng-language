@@ -5,13 +5,12 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
 
 /**
  * @author John
  *
  */
-public class Multiply extends BaseBinaryOperation implements BigDecimalBinaryArithmeticOperation {
+public class Multiply extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.multiply().apply((BigDecimal)lhs, rhs);
   }
@@ -58,42 +57,6 @@ public class Multiply extends BaseBinaryOperation implements BigDecimalBinaryAri
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.multiply().apply(lhs, (BigDecimal)rhs);
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final char rhs) {
-    return lhs.multiply(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final byte rhs) {
-    return lhs.multiply(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final short rhs) {
-    return lhs.multiply(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final int rhs) {
-    return lhs.multiply(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final long rhs) {
-    return lhs.multiply(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final float rhs) {
-    return lhs.multiply(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final double rhs) {
-    return lhs.multiply(BigDecimal.valueOf(rhs));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final BigInteger rhs) {
-    return lhs.multiply(BigDecimal.valueOf(rhs.longValue()));
-  }
-
-  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final BigDecimal rhs) {
-    return lhs.multiply(rhs);
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigDecimal lhs, final char rhs) {
