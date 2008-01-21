@@ -14,6 +14,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
   private final DoubleBinaryArithmeticOperation modifiedDivide = null;
   private final DoubleBinaryArithmeticOperation modifiedModulo = null;
   private final DoubleBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private final DoubleBinaryArithmeticOperation modifiedPower = null;
 
   private final DoubleBooleanComparison modifiedEquals = null;
   private final DoubleBooleanComparison modifiedNotEquals = null;
@@ -30,6 +31,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
   private final DoubleBinaryArithmeticOperation divide = new Divide();
   private final DoubleBinaryArithmeticOperation modulo = new Modulo();
   private final DoubleBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+  private final DoubleBinaryArithmeticOperation power = new Power();
 
   private final DoubleBooleanComparison equals = new Equals();
   private final DoubleBooleanComparison notEquals = new NotEquals();
@@ -95,6 +97,14 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
       return this.remainderDivide;
     } else {
       return this.modifiedRemainderDivide;
+    }
+  }
+  
+  public DoubleBinaryArithmeticOperation power() {
+    if (this.modifiedPower == null) {
+      return this.power;
+    } else {
+      return this.modifiedPower;
     }
   }
 

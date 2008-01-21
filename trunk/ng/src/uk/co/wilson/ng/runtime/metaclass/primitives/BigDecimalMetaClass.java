@@ -9,6 +9,7 @@ public interface BigDecimalMetaClass extends MetaClass {
   BigDecimalBinaryArithmeticOperation divide();
   BigDecimalBinaryArithmeticOperation modulo();
   BigDecimalBinaryArithmeticOperation remainderDivide();
+  BigDecimalBinaryArithmeticOperation power();
 
   BigDecimalBooleanComparison equals();
   BigDecimalBooleanComparison notEquals();

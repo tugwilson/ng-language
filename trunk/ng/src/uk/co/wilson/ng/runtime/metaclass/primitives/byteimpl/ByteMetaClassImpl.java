@@ -1,5 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl;
 
+import ng.runtime.metaclass.BinaryArithmeticOperation;
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBinaryArithmeticOperation;
@@ -96,6 +97,11 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     } else {
       return this.modifiedRemainderDivide;
     }
+  }
+  
+  public ByteBinaryArithmeticOperation power() {
+    // TODO Auto-generated method stub
+    return null;
   }
 
   public ByteBooleanComparison equals() {

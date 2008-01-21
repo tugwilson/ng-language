@@ -101,6 +101,11 @@ public class BooleanMetaClassImpl extends BaseMetaClass implements BooleanMetaCl
     // TODO Auto-generated method stub
     return null;
   }
+  
+  public BinaryArithmeticOperation power() {
+    // TODO Auto-generated method stub
+    return null;
+  }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.MetaClass#remainderDivide()

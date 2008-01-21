@@ -2,6 +2,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.biginteger;
 
 import java.math.BigInteger;
 
+import ng.runtime.metaclass.BinaryArithmeticOperation;
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
@@ -98,6 +99,11 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     } else {
       return this.modifiedRemainderDivide;
     }
+  }
+  
+  public BigIntegerBinaryArithmeticOperation power() {
+    // TODO Auto-generated method stub
+    return null;
   }
 
   public BigIntegerBooleanComparison equals() {

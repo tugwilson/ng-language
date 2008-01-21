@@ -9,6 +9,7 @@ public interface DoubleMetaClass extends MetaClass {
   DoubleBinaryArithmeticOperation divide();
   DoubleBinaryArithmeticOperation modulo();
   DoubleBinaryArithmeticOperation remainderDivide();
+  DoubleBinaryArithmeticOperation power();
 
   DoubleBooleanComparison equals();
   DoubleBooleanComparison notEquals();

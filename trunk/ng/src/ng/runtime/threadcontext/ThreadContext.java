@@ -75,6 +75,8 @@ public abstract class ThreadContext {
 
   public abstract BinaryArithmeticOperation modulo();
 
+  public abstract BinaryArithmeticOperation power();
+
   public abstract BooleanComparison equals();
 
   public abstract BooleanComparison notEquals();

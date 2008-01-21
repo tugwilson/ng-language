@@ -10,6 +10,7 @@ public interface IntMetaClass extends MetaClass {
   IntBinaryArithmeticOperation divide();
   IntBinaryArithmeticOperation modulo();
   IntBinaryArithmeticOperation remainderDivide();
+  IntBinaryArithmeticOperation power();
 
   IntBooleanComparison equals();
   IntBooleanComparison notEquals();

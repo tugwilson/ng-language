@@ -9,6 +9,7 @@ public interface BigIntegerMetaClass extends MetaClass {
   BigIntegerBinaryArithmeticOperation divide();
   BigIntegerBinaryArithmeticOperation modulo();
   BigIntegerBinaryArithmeticOperation remainderDivide();
+  BigIntegerBinaryArithmeticOperation power();
 
   BigIntegerBooleanComparison equals();
   BigIntegerBooleanComparison notEquals();

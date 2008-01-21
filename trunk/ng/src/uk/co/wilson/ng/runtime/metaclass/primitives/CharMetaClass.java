@@ -9,6 +9,7 @@ public interface CharMetaClass extends MetaClass {
   CharBinaryArithmeticOperation divide();
   CharBinaryArithmeticOperation modulo();
   CharBinaryArithmeticOperation remainderDivide();
+  CharBinaryArithmeticOperation power();
 
   CharBooleanComparison equals();
   CharBooleanComparison notEquals();

@@ -1,5 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl;
 
+import ng.runtime.metaclass.BinaryArithmeticOperation;
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ShortBinaryArithmeticOperation;
@@ -96,6 +97,11 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     } else {
       return this.modifiedRemainderDivide;
     }
+  }
+  
+  public ShortBinaryArithmeticOperation power() {
+    // TODO Auto-generated method stub
+    return null;
   }
 
   public ShortBooleanComparison equals() {

@@ -1,5 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 
+import ng.runtime.metaclass.BinaryArithmeticOperation;
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBinaryArithmeticOperation;
@@ -97,6 +98,11 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     } else {
       return this.modifiedRemainderDivide;
     }
+  }
+  
+  public FloatBinaryArithmeticOperation power() {
+    // TODO Auto-generated method stub
+    return null;
   }
 
   public FloatBooleanComparison equals() {
