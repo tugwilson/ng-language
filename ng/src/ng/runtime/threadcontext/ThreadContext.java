@@ -6,6 +6,9 @@ import uk.co.wilson.ng.runtime.threadcontext.ThreadContextImpl;
 
 public abstract class ThreadContext {
   public static final Object NOT_PERFORMED = new Object();
+  public static final NotPerformed NOT_PERFORMED_EXCEPTION = new NotPerformed() {
+    private static final long serialVersionUID = 1L;
+  };
 
   private static final ThreadLocal<ThreadContext> contexts = new ThreadLocal<ThreadContext>() {
 

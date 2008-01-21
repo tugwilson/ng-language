@@ -12,9 +12,11 @@ import ng.runtime.metaclass.MetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.*;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl;
 
 
 public abstract class PrimitiveMetaClasses {
+  private static final StringMetaClass stringMetaClass = new StringMetaClassImpl();
   private static final BigIntegerMetaClass bigIntegerMetaClass = new BigIntegerMetaClassImpl();
   private static final BigDecimalMetaClass bigDecimalMetaClass = new BigDecimalMetaClassImpl();
 
@@ -66,5 +68,9 @@ public abstract class PrimitiveMetaClasses {
 
   public static BigDecimalMetaClass getBigDecimalMetaClass() {
     return bigDecimalMetaClass;
+  }
+
+  public static StringMetaClass getStringMetaClass() {
+    return stringMetaClass;
   }
 }

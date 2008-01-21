@@ -48,6 +48,7 @@ public class ThreadContextImpl extends ThreadContext {
     registry.put(double.class, PrimitiveMetaClasses.getDoubleMetaClass());
     registry.put(BigInteger.class, PrimitiveMetaClasses.getBigIntegerMetaClass());
     registry.put(BigDecimal.class, PrimitiveMetaClasses.getBigDecimalMetaClass());
+    registry.put(String.class, PrimitiveMetaClasses.getStringMetaClass());
   }
 
   private final Map<Class<?>, MetaClass> registryCache = new Map<Class<?>, MetaClass>() {
