@@ -1,5 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.charimpl;
 
+import ng.runtime.metaclass.BinaryArithmeticOperation;
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.CharBinaryArithmeticOperation;
@@ -96,6 +97,11 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     } else {
       return this.modifiedRemainderDivide;
     }
+  }
+  
+  public CharBinaryArithmeticOperation power() {
+    // TODO Auto-generated method stub
+    return null;
   }
 
   public CharBooleanComparison equals() {

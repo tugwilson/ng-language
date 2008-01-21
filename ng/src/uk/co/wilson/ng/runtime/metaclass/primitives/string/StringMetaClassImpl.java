@@ -103,6 +103,11 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
       return this.modifiedRemainderDivide;
     }
   }
+  
+  public BinaryArithmeticOperation power() {
+    // TODO Auto-generated method stub
+    return null;
+  }
 
   public BooleanBinaryComparison equals() {
     if (this.modifiedEquals == null) {

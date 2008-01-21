@@ -9,6 +9,7 @@ public interface ByteMetaClass extends MetaClass {
   ByteBinaryArithmeticOperation divide();
   ByteBinaryArithmeticOperation modulo();
   ByteBinaryArithmeticOperation remainderDivide();
+  ByteBinaryArithmeticOperation power();
 
   ByteBooleanComparison equals();
   ByteBooleanComparison notEquals();

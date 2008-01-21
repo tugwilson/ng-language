@@ -9,6 +9,7 @@ public interface LongMetaClass extends MetaClass {
   LongBinaryArithmeticOperation divide();
   LongBinaryArithmeticOperation modulo();
   LongBinaryArithmeticOperation remainderDivide();
+  LongBinaryArithmeticOperation power();
 
   LongBooleanComparison equals();
   LongBooleanComparison notEquals();

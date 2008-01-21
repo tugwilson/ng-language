@@ -1,5 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.intimpl;
 
+import ng.runtime.metaclass.BinaryArithmeticOperation;
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.IntBinaryArithmeticOperation;
@@ -14,6 +15,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   private final IntBinaryArithmeticOperation modifiedDivide = null;
   private final IntBinaryArithmeticOperation modifiedModulo = null;
   private final IntBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private final IntBinaryArithmeticOperation modifiedPower = null;
 
   private final IntBooleanComparison modifiedEquals = null;
   private final IntBooleanComparison modifiedNotEquals = null;
@@ -30,6 +32,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   private final IntBinaryArithmeticOperation divide = new Divide();
   private final IntBinaryArithmeticOperation modulo = new Modulo();
   private final IntBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+  private final IntBinaryArithmeticOperation power = new Power();
 
   private final IntBooleanComparison equals = new Equals();
   private final IntBooleanComparison notEquals = new NotEquals();
@@ -95,6 +98,14 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
       return this.remainderDivide;
     } else {
       return this.modifiedRemainderDivide;
+    }
+  }
+  
+  public IntBinaryArithmeticOperation power() {
+    if (this.modifiedPower == null) {
+      return this.power;
+    } else {
+      return this.modifiedPower;
     }
   }
 

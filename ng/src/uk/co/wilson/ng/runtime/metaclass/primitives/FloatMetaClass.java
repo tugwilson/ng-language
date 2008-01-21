@@ -9,6 +9,7 @@ public interface FloatMetaClass extends MetaClass {
   FloatBinaryArithmeticOperation divide();
   FloatBinaryArithmeticOperation modulo();
   FloatBinaryArithmeticOperation remainderDivide();
+  FloatBinaryArithmeticOperation power();
 
   FloatBooleanComparison equals();
   FloatBooleanComparison notEquals();

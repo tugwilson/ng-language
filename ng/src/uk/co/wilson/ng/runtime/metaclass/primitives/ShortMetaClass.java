@@ -9,6 +9,7 @@ public interface ShortMetaClass extends MetaClass {
   ShortBinaryArithmeticOperation divide();
   ShortBinaryArithmeticOperation modulo();
   ShortBinaryArithmeticOperation remainderDivide();
+  ShortBinaryArithmeticOperation power();
 
   ShortBooleanComparison equals();
   ShortBooleanComparison notEquals();

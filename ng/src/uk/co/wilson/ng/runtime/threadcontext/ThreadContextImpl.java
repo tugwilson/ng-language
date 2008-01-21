@@ -242,6 +242,8 @@ public class ThreadContextImpl extends ThreadContext {
 
   private final BinaryArithmeticOperation modulo = new Modulo(this);
 
+  private final BinaryArithmeticOperation power = new Power(this);
+
   private final BooleanComparison equals = new Equals(this);
 
   private final BooleanComparison notEquals = new NotEquals(this);
@@ -608,6 +610,14 @@ public class ThreadContextImpl extends ThreadContext {
   @Override
   public BinaryArithmeticOperation modulo() {
     return this.modulo;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#power()
+   */
+  @Override
+  public BinaryArithmeticOperation power() {
+    return this.power;
   }
 
   @Override

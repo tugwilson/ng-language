@@ -13,6 +13,7 @@ public interface MetaClass {
   BinaryArithmeticOperation divide();
   BinaryArithmeticOperation modulo();
   BinaryArithmeticOperation remainderDivide();
+  BinaryArithmeticOperation power();
 
   BooleanBinaryComparison equals();
   BooleanBinaryComparison notEquals();

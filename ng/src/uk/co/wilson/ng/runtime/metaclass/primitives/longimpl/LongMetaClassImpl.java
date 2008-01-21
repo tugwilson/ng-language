@@ -1,5 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.longimpl;
 
+import ng.runtime.metaclass.BinaryArithmeticOperation;
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.LongBinaryArithmeticOperation;
@@ -96,6 +97,11 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     } else {
       return this.modifiedRemainderDivide;
     }
+  }
+  
+  public LongBinaryArithmeticOperation power() {
+    // TODO Auto-generated method stub
+    return null;
   }
 
   public LongBooleanComparison equals() {
