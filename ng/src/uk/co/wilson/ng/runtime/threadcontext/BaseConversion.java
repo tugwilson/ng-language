@@ -136,6 +136,24 @@ public class BaseConversion implements Coversion {
     return asBigDecimal(this.tc.getMetaClassFor(instance), instance);
   }
 
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.Coversion#asString(ng.runtime.metaclass.MetaClass, java.lang.Object)
+   */
+  public String asString(MetaClass metaClass, Object instance) {
+    try {
+      return metaClass.convert().doAsString(this.tc, instance);
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Value of type " + instance.getClass().getName() + " cannot be converted to String");
+    }
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.Coversion#asString(java.lang.Object)
+   */
+  public String asString(Object instance) {
+    return asString(this.tc.getMetaClassFor(instance), instance);
+  }
+
   public Object asType(final MetaClass metaClass, final Object instance, final Object type) {
     Object result;
 

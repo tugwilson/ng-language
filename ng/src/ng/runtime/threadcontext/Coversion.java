@@ -26,6 +26,8 @@ public interface Coversion {
   BigInteger asBigInteger(MetaClass metaClass, Object instance);
   BigDecimal asBigDecimal(Object instance);
   BigDecimal asBigDecimal(MetaClass metaClass, Object instance);
+  String asString(Object instance);
+  String asString(MetaClass metaClass, Object instance);
   Object asType(Object instance, Object type);
   Object asType(MetaClass metaClass, Object instance, Object type);
 }

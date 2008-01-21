@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
 
 class Convert implements Conversion {
@@ -46,6 +47,13 @@ class Convert implements Conversion {
 
   public BigDecimal doAsBigDecimal(final ThreadContext tc, final Object instance) {
     return BigDecimal.valueOf(tc.unwrapToLong(instance));
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
+   */
+  public String doAsString(ThreadContext tc, Object instance) throws NotPerformed {
+    return String.valueOf(tc.unwrapToLong(instance));
   }
 
   public Object doAsType(final ThreadContext tc, final Object instance, final Class<?> type) {

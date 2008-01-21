@@ -30,5 +30,13 @@ public class NgDouble extends NgObject {
   public double getDoubleValue() {
     return this.value;
   }
+  
+  /* (non-JavaDoc)
+   * @see java.lang.Object#toString()
+   */
+  @Override
+  public String toString() {
+    return String.valueOf(this.value);
+  }
 }
 
