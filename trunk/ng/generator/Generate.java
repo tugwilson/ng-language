@@ -15,6 +15,7 @@ public class Generate {
         new String[]{"Multiply", "multiply", "by", "ArithmeticOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "Multiply.java"},
         new String[]{"Divide", "divide", "by", "ArithmeticOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "Divide.java"},
         new String[]{"Modulo", "modulo", "by", "ArithmeticOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "Modulo.java"},
+        new String[]{"Power", "power", "to the power of", "ArithmeticOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "Power.java"},
         new String[]{"RemainderDivide", "remainderDivide", "by", "ArithmeticOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "RemainderDivide.java"},
         new String[]{"Equals", "equals", "compare equals", "BooleanComparison.vm", "uk/co/wilson/ng/runtime/threadcontext", "Equals.java"},
         new String[]{"NotEquals", "notEquals", "compare not equals", "BooleanComparison.vm", "uk/co/wilson/ng/runtime/threadcontext", "NotEquals.java"},
