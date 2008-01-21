@@ -30,4 +30,12 @@ public class NgChar extends NgObject {
   public char getCharValue() {
     return this.value;
   }
+  
+  /* (non-JavaDoc)
+   * @see java.lang.Object#toString()
+   */
+  @Override
+  public String toString() {
+    return String.valueOf(this.value);
+  }
 }

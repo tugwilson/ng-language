@@ -27,6 +27,8 @@ public interface Conversion {
 
   BigDecimal doAsBigDecimal(ThreadContext tc, Object instance) throws NotPerformed;
 
+  String doAsString(ThreadContext tc, Object instance) throws NotPerformed;
+
   Object doAsType(ThreadContext tc, Object instance, Class<?> type);
 
   Object doAsYourType(ThreadContext tc, boolean value);

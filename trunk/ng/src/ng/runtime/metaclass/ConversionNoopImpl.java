@@ -102,6 +102,13 @@ public class ConversionNoopImpl implements Conversion {
   }
 
   /* (non-JavaDoc)
+   * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
+   */
+  public String doAsString(ThreadContext tc, Object instance) throws NotPerformed {
+    return instance.toString();
+  }
+
+  /* (non-JavaDoc)
    * @see ng.runtime.metaclass.Conversion#doAsType(ng.runtime.threadcontext.ThreadContext, java.lang.Object, java.lang.Class)
    */
   public Object doAsType(ThreadContext tc, Object instance, Class<?> type) {

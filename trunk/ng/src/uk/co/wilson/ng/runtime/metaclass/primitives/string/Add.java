@@ -36,21 +36,21 @@ public class Add implements BinaryArithmeticOperation {
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, java.lang.Object)
    */
   public Object doApply(ThreadContext tc, Object lhs, Object rhs) {
-    return (String)lhs + rhs;
+    return (String)lhs + tc.convert().asString(rhs);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, ng.runtime.metaclass.MetaClass, java.lang.Object)
    */
   public Object doApply(ThreadContext tc, Object lhs, MetaClass rhsMetaClass, Object rhs) {
-    return lhs + (String)rhs;
+    return (String)lhs + tc.convert().asString(rhsMetaClass, rhs);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doReverseApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, java.lang.Object)
    */
   public Object doReverseApply(ThreadContext tc, Object lhs, Object rhs) {
-    return (String)lhs + rhs;
+    return tc.convert().asString(lhs) + (String)rhs;
   }
 
   /* (non-JavaDoc)
