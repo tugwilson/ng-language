@@ -14,6 +14,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   private volatile LongBinaryArithmeticOperation modifiedDivide = null;
   private volatile LongBinaryArithmeticOperation modifiedModulo = null;
   private volatile LongBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile LongBinaryArithmeticOperation modifiedPower = null;
 
   private volatile LongBooleanComparison modifiedEquals = null;
   private volatile LongBooleanComparison modifiedNotEquals = null;
@@ -30,6 +31,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   private final LongBinaryArithmeticOperation divide = new Divide();
   private final LongBinaryArithmeticOperation modulo = new Modulo();
   private final LongBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+  private final LongBinaryArithmeticOperation power = new Power();
 
   private final LongBooleanComparison equals = new Equals();
   private final LongBooleanComparison notEquals = new NotEquals();
@@ -99,8 +101,11 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
   
   public LongBinaryArithmeticOperation power() {
-    // TODO Auto-generated method stub
-    return null;
+    if (this.modifiedPower == null) {
+      return this.power;
+    } else {
+      return this.modifiedPower;
+    }
   }
 
   public LongBooleanComparison equals() {

@@ -10,88 +10,88 @@ import ng.runtime.threadcontext.ThreadContext;
  * @author John
  *
  */
-public class Multiply extends BaseBinaryArithmeticOperation {
+public class Power extends BaseBinaryArithmeticOperation {
   public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.multiply().apply((BigInteger)lhs, rhs);
+    return tc.power().apply((BigInteger)lhs, rhs);
   }
 
   public Object doApply(final ThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.multiply().apply((BigInteger)lhs, rhsMetaClass, rhs);
+    return tc.power().apply((BigInteger)lhs, rhsMetaClass, rhs);
   }
 
   public Object doReverseApply(final ThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.multiply().apply(lhs, (BigInteger)rhs);
+    return tc.power().apply(lhs, (BigInteger)rhs);
   }
 
   public Object doApply(final ThreadContext tc, final char lhs, final Object rhs) {
-    return tc.multiply().apply(lhs, (BigInteger)rhs);
+    return tc.power().apply(lhs, (BigInteger)rhs);
   }
 
   public Object doApply(final ThreadContext tc, final byte lhs, final Object rhs) {
-    return tc.multiply().apply(lhs, (BigInteger)rhs);
+    return tc.power().apply(lhs, (BigInteger)rhs);
   }
 
   public Object doApply(final ThreadContext tc, final short lhs, final Object rhs) {
-    return tc.multiply().apply(lhs, (BigInteger)rhs);
+    return tc.power().apply(lhs, (BigInteger)rhs);
   }
 
   public Object doApply(final ThreadContext tc, final int lhs, final Object rhs) {
-    return tc.multiply().apply(lhs, (BigInteger)rhs);
+    return tc.power().apply(lhs, (BigInteger)rhs);
   }
 
   public Object doApply(final ThreadContext tc, final long lhs, final Object rhs) {
-    return tc.multiply().apply(lhs, (BigInteger)rhs);
+    return tc.power().apply(lhs, (BigInteger)rhs);
   }
 
   public Object doApply(final ThreadContext tc, final float lhs, final Object rhs) {
-    return tc.multiply().apply(lhs, (BigInteger)rhs);
+    return tc.power().apply(lhs, (BigInteger)rhs);
   }
 
   public Object doApply(final ThreadContext tc, final double lhs, final Object rhs) {
-    return tc.multiply().apply(lhs, (BigInteger)rhs);
+    return tc.power().apply(lhs, (BigInteger)rhs);
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return tc.multiply().apply(lhs, (BigInteger)rhs);
+    return tc.power().apply(lhs, (BigInteger)rhs);
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return tc.multiply().apply(lhs, (BigInteger)rhs);
+    return tc.power().apply(lhs, (BigInteger)rhs);
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final char rhs) {
-    return lhs.multiply(BigInteger.valueOf(rhs));
+    return BigInteger.valueOf((long)Math.pow(lhs.doubleValue(), rhs));
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final byte rhs) {
-    return lhs.multiply(BigInteger.valueOf(rhs));
+    return BigInteger.valueOf((long)Math.pow(lhs.doubleValue(), rhs));
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final short rhs) {
-    return lhs.multiply(BigInteger.valueOf(rhs));
+    return BigInteger.valueOf((long)Math.pow(lhs.doubleValue(), rhs));
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final int rhs) {
-    return lhs.multiply(BigInteger.valueOf(rhs));
+    return BigInteger.valueOf((long)Math.pow(lhs.doubleValue(), rhs));
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final long rhs) {
-    return lhs.multiply(BigInteger.valueOf(rhs));
+    return BigInteger.valueOf((long)Math.pow(lhs.doubleValue(), rhs));
   }
 
   public float doFloatApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
-    return lhs.floatValue() * rhs;
+    return (float)Math.pow(lhs.doubleValue(), rhs);
   }
 
   public double doDoubleApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
-    return lhs.doubleValue() * rhs;
+    return Math.pow(lhs.doubleValue(), rhs);
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
-    return lhs.multiply(rhs);
+    return BigInteger.valueOf((long)Math.pow(lhs.doubleValue(), rhs.doubleValue()));
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs.longValue()).multiply(rhs);
+    return BigDecimal.valueOf(Math.pow(lhs.doubleValue(), rhs.doubleValue()));
   }
 }

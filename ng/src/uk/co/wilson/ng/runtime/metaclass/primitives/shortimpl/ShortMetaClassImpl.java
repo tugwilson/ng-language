@@ -14,6 +14,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   private volatile ShortBinaryArithmeticOperation modifiedDivide = null;
   private volatile ShortBinaryArithmeticOperation modifiedModulo = null;
   private volatile ShortBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile ShortBinaryArithmeticOperation modifiedPower = null;
 
   private volatile ShortBooleanComparison modifiedEquals = null;
   private volatile ShortBooleanComparison modifiedNotEquals = null;
@@ -30,6 +31,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   private final ShortBinaryArithmeticOperation divide = new Divide();
   private final ShortBinaryArithmeticOperation modulo = new Modulo();
   private final ShortBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+  private final ShortBinaryArithmeticOperation power = new Power();
 
   private final ShortBooleanComparison equals = new Equals();
   private final ShortBooleanComparison notEquals = new NotEquals();
@@ -99,8 +101,11 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   }
   
   public ShortBinaryArithmeticOperation power() {
-    // TODO Auto-generated method stub
-    return null;
+    if (this.modifiedPower == null) {
+      return this.power;
+    } else {
+      return this.modifiedPower;
+    }
   }
 
   public ShortBooleanComparison equals() {

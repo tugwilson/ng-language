@@ -2,7 +2,6 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 
 import java.math.BigDecimal;
 
-import ng.runtime.metaclass.BinaryArithmeticOperation;
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
@@ -16,8 +15,9 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
   private final BigDecimalBinaryArithmeticOperation modifiedMultiply = null;
   private final BigDecimalBinaryArithmeticOperation modifiedDivide = null;
   private final BigDecimalBinaryArithmeticOperation modifiedModulo = null;
-
   private final BigDecimalBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private final BigDecimalBinaryArithmeticOperation modifiedPower = null;
+  
   private final BigDecimalBooleanComparison modifiedEquals = null;
   private final BigDecimalBooleanComparison modifiedNotEquals = null;
   private final BigDecimalBooleanComparison modifiedLessThan = null;
@@ -33,6 +33,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
   private final BigDecimalBinaryArithmeticOperation divide = new Divide();
   private final BigDecimalBinaryArithmeticOperation modulo = new Modulo();
   private final BigDecimalBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+  private final BigDecimalBinaryArithmeticOperation power = new Power();
 
   private final BigDecimalBooleanComparison equals = new Equals();
   private final BigDecimalBooleanComparison notEquals = new NotEquals();
@@ -94,8 +95,11 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
   }
   
   public BigDecimalBinaryArithmeticOperation power() {
-    // TODO Auto-generated method stub
-    return null;
+    if (this.modifiedPower == null) {
+      return this.power;
+    } else {
+      return this.modifiedPower;
+    }
   }
 
   public BigDecimalBinaryArithmeticOperation remainderDivide() {
