@@ -2,7 +2,6 @@
 //   http://shootout.alioth.debian.org/
 //   contributed by Isaac Gouy
 
-import java.lang.Math;
 
 class PartialSums {
    static final double twothirds = 2.0/3.0;

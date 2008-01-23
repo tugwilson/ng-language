@@ -5,24 +5,6 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
-/*
- * Created on 21 Jan 2008
- *
- * Copyright 2008 John G. Wilson
- *
- *   Licensed under the Apache License, Version 2.0 (the "License");
- *   you may not use this file except in compliance with the License.
- *   You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *   Unless required by applicable law or agreed to in writing, software
- *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- *
- */
 
 /**
  * @author John
@@ -70,15 +52,11 @@ public class Power extends BaseBinaryArithmeticOperation {
   }
 
   public Object doApply(final ThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return lhs.divide(BigInteger.valueOf(tc.unwrapToInt(rhs)));
+    return tc.power().apply(lhs, tc.unwrapToInt(rhs));
   }
 
   public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return lhs.divideToIntegralValue(new BigDecimal(tc.unwrapToInt(rhs)));
-  }
-
-  public Object doApply(final ThreadContext tc, final int lhs, final char rhs) {
-    return tc.wrap(lhs /  rhs);
+    return tc.power().apply(lhs, tc.unwrapToInt(rhs));
   }
 
   public int doIntApply(final ThreadContext tc, final int lhs, final char rhs) {

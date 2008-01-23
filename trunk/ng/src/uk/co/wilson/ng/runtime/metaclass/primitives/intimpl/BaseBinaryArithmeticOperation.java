@@ -13,6 +13,14 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.IntBinaryArithmeticOperation
  */
 public abstract class BaseBinaryArithmeticOperation extends BaseBinaryOperation implements IntBinaryArithmeticOperation {
 
+  public Object doApply(final ThreadContext tc, final int lhs, final char rhs) {
+    try {
+      return tc.wrap(doIntApply(tc, lhs, rhs));
+    } catch (final NotPerformed e) {
+      return ThreadContext.NOT_PERFORMED;
+    }
+  }
+
   public Object doApply(final ThreadContext tc, final int lhs, final byte rhs) {
     try {
       return tc.wrap(doIntApply(tc, lhs, rhs));

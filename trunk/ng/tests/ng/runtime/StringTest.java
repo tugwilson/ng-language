@@ -3,28 +3,9 @@ package ng.runtime;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.threadcontext.PrimitiveMetaClasses;
-
-import ng.runtime.threadcontext.ThreadContext;
 import junit.framework.TestCase;
-/*
- * Created on 21 Jan 2008
- *
- * Copyright 2008 John G. Wilson
- *
- *   Licensed under the Apache License, Version 2.0 (the "License", "1");
- *   you may not use this file except in compliance with the License.
- *   You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *   Unless required by applicable law or agreed to in writing, software
- *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- *
- */
+import ng.runtime.threadcontext.ThreadContext;
+import uk.co.wilson.ng.runtime.threadcontext.PrimitiveMetaClasses;
 
 /**
  * @author John

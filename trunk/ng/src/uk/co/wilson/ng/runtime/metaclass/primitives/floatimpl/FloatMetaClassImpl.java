@@ -15,6 +15,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
   private volatile FloatBinaryArithmeticOperation modifiedDivide = null;
   private volatile FloatBinaryArithmeticOperation modifiedModulo = null;
   private volatile FloatBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile FloatBinaryArithmeticOperation modifiedPower = null;
 
   private volatile FloatBooleanComparison modifiedEquals = null;
   private volatile FloatBooleanComparison modifiedNotEquals = null;
@@ -31,6 +32,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
   private final FloatBinaryArithmeticOperation divide = new Divide();
   private final FloatBinaryArithmeticOperation modulo = new Modulo();
   private final FloatBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+  private final FloatBinaryArithmeticOperation power = new Power();
 
   private final FloatBooleanComparison equals = new Equals();
   private final FloatBooleanComparison notEquals = new NotEquals();
@@ -100,8 +102,11 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
   }
   
   public FloatBinaryArithmeticOperation power() {
-    // TODO Auto-generated method stub
-    return null;
+    if (this.modifiedPower == null) {
+      return this.power;
+    } else {
+      return this.modifiedPower;
+    }
   }
 
   public FloatBooleanComparison equals() {

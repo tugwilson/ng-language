@@ -14,6 +14,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private volatile CharBinaryArithmeticOperation modifiedDivide = null;
   private volatile CharBinaryArithmeticOperation modifiedModulo = null;
   private volatile CharBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile CharBinaryArithmeticOperation modifiedPower = null;
 
   private volatile CharBooleanComparison modifiedEquals = null;
   private volatile CharBooleanComparison modifiedNotEquals = null;
@@ -30,6 +31,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private final CharBinaryArithmeticOperation divide = new Divide();
   private final CharBinaryArithmeticOperation modulo = new Modulo();
   private final CharBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+  private final CharBinaryArithmeticOperation power = new Power();
 
   private final CharBooleanComparison equals = new Equals();
   private final CharBooleanComparison notEquals = new NotEquals();
@@ -99,8 +101,11 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
   
   public CharBinaryArithmeticOperation power() {
-    // TODO Auto-generated method stub
-    return null;
+    if (this.modifiedPower == null) {
+      return this.power;
+    } else {
+      return this.modifiedPower;
+    }
   }
 
   public CharBooleanComparison equals() {

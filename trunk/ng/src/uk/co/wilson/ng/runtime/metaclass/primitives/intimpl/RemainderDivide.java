@@ -59,10 +59,6 @@ public class RemainderDivide extends BaseBinaryArithmeticOperation {
     return lhs.divideAndRemainder(new BigDecimal(tc.unwrapToInt(rhs)))[1];
   }
 
-  public Object doApply(final ThreadContext tc, final int lhs, final char rhs) {
-    return tc.wrap(lhs - (lhs / rhs) * rhs);
-  }
-
   public int doIntApply(final ThreadContext tc, final int lhs, final char rhs) {
     return lhs - (lhs / rhs) * rhs;
   }

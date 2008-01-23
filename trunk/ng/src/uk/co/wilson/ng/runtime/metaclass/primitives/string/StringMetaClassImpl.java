@@ -19,8 +19,9 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
   private volatile BinaryArithmeticOperation modifiedMultiply = null;
   private volatile BinaryArithmeticOperation modifiedDivide = null;
   private volatile BinaryArithmeticOperation modifiedModulo = null;
-
   private volatile BinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile BinaryArithmeticOperation modifiedPower = null;
+  
   private volatile BooleanBinaryComparison modifiedEquals = null;
   private volatile BooleanBinaryComparison modifiedNotEquals = null;
   private volatile BooleanBinaryComparison modifiedLessThan = null;
@@ -36,6 +37,7 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
   private final BinaryArithmeticOperation divide = BinaryArithmeticOperationNoopImpl.instance;
   private final BinaryArithmeticOperation modulo = BinaryArithmeticOperationNoopImpl.instance;
   private final BinaryArithmeticOperation remainderDivide = BinaryArithmeticOperationNoopImpl.instance;
+  private final BinaryArithmeticOperation power = BinaryArithmeticOperationNoopImpl.instance;
 
   private final BooleanBinaryComparison equals = null;
   private final BooleanBinaryComparison notEquals = null;
@@ -105,8 +107,11 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
   }
   
   public BinaryArithmeticOperation power() {
-    // TODO Auto-generated method stub
-    return null;
+    if (this.modifiedPower == null) {
+      return this.power;
+    } else {
+      return this.modifiedPower;
+    }
   }
 
   public BooleanBinaryComparison equals() {

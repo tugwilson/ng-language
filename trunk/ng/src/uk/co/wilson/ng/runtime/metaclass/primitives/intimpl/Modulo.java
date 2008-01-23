@@ -59,10 +59,6 @@ public class Modulo extends BaseBinaryArithmeticOperation {
     return lhs.divideToIntegralValue(new BigDecimal(tc.unwrapToInt(rhs)));
   }
 
-  public Object doApply(final ThreadContext tc, final int lhs, final char rhs) {
-    return tc.wrap(lhs /  rhs);
-  }
-
   public int doIntApply(final ThreadContext tc, final int lhs, final char rhs) {
     return lhs /  rhs;
   }

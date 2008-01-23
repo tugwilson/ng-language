@@ -59,10 +59,6 @@ public class Subtract extends BaseBinaryArithmeticOperation {
     return tc.subtract().apply(lhs, tc.unwrapToInt(rhs));
   }
 
-  public Object doApply(final ThreadContext tc, final int lhs, final char rhs) {
-    return tc.wrap(lhs - rhs);
-  }
-
   public int doIntApply(final ThreadContext tc, final int lhs, final char rhs) {
     return lhs - rhs;
   }

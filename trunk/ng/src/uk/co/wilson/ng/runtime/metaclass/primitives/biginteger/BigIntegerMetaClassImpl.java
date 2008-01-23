@@ -16,6 +16,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   private volatile BigIntegerBinaryArithmeticOperation modifiedDivide = null;
   private volatile BigIntegerBinaryArithmeticOperation modifiedModulo = null;
   private volatile BigIntegerBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedPower = null;
 
   private volatile BigIntegerBooleanComparison modifiedEquals = null;
   private volatile BigIntegerBooleanComparison modifiedNotEquals = null;
@@ -32,6 +33,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   private final BigIntegerBinaryArithmeticOperation divide = new Divide();
   private final BigIntegerBinaryArithmeticOperation modulo = new Modulo();
   private final BigIntegerBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+  private final BigIntegerBinaryArithmeticOperation power = new Power();
 
   private final BigIntegerBooleanComparison equals = new Equals();
   private final BigIntegerBooleanComparison notEquals = new NotEquals();
@@ -101,8 +103,11 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
   
   public BigIntegerBinaryArithmeticOperation power() {
-    // TODO Auto-generated method stub
-    return null;
+    if (this.modifiedPower == null) {
+      return this.power;
+    } else {
+      return this.modifiedPower;
+    }
   }
 
   public BigIntegerBooleanComparison equals() {
