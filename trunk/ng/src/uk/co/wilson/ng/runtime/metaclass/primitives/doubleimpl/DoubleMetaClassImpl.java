@@ -8,20 +8,20 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleMetaClass;
 
 public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClass {
 
-  private final DoubleBinaryArithmeticOperation modifiedAdd = null;
-  private final DoubleBinaryArithmeticOperation modifiedSubtract = null;
-  private final DoubleBinaryArithmeticOperation modifiedMultiply = null;
-  private final DoubleBinaryArithmeticOperation modifiedDivide = null;
-  private final DoubleBinaryArithmeticOperation modifiedModulo = null;
-  private final DoubleBinaryArithmeticOperation modifiedRemainderDivide = null;
-  private final DoubleBinaryArithmeticOperation modifiedPower = null;
+  private volatile DoubleBinaryArithmeticOperation modifiedAdd = null;
+  private volatile DoubleBinaryArithmeticOperation modifiedSubtract = null;
+  private volatile DoubleBinaryArithmeticOperation modifiedMultiply = null;
+  private volatile DoubleBinaryArithmeticOperation modifiedDivide = null;
+  private volatile DoubleBinaryArithmeticOperation modifiedModulo = null;
+  private volatile DoubleBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile DoubleBinaryArithmeticOperation modifiedPower = null;
 
-  private final DoubleBooleanComparison modifiedEquals = null;
-  private final DoubleBooleanComparison modifiedNotEquals = null;
-  private final DoubleBooleanComparison modifiedLessThan = null;
-  private final DoubleBooleanComparison modifiedGreaterThan = null;
-  private final DoubleBooleanComparison modifiedLessThanOrEquals = null;
-  private final DoubleBooleanComparison modifiedGreaterThanOrEquals = null;
+  private volatile DoubleBooleanComparison modifiedEquals = null;
+  private volatile DoubleBooleanComparison modifiedNotEquals = null;
+  private volatile DoubleBooleanComparison modifiedLessThan = null;
+  private volatile DoubleBooleanComparison modifiedGreaterThan = null;
+  private volatile DoubleBooleanComparison modifiedLessThanOrEquals = null;
+  private volatile DoubleBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 

@@ -14,19 +14,19 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.StringMetaClass;
  */
 public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClass {
 
-  private final BinaryArithmeticOperation modifiedAdd = null;
-  private final BinaryArithmeticOperation modifiedSubtract = null;
-  private final BinaryArithmeticOperation modifiedMultiply = null;
-  private final BinaryArithmeticOperation modifiedDivide = null;
-  private final BinaryArithmeticOperation modifiedModulo = null;
+  private volatile BinaryArithmeticOperation modifiedAdd = null;
+  private volatile BinaryArithmeticOperation modifiedSubtract = null;
+  private volatile BinaryArithmeticOperation modifiedMultiply = null;
+  private volatile BinaryArithmeticOperation modifiedDivide = null;
+  private volatile BinaryArithmeticOperation modifiedModulo = null;
 
-  private final BinaryArithmeticOperation modifiedRemainderDivide = null;
-  private final BooleanBinaryComparison modifiedEquals = null;
-  private final BooleanBinaryComparison modifiedNotEquals = null;
-  private final BooleanBinaryComparison modifiedLessThan = null;
-  private final BooleanBinaryComparison modifiedGreaterThan = null;
-  private final BooleanBinaryComparison modifiedLessThanOrEquals = null;
-  private final BooleanBinaryComparison modifiedGreaterThanOrEquals = null;
+  private volatile BinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile BooleanBinaryComparison modifiedEquals = null;
+  private volatile BooleanBinaryComparison modifiedNotEquals = null;
+  private volatile BooleanBinaryComparison modifiedLessThan = null;
+  private volatile BooleanBinaryComparison modifiedGreaterThan = null;
+  private volatile BooleanBinaryComparison modifiedLessThanOrEquals = null;
+  private volatile BooleanBinaryComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = ConversionNoopImpl.instance;
 

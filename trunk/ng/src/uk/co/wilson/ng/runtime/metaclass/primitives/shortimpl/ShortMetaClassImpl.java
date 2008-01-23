@@ -1,6 +1,5 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl;
 
-import ng.runtime.metaclass.BinaryArithmeticOperation;
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ShortBinaryArithmeticOperation;
@@ -9,19 +8,19 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.ShortMetaClass;
 
 public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass {
 
-  private final ShortBinaryArithmeticOperation modifiedAdd = null;
-  private final ShortBinaryArithmeticOperation modifiedSubtract = null;
-  private final ShortBinaryArithmeticOperation modifiedMultiply = null;
-  private final ShortBinaryArithmeticOperation modifiedDivide = null;
-  private final ShortBinaryArithmeticOperation modifiedModulo = null;
-  private final ShortBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile ShortBinaryArithmeticOperation modifiedAdd = null;
+  private volatile ShortBinaryArithmeticOperation modifiedSubtract = null;
+  private volatile ShortBinaryArithmeticOperation modifiedMultiply = null;
+  private volatile ShortBinaryArithmeticOperation modifiedDivide = null;
+  private volatile ShortBinaryArithmeticOperation modifiedModulo = null;
+  private volatile ShortBinaryArithmeticOperation modifiedRemainderDivide = null;
 
-  private final ShortBooleanComparison modifiedEquals = null;
-  private final ShortBooleanComparison modifiedNotEquals = null;
-  private final ShortBooleanComparison modifiedLessThan = null;
-  private final ShortBooleanComparison modifiedGreaterThan = null;
-  private final ShortBooleanComparison modifiedLessThanOrEquals = null;
-  private final ShortBooleanComparison modifiedGreaterThanOrEquals = null;
+  private volatile ShortBooleanComparison modifiedEquals = null;
+  private volatile ShortBooleanComparison modifiedNotEquals = null;
+  private volatile ShortBooleanComparison modifiedLessThan = null;
+  private volatile ShortBooleanComparison modifiedGreaterThan = null;
+  private volatile ShortBooleanComparison modifiedLessThanOrEquals = null;
+  private volatile ShortBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert = new Convert();
 

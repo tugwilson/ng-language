@@ -1,3 +1,7 @@
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+import ng.runtime.NgDouble;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
 
@@ -27,16 +31,21 @@ import ng.runtime.threadcontext.ThreadContext;
 public class NgPartialSums {
   static final double twothirds = 2.0/3.0;
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws SecurityException, NoSuchMethodException, IllegalArgumentException, IllegalAccessException, InvocationTargetException {
     long start = System.currentTimeMillis();
     ThreadContext tc = ThreadContext.getThreadContext();
     
+    Method sin = Math.class.getMethod("sin", new Class[]{double.class});
+    Method cos = Math.class.getMethod("cos", new Class[]{double.class});
+    
      int n = Integer.parseInt(args[0]);
-
+     
+     int k=1;
+     
      double a1 = 0.0, a2 = 0.0, a3 = 0.0, a4 = 0.0, a5 = 0.0;
      double a6 = 0.0, a7 = 0.0, a8 = 0.0, a9 = 0.0, alt = -1.0;
 
-     for (int k=1; tc.lessThanOrEquals().applyBoolean(k, n);){
+     while (tc.lessThanOrEquals().applyBoolean(k, n)) {
         double k2;
         try {
           k2 = tc.multiply().doubleApply((double)k, (double)k);
@@ -53,8 +62,10 @@ public class NgPartialSums {
         
         //
         // Note: I do not yet support static calls so I can't compile these calls to sin() and cos()
+        // but this is roughly what would happen
         //
-        double sk = Math.sin(k), ck = Math.cos(k);
+        double sk = tc.convert().asDouble(NgDouble.valueOf(((Double)sin.invoke(null, new Object[]{new Double(k)})).doubleValue()));
+        double ck = tc.convert().asDouble(NgDouble.valueOf(((Double)cos.invoke(null, new Object[]{new Double(k)})).doubleValue()));
         
         try {
           alt = tc.subtract().doubleApply(0.0, alt);
@@ -75,9 +86,9 @@ public class NgPartialSums {
         }
         
         try {
-          a3 = tc.add().doubleApply(a3, tc.divide().doubleApply(1.0, (tc.multiply().doubleApply(k, (tc.add().doubleApply(k, 1.0))))));
+          a3 = tc.add().doubleApply(a3, tc.divide().doubleApply(1.0, tc.multiply().doubleApply(k, tc.add().doubleApply(k, 1.0))));
         } catch (NotPerformed e6) {
-          a3 = tc.convert().asDouble(tc.add().apply(a3, tc.divide().apply(1.0, (tc.multiply().apply(k, (tc.add().apply(k, 1.0)))))));
+          a3 = tc.convert().asDouble(tc.add().apply(a3, tc.divide().apply(1.0, tc.multiply().apply(k, tc.add().apply(k, 1.0)))));
         }
         
         try {
