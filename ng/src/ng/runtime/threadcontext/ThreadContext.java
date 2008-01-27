@@ -56,6 +56,8 @@ public abstract class ThreadContext {
   public abstract Misc misc();
 
   public abstract InterpreterSupport interpreterSupport();
+  
+  public abstract StaticMethodCall staticMethodCall();
 
   public abstract ValueAccess propertyAccess();
 

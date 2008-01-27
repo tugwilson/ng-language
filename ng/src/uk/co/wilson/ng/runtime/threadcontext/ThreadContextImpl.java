@@ -29,6 +29,7 @@ import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.Coversion;
 import ng.runtime.threadcontext.InterpreterSupport;
 import ng.runtime.threadcontext.Misc;
+import ng.runtime.threadcontext.StaticMethodCall;
 import ng.runtime.threadcontext.ThreadContext;
 import ng.runtime.threadcontext.ValueAccess;
 
@@ -229,6 +230,8 @@ public class ThreadContextImpl extends ThreadContext {
   private final ValueAccess fieldAccess = null;  // TODO: implement this
 
   private final Coversion convert = new BaseConversion(this);
+
+  private final StaticMethodCall staticMethodCall = new CallStaticMethod(this);
 
   private final BinaryArithmeticOperation add = new Add(this);
 
@@ -544,6 +547,14 @@ public class ThreadContextImpl extends ThreadContext {
   @Override
   public InterpreterSupport interpreterSupport() {
     return this.interpreterSupport;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#staticMethodCall()
+   */
+  @Override
+  public StaticMethodCall staticMethodCall() {
+    return this.staticMethodCall;
   }
 
   /* (non-JavaDoc)

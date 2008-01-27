@@ -1,9 +1,13 @@
 package ng.runtime.metaclass;
 
 public interface MetaClass {
+  Class getTheClass();
+  
   MetaClass createMetaClassFor(Class<?> type);
 
   Misc misc();
+  
+  DoStaticMethodCall staticMethodCall();
 
   Conversion convert();
 
