@@ -2,6 +2,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import ng.runtime.NgDouble;
+import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
 
@@ -33,10 +34,8 @@ public class NgPartialSums {
 
   public static void main(String[] args) throws SecurityException, NoSuchMethodException, IllegalArgumentException, IllegalAccessException, InvocationTargetException {
     long start = System.currentTimeMillis();
-    ThreadContext tc = ThreadContext.getThreadContext();
-    
-    Method sin = Math.class.getMethod("sin", new Class[]{double.class});
-    Method cos = Math.class.getMethod("cos", new Class[]{double.class});
+    final ThreadContext tc = ThreadContext.getThreadContext();
+    final MetaClass mathMetaClass = tc.getMetaClassFor(Math.class);
     
      int n = Integer.parseInt(args[0]);
      
@@ -60,12 +59,8 @@ public class NgPartialSums {
           k3 = tc.convert().asDouble(tc.multiply().apply(k2, k));
         }
         
-        //
-        // Note: I do not yet support static calls so I can't compile these calls to sin() and cos()
-        // but this is roughly what would happen
-        //
-        double sk = tc.convert().asDouble(NgDouble.valueOf(((Double)sin.invoke(null, new Object[]{new Double(k)})).doubleValue()));
-        double ck = tc.convert().asDouble(NgDouble.valueOf(((Double)cos.invoke(null, new Object[]{new Double(k)})).doubleValue()));
+        double sk = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, "sin", (double)k));
+        double ck = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, "cos", (double)k));
         
         try {
           alt = tc.subtract().doubleApply(0.0, alt);

@@ -9,6 +9,7 @@ import ng.runtime.NgInt;
 import ng.runtime.NgLong;
 import ng.runtime.NgShort;
 import ng.runtime.metaclass.MetaClass;
+import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.*;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl;
@@ -16,13 +17,13 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl;
 
 
 public abstract class PrimitiveMetaClasses {
+  private static final MetaClass objectMetaClass = new MetaClassImpl(Object.class);
   private static final StringMetaClass stringMetaClass = new StringMetaClassImpl();
   private static final BigIntegerMetaClass bigIntegerMetaClass = new BigIntegerMetaClassImpl();
   private static final BigDecimalMetaClass bigDecimalMetaClass = new BigDecimalMetaClassImpl();
 
   public static MetaClass getObjectMetaClass() {
-    // TODO implement
-    return null;
+    return objectMetaClass;
   }
 
   public static MetaClass getNullMetaClass() {
