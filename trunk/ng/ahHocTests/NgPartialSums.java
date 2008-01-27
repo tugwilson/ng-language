@@ -1,7 +1,3 @@
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
-import ng.runtime.NgDouble;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
@@ -32,7 +28,7 @@ import ng.runtime.threadcontext.ThreadContext;
 public class NgPartialSums {
   static final double twothirds = 2.0/3.0;
 
-  public static void main(String[] args) throws SecurityException, NoSuchMethodException, IllegalArgumentException, IllegalAccessException, InvocationTargetException {
+  public static void main(String[] args) {
     long start = System.currentTimeMillis();
     final ThreadContext tc = ThreadContext.getThreadContext();
     final MetaClass mathMetaClass = tc.getMetaClassFor(Math.class);
@@ -59,6 +55,7 @@ public class NgPartialSums {
           k3 = tc.convert().asDouble(tc.multiply().apply(k2, k));
         }
         
+        // TODO: remove the double cast on k when the Static method dispatch is fully implemented
         double sk = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, "sin", (double)k));
         double ck = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, "cos", (double)k));
         
