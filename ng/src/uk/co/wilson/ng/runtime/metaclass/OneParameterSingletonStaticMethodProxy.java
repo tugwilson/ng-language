@@ -1,12 +1,8 @@
 package uk.co.wilson.ng.runtime.metaclass;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
-import ng.lang.NgRuntimeException;
-import ng.runtime.threadcontext.ThreadContext;
 /*
- * Created on 25 Jan 2008
+ * Created on 28 Jan 2008
  *
  * Copyright 2008 John G. Wilson
  *
@@ -24,18 +20,17 @@ import ng.runtime.threadcontext.ThreadContext;
  *
  */
 
+import ng.runtime.threadcontext.ThreadContext;
+
 /**
- * 
- * This is the case where there is only one method on the class with this name and
- * this method takes one parameter which is not a primative type.
- * 
- * This class is subclassed to cater for the case where the parameter is a primative
- * 
  * @author John
  *
  */
 public class OneParameterSingletonStaticMethodProxy extends BaseSingletonStaticMethod {
-  public OneParameterSingletonStaticMethodProxy(final Method method) {
+  /**
+   * @param method
+   */
+  public OneParameterSingletonStaticMethodProxy(Method method) {
     super(method);
   }
 
@@ -50,26 +45,4 @@ public class OneParameterSingletonStaticMethodProxy extends BaseSingletonStaticM
       return ThreadContext.NOT_PERFORMED;
     }
   }
-
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
-   */
-  @Override
-  public Object doApplyQuick(ThreadContext tc, Object p1) {
-    if (this.modifiedProxy == null) {
-      try {
-        // TODO: check the parameter type and if not a perfect match look at the interfaces and superclass for a better match
-        return wrapReturnValue(tc, this.method.invoke(null, new Object[]{p1}));
-      } catch (final IllegalArgumentException e) {
-        throw new NgRuntimeException(e);
-      } catch (final IllegalAccessException e) {
-        throw new NgRuntimeException(e);
-      } catch (final InvocationTargetException e) {
-        throw new NgRuntimeException(e);
-      }
-    } else {
-      return this.modifiedProxy.doApplyQuick(tc, p1);
-    }
-  }
-
 }

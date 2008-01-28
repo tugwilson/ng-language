@@ -1,12 +1,14 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.charimpl;
 
-import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.CharBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.CharBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion;
 import uk.co.wilson.ng.runtime.metaclass.primitives.CharMetaClass;
 
 public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
+
+  private volatile CharConversion modifiedConvert = null;
 
   private volatile CharBinaryArithmeticOperation modifiedAdd = null;
   private volatile CharBinaryArithmeticOperation modifiedSubtract = null;
@@ -23,7 +25,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private volatile CharBooleanComparison modifiedLessThanOrEquals = null;
   private volatile CharBooleanComparison modifiedGreaterThanOrEquals = null;
 
-  private final Conversion convert = new Convert();
+  private final CharConversion convert = new Convert();
 
   private final CharBinaryArithmeticOperation add = new Add();
   private final CharBinaryArithmeticOperation subtract = new Subtract();
@@ -44,7 +46,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     super(char.class);
   }
 
-  public Conversion convert() {
+  public CharConversion convert() {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {

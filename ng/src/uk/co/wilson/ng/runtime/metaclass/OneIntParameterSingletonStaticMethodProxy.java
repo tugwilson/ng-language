@@ -2,10 +2,8 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.math.BigDecimal;
-import java.math.BigInteger;
 /*
- * Created on 25 Jan 2008
+ * Created on 28 Jan 2008
  *
  * Copyright 2008 John G. Wilson
  *
@@ -22,22 +20,21 @@ import java.math.BigInteger;
  *   limitations under the License.
  *
  */
+import java.math.BigDecimal;
+import java.math.BigInteger;
 
 import ng.lang.NgRuntimeException;
 import ng.runtime.threadcontext.ThreadContext;
 
 /**
- * 
- * This is the case where there is just one method with this name and it takes a single double parameter
- * 
  * @author John
  *
  */
-public class OneDoubleParameterSingletonStaticMethodProxy extends OneParameterSingletonStaticMethodProxy {
+public class OneIntParameterSingletonStaticMethodProxy extends OneParameterSingletonStaticMethodProxy {
   /**
    * @param method
    */
-  public OneDoubleParameterSingletonStaticMethodProxy(final Method method) {
+  public OneIntParameterSingletonStaticMethodProxy(Method method) {
     super(method);
   }
 
@@ -46,7 +43,7 @@ public class OneDoubleParameterSingletonStaticMethodProxy extends OneParameterSi
    */
   @Override
   public Object doApplyQuick(ThreadContext tc, Object p1) {
-    return doApplyQuick(tc, tc.convert().asDouble(p1));
+    return doApplyQuick(tc, tc.convert().asInt(p1));
   }
 
   /* (non-JavaDoc)
@@ -54,7 +51,7 @@ public class OneDoubleParameterSingletonStaticMethodProxy extends OneParameterSi
    */
   @Override
   public Object doApplyQuick(ThreadContext tc, char p1) {
-    return doApplyQuick(tc, (double)p1);
+    return doApplyQuick(tc, (int)p1);
   }
 
   /* (non-JavaDoc)
@@ -62,7 +59,7 @@ public class OneDoubleParameterSingletonStaticMethodProxy extends OneParameterSi
    */
   @Override
   public Object doApplyQuick(ThreadContext tc, byte p1) {
-    return doApplyQuick(tc, (double)p1);
+    return doApplyQuick(tc, (int)p1);
   }
 
   /* (non-JavaDoc)
@@ -70,7 +67,7 @@ public class OneDoubleParameterSingletonStaticMethodProxy extends OneParameterSi
    */
   @Override
   public Object doApplyQuick(ThreadContext tc, short p1) {
-    return doApplyQuick(tc, (double)p1);
+    return doApplyQuick(tc, (int)p1);
   }
 
   /* (non-JavaDoc)
@@ -78,33 +75,9 @@ public class OneDoubleParameterSingletonStaticMethodProxy extends OneParameterSi
    */
   @Override
   public Object doApplyQuick(ThreadContext tc, int p1) {
-    return doApplyQuick(tc, (double)p1);
-  }
-
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, long)
-   */
-  @Override
-  public Object doApplyQuick(ThreadContext tc, long p1) {
-    return doApplyQuick(tc, (double)p1);
-  }
-
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, float)
-   */
-  @Override
-  public Object doApplyQuick(ThreadContext tc, float p1) {
-    return doApplyQuick(tc, (double)p1);
-  }
-
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, double)
-   */
-  @Override
-  public Object doApplyQuick(ThreadContext tc, double p1) {
     if (this.modifiedProxy == null) {
       try {
-        return wrapReturnValue(tc, this.method.invoke(null, new Object[]{Double.valueOf(p1)}));
+        return wrapReturnValue(tc, this.method.invoke(null, new Object[]{Integer.valueOf(p1)}));
       } catch (final IllegalArgumentException e) {
         throw new NgRuntimeException(e);
       } catch (final IllegalAccessException e) {
@@ -118,11 +91,35 @@ public class OneDoubleParameterSingletonStaticMethodProxy extends OneParameterSi
   }
 
   /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, long)
+   */
+  @Override
+  public Object doApplyQuick(ThreadContext tc, long p1) {
+    return doApplyQuick(tc, (int)p1);
+  }
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, float)
+   */
+  @Override
+  public Object doApplyQuick(ThreadContext tc, float p1) {
+    return doApplyQuick(tc, (int)p1);
+  }
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, double)
+   */
+  @Override
+  public Object doApplyQuick(ThreadContext tc, double p1) {
+    return doApplyQuick(tc, (int)p1);
+  }
+
+  /* (non-JavaDoc)
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.math.BigInteger)
    */
   @Override
   public Object doApplyQuick(ThreadContext tc, BigInteger p1) {
-    return doApplyQuick(tc, p1.doubleValue());
+    return doApplyQuick(tc, p1.intValue());
   }
   
   /* (non-JavaDoc)
@@ -130,6 +127,6 @@ public class OneDoubleParameterSingletonStaticMethodProxy extends OneParameterSi
    */
   @Override
   public Object doApplyQuick(ThreadContext tc, BigDecimal p1) {
-    return doApplyQuick(tc, p1.doubleValue());
+    return doApplyQuick(tc, p1.intValue());
   }
 }

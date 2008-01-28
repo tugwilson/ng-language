@@ -13,6 +13,8 @@ import ng.runtime.metaclass.ConversionNoopImpl;
  */
 public class MetaClassImpl extends BaseMetaClass {
 
+  private volatile Conversion modifiedConvert = null;
+
   private volatile BinaryArithmeticOperation modifiedAdd = null;
   private volatile BinaryArithmeticOperation modifiedSubtract = null;
   private volatile BinaryArithmeticOperation modifiedMultiply = null;

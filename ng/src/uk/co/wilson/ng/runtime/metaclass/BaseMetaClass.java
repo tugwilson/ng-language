@@ -1,6 +1,5 @@
 package uk.co.wilson.ng.runtime.metaclass;
 
-import ng.runtime.metaclass.Conversion;
 import ng.runtime.metaclass.DoStaticMethodCall;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.Misc;
@@ -8,8 +7,6 @@ import ng.runtime.metaclass.Misc;
 public abstract class BaseMetaClass implements MetaClass {
   private volatile Misc modifiedMisc = null;
   private volatile DoStaticMethodCall modifiedStaticMethodCall = null;
-
-  protected volatile Conversion modifiedConvert = null;
 
   private final Class theClass;
   private final Misc misc;

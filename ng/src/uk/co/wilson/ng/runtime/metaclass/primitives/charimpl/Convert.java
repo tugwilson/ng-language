@@ -3,11 +3,81 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.charimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.Conversion;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
+import uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion;
 
-class Convert implements Conversion {
+class Convert implements CharConversion {
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion#doAsBoolean(ng.runtime.threadcontext.ThreadContext, char)
+   */
+  public boolean doAsBoolean(ThreadContext tc, char value) throws NotPerformed {
+    return value != 0;
+  }
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion#doAsByte(ng.runtime.threadcontext.ThreadContext, char)
+   */
+  public byte doAsByte(ThreadContext tc, char value) throws NotPerformed {
+    return (byte)value;
+  }
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion#doAsShort(ng.runtime.threadcontext.ThreadContext, char)
+   */
+  public short doAsShort(ThreadContext tc, char value) throws NotPerformed {
+    return (short)value;
+  }
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion#doAsInt(ng.runtime.threadcontext.ThreadContext, char)
+   */
+  public int doAsInt(ThreadContext tc, char value) throws NotPerformed {
+    return (int)value;
+  }
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion#doAsLong(ng.runtime.threadcontext.ThreadContext, char)
+   */
+  public long doAsLong(ThreadContext tc, char value) throws NotPerformed {
+    return (long)value;
+  }
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion#doAsFloat(ng.runtime.threadcontext.ThreadContext, char)
+   */
+  public float doAsFloat(ThreadContext tc, char value) throws NotPerformed {
+    return (float)value;
+  }
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion#doAsDouble(ng.runtime.threadcontext.ThreadContext, char)
+   */
+  public double doAsDouble(ThreadContext tc, char value) throws NotPerformed {
+    return (double)value;
+  }
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion#doAsBigInteger(ng.runtime.threadcontext.ThreadContext, char)
+   */
+  public BigInteger doAsBigInteger(ThreadContext tc, char value) throws NotPerformed {
+    return BigInteger.valueOf(value);
+  }
+  
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion#doAsBigDecimal(ng.runtime.threadcontext.ThreadContext, char)
+   */
+  public BigDecimal doAsBigDecimal(ThreadContext tc, char value) throws NotPerformed {
+    return BigDecimal.valueOf(value);
+  }
+
+  /* (non-JavaDoc)
+   * @see uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion#doAsString(ng.runtime.threadcontext.ThreadContext, char)
+   */
+  public String doAsString(ThreadContext tc, char value) throws NotPerformed {
+    return String.valueOf(value);
+  }
 
   public boolean doAsBoolean(final ThreadContext tc, final Object instance) {
     return tc.unwrapToChar(instance) != 0;
