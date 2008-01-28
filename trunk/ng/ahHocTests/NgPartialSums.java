@@ -55,9 +55,8 @@ public class NgPartialSums {
           k3 = tc.convert().asDouble(tc.multiply().apply(k2, k));
         }
         
-        // TODO: remove the double cast on k when the Static method dispatch is fully implemented
-        double sk = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, "sin", (double)k));
-        double ck = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, "cos", (double)k));
+        double sk = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, "sin", k));
+        double ck = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, "cos", k));
         
         try {
           alt = tc.subtract().doubleApply(0.0, alt);

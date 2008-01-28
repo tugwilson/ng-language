@@ -74,21 +74,24 @@ public class DoStaticMethodCallImpl implements DoStaticMethodCall {
           final Class parameterType = parameterTypes[0];
           
             if (parameterType == boolean.class) {
-              
+              this.staticMethods.put(method.getName(), new OneBooleanParameterSingletonStaticMethodProxy(method)); 
             } else if (parameterType == char.class) {
-              
+              this.staticMethods.put(method.getName(), new OneCharParameterSingletonStaticMethodProxy(method)); 
             } else if (parameterType == byte.class) {
-              
+              this.staticMethods.put(method.getName(), new OneByteParameterSingletonStaticMethodProxy(method)); 
             } else if (parameterType == short.class) {
-              
+              this.staticMethods.put(method.getName(), new OneShortParameterSingletonStaticMethodProxy(method)); 
             } else if (parameterType == int.class) {
-              
+              this.staticMethods.put(method.getName(), new OneIntParameterSingletonStaticMethodProxy(method)); 
             } else if (parameterType == long.class) {
-              
-            } else if (parameterType == float.class) {
-              
-            } else if (parameterType == double.class) {
-              this.staticMethods.put(method.getName(), new OneDoubleParameterSingletonStaticMethodProxy(method)); 
+              this.staticMethods.put(method.getName(), new OneLongParameterSingletonStaticMethodProxy(method)); 
+           } else if (parameterType == float.class) {
+              this.staticMethods.put(method.getName(), new OneFloatParameterSingletonStaticMethodProxy(method)); 
+           } else if (parameterType == double.class) {
+             this.staticMethods.put(method.getName(), new OneDoubleParameterSingletonStaticMethodProxy(method)); 
+           } else if (parameterType == Object.class) {
+             // TODO: look for the Annotation which marks the parameter as untyped
+             this.staticMethods.put(method.getName(), new OneParameterSingletonStaticMethodProxy(method)); 
             } else {
               this.staticMethods.put(method.getName(), new OneParameterSingletonStaticMethodProxy(method)); 
             }

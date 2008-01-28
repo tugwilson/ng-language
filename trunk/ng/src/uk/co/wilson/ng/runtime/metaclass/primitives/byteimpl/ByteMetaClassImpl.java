@@ -8,6 +8,8 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.ByteMetaClass;
 
 public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
 
+  private volatile ByteConversion modifiedConvert = null;
+
   private volatile ByteBinaryArithmeticOperation modifiedAdd = null;
   private volatile ByteBinaryArithmeticOperation modifiedSubtract = null;
   private volatile ByteBinaryArithmeticOperation modifiedMultiply = null;
@@ -23,7 +25,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
   private volatile ByteBooleanComparison modifiedLessThanOrEquals = null;
   private volatile ByteBooleanComparison modifiedGreaterThanOrEquals = null;
 
-  private final Conversion convert = new Convert();
+  private final ByteConversion convert = new Convert();
 
   private final ByteBinaryArithmeticOperation add = new Add();
   private final ByteBinaryArithmeticOperation subtract = new Subtract();
