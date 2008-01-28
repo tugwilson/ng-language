@@ -1,29 +1,30 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 
-import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleConversion;
 import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleMetaClass;
 
 public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClass {
+  private final DoubleConversion modifiedConvert = null;
 
-  private volatile DoubleBinaryArithmeticOperation modifiedAdd = null;
-  private volatile DoubleBinaryArithmeticOperation modifiedSubtract = null;
-  private volatile DoubleBinaryArithmeticOperation modifiedMultiply = null;
-  private volatile DoubleBinaryArithmeticOperation modifiedDivide = null;
-  private volatile DoubleBinaryArithmeticOperation modifiedModulo = null;
-  private volatile DoubleBinaryArithmeticOperation modifiedRemainderDivide = null;
-  private volatile DoubleBinaryArithmeticOperation modifiedPower = null;
+  private final DoubleBinaryArithmeticOperation modifiedAdd = null;
+  private final DoubleBinaryArithmeticOperation modifiedSubtract = null;
+  private final DoubleBinaryArithmeticOperation modifiedMultiply = null;
+  private final DoubleBinaryArithmeticOperation modifiedDivide = null;
+  private final DoubleBinaryArithmeticOperation modifiedModulo = null;
+  private final DoubleBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private final DoubleBinaryArithmeticOperation modifiedPower = null;
 
-  private volatile DoubleBooleanComparison modifiedEquals = null;
-  private volatile DoubleBooleanComparison modifiedNotEquals = null;
-  private volatile DoubleBooleanComparison modifiedLessThan = null;
-  private volatile DoubleBooleanComparison modifiedGreaterThan = null;
-  private volatile DoubleBooleanComparison modifiedLessThanOrEquals = null;
-  private volatile DoubleBooleanComparison modifiedGreaterThanOrEquals = null;
+  private final DoubleBooleanComparison modifiedEquals = null;
+  private final DoubleBooleanComparison modifiedNotEquals = null;
+  private final DoubleBooleanComparison modifiedLessThan = null;
+  private final DoubleBooleanComparison modifiedGreaterThan = null;
+  private final DoubleBooleanComparison modifiedLessThanOrEquals = null;
+  private final DoubleBooleanComparison modifiedGreaterThanOrEquals = null;
 
-  private final Conversion convert = new Convert();
+  private final DoubleConversion convert = new Convert();
 
   private final DoubleBinaryArithmeticOperation add = new Add();
   private final DoubleBinaryArithmeticOperation subtract = new Subtract();
@@ -44,7 +45,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     super(double.class);
   }
 
-  public Conversion convert() {
+  public DoubleConversion convert() {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {
@@ -99,7 +100,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
       return this.modifiedRemainderDivide;
     }
   }
-  
+
   public DoubleBinaryArithmeticOperation power() {
     if (this.modifiedPower == null) {
       return this.power;

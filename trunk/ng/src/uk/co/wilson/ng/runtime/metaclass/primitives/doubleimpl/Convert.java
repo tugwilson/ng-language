@@ -3,11 +3,50 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.Conversion;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
+import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleConversion;
 
-class Convert implements Conversion {
+class Convert implements DoubleConversion {
+  public boolean doAsBoolean(final ThreadContext tc, final double value) throws NotPerformed {
+    return value != 0;
+  }
+
+  public char doAsChar(final ThreadContext tc, final double value) throws NotPerformed {
+    return (char)value;
+  }
+
+  public byte doAsByte(final ThreadContext tc, final double value) throws NotPerformed {
+    return (byte)value;
+  }
+
+  public short doAsShort(final ThreadContext tc, final double value) throws NotPerformed {
+    return (short)value;
+  }
+
+  public int doAsInt(final ThreadContext tc, final double value) throws NotPerformed {
+    return (int)value;
+  }
+
+  public long doAsLong(final ThreadContext tc, final double value) throws NotPerformed {
+    return (long)value;
+  }
+
+  public float doAsFloat(final ThreadContext tc, final double value) throws NotPerformed {
+    return (float)value;
+  }
+
+  public BigInteger doAsBigInteger(final ThreadContext tc, final double value) throws NotPerformed {
+    return BigInteger.valueOf((long)value);
+  }
+
+  public BigDecimal doAsBigDecimal(final ThreadContext tc, final double value) throws NotPerformed {
+    return BigDecimal.valueOf(value);
+  }
+
+  public String doAsString(final ThreadContext tc, final double value) throws NotPerformed {
+    return String.valueOf(value);
+  }
 
   public boolean doAsBoolean(final ThreadContext tc, final Object instance) {
     return tc.unwrapToDouble(instance) != 0;
@@ -52,7 +91,7 @@ class Convert implements Conversion {
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
    */
-  public String doAsString(ThreadContext tc, Object instance) throws NotPerformed {
+  public String doAsString(final ThreadContext tc, final Object instance) throws NotPerformed {
     return String.valueOf(tc.unwrapToDouble(instance));
   }
 

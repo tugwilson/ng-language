@@ -35,146 +35,146 @@ public class Add implements BinaryArithmeticOperation {
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, Object lhs, Object rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return (String)lhs + tc.convert().asString(rhs);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, ng.runtime.metaclass.MetaClass, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, Object lhs, MetaClass rhsMetaClass, Object rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
     return (String)lhs + tc.convert().asString(rhsMetaClass, rhs);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doReverseApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object doReverseApply(ThreadContext tc, Object lhs, Object rhs) {
+  public Object doReverseApply(final ThreadContext tc, final Object lhs, final Object rhs) {
     return tc.convert().asString(lhs) + (String)rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, byte)
    */
-  public Object doApply(ThreadContext tc, Object lhs, byte rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final byte rhs) {
     return (String)lhs + rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, char)
    */
-  public Object doApply(ThreadContext tc, Object lhs, char rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final char rhs) {
     return (String)lhs + rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, short)
    */
-  public Object doApply(ThreadContext tc, Object lhs, short rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final short rhs) {
     return (String)lhs + rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, int)
    */
-  public Object doApply(ThreadContext tc, Object lhs, int rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final int rhs) {
     return (String)lhs + rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, long)
    */
-  public Object doApply(ThreadContext tc, Object lhs, long rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final long rhs) {
     return (String)lhs + rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, float)
    */
-  public Object doApply(ThreadContext tc, Object lhs, float rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final float rhs) {
     return (String)lhs + rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, double)
    */
-  public Object doApply(ThreadContext tc, Object lhs, double rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final double rhs) {
     return (String)lhs + rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, java.math.BigInteger)
    */
-  public Object doApply(ThreadContext tc, Object lhs, BigInteger rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final BigInteger rhs) {
     return (String)lhs + rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, java.math.BigDecimal)
    */
-  public Object doApply(ThreadContext tc, Object lhs, BigDecimal rhs) {
+  public Object doApply(final ThreadContext tc, final Object lhs, final BigDecimal rhs) {
     return (String)lhs + rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, byte, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, byte lhs, Object rhs) {
+  public Object doApply(final ThreadContext tc, final byte lhs, final Object rhs) {
     return lhs + (String)rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, char, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, char lhs, Object rhs) {
+  public Object doApply(final ThreadContext tc, final char lhs, final Object rhs) {
     return lhs + (String)rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, short, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, short lhs, Object rhs) {
+  public Object doApply(final ThreadContext tc, final short lhs, final Object rhs) {
     return lhs + (String)rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, int, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, int lhs, Object rhs) {
+  public Object doApply(final ThreadContext tc, final int lhs, final Object rhs) {
     return lhs + (String)rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, long, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, long lhs, Object rhs) {
+  public Object doApply(final ThreadContext tc, final long lhs, final Object rhs) {
     return lhs + (String)rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, float, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, float lhs, Object rhs) {
+  public Object doApply(final ThreadContext tc, final float lhs, final Object rhs) {
     return lhs + (String)rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, double, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, double lhs, Object rhs) {
+  public Object doApply(final ThreadContext tc, final double lhs, final Object rhs) {
     return lhs + (String)rhs;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.math.BigInteger, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, BigInteger lhs, Object rhs) {
+  public Object doApply(final ThreadContext tc, final BigInteger lhs, final Object rhs) {
     return lhs + (String)rhs;
   }
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.math.BigDecimal, java.lang.Object)
    */
-  public Object doApply(ThreadContext tc, BigDecimal lhs, Object rhs) {
+  public Object doApply(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return lhs + (String)rhs;
   }
 }

@@ -30,7 +30,7 @@ public class NgInt extends NgObject {
   public int getIntValue() {
     return this.value;
   }
-  
+
   /* (non-JavaDoc)
    * @see java.lang.Object#toString()
    */

@@ -3,6 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives;
 import ng.runtime.metaclass.MetaClass;
 
 public interface BigIntegerMetaClass extends MetaClass {
+  BigIntegerConversion convert();
+
   BigIntegerBinaryArithmeticOperation add();
   BigIntegerBinaryArithmeticOperation subtract();
   BigIntegerBinaryArithmeticOperation multiply();

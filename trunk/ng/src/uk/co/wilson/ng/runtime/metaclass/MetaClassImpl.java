@@ -13,22 +13,22 @@ import ng.runtime.metaclass.ConversionNoopImpl;
  */
 public class MetaClassImpl extends BaseMetaClass {
 
-  private volatile Conversion modifiedConvert = null;
+  private final Conversion modifiedConvert = null;
 
-  private volatile BinaryArithmeticOperation modifiedAdd = null;
-  private volatile BinaryArithmeticOperation modifiedSubtract = null;
-  private volatile BinaryArithmeticOperation modifiedMultiply = null;
-  private volatile BinaryArithmeticOperation modifiedDivide = null;
-  private volatile BinaryArithmeticOperation modifiedModulo = null;
-  private volatile BinaryArithmeticOperation modifiedRemainderDivide = null;
-  private volatile BinaryArithmeticOperation modifiedPower = null;
+  private final BinaryArithmeticOperation modifiedAdd = null;
+  private final BinaryArithmeticOperation modifiedSubtract = null;
+  private final BinaryArithmeticOperation modifiedMultiply = null;
+  private final BinaryArithmeticOperation modifiedDivide = null;
+  private final BinaryArithmeticOperation modifiedModulo = null;
+  private final BinaryArithmeticOperation modifiedRemainderDivide = null;
+  private final BinaryArithmeticOperation modifiedPower = null;
 
-  private volatile BooleanBinaryComparison modifiedEquals = null;
-  private volatile BooleanBinaryComparison modifiedNotEquals = null;
-  private volatile BooleanBinaryComparison modifiedLessThan = null;
-  private volatile BooleanBinaryComparison modifiedGreaterThan = null;
-  private volatile BooleanBinaryComparison modifiedLessThanOrEquals = null;
-  private volatile BooleanBinaryComparison modifiedGreaterThanOrEquals = null;
+  private final BooleanBinaryComparison modifiedEquals = null;
+  private final BooleanBinaryComparison modifiedNotEquals = null;
+  private final BooleanBinaryComparison modifiedLessThan = null;
+  private final BooleanBinaryComparison modifiedGreaterThan = null;
+  private final BooleanBinaryComparison modifiedLessThanOrEquals = null;
+  private final BooleanBinaryComparison modifiedGreaterThanOrEquals = null;
 
   private final Conversion convert;
 
@@ -50,7 +50,7 @@ public class MetaClassImpl extends BaseMetaClass {
   /**
    * @param theClass
    */
-  public MetaClassImpl(Class<?> theClass) {
+  public MetaClassImpl(final Class<?> theClass) {
     super(theClass);
     // TODO: introspect the class and set up the operations
     this.convert = ConversionNoopImpl.instance;
@@ -126,7 +126,7 @@ public class MetaClassImpl extends BaseMetaClass {
       return this.modifiedRemainderDivide;
     }
   }
-  
+
   public BinaryArithmeticOperation power() {
     if (this.modifiedPower == null) {
       return this.power;

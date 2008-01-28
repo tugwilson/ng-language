@@ -1,30 +1,31 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 
-import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.FloatConversion;
 import uk.co.wilson.ng.runtime.metaclass.primitives.FloatMetaClass;
 
 
 public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass {
+  private final FloatConversion modifiedConvert = null;
 
-  private volatile FloatBinaryArithmeticOperation modifiedAdd = null;
-  private volatile FloatBinaryArithmeticOperation modifiedSubtract = null;
-  private volatile FloatBinaryArithmeticOperation modifiedMultiply = null;
-  private volatile FloatBinaryArithmeticOperation modifiedDivide = null;
-  private volatile FloatBinaryArithmeticOperation modifiedModulo = null;
-  private volatile FloatBinaryArithmeticOperation modifiedRemainderDivide = null;
-  private volatile FloatBinaryArithmeticOperation modifiedPower = null;
+  private final FloatBinaryArithmeticOperation modifiedAdd = null;
+  private final FloatBinaryArithmeticOperation modifiedSubtract = null;
+  private final FloatBinaryArithmeticOperation modifiedMultiply = null;
+  private final FloatBinaryArithmeticOperation modifiedDivide = null;
+  private final FloatBinaryArithmeticOperation modifiedModulo = null;
+  private final FloatBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private final FloatBinaryArithmeticOperation modifiedPower = null;
 
-  private volatile FloatBooleanComparison modifiedEquals = null;
-  private volatile FloatBooleanComparison modifiedNotEquals = null;
-  private volatile FloatBooleanComparison modifiedLessThan = null;
-  private volatile FloatBooleanComparison modifiedGreaterThan = null;
-  private volatile FloatBooleanComparison modifiedLessThanOrEquals = null;
-  private volatile FloatBooleanComparison modifiedGreaterThanOrEquals = null;
+  private final FloatBooleanComparison modifiedEquals = null;
+  private final FloatBooleanComparison modifiedNotEquals = null;
+  private final FloatBooleanComparison modifiedLessThan = null;
+  private final FloatBooleanComparison modifiedGreaterThan = null;
+  private final FloatBooleanComparison modifiedLessThanOrEquals = null;
+  private final FloatBooleanComparison modifiedGreaterThanOrEquals = null;
 
-  private final Conversion convert = new Convert();
+  private final FloatConversion convert = new Convert();
 
   private final FloatBinaryArithmeticOperation add = new Add();
   private final FloatBinaryArithmeticOperation subtract = new Subtract();
@@ -45,7 +46,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     super(float.class);
   }
 
-  public Conversion convert() {
+  public FloatConversion convert() {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {
@@ -100,7 +101,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
       return this.modifiedRemainderDivide;
     }
   }
-  
+
   public FloatBinaryArithmeticOperation power() {
     if (this.modifiedPower == null) {
       return this.power;

@@ -52,7 +52,7 @@ class Convert implements Conversion {
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
    */
-  public String doAsString(ThreadContext tc, Object instance) throws NotPerformed {
+  public String doAsString(final ThreadContext tc, final Object instance) throws NotPerformed {
     return String.valueOf(tc.unwrapToBoolean(instance));
   }
 

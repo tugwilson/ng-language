@@ -6,17 +6,17 @@
 class PartialSums {
    static final double twothirds = 2.0/3.0;
 
-   public static void main(String[] args){
-     long start = System.currentTimeMillis();
-     
-      int n = Integer.parseInt(args[0]);
+   public static void main(final String[] args){
+     final long start = System.currentTimeMillis();
+
+      final int n = Integer.parseInt(args[0]);
 
       double a1 = 0.0, a2 = 0.0, a3 = 0.0, a4 = 0.0, a5 = 0.0;
       double a6 = 0.0, a7 = 0.0, a8 = 0.0, a9 = 0.0, alt = -1.0;
 
       for (int k=1; k<=n; k++){
-         double k2 = Math.pow(k,2), k3 = k2*k;
-         double sk = Math.sin(k), ck = Math.cos(k);
+         final double k2 = Math.pow(k,2), k3 = k2*k;
+         final double sk = Math.sin(k), ck = Math.cos(k);
          alt = -alt;
 
          a1 += Math.pow(twothirds,k-1);
@@ -38,7 +38,7 @@ class PartialSums {
       System.out.printf("%.9f\tRiemann Zeta\n", a7);
       System.out.printf("%.9f\tAlternating Harmonic\n", a8);
       System.out.printf("%.9f\tGregory\n", a9);
-      
+
       System.out.println("Time: " + (System.currentTimeMillis() - start) + " ms");
    }
 }

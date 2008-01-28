@@ -84,7 +84,7 @@ public class Power extends BaseBinaryArithmeticOperation {
   }
 
   public double doDoubleApply(final ThreadContext tc, final byte lhs, final double rhs) {
-    return (double)Math.pow(lhs, rhs);
+    return Math.pow(lhs, rhs);
   }
 
   public BigInteger doBigIntegerApply(final ThreadContext tc, final byte lhs, final BigInteger rhs) {

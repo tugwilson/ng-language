@@ -4,6 +4,8 @@ import ng.runtime.metaclass.MetaClass;
 
 
 public interface IntMetaClass extends MetaClass {
+  IntConversion convert();
+
   IntBinaryArithmeticOperation add();
   IntBinaryArithmeticOperation subtract();
   IntBinaryArithmeticOperation multiply();

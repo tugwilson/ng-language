@@ -3,11 +3,50 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.Conversion;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalConversion;
 
-class Convert implements Conversion {
+class Convert implements BigDecimalConversion {
+  public boolean doAsBoolean(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+    return value.compareTo(BigDecimal.ZERO) == 0;
+  }
+
+  public char doAsChar(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+    return (char)value.intValue();
+  }
+
+  public byte doAsByte(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+    return value.byteValue();
+  }
+
+  public short doAsShort(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+    return value.shortValue();
+  }
+
+  public int doAsInt(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+    return value.intValue();
+  }
+
+  public long doAsLong(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+    return value.longValue();
+  }
+
+  public float doAsFloat(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+    return value.floatValue();
+  }
+
+  public double doAsDouble(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+    return value.doubleValue();
+  }
+
+  public BigInteger doAsBigInteger(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+    return value.toBigInteger();
+  }
+
+  public String doAsString(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+    return value.toString();
+  }
 
   public boolean doAsBoolean(final ThreadContext tc, final Object instance) {
     return ((BigInteger)instance).intValue() != 0;
@@ -52,7 +91,7 @@ class Convert implements Conversion {
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
    */
-  public String doAsString(ThreadContext tc, Object instance) throws NotPerformed {
+  public String doAsString(final ThreadContext tc, final Object instance) throws NotPerformed {
     return ((BigInteger)instance).toString();
   }
 

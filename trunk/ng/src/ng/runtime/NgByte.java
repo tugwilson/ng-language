@@ -30,7 +30,7 @@ public class NgByte extends NgObject {
   public byte getByteValue() {
     return this.value;
   }
-  
+
   /* (non-JavaDoc)
    * @see java.lang.Object#toString()
    */

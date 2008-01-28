@@ -32,7 +32,7 @@ public class NgBoolean extends NgObject {
   public boolean getBooleanValue() {
     return this.value;
   }
-  
+
   /* (non-JavaDoc)
    * @see java.lang.Object#toString()
    */

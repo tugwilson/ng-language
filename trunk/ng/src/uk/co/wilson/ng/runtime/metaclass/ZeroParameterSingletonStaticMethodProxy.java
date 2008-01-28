@@ -12,16 +12,16 @@ import ng.runtime.threadcontext.ThreadContext;
  */
 public class ZeroParameterSingletonStaticMethodProxy extends BaseSingletonStaticMethod {
   private static final Object[] args = new Object[]{};
-  
+
   public ZeroParameterSingletonStaticMethodProxy(final Method method) {
     super(method);
   }
-  
+
   /* (non-JavaDoc)
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object[])
    */
   @Override
-  public Object doApply(ThreadContext tc, Object[] params) {
+  public Object doApply(final ThreadContext tc, final Object[] params) {
     if (params.length == 0) {
       return doApplyQuick(tc);
     } else {
@@ -33,7 +33,7 @@ public class ZeroParameterSingletonStaticMethodProxy extends BaseSingletonStatic
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc) {
+  public Object doApplyQuick(final ThreadContext tc) {
     if (this.modifiedProxy == null) {
       try {
         return wrapReturnValue(tc, this.method.invoke(null, args));

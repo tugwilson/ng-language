@@ -3,6 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives;
 import ng.runtime.metaclass.MetaClass;
 
 public interface ByteMetaClass extends MetaClass {
+  ByteConversion convert();
+
   ByteBinaryArithmeticOperation add();
   ByteBinaryArithmeticOperation subtract();
   ByteBinaryArithmeticOperation multiply();
