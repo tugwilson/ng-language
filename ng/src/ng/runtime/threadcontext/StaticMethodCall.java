@@ -12,7 +12,7 @@ import ng.runtime.metaclass.MetaClass;
 public interface StaticMethodCall {
   Object apply(Class theClass, String name, Object[] params);
   Object apply(MetaClass metaclass, String name, Object[] params);
-  
+
   Object applyQuick(Class theClass, String name);
   Object applyQuick(MetaClass metaclass, String name);
   Object applyQuick(Class theClass, String name, Object p1);

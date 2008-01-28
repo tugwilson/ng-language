@@ -3,6 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives;
 import ng.runtime.metaclass.MetaClass;
 
 public interface DoubleMetaClass extends MetaClass {
+  DoubleConversion convert();
+
   DoubleBinaryArithmeticOperation add();
   DoubleBinaryArithmeticOperation subtract();
   DoubleBinaryArithmeticOperation multiply();

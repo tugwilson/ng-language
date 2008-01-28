@@ -2,24 +2,6 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-/*
- * Created on 28 Jan 2008
- *
- * Copyright 2008 John G. Wilson
- *
- *   Licensed under the Apache License, Version 2.0 (the "License");
- *   you may not use this file except in compliance with the License.
- *   You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *   Unless required by applicable law or agreed to in writing, software
- *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- *
- */
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -34,7 +16,7 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
   /**
    * @param method
    */
-  public OneBooleanParameterSingletonStaticMethodProxy(Method method) {
+  public OneBooleanParameterSingletonStaticMethodProxy(final Method method) {
     super(method);
   }
 
@@ -42,7 +24,7 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, boolean)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, boolean p1) {
+  public Object doApplyQuick(final ThreadContext tc, final boolean p1) {
     if (this.modifiedProxy == null) {
       try {
         return wrapReturnValue(tc, this.method.invoke(null, new Object[]{Boolean.valueOf(p1)}));
@@ -62,7 +44,7 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, Object p1) {
+  public Object doApplyQuick(final ThreadContext tc, final Object p1) {
     return doApplyQuick(tc, tc.convert().asBoolean(p1));
   }
 
@@ -70,7 +52,7 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, char)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, char p1) {
+  public Object doApplyQuick(final ThreadContext tc, final char p1) {
     return doApplyQuick(tc, tc.convert().asBoolean(p1));
   }
 
@@ -78,7 +60,7 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, byte)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, byte p1) {
+  public Object doApplyQuick(final ThreadContext tc, final byte p1) {
     return doApplyQuick(tc, tc.convert().asBoolean(p1));
   }
 
@@ -86,7 +68,7 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, short)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, short p1) {
+  public Object doApplyQuick(final ThreadContext tc, final short p1) {
     return doApplyQuick(tc, tc.convert().asBoolean(p1));
   }
 
@@ -94,7 +76,7 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, int)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, int p1) {
+  public Object doApplyQuick(final ThreadContext tc, final int p1) {
     return doApplyQuick(tc, tc.convert().asBoolean(p1));
   }
 
@@ -102,7 +84,7 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, long)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, long p1) {
+  public Object doApplyQuick(final ThreadContext tc, final long p1) {
     return doApplyQuick(tc, tc.convert().asBoolean(p1));
   }
 
@@ -110,7 +92,7 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, float)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, float p1) {
+  public Object doApplyQuick(final ThreadContext tc, final float p1) {
     return doApplyQuick(tc, tc.convert().asBoolean(p1));
   }
 
@@ -118,7 +100,7 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, double)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, double p1) {
+  public Object doApplyQuick(final ThreadContext tc, final double p1) {
     return doApplyQuick(tc, tc.convert().asBoolean(p1));
   }
 
@@ -126,15 +108,15 @@ public class OneBooleanParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.math.BigInteger)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, BigInteger p1) {
+  public Object doApplyQuick(final ThreadContext tc, final BigInteger p1) {
     return doApplyQuick(tc, tc.convert().asBoolean(p1));
   }
-  
+
   /* (non-JavaDoc)
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.math.BigDecimal)
    */
   @Override
-  public Object doApplyQuick(ThreadContext tc, BigDecimal p1) {
+  public Object doApplyQuick(final ThreadContext tc, final BigDecimal p1) {
     return doApplyQuick(tc, tc.convert().asBoolean(p1));
   }
 }

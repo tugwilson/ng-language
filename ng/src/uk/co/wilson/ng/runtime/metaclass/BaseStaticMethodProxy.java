@@ -12,71 +12,71 @@ import ng.runtime.threadcontext.ThreadContext;
  */
 public class BaseStaticMethodProxy implements StaticMethodProxy {
   protected volatile StaticMethodProxy modifiedProxy = null;
-  
-  public Object doApply(ThreadContext tc, Object[] params) {
+
+  public Object doApply(final ThreadContext tc, final Object[] params) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc) {
+  public Object doApplyQuick(final ThreadContext tc) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, boolean p1) {
+  public Object doApplyQuick(final ThreadContext tc, final boolean p1) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, byte p1) {
+  public Object doApplyQuick(final ThreadContext tc, final byte p1) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, char p1) {
+  public Object doApplyQuick(final ThreadContext tc, final char p1) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, double p1) {
+  public Object doApplyQuick(final ThreadContext tc, final double p1) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, float p1) {
+  public Object doApplyQuick(final ThreadContext tc, final float p1) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, int p1) {
+  public Object doApplyQuick(final ThreadContext tc, final int p1) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, long p1) {
+  public Object doApplyQuick(final ThreadContext tc, final long p1) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, Object p1, Object p2, Object p3, Object p4) {
+  public Object doApplyQuick(final ThreadContext tc, final Object p1, final Object p2, final Object p3, final Object p4) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, Object p1, Object p2, Object p3) {
+  public Object doApplyQuick(final ThreadContext tc, final Object p1, final Object p2, final Object p3) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, Object p1, Object p2) {
+  public Object doApplyQuick(final ThreadContext tc, final Object p1, final Object p2) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, Object p1) {
+  public Object doApplyQuick(final ThreadContext tc, final Object p1) {
     return ThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApplyQuick(ThreadContext tc, short p1) {
+  public Object doApplyQuick(final ThreadContext tc, final short p1) {
     return ThreadContext.NOT_PERFORMED;
   }
-  public Object doApplyQuick(ThreadContext tc, String p1) {
+  public Object doApplyQuick(final ThreadContext tc, final String p1) {
     return ThreadContext.NOT_PERFORMED;
   }
-  
-  public Object doApplyQuick(ThreadContext tc, BigDecimal p1) {
+
+  public Object doApplyQuick(final ThreadContext tc, final BigDecimal p1) {
     return ThreadContext.NOT_PERFORMED;
   }
-  
-  public Object doApplyQuick(ThreadContext tc, BigInteger p1) {
+
+  public Object doApplyQuick(final ThreadContext tc, final BigInteger p1) {
     return ThreadContext.NOT_PERFORMED;
   }
 }

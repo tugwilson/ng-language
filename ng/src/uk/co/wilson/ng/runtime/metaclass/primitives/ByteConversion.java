@@ -1,4 +1,4 @@
-package uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl;
+package uk.co.wilson.ng.runtime.metaclass.primitives;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -12,7 +12,7 @@ import ng.runtime.threadcontext.ThreadContext;
  *
  */
 public interface ByteConversion extends Conversion {
-  boolean doAsBoolean(ThreadContext tc, char value) throws NotPerformed;
+  boolean doAsBoolean(ThreadContext tc, byte value) throws NotPerformed;
 
   char doAsChar(ThreadContext tc, byte value) throws NotPerformed;
 

@@ -8,6 +8,8 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.BooleanMetaClass;
 
 public class BooleanMetaClassImpl extends BaseMetaClass implements BooleanMetaClass {
 
+  private final Conversion modifiedConvert = null;
+
   private final Conversion convert = new Convert();
 
   public BooleanMetaClassImpl() {
@@ -101,7 +103,7 @@ public class BooleanMetaClassImpl extends BaseMetaClass implements BooleanMetaCl
     // TODO Auto-generated method stub
     return null;
   }
-  
+
   public BinaryArithmeticOperation power() {
     // TODO Auto-generated method stub
     return null;

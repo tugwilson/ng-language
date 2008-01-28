@@ -30,7 +30,7 @@ public class NgShort extends NgObject {
   public short getShortValue() {
     return this.value;
   }
-  
+
   /* (non-JavaDoc)
    * @see java.lang.Object#toString()
    */

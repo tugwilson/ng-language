@@ -30,7 +30,7 @@ public class NgChar extends NgObject {
   public char getCharValue() {
     return this.value;
   }
-  
+
   /* (non-JavaDoc)
    * @see java.lang.Object#toString()
    */

@@ -5,8 +5,8 @@ import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.Misc;
 
 public abstract class BaseMetaClass implements MetaClass {
-  private volatile Misc modifiedMisc = null;
-  private volatile DoStaticMethodCall modifiedStaticMethodCall = null;
+  private final Misc modifiedMisc = null;
+  private final DoStaticMethodCall modifiedStaticMethodCall = null;
 
   private final Class theClass;
   private final Misc misc;

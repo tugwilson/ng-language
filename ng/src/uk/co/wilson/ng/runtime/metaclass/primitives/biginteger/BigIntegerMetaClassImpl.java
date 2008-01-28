@@ -2,30 +2,31 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.biginteger;
 
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerConversion;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerMetaClass;
 
 public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigIntegerMetaClass {
+  private final BigIntegerConversion modifiedConvert = null;
 
-  private volatile BigIntegerBinaryArithmeticOperation modifiedAdd = null;
-  private volatile BigIntegerBinaryArithmeticOperation modifiedSubtract = null;
-  private volatile BigIntegerBinaryArithmeticOperation modifiedMultiply = null;
-  private volatile BigIntegerBinaryArithmeticOperation modifiedDivide = null;
-  private volatile BigIntegerBinaryArithmeticOperation modifiedModulo = null;
-  private volatile BigIntegerBinaryArithmeticOperation modifiedRemainderDivide = null;
-  private volatile BigIntegerBinaryArithmeticOperation modifiedPower = null;
+  private final BigIntegerBinaryArithmeticOperation modifiedAdd = null;
+  private final BigIntegerBinaryArithmeticOperation modifiedSubtract = null;
+  private final BigIntegerBinaryArithmeticOperation modifiedMultiply = null;
+  private final BigIntegerBinaryArithmeticOperation modifiedDivide = null;
+  private final BigIntegerBinaryArithmeticOperation modifiedModulo = null;
+  private final BigIntegerBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private final BigIntegerBinaryArithmeticOperation modifiedPower = null;
 
-  private volatile BigIntegerBooleanComparison modifiedEquals = null;
-  private volatile BigIntegerBooleanComparison modifiedNotEquals = null;
-  private volatile BigIntegerBooleanComparison modifiedLessThan = null;
-  private volatile BigIntegerBooleanComparison modifiedGreaterThan = null;
-  private volatile BigIntegerBooleanComparison modifiedLessThanOrEquals = null;
-  private volatile BigIntegerBooleanComparison modifiedGreaterThanOrEquals = null;
+  private final BigIntegerBooleanComparison modifiedEquals = null;
+  private final BigIntegerBooleanComparison modifiedNotEquals = null;
+  private final BigIntegerBooleanComparison modifiedLessThan = null;
+  private final BigIntegerBooleanComparison modifiedGreaterThan = null;
+  private final BigIntegerBooleanComparison modifiedLessThanOrEquals = null;
+  private final BigIntegerBooleanComparison modifiedGreaterThanOrEquals = null;
 
-  private final Conversion convert = new Convert();
+  private final BigIntegerConversion convert = new Convert();
 
   private final BigIntegerBinaryArithmeticOperation add = new Add();
   private final BigIntegerBinaryArithmeticOperation subtract = new Subtract();
@@ -46,7 +47,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     super(BigInteger.class);
   }
 
-  public Conversion convert() {
+  public BigIntegerConversion convert() {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {
@@ -101,7 +102,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
       return this.modifiedRemainderDivide;
     }
   }
-  
+
   public BigIntegerBinaryArithmeticOperation power() {
     if (this.modifiedPower == null) {
       return this.power;

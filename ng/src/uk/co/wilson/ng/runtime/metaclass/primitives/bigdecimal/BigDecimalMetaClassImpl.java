@@ -2,13 +2,14 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 
 import java.math.BigDecimal;
 
-import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalConversion;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalMetaClass;
 
 public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimalMetaClass {
+  private final BigDecimalConversion modifiedConvert = null;
 
   private final BigDecimalBinaryArithmeticOperation modifiedAdd = null;
   private final BigDecimalBinaryArithmeticOperation modifiedSubtract = null;
@@ -17,7 +18,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
   private final BigDecimalBinaryArithmeticOperation modifiedModulo = null;
   private final BigDecimalBinaryArithmeticOperation modifiedRemainderDivide = null;
   private final BigDecimalBinaryArithmeticOperation modifiedPower = null;
-  
+
   private final BigDecimalBooleanComparison modifiedEquals = null;
   private final BigDecimalBooleanComparison modifiedNotEquals = null;
   private final BigDecimalBooleanComparison modifiedLessThan = null;
@@ -25,7 +26,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
   private final BigDecimalBooleanComparison modifiedLessThanOrEquals = null;
   private final BigDecimalBooleanComparison modifiedGreaterThanOrEquals = null;
 
-  private final Conversion convert = new Convert();
+  private final BigDecimalConversion convert = new Convert();
 
   private final BigDecimalBinaryArithmeticOperation add = new Add();
   private final BigDecimalBinaryArithmeticOperation subtract = new Subtract();
@@ -46,7 +47,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     super(BigDecimal.class);
   }
 
-  public Conversion convert() {
+  public BigDecimalConversion convert() {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {
@@ -93,7 +94,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
       return this.modifiedModulo;
     }
   }
-  
+
   public BigDecimalBinaryArithmeticOperation power() {
     if (this.modifiedPower == null) {
       return this.power;

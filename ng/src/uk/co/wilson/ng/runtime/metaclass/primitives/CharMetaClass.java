@@ -4,7 +4,7 @@ import ng.runtime.metaclass.MetaClass;
 
 public interface CharMetaClass extends MetaClass {
   CharConversion convert();
-  
+
   CharBinaryArithmeticOperation add();
   CharBinaryArithmeticOperation subtract();
   CharBinaryArithmeticOperation multiply();

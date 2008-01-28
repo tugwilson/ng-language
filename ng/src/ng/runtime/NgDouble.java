@@ -30,7 +30,7 @@ public class NgDouble extends NgObject {
   public double getDoubleValue() {
     return this.value;
   }
-  
+
   /* (non-JavaDoc)
    * @see java.lang.Object#toString()
    */

@@ -3,6 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives;
 import ng.runtime.metaclass.MetaClass;
 
 public interface LongMetaClass extends MetaClass {
+  LongConversion convert();
+
   LongBinaryArithmeticOperation add();
   LongBinaryArithmeticOperation subtract();
   LongBinaryArithmeticOperation multiply();
