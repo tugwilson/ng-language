@@ -92,6 +92,6 @@ public class Divide extends BaseBinaryArithmeticOperation {
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs.longValue()).divide(rhs);
+    return new BigDecimal(lhs).divide(rhs);
   }
 }

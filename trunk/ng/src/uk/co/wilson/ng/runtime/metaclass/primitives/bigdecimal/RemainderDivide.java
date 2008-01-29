@@ -88,7 +88,7 @@ public class RemainderDivide extends BaseBinaryArithmeticOperation {
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigDecimal lhs, final BigInteger rhs) {
-    return lhs.divideAndRemainder(BigDecimal.valueOf(rhs.longValue()))[1];
+    return lhs.divideAndRemainder(new BigDecimal(rhs))[1];
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigDecimal lhs, final BigDecimal rhs) {

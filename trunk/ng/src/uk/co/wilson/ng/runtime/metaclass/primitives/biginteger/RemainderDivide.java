@@ -96,6 +96,6 @@ public class RemainderDivide extends BaseBinaryArithmeticOperation {
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs.longValue()).divideAndRemainder(rhs)[1];
+    return new BigDecimal(lhs).divideAndRemainder(rhs)[1];
   }
 }

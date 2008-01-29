@@ -92,6 +92,6 @@ public class Subtract extends BaseBinaryArithmeticOperation{
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs.longValue()).subtract(rhs);
+    return new BigDecimal(lhs).subtract(rhs);
   }
 }
