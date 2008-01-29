@@ -1,0 +1,2871 @@
+package uk.co.wilson.ng.runtime.threadcontext;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
+import ng.lang.NgRuntimeException;
+import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.NotPerformed;
+import ng.runtime.threadcontext.ThreadContext;
+
+public class $Op extends BaseBooleanComparison {
+  public $Op(final ThreadContext tc) {
+    super(tc);
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final Object rhs) {
+  final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to one of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
+  final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doReverseApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.$op().doReverseApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to one of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
+  final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhsMetaClass, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhsMetaClass, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to one of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final char rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a char" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final byte rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a byte" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final short rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a short" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final int rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a int" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final long rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a long" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final float rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a float" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final double rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a double" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a BigInteger" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a BigDecimal" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a char to a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a byte to a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a short to a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a int to a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a long to a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a float to a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a double to a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a BigInteger to a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryOperationMap != null) {
+      result = this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.$op().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot $verb a BigDecimal to a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final byte rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final char rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final double rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final float rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final int rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final long rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final short rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final byte rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final char rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final double rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final float rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final int rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final long rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final short rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final byte rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final char rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final double rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final float rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final int rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final long rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final short rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final byte rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final char rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final double rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final float rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final int rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final long rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final short rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final byte rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final char rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final double rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final float rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final int rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final long rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final short rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final byte rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final char rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final double rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final float rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final int rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final long rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final short rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final byte rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final char rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final double rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final float rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final int rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final long rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final short rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final byte rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final char rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final double rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final float rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final int rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final long rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final short rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final byte rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final char rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final double rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final float rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final int rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final long rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final short rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a short");
+    } else {
+      return result;
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to one of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doReverseApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return rhsMetaClass.$op().doReverseApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to one of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhsMetaClass, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhsMetaClass, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to one of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final char rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a char" );
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final byte rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a byte" );
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final short rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a short" );
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final int rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a int" );
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final long rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a long" );
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final float rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a float" );
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final double rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a double" );
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final BigInteger rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a BigInteger" );
+    }
+  }
+
+  public boolean applyBoolean(final MetaClass lhsMetaClass, final Object lhs, final BigDecimal rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(lhsMetaClass, lhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return lhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a BigDecimal" );
+    }
+  }
+
+  public boolean applyBoolean(final char lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return rhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a char to a value of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final byte lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        throw new NgRuntimeException("Cannot $verb a byte to a value of type " + rhs.getClass().getName());
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a byte to a value of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final short lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return rhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a short to a value of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final int lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return rhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a int to a value of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final long lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return rhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a long to a value of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final float lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return rhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a float to a value of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final double lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return rhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a double to a value of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final BigInteger lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return rhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a BigInteger to a value of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final BigDecimal lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    try {
+      if (this.categoryOperationMap != null) {
+        return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return rhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Cannot $verb a BigDecimal to a value of type " + rhs.getClass().getName());
+    }
+  }
+
+  public boolean applyBoolean(final char lhs, final BigDecimal rhs) {
+    try {
+      if (this.charCategoryOperation == null) {
+        return PrimitiveMetaClasses.getCharMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.charCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a BigDecimal");
+    }
+  }
+
+  public boolean applyBoolean(final char lhs, final BigInteger rhs) {
+    try {
+      if (this.charCategoryOperation == null) {
+        return PrimitiveMetaClasses.getCharMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.charCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a BigInteger");
+    }
+  }
+
+  public boolean applyBoolean(final char lhs, final byte rhs) {
+    try {
+      if (this.charCategoryOperation == null) {
+        return PrimitiveMetaClasses.getCharMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.charCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a byte");
+    }
+  }
+
+  public boolean applyBoolean(final char lhs, final char rhs) {
+    try {
+      if (this.charCategoryOperation == null) {
+        return PrimitiveMetaClasses.getCharMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.charCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a char");
+    }
+  }
+
+  public boolean applyBoolean(final char lhs, final double rhs) {
+    try {
+      if (this.charCategoryOperation == null) {
+        return PrimitiveMetaClasses.getCharMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.charCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a double");
+    }
+  }
+
+  public boolean applyBoolean(final char lhs, final float rhs) {
+    try {
+      if (this.charCategoryOperation == null) {
+        return PrimitiveMetaClasses.getCharMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.charCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a float");
+    }
+  }
+
+  public boolean applyBoolean(final char lhs, final int rhs) {
+    try {
+      if (this.charCategoryOperation == null) {
+        return PrimitiveMetaClasses.getCharMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.charCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to an int");
+    }
+  }
+
+  public boolean applyBoolean(final char lhs, final long rhs) {
+    try {
+      if (this.charCategoryOperation == null) {
+        return PrimitiveMetaClasses.getCharMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.charCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a long");
+    }
+  }
+
+  public boolean applyBoolean(final char lhs, final short rhs) {
+    try {
+      if (this.charCategoryOperation == null) {
+        return PrimitiveMetaClasses.getCharMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.charCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a short");
+    }
+  }
+
+  public boolean applyBoolean(final byte lhs, final BigDecimal rhs) {
+    try {
+      if (this.byteCategoryOperation == null) {
+        return PrimitiveMetaClasses.getByteMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.byteCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a BigDecimal");
+    }
+  }
+
+  public boolean applyBoolean(final byte lhs, final BigInteger rhs) {
+    try {
+      if (this.byteCategoryOperation == null) {
+        return PrimitiveMetaClasses.getByteMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.byteCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a BigInteger");
+    }
+  }
+
+  public boolean applyBoolean(final byte lhs, final byte rhs) {
+    try {
+      if (this.byteCategoryOperation == null) {
+        return PrimitiveMetaClasses.getByteMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.byteCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a byte");
+    }
+  }
+
+  public boolean applyBoolean(final byte lhs, final char rhs) {
+    try {
+      if (this.byteCategoryOperation == null) {
+        return PrimitiveMetaClasses.getByteMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.byteCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a char");
+    }
+  }
+
+  public boolean applyBoolean(final byte lhs, final double rhs) {
+    try {
+      if (this.byteCategoryOperation == null) {
+        return PrimitiveMetaClasses.getByteMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.byteCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a double");
+    }
+  }
+
+  public boolean applyBoolean(final byte lhs, final float rhs) {
+    try {
+      if (this.byteCategoryOperation == null) {
+        return PrimitiveMetaClasses.getByteMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.byteCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a float");
+    }
+  }
+
+  public boolean applyBoolean(final byte lhs, final int rhs) {
+    try {
+      if (this.byteCategoryOperation == null) {
+        return PrimitiveMetaClasses.getByteMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.byteCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to an int");
+    }
+  }
+
+  public boolean applyBoolean(final byte lhs, final long rhs) {
+    try {
+      if (this.byteCategoryOperation == null) {
+        return PrimitiveMetaClasses.getByteMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.byteCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a long");
+    }
+  }
+
+  public boolean applyBoolean(final byte lhs, final short rhs) {
+    try {
+      if (this.byteCategoryOperation == null) {
+        return PrimitiveMetaClasses.getByteMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.byteCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a short");
+    }
+  }
+
+  public boolean applyBoolean(final short lhs, final BigDecimal rhs) {
+    try {
+      if (this.shortCategoryOperation == null) {
+        return PrimitiveMetaClasses.getShortMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.shortCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a BigDecimal");
+    }
+  }
+
+  public boolean applyBoolean(final short lhs, final BigInteger rhs) {
+    try {
+      if (this.shortCategoryOperation == null) {
+        return PrimitiveMetaClasses.getShortMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.shortCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a BigInteger");
+    }
+  }
+
+  public boolean applyBoolean(final short lhs, final byte rhs) {
+    try {
+      if (this.shortCategoryOperation == null) {
+        return PrimitiveMetaClasses.getShortMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.shortCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a byte");
+    }
+  }
+
+  public boolean applyBoolean(final short lhs, final char rhs) {
+    try {
+      if (this.shortCategoryOperation == null) {
+        return PrimitiveMetaClasses.getShortMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.shortCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a char");
+    }
+  }
+
+  public boolean applyBoolean(final short lhs, final double rhs) {
+    try {
+      if (this.shortCategoryOperation == null) {
+        return PrimitiveMetaClasses.getShortMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.shortCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a double");
+    }
+  }
+
+  public boolean applyBoolean(final short lhs, final float rhs) {
+    try {
+      if (this.shortCategoryOperation == null) {
+        return PrimitiveMetaClasses.getShortMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.shortCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a float");
+    }
+  }
+
+  public boolean applyBoolean(final short lhs, final int rhs) {
+    try {
+      if (this.shortCategoryOperation == null) {
+        return PrimitiveMetaClasses.getShortMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.shortCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to an int");
+    }
+  }
+
+  public boolean applyBoolean(final short lhs, final long rhs) {
+    try {
+      if (this.shortCategoryOperation == null) {
+        return PrimitiveMetaClasses.getShortMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.shortCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a long");
+    }
+  }
+
+  public boolean applyBoolean(final short lhs, final short rhs) {
+    try {
+      if (this.shortCategoryOperation == null) {
+        return PrimitiveMetaClasses.getShortMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.shortCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a short");
+    }
+  }
+
+  public boolean applyBoolean(final int lhs, final BigDecimal rhs) {
+    try {
+      if (this.intCategoryOperation == null) {
+        return PrimitiveMetaClasses.getIntMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.intCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a BigDecimal");
+    }
+  }
+
+  public boolean applyBoolean(final int lhs, final BigInteger rhs) {
+    try {
+      if (this.intCategoryOperation == null) {
+        return PrimitiveMetaClasses.getIntMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.intCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a BigInteger");
+    }
+  }
+
+  public boolean applyBoolean(final int lhs, final byte rhs) {
+    try {
+      if (this.intCategoryOperation == null) {
+        return PrimitiveMetaClasses.getIntMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.intCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a byte");
+    }
+  }
+
+  public boolean applyBoolean(final int lhs, final char rhs) {
+    try {
+      if (this.intCategoryOperation == null) {
+        return PrimitiveMetaClasses.getIntMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.intCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a char");
+    }
+  }
+
+  public boolean applyBoolean(final int lhs, final double rhs) {
+    try {
+      if (this.intCategoryOperation == null) {
+        return PrimitiveMetaClasses.getIntMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.intCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a double");
+    }
+  }
+
+  public boolean applyBoolean(final int lhs, final float rhs) {
+    try {
+      if (this.intCategoryOperation == null) {
+        return PrimitiveMetaClasses.getIntMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.intCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a float");
+    }
+  }
+
+  public boolean applyBoolean(final int lhs, final int rhs) {
+    try {
+      if (this.intCategoryOperation == null) {
+        return PrimitiveMetaClasses.getIntMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.intCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to an int");
+    }
+  }
+
+  public boolean applyBoolean(final int lhs, final long rhs) {
+    try {
+      if (this.intCategoryOperation == null) {
+        return PrimitiveMetaClasses.getIntMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.intCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a long");
+    }
+  }
+
+  public boolean applyBoolean(final int lhs, final short rhs) {
+    try {
+      if (this.intCategoryOperation == null) {
+        return PrimitiveMetaClasses.getIntMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.intCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a short");
+    }
+  }
+
+  public boolean applyBoolean(final long lhs, final BigDecimal rhs) {
+    try {
+      if (this.longCategoryOperation == null) {
+        return PrimitiveMetaClasses.getLongMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.longCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a BigDecimal");
+    }
+  }
+
+  public boolean applyBoolean(final long lhs, final BigInteger rhs) {
+    try {
+      if (this.longCategoryOperation == null) {
+        return PrimitiveMetaClasses.getLongMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.longCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a BigInteger");
+    }
+  }
+
+  public boolean applyBoolean(final long lhs, final byte rhs) {
+    try {
+      if (this.longCategoryOperation == null) {
+        return PrimitiveMetaClasses.getLongMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.longCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a byte");
+    }
+  }
+
+  public boolean applyBoolean(final long lhs, final char rhs) {
+    try {
+      if (this.longCategoryOperation == null) {
+        return PrimitiveMetaClasses.getLongMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.longCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a char");
+    }
+  }
+
+  public boolean applyBoolean(final long lhs, final double rhs) {
+    try {
+      if (this.longCategoryOperation == null) {
+        return PrimitiveMetaClasses.getLongMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.longCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a double");
+    }
+  }
+
+  public boolean applyBoolean(final long lhs, final float rhs) {
+    try {
+      if (this.longCategoryOperation == null) {
+        return PrimitiveMetaClasses.getLongMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.longCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a float");
+    }
+  }
+
+  public boolean applyBoolean(final long lhs, final int rhs) {
+    try {
+      if (this.longCategoryOperation == null) {
+        return PrimitiveMetaClasses.getLongMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.longCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to an int");
+    }
+  }
+
+  public boolean applyBoolean(final long lhs, final long rhs) {
+    try {
+      if (this.longCategoryOperation == null) {
+        return PrimitiveMetaClasses.getLongMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.longCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a long");
+    }
+  }
+
+  public boolean applyBoolean(final long lhs, final short rhs) {
+    try {
+      if (this.longCategoryOperation == null) {
+        return PrimitiveMetaClasses.getLongMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.longCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a short");
+    }
+  }
+
+  public boolean applyBoolean(final float lhs, final BigDecimal rhs) {
+    try {
+      if (this.floatCategoryOperation == null) {
+        return PrimitiveMetaClasses.getFloatMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.floatCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a BigDecimal");
+    }
+  }
+
+  public boolean applyBoolean(final float lhs, final BigInteger rhs) {
+    try {
+      if (this.floatCategoryOperation == null) {
+        return PrimitiveMetaClasses.getFloatMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.floatCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a BigInteger");
+    }
+  }
+
+  public boolean applyBoolean(final float lhs, final byte rhs) {
+    try {
+      if (this.floatCategoryOperation == null) {
+        return PrimitiveMetaClasses.getFloatMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.floatCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a byte");
+    }
+  }
+
+  public boolean applyBoolean(final float lhs, final char rhs) {
+    try {
+      if (this.floatCategoryOperation == null) {
+        return PrimitiveMetaClasses.getFloatMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.floatCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a char");
+    }
+  }
+
+  public boolean applyBoolean(final float lhs, final double rhs) {
+    try {
+      if (this.floatCategoryOperation == null) {
+        return PrimitiveMetaClasses.getFloatMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.floatCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a double");
+    }
+  }
+
+  public boolean applyBoolean(final float lhs, final float rhs) {
+    try {
+      if (this.floatCategoryOperation == null) {
+        return PrimitiveMetaClasses.getFloatMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.floatCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a float");
+    }
+  }
+
+  public boolean applyBoolean(final float lhs, final int rhs) {
+    try {
+      if (this.floatCategoryOperation == null) {
+        return PrimitiveMetaClasses.getFloatMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.floatCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to an int");
+    }
+  }
+
+  public boolean applyBoolean(final float lhs, final long rhs) {
+    try {
+      if (this.floatCategoryOperation == null) {
+        return PrimitiveMetaClasses.getFloatMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.floatCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a long");
+    }
+  }
+
+  public boolean applyBoolean(final float lhs, final short rhs) {
+    try {
+      if (this.floatCategoryOperation == null) {
+        return PrimitiveMetaClasses.getFloatMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.floatCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a short");
+    }
+  }
+
+  public boolean applyBoolean(final double lhs, final BigDecimal rhs) {
+    try {
+      if (this.doubleCategoryOperation == null) {
+        return PrimitiveMetaClasses.getDoubleMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.doubleCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a BigDecimal");
+    }
+  }
+
+  public boolean applyBoolean(final double lhs, final BigInteger rhs) {
+    try {
+      if (this.doubleCategoryOperation == null) {
+        return PrimitiveMetaClasses.getDoubleMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.doubleCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a BigInteger");
+    }
+  }
+
+  public boolean applyBoolean(final double lhs, final byte rhs) {
+    try {
+      if (this.doubleCategoryOperation == null) {
+        return PrimitiveMetaClasses.getDoubleMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.doubleCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a byte");
+    }
+  }
+
+  public boolean applyBoolean(final double lhs, final char rhs) {
+    try {
+      if (this.doubleCategoryOperation == null) {
+        return PrimitiveMetaClasses.getDoubleMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.doubleCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a char");
+    }
+  }
+
+  public boolean applyBoolean(final double lhs, final double rhs) {
+    try {
+      if (this.doubleCategoryOperation == null) {
+        return PrimitiveMetaClasses.getDoubleMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.doubleCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a double");
+    }
+  }
+
+  public boolean applyBoolean(final double lhs, final float rhs) {
+    try {
+      if (this.doubleCategoryOperation == null) {
+        return PrimitiveMetaClasses.getDoubleMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.doubleCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a float");
+    }
+  }
+
+  public boolean applyBoolean(final double lhs, final int rhs) {
+    try {
+      if (this.doubleCategoryOperation == null) {
+        return PrimitiveMetaClasses.getDoubleMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.doubleCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to an int");
+    }
+  }
+
+  public boolean applyBoolean(final double lhs, final long rhs) {
+    try {
+      if (this.doubleCategoryOperation == null) {
+        return PrimitiveMetaClasses.getDoubleMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.doubleCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a long");
+    }
+  }
+
+  public boolean applyBoolean(final double lhs, final short rhs) {
+    try {
+      if (this.doubleCategoryOperation == null) {
+        return PrimitiveMetaClasses.getDoubleMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.doubleCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a short");
+    }
+  }
+
+  public boolean applyBoolean(final BigInteger lhs, final BigDecimal rhs) {
+    try {
+      if (this.bigIntegerCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigIntegerCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a BigDecimal");
+    }
+  }
+
+  public boolean applyBoolean(final BigInteger lhs, final BigInteger rhs) {
+    try {
+      if (this.bigIntegerCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigIntegerCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a BigInteger");
+    }
+  }
+
+  public boolean applyBoolean(final BigInteger lhs, final byte rhs) {
+    try {
+      if (this.bigIntegerCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigIntegerCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a byte");
+    }
+  }
+
+  public boolean applyBoolean(final BigInteger lhs, final char rhs) {
+    try {
+      if (this.bigIntegerCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigIntegerCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a char");
+    }
+  }
+
+  public boolean applyBoolean(final BigInteger lhs, final double rhs) {
+    try {
+      if (this.bigIntegerCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigIntegerCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a double");
+    }
+  }
+
+  public boolean applyBoolean(final BigInteger lhs, final float rhs) {
+    try {
+      if (this.bigIntegerCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigIntegerCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a float");
+    }
+  }
+
+  public boolean applyBoolean(final BigInteger lhs, final int rhs) {
+    try {
+      if (this.bigIntegerCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigIntegerCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to an int");
+    }
+  }
+
+  public boolean applyBoolean(final BigInteger lhs, final long rhs) {
+    try {
+      if (this.bigIntegerCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigIntegerCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a long");
+    }
+  }
+
+  public boolean applyBoolean(final BigInteger lhs, final short rhs) {
+    try {
+      if (this.bigIntegerCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigIntegerMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigIntegerCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a short");
+    }
+  }
+
+  public boolean applyBoolean(final BigDecimal lhs, final BigDecimal rhs) {
+    try {
+      if (this.bigDecimalCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigDecimalCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a BigDecimal");
+    }
+  }
+
+  public boolean applyBoolean(final BigDecimal lhs, final BigInteger rhs) {
+    try {
+      if (this.bigDecimalCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigDecimalCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a BigInteger");
+    }
+  }
+
+  public boolean applyBoolean(final BigDecimal lhs, final byte rhs) {
+    try {
+      if (this.bigDecimalCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigDecimalCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a byte");
+    }
+  }
+
+  public boolean applyBoolean(final BigDecimal lhs, final char rhs) {
+    try {
+      if (this.bigDecimalCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigDecimalCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a char");
+    }
+  }
+
+  public boolean applyBoolean(final BigDecimal lhs, final double rhs) {
+    try {
+      if (this.bigDecimalCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigDecimalCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a double");
+    }
+  }
+
+  public boolean applyBoolean(final BigDecimal lhs, final float rhs) {
+    try {
+      if (this.bigDecimalCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigDecimalCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a float");
+    }
+  }
+
+  public boolean applyBoolean(final BigDecimal lhs, final int rhs) {
+    try {
+      if (this.bigDecimalCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigDecimalCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to an int");
+    }
+  }
+
+  public boolean applyBoolean(final BigDecimal lhs, final long rhs) {
+    try {
+      if (this.bigDecimalCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigDecimalCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a long");
+    }
+  }
+
+  public boolean applyBoolean(final BigDecimal lhs, final short rhs) {
+    try {
+      if (this.bigDecimalCategoryOperation == null) {
+        return PrimitiveMetaClasses.getBigDecimalMetaClass().$op().doApplyBoolean(this.tc, lhs, rhs);
+      } else {
+        return this.bigDecimalCategoryOperation.doApplyBoolean(this.tc, lhs, rhs);
+      }
+    } catch (final NotPerformed e) {
+      throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a short");
+    }
+  }
+}

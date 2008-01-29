@@ -1,0 +1,2304 @@
+package uk.co.wilson.ng.runtime.threadcontext;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
+import ng.lang.NgRuntimeException;
+import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.BinaryArithmeticOperation;
+import ng.runtime.threadcontext.NotPerformed;
+import ng.runtime.threadcontext.ThreadContext;
+
+public class ${Op} extends BaseBinaryAritmeticOperation implements BinaryArithmeticOperation {
+  public ${Op}(final ThreadContext tc) {
+    super(tc);
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final Object rhs) {
+  final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "${verb} one of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
+  final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(rhsMetaClass, rhsMetaClass.${op}()).doReverseApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.${op}().doReverseApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "${verb} one of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
+  final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhsMetaClass, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhsMetaClass, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "${verb} one of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final char rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "$verb a char" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final byte rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "$verb a byte" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final short rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "$verb a short" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final int rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "$verb a int" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final long rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "$verb a long" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final float rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "$verb a float" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final double rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "$verb a double" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "$verb a BigInteger" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(lhsMetaClass, lhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = lhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "$verb a BigDecimal" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(rhsMetaClass, rhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a char $verb a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(rhsMetaClass, rhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a byte $verb a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(rhsMetaClass, rhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a short $verb a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(rhsMetaClass, rhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a int $verb a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(rhsMetaClass, rhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a long $verb a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(rhsMetaClass, rhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a float $verb a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(rhsMetaClass, rhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a double $verb a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(rhsMetaClass, rhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a BigInteger $verb a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result;
+
+    if (this.categoryBinaryOperationMap != null) {
+      result = this.categoryBinaryOperationMap.get(rhsMetaClass, rhsMetaClass.${op}()).doApply(this.tc, lhs, rhs);
+    } else {
+      result = rhsMetaClass.${op}().doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot ${op} a BigDecimal $verb a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a char $verb a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a char $verb a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final byte rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a char $verb a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final char rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a char $verb a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final double rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a char $verb a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final float rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a char $verb a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final int rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a char $verb an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final long rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a char $verb a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final short rhs) {
+    final Object result;
+
+    if (this.charCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getCharMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.charCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a char $verb a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a byte $verb a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a byte $verb a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final byte rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a byte $verb a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final char rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a byte $verb a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final double rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a byte $verb a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final float rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a byte $verb a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final int rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a byte $verb an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final long rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a byte $verb a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final short rhs) {
+    final Object result;
+
+    if (this.byteCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getByteMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.byteCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a byte $verb a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a short $verb a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a short $verb a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final byte rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a short $verb a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final char rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a short $verb a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final double rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a short $verb a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final float rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a short $verb a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final int rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a short $verb an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final long rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a short $verb a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final short rhs) {
+    final Object result;
+
+    if (this.shortCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getShortMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.shortCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a short $verb a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} an int $verb a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} an int $verb a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final byte rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} an int $verb a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final char rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} an int $verb a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final double rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} an int $verb a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final float rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} an int $verb a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final int rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} an int $verb an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final long rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} an int $verb a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final short rhs) {
+    final Object result;
+
+    if (this.intCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getIntMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.intCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} an int $verb a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a long $verb a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a long $verb a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final byte rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a long $verb a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final char rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a long $verb a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final double rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a long $verb a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final float rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a long $verb a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final int rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a long $verb an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final long rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a long $verb a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final short rhs) {
+    final Object result;
+
+    if (this.longCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getLongMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.longCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a long $verb a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a float $verb a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a float $verb a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final byte rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a float $verb a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final char rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a float $verb a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final double rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a float $verb a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final float rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a float $verb a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final int rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a float $verb an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final long rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a float $verb a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final short rhs) {
+    final Object result;
+
+    if (this.floatCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getFloatMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.floatCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a float $verb a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a double $verb a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a double $verb a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final byte rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a double $verb a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final char rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a double $verb a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final double rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a double $verb a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final float rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a double $verb a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final int rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a double $verb an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final long rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a double $verb a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final short rhs) {
+    final Object result;
+
+    if (this.doubleCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getDoubleMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.doubleCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a double $verb a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigInteger $verb a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigInteger $verb a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final byte rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigInteger $verb a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final char rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigInteger $verb a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final double rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigInteger $verb a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final float rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigInteger $verb a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final int rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigInteger $verb an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final long rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigInteger $verb a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final short rhs) {
+    final Object result;
+
+    if (this.bigIntegerCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigIntegerCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigInteger $verb a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final BigDecimal rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigDecimal $verb a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final BigInteger rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigDecimal $verb a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final byte rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigDecimal $verb a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final char rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigDecimal $verb a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final double rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigDecimal $verb a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final float rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigDecimal $verb a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final int rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigDecimal $verb an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final long rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigDecimal $verb a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final short rhs) {
+    final Object result;
+
+    if (this.bigDecimalCategoryOperation == null) {
+      result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doApply(this.tc, lhs, rhs);
+    } else {
+      result = this.bigDecimalCategoryOperation.doApply(this.tc, lhs, rhs);
+    }
+
+    if (result == ThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${op} a BigDecimal $verb a short");
+    } else {
+      return result;
+    }
+  }
+  
+  public int intApply(char lhs, char rhs) throws NotPerformed {
+    if (this.charCategoryOperation == null) {
+      return PrimitiveMetaClasses.getCharMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.charCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(char lhs, byte rhs) throws NotPerformed {
+    if (this.charCategoryOperation == null) {
+      return PrimitiveMetaClasses.getCharMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.charCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(char lhs, short rhs) throws NotPerformed {
+    if (this.charCategoryOperation == null) {
+      return PrimitiveMetaClasses.getCharMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.charCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(char lhs, int rhs) throws NotPerformed {
+    if (this.charCategoryOperation == null) {
+      return PrimitiveMetaClasses.getCharMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.charCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public long longApply(char lhs, long rhs) throws NotPerformed {
+    if (this.charCategoryOperation == null) {
+      return PrimitiveMetaClasses.getCharMetaClass().${op}().doLongApply(this.tc, lhs, rhs);
+    } else {
+      return this.charCategoryOperation.doLongApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(char lhs, float rhs) throws NotPerformed {
+    if (this.charCategoryOperation == null) {
+      return PrimitiveMetaClasses.getCharMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.charCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(char lhs, double rhs) throws NotPerformed {
+    if (this.charCategoryOperation == null) {
+      return PrimitiveMetaClasses.getCharMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.charCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigInteger bigIntegerApply(char lhs, BigInteger rhs) throws NotPerformed {
+    if (this.charCategoryOperation == null) {
+      return PrimitiveMetaClasses.getCharMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.charCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(char lhs, BigDecimal rhs) throws NotPerformed {
+    if (this.charCategoryOperation == null) {
+      return PrimitiveMetaClasses.getCharMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.charCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+
+  public int intApply(byte lhs, char rhs) throws NotPerformed {
+    if (this.byteCategoryOperation == null) {
+      return PrimitiveMetaClasses.getByteMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.byteCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(byte lhs, byte rhs) throws NotPerformed {
+    if (this.byteCategoryOperation == null) {
+      return PrimitiveMetaClasses.getByteMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.byteCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(byte lhs, short rhs) throws NotPerformed {
+    if (this.byteCategoryOperation == null) {
+      return PrimitiveMetaClasses.getByteMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.byteCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(byte lhs, int rhs) throws NotPerformed {
+    if (this.byteCategoryOperation == null) {
+      return PrimitiveMetaClasses.getByteMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.byteCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public long longApply(byte lhs, long rhs) throws NotPerformed {
+    if (this.byteCategoryOperation == null) {
+      return PrimitiveMetaClasses.getByteMetaClass().${op}().doLongApply(this.tc, lhs, rhs);
+    } else {
+      return this.byteCategoryOperation.doLongApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(byte lhs, float rhs) throws NotPerformed {
+    if (this.byteCategoryOperation == null) {
+      return PrimitiveMetaClasses.getByteMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.byteCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(byte lhs, double rhs) throws NotPerformed {
+    if (this.byteCategoryOperation == null) {
+      return PrimitiveMetaClasses.getByteMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.byteCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigInteger bigIntegerApply(byte lhs, BigInteger rhs) throws NotPerformed {
+    if (this.byteCategoryOperation == null) {
+      return PrimitiveMetaClasses.getByteMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.byteCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(byte lhs, BigDecimal rhs) throws NotPerformed {
+    if (this.byteCategoryOperation == null) {
+      return PrimitiveMetaClasses.getByteMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.byteCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+
+  public int intApply(short lhs, char rhs) throws NotPerformed {
+    if (this.shortCategoryOperation == null) {
+      return PrimitiveMetaClasses.getShortMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.shortCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(short lhs, byte rhs) throws NotPerformed {
+    if (this.shortCategoryOperation == null) {
+      return PrimitiveMetaClasses.getShortMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.shortCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(short lhs, short rhs) throws NotPerformed {
+    if (this.shortCategoryOperation == null) {
+      return PrimitiveMetaClasses.getShortMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.shortCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(short lhs, int rhs) throws NotPerformed {
+    if (this.shortCategoryOperation == null) {
+      return PrimitiveMetaClasses.getShortMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.shortCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public long longApply(short lhs, long rhs) throws NotPerformed {
+    if (this.shortCategoryOperation == null) {
+      return PrimitiveMetaClasses.getShortMetaClass().${op}().doLongApply(this.tc, lhs, rhs);
+    } else {
+      return this.shortCategoryOperation.doLongApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(short lhs, float rhs) throws NotPerformed {
+    if (this.shortCategoryOperation == null) {
+      return PrimitiveMetaClasses.getShortMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.shortCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(short lhs, double rhs) throws NotPerformed {
+    if (this.shortCategoryOperation == null) {
+      return PrimitiveMetaClasses.getShortMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.shortCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigInteger bigIntegerApply(short lhs, BigInteger rhs) throws NotPerformed {
+    if (this.shortCategoryOperation == null) {
+      return PrimitiveMetaClasses.getShortMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.shortCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(short lhs, BigDecimal rhs) throws NotPerformed {
+    if (this.shortCategoryOperation == null) {
+      return PrimitiveMetaClasses.getShortMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.shortCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+
+  public int intApply(int lhs, char rhs) throws NotPerformed {
+    if (this.intCategoryOperation == null) {
+      return PrimitiveMetaClasses.getIntMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.intCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(int lhs, byte rhs) throws NotPerformed {
+    if (this.intCategoryOperation == null) {
+      return PrimitiveMetaClasses.getIntMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.intCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(int lhs, short rhs) throws NotPerformed {
+    if (this.intCategoryOperation == null) {
+      return PrimitiveMetaClasses.getIntMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.intCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public int intApply(int lhs, int rhs) throws NotPerformed {
+    if (this.intCategoryOperation == null) {
+      return PrimitiveMetaClasses.getIntMetaClass().${op}().doIntApply(this.tc, lhs, rhs);
+    } else {
+      return this.intCategoryOperation.doIntApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public long longApply(int lhs, long rhs) throws NotPerformed {
+    if (this.intCategoryOperation == null) {
+      return PrimitiveMetaClasses.getIntMetaClass().${op}().doLongApply(this.tc, lhs, rhs);
+    } else {
+      return this.intCategoryOperation.doLongApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(int lhs, float rhs) throws NotPerformed {
+    if (this.intCategoryOperation == null) {
+      return PrimitiveMetaClasses.getIntMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.intCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(int lhs, double rhs) throws NotPerformed {
+    if (this.intCategoryOperation == null) {
+      return PrimitiveMetaClasses.getIntMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.intCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigInteger bigIntegerApply(int lhs, BigInteger rhs) throws NotPerformed {
+    if (this.intCategoryOperation == null) {
+      return PrimitiveMetaClasses.getIntMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.intCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(int lhs, BigDecimal rhs) throws NotPerformed {
+    if (this.intCategoryOperation == null) {
+      return PrimitiveMetaClasses.getIntMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.intCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+
+  public long longApply(long lhs, char rhs) throws NotPerformed {
+    if (this.longCategoryOperation == null) {
+      return PrimitiveMetaClasses.getLongMetaClass().${op}().doLongApply(this.tc, lhs, rhs);
+    } else {
+      return this.longCategoryOperation.doLongApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public long longApply(long lhs, byte rhs) throws NotPerformed {
+    if (this.longCategoryOperation == null) {
+      return PrimitiveMetaClasses.getLongMetaClass().${op}().doLongApply(this.tc, lhs, rhs);
+    } else {
+      return this.longCategoryOperation.doLongApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public long longApply(long lhs, short rhs) throws NotPerformed {
+    if (this.longCategoryOperation == null) {
+      return PrimitiveMetaClasses.getLongMetaClass().${op}().doLongApply(this.tc, lhs, rhs);
+    } else {
+      return this.longCategoryOperation.doLongApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public long longApply(long lhs, int rhs) throws NotPerformed {
+    if (this.longCategoryOperation == null) {
+      return PrimitiveMetaClasses.getLongMetaClass().${op}().doLongApply(this.tc, lhs, rhs);
+    } else {
+      return this.longCategoryOperation.doLongApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public long longApply(long lhs, long rhs) throws NotPerformed {
+    if (this.longCategoryOperation == null) {
+      return PrimitiveMetaClasses.getLongMetaClass().${op}().doLongApply(this.tc, lhs, rhs);
+    } else {
+      return this.longCategoryOperation.doLongApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(long lhs, float rhs) throws NotPerformed {
+    if (this.longCategoryOperation == null) {
+      return PrimitiveMetaClasses.getLongMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.longCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(long lhs, double rhs) throws NotPerformed {
+    if (this.longCategoryOperation == null) {
+      return PrimitiveMetaClasses.getLongMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.longCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigInteger bigIntegerApply(long lhs, BigInteger rhs) throws NotPerformed {
+    if (this.longCategoryOperation == null) {
+      return PrimitiveMetaClasses.getLongMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.longCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(long lhs, BigDecimal rhs) throws NotPerformed {
+    if (this.longCategoryOperation == null) {
+      return PrimitiveMetaClasses.getLongMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.longCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+
+  public float floatApply(float lhs, char rhs) throws NotPerformed {
+    if (this.floatCategoryOperation == null) {
+      return PrimitiveMetaClasses.getFloatMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.floatCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(float lhs, byte rhs) throws NotPerformed {
+    if (this.floatCategoryOperation == null) {
+      return PrimitiveMetaClasses.getFloatMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.floatCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(float lhs, short rhs) throws NotPerformed {
+    if (this.floatCategoryOperation == null) {
+      return PrimitiveMetaClasses.getFloatMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.floatCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(float lhs, int rhs) throws NotPerformed {
+    if (this.floatCategoryOperation == null) {
+      return PrimitiveMetaClasses.getFloatMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.floatCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(float lhs, long rhs) throws NotPerformed {
+    if (this.floatCategoryOperation == null) {
+      return PrimitiveMetaClasses.getFloatMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.floatCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(float lhs, float rhs) throws NotPerformed {
+    if (this.floatCategoryOperation == null) {
+      return PrimitiveMetaClasses.getFloatMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.floatCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(float lhs, double rhs) throws NotPerformed {
+    if (this.floatCategoryOperation == null) {
+      return PrimitiveMetaClasses.getFloatMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.floatCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(float lhs, BigInteger rhs) throws NotPerformed {
+    if (this.floatCategoryOperation == null) {
+      return PrimitiveMetaClasses.getFloatMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.floatCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(float lhs, BigDecimal rhs) throws NotPerformed {
+    if (this.floatCategoryOperation == null) {
+      return PrimitiveMetaClasses.getFloatMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.floatCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+
+  public double doubleApply(double lhs, char rhs) throws NotPerformed {
+    if (this.doubleCategoryOperation == null) {
+      return PrimitiveMetaClasses.getDoubleMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.doubleCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(double lhs, byte rhs) throws NotPerformed {
+    if (this.doubleCategoryOperation == null) {
+      return PrimitiveMetaClasses.getDoubleMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.doubleCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(double lhs, short rhs) throws NotPerformed {
+    if (this.doubleCategoryOperation == null) {
+      return PrimitiveMetaClasses.getDoubleMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.doubleCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(double lhs, int rhs) throws NotPerformed {
+    if (this.doubleCategoryOperation == null) {
+      return PrimitiveMetaClasses.getDoubleMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.doubleCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(double lhs, long rhs) throws NotPerformed {
+    if (this.doubleCategoryOperation == null) {
+      return PrimitiveMetaClasses.getDoubleMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.doubleCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(double lhs, float rhs) throws NotPerformed {
+    if (this.doubleCategoryOperation == null) {
+      return PrimitiveMetaClasses.getDoubleMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.doubleCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(double lhs, double rhs) throws NotPerformed {
+    if (this.doubleCategoryOperation == null) {
+      return PrimitiveMetaClasses.getDoubleMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.doubleCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(double lhs, BigInteger rhs) throws NotPerformed {
+    if (this.doubleCategoryOperation == null) {
+      return PrimitiveMetaClasses.getDoubleMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.doubleCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(double lhs, BigDecimal rhs) throws NotPerformed {
+    if (this.doubleCategoryOperation == null) {
+      return PrimitiveMetaClasses.getDoubleMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.doubleCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+
+  public BigInteger bigIntegerApply(BigInteger lhs, char rhs) throws NotPerformed {
+    if (this.bigIntegerCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigIntegerCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigInteger bigIntegerApply(BigInteger lhs, byte rhs) throws NotPerformed {
+    if (this.bigIntegerCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigIntegerCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigInteger bigIntegerApply(BigInteger lhs, short rhs) throws NotPerformed {
+    if (this.bigIntegerCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigIntegerCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigInteger bigIntegerApply(BigInteger lhs, int rhs) throws NotPerformed {
+    if (this.bigIntegerCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigIntegerCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigInteger bigIntegerApply(BigInteger lhs, long rhs) throws NotPerformed {
+    if (this.bigIntegerCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigIntegerCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public float floatApply(BigInteger lhs, float rhs) throws NotPerformed {
+    if (this.bigIntegerCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doFloatApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigIntegerCategoryOperation.doFloatApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public double doubleApply(BigInteger lhs, double rhs) throws NotPerformed {
+    if (this.bigIntegerCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doDoubleApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigIntegerCategoryOperation.doDoubleApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigInteger bigIntegerApply(BigInteger lhs, BigInteger rhs) throws NotPerformed {
+    if (this.bigIntegerCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doBigIntegerApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigIntegerCategoryOperation.doBigIntegerApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(BigInteger lhs, BigDecimal rhs) throws NotPerformed {
+    if (this.bigIntegerCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigIntegerCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(BigDecimal lhs, char rhs) throws NotPerformed {
+    if (this.bigDecimalCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigDecimalCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(BigDecimal lhs, byte rhs) throws NotPerformed {
+    if (this.bigDecimalCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigDecimalCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(BigDecimal lhs, short rhs) throws NotPerformed {
+    if (this.bigDecimalCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigDecimalCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(BigDecimal lhs, int rhs) throws NotPerformed {
+    if (this.bigDecimalCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigDecimalCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(BigDecimal lhs, long rhs) throws NotPerformed {
+    if (this.bigDecimalCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigDecimalCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(BigDecimal lhs, float rhs) throws NotPerformed {
+    if (this.bigDecimalCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigDecimalCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(BigDecimal lhs, double rhs) throws NotPerformed {
+    if (this.bigDecimalCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigDecimalCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(BigDecimal lhs, BigInteger rhs) throws NotPerformed {
+    if (this.bigDecimalCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigDecimalCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+  
+  public BigDecimal bigDecimalApply(BigDecimal lhs, BigDecimal rhs) throws NotPerformed {
+    if (this.bigDecimalCategoryOperation == null) {
+      return PrimitiveMetaClasses.getBigDecimalMetaClass().${op}().doBigDecimalApply(this.tc, lhs, rhs);
+    } else {
+      return this.bigDecimalCategoryOperation.doBigDecimalApply(this.tc, lhs, rhs);
+    }
+  }
+}
+
