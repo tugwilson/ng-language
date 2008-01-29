@@ -1806,7 +1806,7 @@ public class $Op extends BaseBooleanComparison {
       if (this.categoryOperationMap != null) {
         return this.categoryOperationMap.get(rhsMetaClass, rhsMetaClass.$op()).doApplyBoolean(this.tc, lhs, rhs);
       } else {
-        throw new NgRuntimeException("Cannot $verb a byte to a value of type " + rhs.getClass().getName());
+        return rhsMetaClass.$op().doApplyBoolean(this.tc, lhs, rhs);
       }
     } catch (final NotPerformed e) {
       throw new NgRuntimeException("Cannot $verb a byte to a value of type " + rhs.getClass().getName());

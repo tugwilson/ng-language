@@ -85,7 +85,7 @@ class Convert implements BigDecimalConversion {
   }
 
   public BigDecimal doAsBigDecimal(final ThreadContext tc, final Object instance) {
-    return BigDecimal.valueOf(((BigInteger)instance).longValue());
+    return new BigDecimal((BigInteger)instance);
   }
 
   /* (non-JavaDoc)

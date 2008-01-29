@@ -88,7 +88,7 @@ public class Divide extends BaseBinaryArithmeticOperation {
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigDecimal lhs, final BigInteger rhs) {
-    return lhs.divide(BigDecimal.valueOf(rhs.longValue()));
+    return lhs.divide(new BigDecimal(rhs));
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigDecimal lhs, final BigDecimal rhs) {

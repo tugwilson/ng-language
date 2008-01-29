@@ -104,6 +104,6 @@ public class GreaterThan extends BaseBooleanComparison {
   }
 
   public boolean doApplyBoolean(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs.longValue()).compareTo(rhs) > 0;
+    return new BigDecimal(lhs).compareTo(rhs) > 0;
   }
 }

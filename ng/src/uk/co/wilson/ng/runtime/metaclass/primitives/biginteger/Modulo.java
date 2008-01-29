@@ -92,6 +92,6 @@ public class Modulo extends BaseBinaryArithmeticOperation{
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return BigDecimal.valueOf(lhs.longValue()).divideToIntegralValue(rhs);
+    return new BigDecimal(lhs).divideToIntegralValue(rhs);
   }
 }

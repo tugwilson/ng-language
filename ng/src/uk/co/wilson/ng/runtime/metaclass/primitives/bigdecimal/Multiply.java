@@ -88,7 +88,7 @@ public class Multiply extends BaseBinaryArithmeticOperation {
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigDecimal lhs, final BigInteger rhs) {
-    return lhs.multiply(BigDecimal.valueOf(rhs.longValue()));
+    return lhs.multiply(new BigDecimal(rhs));
   }
 
   public BigDecimal doBigDecimalApply(final ThreadContext tc, final BigDecimal lhs, final BigDecimal rhs) {
