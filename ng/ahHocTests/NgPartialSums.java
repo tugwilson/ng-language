@@ -43,9 +43,9 @@ public class NgPartialSums {
      while (tc.lessThanOrEquals().applyBoolean(k, n)) {
         double k2;
         try {
-          k2 = tc.multiply().doubleApply((double)k, (double)k);
+          k2 = tc.power().doubleApply((double)k, 2);
         } catch (final NotPerformed e10) {
-          k2 = tc.convert().asDouble(tc.multiply().apply((double)k, (double)k));
+          k2 = tc.convert().asDouble(tc.power().apply((double)k, 2));
         }
 
         double k3;
