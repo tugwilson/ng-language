@@ -5,31 +5,14 @@ import ng.runtime.metaclass.BinaryArithmeticOperationNoopImpl;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
 import ng.runtime.metaclass.ConversionNoopImpl;
-import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.StringMetaClass;
 
 /**
  * @author John
  *
  */
-public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClass {
-  private final Conversion modifiedConvert = null;
-
-  private final BinaryArithmeticOperation modifiedAdd = null;
-  private final BinaryArithmeticOperation modifiedSubtract = null;
-  private final BinaryArithmeticOperation modifiedMultiply = null;
-  private final BinaryArithmeticOperation modifiedDivide = null;
-  private final BinaryArithmeticOperation modifiedModulo = null;
-  private final BinaryArithmeticOperation modifiedRemainderDivide = null;
-  private final BinaryArithmeticOperation modifiedPower = null;
-
-  private final BooleanBinaryComparison modifiedEquals = null;
-  private final BooleanBinaryComparison modifiedNotEquals = null;
-  private final BooleanBinaryComparison modifiedLessThan = null;
-  private final BooleanBinaryComparison modifiedGreaterThan = null;
-  private final BooleanBinaryComparison modifiedLessThanOrEquals = null;
-  private final BooleanBinaryComparison modifiedGreaterThanOrEquals = null;
-
+public class StringMetaClassImpl extends MetaClassImpl implements StringMetaClass {
   private final Conversion convert = ConversionNoopImpl.instance;
 
   private final BinaryArithmeticOperation add = new Add();
@@ -51,6 +34,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     super(String.class);
   }
 
+  @Override
+  public Conversion getOriginalConvert() {
+    return this.convert;
+  }
+
+  @Override
   public Conversion convert() {
     if (this.modifiedConvert == null) {
       return this.convert;
@@ -59,6 +48,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BinaryArithmeticOperation getOriginalAdd() {
+    return this.add;
+  }
+
+  @Override
   public BinaryArithmeticOperation add() {
     if (this.modifiedAdd == null) {
       return this.add;
@@ -67,6 +62,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BinaryArithmeticOperation getOriginalSubtract() {
+    return this.subtract;
+  }
+
+  @Override
   public BinaryArithmeticOperation subtract() {
     if (this.modifiedSubtract == null) {
       return this.subtract;
@@ -75,6 +76,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BinaryArithmeticOperation getOriginalMultiply() {
+    return this.multiply;
+  }
+
+  @Override
   public BinaryArithmeticOperation multiply() {
     if (this.modifiedMultiply == null) {
       return this.multiply;
@@ -83,6 +90,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BinaryArithmeticOperation getOriginalDivide() {
+    return this.divide;
+  }
+
+  @Override
   public BinaryArithmeticOperation divide() {
     if (this.modifiedDivide == null) {
       return this.divide;
@@ -91,6 +104,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BinaryArithmeticOperation getOriginalModulo() {
+    return this.modulo;
+  }
+
+  @Override
   public BinaryArithmeticOperation modulo() {
     if (this.modifiedModulo == null) {
       return this.modulo;
@@ -99,14 +118,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
-  public BinaryArithmeticOperation remainderDivide() {
-    if (this.modifiedRemainderDivide == null) {
-      return this.remainderDivide;
-    } else {
-      return this.modifiedRemainderDivide;
-    }
+  @Override
+  public BinaryArithmeticOperation getOriginalPower() {
+    return this.power;
   }
 
+  @Override
   public BinaryArithmeticOperation power() {
     if (this.modifiedPower == null) {
       return this.power;
@@ -115,6 +132,26 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BinaryArithmeticOperation getOriginalRemainderDivide() {
+    return this.remainderDivide;
+  }
+
+  @Override
+  public BinaryArithmeticOperation remainderDivide() {
+    if (this.modifiedRemainderDivide == null) {
+      return this.remainderDivide;
+    } else {
+      return this.modifiedRemainderDivide;
+    }
+  }
+
+  @Override
+  public BooleanBinaryComparison getOriginalEquals() {
+    return this.equals;
+  }
+
+  @Override
   public BooleanBinaryComparison equals() {
     if (this.modifiedEquals == null) {
       return this.equals;
@@ -123,6 +160,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BooleanBinaryComparison getOriginalNotEquals() {
+    return this.notEquals;
+  }
+
+  @Override
   public BooleanBinaryComparison notEquals() {
     if (this.modifiedNotEquals == null) {
       return this.notEquals;
@@ -131,6 +174,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BooleanBinaryComparison getOriginalLessThan() {
+    return this.lessThan;
+  }
+
+  @Override
   public BooleanBinaryComparison lessThan() {
     if (this.modifiedLessThan == null) {
       return this.lessThan;
@@ -139,6 +188,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BooleanBinaryComparison getOriginalGreaterThan() {
+    return this.greaterThan;
+  }
+
+  @Override
   public BooleanBinaryComparison greaterThan() {
     if (this.modifiedGreaterThan == null) {
       return this.greaterThan;
@@ -147,6 +202,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BooleanBinaryComparison getOriginalLessThanOrEquals() {
+    return this.lessThanOrEquals;
+  }
+
+  @Override
   public BooleanBinaryComparison lessThanOrEquals() {
     if (this.modifiedLessThanOrEquals == null) {
       return this.lessThanOrEquals;
@@ -155,6 +216,12 @@ public class StringMetaClassImpl extends BaseMetaClass implements StringMetaClas
     }
   }
 
+  @Override
+  public BooleanBinaryComparison getOriginalGreaterThanOrEquals() {
+    return this.greaterThanOrEquals;
+  }
+
+  @Override
   public BooleanBinaryComparison greaterThanOrEquals() {
     if (this.modifiedGreaterThanOrEquals == null) {
       return this.greaterThanOrEquals;
