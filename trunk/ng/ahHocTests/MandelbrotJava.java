@@ -2,7 +2,7 @@
 import java.util.Date;
 
 class MandelbrotJava
-{  
+{
   static int BAILOUT = 16;
   static int MAX_ITERATIONS = 1000;
 
@@ -20,10 +20,12 @@ class MandelbrotJava
       final float zi2 = zi * zi;
       zr = zr2 - zi2 + cr;
       zi = temp + temp + ci;
-      if (zi2 + zr2 > BAILOUT)
+      if (zi2 + zr2 > BAILOUT) {
         return i;
-      if (i > MAX_ITERATIONS)
+      }
+      if (i > MAX_ITERATIONS) {
         return 0;
+      }
     }
   }
 
@@ -34,10 +36,11 @@ class MandelbrotJava
     for (y = -39; y < 39; y++) {
     // System.out.print("\n");
       for (x = -39; x < 39; x++) {
-        if (iterate(x/40.0f,y/40.0f) == 0) 
-                    ;// System.out.print("*");
-        else
-                    ;// System.out.print(" ");
+        if (iterate(x/40.0f,y/40.0f) == 0) {
+          ;// System.out.print("*");
+        } else {
+          ;// System.out.print(" ");
+        }
 
       }
     }

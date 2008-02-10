@@ -6,21 +6,21 @@ class AliothMandelbrot {
    final static double limitSquared = 4.0;
    final static int iterations = 50;
 
-   public static void main(String[] args) throws Exception {
-      int size = Integer.parseInt(args[0]);
-      Mandelbrot m = new Mandelbrot(size);
+   public static void main(final String[] args) throws Exception {
+      final int size = Integer.parseInt(args[0]);
+      final Mandelbrot m = new Mandelbrot(size);
       m.compute();
    }
 
    public static class Mandelbrot {
-      public Mandelbrot(int size)
+      public Mandelbrot(final int size)
       {
          this.size = size;
-         fac = 2.0 / size;
-         out = new BufferedOutputStream(System.out);
+         this.fac = 2.0 / size;
+         this.out = new BufferedOutputStream(System.out);
 
-         int offset = size % 8;
-         shift = offset == 0 ? 0 : (8-offset);
+         final int offset = size % 8;
+         this.shift = offset == 0 ? 0 : (8-offset);
       }
       final int size;
       final BufferedOutputStream out;
@@ -29,21 +29,22 @@ class AliothMandelbrot {
 
       public void compute() throws IOException
       {
-         System.out.format("P4\n%d %d\n",size,size);
-         for (int y = 0; y<size; y++)
-            computeRow(y);
-         out.close();
+         System.out.format("P4\n%d %d\n",this.size,this.size);
+         for (int y = 0; y<this.size; y++) {
+          computeRow(y);
+        }
+         this.out.close();
       }
 
-      private void computeRow(int y) throws IOException
+      private void computeRow(final int y) throws IOException
       {
          int bits = 0;
 
-         for (int x = 0; x<size;x++) {
+         for (int x = 0; x<this.size;x++) {
             double Zr = 0.0;
             double Zi = 0.0;
-            double Cr = (x*fac - 1.5);
-            double Ci = (y*fac - 1.0);
+            final double Cr = (x*this.fac - 1.5);
+            final double Ci = (y*this.fac - 1.0);
 
             int i = iterations;
             double ZrN = 0;
@@ -56,19 +57,20 @@ class AliothMandelbrot {
             } while (!(ZiN + ZrN > limitSquared) && --i > 0);
 
             bits = bits << 1;
-            if (i == 0) bits++;
+            if (i == 0) {
+              bits++;
+            }
 
             if (x%8 == 7) {
-               out.write((byte)bits);
+               this.out.write((byte)bits);
                bits = 0;
             }
          }
-         if (shift!=0) {
-            bits = bits << shift;
-            out.write((byte)bits);
+         if (this.shift!=0) {
+            bits = bits << this.shift;
+            this.out.write((byte)bits);
          }
       }
    }
 }
 
- 

@@ -2,29 +2,35 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.biginteger;
 
 import java.math.BigInteger;
 
+import ng.runtime.metaclass.BinaryArithmeticOperation;
+import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperationWrapper;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBooleanComparisonWrapper;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerConversion;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerConversionWrapper;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerMetaClass;
 
 public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigIntegerMetaClass {
-  private final BigIntegerConversion modifiedConvert = null;
+  private volatile BigIntegerConversion modifiedConvert = null;
 
-  private final BigIntegerBinaryArithmeticOperation modifiedAdd = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedSubtract = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedMultiply = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedDivide = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedModulo = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedRemainderDivide = null;
-  private final BigIntegerBinaryArithmeticOperation modifiedPower = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedAdd = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedSubtract = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedMultiply = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedDivide = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedModulo = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedRemainderDivide = null;
+  private volatile BigIntegerBinaryArithmeticOperation modifiedPower = null;
 
-  private final BigIntegerBooleanComparison modifiedEquals = null;
-  private final BigIntegerBooleanComparison modifiedNotEquals = null;
-  private final BigIntegerBooleanComparison modifiedLessThan = null;
-  private final BigIntegerBooleanComparison modifiedGreaterThan = null;
-  private final BigIntegerBooleanComparison modifiedLessThanOrEquals = null;
-  private final BigIntegerBooleanComparison modifiedGreaterThanOrEquals = null;
+  private volatile BigIntegerBooleanComparison modifiedEquals = null;
+  private volatile BigIntegerBooleanComparison modifiedNotEquals = null;
+  private volatile BigIntegerBooleanComparison modifiedLessThan = null;
+  private volatile BigIntegerBooleanComparison modifiedGreaterThan = null;
+  private volatile BigIntegerBooleanComparison modifiedLessThanOrEquals = null;
+  private volatile BigIntegerBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final BigIntegerConversion convert = new Convert();
 
@@ -47,12 +53,56 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     super(BigInteger.class);
   }
 
+  private BigIntegerBinaryArithmeticOperation fixOperationType(final BinaryArithmeticOperation modifiedOperation) {
+    if (modifiedOperation instanceof BigIntegerBinaryArithmeticOperation) {
+      return( BigIntegerBinaryArithmeticOperation) modifiedOperation;
+    }
+
+    return new BigIntegerBinaryArithmeticOperationWrapper(modifiedOperation);
+  }
+
+  private BigIntegerBooleanComparison fixOperationType(final BooleanBinaryComparison modifiedOperation) {
+    if(modifiedOperation instanceof BigIntegerBooleanComparison) {
+      return (BigIntegerBooleanComparison)modifiedOperation;
+    }
+
+    return new BigIntegerBooleanComparisonWrapper(modifiedOperation);
+  }
+
+  public void modifyConvert(final Conversion modifiedConvert) {
+    if (modifiedConvert instanceof BigIntegerConversion) {
+      modifyConvert((BigIntegerConversion)modifiedConvert);
+    } else {
+      modifyConvert(new BigIntegerConversionWrapper(modifiedConvert));
+    }
+  }
+
+  public void modifyConvert(final BigIntegerConversion modifiedConvert) {
+    this.modifiedConvert = modifiedConvert;
+  }
+
+  public BigIntegerConversion getOriginalConvert() {
+    return this.convert;
+  }
+
   public BigIntegerConversion convert() {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {
       return this.modifiedConvert;
     }
+  }
+
+  public void modifyAdd(final BinaryArithmeticOperation modifiedAdd) {
+    modifyAdd(fixOperationType(modifiedAdd));
+  }
+
+  public void modifyAdd(final BigIntegerBinaryArithmeticOperation modifiedAdd) {
+    this.modifiedAdd = modifiedAdd;
+  }
+
+  public BigIntegerBinaryArithmeticOperation getOriginalAdd() {
+    return this.add;
   }
 
   public BigIntegerBinaryArithmeticOperation add() {
@@ -63,12 +113,36 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
+  public void modifySubtract(final BinaryArithmeticOperation modifiedSubtract) {
+    modifySubtract(fixOperationType(modifiedSubtract));
+  }
+
+  public void modifySubtract(final BigIntegerBinaryArithmeticOperation modifiedSubtract) {
+    this.modifiedSubtract = modifiedSubtract;
+  }
+
+  public BigIntegerBinaryArithmeticOperation getOriginalSubtract() {
+    return this.subtract;
+  }
+
   public BigIntegerBinaryArithmeticOperation subtract() {
     if (this.modifiedSubtract == null) {
       return this.subtract;
     } else {
       return this.modifiedSubtract;
     }
+  }
+
+  public void modifyMultiply(final BinaryArithmeticOperation modifiedMultiply) {
+    modifyMultiply(fixOperationType(modifiedMultiply));
+  }
+
+  public void modifyMultiply(final BigIntegerBinaryArithmeticOperation modifiedMultiply) {
+    this.modifiedMultiply = modifiedMultiply;
+  }
+
+  public BigIntegerBinaryArithmeticOperation getOriginalMultiply() {
+    return this.multiply;
   }
 
   public BigIntegerBinaryArithmeticOperation multiply() {
@@ -79,12 +153,36 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
+  public void modifyDivide(final BinaryArithmeticOperation modifiedDivide) {
+    modifyDivide(fixOperationType(modifiedDivide));
+  }
+
+  public void modifyDivide(final BigIntegerBinaryArithmeticOperation modifiedDivide) {
+    this.modifiedDivide = modifiedDivide;
+  }
+
+  public BigIntegerBinaryArithmeticOperation getOriginalDivide() {
+    return this.divide;
+  }
+
   public BigIntegerBinaryArithmeticOperation divide() {
     if (this.modifiedDivide == null) {
       return this.divide;
     } else {
       return this.modifiedDivide;
     }
+  }
+
+  public void modifyModulo(final BinaryArithmeticOperation modifiedModulo) {
+    modifyModulo(fixOperationType(modifiedModulo));
+  }
+
+  public void modifyModulo(final BigIntegerBinaryArithmeticOperation modifiedModulo) {
+    this.modifiedModulo = modifiedModulo;
+  }
+
+  public BigIntegerBinaryArithmeticOperation getOriginalModulo() {
+    return this.modulo;
   }
 
   public BigIntegerBinaryArithmeticOperation modulo() {
@@ -95,12 +193,16 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
-  public BigIntegerBinaryArithmeticOperation remainderDivide() {
-    if (this.modifiedRemainderDivide == null) {
-      return this.remainderDivide;
-    } else {
-      return this.modifiedRemainderDivide;
-    }
+  public void modifyPower(final BinaryArithmeticOperation modifiedPower) {
+    modifyPower(fixOperationType(modifiedPower));
+  }
+
+  public void modifyPower(final BigIntegerBinaryArithmeticOperation modifiedPower) {
+    this.modifiedPower = modifiedPower;
+  }
+
+  public BigIntegerBinaryArithmeticOperation getOriginalPower() {
+    return this.power;
   }
 
   public BigIntegerBinaryArithmeticOperation power() {
@@ -111,12 +213,56 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
+  public void modifyRemainderDivide(final BinaryArithmeticOperation modifiedRemainderDivide) {
+    modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
+  }
+
+  public void modifyRemainderDivide(final BigIntegerBinaryArithmeticOperation modifiedRemainderDivide) {
+    this.modifiedRemainderDivide = modifiedRemainderDivide;
+  }
+
+  public BigIntegerBinaryArithmeticOperation getOriginalRemainderDivide() {
+    return this.remainderDivide;
+  }
+
+  public BigIntegerBinaryArithmeticOperation remainderDivide() {
+    if (this.modifiedRemainderDivide == null) {
+      return this.remainderDivide;
+    } else {
+      return this.modifiedRemainderDivide;
+    }
+  }
+
+  public void modifyEquals(final BooleanBinaryComparison modifiedRemainderDivide) {
+    modifyEquals(fixOperationType(modifiedRemainderDivide));
+  }
+
+  public void modifyEquals(final BigIntegerBooleanComparison modifiedEquals) {
+    this.modifiedEquals = modifiedEquals;
+  }
+
+  public BigIntegerBooleanComparison getOriginalEquals() {
+    return this.equals;
+  }
+
   public BigIntegerBooleanComparison equals() {
     if (this.modifiedEquals == null) {
       return this.equals;
     } else {
       return this.modifiedEquals;
     }
+  }
+
+  public void modifyNotEquals(final BooleanBinaryComparison modifiedRemainderDivide) {
+    modifyNotEquals(fixOperationType(modifiedRemainderDivide));
+  }
+
+  public void modifyNotEquals(final BigIntegerBooleanComparison modifiedNotEquals) {
+    this.modifiedNotEquals = modifiedNotEquals;
+  }
+
+  public BigIntegerBooleanComparison getOriginalNotEquals() {
+    return this.notEquals;
   }
 
   public BigIntegerBooleanComparison notEquals() {
@@ -127,12 +273,36 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
+  public void modifyLessThan(final BooleanBinaryComparison modifiedRemainderDivide) {
+    modifyLessThan(fixOperationType(modifiedRemainderDivide));
+  }
+
+  public void modifyLessThan(final BigIntegerBooleanComparison modifiedLessThan) {
+    this.modifiedLessThan = modifiedLessThan;
+  }
+
+  public BigIntegerBooleanComparison getOriginalLessThan() {
+    return this.lessThan;
+  }
+
   public BigIntegerBooleanComparison lessThan() {
     if (this.modifiedLessThan == null) {
       return this.lessThan;
     } else {
       return this.modifiedLessThan;
     }
+  }
+
+  public void modifyGreaterThan(final BooleanBinaryComparison modifiedRemainderDivide) {
+    modifyGreaterThan(fixOperationType(modifiedRemainderDivide));
+  }
+
+  public void modifyGreaterThan(final BigIntegerBooleanComparison modifiedGreaterThan) {
+    this.modifiedGreaterThan = modifiedGreaterThan;
+  }
+
+  public BigIntegerBooleanComparison getOriginalGreaterThan() {
+    return this.greaterThan;
   }
 
   public BigIntegerBooleanComparison greaterThan() {
@@ -143,12 +313,36 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
+  public void modifyLessThanOrEquals(final BooleanBinaryComparison modifiedRemainderDivide) {
+    modifyLessThanOrEquals(fixOperationType(modifiedRemainderDivide));
+  }
+
+  public void modifyLessThanOrEquals(final BigIntegerBooleanComparison modifiedLessThanOrEquals) {
+    this.modifiedLessThanOrEquals = modifiedLessThanOrEquals;
+  }
+
+  public BigIntegerBooleanComparison getOriginalLessThanOrEquals() {
+    return this.lessThanOrEquals;
+  }
+
   public BigIntegerBooleanComparison lessThanOrEquals() {
     if (this.modifiedLessThanOrEquals == null) {
       return this.lessThanOrEquals;
     } else {
       return this.modifiedLessThanOrEquals;
     }
+  }
+
+  public void modifyGreaterThanOrEquals(final BooleanBinaryComparison modifiedRemainderDivide) {
+    modifyGreaterThanOrEquals(fixOperationType(modifiedRemainderDivide));
+  }
+
+  public void modifyGreaterThanOrEquals(final BigIntegerBooleanComparison modifiedGreaterThanOrEquals) {
+    this.modifiedGreaterThanOrEquals = modifiedGreaterThanOrEquals;
+  }
+
+  public BigIntegerBooleanComparison getOriginalGreaterThanOrEquals() {
+    return this.greaterThanOrEquals;
   }
 
   public BigIntegerBooleanComparison greaterThanOrEquals() {

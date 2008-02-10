@@ -13,39 +13,39 @@ import ng.runtime.metaclass.ConversionNoopImpl;
  */
 public class MetaClassImpl extends BaseMetaClass {
 
-  private final Conversion modifiedConvert = null;
+  protected volatile Conversion modifiedConvert = null;
 
-  private final BinaryArithmeticOperation modifiedAdd = null;
-  private final BinaryArithmeticOperation modifiedSubtract = null;
-  private final BinaryArithmeticOperation modifiedMultiply = null;
-  private final BinaryArithmeticOperation modifiedDivide = null;
-  private final BinaryArithmeticOperation modifiedModulo = null;
-  private final BinaryArithmeticOperation modifiedRemainderDivide = null;
-  private final BinaryArithmeticOperation modifiedPower = null;
+  protected volatile BinaryArithmeticOperation modifiedAdd = null;
+  protected volatile BinaryArithmeticOperation modifiedSubtract = null;
+  protected volatile BinaryArithmeticOperation modifiedMultiply = null;
+  protected volatile BinaryArithmeticOperation modifiedDivide = null;
+  protected volatile BinaryArithmeticOperation modifiedModulo = null;
+  protected volatile BinaryArithmeticOperation modifiedRemainderDivide = null;
+  protected volatile BinaryArithmeticOperation modifiedPower = null;
 
-  private final BooleanBinaryComparison modifiedEquals = null;
-  private final BooleanBinaryComparison modifiedNotEquals = null;
-  private final BooleanBinaryComparison modifiedLessThan = null;
-  private final BooleanBinaryComparison modifiedGreaterThan = null;
-  private final BooleanBinaryComparison modifiedLessThanOrEquals = null;
-  private final BooleanBinaryComparison modifiedGreaterThanOrEquals = null;
+  protected volatile BooleanBinaryComparison modifiedEquals = null;
+  protected volatile BooleanBinaryComparison modifiedNotEquals = null;
+  protected volatile BooleanBinaryComparison modifiedLessThan = null;
+  protected volatile BooleanBinaryComparison modifiedGreaterThan = null;
+  protected volatile BooleanBinaryComparison modifiedLessThanOrEquals = null;
+  protected volatile BooleanBinaryComparison modifiedGreaterThanOrEquals = null;
 
-  private final Conversion convert;
+  protected final Conversion convert;
 
-  private final BinaryArithmeticOperation add;
-  private final BinaryArithmeticOperation subtract;
-  private final BinaryArithmeticOperation multiply;
-  private final BinaryArithmeticOperation divide;
-  private final BinaryArithmeticOperation modulo;
-  private final BinaryArithmeticOperation remainderDivide;
-  private final BinaryArithmeticOperation power;
+  protected final BinaryArithmeticOperation add;
+  protected final BinaryArithmeticOperation subtract;
+  protected final BinaryArithmeticOperation multiply;
+  protected final BinaryArithmeticOperation divide;
+  protected final BinaryArithmeticOperation modulo;
+  protected final BinaryArithmeticOperation remainderDivide;
+  protected final BinaryArithmeticOperation power;
 
-  private final BooleanBinaryComparison equals;
-  private final BooleanBinaryComparison notEquals;
-  private final BooleanBinaryComparison lessThan;
-  private final BooleanBinaryComparison greaterThan;
-  private final BooleanBinaryComparison lessThanOrEquals;
-  private final BooleanBinaryComparison greaterThanOrEquals;
+  protected final BooleanBinaryComparison equals;
+  protected final BooleanBinaryComparison notEquals;
+  protected final BooleanBinaryComparison lessThan;
+  protected final BooleanBinaryComparison greaterThan;
+  protected final BooleanBinaryComparison lessThanOrEquals;
+  protected final BooleanBinaryComparison greaterThanOrEquals;
 
   /**
    * @param theClass
@@ -71,12 +71,28 @@ public class MetaClassImpl extends BaseMetaClass {
     this.greaterThanOrEquals = BooleanBinaryComparisonNoopImpl.instance;
   }
 
+  public void modifyConvert(final Conversion modifiedConvert) {
+    this.modifiedConvert = modifiedConvert;
+  }
+
+  public Conversion getOriginalConvert() {
+    return this.convert;
+  }
+
   public Conversion convert() {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {
       return this.modifiedConvert;
     }
+  }
+
+  public void modifyAdd(final BinaryArithmeticOperation modifiedAdd) {
+    this.modifiedAdd = modifiedAdd;
+  }
+
+  public BinaryArithmeticOperation getOriginalAdd() {
+    return this.add;
   }
 
   public BinaryArithmeticOperation add() {
@@ -87,12 +103,28 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
+  public void modifySubtract(final BinaryArithmeticOperation modifiedSubtract) {
+    this.modifiedSubtract = modifiedSubtract;
+  }
+
+  public BinaryArithmeticOperation getOriginalSubtract() {
+    return this.subtract;
+  }
+
   public BinaryArithmeticOperation subtract() {
     if (this.modifiedSubtract == null) {
       return this.subtract;
     } else {
       return this.modifiedSubtract;
     }
+  }
+
+  public void modifyMultiply(final BinaryArithmeticOperation modifiedMultiply) {
+    this.modifiedMultiply = modifiedMultiply;
+  }
+
+  public BinaryArithmeticOperation getOriginalMultiply() {
+    return this.multiply;
   }
 
   public BinaryArithmeticOperation multiply() {
@@ -103,12 +135,28 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
+  public void modifyDivide(final BinaryArithmeticOperation modifiedDivide) {
+    this.modifiedDivide = modifiedDivide;
+  }
+
+  public BinaryArithmeticOperation getOriginalDivide() {
+    return this.divide;
+  }
+
   public BinaryArithmeticOperation divide() {
     if (this.modifiedDivide == null) {
       return this.divide;
     } else {
       return this.modifiedDivide;
     }
+  }
+
+  public void modifyModulo(final BinaryArithmeticOperation modifiedModulo) {
+    this.modifiedModulo = modifiedModulo;
+  }
+
+  public BinaryArithmeticOperation getOriginalModulo() {
+    return this.modulo;
   }
 
   public BinaryArithmeticOperation modulo() {
@@ -119,12 +167,28 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
+  public void modifyRemainderDivide(final BinaryArithmeticOperation modifiedRemainderDivide) {
+    this.modifiedRemainderDivide = modifiedRemainderDivide;
+  }
+
+  public BinaryArithmeticOperation getOriginalRemainderDivide() {
+    return this.remainderDivide;
+  }
+
   public BinaryArithmeticOperation remainderDivide() {
     if (this.modifiedRemainderDivide == null) {
       return this.remainderDivide;
     } else {
       return this.modifiedRemainderDivide;
     }
+  }
+
+  public void modifyPower(final BinaryArithmeticOperation modifiedPower) {
+    this.modifiedPower = modifiedPower;
+  }
+
+  public BinaryArithmeticOperation getOriginalPower() {
+    return this.power;
   }
 
   public BinaryArithmeticOperation power() {
@@ -135,12 +199,28 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
+  public void modifyEquals(final BooleanBinaryComparison modifiedEquals) {
+    this.modifiedEquals = modifiedEquals;
+  }
+
+  public BooleanBinaryComparison getOriginalEquals() {
+    return this.equals;
+  }
+
   public BooleanBinaryComparison equals() {
     if (this.modifiedEquals == null) {
       return this.equals;
     } else {
       return this.modifiedEquals;
     }
+  }
+
+  public void modifyNotEquals(final BooleanBinaryComparison modifiedNotEquals) {
+    this.modifiedNotEquals = modifiedNotEquals;
+  }
+
+  public BooleanBinaryComparison getOriginalNotEquals() {
+    return this.notEquals;
   }
 
   public BooleanBinaryComparison notEquals() {
@@ -151,12 +231,28 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
+  public void modifyLessThan(final BooleanBinaryComparison modifiedLessThan) {
+    this.modifiedLessThan = modifiedLessThan;
+  }
+
+  public BooleanBinaryComparison getOriginalLessThan() {
+    return this.lessThan;
+  }
+
   public BooleanBinaryComparison lessThan() {
     if (this.modifiedLessThan == null) {
       return this.lessThan;
     } else {
       return this.modifiedLessThan;
     }
+  }
+
+  public void modifyGreaterThan(final BooleanBinaryComparison modifiedGreaterThan) {
+    this.modifiedGreaterThan = modifiedGreaterThan;
+  }
+
+  public BooleanBinaryComparison getOriginalGreaterThan() {
+    return this.greaterThan;
   }
 
   public BooleanBinaryComparison greaterThan() {
@@ -167,12 +263,28 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
+  public void modifyLessThanOrEquals(final BooleanBinaryComparison modifiedLessThanOrEquals) {
+    this.modifiedLessThanOrEquals = modifiedLessThanOrEquals;
+  }
+
+  public BooleanBinaryComparison getOriginalLessThanOrEquals() {
+    return this.lessThanOrEquals;
+  }
+
   public BooleanBinaryComparison lessThanOrEquals() {
     if (this.modifiedLessThanOrEquals == null) {
       return this.lessThanOrEquals;
     } else {
       return this.modifiedLessThanOrEquals;
     }
+  }
+
+  public void modifyGreaterThanOrEquals(final BooleanBinaryComparison modifiedGreaterThanOrEquals) {
+    this.modifiedGreaterThanOrEquals = modifiedGreaterThanOrEquals;
+  }
+
+  public BooleanBinaryComparison getOriginalGreaterThanOrEquals() {
+    return this.greaterThanOrEquals;
   }
 
   public BooleanBinaryComparison greaterThanOrEquals() {
