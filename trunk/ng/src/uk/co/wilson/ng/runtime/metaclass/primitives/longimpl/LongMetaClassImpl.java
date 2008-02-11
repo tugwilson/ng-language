@@ -6,13 +6,6 @@ import ng.runtime.metaclass.Conversion;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.LongBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.LongBinaryArithmeticOperationWrapper;
-import uk.co.wilson.ng.runtime.metaclass.primitives.LongBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.LongBooleanComparisonWrapper;
-import uk.co.wilson.ng.runtime.metaclass.primitives.LongConversion;
-import uk.co.wilson.ng.runtime.metaclass.primitives.LongConversionWrapper;
-import uk.co.wilson.ng.runtime.metaclass.primitives.LongMetaClass;
 
 public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   private volatile LongConversion modifiedConvert = null;

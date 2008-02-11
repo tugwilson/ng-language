@@ -2,7 +2,7 @@ package ng.runtime;
 
 import ng.lang.NgObject;
 import ng.runtime.metaclass.MetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClassImpl;
 
 public class NgDouble extends NgObject {

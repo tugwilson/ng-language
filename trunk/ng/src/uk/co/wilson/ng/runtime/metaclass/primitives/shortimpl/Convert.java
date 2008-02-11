@@ -5,7 +5,6 @@ import java.math.BigInteger;
 
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.ShortConversion;
 
 class Convert implements ShortConversion {
   public boolean doAsBoolean(final ThreadContext tc, final short value) throws NotPerformed {

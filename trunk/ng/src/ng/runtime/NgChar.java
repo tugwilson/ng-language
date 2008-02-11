@@ -2,7 +2,7 @@ package ng.runtime;
 
 import ng.lang.NgObject;
 import ng.runtime.metaclass.MetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClassImpl;
 
 public class NgChar extends NgObject {

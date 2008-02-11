@@ -8,15 +8,15 @@ import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.IntBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.LongBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.ShortBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortBinaryArithmeticOperation;
 
 public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation implements BinaryArithmeticOperation {
   protected BaseBinaryAritmeticOperation(final ThreadContext tc) {

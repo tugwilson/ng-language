@@ -5,7 +5,6 @@ import java.math.BigInteger;
 
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.IntConversion;
 
 class Convert implements IntConversion {
   public boolean doAsBoolean(final ThreadContext tc, final int value) throws NotPerformed {
