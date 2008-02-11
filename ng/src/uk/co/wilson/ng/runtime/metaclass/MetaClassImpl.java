@@ -103,20 +103,18 @@ public class MetaClassImpl extends BaseMetaClass {
   public ArithmeticBinaryOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap == null) {
-      if (this.modifiedAdd == null) {
-        return this.add;
-      } else {
-        return this.modifiedAdd;
-      }
-    } else {
+    if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-    
-      if (arithmeticBinaryOperation == null) {
-        return this.add;
-      } else {
+      
+      if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
+    }
+    
+    if (this.modifiedAdd == null) {
+      return this.add;
+    } else {
+      return this.modifiedAdd;
     }
   }
 
@@ -131,20 +129,18 @@ public class MetaClassImpl extends BaseMetaClass {
   public ArithmeticBinaryOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap == null) {
-      if (this.modifiedSubtract == null) {
-        return this.subtract;
-      } else {
-        return this.modifiedSubtract;
-      }
-    } else {
+    if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-    
-      if (arithmeticBinaryOperation == null) {
-        return this.subtract;
-      } else {
+      
+      if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
+    }
+    
+    if (this.modifiedSubtract == null) {
+      return this.subtract;
+    } else {
+      return this.modifiedSubtract;
     }
   }
 
@@ -159,20 +155,18 @@ public class MetaClassImpl extends BaseMetaClass {
   public ArithmeticBinaryOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap == null) {
-      if (this.modifiedMultiply == null) {
-        return this.multiply;
-      } else {
-        return this.modifiedMultiply;
-      }
-    } else {
+    if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-    
-      if (arithmeticBinaryOperation == null) {
-        return this.multiply;
-      } else {
+      
+      if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
+    }
+    
+    if (this.modifiedMultiply == null) {
+      return this.multiply;
+    } else {
+      return this.modifiedMultiply;
     }
   }
 
@@ -185,22 +179,20 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
-    final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap == null) {
-      if (this.modifiedDivide == null) {
-        return this.divide;
-      } else {
-        return this.modifiedDivide;
-      }
-    } else {
+    if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-    
-      if (arithmeticBinaryOperation == null) {
-        return this.divide;
-      } else {
+      
+      if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
+    }
+    
+    if (this.modifiedDivide == null) {
+      return this.divide;
+    } else {
+      return this.modifiedDivide;
     }
   }
 
@@ -213,22 +205,20 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
-    final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap == null) {
-      if (this.modifiedModulo == null) {
-        return this.modulo;
-      } else {
-        return this.modifiedModulo;
-      }
-    } else {
+    if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-    
-      if (arithmeticBinaryOperation == null) {
-        return this.modulo;
-      } else {
+      
+      if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
+    }
+    
+    if (this.modifiedModulo == null) {
+      return this.modulo;
+    } else {
+      return this.modifiedModulo;
     }
   }
 
@@ -241,22 +231,20 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
-    final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap == null) {
-      if (this.modifiedRemainderDivide == null) {
-        return this.remainderDivide;
-      } else {
-        return this.modifiedRemainderDivide;
-      }
-    } else {
+    if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-    
-      if (arithmeticBinaryOperation == null) {
-        return this.remainderDivide;
-      } else {
+      
+      if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
+    }
+    
+    if (this.modifiedRemainderDivide == null) {
+      return this.remainderDivide;
+    } else {
+      return this.modifiedRemainderDivide;
     }
   }
 
@@ -269,22 +257,20 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
-    final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap == null) {
-      if (this.modifiedPower == null) {
-        return this.power;
-      } else {
-        return this.modifiedPower;
-      }
-    } else {
+    if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-    
-      if (arithmeticBinaryOperation == null) {
-        return this.power;
-      } else {
+      
+      if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
+    }
+    
+    if (this.modifiedPower == null) {
+      return this.power;
+    } else {
+      return this.modifiedPower;
     }
   }
 
@@ -298,21 +284,19 @@ public class MetaClassImpl extends BaseMetaClass {
 
   public BooleanBinaryComparison equals(BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
-  
-    if (categoryOperationMap == null) {
-      if (this.modifiedEquals == null) {
-        return this.equals;
-      } else {
-        return this.modifiedEquals;
-      }
-    } else {
+    
+    if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
     
-      if (categoryBooleanBinaryComparison == null) {
-        return this.equals;
-      } else {
+      if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
+    }
+
+    if (this.modifiedEquals == null) {
+      return this.equals;
+    } else {
+      return this.modifiedEquals;
     }
   }
 
@@ -327,20 +311,18 @@ public class MetaClassImpl extends BaseMetaClass {
   public BooleanBinaryComparison notEquals(BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
     
-    if (categoryOperationMap == null) {
-      if (this.modifiedNotEquals == null) {
-        return this.notEquals;
-      } else {
-        return this.modifiedNotEquals;
-      }
-    } else {
+    if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
     
-      if (categoryBooleanBinaryComparison == null) {
-        return this.notEquals;
-      } else {
+      if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
+    }
+
+    if (this.modifiedNotEquals == null) {
+      return this.notEquals;
+    } else {
+      return this.modifiedNotEquals;
     }
   }
 
@@ -355,20 +337,18 @@ public class MetaClassImpl extends BaseMetaClass {
   public BooleanBinaryComparison lessThan(BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
     
-    if (categoryOperationMap == null) {
-      if (this.modifiedLessThan == null) {
-        return this.lessThan;
-      } else {
-        return this.modifiedLessThan;
-      }
-    } else {
+    if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
     
-      if (categoryBooleanBinaryComparison == null) {
-        return this.lessThan;
-      } else {
+      if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
+    }
+
+    if (this.modifiedLessThan == null) {
+      return this.lessThan;
+    } else {
+      return this.modifiedLessThan;
     }
   }
 
@@ -383,20 +363,18 @@ public class MetaClassImpl extends BaseMetaClass {
   public BooleanBinaryComparison greaterThan(BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
     
-    if (categoryOperationMap == null) {
-      if (this.modifiedGreaterThan == null) {
-        return this.greaterThan;
-      } else {
-        return this.modifiedGreaterThan;
-      }
-    } else {
+    if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
     
-      if (categoryBooleanBinaryComparison == null) {
-        return this.greaterThan;
-      } else {
+      if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
+    }
+
+    if (this.modifiedGreaterThan == null) {
+      return this.greaterThan;
+    } else {
+      return this.modifiedGreaterThan;
     }
   }
 
@@ -411,20 +389,18 @@ public class MetaClassImpl extends BaseMetaClass {
   public BooleanBinaryComparison lessThanOrEquals(BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
     
-    if (categoryOperationMap == null) {
-      if (this.modifiedLessThanOrEquals == null) {
-        return this.lessThanOrEquals;
-      } else {
-        return this.modifiedLessThanOrEquals;
-      }
-    } else {
+    if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
     
-      if (categoryBooleanBinaryComparison == null) {
-        return this.lessThanOrEquals;
-      } else {
+      if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
+    }
+
+    if (this.modifiedLessThanOrEquals == null) {
+      return this.lessThanOrEquals;
+    } else {
+      return this.modifiedLessThanOrEquals;
     }
   }
 
@@ -439,20 +415,18 @@ public class MetaClassImpl extends BaseMetaClass {
   public BooleanBinaryComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
     
-    if (categoryOperationMap == null) {
-      if (this.modifiedGreaterThanOrEquals == null) {
-        return this.greaterThanOrEquals;
-      } else {
-        return this.modifiedGreaterThanOrEquals;
-      }
-    } else {
+    if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
     
-      if (categoryBooleanBinaryComparison == null) {
-        return this.greaterThanOrEquals;
-      } else {
+      if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
+    }
+
+    if (this.modifiedGreaterThanOrEquals == null) {
+      return this.greaterThanOrEquals;
+    } else {
+      return this.modifiedGreaterThanOrEquals;
     }
   }
 }
