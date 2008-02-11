@@ -5,6 +5,7 @@ import java.util.Stack;
 
 import ng.runtime.metaclass.BinaryArithmeticOperation;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
@@ -43,4 +44,12 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation {
   protected HashMapWithDefaultValue<MetaClass, BinaryArithmeticOperation> categoryBinaryOperationMap = null;
 
   protected Stack<Map<MetaClass, BinaryArithmeticOperation>> categoryBinaryOperationMapStack = new Stack<Map<MetaClass, BinaryArithmeticOperation>>();
+
+  public void pushBehaviour(Behaviour category) {
+    // TODO Auto-generated method stub  
+  }
+
+  public void popBehaviour() {
+    // TODO Auto-generated method stub   
+  }
 }

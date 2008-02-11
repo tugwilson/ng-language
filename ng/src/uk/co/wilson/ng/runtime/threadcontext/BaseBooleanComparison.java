@@ -8,6 +8,7 @@ import java.util.Stack;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBooleanComparison;
@@ -47,6 +48,14 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
   protected HashMapWithDefaultValue<MetaClass, BooleanBinaryComparison> categoryOperationMap = null;
 
   protected Stack<Map<MetaClass, BooleanBinaryComparison>> categoryOperationMapStack = new Stack<Map<MetaClass, BooleanBinaryComparison>>();
+
+  public void pushBehaviour(Behaviour behaviour) {
+    // TODO Auto-generated method stub
+  }
+
+  public void popBehaviour() {
+    // TODO Auto-generated method stub   
+  }
 
   public boolean applyBoolean(final Object lhs, final Object rhs) {
     return applyBoolean(this.tc.getMetaClassFor(lhs), lhs, rhs);
