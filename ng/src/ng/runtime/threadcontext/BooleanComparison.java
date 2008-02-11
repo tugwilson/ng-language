@@ -20,34 +20,34 @@ public interface BooleanComparison  extends BinaryOperation {
 
   CharBooleanComparison getCharCategoryOperation();
   void setCharCategoryOperation(CharBooleanComparison charCategoryOperation);
-  
+
   ByteBooleanComparison getByteCategoryOperation();
   void setByteCategoryOperation(ByteBooleanComparison byteCategoryOperation);
-  
+
   ShortBooleanComparison getShortCategoryOperation();
   void setShortCategoryOperation(ShortBooleanComparison shortCategoryOperation);
-  
+
   IntBooleanComparison getIntCategoryOperation();
   void setIntCategoryOperation(IntBooleanComparison intCategoryOperation);
-  
+
   LongBooleanComparison getLongCategoryOperation();
   void setLongCategoryOperation(LongBooleanComparison longCategoryOperation);
-  
+
   FloatBooleanComparison getFloatCategoryOperation();
   void setFloatCategoryOperation(FloatBooleanComparison floatCategoryOperation);
-  
+
   DoubleBooleanComparison getDoubleCategoryOperation();
   void setDoubleCategoryOperation(DoubleBooleanComparison doubleCategoryOperation);
-  
+
   BigIntegerBooleanComparison getBigIntegerCategoryOperation();
   void setBigIntegerCategoryOperation(BigIntegerBooleanComparison bigIntegerCategoryOperation);
-  
+
   BigDecimalBooleanComparison getBigDecimalCategoryOperation();
   void setBigDecimalCategoryOperation(BigDecimalBooleanComparison bigDecimalCategoryOperation);
-  
+
   Map<MetaClass, BooleanBinaryComparison> getCategoryOperationMap();
   void setCategoryOperationMap(Map<MetaClass, BooleanBinaryComparison> categoryOperationMap);
-  
+
   boolean applyBoolean(Object lhs, Object rhs);
   boolean applyBoolean(MetaClass lhsMetaClass, Object lhs, Object rhs);
   boolean applyBoolean(Object lhs, MetaClass rhsMetaClass, Object rhs);

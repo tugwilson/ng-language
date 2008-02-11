@@ -46,13 +46,13 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
 
   private Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = null;
 
-  private Stack<Map<MetaClass, BooleanBinaryComparison>> categoryOperationMapStack = new Stack<Map<MetaClass, BooleanBinaryComparison>>();
+  private final Stack<Map<MetaClass, BooleanBinaryComparison>> categoryOperationMapStack = new Stack<Map<MetaClass, BooleanBinaryComparison>>();
 
   public CharBooleanComparison getCharCategoryOperation() {
     return this.charCategoryOperation;
   }
 
-  public void setCharCategoryOperation(CharBooleanComparison charCategoryOperation) {
+  public void setCharCategoryOperation(final CharBooleanComparison charCategoryOperation) {
     this.charCategoryOperation = charCategoryOperation;
   }
 
@@ -60,7 +60,7 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     return this.byteCategoryOperation;
   }
 
-  public void setByteCategoryOperation(ByteBooleanComparison byteCategoryOperation) {
+  public void setByteCategoryOperation(final ByteBooleanComparison byteCategoryOperation) {
     this.byteCategoryOperation = byteCategoryOperation;
   }
 
@@ -68,7 +68,7 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     return this.shortCategoryOperation;
   }
 
-  public void setShortCategoryOperation(ShortBooleanComparison shortCategoryOperation) {
+  public void setShortCategoryOperation(final ShortBooleanComparison shortCategoryOperation) {
     this.shortCategoryOperation = shortCategoryOperation;
   }
 
@@ -76,7 +76,7 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     return this.intCategoryOperation;
   }
 
-  public void setIntCategoryOperation(IntBooleanComparison intCategoryOperation) {
+  public void setIntCategoryOperation(final IntBooleanComparison intCategoryOperation) {
     this.intCategoryOperation = intCategoryOperation;
   }
 
@@ -84,7 +84,7 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     return this.longCategoryOperation;
   }
 
-  public void setLongCategoryOperation(LongBooleanComparison longCategoryOperation) {
+  public void setLongCategoryOperation(final LongBooleanComparison longCategoryOperation) {
     this.longCategoryOperation = longCategoryOperation;
   }
 
@@ -92,7 +92,7 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     return this.floatCategoryOperation;
   }
 
-  public void setFloatCategoryOperation(FloatBooleanComparison floatCategoryOperation) {
+  public void setFloatCategoryOperation(final FloatBooleanComparison floatCategoryOperation) {
     this.floatCategoryOperation = floatCategoryOperation;
   }
 
@@ -100,7 +100,7 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     return this.doubleCategoryOperation;
   }
 
-  public void setDoubleCategoryOperation(DoubleBooleanComparison doubleCategoryOperation) {
+  public void setDoubleCategoryOperation(final DoubleBooleanComparison doubleCategoryOperation) {
     this.doubleCategoryOperation = doubleCategoryOperation;
   }
 
@@ -108,7 +108,7 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     return this.bigIntegerCategoryOperation;
   }
 
-  public void setBigIntegerCategoryOperation(BigIntegerBooleanComparison bigIntegerCategoryOperation) {
+  public void setBigIntegerCategoryOperation(final BigIntegerBooleanComparison bigIntegerCategoryOperation) {
     this.bigIntegerCategoryOperation = bigIntegerCategoryOperation;
   }
 
@@ -116,7 +116,7 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     return this.bigDecimalCategoryOperation;
   }
 
-  public void setBigDecimalCategoryOperation(BigDecimalBooleanComparison bigDecimalCategoryOperation) {
+  public void setBigDecimalCategoryOperation(final BigDecimalBooleanComparison bigDecimalCategoryOperation) {
     this.bigDecimalCategoryOperation = bigDecimalCategoryOperation;
   }
 
@@ -124,16 +124,16 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     return this.categoryOperationMap;
   }
 
-  public void setCategoryOperationMap(Map<MetaClass, BooleanBinaryComparison> categoryOperationMap) {
+  public void setCategoryOperationMap(final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap) {
     this.categoryOperationMap = categoryOperationMap;
   }
 
-  public void pushBehaviour(Behaviour behaviour) {
+  public void pushBehaviour(final Behaviour behaviour) {
     // TODO Auto-generated method stub
   }
 
   public void popBehaviour() {
-    // TODO Auto-generated method stub   
+    // TODO Auto-generated method stub
   }
 
   public boolean applyBoolean(final Object lhs, final Object rhs) {

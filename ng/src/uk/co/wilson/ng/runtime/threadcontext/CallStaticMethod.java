@@ -18,7 +18,7 @@ import ng.runtime.threadcontext.ThreadContext;
 public class CallStaticMethod implements StaticMethodCall {
   private Map<MetaClass, DoStaticMethodCall> categoryStaticMethodCallMap = null;
 
-  private Stack<Map<MetaClass, DoStaticMethodCall>> categoryStaticMethodCallMapStack = new Stack<Map<MetaClass, DoStaticMethodCall>>();
+  private final Stack<Map<MetaClass, DoStaticMethodCall>> categoryStaticMethodCallMapStack = new Stack<Map<MetaClass, DoStaticMethodCall>>();
 
   private final ThreadContext tc;
 
@@ -26,7 +26,7 @@ public class CallStaticMethod implements StaticMethodCall {
     return this.categoryStaticMethodCallMap;
   }
 
-  public void setCategoryStaticMethodCallMap(Map<MetaClass, DoStaticMethodCall> categoryStaticMethodCallMap) {
+  public void setCategoryStaticMethodCallMap(final Map<MetaClass, DoStaticMethodCall> categoryStaticMethodCallMap) {
     this.categoryStaticMethodCallMap = categoryStaticMethodCallMap;
   }
 

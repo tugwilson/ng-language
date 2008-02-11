@@ -106,9 +106,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.add;
   }
 
-  public FloatBinaryArithmeticOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation add(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedAdd == null) {
         return this.add;
@@ -132,9 +132,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.subtract;
   }
 
-  public FloatBinaryArithmeticOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation subtract(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedSubtract == null) {
         return this.subtract;
@@ -158,9 +158,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.multiply;
   }
 
-  public FloatBinaryArithmeticOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation multiply(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedMultiply == null) {
         return this.multiply;
@@ -184,9 +184,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.divide;
   }
 
-  public FloatBinaryArithmeticOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation divide(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedDivide == null) {
         return this.divide;
@@ -210,9 +210,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.modulo;
   }
 
-  public FloatBinaryArithmeticOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation modulo(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedModulo == null) {
         return this.modulo;
@@ -236,9 +236,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.power;
   }
 
-  public FloatBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation power(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedPower == null) {
         return this.power;
@@ -262,9 +262,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.remainderDivide;
   }
 
-  public FloatBinaryArithmeticOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation remainderDivide(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
         return this.remainderDivide;
@@ -288,9 +288,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.equals;
   }
 
-  public FloatBooleanComparison equals(BooleanComparison booleanComparison) {
+  public FloatBooleanComparison equals(final BooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedEquals == null) {
         return this.equals;
@@ -314,9 +314,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.notEquals;
   }
 
-  public FloatBooleanComparison notEquals(BooleanComparison booleanComparison) {
+  public FloatBooleanComparison notEquals(final BooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedNotEquals == null) {
         return this.notEquals;
@@ -340,9 +340,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.lessThan;
   }
 
-  public FloatBooleanComparison lessThan(BooleanComparison booleanComparison) {
+  public FloatBooleanComparison lessThan(final BooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedLessThan == null) {
         return this.lessThan;
@@ -366,9 +366,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.greaterThan;
   }
 
-  public FloatBooleanComparison greaterThan(BooleanComparison booleanComparison) {
+  public FloatBooleanComparison greaterThan(final BooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
         return this.greaterThan;
@@ -392,9 +392,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.lessThanOrEquals;
   }
 
-  public FloatBooleanComparison lessThanOrEquals(BooleanComparison booleanComparison) {
+  public FloatBooleanComparison lessThanOrEquals(final BooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
         return this.lessThanOrEquals;
@@ -418,9 +418,9 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.greaterThanOrEquals;
   }
 
-  public FloatBooleanComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
+  public FloatBooleanComparison greaterThanOrEquals(final BooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
-    
+
     if (floatCategoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {
         return this.greaterThanOrEquals;

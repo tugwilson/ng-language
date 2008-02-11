@@ -35,45 +35,12 @@ public class MetaClassImpl extends BaseMetaClass {
   protected volatile BooleanBinaryComparison modifiedLessThanOrEquals = null;
   protected volatile BooleanBinaryComparison modifiedGreaterThanOrEquals = null;
 
-  protected final Conversion convert;
-
-  protected final ArithmeticBinaryOperation add;
-  protected final ArithmeticBinaryOperation subtract;
-  protected final ArithmeticBinaryOperation multiply;
-  protected final ArithmeticBinaryOperation divide;
-  protected final ArithmeticBinaryOperation modulo;
-  protected final ArithmeticBinaryOperation remainderDivide;
-  protected final ArithmeticBinaryOperation power;
-
-  protected final BooleanBinaryComparison equals;
-  protected final BooleanBinaryComparison notEquals;
-  protected final BooleanBinaryComparison lessThan;
-  protected final BooleanBinaryComparison greaterThan;
-  protected final BooleanBinaryComparison lessThanOrEquals;
-  protected final BooleanBinaryComparison greaterThanOrEquals;
-
   /**
    * @param theClass
    */
   public MetaClassImpl(final Class<?> theClass) {
     super(theClass);
     // TODO: introspect the class and set up the operations
-    this.convert = ConversionNoopImpl.instance;
-
-    this.add = ArithmeticBinaryOperationNoopImpl.instance;
-    this.subtract = ArithmeticBinaryOperationNoopImpl.instance;
-    this.multiply = ArithmeticBinaryOperationNoopImpl.instance;
-    this.divide = ArithmeticBinaryOperationNoopImpl.instance;
-    this.modulo = ArithmeticBinaryOperationNoopImpl.instance;
-    this.remainderDivide = ArithmeticBinaryOperationNoopImpl.instance;
-    this.power = ArithmeticBinaryOperationNoopImpl.instance;
-
-    this.equals = BooleanBinaryComparisonNoopImpl.instance;
-    this.notEquals = BooleanBinaryComparisonNoopImpl.instance;
-    this.lessThan = BooleanBinaryComparisonNoopImpl.instance;
-    this.greaterThan = BooleanBinaryComparisonNoopImpl.instance;
-    this.lessThanOrEquals = BooleanBinaryComparisonNoopImpl.instance;
-    this.greaterThanOrEquals = BooleanBinaryComparisonNoopImpl.instance;
   }
 
   public void modifyConvert(final Conversion modifiedConvert) {
@@ -81,12 +48,12 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public Conversion getOriginalConvert() {
-    return this.convert;
+    return ConversionNoopImpl.instance;
   }
 
   public Conversion convert() {
     if (this.modifiedConvert == null) {
-      return this.convert;
+      return getOriginalConvert();
     } else {
       return this.modifiedConvert;
     }
@@ -97,22 +64,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation getOriginalAdd() {
-    return this.add;
+    return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation add(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-      
+
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
     }
-    
+
     if (this.modifiedAdd == null) {
-      return this.add;
+      return getOriginalAdd();
     } else {
       return this.modifiedAdd;
     }
@@ -123,22 +90,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation getOriginalSubtract() {
-    return this.subtract;
+    return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation subtract(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-      
+
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
     }
-    
+
     if (this.modifiedSubtract == null) {
-      return this.subtract;
+      return getOriginalSubtract();
     } else {
       return this.modifiedSubtract;
     }
@@ -149,22 +116,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation getOriginalMultiply() {
-    return this.multiply;
+    return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation multiply(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-      
+
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
     }
-    
+
     if (this.modifiedMultiply == null) {
-      return this.multiply;
+      return getOriginalMultiply();
     } else {
       return this.modifiedMultiply;
     }
@@ -175,22 +142,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation getOriginalDivide() {
-    return this.divide;
+    return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation divide(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-      
+
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
     }
-    
+
     if (this.modifiedDivide == null) {
-      return this.divide;
+      return getOriginalDivide();
     } else {
       return this.modifiedDivide;
     }
@@ -201,22 +168,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation getOriginalModulo() {
-    return this.modulo;
+    return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation modulo(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-      
+
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
     }
-    
+
     if (this.modifiedModulo == null) {
-      return this.modulo;
+      return getOriginalModulo();
     } else {
       return this.modifiedModulo;
     }
@@ -227,22 +194,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation getOriginalRemainderDivide() {
-    return this.remainderDivide;
+    return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation remainderDivide(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-      
+
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
     }
-    
+
     if (this.modifiedRemainderDivide == null) {
-      return this.remainderDivide;
+      return getOriginalRemainderDivide();
     } else {
       return this.modifiedRemainderDivide;
     }
@@ -253,22 +220,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ArithmeticBinaryOperation getOriginalPower() {
-    return this.power;
+    return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation power(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<MetaClass, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
     final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
-      
+
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
       }
     }
-    
+
     if (this.modifiedPower == null) {
-      return this.power;
+      return getOriginalPower();
     } else {
       return this.modifiedPower;
     }
@@ -279,22 +246,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison getOriginalEquals() {
-    return this.equals;
+    return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison equals(BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison equals(final BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
-    
+
     if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
-    
+
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
     }
 
     if (this.modifiedEquals == null) {
-      return this.equals;
+      return getOriginalEquals();
     } else {
       return this.modifiedEquals;
     }
@@ -305,22 +272,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison getOriginalNotEquals() {
-    return this.notEquals;
+    return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison notEquals(BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison notEquals(final BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
-    
+
     if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
-    
+
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
     }
 
     if (this.modifiedNotEquals == null) {
-      return this.notEquals;
+      return getOriginalNotEquals();
     } else {
       return this.modifiedNotEquals;
     }
@@ -331,22 +298,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison getOriginalLessThan() {
-    return this.lessThan;
+    return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison lessThan(BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison lessThan(final BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
-    
+
     if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
-    
+
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
     }
 
     if (this.modifiedLessThan == null) {
-      return this.lessThan;
+      return getOriginalLessThan();
     } else {
       return this.modifiedLessThan;
     }
@@ -357,22 +324,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison getOriginalGreaterThan() {
-    return this.greaterThan;
+    return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison greaterThan(BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison greaterThan(final BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
-    
+
     if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
-    
+
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
     }
 
     if (this.modifiedGreaterThan == null) {
-      return this.greaterThan;
+      return getOriginalGreaterThan();
     } else {
       return this.modifiedGreaterThan;
     }
@@ -383,22 +350,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison getOriginalLessThanOrEquals() {
-    return this.lessThanOrEquals;
+    return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison lessThanOrEquals(BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison lessThanOrEquals(final BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
-    
+
     if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
-    
+
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
     }
 
     if (this.modifiedLessThanOrEquals == null) {
-      return this.lessThanOrEquals;
+      return getOriginalLessThanOrEquals();
     } else {
       return this.modifiedLessThanOrEquals;
     }
@@ -409,22 +376,22 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison getOriginalGreaterThanOrEquals() {
-    return this.greaterThanOrEquals;
+    return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison greaterThanOrEquals(final BooleanComparison booleanComparison) {
   final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
-    
+
     if (categoryOperationMap != null) {
     final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
-    
+
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
       }
     }
 
     if (this.modifiedGreaterThanOrEquals == null) {
-      return this.greaterThanOrEquals;
+      return getOriginalGreaterThanOrEquals();
     } else {
       return this.modifiedGreaterThanOrEquals;
     }

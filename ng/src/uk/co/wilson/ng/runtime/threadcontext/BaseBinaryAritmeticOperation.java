@@ -43,13 +43,13 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
 
   private Map<MetaClass, ArithmeticBinaryOperation> categoryBinaryOperationMap = null;
 
-  private Stack<Map<MetaClass, ArithmeticBinaryOperation>> categoryBinaryOperationMapStack = new Stack<Map<MetaClass, ArithmeticBinaryOperation>>();
+  private final Stack<Map<MetaClass, ArithmeticBinaryOperation>> categoryBinaryOperationMapStack = new Stack<Map<MetaClass, ArithmeticBinaryOperation>>();
 
   public CharBinaryArithmeticOperation getCharCategoryOperation() {
     return this.charCategoryOperation;
   }
 
-  public void setCharCategoryOperation(CharBinaryArithmeticOperation charCategoryOperation) {
+  public void setCharCategoryOperation(final CharBinaryArithmeticOperation charCategoryOperation) {
     this.charCategoryOperation = charCategoryOperation;
   }
 
@@ -57,7 +57,7 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
     return this.byteCategoryOperation;
   }
 
-  public void setByteCategoryOperation(ByteBinaryArithmeticOperation byteCategoryOperation) {
+  public void setByteCategoryOperation(final ByteBinaryArithmeticOperation byteCategoryOperation) {
     this.byteCategoryOperation = byteCategoryOperation;
   }
 
@@ -65,7 +65,7 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
     return this.shortCategoryOperation;
   }
 
-  public void setShortCategoryOperation(ShortBinaryArithmeticOperation shortCategoryOperation) {
+  public void setShortCategoryOperation(final ShortBinaryArithmeticOperation shortCategoryOperation) {
     this.shortCategoryOperation = shortCategoryOperation;
   }
 
@@ -73,7 +73,7 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
     return this.intCategoryOperation;
   }
 
-  public void setIntCategoryOperation(IntBinaryArithmeticOperation intCategoryOperation) {
+  public void setIntCategoryOperation(final IntBinaryArithmeticOperation intCategoryOperation) {
     this.intCategoryOperation = intCategoryOperation;
   }
 
@@ -81,7 +81,7 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
     return this.longCategoryOperation;
   }
 
-  public void setLongCategoryOperation(LongBinaryArithmeticOperation longCategoryOperation) {
+  public void setLongCategoryOperation(final LongBinaryArithmeticOperation longCategoryOperation) {
     this.longCategoryOperation = longCategoryOperation;
   }
 
@@ -89,7 +89,7 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
     return this.floatCategoryOperation;
   }
 
-  public void setFloatCategoryOperation(FloatBinaryArithmeticOperation floatCategoryOperation) {
+  public void setFloatCategoryOperation(final FloatBinaryArithmeticOperation floatCategoryOperation) {
     this.floatCategoryOperation = floatCategoryOperation;
   }
 
@@ -97,7 +97,7 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
     return this.doubleCategoryOperation;
   }
 
-  public void setDoubleCategoryOperation(DoubleBinaryArithmeticOperation doubleCategoryOperation) {
+  public void setDoubleCategoryOperation(final DoubleBinaryArithmeticOperation doubleCategoryOperation) {
     this.doubleCategoryOperation = doubleCategoryOperation;
   }
 
@@ -105,7 +105,7 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
     return this.bigIntegerCategoryOperation;
   }
 
-  public void setBigIntegerCategoryOperation(BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation) {
+  public void setBigIntegerCategoryOperation(final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation) {
     this.bigIntegerCategoryOperation = bigIntegerCategoryOperation;
   }
 
@@ -113,7 +113,7 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
     return this.bigDecimalCategoryOperation;
   }
 
-  public void setBigDecimalCategoryOperation(BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation) {
+  public void setBigDecimalCategoryOperation(final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation) {
     this.bigDecimalCategoryOperation = bigDecimalCategoryOperation;
   }
 
@@ -121,15 +121,15 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
     return this.categoryBinaryOperationMap;
   }
 
-  public void setCategoryBinaryOperationMap(Map<MetaClass, ArithmeticBinaryOperation> categoryBinaryOperationMap) {
+  public void setCategoryBinaryOperationMap(final Map<MetaClass, ArithmeticBinaryOperation> categoryBinaryOperationMap) {
     this.categoryBinaryOperationMap = categoryBinaryOperationMap;
   }
 
-  public void pushBehaviour(Behaviour category) {
-    // TODO Auto-generated method stub  
+  public void pushBehaviour(final Behaviour category) {
+    // TODO Auto-generated method stub
   }
 
   public void popBehaviour() {
-    // TODO Auto-generated method stub   
+    // TODO Auto-generated method stub
   }
 }

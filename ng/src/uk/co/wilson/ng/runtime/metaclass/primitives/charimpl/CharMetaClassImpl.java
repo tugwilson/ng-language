@@ -106,9 +106,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.add;
   }
 
-  public CharBinaryArithmeticOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public CharBinaryArithmeticOperation add(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedAdd == null) {
         return this.add;
@@ -132,9 +132,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.subtract;
   }
 
-  public CharBinaryArithmeticOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public CharBinaryArithmeticOperation subtract(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedSubtract == null) {
         return this.subtract;
@@ -158,9 +158,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.multiply;
   }
 
-  public CharBinaryArithmeticOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public CharBinaryArithmeticOperation multiply(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedMultiply == null) {
         return this.multiply;
@@ -184,9 +184,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.divide;
   }
 
-  public CharBinaryArithmeticOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public CharBinaryArithmeticOperation divide(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedDivide == null) {
         return this.divide;
@@ -210,9 +210,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.modulo;
   }
 
-  public CharBinaryArithmeticOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public CharBinaryArithmeticOperation modulo(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedModulo == null) {
         return this.modulo;
@@ -236,9 +236,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.power;
   }
 
-  public CharBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public CharBinaryArithmeticOperation power(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedPower == null) {
         return this.power;
@@ -262,9 +262,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.remainderDivide;
   }
 
-  public CharBinaryArithmeticOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public CharBinaryArithmeticOperation remainderDivide(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
         return this.remainderDivide;
@@ -288,9 +288,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.equals;
   }
 
-  public CharBooleanComparison equals(BooleanComparison booleanComparison) {
+  public CharBooleanComparison equals(final BooleanComparison booleanComparison) {
   final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedEquals == null) {
         return this.equals;
@@ -314,9 +314,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.notEquals;
   }
 
-  public CharBooleanComparison notEquals(BooleanComparison booleanComparison) {
+  public CharBooleanComparison notEquals(final BooleanComparison booleanComparison) {
   final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedNotEquals == null) {
         return this.notEquals;
@@ -340,9 +340,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.lessThan;
   }
 
-  public CharBooleanComparison lessThan(BooleanComparison booleanComparison) {
+  public CharBooleanComparison lessThan(final BooleanComparison booleanComparison) {
   final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedLessThan == null) {
         return this.lessThan;
@@ -366,9 +366,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.greaterThan;
   }
 
-  public CharBooleanComparison greaterThan(BooleanComparison booleanComparison) {
+  public CharBooleanComparison greaterThan(final BooleanComparison booleanComparison) {
   final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
         return this.greaterThan;
@@ -392,9 +392,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.lessThanOrEquals;
   }
 
-  public CharBooleanComparison lessThanOrEquals(BooleanComparison booleanComparison) {
+  public CharBooleanComparison lessThanOrEquals(final BooleanComparison booleanComparison) {
   final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
         return this.lessThanOrEquals;
@@ -418,9 +418,9 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.greaterThanOrEquals;
   }
 
-  public CharBooleanComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
+  public CharBooleanComparison greaterThanOrEquals(final BooleanComparison booleanComparison) {
   final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
-    
+
     if (charCategoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {
         return this.greaterThanOrEquals;
