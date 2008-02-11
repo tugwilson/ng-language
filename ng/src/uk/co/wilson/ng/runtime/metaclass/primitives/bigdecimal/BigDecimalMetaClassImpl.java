@@ -8,13 +8,6 @@ import ng.runtime.metaclass.Conversion;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperationWrapper;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBooleanComparisonWrapper;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalConversion;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalConversionWrapper;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalMetaClass;
 
 public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimalMetaClass {
   private volatile BigDecimalConversion modifiedConvert = null;

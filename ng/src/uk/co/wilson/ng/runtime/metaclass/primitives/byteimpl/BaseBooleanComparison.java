@@ -5,7 +5,6 @@ import java.math.BigInteger;
 
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBooleanComparison;
 
 abstract class BaseBooleanComparison extends BaseBinaryOperation implements ByteBooleanComparison {
   public Object doApply(final ThreadContext tc, final char lhs, final Object rhs) {

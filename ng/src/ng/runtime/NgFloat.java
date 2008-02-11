@@ -2,7 +2,7 @@ package ng.runtime;
 
 import ng.lang.NgObject;
 import ng.runtime.metaclass.MetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.FloatMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClassImpl;
 
 public class NgFloat extends NgObject {

@@ -10,9 +10,19 @@ import ng.runtime.NgLong;
 import ng.runtime.NgShort;
 import ng.runtime.metaclass.MetaClass;
 import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.*;
+import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl.BooleanMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl;
 
 

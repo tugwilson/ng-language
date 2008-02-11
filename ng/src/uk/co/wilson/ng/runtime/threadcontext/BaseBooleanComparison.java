@@ -10,15 +10,15 @@ import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.IntBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.LongBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.ShortBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortBooleanComparison;
 
 
 public abstract class BaseBooleanComparison extends BaseBinaryOperation implements BooleanComparison {

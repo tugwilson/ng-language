@@ -6,13 +6,6 @@ import ng.runtime.metaclass.Conversion;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharBinaryArithmeticOperationWrapper;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharBooleanComparisonWrapper;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharConversion;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharConversionWrapper;
-import uk.co.wilson.ng.runtime.metaclass.primitives.CharMetaClass;
 
 public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
 
