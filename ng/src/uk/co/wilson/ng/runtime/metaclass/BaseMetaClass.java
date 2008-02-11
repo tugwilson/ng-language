@@ -1,8 +1,11 @@
 package uk.co.wilson.ng.runtime.metaclass;
 
+import java.util.Map;
+
 import ng.runtime.metaclass.DoStaticMethodCall;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.Misc;
+import ng.runtime.threadcontext.StaticMethodCall;
 
 public abstract class BaseMetaClass implements MetaClass {
   private final Misc modifiedMisc = null;
@@ -40,14 +43,23 @@ public abstract class BaseMetaClass implements MetaClass {
     }
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.MetaClass#staticMethodCall()
-   */
-  public DoStaticMethodCall staticMethodCall() {
-    if (this.modifiedStaticMethodCall == null) {
-      return this.staticMethodCall;
+  public DoStaticMethodCall staticMethodCall(StaticMethodCall staticMethodCall) {
+  final Map<MetaClass, DoStaticMethodCall> categoryStaticMethodCallMap = staticMethodCall.getCategoryStaticMethodCallMap();
+  
+    if (categoryStaticMethodCallMap == null) {
+      if (this.modifiedStaticMethodCall == null) {
+        return this.staticMethodCall;
+      } else {
+        return this.modifiedStaticMethodCall;
+      }
     } else {
-      return this.modifiedStaticMethodCall;
+    final DoStaticMethodCall categoryStaticMethodCall = categoryStaticMethodCallMap.get(this);
+    
+      if (categoryStaticMethodCall == null) {
+        return this.staticMethodCall;
+      } else {
+        return categoryStaticMethodCall;
+      }
     }
   }
 }

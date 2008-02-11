@@ -3,11 +3,11 @@ package uk.co.wilson.ng.runtime.metaclass.primitives;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BinaryArithmeticOperation;
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
 
-public interface CharBinaryArithmeticOperation extends BinaryArithmeticOperation, CharBinaryOperation {
+public interface CharBinaryArithmeticOperation extends ArithmeticBinaryOperation, CharBinaryOperation {
   int doIntApply(ThreadContext tc, char lhs, char rhs) throws NotPerformed;
   int doIntApply(ThreadContext tc, char lhs, byte rhs) throws NotPerformed;
   int doIntApply(ThreadContext tc, char lhs, short rhs) throws NotPerformed;

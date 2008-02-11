@@ -1,8 +1,10 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 
-import ng.runtime.metaclass.BinaryArithmeticOperation;
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.threadcontext.BinaryArithmeticOperation;
+import ng.runtime.threadcontext.BooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleBinaryArithmeticOperationWrapper;
@@ -51,7 +53,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     super(double.class);
   }
 
-  private DoubleBinaryArithmeticOperation fixOperationType(final BinaryArithmeticOperation modifiedOperation) {
+  private DoubleBinaryArithmeticOperation fixOperationType(final ArithmeticBinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof DoubleBinaryArithmeticOperation) {
       return( DoubleBinaryArithmeticOperation) modifiedOperation;
     }
@@ -91,7 +93,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     }
   }
 
-  public void modifyAdd(final BinaryArithmeticOperation modifiedAdd) {
+  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
     modifyAdd(fixOperationType(modifiedAdd));
   }
 
@@ -103,15 +105,21 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.add;
   }
 
-  public DoubleBinaryArithmeticOperation add() {
-    if (this.modifiedAdd == null) {
-      return this.add;
+  public DoubleBinaryArithmeticOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedAdd == null) {
+        return this.add;
+      } else {
+        return this.modifiedAdd;
+      }
     } else {
-      return this.modifiedAdd;
+      return doubleCategoryOperation;
     }
   }
 
-  public void modifySubtract(final BinaryArithmeticOperation modifiedSubtract) {
+  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
     modifySubtract(fixOperationType(modifiedSubtract));
   }
 
@@ -123,15 +131,21 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.subtract;
   }
 
-  public DoubleBinaryArithmeticOperation subtract() {
-    if (this.modifiedSubtract == null) {
-      return this.subtract;
+  public DoubleBinaryArithmeticOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedSubtract == null) {
+        return this.subtract;
+      } else {
+        return this.modifiedSubtract;
+      }
     } else {
-      return this.modifiedSubtract;
+      return doubleCategoryOperation;
     }
   }
 
-  public void modifyMultiply(final BinaryArithmeticOperation modifiedMultiply) {
+  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
     modifyMultiply(fixOperationType(modifiedMultiply));
   }
 
@@ -143,15 +157,21 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.multiply;
   }
 
-  public DoubleBinaryArithmeticOperation multiply() {
-    if (this.modifiedMultiply == null) {
-      return this.multiply;
+  public DoubleBinaryArithmeticOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedMultiply == null) {
+        return this.multiply;
+      } else {
+        return this.modifiedMultiply;
+      }
     } else {
-      return this.modifiedMultiply;
+      return doubleCategoryOperation;
     }
   }
 
-  public void modifyDivide(final BinaryArithmeticOperation modifiedDivide) {
+  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
     modifyDivide(fixOperationType(modifiedDivide));
   }
 
@@ -163,15 +183,21 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.divide;
   }
 
-  public DoubleBinaryArithmeticOperation divide() {
-    if (this.modifiedDivide == null) {
-      return this.divide;
+  public DoubleBinaryArithmeticOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedDivide == null) {
+        return this.divide;
+      } else {
+        return this.modifiedDivide;
+      }
     } else {
-      return this.modifiedDivide;
+      return doubleCategoryOperation;
     }
   }
 
-  public void modifyModulo(final BinaryArithmeticOperation modifiedModulo) {
+  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
     modifyModulo(fixOperationType(modifiedModulo));
   }
 
@@ -183,15 +209,21 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.modulo;
   }
 
-  public DoubleBinaryArithmeticOperation modulo() {
-    if (this.modifiedModulo == null) {
-      return this.modulo;
+  public DoubleBinaryArithmeticOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedModulo == null) {
+        return this.modulo;
+      } else {
+        return this.modifiedModulo;
+      }
     } else {
-      return this.modifiedModulo;
+      return doubleCategoryOperation;
     }
   }
 
-  public void modifyPower(final BinaryArithmeticOperation modifiedPower) {
+  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
     modifyPower(fixOperationType(modifiedPower));
   }
 
@@ -203,15 +235,21 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.power;
   }
 
-  public DoubleBinaryArithmeticOperation power() {
-    if (this.modifiedPower == null) {
-      return this.power;
+  public DoubleBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedPower == null) {
+        return this.power;
+      } else {
+        return this.modifiedPower;
+      }
     } else {
-      return this.modifiedPower;
+      return doubleCategoryOperation;
     }
   }
 
-  public void modifyRemainderDivide(final BinaryArithmeticOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
     modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
   }
 
@@ -223,11 +261,17 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.remainderDivide;
   }
 
-  public DoubleBinaryArithmeticOperation remainderDivide() {
-    if (this.modifiedRemainderDivide == null) {
-      return this.remainderDivide;
+  public DoubleBinaryArithmeticOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedRemainderDivide == null) {
+        return this.remainderDivide;
+      } else {
+        return this.modifiedRemainderDivide;
+      }
     } else {
-      return this.modifiedRemainderDivide;
+      return doubleCategoryOperation;
     }
   }
 
@@ -243,11 +287,17 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.equals;
   }
 
-  public DoubleBooleanComparison equals() {
-    if (this.modifiedEquals == null) {
-      return this.equals;
+  public DoubleBooleanComparison equals(BooleanComparison booleanComparison) {
+  final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedEquals == null) {
+        return this.equals;
+      } else {
+        return this.modifiedEquals;
+      }
     } else {
-      return this.modifiedEquals;
+      return doubleCategoryOperation;
     }
   }
 
@@ -263,11 +313,17 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.notEquals;
   }
 
-  public DoubleBooleanComparison notEquals() {
-    if (this.modifiedNotEquals == null) {
-      return this.notEquals;
+  public DoubleBooleanComparison notEquals(BooleanComparison booleanComparison) {
+  final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedNotEquals == null) {
+        return this.notEquals;
+      } else {
+        return this.modifiedNotEquals;
+      }
     } else {
-      return this.modifiedNotEquals;
+      return doubleCategoryOperation;
     }
   }
 
@@ -283,11 +339,17 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.lessThan;
   }
 
-  public DoubleBooleanComparison lessThan() {
-    if (this.modifiedLessThan == null) {
-      return this.lessThan;
+  public DoubleBooleanComparison lessThan(BooleanComparison booleanComparison) {
+  final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedLessThan == null) {
+        return this.lessThan;
+      } else {
+        return this.modifiedLessThan;
+      }
     } else {
-      return this.modifiedLessThan;
+      return doubleCategoryOperation;
     }
   }
 
@@ -303,11 +365,17 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.greaterThan;
   }
 
-  public DoubleBooleanComparison greaterThan() {
-    if (this.modifiedGreaterThan == null) {
-      return this.greaterThan;
+  public DoubleBooleanComparison greaterThan(BooleanComparison booleanComparison) {
+  final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedGreaterThan == null) {
+        return this.greaterThan;
+      } else {
+        return this.modifiedGreaterThan;
+      }
     } else {
-      return this.modifiedGreaterThan;
+      return doubleCategoryOperation;
     }
   }
 
@@ -323,11 +391,17 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.lessThanOrEquals;
   }
 
-  public DoubleBooleanComparison lessThanOrEquals() {
-    if (this.modifiedLessThanOrEquals == null) {
-      return this.lessThanOrEquals;
+  public DoubleBooleanComparison lessThanOrEquals(BooleanComparison booleanComparison) {
+  final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedLessThanOrEquals == null) {
+        return this.lessThanOrEquals;
+      } else {
+        return this.modifiedLessThanOrEquals;
+      }
     } else {
-      return this.modifiedLessThanOrEquals;
+      return doubleCategoryOperation;
     }
   }
 
@@ -343,11 +417,17 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.greaterThanOrEquals;
   }
 
-  public DoubleBooleanComparison greaterThanOrEquals() {
-    if (this.modifiedGreaterThanOrEquals == null) {
-      return this.greaterThanOrEquals;
+  public DoubleBooleanComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
+  final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
+    
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedGreaterThanOrEquals == null) {
+        return this.greaterThanOrEquals;
+      } else {
+        return this.modifiedGreaterThanOrEquals;
+      }
     } else {
-      return this.modifiedGreaterThanOrEquals;
+      return doubleCategoryOperation;
     }
   }
 }

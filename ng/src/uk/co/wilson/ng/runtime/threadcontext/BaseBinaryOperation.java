@@ -6,7 +6,7 @@ import java.math.BigInteger;
 import ng.runtime.threadcontext.BinaryOperation;
 import ng.runtime.threadcontext.ThreadContext;
 
-public abstract class BaseBinaryOperation extends BaseOperation implements BinaryOperation{
+public abstract class BaseBinaryOperation extends BaseOperation implements BinaryOperation {
 
   protected BaseBinaryOperation(final ThreadContext tc) {
     super(tc);

@@ -1,8 +1,10 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 
-import ng.runtime.metaclass.BinaryArithmeticOperation;
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.threadcontext.BinaryArithmeticOperation;
+import ng.runtime.threadcontext.BooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBinaryArithmeticOperationWrapper;
@@ -52,7 +54,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     super(float.class);
   }
 
-  private FloatBinaryArithmeticOperation fixOperationType(final BinaryArithmeticOperation modifiedOperation) {
+  private FloatBinaryArithmeticOperation fixOperationType(final ArithmeticBinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof FloatBinaryArithmeticOperation) {
       return( FloatBinaryArithmeticOperation) modifiedOperation;
     }
@@ -92,7 +94,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     }
   }
 
-  public void modifyAdd(final BinaryArithmeticOperation modifiedAdd) {
+  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
     modifyAdd(fixOperationType(modifiedAdd));
   }
 
@@ -104,15 +106,21 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.add;
   }
 
-  public FloatBinaryArithmeticOperation add() {
-    if (this.modifiedAdd == null) {
-      return this.add;
+  public FloatBinaryArithmeticOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedAdd == null) {
+        return this.add;
+      } else {
+        return this.modifiedAdd;
+      }
     } else {
-      return this.modifiedAdd;
+      return floatCategoryOperation;
     }
   }
 
-  public void modifySubtract(final BinaryArithmeticOperation modifiedSubtract) {
+  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
     modifySubtract(fixOperationType(modifiedSubtract));
   }
 
@@ -124,15 +132,21 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.subtract;
   }
 
-  public FloatBinaryArithmeticOperation subtract() {
-    if (this.modifiedSubtract == null) {
-      return this.subtract;
+  public FloatBinaryArithmeticOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedSubtract == null) {
+        return this.subtract;
+      } else {
+        return this.modifiedSubtract;
+      }
     } else {
-      return this.modifiedSubtract;
+      return floatCategoryOperation;
     }
   }
 
-  public void modifyMultiply(final BinaryArithmeticOperation modifiedMultiply) {
+  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
     modifyMultiply(fixOperationType(modifiedMultiply));
   }
 
@@ -144,15 +158,21 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.multiply;
   }
 
-  public FloatBinaryArithmeticOperation multiply() {
-    if (this.modifiedMultiply == null) {
-      return this.multiply;
+  public FloatBinaryArithmeticOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedMultiply == null) {
+        return this.multiply;
+      } else {
+        return this.modifiedMultiply;
+      }
     } else {
-      return this.modifiedMultiply;
+      return floatCategoryOperation;
     }
   }
 
-  public void modifyDivide(final BinaryArithmeticOperation modifiedDivide) {
+  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
     modifyDivide(fixOperationType(modifiedDivide));
   }
 
@@ -164,15 +184,21 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.divide;
   }
 
-  public FloatBinaryArithmeticOperation divide() {
-    if (this.modifiedDivide == null) {
-      return this.divide;
+  public FloatBinaryArithmeticOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedDivide == null) {
+        return this.divide;
+      } else {
+        return this.modifiedDivide;
+      }
     } else {
-      return this.modifiedDivide;
+      return floatCategoryOperation;
     }
   }
 
-  public void modifyModulo(final BinaryArithmeticOperation modifiedModulo) {
+  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
     modifyModulo(fixOperationType(modifiedModulo));
   }
 
@@ -184,15 +210,21 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.modulo;
   }
 
-  public FloatBinaryArithmeticOperation modulo() {
-    if (this.modifiedModulo == null) {
-      return this.modulo;
+  public FloatBinaryArithmeticOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedModulo == null) {
+        return this.modulo;
+      } else {
+        return this.modifiedModulo;
+      }
     } else {
-      return this.modifiedModulo;
+      return floatCategoryOperation;
     }
   }
 
-  public void modifyPower(final BinaryArithmeticOperation modifiedPower) {
+  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
     modifyPower(fixOperationType(modifiedPower));
   }
 
@@ -204,15 +236,21 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.power;
   }
 
-  public FloatBinaryArithmeticOperation power() {
-    if (this.modifiedPower == null) {
-      return this.power;
+  public FloatBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedPower == null) {
+        return this.power;
+      } else {
+        return this.modifiedPower;
+      }
     } else {
-      return this.modifiedPower;
+      return floatCategoryOperation;
     }
   }
 
-  public void modifyRemainderDivide(final BinaryArithmeticOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
     modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
   }
 
@@ -224,11 +262,17 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.remainderDivide;
   }
 
-  public FloatBinaryArithmeticOperation remainderDivide() {
-    if (this.modifiedRemainderDivide == null) {
-      return this.remainderDivide;
+  public FloatBinaryArithmeticOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedRemainderDivide == null) {
+        return this.remainderDivide;
+      } else {
+        return this.modifiedRemainderDivide;
+      }
     } else {
-      return this.modifiedRemainderDivide;
+      return floatCategoryOperation;
     }
   }
 
@@ -244,11 +288,17 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.equals;
   }
 
-  public FloatBooleanComparison equals() {
-    if (this.modifiedEquals == null) {
-      return this.equals;
+  public FloatBooleanComparison equals(BooleanComparison booleanComparison) {
+  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedEquals == null) {
+        return this.equals;
+      } else {
+        return this.modifiedEquals;
+      }
     } else {
-      return this.modifiedEquals;
+      return floatCategoryOperation;
     }
   }
 
@@ -264,11 +314,17 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.notEquals;
   }
 
-  public FloatBooleanComparison notEquals() {
-    if (this.modifiedNotEquals == null) {
-      return this.notEquals;
+  public FloatBooleanComparison notEquals(BooleanComparison booleanComparison) {
+  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedNotEquals == null) {
+        return this.notEquals;
+      } else {
+        return this.modifiedNotEquals;
+      }
     } else {
-      return this.modifiedNotEquals;
+      return floatCategoryOperation;
     }
   }
 
@@ -284,11 +340,17 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.lessThan;
   }
 
-  public FloatBooleanComparison lessThan() {
-    if (this.modifiedLessThan == null) {
-      return this.lessThan;
+  public FloatBooleanComparison lessThan(BooleanComparison booleanComparison) {
+  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedLessThan == null) {
+        return this.lessThan;
+      } else {
+        return this.modifiedLessThan;
+      }
     } else {
-      return this.modifiedLessThan;
+      return floatCategoryOperation;
     }
   }
 
@@ -304,11 +366,17 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.greaterThan;
   }
 
-  public FloatBooleanComparison greaterThan() {
-    if (this.modifiedGreaterThan == null) {
-      return this.greaterThan;
+  public FloatBooleanComparison greaterThan(BooleanComparison booleanComparison) {
+  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedGreaterThan == null) {
+        return this.greaterThan;
+      } else {
+        return this.modifiedGreaterThan;
+      }
     } else {
-      return this.modifiedGreaterThan;
+      return floatCategoryOperation;
     }
   }
 
@@ -324,11 +392,17 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.lessThanOrEquals;
   }
 
-  public FloatBooleanComparison lessThanOrEquals() {
-    if (this.modifiedLessThanOrEquals == null) {
-      return this.lessThanOrEquals;
+  public FloatBooleanComparison lessThanOrEquals(BooleanComparison booleanComparison) {
+  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedLessThanOrEquals == null) {
+        return this.lessThanOrEquals;
+      } else {
+        return this.modifiedLessThanOrEquals;
+      }
     } else {
-      return this.modifiedLessThanOrEquals;
+      return floatCategoryOperation;
     }
   }
 
@@ -344,11 +418,17 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.greaterThanOrEquals;
   }
 
-  public FloatBooleanComparison greaterThanOrEquals() {
-    if (this.modifiedGreaterThanOrEquals == null) {
-      return this.greaterThanOrEquals;
+  public FloatBooleanComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
+  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    
+    if (floatCategoryOperation == null) {
+      if (this.modifiedGreaterThanOrEquals == null) {
+        return this.greaterThanOrEquals;
+      } else {
+        return this.modifiedGreaterThanOrEquals;
+      }
     } else {
-      return this.modifiedGreaterThanOrEquals;
+      return floatCategoryOperation;
     }
   }
 }

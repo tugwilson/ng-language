@@ -3,9 +3,10 @@ package uk.co.wilson.ng.runtime.threadcontext;
 import java.util.Map;
 import java.util.Stack;
 
-import ng.runtime.metaclass.BinaryArithmeticOperation;
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.Behaviour;
+import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
@@ -16,34 +17,113 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBinaryArithmeticOperati
 import uk.co.wilson.ng.runtime.metaclass.primitives.IntBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.LongBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ShortBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.threadcontext.util.HashMapWithDefaultValue;
 
-public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation {
+public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation implements BinaryArithmeticOperation {
   protected BaseBinaryAritmeticOperation(final ThreadContext tc) {
     super(tc);
   }
 
-  protected CharBinaryArithmeticOperation charCategoryOperation = null;
+  private CharBinaryArithmeticOperation charCategoryOperation = null;
 
-  protected ByteBinaryArithmeticOperation byteCategoryOperation = null;
+  private ByteBinaryArithmeticOperation byteCategoryOperation = null;
 
-  protected ShortBinaryArithmeticOperation shortCategoryOperation = null;
+  private ShortBinaryArithmeticOperation shortCategoryOperation = null;
 
-  protected IntBinaryArithmeticOperation intCategoryOperation = null;
+  private IntBinaryArithmeticOperation intCategoryOperation = null;
 
-  protected LongBinaryArithmeticOperation longCategoryOperation = null;
+  private LongBinaryArithmeticOperation longCategoryOperation = null;
 
-  protected FloatBinaryArithmeticOperation floatCategoryOperation = null;
+  private FloatBinaryArithmeticOperation floatCategoryOperation = null;
 
-  protected DoubleBinaryArithmeticOperation doubleCategoryOperation = null;
+  private DoubleBinaryArithmeticOperation doubleCategoryOperation = null;
 
-  protected BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = null;
+  private BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = null;
 
-  protected BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = null;
+  private BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = null;
 
-  protected HashMapWithDefaultValue<MetaClass, BinaryArithmeticOperation> categoryBinaryOperationMap = null;
+  private Map<MetaClass, ArithmeticBinaryOperation> categoryBinaryOperationMap = null;
 
-  protected Stack<Map<MetaClass, BinaryArithmeticOperation>> categoryBinaryOperationMapStack = new Stack<Map<MetaClass, BinaryArithmeticOperation>>();
+  private Stack<Map<MetaClass, ArithmeticBinaryOperation>> categoryBinaryOperationMapStack = new Stack<Map<MetaClass, ArithmeticBinaryOperation>>();
+
+  public CharBinaryArithmeticOperation getCharCategoryOperation() {
+    return this.charCategoryOperation;
+  }
+
+  public void setCharCategoryOperation(CharBinaryArithmeticOperation charCategoryOperation) {
+    this.charCategoryOperation = charCategoryOperation;
+  }
+
+  public ByteBinaryArithmeticOperation getByteCategoryOperation() {
+    return this.byteCategoryOperation;
+  }
+
+  public void setByteCategoryOperation(ByteBinaryArithmeticOperation byteCategoryOperation) {
+    this.byteCategoryOperation = byteCategoryOperation;
+  }
+
+  public ShortBinaryArithmeticOperation getShortCategoryOperation() {
+    return this.shortCategoryOperation;
+  }
+
+  public void setShortCategoryOperation(ShortBinaryArithmeticOperation shortCategoryOperation) {
+    this.shortCategoryOperation = shortCategoryOperation;
+  }
+
+  public IntBinaryArithmeticOperation getIntCategoryOperation() {
+    return this.intCategoryOperation;
+  }
+
+  public void setIntCategoryOperation(IntBinaryArithmeticOperation intCategoryOperation) {
+    this.intCategoryOperation = intCategoryOperation;
+  }
+
+  public LongBinaryArithmeticOperation getLongCategoryOperation() {
+    return this.longCategoryOperation;
+  }
+
+  public void setLongCategoryOperation(LongBinaryArithmeticOperation longCategoryOperation) {
+    this.longCategoryOperation = longCategoryOperation;
+  }
+
+  public FloatBinaryArithmeticOperation getFloatCategoryOperation() {
+    return this.floatCategoryOperation;
+  }
+
+  public void setFloatCategoryOperation(FloatBinaryArithmeticOperation floatCategoryOperation) {
+    this.floatCategoryOperation = floatCategoryOperation;
+  }
+
+  public DoubleBinaryArithmeticOperation getDoubleCategoryOperation() {
+    return this.doubleCategoryOperation;
+  }
+
+  public void setDoubleCategoryOperation(DoubleBinaryArithmeticOperation doubleCategoryOperation) {
+    this.doubleCategoryOperation = doubleCategoryOperation;
+  }
+
+  public BigIntegerBinaryArithmeticOperation getBigIntegerCategoryOperation() {
+    return this.bigIntegerCategoryOperation;
+  }
+
+  public void setBigIntegerCategoryOperation(BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation) {
+    this.bigIntegerCategoryOperation = bigIntegerCategoryOperation;
+  }
+
+  public BigDecimalBinaryArithmeticOperation getBigDecimalCategoryOperation() {
+    return this.bigDecimalCategoryOperation;
+  }
+
+  public void setBigDecimalCategoryOperation(BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation) {
+    this.bigDecimalCategoryOperation = bigDecimalCategoryOperation;
+  }
+
+  public Map<MetaClass, ArithmeticBinaryOperation> getCategoryBinaryOperationMap() {
+    return this.categoryBinaryOperationMap;
+  }
+
+  public void setCategoryBinaryOperationMap(Map<MetaClass, ArithmeticBinaryOperation> categoryBinaryOperationMap) {
+    this.categoryBinaryOperationMap = categoryBinaryOperationMap;
+  }
 
   public void pushBehaviour(Behaviour category) {
     // TODO Auto-generated method stub  

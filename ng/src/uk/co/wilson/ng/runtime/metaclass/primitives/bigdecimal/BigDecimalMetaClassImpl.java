@@ -2,9 +2,11 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 
 import java.math.BigDecimal;
 
-import ng.runtime.metaclass.BinaryArithmeticOperation;
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.threadcontext.BinaryArithmeticOperation;
+import ng.runtime.threadcontext.BooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperationWrapper;
@@ -53,7 +55,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     super(BigDecimal.class);
   }
 
-  private BigDecimalBinaryArithmeticOperation fixOperationType(final BinaryArithmeticOperation modifiedOperation) {
+  private BigDecimalBinaryArithmeticOperation fixOperationType(final ArithmeticBinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof BigDecimalBinaryArithmeticOperation) {
       return( BigDecimalBinaryArithmeticOperation) modifiedOperation;
     }
@@ -93,7 +95,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     }
   }
 
-  public void modifyAdd(final BinaryArithmeticOperation modifiedAdd) {
+  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
     modifyAdd(fixOperationType(modifiedAdd));
   }
 
@@ -105,15 +107,21 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.add;
   }
 
-  public BigDecimalBinaryArithmeticOperation add() {
-    if (this.modifiedAdd == null) {
-      return this.add;
+  public BigDecimalBinaryArithmeticOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedAdd == null) {
+        return this.add;
+      } else {
+        return this.modifiedAdd;
+      }
     } else {
-      return this.modifiedAdd;
+      return bigDecimalCategoryOperation;
     }
   }
 
-  public void modifySubtract(final BinaryArithmeticOperation modifiedSubtract) {
+  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
     modifySubtract(fixOperationType(modifiedSubtract));
   }
 
@@ -125,15 +133,21 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.subtract;
   }
 
-  public BigDecimalBinaryArithmeticOperation subtract() {
-    if (this.modifiedSubtract == null) {
-      return this.subtract;
+  public BigDecimalBinaryArithmeticOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedSubtract == null) {
+        return this.subtract;
+      } else {
+        return this.modifiedSubtract;
+      }
     } else {
-      return this.modifiedSubtract;
+      return bigDecimalCategoryOperation;
     }
   }
 
-  public void modifyMultiply(final BinaryArithmeticOperation modifiedMultiply) {
+  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
     modifyMultiply(fixOperationType(modifiedMultiply));
   }
 
@@ -145,15 +159,21 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.multiply;
   }
 
-  public BigDecimalBinaryArithmeticOperation multiply() {
-    if (this.modifiedMultiply == null) {
-      return this.multiply;
+  public BigDecimalBinaryArithmeticOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedMultiply == null) {
+        return this.multiply;
+      } else {
+        return this.modifiedMultiply;
+      }
     } else {
-      return this.modifiedMultiply;
+      return bigDecimalCategoryOperation;
     }
   }
 
-  public void modifyDivide(final BinaryArithmeticOperation modifiedDivide) {
+  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
     modifyDivide(fixOperationType(modifiedDivide));
   }
 
@@ -165,15 +185,21 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.divide;
   }
 
-  public BigDecimalBinaryArithmeticOperation divide() {
-    if (this.modifiedDivide == null) {
-      return this.divide;
+  public BigDecimalBinaryArithmeticOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedDivide == null) {
+        return this.divide;
+      } else {
+        return this.modifiedDivide;
+      }
     } else {
-      return this.modifiedDivide;
+      return bigDecimalCategoryOperation;
     }
   }
 
-  public void modifyModulo(final BinaryArithmeticOperation modifiedModulo) {
+  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
     modifyModulo(fixOperationType(modifiedModulo));
   }
 
@@ -185,15 +211,21 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.modulo;
   }
 
-  public BigDecimalBinaryArithmeticOperation modulo() {
-    if (this.modifiedModulo == null) {
-      return this.modulo;
+  public BigDecimalBinaryArithmeticOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedModulo == null) {
+        return this.modulo;
+      } else {
+        return this.modifiedModulo;
+      }
     } else {
-      return this.modifiedModulo;
+      return bigDecimalCategoryOperation;
     }
   }
 
-  public void modifyPower(final BinaryArithmeticOperation modifiedPower) {
+  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
     modifyPower(fixOperationType(modifiedPower));
   }
 
@@ -205,15 +237,21 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.power;
   }
 
-  public BigDecimalBinaryArithmeticOperation power() {
-    if (this.modifiedPower == null) {
-      return this.power;
+  public BigDecimalBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedPower == null) {
+        return this.power;
+      } else {
+        return this.modifiedPower;
+      }
     } else {
-      return this.modifiedPower;
+      return bigDecimalCategoryOperation;
     }
   }
 
-  public void modifyRemainderDivide(final BinaryArithmeticOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
     modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
   }
 
@@ -225,11 +263,17 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.remainderDivide;
   }
 
-  public BigDecimalBinaryArithmeticOperation remainderDivide() {
-    if (this.modifiedRemainderDivide == null) {
-      return this.remainderDivide;
+  public BigDecimalBinaryArithmeticOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedRemainderDivide == null) {
+        return this.remainderDivide;
+      } else {
+        return this.modifiedRemainderDivide;
+      }
     } else {
-      return this.modifiedRemainderDivide;
+      return bigDecimalCategoryOperation;
     }
   }
 
@@ -245,11 +289,17 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.equals;
   }
 
-  public BigDecimalBooleanComparison equals() {
-    if (this.modifiedEquals == null) {
-      return this.equals;
+  public BigDecimalBooleanComparison equals(BooleanComparison booleanComparison) {
+  final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
+  
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedEquals == null) {
+        return this.equals;
+      } else {
+        return this.modifiedEquals;
+      }
     } else {
-      return this.modifiedEquals;
+      return bigDecimalCategoryOperation;
     }
   }
 
@@ -265,11 +315,17 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.notEquals;
   }
 
-  public BigDecimalBooleanComparison notEquals() {
-    if (this.modifiedNotEquals == null) {
-      return this.notEquals;
+  public BigDecimalBooleanComparison notEquals(BooleanComparison booleanComparison) {
+  final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedNotEquals == null) {
+        return this.notEquals;
+      } else {
+        return this.modifiedNotEquals;
+      }
     } else {
-      return this.modifiedNotEquals;
+      return bigDecimalCategoryOperation;
     }
   }
 
@@ -285,11 +341,17 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.lessThan;
   }
 
-  public BigDecimalBooleanComparison lessThan() {
-    if (this.modifiedLessThan == null) {
-      return this.lessThan;
+  public BigDecimalBooleanComparison lessThan(BooleanComparison booleanComparison) {
+  final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedLessThan == null) {
+        return this.lessThan;
+      } else {
+        return this.modifiedLessThan;
+      }
     } else {
-      return this.modifiedLessThan;
+      return bigDecimalCategoryOperation;
     }
   }
 
@@ -305,11 +367,17 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.greaterThan;
   }
 
-  public BigDecimalBooleanComparison greaterThan() {
-    if (this.modifiedGreaterThan == null) {
-      return this.greaterThan;
+  public BigDecimalBooleanComparison greaterThan(BooleanComparison booleanComparison) {
+  final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedGreaterThan == null) {
+        return this.greaterThan;
+      } else {
+        return this.modifiedGreaterThan;
+      }
     } else {
-      return this.modifiedGreaterThan;
+      return bigDecimalCategoryOperation;
     }
   }
 
@@ -325,11 +393,17 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.lessThanOrEquals;
   }
 
-  public BigDecimalBooleanComparison lessThanOrEquals() {
-    if (this.modifiedLessThanOrEquals == null) {
-      return this.lessThanOrEquals;
+  public BigDecimalBooleanComparison lessThanOrEquals(BooleanComparison booleanComparison) {
+  final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedLessThanOrEquals == null) {
+        return this.lessThanOrEquals;
+      } else {
+        return this.modifiedLessThanOrEquals;
+      }
     } else {
-      return this.modifiedLessThanOrEquals;
+      return bigDecimalCategoryOperation;
     }
   }
 
@@ -345,11 +419,17 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.greaterThanOrEquals;
   }
 
-  public BigDecimalBooleanComparison greaterThanOrEquals() {
-    if (this.modifiedGreaterThanOrEquals == null) {
-      return this.greaterThanOrEquals;
+  public BigDecimalBooleanComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
+  final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
+    
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedGreaterThanOrEquals == null) {
+        return this.greaterThanOrEquals;
+      } else {
+        return this.modifiedGreaterThanOrEquals;
+      }
     } else {
-      return this.modifiedGreaterThanOrEquals;
+      return bigDecimalCategoryOperation;
     }
   }
 }

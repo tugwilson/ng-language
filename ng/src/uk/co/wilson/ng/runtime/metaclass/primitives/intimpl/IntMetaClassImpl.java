@@ -1,8 +1,10 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.intimpl;
 
-import ng.runtime.metaclass.BinaryArithmeticOperation;
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.threadcontext.BinaryArithmeticOperation;
+import ng.runtime.threadcontext.BooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.IntBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.IntBinaryArithmeticOperationWrapper;
@@ -51,7 +53,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     super(int.class);
   }
 
-  private IntBinaryArithmeticOperation fixOperationType(final BinaryArithmeticOperation modifiedOperation) {
+  private IntBinaryArithmeticOperation fixOperationType(final ArithmeticBinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof IntBinaryArithmeticOperation) {
       return( IntBinaryArithmeticOperation) modifiedOperation;
     }
@@ -91,7 +93,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     }
   }
 
-  public void modifyAdd(final BinaryArithmeticOperation modifiedAdd) {
+  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
     modifyAdd(fixOperationType(modifiedAdd));
   }
 
@@ -103,15 +105,21 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.add;
   }
 
-  public IntBinaryArithmeticOperation add() {
-    if (this.modifiedAdd == null) {
-      return this.add;
+  public IntBinaryArithmeticOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final IntBinaryArithmeticOperation intCategoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedAdd == null) {
+        return this.add;
+      } else {
+        return this.modifiedAdd;
+      }
     } else {
-      return this.modifiedAdd;
+      return intCategoryOperation;
     }
   }
 
-  public void modifySubtract(final BinaryArithmeticOperation modifiedSubtract) {
+  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
     modifySubtract(fixOperationType(modifiedSubtract));
   }
 
@@ -123,15 +131,21 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.subtract;
   }
 
-  public IntBinaryArithmeticOperation subtract() {
-    if (this.modifiedSubtract == null) {
-      return this.subtract;
+  public IntBinaryArithmeticOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final IntBinaryArithmeticOperation intCategoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedSubtract == null) {
+        return this.subtract;
+      } else {
+        return this.modifiedSubtract;
+      }
     } else {
-      return this.modifiedSubtract;
+      return intCategoryOperation;
     }
   }
 
-  public void modifyMultiply(final BinaryArithmeticOperation modifiedMultiply) {
+  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
     modifyMultiply(fixOperationType(modifiedMultiply));
   }
 
@@ -143,15 +157,21 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.multiply;
   }
 
-  public IntBinaryArithmeticOperation multiply() {
-    if (this.modifiedMultiply == null) {
-      return this.multiply;
+  public IntBinaryArithmeticOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final IntBinaryArithmeticOperation intCategoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedMultiply == null) {
+        return this.multiply;
+      } else {
+        return this.modifiedMultiply;
+      }
     } else {
-      return this.modifiedMultiply;
+      return intCategoryOperation;
     }
   }
 
-  public void modifyDivide(final BinaryArithmeticOperation modifiedDivide) {
+  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
     modifyDivide(fixOperationType(modifiedDivide));
   }
 
@@ -163,15 +183,21 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.divide;
   }
 
-  public IntBinaryArithmeticOperation divide() {
-    if (this.modifiedDivide == null) {
-      return this.divide;
+  public IntBinaryArithmeticOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final IntBinaryArithmeticOperation intCategoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedDivide == null) {
+        return this.divide;
+      } else {
+        return this.modifiedDivide;
+      }
     } else {
-      return this.modifiedDivide;
+      return intCategoryOperation;
     }
   }
 
-  public void modifyModulo(final BinaryArithmeticOperation modifiedModulo) {
+  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
     modifyModulo(fixOperationType(modifiedModulo));
   }
 
@@ -183,15 +209,21 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.modulo;
   }
 
-  public IntBinaryArithmeticOperation modulo() {
-    if (this.modifiedModulo == null) {
-      return this.modulo;
+  public IntBinaryArithmeticOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final IntBinaryArithmeticOperation intCategoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedModulo == null) {
+        return this.modulo;
+      } else {
+        return this.modifiedModulo;
+      }
     } else {
-      return this.modifiedModulo;
+      return intCategoryOperation;
     }
   }
 
-  public void modifyPower(final BinaryArithmeticOperation modifiedPower) {
+  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
     modifyPower(fixOperationType(modifiedPower));
   }
 
@@ -203,15 +235,21 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.power;
   }
 
-  public IntBinaryArithmeticOperation power() {
-    if (this.modifiedPower == null) {
-      return this.power;
+  public IntBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final IntBinaryArithmeticOperation intCategoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedPower == null) {
+        return this.power;
+      } else {
+        return this.modifiedPower;
+      }
     } else {
-      return this.modifiedPower;
+      return intCategoryOperation;
     }
   }
 
-  public void modifyRemainderDivide(final BinaryArithmeticOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
     modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
   }
 
@@ -223,11 +261,17 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.remainderDivide;
   }
 
-  public IntBinaryArithmeticOperation remainderDivide() {
-    if (this.modifiedRemainderDivide == null) {
-      return this.remainderDivide;
+  public IntBinaryArithmeticOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final IntBinaryArithmeticOperation intCategoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedRemainderDivide == null) {
+        return this.remainderDivide;
+      } else {
+        return this.modifiedRemainderDivide;
+      }
     } else {
-      return this.modifiedRemainderDivide;
+      return intCategoryOperation;
     }
   }
 
@@ -243,11 +287,17 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.equals;
   }
 
-  public IntBooleanComparison equals() {
-    if (this.modifiedEquals == null) {
-      return this.equals;
+  public IntBooleanComparison equals(BooleanComparison booleanComparison) {
+  final IntBooleanComparison intCategoryOperation = booleanComparison.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedEquals == null) {
+        return this.equals;
+      } else {
+        return this.modifiedEquals;
+      }
     } else {
-      return this.modifiedEquals;
+      return intCategoryOperation;
     }
   }
 
@@ -263,11 +313,17 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.notEquals;
   }
 
-  public IntBooleanComparison notEquals() {
-    if (this.modifiedNotEquals == null) {
-      return this.notEquals;
+  public IntBooleanComparison notEquals(BooleanComparison booleanComparison) {
+  final IntBooleanComparison intCategoryOperation = booleanComparison.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedNotEquals == null) {
+        return this.notEquals;
+      } else {
+        return this.modifiedNotEquals;
+      }
     } else {
-      return this.modifiedNotEquals;
+      return intCategoryOperation;
     }
   }
 
@@ -283,11 +339,17 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.lessThan;
   }
 
-  public IntBooleanComparison lessThan() {
-    if (this.modifiedLessThan == null) {
-      return this.lessThan;
+  public IntBooleanComparison lessThan(BooleanComparison booleanComparison) {
+  final IntBooleanComparison intCategoryOperation = booleanComparison.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedLessThan == null) {
+        return this.lessThan;
+      } else {
+        return this.modifiedLessThan;
+      }
     } else {
-      return this.modifiedLessThan;
+      return intCategoryOperation;
     }
   }
 
@@ -303,11 +365,17 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.greaterThan;
   }
 
-  public IntBooleanComparison greaterThan() {
-    if (this.modifiedGreaterThan == null) {
-      return this.greaterThan;
+  public IntBooleanComparison greaterThan(BooleanComparison booleanComparison) {
+  final IntBooleanComparison intCategoryOperation = booleanComparison.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedGreaterThan == null) {
+        return this.greaterThan;
+      } else {
+        return this.modifiedGreaterThan;
+      }
     } else {
-      return this.modifiedGreaterThan;
+      return intCategoryOperation;
     }
   }
 
@@ -323,11 +391,17 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.lessThanOrEquals;
   }
 
-  public IntBooleanComparison lessThanOrEquals() {
-    if (this.modifiedLessThanOrEquals == null) {
-      return this.lessThanOrEquals;
+  public IntBooleanComparison lessThanOrEquals(BooleanComparison booleanComparison) {
+  final IntBooleanComparison intCategoryOperation = booleanComparison.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedLessThanOrEquals == null) {
+        return this.lessThanOrEquals;
+      } else {
+        return this.modifiedLessThanOrEquals;
+      }
     } else {
-      return this.modifiedLessThanOrEquals;
+      return intCategoryOperation;
     }
   }
 
@@ -343,11 +417,17 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.greaterThanOrEquals;
   }
 
-  public IntBooleanComparison greaterThanOrEquals() {
-    if (this.modifiedGreaterThanOrEquals == null) {
-      return this.greaterThanOrEquals;
+  public IntBooleanComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
+  final IntBooleanComparison intCategoryOperation = booleanComparison.getIntCategoryOperation();
+    
+    if (intCategoryOperation == null) {
+      if (this.modifiedGreaterThanOrEquals == null) {
+        return this.greaterThanOrEquals;
+      } else {
+        return this.modifiedGreaterThanOrEquals;
+      }
     } else {
-      return this.modifiedGreaterThanOrEquals;
+      return intCategoryOperation;
     }
   }
 }
