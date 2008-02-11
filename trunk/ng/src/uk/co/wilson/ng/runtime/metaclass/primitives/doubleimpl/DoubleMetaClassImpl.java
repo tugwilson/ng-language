@@ -105,9 +105,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.add;
   }
 
-  public DoubleBinaryArithmeticOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation add(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedAdd == null) {
         return this.add;
@@ -131,9 +131,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.subtract;
   }
 
-  public DoubleBinaryArithmeticOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation subtract(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedSubtract == null) {
         return this.subtract;
@@ -157,9 +157,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.multiply;
   }
 
-  public DoubleBinaryArithmeticOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation multiply(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedMultiply == null) {
         return this.multiply;
@@ -183,9 +183,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.divide;
   }
 
-  public DoubleBinaryArithmeticOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation divide(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedDivide == null) {
         return this.divide;
@@ -209,9 +209,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.modulo;
   }
 
-  public DoubleBinaryArithmeticOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation modulo(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedModulo == null) {
         return this.modulo;
@@ -235,9 +235,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.power;
   }
 
-  public DoubleBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation power(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedPower == null) {
         return this.power;
@@ -261,9 +261,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.remainderDivide;
   }
 
-  public DoubleBinaryArithmeticOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation remainderDivide(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
         return this.remainderDivide;
@@ -287,9 +287,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.equals;
   }
 
-  public DoubleBooleanComparison equals(BooleanComparison booleanComparison) {
+  public DoubleBooleanComparison equals(final BooleanComparison booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedEquals == null) {
         return this.equals;
@@ -313,9 +313,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.notEquals;
   }
 
-  public DoubleBooleanComparison notEquals(BooleanComparison booleanComparison) {
+  public DoubleBooleanComparison notEquals(final BooleanComparison booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedNotEquals == null) {
         return this.notEquals;
@@ -339,9 +339,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.lessThan;
   }
 
-  public DoubleBooleanComparison lessThan(BooleanComparison booleanComparison) {
+  public DoubleBooleanComparison lessThan(final BooleanComparison booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedLessThan == null) {
         return this.lessThan;
@@ -365,9 +365,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.greaterThan;
   }
 
-  public DoubleBooleanComparison greaterThan(BooleanComparison booleanComparison) {
+  public DoubleBooleanComparison greaterThan(final BooleanComparison booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
         return this.greaterThan;
@@ -391,9 +391,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.lessThanOrEquals;
   }
 
-  public DoubleBooleanComparison lessThanOrEquals(BooleanComparison booleanComparison) {
+  public DoubleBooleanComparison lessThanOrEquals(final BooleanComparison booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
         return this.lessThanOrEquals;
@@ -417,9 +417,9 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.greaterThanOrEquals;
   }
 
-  public DoubleBooleanComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
+  public DoubleBooleanComparison greaterThanOrEquals(final BooleanComparison booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
-    
+
     if (doubleCategoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {
         return this.greaterThanOrEquals;

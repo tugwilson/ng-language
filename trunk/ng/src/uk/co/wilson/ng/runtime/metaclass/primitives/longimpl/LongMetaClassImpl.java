@@ -105,9 +105,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.add;
   }
 
-  public LongBinaryArithmeticOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public LongBinaryArithmeticOperation add(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final LongBinaryArithmeticOperation longCategoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedAdd == null) {
         return this.add;
@@ -131,9 +131,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.subtract;
   }
 
-  public LongBinaryArithmeticOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public LongBinaryArithmeticOperation subtract(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final LongBinaryArithmeticOperation longCategoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedSubtract == null) {
         return this.subtract;
@@ -157,9 +157,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.multiply;
   }
 
-  public LongBinaryArithmeticOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public LongBinaryArithmeticOperation multiply(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final LongBinaryArithmeticOperation longCategoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedMultiply == null) {
         return this.multiply;
@@ -183,9 +183,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.divide;
   }
 
-  public LongBinaryArithmeticOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public LongBinaryArithmeticOperation divide(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final LongBinaryArithmeticOperation longCategoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedDivide == null) {
         return this.divide;
@@ -209,9 +209,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.modulo;
   }
 
-  public LongBinaryArithmeticOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public LongBinaryArithmeticOperation modulo(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final LongBinaryArithmeticOperation longCategoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedModulo == null) {
         return this.modulo;
@@ -235,9 +235,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.power;
   }
 
-  public LongBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public LongBinaryArithmeticOperation power(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final LongBinaryArithmeticOperation longCategoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedPower == null) {
         return this.power;
@@ -261,9 +261,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.remainderDivide;
   }
 
-  public LongBinaryArithmeticOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  public LongBinaryArithmeticOperation remainderDivide(final BinaryArithmeticOperation binaryArithmeticOperation) {
   final LongBinaryArithmeticOperation longCategoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
         return this.remainderDivide;
@@ -287,9 +287,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.equals;
   }
 
-  public LongBooleanComparison equals(BooleanComparison booleanComparison) {
+  public LongBooleanComparison equals(final BooleanComparison booleanComparison) {
   final LongBooleanComparison longCategoryOperation = booleanComparison.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedEquals == null) {
         return this.equals;
@@ -313,9 +313,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.notEquals;
   }
 
-  public LongBooleanComparison notEquals(BooleanComparison booleanComparison) {
+  public LongBooleanComparison notEquals(final BooleanComparison booleanComparison) {
   final LongBooleanComparison longCategoryOperation = booleanComparison.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedNotEquals == null) {
         return this.notEquals;
@@ -339,9 +339,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.lessThan;
   }
 
-  public LongBooleanComparison lessThan(BooleanComparison booleanComparison) {
+  public LongBooleanComparison lessThan(final BooleanComparison booleanComparison) {
   final LongBooleanComparison longCategoryOperation = booleanComparison.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedLessThan == null) {
         return this.lessThan;
@@ -365,9 +365,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.greaterThan;
   }
 
-  public LongBooleanComparison greaterThan(BooleanComparison booleanComparison) {
+  public LongBooleanComparison greaterThan(final BooleanComparison booleanComparison) {
   final LongBooleanComparison longCategoryOperation = booleanComparison.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
         return this.greaterThan;
@@ -391,9 +391,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.lessThanOrEquals;
   }
 
-  public LongBooleanComparison lessThanOrEquals(BooleanComparison booleanComparison) {
+  public LongBooleanComparison lessThanOrEquals(final BooleanComparison booleanComparison) {
   final LongBooleanComparison longCategoryOperation = booleanComparison.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
         return this.lessThanOrEquals;
@@ -417,9 +417,9 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.greaterThanOrEquals;
   }
 
-  public LongBooleanComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
+  public LongBooleanComparison greaterThanOrEquals(final BooleanComparison booleanComparison) {
   final LongBooleanComparison longCategoryOperation = booleanComparison.getLongCategoryOperation();
-    
+
     if (longCategoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {
         return this.greaterThanOrEquals;

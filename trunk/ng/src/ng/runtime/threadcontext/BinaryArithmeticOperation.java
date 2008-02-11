@@ -47,7 +47,7 @@ public interface BinaryArithmeticOperation extends BinaryOperation {
 
   Map<MetaClass, ArithmeticBinaryOperation> getCategoryBinaryOperationMap();
   void setCategoryBinaryOperationMap(Map<MetaClass, ArithmeticBinaryOperation> categoryBinaryOperationMap);
-  
+
   int intApply(char lhs, char rhs) throws NotPerformed;
   int intApply(char lhs, byte rhs) throws NotPerformed;
   int intApply(char lhs, short rhs) throws NotPerformed;

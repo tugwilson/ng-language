@@ -43,17 +43,17 @@ public abstract class BaseMetaClass implements MetaClass {
     }
   }
 
-  public DoStaticMethodCall staticMethodCall(StaticMethodCall staticMethodCall) {
+  public DoStaticMethodCall staticMethodCall(final StaticMethodCall staticMethodCall) {
     final Map<MetaClass, DoStaticMethodCall> categoryStaticMethodCallMap = staticMethodCall.getCategoryStaticMethodCallMap();
-    
+
     if (categoryStaticMethodCallMap != null) {
     final DoStaticMethodCall categoryStaticMethodCall = categoryStaticMethodCallMap.get(this);
-    
+
       if (categoryStaticMethodCall != null) {
         return categoryStaticMethodCall;
       }
     }
-    
+
     if (this.modifiedStaticMethodCall == null) {
       return this.staticMethodCall;
     } else {

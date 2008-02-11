@@ -15,7 +15,7 @@ public interface StaticMethodCall {
 
   Map<MetaClass, DoStaticMethodCall> getCategoryStaticMethodCallMap();
   void setCategoryStaticMethodCallMap(Map<MetaClass, DoStaticMethodCall> categoryBinaryOperationMap);
-  
+
   Object apply(Class theClass, String name, Object[] params);
   Object apply(MetaClass metaclass, String name, Object[] params);
 

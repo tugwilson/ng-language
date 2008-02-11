@@ -1,6 +1,5 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
