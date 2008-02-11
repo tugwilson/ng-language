@@ -16,13 +16,4 @@ public class BooleanMetaClassImpl extends MetaClassImpl implements BooleanMetaCl
   public Conversion getOriginalConvert() {
     return this.convert;
   }
-
-  @Override
-  public Conversion convert() {
-    if (this.modifiedConvert == null) {
-      return this.convert;
-    } else {
-      return this.modifiedConvert;
-    }
-  }
 }
