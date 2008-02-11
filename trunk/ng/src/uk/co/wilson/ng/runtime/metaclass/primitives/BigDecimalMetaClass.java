@@ -1,6 +1,8 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives;
 
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.BinaryArithmeticOperation;
+import ng.runtime.threadcontext.BooleanComparison;
 
 public interface BigDecimalMetaClass extends MetaClass {
 
@@ -10,53 +12,53 @@ public interface BigDecimalMetaClass extends MetaClass {
 
   void modifyAdd(BigDecimalBinaryArithmeticOperation modifiedAdd);
   BigDecimalBinaryArithmeticOperation getOriginalAdd();
-  BigDecimalBinaryArithmeticOperation add();
+  BigDecimalBinaryArithmeticOperation add(BinaryArithmeticOperation binaryArithmeticOperation);
 
   void modifySubtract(BigDecimalBinaryArithmeticOperation modifiedSubtract);
   BigDecimalBinaryArithmeticOperation getOriginalSubtract();
-  BigDecimalBinaryArithmeticOperation subtract();
+  BigDecimalBinaryArithmeticOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation);
 
   void modifyMultiply(BigDecimalBinaryArithmeticOperation modifiedMultiply);
   BigDecimalBinaryArithmeticOperation getOriginalMultiply();
-  BigDecimalBinaryArithmeticOperation multiply();
+  BigDecimalBinaryArithmeticOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation);
 
   void modifyDivide(BigDecimalBinaryArithmeticOperation modifiedDivide);
   BigDecimalBinaryArithmeticOperation getOriginalDivide();
-  BigDecimalBinaryArithmeticOperation divide();
+  BigDecimalBinaryArithmeticOperation divide(BinaryArithmeticOperation binaryArithmeticOperation);
 
   void modifyModulo(BigDecimalBinaryArithmeticOperation modifiedModulo);
   BigDecimalBinaryArithmeticOperation getOriginalModulo();
-  BigDecimalBinaryArithmeticOperation modulo();
+  BigDecimalBinaryArithmeticOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation);
 
   void modifyRemainderDivide(BigDecimalBinaryArithmeticOperation modifiedRemainderDivide);
   BigDecimalBinaryArithmeticOperation getOriginalRemainderDivide();
-  BigDecimalBinaryArithmeticOperation remainderDivide();
+  BigDecimalBinaryArithmeticOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation);
 
   void modifyPower(BigDecimalBinaryArithmeticOperation modifiedPower);
   BigDecimalBinaryArithmeticOperation getOriginalPower();
-  BigDecimalBinaryArithmeticOperation power();
+  BigDecimalBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation);
 
   void modifyEquals(BigDecimalBooleanComparison modifiedEquals);
   BigDecimalBooleanComparison getOriginalEquals();
-  BigDecimalBooleanComparison equals();
+  BigDecimalBooleanComparison equals(BooleanComparison booleanComparison);
 
   void modifyNotEquals(BigDecimalBooleanComparison modifiedNotEquals);
   BigDecimalBooleanComparison getOriginalNotEquals();
-  BigDecimalBooleanComparison notEquals();
+  BigDecimalBooleanComparison notEquals(BooleanComparison booleanComparison);
 
   void modifyLessThan(BigDecimalBooleanComparison modifiedLessThan);
   BigDecimalBooleanComparison getOriginalLessThan();
-  BigDecimalBooleanComparison lessThan();
+  BigDecimalBooleanComparison lessThan(BooleanComparison booleanComparison);
 
   void modifyGreaterThan(BigDecimalBooleanComparison modifiedGreaterThan);
   BigDecimalBooleanComparison getOriginalGreaterThan();
-  BigDecimalBooleanComparison greaterThan();
+  BigDecimalBooleanComparison greaterThan(BooleanComparison booleanComparison);
 
   void modifyLessThanOrEquals(BigDecimalBooleanComparison modifiedLessThanOrEquals);
   BigDecimalBooleanComparison getOriginalLessThanOrEquals();
-  BigDecimalBooleanComparison lessThanOrEquals();
+  BigDecimalBooleanComparison lessThanOrEquals(BooleanComparison booleanComparison);
 
   void modifyGreaterThanOrEquals(BigDecimalBooleanComparison modifiedGreaterThanOrEquals);
   BigDecimalBooleanComparison getOriginalGreaterThanOrEquals();
-  BigDecimalBooleanComparison greaterThanOrEquals();
+  BigDecimalBooleanComparison greaterThanOrEquals(BooleanComparison booleanComparison);
 }

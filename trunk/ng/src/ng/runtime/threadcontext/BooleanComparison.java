@@ -2,10 +2,52 @@ package ng.runtime.threadcontext;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Map;
 
+import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.MetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.CharBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.IntBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.LongBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.ShortBooleanComparison;
 
 public interface BooleanComparison  extends BinaryOperation {
+
+  CharBooleanComparison getCharCategoryOperation();
+  void setCharCategoryOperation(CharBooleanComparison charCategoryOperation);
+  
+  ByteBooleanComparison getByteCategoryOperation();
+  void setByteCategoryOperation(ByteBooleanComparison byteCategoryOperation);
+  
+  ShortBooleanComparison getShortCategoryOperation();
+  void setShortCategoryOperation(ShortBooleanComparison shortCategoryOperation);
+  
+  IntBooleanComparison getIntCategoryOperation();
+  void setIntCategoryOperation(IntBooleanComparison intCategoryOperation);
+  
+  LongBooleanComparison getLongCategoryOperation();
+  void setLongCategoryOperation(LongBooleanComparison longCategoryOperation);
+  
+  FloatBooleanComparison getFloatCategoryOperation();
+  void setFloatCategoryOperation(FloatBooleanComparison floatCategoryOperation);
+  
+  DoubleBooleanComparison getDoubleCategoryOperation();
+  void setDoubleCategoryOperation(DoubleBooleanComparison doubleCategoryOperation);
+  
+  BigIntegerBooleanComparison getBigIntegerCategoryOperation();
+  void setBigIntegerCategoryOperation(BigIntegerBooleanComparison bigIntegerCategoryOperation);
+  
+  BigDecimalBooleanComparison getBigDecimalCategoryOperation();
+  void setBigDecimalCategoryOperation(BigDecimalBooleanComparison bigDecimalCategoryOperation);
+  
+  Map<MetaClass, BooleanBinaryComparison> getCategoryOperationMap();
+  void setCategoryOperationMap(Map<MetaClass, BooleanBinaryComparison> categoryOperationMap);
+  
   boolean applyBoolean(Object lhs, Object rhs);
   boolean applyBoolean(MetaClass lhsMetaClass, Object lhs, Object rhs);
   boolean applyBoolean(Object lhs, MetaClass rhsMetaClass, Object rhs);

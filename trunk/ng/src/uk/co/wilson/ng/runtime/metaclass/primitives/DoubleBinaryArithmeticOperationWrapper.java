@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.NgDouble;
-import ng.runtime.metaclass.BinaryArithmeticOperation;
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
 
@@ -17,7 +17,7 @@ public class DoubleBinaryArithmeticOperationWrapper extends ArithmeticOperationW
   /**
    * @param delegate
    */
-  public DoubleBinaryArithmeticOperationWrapper(final BinaryArithmeticOperation delegate) {
+  public DoubleBinaryArithmeticOperationWrapper(final ArithmeticBinaryOperation delegate) {
     super(delegate);
   }
 

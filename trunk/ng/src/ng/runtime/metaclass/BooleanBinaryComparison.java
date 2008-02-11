@@ -6,7 +6,7 @@ import java.math.BigInteger;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
 
-public interface BooleanBinaryComparison extends BinaryArithmeticOperation {
+public interface BooleanBinaryComparison extends ArithmeticBinaryOperation {
   boolean doApplyBoolean(ThreadContext tc, Object lhs, Object rhs)  throws NotPerformed;
   boolean doApplyBoolean(ThreadContext tc, Object lhs, MetaClass rhsMetaClass, Object rhs)  throws NotPerformed;
   boolean doReverseApplyBoolean(ThreadContext tc, Object lhs, Object rhs)  throws NotPerformed;

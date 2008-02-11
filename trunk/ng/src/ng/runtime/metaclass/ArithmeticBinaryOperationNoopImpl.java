@@ -9,8 +9,8 @@ import ng.runtime.threadcontext.ThreadContext;
  * @author John
  *
  */
-public class BinaryArithmeticOperationNoopImpl implements BinaryArithmeticOperation {
-  public final static BinaryArithmeticOperation instance = new BinaryArithmeticOperationNoopImpl();
+public class ArithmeticBinaryOperationNoopImpl implements ArithmeticBinaryOperation {
+  public final static ArithmeticBinaryOperation instance = new ArithmeticBinaryOperationNoopImpl();
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.math.BigDecimal, java.lang.Object)

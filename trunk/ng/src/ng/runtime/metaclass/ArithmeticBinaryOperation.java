@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 import ng.runtime.threadcontext.ThreadContext;
 
-public interface BinaryArithmeticOperation {
+public interface ArithmeticBinaryOperation {
   Object doApply(ThreadContext tc, Object lhs, Object rhs);
   Object doApply(ThreadContext tc, Object lhs, MetaClass rhsMetaClass, Object rhs);
   Object doReverseApply(ThreadContext tc, Object lhs, Object rhs);

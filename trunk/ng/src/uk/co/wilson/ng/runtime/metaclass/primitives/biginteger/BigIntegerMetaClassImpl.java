@@ -2,9 +2,11 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.biginteger;
 
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BinaryArithmeticOperation;
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.threadcontext.BinaryArithmeticOperation;
+import ng.runtime.threadcontext.BooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperationWrapper;
@@ -53,7 +55,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     super(BigInteger.class);
   }
 
-  private BigIntegerBinaryArithmeticOperation fixOperationType(final BinaryArithmeticOperation modifiedOperation) {
+  private BigIntegerBinaryArithmeticOperation fixOperationType(final ArithmeticBinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof BigIntegerBinaryArithmeticOperation) {
       return( BigIntegerBinaryArithmeticOperation) modifiedOperation;
     }
@@ -93,7 +95,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
-  public void modifyAdd(final BinaryArithmeticOperation modifiedAdd) {
+  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
     modifyAdd(fixOperationType(modifiedAdd));
   }
 
@@ -105,15 +107,21 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.add;
   }
 
-  public BigIntegerBinaryArithmeticOperation add() {
-    if (this.modifiedAdd == null) {
-      return this.add;
+  public BigIntegerBinaryArithmeticOperation add(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedAdd == null) {
+        return this.add;
+      } else {
+        return this.modifiedAdd;
+      }
     } else {
-      return this.modifiedAdd;
+      return bigIntegerCategoryOperation;
     }
   }
 
-  public void modifySubtract(final BinaryArithmeticOperation modifiedSubtract) {
+  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
     modifySubtract(fixOperationType(modifiedSubtract));
   }
 
@@ -125,15 +133,21 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.subtract;
   }
 
-  public BigIntegerBinaryArithmeticOperation subtract() {
-    if (this.modifiedSubtract == null) {
-      return this.subtract;
+  public BigIntegerBinaryArithmeticOperation subtract(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedSubtract == null) {
+        return this.subtract;
+      } else {
+        return this.modifiedSubtract;
+      }
     } else {
-      return this.modifiedSubtract;
+      return bigIntegerCategoryOperation;
     }
   }
 
-  public void modifyMultiply(final BinaryArithmeticOperation modifiedMultiply) {
+  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
     modifyMultiply(fixOperationType(modifiedMultiply));
   }
 
@@ -145,15 +159,21 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.multiply;
   }
 
-  public BigIntegerBinaryArithmeticOperation multiply() {
-    if (this.modifiedMultiply == null) {
-      return this.multiply;
+  public BigIntegerBinaryArithmeticOperation multiply(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedMultiply == null) {
+        return this.multiply;
+      } else {
+        return this.modifiedMultiply;
+      }
     } else {
-      return this.modifiedMultiply;
+      return bigIntegerCategoryOperation;
     }
   }
 
-  public void modifyDivide(final BinaryArithmeticOperation modifiedDivide) {
+  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
     modifyDivide(fixOperationType(modifiedDivide));
   }
 
@@ -165,15 +185,21 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.divide;
   }
 
-  public BigIntegerBinaryArithmeticOperation divide() {
-    if (this.modifiedDivide == null) {
-      return this.divide;
+  public BigIntegerBinaryArithmeticOperation divide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedDivide == null) {
+        return this.divide;
+      } else {
+        return this.modifiedDivide;
+      }
     } else {
-      return this.modifiedDivide;
+      return bigIntegerCategoryOperation;
     }
   }
 
-  public void modifyModulo(final BinaryArithmeticOperation modifiedModulo) {
+  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
     modifyModulo(fixOperationType(modifiedModulo));
   }
 
@@ -185,15 +211,21 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.modulo;
   }
 
-  public BigIntegerBinaryArithmeticOperation modulo() {
-    if (this.modifiedModulo == null) {
-      return this.modulo;
+  public BigIntegerBinaryArithmeticOperation modulo(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedModulo == null) {
+        return this.modulo;
+      } else {
+        return this.modifiedModulo;
+      }
     } else {
-      return this.modifiedModulo;
+      return bigIntegerCategoryOperation;
     }
   }
 
-  public void modifyPower(final BinaryArithmeticOperation modifiedPower) {
+  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
     modifyPower(fixOperationType(modifiedPower));
   }
 
@@ -205,15 +237,21 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.power;
   }
 
-  public BigIntegerBinaryArithmeticOperation power() {
-    if (this.modifiedPower == null) {
-      return this.power;
+  public BigIntegerBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedPower == null) {
+        return this.power;
+      } else {
+        return this.modifiedPower;
+      }
     } else {
-      return this.modifiedPower;
+      return bigIntegerCategoryOperation;
     }
   }
 
-  public void modifyRemainderDivide(final BinaryArithmeticOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
     modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
   }
 
@@ -225,11 +263,17 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.remainderDivide;
   }
 
-  public BigIntegerBinaryArithmeticOperation remainderDivide() {
-    if (this.modifiedRemainderDivide == null) {
-      return this.remainderDivide;
+  public BigIntegerBinaryArithmeticOperation remainderDivide(BinaryArithmeticOperation binaryArithmeticOperation) {
+  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedRemainderDivide == null) {
+        return this.remainderDivide;
+      } else {
+        return this.modifiedRemainderDivide;
+      }
     } else {
-      return this.modifiedRemainderDivide;
+      return bigIntegerCategoryOperation;
     }
   }
 
@@ -245,11 +289,17 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.equals;
   }
 
-  public BigIntegerBooleanComparison equals() {
-    if (this.modifiedEquals == null) {
-      return this.equals;
+  public BigIntegerBooleanComparison equals(BooleanComparison booleanComparison) {
+  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedEquals == null) {
+        return this.equals;
+      } else {
+        return this.modifiedEquals;
+      }
     } else {
-      return this.modifiedEquals;
+      return bigIntegerCategoryOperation;
     }
   }
 
@@ -265,11 +315,17 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.notEquals;
   }
 
-  public BigIntegerBooleanComparison notEquals() {
-    if (this.modifiedNotEquals == null) {
-      return this.notEquals;
+  public BigIntegerBooleanComparison notEquals(BooleanComparison booleanComparison) {
+  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedNotEquals == null) {
+        return this.notEquals;
+      } else {
+        return this.modifiedNotEquals;
+      }
     } else {
-      return this.modifiedNotEquals;
+      return bigIntegerCategoryOperation;
     }
   }
 
@@ -285,11 +341,17 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.lessThan;
   }
 
-  public BigIntegerBooleanComparison lessThan() {
-    if (this.modifiedLessThan == null) {
-      return this.lessThan;
+  public BigIntegerBooleanComparison lessThan(BooleanComparison booleanComparison) {
+  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedLessThan == null) {
+        return this.lessThan;
+      } else {
+        return this.modifiedLessThan;
+      }
     } else {
-      return this.modifiedLessThan;
+      return bigIntegerCategoryOperation;
     }
   }
 
@@ -305,11 +367,17 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.greaterThan;
   }
 
-  public BigIntegerBooleanComparison greaterThan() {
-    if (this.modifiedGreaterThan == null) {
-      return this.greaterThan;
+  public BigIntegerBooleanComparison greaterThan(BooleanComparison booleanComparison) {
+  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedGreaterThan == null) {
+        return this.greaterThan;
+      } else {
+        return this.modifiedGreaterThan;
+      }
     } else {
-      return this.modifiedGreaterThan;
+      return bigIntegerCategoryOperation;
     }
   }
 
@@ -325,11 +393,17 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.lessThanOrEquals;
   }
 
-  public BigIntegerBooleanComparison lessThanOrEquals() {
-    if (this.modifiedLessThanOrEquals == null) {
-      return this.lessThanOrEquals;
+  public BigIntegerBooleanComparison lessThanOrEquals(BooleanComparison booleanComparison) {
+  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedLessThanOrEquals == null) {
+        return this.lessThanOrEquals;
+      } else {
+        return this.modifiedLessThanOrEquals;
+      }
     } else {
-      return this.modifiedLessThanOrEquals;
+      return bigIntegerCategoryOperation;
     }
   }
 
@@ -345,11 +419,17 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.greaterThanOrEquals;
   }
 
-  public BigIntegerBooleanComparison greaterThanOrEquals() {
-    if (this.modifiedGreaterThanOrEquals == null) {
-      return this.greaterThanOrEquals;
+  public BigIntegerBooleanComparison greaterThanOrEquals(BooleanComparison booleanComparison) {
+  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    
+    if (bigIntegerCategoryOperation == null) {
+      if (this.modifiedGreaterThanOrEquals == null) {
+        return this.greaterThanOrEquals;
+      } else {
+        return this.modifiedGreaterThanOrEquals;
+      }
     } else {
-      return this.modifiedGreaterThanOrEquals;
+      return bigIntegerCategoryOperation;
     }
   }
 }

@@ -2,7 +2,9 @@ package ng.runtime.threadcontext;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Map;
 
+import ng.runtime.metaclass.DoStaticMethodCall;
 import ng.runtime.metaclass.MetaClass;
 
 /**
@@ -10,6 +12,10 @@ import ng.runtime.metaclass.MetaClass;
  *
  */
 public interface StaticMethodCall {
+
+  Map<MetaClass, DoStaticMethodCall> getCategoryStaticMethodCallMap();
+  void setCategoryStaticMethodCallMap(Map<MetaClass, DoStaticMethodCall> categoryBinaryOperationMap);
+  
   Object apply(Class theClass, String name, Object[] params);
   Object apply(MetaClass metaclass, String name, Object[] params);
 

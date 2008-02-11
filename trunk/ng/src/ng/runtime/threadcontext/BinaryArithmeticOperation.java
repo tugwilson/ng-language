@@ -2,8 +2,52 @@ package ng.runtime.threadcontext;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Map;
+
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.metaclass.MetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.ByteBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.CharBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.DoubleBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.IntBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.LongBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.primitives.ShortBinaryArithmeticOperation;
 
 public interface BinaryArithmeticOperation extends BinaryOperation {
+
+  CharBinaryArithmeticOperation getCharCategoryOperation();
+  void setCharCategoryOperation(CharBinaryArithmeticOperation charCategoryOperation);
+
+  ByteBinaryArithmeticOperation getByteCategoryOperation();
+  void setByteCategoryOperation(ByteBinaryArithmeticOperation byteCategoryOperation);
+
+  ShortBinaryArithmeticOperation getShortCategoryOperation();
+  void setShortCategoryOperation(ShortBinaryArithmeticOperation shortCategoryOperation);
+
+  IntBinaryArithmeticOperation getIntCategoryOperation();
+  void setIntCategoryOperation(IntBinaryArithmeticOperation intCategoryOperation);
+
+  LongBinaryArithmeticOperation getLongCategoryOperation();
+  void setLongCategoryOperation(LongBinaryArithmeticOperation longCategoryOperation);
+
+  FloatBinaryArithmeticOperation getFloatCategoryOperation();
+  void setFloatCategoryOperation(FloatBinaryArithmeticOperation floatCategoryOperation);
+
+  DoubleBinaryArithmeticOperation getDoubleCategoryOperation();
+  void setDoubleCategoryOperation(DoubleBinaryArithmeticOperation doubleCategoryOperation);
+
+  BigIntegerBinaryArithmeticOperation getBigIntegerCategoryOperation();
+  void setBigIntegerCategoryOperation(BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation);
+
+  BigDecimalBinaryArithmeticOperation getBigDecimalCategoryOperation();
+  void setBigDecimalCategoryOperation(BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation);
+
+  Map<MetaClass, ArithmeticBinaryOperation> getCategoryBinaryOperationMap();
+  void setCategoryBinaryOperationMap(Map<MetaClass, ArithmeticBinaryOperation> categoryBinaryOperationMap);
+  
   int intApply(char lhs, char rhs) throws NotPerformed;
   int intApply(char lhs, byte rhs) throws NotPerformed;
   int intApply(char lhs, short rhs) throws NotPerformed;

@@ -7,8 +7,8 @@ import java.util.Stack;
 
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.Behaviour;
+import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.ThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigDecimalBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BigIntegerBooleanComparison;
@@ -19,7 +19,6 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.FloatBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.IntBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.LongBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ShortBooleanComparison;
-import uk.co.wilson.ng.runtime.threadcontext.util.HashMapWithDefaultValue;
 
 
 public abstract class BaseBooleanComparison extends BaseBinaryOperation implements BooleanComparison {
@@ -27,27 +26,107 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     super(tc);
   }
 
-  protected CharBooleanComparison charCategoryOperation = null;
+  private CharBooleanComparison charCategoryOperation = null;
 
-  protected ByteBooleanComparison byteCategoryOperation = null;
+  private ByteBooleanComparison byteCategoryOperation = null;
 
-  protected ShortBooleanComparison shortCategoryOperation = null;
+  private ShortBooleanComparison shortCategoryOperation = null;
 
-  protected IntBooleanComparison intCategoryOperation = null;
+  private IntBooleanComparison intCategoryOperation = null;
 
-  protected LongBooleanComparison longCategoryOperation = null;
+  private LongBooleanComparison longCategoryOperation = null;
 
-  protected FloatBooleanComparison floatCategoryOperation = null;
+  private FloatBooleanComparison floatCategoryOperation = null;
 
-  protected DoubleBooleanComparison doubleCategoryOperation = null;
+  private DoubleBooleanComparison doubleCategoryOperation = null;
 
-  protected BigIntegerBooleanComparison bigIntegerCategoryOperation = null;
+  private BigIntegerBooleanComparison bigIntegerCategoryOperation = null;
 
-  protected BigDecimalBooleanComparison bigDecimalCategoryOperation = null;
+  private BigDecimalBooleanComparison bigDecimalCategoryOperation = null;
 
-  protected HashMapWithDefaultValue<MetaClass, BooleanBinaryComparison> categoryOperationMap = null;
+  private Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = null;
 
-  protected Stack<Map<MetaClass, BooleanBinaryComparison>> categoryOperationMapStack = new Stack<Map<MetaClass, BooleanBinaryComparison>>();
+  private Stack<Map<MetaClass, BooleanBinaryComparison>> categoryOperationMapStack = new Stack<Map<MetaClass, BooleanBinaryComparison>>();
+
+  public CharBooleanComparison getCharCategoryOperation() {
+    return this.charCategoryOperation;
+  }
+
+  public void setCharCategoryOperation(CharBooleanComparison charCategoryOperation) {
+    this.charCategoryOperation = charCategoryOperation;
+  }
+
+  public ByteBooleanComparison getByteCategoryOperation() {
+    return this.byteCategoryOperation;
+  }
+
+  public void setByteCategoryOperation(ByteBooleanComparison byteCategoryOperation) {
+    this.byteCategoryOperation = byteCategoryOperation;
+  }
+
+  public ShortBooleanComparison getShortCategoryOperation() {
+    return this.shortCategoryOperation;
+  }
+
+  public void setShortCategoryOperation(ShortBooleanComparison shortCategoryOperation) {
+    this.shortCategoryOperation = shortCategoryOperation;
+  }
+
+  public IntBooleanComparison getIntCategoryOperation() {
+    return this.intCategoryOperation;
+  }
+
+  public void setIntCategoryOperation(IntBooleanComparison intCategoryOperation) {
+    this.intCategoryOperation = intCategoryOperation;
+  }
+
+  public LongBooleanComparison getLongCategoryOperation() {
+    return this.longCategoryOperation;
+  }
+
+  public void setLongCategoryOperation(LongBooleanComparison longCategoryOperation) {
+    this.longCategoryOperation = longCategoryOperation;
+  }
+
+  public FloatBooleanComparison getFloatCategoryOperation() {
+    return this.floatCategoryOperation;
+  }
+
+  public void setFloatCategoryOperation(FloatBooleanComparison floatCategoryOperation) {
+    this.floatCategoryOperation = floatCategoryOperation;
+  }
+
+  public DoubleBooleanComparison getDoubleCategoryOperation() {
+    return this.doubleCategoryOperation;
+  }
+
+  public void setDoubleCategoryOperation(DoubleBooleanComparison doubleCategoryOperation) {
+    this.doubleCategoryOperation = doubleCategoryOperation;
+  }
+
+  public BigIntegerBooleanComparison getBigIntegerCategoryOperation() {
+    return this.bigIntegerCategoryOperation;
+  }
+
+  public void setBigIntegerCategoryOperation(BigIntegerBooleanComparison bigIntegerCategoryOperation) {
+    this.bigIntegerCategoryOperation = bigIntegerCategoryOperation;
+  }
+
+  public BigDecimalBooleanComparison getBigDecimalCategoryOperation() {
+    return this.bigDecimalCategoryOperation;
+  }
+
+  public void setBigDecimalCategoryOperation(BigDecimalBooleanComparison bigDecimalCategoryOperation) {
+    this.bigDecimalCategoryOperation = bigDecimalCategoryOperation;
+  }
+
+  public Map<MetaClass, BooleanBinaryComparison> getCategoryOperationMap() {
+    return this.categoryOperationMap;
+  }
+
+  public void setCategoryOperationMap(Map<MetaClass, BooleanBinaryComparison> categoryOperationMap) {
+    this.categoryOperationMap = categoryOperationMap;
+  }
 
   public void pushBehaviour(Behaviour behaviour) {
     // TODO Auto-generated method stub
