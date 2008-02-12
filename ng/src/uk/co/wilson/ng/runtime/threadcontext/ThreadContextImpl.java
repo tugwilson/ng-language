@@ -30,10 +30,10 @@ import ng.runtime.threadcontext.Coversion;
 import ng.runtime.threadcontext.InterpreterSupport;
 import ng.runtime.threadcontext.Misc;
 import ng.runtime.threadcontext.StaticMethodCall;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.ValueAccess;
 
-public class ThreadContextImpl extends ThreadContext {
+public class ThreadContextImpl extends ExtendedThreadContext {
   private static final int getMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC;
 
   private static final Map<Class<?>, MetaClass> registry = new HashMap<Class<?>, MetaClass>();

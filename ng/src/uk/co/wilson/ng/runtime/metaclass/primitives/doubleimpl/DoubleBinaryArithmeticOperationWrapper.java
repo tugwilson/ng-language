@@ -6,7 +6,7 @@ import java.math.BigInteger;
 import ng.runtime.NgDouble;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ArithmeticOperationWrapper;
 
 /**
@@ -22,75 +22,75 @@ public class DoubleBinaryArithmeticOperationWrapper extends ArithmeticOperationW
     super(delegate);
   }
 
-  public Object doApply(final ThreadContext tc, final double lhs, final BigDecimal rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final BigDecimal rhs) {
     return doApply(tc, NgDouble.valueOf(lhs), rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final double lhs, final BigInteger rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final BigInteger rhs) {
     return doApply(tc, NgDouble.valueOf(lhs), rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final double lhs, final byte rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final byte rhs) {
     return doApply(tc, NgDouble.valueOf(lhs), rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final double lhs, final char rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final char rhs) {
     return doApply(tc, NgDouble.valueOf(lhs), rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final double lhs, final double rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final double rhs) {
     return doApply(tc, NgDouble.valueOf(lhs), rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final double lhs, final float rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final float rhs) {
     return doApply(tc, NgDouble.valueOf(lhs), rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final double lhs, final int rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final int rhs) {
     return doApply(tc, NgDouble.valueOf(lhs), rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final double lhs, final long rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final long rhs) {
     return doApply(tc, NgDouble.valueOf(lhs), rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final double lhs, final short rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final short rhs) {
     return doApply(tc, NgDouble.valueOf(lhs), rhs);
   }
 
-  public BigDecimal doBigDecimalApply(final ThreadContext tc, final double lhs, final BigDecimal rhs) throws NotPerformed {
-    throw ThreadContext.NOT_PERFORMED_EXCEPTION;
+  public BigDecimal doBigDecimalApply(final ExtendedThreadContext tc, final double lhs, final BigDecimal rhs) throws NotPerformed {
+    throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public double doDoubleApply(final ThreadContext tc, final double lhs, final BigInteger rhs) throws NotPerformed {
-    throw ThreadContext.NOT_PERFORMED_EXCEPTION;
+  public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final BigInteger rhs) throws NotPerformed {
+    throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public double doDoubleApply(final ThreadContext tc, final double lhs, final byte rhs) throws NotPerformed {
-    throw ThreadContext.NOT_PERFORMED_EXCEPTION;
+  public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final byte rhs) throws NotPerformed {
+    throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public double doDoubleApply(final ThreadContext tc, final double lhs, final char rhs) throws NotPerformed {
-    throw ThreadContext.NOT_PERFORMED_EXCEPTION;
+  public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final char rhs) throws NotPerformed {
+    throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public double doDoubleApply(final ThreadContext tc, final double lhs, final double rhs) throws NotPerformed {
-    throw ThreadContext.NOT_PERFORMED_EXCEPTION;
+  public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final double rhs) throws NotPerformed {
+    throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public double doDoubleApply(final ThreadContext tc, final double lhs, final float rhs) throws NotPerformed {
-    throw ThreadContext.NOT_PERFORMED_EXCEPTION;
+  public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final float rhs) throws NotPerformed {
+    throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public double doDoubleApply(final ThreadContext tc, final double lhs, final int rhs) throws NotPerformed {
-    throw ThreadContext.NOT_PERFORMED_EXCEPTION;
+  public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final int rhs) throws NotPerformed {
+    throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public double doDoubleApply(final ThreadContext tc, final double lhs, final long rhs) throws NotPerformed {
-    throw ThreadContext.NOT_PERFORMED_EXCEPTION;
+  public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final long rhs) throws NotPerformed {
+    throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public double doDoubleApply(final ThreadContext tc, final double lhs, final short rhs) throws NotPerformed {
-    throw ThreadContext.NOT_PERFORMED_EXCEPTION;
+  public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final short rhs) throws NotPerformed {
+    throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 }

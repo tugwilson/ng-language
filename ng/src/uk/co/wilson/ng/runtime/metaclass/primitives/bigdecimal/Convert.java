@@ -4,141 +4,141 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 class Convert implements BigDecimalConversion {
-  public boolean doAsBoolean(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+  public boolean doAsBoolean(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return value.compareTo(BigDecimal.ZERO) == 0;
   }
 
-  public char doAsChar(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+  public char doAsChar(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return (char)value.intValue();
   }
 
-  public byte doAsByte(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+  public byte doAsByte(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return value.byteValue();
   }
 
-  public short doAsShort(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+  public short doAsShort(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return value.shortValue();
   }
 
-  public int doAsInt(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+  public int doAsInt(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return value.intValue();
   }
 
-  public long doAsLong(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+  public long doAsLong(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return value.longValue();
   }
 
-  public float doAsFloat(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+  public float doAsFloat(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return value.floatValue();
   }
 
-  public double doAsDouble(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+  public double doAsDouble(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return value.doubleValue();
   }
 
-  public BigInteger doAsBigInteger(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+  public BigInteger doAsBigInteger(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return value.toBigInteger();
   }
 
-  public String doAsString(final ThreadContext tc, final BigDecimal value) throws NotPerformed {
+  public String doAsString(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return value.toString();
   }
 
-  public boolean doAsBoolean(final ThreadContext tc, final Object instance) {
+  public boolean doAsBoolean(final ExtendedThreadContext tc, final Object instance) {
     return ((BigInteger)instance).intValue() != 0;
   }
 
-  public char doAsChar(final ThreadContext tc, final Object instance) {
+  public char doAsChar(final ExtendedThreadContext tc, final Object instance) {
     return (char)((BigInteger)instance).intValue();
   }
 
-  public byte doAsByte(final ThreadContext tc, final Object instance) {
+  public byte doAsByte(final ExtendedThreadContext tc, final Object instance) {
     return (byte)((BigInteger)instance).intValue();
   }
 
-  public short doAsShort(final ThreadContext tc, final Object instance) {
+  public short doAsShort(final ExtendedThreadContext tc, final Object instance) {
     return (short)((BigInteger)instance).intValue();
   }
 
-  public int doAsInt(final ThreadContext tc, final Object instance) {
+  public int doAsInt(final ExtendedThreadContext tc, final Object instance) {
     return ((BigInteger)instance).intValue();
   }
 
-  public long doAsLong(final ThreadContext tc, final Object instance) {
+  public long doAsLong(final ExtendedThreadContext tc, final Object instance) {
     return ((BigInteger)instance).longValue();
   }
 
-  public float doAsFloat(final ThreadContext tc, final Object instance) {
+  public float doAsFloat(final ExtendedThreadContext tc, final Object instance) {
     return ((BigInteger)instance).floatValue();
   }
 
-  public double doAsDouble(final ThreadContext tc, final Object instance) {
+  public double doAsDouble(final ExtendedThreadContext tc, final Object instance) {
     return ((BigInteger)instance).doubleValue();
   }
 
-  public BigInteger doAsBigInteger(final ThreadContext tc, final Object instance) {
+  public BigInteger doAsBigInteger(final ExtendedThreadContext tc, final Object instance) {
     return (BigInteger)instance;
   }
 
-  public BigDecimal doAsBigDecimal(final ThreadContext tc, final Object instance) {
+  public BigDecimal doAsBigDecimal(final ExtendedThreadContext tc, final Object instance) {
     return new BigDecimal((BigInteger)instance);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
    */
-  public String doAsString(final ThreadContext tc, final Object instance) throws NotPerformed {
+  public String doAsString(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return ((BigInteger)instance).toString();
   }
 
-  public Object doAsType(final ThreadContext tc, final Object instance, final Class<?> type) {
+  public Object doAsType(final ExtendedThreadContext tc, final Object instance, final Class<?> type) {
     return tc.getMetaClassFor(type).convert().doAsYourType(tc, (BigInteger)instance);
   }
 
-  public Object doAsYourType(final ThreadContext tc, final boolean value) {
+  public Object doAsYourType(final ExtendedThreadContext tc, final boolean value) {
     return BigInteger.valueOf(value ? 1 : 0);
   }
 
-  public Object doAsYourType(final ThreadContext tc, final char value) {
+  public Object doAsYourType(final ExtendedThreadContext tc, final char value) {
     return BigInteger.valueOf(value);
   }
 
-  public Object doAsYourType(final ThreadContext tc, final byte value) {
+  public Object doAsYourType(final ExtendedThreadContext tc, final byte value) {
     return BigInteger.valueOf(value);
   }
 
-  public Object doAsYourType(final ThreadContext tc, final short value) {
+  public Object doAsYourType(final ExtendedThreadContext tc, final short value) {
     return BigInteger.valueOf(value);
   }
 
-  public Object doAsYourType(final ThreadContext tc, final int value) {
+  public Object doAsYourType(final ExtendedThreadContext tc, final int value) {
     return BigInteger.valueOf(value);
   }
 
-  public Object doAsYourType(final ThreadContext tc, final long value) {
+  public Object doAsYourType(final ExtendedThreadContext tc, final long value) {
     return BigInteger.valueOf(value);
   }
 
-  public Object doAsYourType(final ThreadContext tc, final float value) {
+  public Object doAsYourType(final ExtendedThreadContext tc, final float value) {
     return BigInteger.valueOf((long)value);
   }
 
-  public Object doAsYourType(final ThreadContext tc, final double value) {
+  public Object doAsYourType(final ExtendedThreadContext tc, final double value) {
     return BigInteger.valueOf((long)value);
   }
 
-  public Object doAsYourType(final ThreadContext tc, final BigInteger value) {
+  public Object doAsYourType(final ExtendedThreadContext tc, final BigInteger value) {
     return value;
   }
 
-  public Object doAsYourType(final ThreadContext tc, final BigDecimal value) {
+  public Object doAsYourType(final ExtendedThreadContext tc, final BigDecimal value) {
     return BigInteger.valueOf(value.longValue());
   }
 
-  public Object doAsYourType(final ThreadContext tc, final Object instance) {
-    return ThreadContext.NOT_PERFORMED;
+  public Object doAsYourType(final ExtendedThreadContext tc, final Object instance) {
+    return ExtendedThreadContext.NOT_PERFORMED;
   }
 }

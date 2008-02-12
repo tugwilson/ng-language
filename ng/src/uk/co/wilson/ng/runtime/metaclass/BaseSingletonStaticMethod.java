@@ -2,7 +2,7 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import java.lang.reflect.Method;
 
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
@@ -38,7 +38,7 @@ public abstract class BaseSingletonStaticMethod extends BaseStaticMethodProxy {
     }
   }
 
-  protected Object wrapReturnValue(final ThreadContext tc, final Object result) {
+  protected Object wrapReturnValue(final ExtendedThreadContext tc, final Object result) {
     switch(this.returnType) {
       case 0:
         return tc.wrap(((Boolean)result).booleanValue());

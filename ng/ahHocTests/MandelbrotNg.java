@@ -1,5 +1,6 @@
 import java.util.Date;
 
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.ThreadContext;
 
@@ -30,7 +31,7 @@ public class MandelbrotNg {
   static int BAILOUT = 16;
   static int MAX_ITERATIONS = 1000;
 
-  private static int iterate(final ThreadContext tc, final float x, final float y)
+  private static int iterate(final ExtendedThreadContext tc, final float x, final float y)
   {
     float cr;
     try {
@@ -131,7 +132,7 @@ public class MandelbrotNg {
           t2 = tc.convert().asFloat(tc.divide().apply(y, 40.0f));
         }
 
-        if (tc.equals().applyBoolean(iterate(tc, t1, t2), 0)) {
+        if (tc.equals().applyBoolean(iterate((ExtendedThreadContext)tc, t1, t2), 0)) {
           ;// System.out.print("*");
         } else {
           ;// System.out.print(" ");

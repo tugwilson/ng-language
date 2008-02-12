@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
@@ -12,75 +12,75 @@ import ng.runtime.threadcontext.ThreadContext;
  */
 public abstract class BaseBinaryArithmeticOperation extends BaseBinaryOperation implements BigIntegerBinaryArithmeticOperation {
 
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final char rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final char rhs) {
     try {
       return doBigIntegerApply(tc, lhs, rhs);
     } catch (final NotPerformed e) {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final byte rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final byte rhs) {
     try {
       return doBigIntegerApply(tc, lhs, rhs);
     } catch (final NotPerformed e) {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final short rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final short rhs) {
     try {
       return doBigIntegerApply(tc, lhs, rhs);
     } catch (final NotPerformed e) {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final int rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final int rhs) {
     try {
       return doBigIntegerApply(tc, lhs, rhs);
     } catch (final NotPerformed e) {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final long rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final long rhs) {
     try {
       return doBigIntegerApply(tc, lhs, rhs);
     } catch (final NotPerformed e) {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final float rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final float rhs) {
     try {
       return tc.wrap(doFloatApply(tc, lhs, rhs));
     } catch (final NotPerformed e) {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final double rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final double rhs) {
     try {
       return tc.wrap(doDoubleApply(tc, lhs, rhs));
     } catch (final NotPerformed e) {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
     try {
       return doBigIntegerApply(tc, lhs, rhs);
     } catch (final NotPerformed e) {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 
-  public Object doApply(final ThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
     try {
       return doBigDecimalApply(tc, lhs, rhs);
     } catch (final NotPerformed e) {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 }

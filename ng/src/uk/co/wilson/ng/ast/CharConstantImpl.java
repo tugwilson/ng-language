@@ -3,7 +3,7 @@ package uk.co.wilson.ng.ast;
 import ng.ast.CharConstant;
 import ng.runtime.NgChar;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 
 /**
@@ -23,7 +23,7 @@ public class CharConstantImpl extends NodeImpl implements CharConstant {
   /* (non-JavaDoc)
    * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass, ng.runtime.threadcontext.ThreadContext)
    */
-  public Object evaluate(final Object instance, final MetaClass metaClass, final ThreadContext tc) {
+  public Object evaluate(final Object instance, final MetaClass metaClass, final ExtendedThreadContext tc) {
     return this.value;
   }
 

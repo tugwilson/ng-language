@@ -2,7 +2,7 @@ package uk.co.wilson.ng.ast;
 
 import ng.ast.Identifier;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 public class IdentifierImpl extends NodeImpl implements Identifier {
   final String name;
@@ -29,7 +29,7 @@ public class IdentifierImpl extends NodeImpl implements Identifier {
     return this.type != null;
   }
 
-  public Object evaluate(final Object instance, final MetaClass metaClass, final ThreadContext tc) {
+  public Object evaluate(final Object instance, final MetaClass metaClass, final ExtendedThreadContext tc) {
     if (tc.interpreterSupport().isLocalVariable(this.name)) {
       return tc.interpreterSupport().getLocalVariable(this.name);
     } else {

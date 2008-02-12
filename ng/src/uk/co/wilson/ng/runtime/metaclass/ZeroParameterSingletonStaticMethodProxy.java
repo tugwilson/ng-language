@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import ng.lang.NgRuntimeException;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
@@ -21,11 +21,11 @@ public class ZeroParameterSingletonStaticMethodProxy extends BaseSingletonStatic
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object[])
    */
   @Override
-  public Object doApply(final ThreadContext tc, final Object[] params) {
+  public Object doApply(final ExtendedThreadContext tc, final Object[] params) {
     if (params.length == 0) {
       return doApplyQuick(tc);
     } else {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 
@@ -33,7 +33,7 @@ public class ZeroParameterSingletonStaticMethodProxy extends BaseSingletonStatic
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc) {
+  public Object doApplyQuick(final ExtendedThreadContext tc) {
     if (this.modifiedProxy == null) {
       try {
         return wrapReturnValue(tc, this.method.invoke(null, args));

@@ -4,106 +4,106 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
  *
  */
 public class NotEquals extends BaseBooleanComparison {
-  public Object doApply(final ThreadContext tc, final Object lhs, final Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
     return tc.notEquals().apply(tc.unwrapToInt(lhs), rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
     return tc.notEquals().apply(tc.unwrapToInt(lhs), rhsMetaClass, rhs);
   }
 
-  public Object doReverseApply(final ThreadContext tc, final Object lhs, final Object rhs) {
+  public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
     return tc.notEquals().apply(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final Object lhs, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(tc.unwrapToInt(lhs), rhs);
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
     return tc.notEquals().applyBoolean(tc.unwrapToInt(lhs), rhsMetaClass, rhs);
   }
 
-  public boolean doReverseApplyBoolean(final ThreadContext tc, final Object lhs, final Object rhs) {
+  public boolean doReverseApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final char lhs, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final byte lhs, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final byte lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final short lhs, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final short lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final int lhs, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final long lhs, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final long lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final float lhs, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final float lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final double lhs, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final double lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final BigInteger lhs, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final BigDecimal lhs, final Object rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.notEquals().applyBoolean(lhs, tc.unwrapToInt(rhs));
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final int lhs, final char rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final char rhs) {
     return lhs != rhs;
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final int lhs, final byte rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final byte rhs) {
     return lhs != rhs;
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final int lhs, final short rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final short rhs) {
     return lhs != rhs;
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final int lhs, final int rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final int rhs) {
     return lhs != rhs;
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final int lhs, final long rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final long rhs) {
     return lhs != rhs;
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final int lhs, final float rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final float rhs) {
     return lhs != rhs;
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final int lhs, final double rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final double rhs) {
     return lhs != rhs;
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final int lhs, final BigInteger rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final BigInteger rhs) {
     return BigInteger.valueOf(lhs).compareTo(rhs) != 0;
   }
 
-  public boolean doApplyBoolean(final ThreadContext tc, final int lhs, final BigDecimal rhs) {
+  public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final BigDecimal rhs) {
     return BigDecimal.valueOf(lhs).compareTo(rhs) != 0;
   }
 }

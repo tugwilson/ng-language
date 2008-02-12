@@ -3,42 +3,42 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 abstract class BaseBinaryOperation implements BigDecimalBinaryOperation {
-  public Object doApply(final ThreadContext tc, final Object lhs, final char rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final char rhs) {
     return doApply(tc, (BigDecimal)lhs, rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final Object lhs, final byte rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final byte rhs) {
     return doApply(tc, (BigDecimal)lhs, rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final Object lhs, final short rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final short rhs) {
     return doApply(tc, (BigDecimal)lhs, rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final Object lhs, final int rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final int rhs) {
     return doApply(tc, (BigDecimal)lhs, rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final Object lhs, final long rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final long rhs) {
     return doApply(tc, (BigDecimal)lhs, rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final Object lhs, final float rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final float rhs) {
     return doApply(tc, (BigDecimal)lhs, rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final Object lhs, final double rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final double rhs) {
     return doApply(tc, (BigDecimal)lhs, rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final Object lhs, final BigInteger rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final BigInteger rhs) {
     return doApply(tc, (BigDecimal)lhs, rhs);
   }
 
-  public Object doApply(final ThreadContext tc, final Object lhs, final BigDecimal rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final BigDecimal rhs) {
     return doApply(tc, (BigDecimal)lhs, rhs);
   }
 }

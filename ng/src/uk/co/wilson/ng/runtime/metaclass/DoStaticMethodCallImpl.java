@@ -13,7 +13,7 @@ import java.util.Map;
 import ng.runtime.metaclass.DoStaticMethodCall;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.StaticMethodProxy;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
@@ -109,119 +109,119 @@ public class DoStaticMethodCallImpl implements DoStaticMethodCall {
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.Object[])
    */
-  public Object doApply(final ThreadContext tc, final String name, final Object[] params) {
+  public Object doApply(final ExtendedThreadContext tc, final String name, final Object[] params) {
      return this.staticMethods.get(name).doApply(tc, params);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name) {
     return this.staticMethods.get(name).doApplyQuick(tc);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.String)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final String p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final String p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.Object)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final Object p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final Object p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final Object p1, final Object p2) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final Object p1, final Object p2) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1, p2);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final Object p1, final Object p2, final Object p3) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final Object p1, final Object p2, final Object p3) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1, p2, p3);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final Object p1, final Object p2, final Object p3, final Object p4) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final Object p1, final Object p2, final Object p3, final Object p4) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1, p2, p3, p4);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, boolean)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final boolean p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final boolean p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, char)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final char p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final char p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, byte)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final byte p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final byte p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, short)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final short p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final short p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, int)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final int p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final int p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, long)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final long p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final long p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, float)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final float p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final float p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, double)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final double p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final double p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.math.BigInteger)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final BigInteger p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final BigInteger p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.math.BigDecimal)
    */
-  public Object doApplyQuick(final ThreadContext tc, final String name, final BigDecimal p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final BigDecimal p1) {
     return this.staticMethods.get(name).doApplyQuick(tc, p1);
   }
 }

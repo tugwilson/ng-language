@@ -2,7 +2,7 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import java.lang.reflect.Method;
 
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
@@ -20,11 +20,11 @@ public class OneParameterSingletonStaticMethodProxy extends BaseSingletonStaticM
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object[])
    */
   @Override
-  public Object doApply(final ThreadContext tc, final Object[] params) {
+  public Object doApply(final ExtendedThreadContext tc, final Object[] params) {
     if (params.length == 1) {
       return doApplyQuick(tc, params[1]);
     } else {
-      return ThreadContext.NOT_PERFORMED;
+      return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 }

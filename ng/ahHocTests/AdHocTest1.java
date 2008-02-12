@@ -2,6 +2,7 @@ import ng.ast.BinaryOperation;
 import ng.ast.Node;
 import ng.ast.util.BinaryOperations;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.ThreadContext;
 import uk.co.wilson.ng.ast.NodeImpl;
 
@@ -12,14 +13,14 @@ public class AdHocTest1 {
    * @param args
    */
   public static void main(final String[] args) {
-    final ThreadContext tc = ThreadContext.getThreadContext();
+    final ExtendedThreadContext tc = (ExtendedThreadContext)ThreadContext.getThreadContext();
 
     final Node n = new NodeImpl() {
 
       /* (non-JavaDoc)
        * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass, ng.runtime.threadcontext.ThreadContext)
        */
-      public Object evaluate(Object instance, MetaClass metaClass, ThreadContext tc) {
+      public Object evaluate(Object instance, MetaClass metaClass, ExtendedThreadContext tc) {
         // TODO Auto-generated method stub
         return null;
       }

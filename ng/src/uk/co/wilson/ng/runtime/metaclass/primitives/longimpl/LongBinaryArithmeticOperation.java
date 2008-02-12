@@ -5,16 +5,16 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 public interface LongBinaryArithmeticOperation extends ArithmeticBinaryOperation, LongBinaryOperation {
-  long doLongApply(ThreadContext tc, long lhs, char rhs) throws NotPerformed;
-  long doLongApply(ThreadContext tc, long lhs, byte rhs) throws NotPerformed;
-  long doLongApply(ThreadContext tc, long lhs, short rhs) throws NotPerformed;
-  long doLongApply(ThreadContext tc, long lhs, int rhs) throws NotPerformed;
-  long doLongApply(ThreadContext tc, long lhs, long rhs) throws NotPerformed;
-  float doFloatApply(ThreadContext tc, long lhs, float rhs) throws NotPerformed;
-  double doDoubleApply(ThreadContext tc, long lhs, double rhs) throws NotPerformed;
-  BigInteger doBigIntegerApply(ThreadContext tc, long lhs, BigInteger rhs) throws NotPerformed;
-  BigDecimal doBigDecimalApply(ThreadContext tc, long lhs, BigDecimal rhs) throws NotPerformed;
+  long doLongApply(ExtendedThreadContext tc, long lhs, char rhs) throws NotPerformed;
+  long doLongApply(ExtendedThreadContext tc, long lhs, byte rhs) throws NotPerformed;
+  long doLongApply(ExtendedThreadContext tc, long lhs, short rhs) throws NotPerformed;
+  long doLongApply(ExtendedThreadContext tc, long lhs, int rhs) throws NotPerformed;
+  long doLongApply(ExtendedThreadContext tc, long lhs, long rhs) throws NotPerformed;
+  float doFloatApply(ExtendedThreadContext tc, long lhs, float rhs) throws NotPerformed;
+  double doDoubleApply(ExtendedThreadContext tc, long lhs, double rhs) throws NotPerformed;
+  BigInteger doBigIntegerApply(ExtendedThreadContext tc, long lhs, BigInteger rhs) throws NotPerformed;
+  BigDecimal doBigDecimalApply(ExtendedThreadContext tc, long lhs, BigDecimal rhs) throws NotPerformed;
 }
