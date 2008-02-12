@@ -5,30 +5,30 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.Conversion;
 import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
  *
  */
 public interface ByteConversion extends Conversion {
-  boolean doAsBoolean(ThreadContext tc, byte value) throws NotPerformed;
+  boolean doAsBoolean(ExtendedThreadContext tc, byte value) throws NotPerformed;
 
-  char doAsChar(ThreadContext tc, byte value) throws NotPerformed;
+  char doAsChar(ExtendedThreadContext tc, byte value) throws NotPerformed;
 
-  short doAsShort(ThreadContext tc, byte value) throws NotPerformed;
+  short doAsShort(ExtendedThreadContext tc, byte value) throws NotPerformed;
 
-  int doAsInt(ThreadContext tc, byte value) throws NotPerformed;
+  int doAsInt(ExtendedThreadContext tc, byte value) throws NotPerformed;
 
-  long doAsLong(ThreadContext tc, byte value) throws NotPerformed;
+  long doAsLong(ExtendedThreadContext tc, byte value) throws NotPerformed;
 
-  float doAsFloat(ThreadContext tc, byte value) throws NotPerformed;
+  float doAsFloat(ExtendedThreadContext tc, byte value) throws NotPerformed;
 
-  double doAsDouble(ThreadContext tc, byte value) throws NotPerformed;
+  double doAsDouble(ExtendedThreadContext tc, byte value) throws NotPerformed;
 
-  BigInteger doAsBigInteger(ThreadContext tc, byte value) throws NotPerformed;
+  BigInteger doAsBigInteger(ExtendedThreadContext tc, byte value) throws NotPerformed;
 
-  BigDecimal doAsBigDecimal(ThreadContext tc, byte value) throws NotPerformed;
+  BigDecimal doAsBigDecimal(ExtendedThreadContext tc, byte value) throws NotPerformed;
 
-  String doAsString(ThreadContext tc, byte value) throws NotPerformed;
+  String doAsString(ExtendedThreadContext tc, byte value) throws NotPerformed;
 }

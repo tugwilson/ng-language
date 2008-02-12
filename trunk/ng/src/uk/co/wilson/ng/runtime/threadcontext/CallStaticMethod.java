@@ -9,7 +9,7 @@ import ng.lang.NgRuntimeException;
 import ng.runtime.metaclass.DoStaticMethodCall;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.StaticMethodCall;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
@@ -20,7 +20,7 @@ public class CallStaticMethod implements StaticMethodCall {
 
   private final Stack<Map<MetaClass, DoStaticMethodCall>> categoryStaticMethodCallMapStack = new Stack<Map<MetaClass, DoStaticMethodCall>>();
 
-  private final ThreadContext tc;
+  private final ExtendedThreadContext tc;
 
   public Map<MetaClass, DoStaticMethodCall> getCategoryStaticMethodCallMap() {
     return this.categoryStaticMethodCallMap;
@@ -30,7 +30,7 @@ public class CallStaticMethod implements StaticMethodCall {
     this.categoryStaticMethodCallMap = categoryStaticMethodCallMap;
   }
 
-  public CallStaticMethod(final ThreadContext tc) {
+  public CallStaticMethod(final ExtendedThreadContext tc) {
     this.tc = tc;
   }
 
@@ -47,7 +47,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object apply(final MetaClass metaclass, final String name, final Object[] params) {
     final Object result = metaclass.staticMethodCall(this).doApply(this.tc, name, params);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -67,7 +67,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -87,7 +87,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final Object p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -107,7 +107,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final Object p1, final Object p2) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1, p2);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -127,7 +127,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final Object p1, final Object p2, final Object p3) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1, p2, p3);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -147,7 +147,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final Object p1, final Object p2, final Object p3, final Object p4) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1, p2, p3, p4);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -167,7 +167,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final boolean p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -187,7 +187,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final char p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -207,7 +207,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final byte p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -227,7 +227,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final short p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -247,7 +247,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final int p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -267,7 +267,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final long p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -287,7 +287,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final float p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -307,7 +307,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final double p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -327,7 +327,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final BigInteger p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -347,7 +347,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final BigDecimal p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;
@@ -367,7 +367,7 @@ public class CallStaticMethod implements StaticMethodCall {
   public Object applyQuick(final MetaClass metaclass, final String name, final String p1) {
     final Object result = metaclass.staticMethodCall(this).doApplyQuick(this.tc, name, p1);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot call the static method " + name + " on the class " + metaclass.getTheClass().getName());
     } else {
       return result;

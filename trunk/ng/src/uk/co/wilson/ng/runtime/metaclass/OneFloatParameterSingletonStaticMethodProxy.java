@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.lang.NgRuntimeException;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
@@ -25,7 +25,7 @@ public class OneFloatParameterSingletonStaticMethodProxy extends OneParameterSin
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final Object p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final Object p1) {
     return doApplyQuick(tc, tc.convert().asFloat(p1));
   }
 
@@ -33,7 +33,7 @@ public class OneFloatParameterSingletonStaticMethodProxy extends OneParameterSin
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, char)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final char p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final char p1) {
     return doApplyQuick(tc, tc.convert().asFloat(p1));
   }
 
@@ -41,7 +41,7 @@ public class OneFloatParameterSingletonStaticMethodProxy extends OneParameterSin
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, byte)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final byte p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final byte p1) {
     return doApplyQuick(tc, tc.convert().asFloat(p1));
   }
 
@@ -49,7 +49,7 @@ public class OneFloatParameterSingletonStaticMethodProxy extends OneParameterSin
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, short)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final short p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final short p1) {
     return doApplyQuick(tc, tc.convert().asFloat(p1));
   }
 
@@ -57,7 +57,7 @@ public class OneFloatParameterSingletonStaticMethodProxy extends OneParameterSin
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, int)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final int p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final int p1) {
     return doApplyQuick(tc, tc.convert().asFloat(p1));
   }
 
@@ -65,7 +65,7 @@ public class OneFloatParameterSingletonStaticMethodProxy extends OneParameterSin
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, long)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final long p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final long p1) {
     return doApplyQuick(tc, tc.convert().asFloat(p1));
   }
 
@@ -73,7 +73,7 @@ public class OneFloatParameterSingletonStaticMethodProxy extends OneParameterSin
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, float)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final float p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final float p1) {
     if (this.modifiedProxy == null) {
       try {
         return wrapReturnValue(tc, this.method.invoke(null, tc.prepareParameters(Float.valueOf(p1))));
@@ -93,7 +93,7 @@ public class OneFloatParameterSingletonStaticMethodProxy extends OneParameterSin
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, double)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final double p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final double p1) {
     return doApplyQuick(tc, tc.convert().asFloat(p1));
   }
 
@@ -101,7 +101,7 @@ public class OneFloatParameterSingletonStaticMethodProxy extends OneParameterSin
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.math.BigInteger)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final BigInteger p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final BigInteger p1) {
     return doApplyQuick(tc, tc.convert().asFloat(p1));
   }
 
@@ -109,7 +109,7 @@ public class OneFloatParameterSingletonStaticMethodProxy extends OneParameterSin
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.math.BigDecimal)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final BigDecimal p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final BigDecimal p1) {
     return doApplyQuick(tc, tc.convert().asFloat(p1));
   }
 }

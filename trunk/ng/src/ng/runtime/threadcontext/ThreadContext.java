@@ -2,21 +2,37 @@ package ng.runtime.threadcontext;
 
 import ng.runtime.metaclass.MetaClass;
 import uk.co.wilson.ng.runtime.threadcontext.ThreadContextImpl;
+/*
+ * Created on 12 Feb 2008
+ *
+ * Copyright 2008 John G. Wilson
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ *
+ */
 
-
+/**
+ * @author John
+ *
+ */
 public abstract class ThreadContext {
-  public static final Object NOT_PERFORMED = new Object();
-  public static final NotPerformed NOT_PERFORMED_EXCEPTION = new NotPerformed() {
-    private static final long serialVersionUID = 1L;
-  };
-
-  private static final ThreadLocal<ThreadContext> contexts = new ThreadLocal<ThreadContext>() {
+  private static final ThreadLocal<ExtendedThreadContext> contexts = new ThreadLocal<ExtendedThreadContext>() {
 
     /* (non-JavaDoc)
      * @see java.lang.ThreadLocal#initialValue()
      */
     @Override
-    protected ThreadContext initialValue() {
+    protected ExtendedThreadContext initialValue() {
       return new ThreadContextImpl();
     }
 
@@ -25,50 +41,9 @@ public abstract class ThreadContext {
   public static ThreadContext getThreadContext() {
     return contexts.get();
   }
-
-  //
-  // Utility Methods
-  //
+  
   public abstract MetaClass getMetaClassFor(Object instance);
   public abstract MetaClass getMetaClassFor(Class<?> type);
-
-  public abstract Object wrap(boolean val);
-  public abstract boolean unwrapToBoolean(Object wrapped);
-
-  public abstract Object wrap(char val);
-  public abstract char unwrapToChar(Object wrapped);
-
-  public abstract Object wrap(byte val);
-  public abstract byte unwrapToByte(Object wrapped);
-
-  public abstract Object wrap(short val);
-  public abstract short unwrapToShort(Object wrapped);
-
-  public abstract Object wrap(int val);
-  public abstract int unwrapToInt(Object wrapped);
-
-  public abstract Object wrap(long val);
-  public abstract long unwrapToLong(Object wrapped);
-
-  public abstract Object wrap(float val);
-  public abstract float unwrapToFloat(Object wrapped);
-
-  public abstract Object wrap(double val);
-  public abstract double unwrapToDouble(Object wrapped);
-  
-  public abstract Object[] prepareThreadContextAndParameters();
-  
-  public abstract Object[] prepareParameters(Object p1);
-  public abstract Object[] prepareThreadContextAndParameters(Object p1);
-  
-  public abstract Object[] prepareParameters(Object p1, Object p2);
-  public abstract Object[] prepareThreadContextAndParameters(Object p1, Object p2);
-  
-  public abstract Object[] prepareParameters(Object p1, Object p2, Object p3);
-  public abstract Object[] prepareThreadContextAndParameters(Object p1, Object p2, Object p3);
-  
-  public abstract Object[] prepareParameters(Object p1, Object p2, Object p3, Object p4);
-  public abstract Object[] prepareThreadContextAndParameters(Object p1, Object p2, Object p3, Object p4);
 
   //
   // Select Message Types

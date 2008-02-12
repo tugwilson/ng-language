@@ -6,6 +6,7 @@ import java.math.BigInteger;
 import junit.framework.TestCase;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.ThreadContext;
 
 /**
@@ -13,7 +14,7 @@ import ng.runtime.threadcontext.ThreadContext;
  *
  */
 public class BooleanComparisonTest extends TestCase {
-  private static void doTest(final ThreadContext tc, final BooleanComparison op, final int lhsTrue[], final int rhsTrue[], final int lhsFalse[], final int rhsFalse[]) {
+  private static void doTest(final ExtendedThreadContext tc, final BooleanComparison op, final int lhsTrue[], final int rhsTrue[], final int lhsFalse[], final int rhsFalse[]) {
     final MetaClass byteMetaClass = tc.getMetaClassFor(byte.class);
     final MetaClass charMetaClass = tc.getMetaClassFor(char.class);
     final MetaClass shortMetaClass = tc.getMetaClassFor(short.class);
@@ -551,32 +552,32 @@ public class BooleanComparisonTest extends TestCase {
   }
 
   public void testEquals() throws Throwable {
-    final ThreadContext tc = ThreadContext.getThreadContext();
+    final ExtendedThreadContext tc = (ExtendedThreadContext)ThreadContext.getThreadContext();
     doTest(tc, tc.equals(), new int[]{1}, new int[]{1}, new int[]{1}, new int[]{0});
   }
 
   public void testNotEquals() throws Throwable {
-    final ThreadContext tc = ThreadContext.getThreadContext();
+    final ExtendedThreadContext tc = (ExtendedThreadContext)ThreadContext.getThreadContext();
     doTest(tc, tc.notEquals(), new int[]{1}, new int[]{0}, new int[]{1}, new int[]{1});
   }
 
   public void testLessThan() throws Throwable {
-    final ThreadContext tc = ThreadContext.getThreadContext();
+    final ExtendedThreadContext tc = (ExtendedThreadContext)ThreadContext.getThreadContext();
     doTest(tc, tc.lessThan(), new int[]{0}, new int[]{1}, new int[]{1, 1}, new int[]{0, 1});
   }
 
   public void testLessThanOrEquals() throws Throwable {
-    final ThreadContext tc = ThreadContext.getThreadContext();
+    final ExtendedThreadContext tc = (ExtendedThreadContext)ThreadContext.getThreadContext();
     doTest(tc, tc.lessThanOrEquals(), new int[]{0, 1}, new int[]{1, 1}, new int[]{1}, new int[]{0});
   }
 
   public void testGreaterThan() throws Throwable {
-    final ThreadContext tc = ThreadContext.getThreadContext();
+    final ExtendedThreadContext tc = (ExtendedThreadContext)ThreadContext.getThreadContext();
     doTest(tc, tc.greaterThan(), new int[]{1}, new int[]{0}, new int[]{0, 1}, new int[]{1, 1});
   }
 
   public void testGreaterThanOrEquals() throws Throwable {
-    final ThreadContext tc = ThreadContext.getThreadContext();
+    final ExtendedThreadContext tc = (ExtendedThreadContext)ThreadContext.getThreadContext();
     doTest(tc, tc.greaterThanOrEquals(), new int[]{1, 1}, new int[]{0, 1}, new int[]{0}, new int[]{1});
   }
 }

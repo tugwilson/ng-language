@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import ng.lang.NgRuntimeException;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  *
@@ -25,7 +25,7 @@ public class OneUntypedParameterSingletonStaticMethodProxy extends OneParameterS
    * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
    */
   @Override
-  public Object doApplyQuick(final ThreadContext tc, final Object p1) {
+  public Object doApplyQuick(final ExtendedThreadContext tc, final Object p1) {
     if (this.modifiedProxy == null) {
       try {
         return wrapReturnValue(tc, this.method.invoke(null, tc.prepareParameters(p1)));

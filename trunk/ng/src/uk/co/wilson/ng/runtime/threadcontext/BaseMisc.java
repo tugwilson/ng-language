@@ -2,12 +2,12 @@ package uk.co.wilson.ng.runtime.threadcontext;
 
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.Misc;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 public class BaseMisc implements Misc {
-  private final ThreadContext tc;
+  private final ExtendedThreadContext tc;
 
-  public BaseMisc(final ThreadContext tc) {
+  public BaseMisc(final ExtendedThreadContext tc) {
     this.tc = tc;
   }
 

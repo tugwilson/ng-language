@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 import ng.ast.util.BinaryOperations;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 
 /**
@@ -19,7 +19,7 @@ public interface Node {
    * @param tc
    * @return
    */
-  Object evaluate(Object instance, MetaClass metaClass, ThreadContext tc);
+  Object evaluate(Object instance, MetaClass metaClass, ExtendedThreadContext tc);
 
   /**
    * @return

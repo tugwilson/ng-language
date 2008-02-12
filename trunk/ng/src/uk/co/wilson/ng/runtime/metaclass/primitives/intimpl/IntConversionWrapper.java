@@ -5,7 +5,7 @@ import java.math.BigInteger;
 import ng.runtime.NgInt;
 import ng.runtime.metaclass.Conversion;
 import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ConversionWrapper;
 
 /*
@@ -40,43 +40,43 @@ public class IntConversionWrapper extends ConversionWrapper implements IntConver
     super(delegate);
   }
 
-  public BigDecimal doAsBigDecimal(final ThreadContext tc, final int value) throws NotPerformed {
+  public BigDecimal doAsBigDecimal(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return doAsBigDecimal(tc, NgInt.valueOf(value));
   }
 
-  public BigInteger doAsBigInteger(final ThreadContext tc, final int value) throws NotPerformed {
+  public BigInteger doAsBigInteger(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return doAsBigInteger(tc, NgInt.valueOf(value));
   }
 
-  public boolean doAsBoolean(final ThreadContext tc, final int value) throws NotPerformed {
+  public boolean doAsBoolean(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return doAsBoolean(tc, NgInt.valueOf(value));
   }
 
-  public char doAsChar(final ThreadContext tc, final int value) throws NotPerformed {
+  public char doAsChar(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return doAsChar(tc, NgInt.valueOf(value));
   }
 
-  public byte doAsByte(final ThreadContext tc, final int value) throws NotPerformed {
+  public byte doAsByte(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return doAsByte(tc, NgInt.valueOf(value));
   }
 
-  public double doAsDouble(final ThreadContext tc, final int value) throws NotPerformed {
+  public double doAsDouble(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return doAsDouble(tc, NgInt.valueOf(value));
   }
 
-  public float doAsFloat(final ThreadContext tc, final int value) throws NotPerformed {
+  public float doAsFloat(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return doAsFloat(tc, NgInt.valueOf(value));
   }
 
-  public long doAsLong(final ThreadContext tc, final int value) throws NotPerformed {
+  public long doAsLong(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return doAsLong(tc, NgInt.valueOf(value));
   }
 
-  public short doAsShort(final ThreadContext tc, final int value) throws NotPerformed {
+  public short doAsShort(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return doAsShort(tc, NgInt.valueOf(value));
   }
 
-  public String doAsString(final ThreadContext tc, final int value) throws NotPerformed {
+  public String doAsString(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return doAsString(tc, NgInt.valueOf(value));
   }
 }

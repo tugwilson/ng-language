@@ -7,12 +7,12 @@ import ng.lang.NgRuntimeException;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.Coversion;
 import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 public class BaseConversion implements Coversion {
-  private final ThreadContext tc;
+  private final ExtendedThreadContext tc;
 
-  public BaseConversion(final ThreadContext tc) {
+  public BaseConversion(final ExtendedThreadContext tc) {
     this.tc = tc;
   }
 
@@ -897,10 +897,10 @@ public class BaseConversion implements Coversion {
           result = metaClass.convert().doAsType(this.tc, instance, (Class<?>)type);
         }
       } catch (final NotPerformed e) {
-        result = ThreadContext.NOT_PERFORMED;
+        result = ExtendedThreadContext.NOT_PERFORMED;
       }
 
-      if (result == ThreadContext.NOT_PERFORMED) {
+      if (result == ExtendedThreadContext.NOT_PERFORMED) {
         throw new NgRuntimeException("Value of type " + instance.getClass().getName() + " cannot be converted to " + ((Class<?>)type).getName());
       } else {
         return result;

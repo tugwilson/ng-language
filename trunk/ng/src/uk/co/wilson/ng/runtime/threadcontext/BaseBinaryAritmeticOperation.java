@@ -7,7 +7,7 @@ import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteBinaryArithmeticOperation;
@@ -19,7 +19,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongBinaryArithmeti
 import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortBinaryArithmeticOperation;
 
 public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation implements BinaryArithmeticOperation {
-  protected BaseBinaryAritmeticOperation(final ThreadContext tc) {
+  protected BaseBinaryAritmeticOperation(final ExtendedThreadContext tc) {
     super(tc);
   }
 

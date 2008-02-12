@@ -9,7 +9,7 @@ import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BooleanComparison;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;
@@ -22,7 +22,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortBooleanCompar
 
 
 public abstract class BaseBooleanComparison extends BaseBinaryOperation implements BooleanComparison {
-  public BaseBooleanComparison(final ThreadContext tc) {
+  public BaseBooleanComparison(final ExtendedThreadContext tc) {
     super(tc);
   }
 
