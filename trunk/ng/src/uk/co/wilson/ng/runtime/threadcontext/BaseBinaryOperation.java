@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.threadcontext.BinaryOperation;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 
 public abstract class BaseBinaryOperation extends BaseOperation implements BinaryOperation {
 

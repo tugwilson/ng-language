@@ -3,7 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.longimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.threadcontext.ExtendedThreadContext;
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
+
 
 public interface LongBinaryOperation {
   Object doApply(ExtendedThreadContext tc, long lhs, char rhs);

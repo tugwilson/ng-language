@@ -3,9 +3,10 @@ package uk.co.wilson.ng.runtime.metaclass.primitives;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
+import uk.co.wilson.ng.runtime.threadcontext.NotPerformed;
+
 import ng.runtime.metaclass.Conversion;
-import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /*
  * Created on 10 Feb 2008
@@ -42,7 +43,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsBigDecimal(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsBigDecimal(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public BigDecimal doAsBigDecimal(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsBigDecimal(tc, instance);
@@ -53,7 +54,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsBigInteger(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsBigInteger(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public BigInteger doAsBigInteger(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsBigInteger(tc, instance);
@@ -64,7 +65,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsBoolean(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsBoolean(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public boolean doAsBoolean(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsBoolean(tc, instance);
@@ -75,7 +76,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsByte(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsByte(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public byte doAsByte(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsByte(tc, instance);
@@ -86,7 +87,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsChar(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsChar(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public char doAsChar(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsChar(tc, instance);
@@ -97,7 +98,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsDouble(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsDouble(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public double doAsDouble(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsDouble(tc, instance);
@@ -108,7 +109,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsFloat(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsFloat(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public float doAsFloat(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsFloat(tc, instance);
@@ -119,7 +120,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsInt(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsInt(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public int doAsInt(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsInt(tc, instance);
@@ -130,7 +131,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsLong(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsLong(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public long doAsLong(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsLong(tc, instance);
@@ -141,7 +142,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsShort(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsShort(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public short doAsShort(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsShort(tc, instance);
@@ -152,7 +153,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsString(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public String doAsString(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return this.delegate.doAsString(tc, instance);
@@ -163,7 +164,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param instance
    * @param type
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsType(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.lang.Class)
+   * @see ng.runtime.metaclass.Conversion#doAsType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.lang.Class)
    */
   public Object doAsType(final ExtendedThreadContext tc, final Object instance, final Class<?> type) {
     return this.delegate.doAsType(tc, instance, type);
@@ -173,7 +174,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param value
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, java.math.BigDecimal)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.math.BigDecimal)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final BigDecimal value) {
     return this.delegate.doAsYourType(tc, value);
@@ -183,7 +184,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param value
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, java.math.BigInteger)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.math.BigInteger)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final BigInteger value) {
     return this.delegate.doAsYourType(tc, value);
@@ -193,7 +194,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param value
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, boolean)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, boolean)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final boolean value) {
     return this.delegate.doAsYourType(tc, value);
@@ -203,7 +204,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param value
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, byte)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, byte)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final byte value) {
     return this.delegate.doAsYourType(tc, value);
@@ -213,7 +214,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param value
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, char)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, char)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final char value) {
     return this.delegate.doAsYourType(tc, value);
@@ -223,7 +224,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param value
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, double)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, double)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final double value) {
     return this.delegate.doAsYourType(tc, value);
@@ -233,7 +234,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param value
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, float)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, float)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final float value) {
     return this.delegate.doAsYourType(tc, value);
@@ -243,7 +244,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param value
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, int)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, int)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final int value) {
     return this.delegate.doAsYourType(tc, value);
@@ -253,7 +254,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param value
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, long)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, long)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final long value) {
     return this.delegate.doAsYourType(tc, value);
@@ -263,7 +264,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param instance
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final Object instance) {
     return this.delegate.doAsYourType(tc, instance);
@@ -273,7 +274,7 @@ public abstract class ConversionWrapper implements Conversion {
    * @param tc
    * @param value
    * @return
-   * @see ng.runtime.metaclass.Conversion#doAsYourType(ng.runtime.threadcontext.ExtendedThreadContext, short)
+   * @see ng.runtime.metaclass.Conversion#doAsYourType(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, short)
    */
   public Object doAsYourType(final ExtendedThreadContext tc, final short value) {
     return this.delegate.doAsYourType(tc, value);

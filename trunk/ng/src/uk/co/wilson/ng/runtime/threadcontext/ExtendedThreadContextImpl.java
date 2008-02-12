@@ -30,10 +30,9 @@ import ng.runtime.threadcontext.Coversion;
 import ng.runtime.threadcontext.InterpreterSupport;
 import ng.runtime.threadcontext.Misc;
 import ng.runtime.threadcontext.StaticMethodCall;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.ValueAccess;
 
-public class ThreadContextImpl extends ExtendedThreadContext {
+public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   private static final int getMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC;
 
   private static final Map<Class<?>, MetaClass> registry = new HashMap<Class<?>, MetaClass>();
@@ -318,7 +317,7 @@ public class ThreadContextImpl extends ExtendedThreadContext {
         // If it's not in the global registry then create it and put it in the
         // global registry and in the thread local cache and return it.
         //
-        synchronized (ThreadContextImpl.class) {
+        synchronized (ExtendedThreadContextImpl.class) {
           metaClass = registry.get(type);
 
           if (metaClass == null) {
