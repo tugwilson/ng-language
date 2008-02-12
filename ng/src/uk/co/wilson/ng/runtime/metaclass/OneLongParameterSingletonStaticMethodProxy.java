@@ -67,7 +67,7 @@ public class OneLongParameterSingletonStaticMethodProxy extends OneParameterSing
   public Object doApplyQuick(final ThreadContext tc, final long p1) {
     if (this.modifiedProxy == null) {
       try {
-        return wrapReturnValue(tc, this.method.invoke(null, new Object[]{Long.valueOf(p1)}));
+        return wrapReturnValue(tc, this.method.invoke(null, tc.prepareParameters(Long.valueOf(p1))));
       } catch (final IllegalArgumentException e) {
         throw new NgRuntimeException(e);
       } catch (final IllegalAccessException e) {

@@ -220,6 +220,12 @@ public class ThreadContextImpl extends ThreadContext {
       return result;
     }
   };
+  
+  private final Object[] p1 = new Object[1];
+  private final Object[] p2 = new Object[2];
+  private final Object[] p3 = new Object[3];
+  private final Object[] p4 = new Object[4];
+  private final Object[] p5 = new Object[5];
 
   private final Misc misc = new BaseMisc(this);
 
@@ -531,6 +537,103 @@ public class ThreadContextImpl extends ThreadContext {
     }
 
     return ngDouble.getDoubleValue();
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object)
+   */
+  @Override
+  public Object[] prepareThreadContextAndParameters() {
+    this.p1[0] = this;
+    return this.p1;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object)
+   */
+  @Override
+  public Object[] prepareParameters(Object p1) {
+    this.p1[0] = p1;
+    return this.p1;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object)
+   */
+  @Override
+  public Object[] prepareThreadContextAndParameters(Object p1) {
+    this.p2[0] = this;
+    this.p2[1] = p1;
+    return this.p2;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object, java.lang.Object)
+   */
+  @Override
+  public Object[] prepareParameters(Object p1, Object p2) {
+    this.p2[0] = p1;
+    this.p2[1] = p2;
+    return this.p2;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object, java.lang.Object)
+   */
+  @Override
+  public Object[] prepareThreadContextAndParameters(Object p1, Object p2) {
+    this.p3[0] = this;
+    this.p3[1] = p1;
+    this.p3[2] = p2;
+    return this.p3;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object, java.lang.Object, java.lang.Object)
+   */
+  @Override
+  public Object[] prepareParameters(Object p1, Object p2, Object p3) {
+    this.p3[0] = p1;
+    this.p3[1] = p2;
+    this.p3[2] = p3;
+    return this.p3;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object, java.lang.Object, java.lang.Object)
+   */
+  @Override
+  public Object[] prepareThreadContextAndParameters(Object p1, Object p2, Object p3) {
+    this.p4[0] = this;
+    this.p4[1] = p1;
+    this.p4[2] = p2;
+    this.p4[3] = p3;
+    return this.p4;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   */
+  @Override
+  public Object[] prepareParameters(Object p1, Object p2, Object p3, Object p4) {
+    this.p4[0] = p1;
+    this.p4[1] = p2;
+    this.p4[2] = p3;
+    this.p4[3] = p4;
+    return this.p4;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+   */
+  @Override
+  public Object[] prepareThreadContextAndParameters(Object p1, Object p2, Object p3, Object p4) {
+    this.p5[0] = this;
+    this.p5[1] = p1;
+    this.p5[2] = p2;
+    this.p5[3] = p3;
+    this.p5[4] = p4;
+    return this.p5;
   }
 
   /* (non-JavaDoc)
