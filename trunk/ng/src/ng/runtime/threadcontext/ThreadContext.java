@@ -26,6 +26,9 @@ public abstract class ThreadContext {
     return contexts.get();
   }
 
+  //
+  // Utility Methods
+  //
   public abstract MetaClass getMetaClassFor(Object instance);
   public abstract MetaClass getMetaClassFor(Class<?> type);
 
@@ -52,7 +55,24 @@ public abstract class ThreadContext {
 
   public abstract Object wrap(double val);
   public abstract double unwrapToDouble(Object wrapped);
+  
+  public abstract Object[] prepareThreadContextAndParameters();
+  
+  public abstract Object[] prepareParameters(Object p1);
+  public abstract Object[] prepareThreadContextAndParameters(Object p1);
+  
+  public abstract Object[] prepareParameters(Object p1, Object p2);
+  public abstract Object[] prepareThreadContextAndParameters(Object p1, Object p2);
+  
+  public abstract Object[] prepareParameters(Object p1, Object p2, Object p3);
+  public abstract Object[] prepareThreadContextAndParameters(Object p1, Object p2, Object p3);
+  
+  public abstract Object[] prepareParameters(Object p1, Object p2, Object p3, Object p4);
+  public abstract Object[] prepareThreadContextAndParameters(Object p1, Object p2, Object p3, Object p4);
 
+  //
+  // Select Message Types
+  //
   public abstract Misc misc();
 
   public abstract InterpreterSupport interpreterSupport();

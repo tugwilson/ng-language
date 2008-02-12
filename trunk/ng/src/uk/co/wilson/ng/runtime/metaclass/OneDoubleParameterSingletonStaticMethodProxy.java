@@ -86,7 +86,7 @@ public class OneDoubleParameterSingletonStaticMethodProxy extends OneParameterSi
   public Object doApplyQuick(final ThreadContext tc, final double p1) {
     if (this.modifiedProxy == null) {
       try {
-        return wrapReturnValue(tc, this.method.invoke(null, new Object[]{Double.valueOf(p1)}));
+        return wrapReturnValue(tc, this.method.invoke(null, tc.prepareParameters(Double.valueOf(p1))));
       } catch (final IllegalArgumentException e) {
         throw new NgRuntimeException(e);
       } catch (final IllegalAccessException e) {
