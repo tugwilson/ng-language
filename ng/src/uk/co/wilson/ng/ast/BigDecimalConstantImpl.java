@@ -2,9 +2,10 @@ package uk.co.wilson.ng.ast;
 
 import java.math.BigDecimal;
 
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
+
 import ng.ast.BigDecimalConstant;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 
 
 /**

@@ -9,7 +9,6 @@ import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BooleanComparison;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;

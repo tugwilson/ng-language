@@ -3,7 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.threadcontext.ExtendedThreadContext;
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
+
 
 abstract class BaseBinaryOperation implements BigDecimalBinaryOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final char rhs) {

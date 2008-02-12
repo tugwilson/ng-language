@@ -1,9 +1,9 @@
 package uk.co.wilson.ng.ast;
 
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.ast.Expression;
 import ng.ast.util.BinaryOperations;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 
 public class BinaryOperationImpl extends NodeImpl implements ng.ast.BinaryOperation {
   private final BinaryOperations operation;

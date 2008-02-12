@@ -1,9 +1,9 @@
 package uk.co.wilson.ng.ast;
 
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.ast.IntegerConstant;
 import ng.runtime.NgInt;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 
 
 /**

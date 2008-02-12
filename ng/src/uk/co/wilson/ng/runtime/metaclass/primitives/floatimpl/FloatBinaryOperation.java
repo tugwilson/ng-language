@@ -3,7 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.threadcontext.ExtendedThreadContext;
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
+
 
 public interface FloatBinaryOperation {
   Object doApply(ExtendedThreadContext tc, float lhs, char rhs);

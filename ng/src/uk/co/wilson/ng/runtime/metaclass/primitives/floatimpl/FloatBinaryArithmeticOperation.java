@@ -3,9 +3,10 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
+import uk.co.wilson.ng.runtime.threadcontext.NotPerformed;
+
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
-import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 
 public interface FloatBinaryArithmeticOperation extends ArithmeticBinaryOperation, FloatBinaryOperation {
   float doFloatApply(ExtendedThreadContext tc, float lhs, char rhs) throws NotPerformed;

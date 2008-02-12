@@ -15,6 +15,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatBinaryArithme
 import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.threadcontext.NotPerformed;
 
 public interface BinaryArithmeticOperation extends BinaryOperation {
 

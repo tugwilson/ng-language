@@ -3,8 +3,9 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ExtendedThreadContext;
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
+import uk.co.wilson.ng.runtime.threadcontext.NotPerformed;
+
 
 abstract class BaseBooleanComparison extends BaseBinaryOperation implements DoubleBooleanComparison {
   public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {

@@ -1,8 +1,8 @@
 package uk.co.wilson.ng.ast;
 
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.ast.Identifier;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 
 public class IdentifierImpl extends NodeImpl implements Identifier {
   final String name;
