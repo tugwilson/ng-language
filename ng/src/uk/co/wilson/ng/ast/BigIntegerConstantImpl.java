@@ -2,10 +2,9 @@ package uk.co.wilson.ng.ast;
 
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
-
 import ng.ast.BigIntegerConstant;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 
 /**

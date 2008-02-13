@@ -3,10 +3,9 @@ package ng.ast;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
-
 import ng.ast.util.BinaryOperations;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 
 /**

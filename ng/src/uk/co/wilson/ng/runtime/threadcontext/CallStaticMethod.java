@@ -8,6 +8,7 @@ import java.util.Stack;
 import ng.lang.NgRuntimeException;
 import ng.runtime.metaclass.DoStaticMethodCall;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.StaticMethodCall;
 
 /**

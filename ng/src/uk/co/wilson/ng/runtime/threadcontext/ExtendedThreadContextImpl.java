@@ -27,6 +27,7 @@ import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.Coversion;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.InterpreterSupport;
 import ng.runtime.threadcontext.Misc;
 import ng.runtime.threadcontext.StaticMethodCall;
@@ -219,7 +220,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
       return result;
     }
   };
-  
+
   private final Object[] p1 = new Object[1];
   private final Object[] p2 = new Object[2];
   private final Object[] p3 = new Object[3];
@@ -551,7 +552,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object)
    */
   @Override
-  public Object[] prepareParameters(Object p1) {
+  public Object[] prepareParameters(final Object p1) {
     this.p1[0] = p1;
     return this.p1;
   }
@@ -560,7 +561,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object)
    */
   @Override
-  public Object[] prepareThreadContextAndParameters(Object p1) {
+  public Object[] prepareThreadContextAndParameters(final Object p1) {
     this.p2[0] = this;
     this.p2[1] = p1;
     return this.p2;
@@ -570,7 +571,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object[] prepareParameters(Object p1, Object p2) {
+  public Object[] prepareParameters(final Object p1, final Object p2) {
     this.p2[0] = p1;
     this.p2[1] = p2;
     return this.p2;
@@ -580,7 +581,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object[] prepareThreadContextAndParameters(Object p1, Object p2) {
+  public Object[] prepareThreadContextAndParameters(final Object p1, final Object p2) {
     this.p3[0] = this;
     this.p3[1] = p1;
     this.p3[2] = p2;
@@ -591,7 +592,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object[] prepareParameters(Object p1, Object p2, Object p3) {
+  public Object[] prepareParameters(final Object p1, final Object p2, final Object p3) {
     this.p3[0] = p1;
     this.p3[1] = p2;
     this.p3[2] = p3;
@@ -602,7 +603,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object[] prepareThreadContextAndParameters(Object p1, Object p2, Object p3) {
+  public Object[] prepareThreadContextAndParameters(final Object p1, final Object p2, final Object p3) {
     this.p4[0] = this;
     this.p4[1] = p1;
     this.p4[2] = p2;
@@ -614,7 +615,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object[] prepareParameters(Object p1, Object p2, Object p3, Object p4) {
+  public Object[] prepareParameters(final Object p1, final Object p2, final Object p3, final Object p4) {
     this.p4[0] = p1;
     this.p4[1] = p2;
     this.p4[2] = p3;
@@ -626,7 +627,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
-  public Object[] prepareThreadContextAndParameters(Object p1, Object p2, Object p3, Object p4) {
+  public Object[] prepareThreadContextAndParameters(final Object p1, final Object p2, final Object p3, final Object p4) {
     this.p5[0] = this;
     this.p5[1] = p1;
     this.p5[2] = p2;

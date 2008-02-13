@@ -3,9 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
-
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John

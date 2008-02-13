@@ -6,9 +6,9 @@ import java.util.Map;
 import java.util.Stack;
 
 import ng.runtime.metaclass.BooleanBinaryComparison;
-import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;
@@ -43,9 +43,9 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
 
   private BigDecimalBooleanComparison bigDecimalCategoryOperation = null;
 
-  private Map<MetaClass, BooleanBinaryComparison> categoryOperationMap = null;
+  private Map<Object, BooleanBinaryComparison> categoryOperationMap = null;
 
-  private final Stack<Map<MetaClass, BooleanBinaryComparison>> categoryOperationMapStack = new Stack<Map<MetaClass, BooleanBinaryComparison>>();
+  private final Stack<Map<Object, BooleanBinaryComparison>> categoryOperationMapStack = new Stack<Map<Object, BooleanBinaryComparison>>();
 
   public CharBooleanComparison getCharCategoryOperation() {
     return this.charCategoryOperation;
@@ -119,11 +119,11 @@ public abstract class BaseBooleanComparison extends BaseBinaryOperation implemen
     this.bigDecimalCategoryOperation = bigDecimalCategoryOperation;
   }
 
-  public Map<MetaClass, BooleanBinaryComparison> getCategoryOperationMap() {
+  public Map<Object, BooleanBinaryComparison> getCategoryOperationMap() {
     return this.categoryOperationMap;
   }
 
-  public void setCategoryOperationMap(final Map<MetaClass, BooleanBinaryComparison> categoryOperationMap) {
+  public void setCategoryOperationMap(final Map<Object, BooleanBinaryComparison> categoryOperationMap) {
     this.categoryOperationMap = categoryOperationMap;
   }
 
