@@ -3,8 +3,9 @@ package ng.runtime.metaclass;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
-import uk.co.wilson.ng.runtime.threadcontext.NotPerformed;
+import ng.runtime.threadcontext.ExtendedThreadContext;
+import ng.runtime.threadcontext.NotPerformed;
+
 
 
 public interface BooleanBinaryComparison extends ArithmeticBinaryOperation {

@@ -5,7 +5,6 @@ import java.math.BigInteger;
 import java.util.Map;
 
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
-import ng.runtime.metaclass.MetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteBinaryArithmeticOperation;
@@ -15,7 +14,6 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatBinaryArithme
 import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.threadcontext.NotPerformed;
 
 public interface BinaryArithmeticOperation extends BinaryOperation {
 
@@ -46,8 +44,8 @@ public interface BinaryArithmeticOperation extends BinaryOperation {
   BigDecimalBinaryArithmeticOperation getBigDecimalCategoryOperation();
   void setBigDecimalCategoryOperation(BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation);
 
-  Map<MetaClass, ArithmeticBinaryOperation> getCategoryBinaryOperationMap();
-  void setCategoryBinaryOperationMap(Map<MetaClass, ArithmeticBinaryOperation> categoryBinaryOperationMap);
+  Map<Object, ArithmeticBinaryOperation> getCategoryBinaryOperationMap();
+  void setCategoryBinaryOperationMap(Map<Object, ArithmeticBinaryOperation> categoryBinaryOperationMap);
 
   int intApply(char lhs, char rhs) throws NotPerformed;
   int intApply(char lhs, byte rhs) throws NotPerformed;

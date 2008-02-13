@@ -5,9 +5,8 @@ import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
-
 import ng.lang.NgRuntimeException;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  *

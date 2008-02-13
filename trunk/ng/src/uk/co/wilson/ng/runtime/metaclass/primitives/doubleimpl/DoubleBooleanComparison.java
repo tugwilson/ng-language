@@ -3,10 +3,9 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
-import uk.co.wilson.ng.runtime.threadcontext.NotPerformed;
-
 import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.threadcontext.ExtendedThreadContext;
+import ng.runtime.threadcontext.NotPerformed;
 
 public interface DoubleBooleanComparison extends BooleanBinaryComparison, DoubleBinaryOperation {
   boolean doApplyBoolean(ExtendedThreadContext tc, double lhs, char rhs)  throws NotPerformed;

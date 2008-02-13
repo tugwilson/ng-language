@@ -3,9 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
-
 import ng.lang.NgRuntimeException;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John

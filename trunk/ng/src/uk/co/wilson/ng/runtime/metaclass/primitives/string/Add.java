@@ -3,10 +3,9 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.string;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
-
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /*
  * Created on 21 Jan 2008

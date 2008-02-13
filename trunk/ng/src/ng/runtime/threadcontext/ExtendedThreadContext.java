@@ -1,6 +1,5 @@
-package uk.co.wilson.ng.runtime.threadcontext;
+package ng.runtime.threadcontext;
 
-import ng.runtime.threadcontext.ThreadContext;
 
 
 
@@ -37,18 +36,18 @@ public abstract class ExtendedThreadContext extends ThreadContext {
 
   public abstract Object wrap(double val);
   public abstract double unwrapToDouble(Object wrapped);
-  
+
   public abstract Object[] prepareThreadContextAndParameters();
-  
+
   public abstract Object[] prepareParameters(Object p1);
   public abstract Object[] prepareThreadContextAndParameters(Object p1);
-  
+
   public abstract Object[] prepareParameters(Object p1, Object p2);
   public abstract Object[] prepareThreadContextAndParameters(Object p1, Object p2);
-  
+
   public abstract Object[] prepareParameters(Object p1, Object p2, Object p3);
   public abstract Object[] prepareThreadContextAndParameters(Object p1, Object p2, Object p3);
-  
+
   public abstract Object[] prepareParameters(Object p1, Object p2, Object p3, Object p4);
   public abstract Object[] prepareThreadContextAndParameters(Object p1, Object p2, Object p3, Object p4);
 }

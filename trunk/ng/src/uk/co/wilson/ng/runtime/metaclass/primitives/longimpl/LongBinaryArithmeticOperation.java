@@ -3,10 +3,9 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.longimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
-import uk.co.wilson.ng.runtime.threadcontext.NotPerformed;
-
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.threadcontext.ExtendedThreadContext;
+import ng.runtime.threadcontext.NotPerformed;
 
 public interface LongBinaryArithmeticOperation extends ArithmeticBinaryOperation, LongBinaryOperation {
   long doLongApply(ExtendedThreadContext tc, long lhs, char rhs) throws NotPerformed;

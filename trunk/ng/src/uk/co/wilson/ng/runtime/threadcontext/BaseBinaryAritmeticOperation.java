@@ -4,9 +4,9 @@ import java.util.Map;
 import java.util.Stack;
 
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
-import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryArithmeticOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteBinaryArithmeticOperation;
@@ -40,9 +40,9 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
 
   private BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = null;
 
-  private Map<MetaClass, ArithmeticBinaryOperation> categoryBinaryOperationMap = null;
+  private Map<Object, ArithmeticBinaryOperation> categoryBinaryOperationMap = null;
 
-  private final Stack<Map<MetaClass, ArithmeticBinaryOperation>> categoryBinaryOperationMapStack = new Stack<Map<MetaClass, ArithmeticBinaryOperation>>();
+  private final Stack<Map<Object, ArithmeticBinaryOperation>> categoryBinaryOperationMapStack = new Stack<Map<Object, ArithmeticBinaryOperation>>();
 
   public CharBinaryArithmeticOperation getCharCategoryOperation() {
     return this.charCategoryOperation;
@@ -116,11 +116,11 @@ public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation i
     this.bigDecimalCategoryOperation = bigDecimalCategoryOperation;
   }
 
-  public Map<MetaClass, ArithmeticBinaryOperation> getCategoryBinaryOperationMap() {
+  public Map<Object, ArithmeticBinaryOperation> getCategoryBinaryOperationMap() {
     return this.categoryBinaryOperationMap;
   }
 
-  public void setCategoryBinaryOperationMap(final Map<MetaClass, ArithmeticBinaryOperation> categoryBinaryOperationMap) {
+  public void setCategoryBinaryOperationMap(final Map<Object, ArithmeticBinaryOperation> categoryBinaryOperationMap) {
     this.categoryBinaryOperationMap = categoryBinaryOperationMap;
   }
 

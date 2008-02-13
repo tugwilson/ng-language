@@ -23,7 +23,7 @@ public abstract class ThreadContext {
   public static ThreadContext getThreadContext() {
     return contexts.get();
   }
-  
+
   public abstract MetaClass getMetaClassFor(Object instance);
   public abstract MetaClass getMetaClassFor(Class<?> type);
 

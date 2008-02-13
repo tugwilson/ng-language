@@ -3,10 +3,9 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
-import uk.co.wilson.ng.runtime.threadcontext.NotPerformed;
-
 import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.threadcontext.ExtendedThreadContext;
+import ng.runtime.threadcontext.NotPerformed;
 
 public interface BigDecimalBooleanComparison extends BooleanBinaryComparison, BigDecimalBinaryOperation {
   boolean doApplyBoolean(ExtendedThreadContext tc, BigDecimal lhs, char rhs)  throws NotPerformed;

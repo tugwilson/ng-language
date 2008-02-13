@@ -45,8 +45,8 @@ public interface BooleanComparison  extends BinaryOperation {
   BigDecimalBooleanComparison getBigDecimalCategoryOperation();
   void setBigDecimalCategoryOperation(BigDecimalBooleanComparison bigDecimalCategoryOperation);
 
-  Map<MetaClass, BooleanBinaryComparison> getCategoryOperationMap();
-  void setCategoryOperationMap(Map<MetaClass, BooleanBinaryComparison> categoryOperationMap);
+  Map<Object, BooleanBinaryComparison> getCategoryOperationMap();
+  void setCategoryOperationMap(Map<Object, BooleanBinaryComparison> categoryOperationMap);
 
   boolean applyBoolean(Object lhs, Object rhs);
   boolean applyBoolean(MetaClass lhsMetaClass, Object lhs, Object rhs);
