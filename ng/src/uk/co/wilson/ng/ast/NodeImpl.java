@@ -84,22 +84,22 @@ public abstract class NodeImpl implements Node {
       return new PowerImpl();
 
     case or:
-      break;
+      return new OrImpl();
 
     case and:
-      break;
+      return new AndImpl();
 
     case xor:
-      break;
+      return new XorImpl() ;
 
     case leftShift:
-      break;
+      return new LeftShiftImpl();
 
     case rightShift:
-      break;
+      return new RightShiftImpl();
 
     case unsignedRightShift:
-      break;
+      return new UnsignedRightShiftImpl();
 
     case equals:
       return new EqualsImpl();
@@ -108,7 +108,7 @@ public abstract class NodeImpl implements Node {
       return new NotEqualsImpl();
 
     case compare:
-      break;
+      return new CompareImpl();
 
     case greaterThan:
       new GreaterThanImpl();
@@ -126,10 +126,10 @@ public abstract class NodeImpl implements Node {
       return new AsImpl();
 
     case instanceOf:
-      break;
+      return new InstanceofImpl();
     }
-
-    return null;  // TODO: remove when all the operations are implemented
+    
+    return null;  // TODO: trow a complier error exception here
   }
 
   /* (non-Javadoc)

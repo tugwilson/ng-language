@@ -24,14 +24,7 @@ import ng.runtime.NgInt;
 import ng.runtime.NgLong;
 import ng.runtime.NgShort;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.BinaryArithmeticOperation;
-import ng.runtime.threadcontext.BooleanComparison;
-import ng.runtime.threadcontext.Coversion;
-import ng.runtime.threadcontext.ExtendedThreadContext;
-import ng.runtime.threadcontext.InterpreterSupport;
-import ng.runtime.threadcontext.Misc;
-import ng.runtime.threadcontext.StaticMethodCall;
-import ng.runtime.threadcontext.ValueAccess;
+import ng.runtime.threadcontext.*;
 
 public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   private static final int getMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC;
@@ -235,7 +228,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
 
   private final ValueAccess fieldAccess = null;  // TODO: implement this
 
-  private final Coversion convert = new BaseConversion(this);
+  private final ConversionOperation convert = new BaseConversion(this);
 
   private final StaticMethodCall staticMethodCall = new CallStaticMethod(this);
 
@@ -677,7 +670,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   }
 
   @Override
-  public Coversion convert() {
+  public ConversionOperation convert() {
     return this.convert;
   }
 
@@ -732,6 +725,78 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   @Override
   public BinaryArithmeticOperation power() {
     return this.power;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#leftShift()
+   */
+  @Override
+  public ShiftOperation leftShift() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#rightShift()
+   */
+  @Override
+  public ShiftOperation rightShift() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#unsignedRightShift()
+   */
+  @Override
+  public ShiftOperation unsignedRightShift() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#and()
+   */
+  @Override
+  public BinaryLogicalOperation and() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#or()
+   */
+  @Override
+  public BinaryLogicalOperation or() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#xor()
+   */
+  @Override
+  public BinaryLogicalOperation xor() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#compare()
+   */
+  @Override
+  public IntegerComparison compare() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#instanceOf()
+   */
+  @Override
+  public BooleanComparison instanceOf() {
+    // TODO Auto-generated method stub
+    return null;
   }
 
   @Override

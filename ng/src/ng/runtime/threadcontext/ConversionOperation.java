@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
 
-public interface Coversion {
+public interface ConversionOperation {
   boolean asBoolean(Object instance);
   boolean asBoolean(MetaClass metaClass, Object instance);
   boolean asBoolean(char instance);
