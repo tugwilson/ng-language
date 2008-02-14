@@ -3,7 +3,7 @@ package uk.co.wilson.ng.ast;
 import ng.ast.DoubleConstant;
 import ng.runtime.NgDouble;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ExtendedThreadContext;
+import ng.runtime.threadcontext.ThreadContext;
 
 
 /**
@@ -24,7 +24,7 @@ public class DoubleConstantImpl extends NodeImpl implements DoubleConstant {
   }
 
 
-  public Object evaluate(final Object instance, final MetaClass metaClass, final ExtendedThreadContext tc) {
+  public Object evaluate(final Object instance, final MetaClass metaClass, final ThreadContext tc) {
     return this.value;
   }
 }
