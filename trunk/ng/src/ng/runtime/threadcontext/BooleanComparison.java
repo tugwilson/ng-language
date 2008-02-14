@@ -16,7 +16,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntBooleanComparison
 import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortBooleanComparison;
 
-public interface BooleanComparison  extends BinaryOperation {
+public interface BooleanComparison extends BinaryOperation {
 
   CharBooleanComparison getCharCategoryOperation();
   void setCharCategoryOperation(CharBooleanComparison charCategoryOperation);
@@ -182,5 +182,4 @@ public interface BooleanComparison  extends BinaryOperation {
   boolean applyBoolean(BigDecimal lhs, double rhs);
   boolean applyBoolean(BigDecimal lhs, BigInteger rhs);
   boolean applyBoolean(BigDecimal lhs, BigDecimal rhs);
-
 }

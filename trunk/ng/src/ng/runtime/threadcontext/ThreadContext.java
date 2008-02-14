@@ -40,7 +40,7 @@ public abstract class ThreadContext {
 
   public abstract ValueAccess fieldAccess();
 
-  public abstract Coversion convert();
+  public abstract ConversionOperation convert();
 
   public abstract BinaryArithmeticOperation add();
 
@@ -55,6 +55,20 @@ public abstract class ThreadContext {
   public abstract BinaryArithmeticOperation modulo();
 
   public abstract BinaryArithmeticOperation power();
+  
+  public abstract BinaryLogicalOperation and();
+
+  public abstract BinaryLogicalOperation or();
+
+  public abstract BinaryLogicalOperation xor();
+
+  public abstract ShiftOperation leftShift();
+
+  public abstract ShiftOperation rightShift();
+
+  public abstract ShiftOperation unsignedRightShift();
+
+  public abstract IntegerComparison compare();
 
   public abstract BooleanComparison equals();
 
@@ -67,4 +81,6 @@ public abstract class ThreadContext {
   public abstract BooleanComparison lessThanOrEquals();
 
   public abstract BooleanComparison greaterThanOrEquals();
+
+  public abstract BooleanComparison instanceOf();
 }
