@@ -61,7 +61,75 @@ public abstract class NodeImpl implements Node {
    * @see ng.ast.Node#newBinaryOperation()
    */
   public BinaryOperation newBinaryOperation(final BinaryOperations operation) {
-    return new BinaryOperationImpl(operation);
+    switch (operation) {
+    case plus:
+      return new PlusImpl();
+
+    case minus:
+      return new MinusImpl();
+
+    case multiply:
+      return new MultiplyImpl();
+
+    case divide:
+      return new DivideImpl();
+
+    case integerDivide:
+      return new IntegerDivideImpl();
+
+    case remainderDivide:
+      return new RemainderDivideImpl();
+
+    case power:
+      return new PowerImpl();
+
+    case or:
+      break;
+
+    case and:
+      break;
+
+    case xor:
+      break;
+
+    case leftShift:
+      break;
+
+    case rightShift:
+      break;
+
+    case unsignedRightShift:
+      break;
+
+    case equals:
+      return new EqualsImpl();
+
+    case notEquals:
+      return new NotEqualsImpl();
+
+    case compare:
+      break;
+
+    case greaterThan:
+      new GreaterThanImpl();
+
+    case lessThan:
+      return new LessThanImpl();
+
+    case greaterThanOrEquals:
+      return new GreaterThanOrEqualsImpl();
+      
+    case lessThanOrEquals:
+      return new LessThanOrEqualsImpl();
+
+    case as:
+      return new AsImpl();
+
+    case instanceOf:
+      break;
+    }
+
+    return null;  // TODO: remove when all the operations are implemented
   }
 
   /* (non-Javadoc)
