@@ -3,7 +3,7 @@ package uk.co.wilson.ng.ast;
 import ng.ast.Expression;
 import ng.ast.util.BinaryOperations;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ExtendedThreadContext;
+import ng.runtime.threadcontext.ThreadContext;
 
 public class BinaryOperationImpl extends NodeImpl implements ng.ast.BinaryOperation {
   private final BinaryOperations operation;
@@ -22,7 +22,7 @@ public class BinaryOperationImpl extends NodeImpl implements ng.ast.BinaryOperat
     this.rhs = rhs;
   }
 
-  public Object evaluate(final Object instance, final MetaClass metaClass, final ExtendedThreadContext tc) {
+  public Object evaluate(final Object instance, final MetaClass metaClass, final ThreadContext tc) {
     switch (this.operation) {
     case plus:
       return tc.add().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
@@ -43,7 +43,7 @@ public class BinaryOperationImpl extends NodeImpl implements ng.ast.BinaryOperat
       return tc.remainderDivide().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
 
     case power:
-      break;
+      return tc.power().apply(this.lhs.evaluate(instance, metaClass, tc), this.rhs.evaluate(instance, metaClass, tc));
 
     case or:
       break;
