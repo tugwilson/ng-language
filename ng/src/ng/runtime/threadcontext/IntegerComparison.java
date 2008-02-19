@@ -2,32 +2,56 @@ package ng.runtime.threadcontext;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Map;
 
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.metaclass.MetaClass;
-/*
- * Created on 14 Feb 2008
- *
- * Copyright 2008 John G. Wilson
- *
- *   Licensed under the Apache License, Version 2.0 (the "License");
- *   you may not use this file except in compliance with the License.
- *   You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *   Unless required by applicable law or agreed to in writing, software
- *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- *
- */
+import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortIntegerComparison;
 
 /**
  * @author John
  *
  */
 public interface IntegerComparison extends BinaryOperation {
+
+  CharIntegerComparison getCharCategoryOperation();
+  void setCharCategoryOperation(CharIntegerComparison charCategoryOperation);
+
+  ByteIntegerComparison getByteCategoryOperation();
+  void setByteCategoryOperation(ByteIntegerComparison byteCategoryOperation);
+
+  ShortIntegerComparison getShortCategoryOperation();
+  void setShortCategoryOperation(ShortIntegerComparison shortCategoryOperation);
+
+  IntIntegerComparison getIntCategoryOperation();
+  void setIntCategoryOperation(IntIntegerComparison intCategoryOperation);
+
+  LongIntegerComparison getLongCategoryOperation();
+  void setLongCategoryOperation(LongIntegerComparison longCategoryOperation);
+
+  FloatIntegerComparison getFloatCategoryOperation();
+  void setFloatCategoryOperation(FloatIntegerComparison floatCategoryOperation);
+
+  DoubleIntegerComparison getDoubleCategoryOperation();
+  void setDoubleCategoryOperation(DoubleIntegerComparison doubleCategoryOperation);
+
+  BigIntegerIntegerComparison getBigIntegerCategoryOperation();
+  void setBigIntegerCategoryOperation(BigIntegerIntegerComparison bigIntegerCategoryOperation);
+
+  BigDecimalIntegerComparison getBigDecimalCategoryOperation();
+  void setBigDecimalCategoryOperation(BigDecimalIntegerComparison bigDecimalCategoryOperation);
+
+  Map<Object, IntegerBinaryComparison> getCategoryOperationMap();
+  void setCategoryOperationMap(Map<Object, IntegerBinaryComparison> categoryOperationMap);
+
   int intApply(Object lhs, Object rhs);
   int intApply(MetaClass lhsMetaClass, Object lhs, Object rhs);
   int intApply(Object lhs, MetaClass rhsMetaClass, Object rhs);

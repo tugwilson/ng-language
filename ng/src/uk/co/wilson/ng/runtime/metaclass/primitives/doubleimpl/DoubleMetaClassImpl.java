@@ -3,8 +3,10 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClass {
@@ -17,6 +19,8 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
   private volatile DoubleBinaryArithmeticOperation modifiedModulo = null;
   private volatile DoubleBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile DoubleBinaryArithmeticOperation modifiedPower = null;
+
+  private volatile DoubleIntegerComparison modifiedCompare = null;
 
   private volatile DoubleBooleanComparison modifiedEquals = null;
   private volatile DoubleBooleanComparison modifiedNotEquals = null;
@@ -34,6 +38,8 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
   private final DoubleBinaryArithmeticOperation modulo = new Modulo();
   private final DoubleBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final DoubleBinaryArithmeticOperation power = new Power();
+
+  private final DoubleIntegerComparison compare = new Compare();
 
   private final DoubleBooleanComparison equals = new Equals();
   private final DoubleBooleanComparison notEquals = new NotEquals();
@@ -262,6 +268,36 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
         return this.remainderDivide;
       } else {
         return this.modifiedRemainderDivide;
+      }
+    } else {
+      return doubleCategoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+    if (modifiedCompare instanceof DoubleIntegerComparison) {
+      modifyCompare((DoubleIntegerComparison)this.modifiedConvert);
+    } else {
+      modifyCompare(new DoubleIntegerComparisonWrapper(modifiedCompare));
+    }
+  }
+
+  public void modifyCompare(final DoubleIntegerComparison modifiedCompare) {
+    this.modifiedCompare = modifiedCompare;
+  }
+
+  public DoubleIntegerComparison getOriginalCompare() {
+    return this.compare;
+  }
+
+  public DoubleIntegerComparison compare(final IntegerComparison integerComparison) {
+  final DoubleIntegerComparison doubleCategoryOperation = integerComparison.getDoubleCategoryOperation();
+
+    if (doubleCategoryOperation == null) {
+      if (this.modifiedCompare == null) {
+        return this.compare;
+      } else {
+        return this.modifiedCompare;
       }
     } else {
       return doubleCategoryOperation;

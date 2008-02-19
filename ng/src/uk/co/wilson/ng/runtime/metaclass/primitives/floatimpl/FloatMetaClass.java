@@ -3,6 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 
 public interface FloatMetaClass extends MetaClass {
 
@@ -37,6 +38,10 @@ public interface FloatMetaClass extends MetaClass {
   void modifyPower(FloatBinaryArithmeticOperation modifiedPower);
   FloatBinaryArithmeticOperation getOriginalPower();
   FloatBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation);
+
+  void modifyCompare(FloatIntegerComparison modifiedCompare);
+  FloatIntegerComparison getOriginalCompare();
+  FloatIntegerComparison compare(IntegerComparison integerComparison);
 
   void modifyEquals(FloatBooleanComparison modifiedEquals);
   FloatBooleanComparison getOriginalEquals();

@@ -31,7 +31,7 @@ public interface BinaryIntegralOperation extends BinaryOperation {
   int intApply(char lhs, byte rhs) throws NotPerformed;
   int intApply(char lhs, short rhs) throws NotPerformed;
   int intApply(char lhs, int rhs) throws NotPerformed;
-  
+
   int intApply(byte lhs, char rhs) throws NotPerformed;
   int intApply(byte lhs, byte rhs) throws NotPerformed;
   int intApply(byte lhs, short rhs) throws NotPerformed;
@@ -52,7 +52,7 @@ public interface BinaryIntegralOperation extends BinaryOperation {
   long longApply(long lhs, short rhs) throws NotPerformed;
   long longApply(long lhs, int rhs) throws NotPerformed;
   long longApply(long lhs, long rhs) throws NotPerformed;
-  
+
   BigInteger bigIntegerApply(BigInteger lhs, char rhs) throws NotPerformed;
   BigInteger bigIntegerApply(BigInteger lhs, byte rhs) throws NotPerformed;
   BigInteger bigIntegerApply(BigInteger lhs, short rhs) throws NotPerformed;

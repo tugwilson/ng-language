@@ -118,7 +118,7 @@ public abstract class NodeImpl implements Node {
 
     case greaterThanOrEquals:
       return new GreaterThanOrEqualsImpl();
-      
+
     case lessThanOrEquals:
       return new LessThanOrEqualsImpl();
 
@@ -128,7 +128,7 @@ public abstract class NodeImpl implements Node {
     case instanceOf:
       return new InstanceofImpl();
     }
-    
+
     return null;  // TODO: trow a complier error exception here
   }
 

@@ -3,6 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.biginteger;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 
 public interface BigIntegerMetaClass extends MetaClass {
 
@@ -37,6 +38,10 @@ public interface BigIntegerMetaClass extends MetaClass {
   void modifyPower(BigIntegerBinaryArithmeticOperation modifiedPower);
   BigIntegerBinaryArithmeticOperation getOriginalPower();
   BigIntegerBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation);
+
+  void modifyCompare(BigIntegerIntegerComparison modifiedCompare);
+  BigIntegerIntegerComparison getOriginalCompare();
+  BigIntegerIntegerComparison compare(IntegerComparison integerComparison);
 
   void modifyEquals(BigIntegerBooleanComparison modifiedEquals);
   BigIntegerBooleanComparison getOriginalEquals();

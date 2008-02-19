@@ -3,8 +3,10 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass {
@@ -17,6 +19,8 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   private volatile ShortBinaryArithmeticOperation modifiedModulo = null;
   private volatile ShortBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile ShortBinaryArithmeticOperation modifiedPower = null;
+
+  private volatile ShortIntegerComparison modifiedCompare = null;
 
   private volatile ShortBooleanComparison modifiedEquals = null;
   private volatile ShortBooleanComparison modifiedNotEquals = null;
@@ -34,6 +38,8 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   private final ShortBinaryArithmeticOperation modulo = new Modulo();
   private final ShortBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final ShortBinaryArithmeticOperation power = new Power();
+
+  private final ShortIntegerComparison compare = new Compare();
 
   private final ShortBooleanComparison equals = new Equals();
   private final ShortBooleanComparison notEquals = new NotEquals();
@@ -262,6 +268,36 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
         return this.remainderDivide;
       } else {
         return this.modifiedRemainderDivide;
+      }
+    } else {
+      return shortCategoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+    if (modifiedCompare instanceof ShortIntegerComparison) {
+      modifyCompare((ShortIntegerComparison)this.modifiedConvert);
+    } else {
+      modifyCompare(new ShortIntegerComparisonWrapper(modifiedCompare));
+    }
+  }
+
+  public void modifyCompare(final ShortIntegerComparison modifiedCompare) {
+    this.modifiedCompare = modifiedCompare;
+  }
+
+  public ShortIntegerComparison getOriginalCompare() {
+    return this.compare;
+  }
+
+  public ShortIntegerComparison compare(final IntegerComparison integerComparison) {
+  final ShortIntegerComparison shortCategoryOperation = integerComparison.getShortCategoryOperation();
+
+    if (shortCategoryOperation == null) {
+      if (this.modifiedCompare == null) {
+        return this.compare;
+      } else {
+        return this.modifiedCompare;
       }
     } else {
       return shortCategoryOperation;

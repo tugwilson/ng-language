@@ -3,6 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 
 public interface DoubleMetaClass extends MetaClass {
 
@@ -37,6 +38,10 @@ public interface DoubleMetaClass extends MetaClass {
   void modifyPower(DoubleBinaryArithmeticOperation modifiedPower);
   DoubleBinaryArithmeticOperation getOriginalPower();
   DoubleBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation);
+
+  void modifyCompare(DoubleIntegerComparison modifiedCompare);
+  DoubleIntegerComparison getOriginalCompare();
+  DoubleIntegerComparison compare(IntegerComparison integerComparison);
 
   void modifyEquals(DoubleBooleanComparison modifiedEquals);
   DoubleBooleanComparison getOriginalEquals();

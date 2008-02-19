@@ -55,7 +55,7 @@ public abstract class ThreadContext {
   public abstract BinaryArithmeticOperation modulo();
 
   public abstract BinaryArithmeticOperation power();
-  
+
   public abstract BinaryLogicalOperation and();
 
   public abstract BinaryLogicalOperation or();

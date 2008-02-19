@@ -6,17 +6,17 @@ import java.math.BigInteger;
 import ng.lang.NgRuntimeException;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 public class $Op extends BaseBooleanComparison {
-  public $Op(final ThreadContext tc) {
+  public $Op(final ExtendedThreadContext tc) {
     super(tc);
   }
 
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final Object rhs) {
   final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
  
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to one of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -26,7 +26,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
   final Object result = rhsMetaClass.$op(this).doReverseApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to one of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -36,7 +36,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
   final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhsMetaClass, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to one of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -46,7 +46,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final char rhs) {
   final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a char" );
     } else {
       return result;
@@ -56,7 +56,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final byte rhs) {
    final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a byte" );
     } else {
       return result;
@@ -66,7 +66,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final short rhs) {
    final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a short" );
     } else {
       return result;
@@ -76,7 +76,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final int rhs) {
    final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a int" );
     } else {
       return result;
@@ -86,7 +86,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final long rhs) {
    final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a long" );
     } else {
       return result;
@@ -96,7 +96,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final float rhs) {
    final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a float" );
     } else {
       return result;
@@ -106,7 +106,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final double rhs) {
    final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a double" );
     } else {
       return result;
@@ -116,7 +116,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final BigInteger rhs) {
    final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a BigInteger" );
     } else {
       return result;
@@ -126,7 +126,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final BigDecimal rhs) {
    final Object result = lhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a value of type " + lhs.getClass().getName() + "to a BigDecimal" );
     } else {
       return result;
@@ -136,7 +136,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final char lhs, final MetaClass rhsMetaClass, final Object rhs) {
    final Object result = rhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a char to a value of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -146,7 +146,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final byte lhs, final MetaClass rhsMetaClass, final Object rhs) {
    final Object result = rhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a byte to a value of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -156,7 +156,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final short lhs, final MetaClass rhsMetaClass, final Object rhs) {
    final Object result = rhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a short to a value of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -166,7 +166,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final int lhs, final MetaClass rhsMetaClass, final Object rhs) {
    final Object result = rhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a int to a value of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -176,7 +176,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final long lhs, final MetaClass rhsMetaClass, final Object rhs) {
    final Object result = rhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a long to a value of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -186,7 +186,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final float lhs, final MetaClass rhsMetaClass, final Object rhs) {
    final Object result = rhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a float to a value of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -196,7 +196,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final double lhs, final MetaClass rhsMetaClass, final Object rhs) {
    final Object result = rhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a double to a value of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -206,7 +206,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigInteger lhs, final MetaClass rhsMetaClass, final Object rhs) {
   final Object result = rhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a BigInteger to a value of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -216,7 +216,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigDecimal lhs, final MetaClass rhsMetaClass, final Object rhs) {
    final Object result = rhsMetaClass.$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot $verb a BigDecimal to a value of type " + rhs.getClass().getName());
     } else {
       return result;
@@ -226,7 +226,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final char lhs, final BigDecimal rhs) {
    final Object result= PrimitiveMetaClasses.getCharMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a BigDecimal");
     } else {
       return result;
@@ -236,7 +236,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final char lhs, final BigInteger rhs) {
    final Object result= PrimitiveMetaClasses.getCharMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a BigInteger");
     } else {
       return result;
@@ -246,7 +246,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final char lhs, final byte rhs) {
    final Object result= PrimitiveMetaClasses.getCharMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a byte");
     } else {
       return result;
@@ -256,7 +256,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final char lhs, final char rhs) {
    final Object result = PrimitiveMetaClasses.getCharMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a char");
     } else {
       return result;
@@ -266,7 +266,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final char lhs, final double rhs) {
    final Object result = PrimitiveMetaClasses.getCharMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a double");
     } else {
       return result;
@@ -276,7 +276,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final char lhs, final float rhs) {
    final Object result = PrimitiveMetaClasses.getCharMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a float");
     } else {
       return result;
@@ -286,7 +286,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final char lhs, final int rhs) {
    final Object result = PrimitiveMetaClasses.getCharMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to an int");
     } else {
       return result;
@@ -296,7 +296,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final char lhs, final long rhs) {
    final Object result = PrimitiveMetaClasses.getCharMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a long");
     } else {
       return result;
@@ -306,7 +306,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final char lhs, final short rhs) {
    final Object result = PrimitiveMetaClasses.getCharMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a char to a short");
     } else {
       return result;
@@ -316,7 +316,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final byte lhs, final BigDecimal rhs) {
    final Object result = PrimitiveMetaClasses.getByteMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a BigDecimal");
     } else {
       return result;
@@ -326,7 +326,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final byte lhs, final BigInteger rhs) {
    final Object result = PrimitiveMetaClasses.getByteMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a BigInteger");
     } else {
       return result;
@@ -336,7 +336,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final byte lhs, final byte rhs) {
    final Object result = PrimitiveMetaClasses.getByteMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a byte");
     } else {
       return result;
@@ -346,7 +346,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final byte lhs, final char rhs) {
    final Object result = PrimitiveMetaClasses.getByteMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a char");
     } else {
       return result;
@@ -356,7 +356,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final byte lhs, final double rhs) {
    final Object result = PrimitiveMetaClasses.getByteMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a double");
     } else {
       return result;
@@ -366,7 +366,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final byte lhs, final float rhs) {
    final Object result = PrimitiveMetaClasses.getByteMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a float");
     } else {
       return result;
@@ -376,7 +376,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final byte lhs, final int rhs) {
    final Object result = PrimitiveMetaClasses.getByteMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to an int");
     } else {
       return result;
@@ -386,7 +386,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final byte lhs, final long rhs) {
    final Object result = PrimitiveMetaClasses.getByteMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a long");
     } else {
       return result;
@@ -396,7 +396,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final byte lhs, final short rhs) {
    final Object result = PrimitiveMetaClasses.getByteMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a byte to a short");
     } else {
       return result;
@@ -407,7 +407,7 @@ public class $Op extends BaseBooleanComparison {
    final Object result = PrimitiveMetaClasses.getShortMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a BigDecimal");
     } else {
       return result;
@@ -417,7 +417,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final short lhs, final BigInteger rhs) {
    final Object result = PrimitiveMetaClasses.getShortMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a BigInteger");
     } else {
       return result;
@@ -427,7 +427,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final short lhs, final byte rhs) {
    final Object result = PrimitiveMetaClasses.getShortMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a char");
     } else {
       return result;
@@ -437,7 +437,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final short lhs, final char rhs) {
    final Object result = PrimitiveMetaClasses.getShortMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a char");
     } else {
       return result;
@@ -447,7 +447,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final short lhs, final double rhs) {
    final Object result = PrimitiveMetaClasses.getShortMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a double");
     } else {
       return result;
@@ -457,7 +457,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final short lhs, final float rhs) {
    final Object result = PrimitiveMetaClasses.getShortMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a float");
     } else {
       return result;
@@ -467,7 +467,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final short lhs, final int rhs) {
    final Object result = PrimitiveMetaClasses.getShortMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to an int");
     } else {
       return result;
@@ -477,7 +477,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final short lhs, final long rhs) {
    final Object result = PrimitiveMetaClasses.getShortMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a long");
     } else {
       return result;
@@ -487,7 +487,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final short lhs, final short rhs) {
    final Object result = PrimitiveMetaClasses.getShortMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a short to a short");
     } else {
       return result;
@@ -497,7 +497,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final int lhs, final BigDecimal rhs) {
    final Object result = PrimitiveMetaClasses.getIntMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a BigDecimal");
     } else {
       return result;
@@ -507,7 +507,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final int lhs, final BigInteger rhs) {
    final Object result = PrimitiveMetaClasses.getIntMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a BigInteger");
     } else {
       return result;
@@ -517,7 +517,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final int lhs, final byte rhs) {
    final Object result = PrimitiveMetaClasses.getIntMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a byte");
     } else {
       return result;
@@ -527,7 +527,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final int lhs, final char rhs) {
    final Object result = PrimitiveMetaClasses.getIntMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a char");
     } else {
       return result;
@@ -537,7 +537,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final int lhs, final double rhs) {
    final Object result = PrimitiveMetaClasses.getIntMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a double");
     } else {
       return result;
@@ -547,7 +547,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final int lhs, final float rhs) {
    final Object result = PrimitiveMetaClasses.getIntMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a float");
     } else {
       return result;
@@ -557,7 +557,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final int lhs, final int rhs) {
    final Object result = PrimitiveMetaClasses.getIntMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to an int");
     } else {
       return result;
@@ -567,7 +567,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final int lhs, final long rhs) {
    final Object result = PrimitiveMetaClasses.getIntMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a long");
     } else {
       return result;
@@ -577,7 +577,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final int lhs, final short rhs) {
    final Object result = PrimitiveMetaClasses.getIntMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb an int to a short");
     } else {
       return result;
@@ -587,7 +587,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final long lhs, final BigDecimal rhs) {
    final Object result = PrimitiveMetaClasses.getLongMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a BigDecimal");
     } else {
       return result;
@@ -597,7 +597,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final long lhs, final BigInteger rhs) {
    final Object result = PrimitiveMetaClasses.getLongMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a BigInteger");
     } else {
       return result;
@@ -607,7 +607,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final long lhs, final byte rhs) {
    final Object result = PrimitiveMetaClasses.getLongMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a byte");
     } else {
       return result;
@@ -617,7 +617,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final long lhs, final char rhs) {
    final Object result = PrimitiveMetaClasses.getLongMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a char");
     } else {
       return result;
@@ -627,7 +627,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final long lhs, final double rhs) {
    final Object result = PrimitiveMetaClasses.getLongMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a double");
     } else {
       return result;
@@ -637,7 +637,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final long lhs, final float rhs) {
    final Object result = PrimitiveMetaClasses.getLongMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a float");
     } else {
       return result;
@@ -647,7 +647,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final long lhs, final int rhs) {
    final Object result = PrimitiveMetaClasses.getLongMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to an int");
     } else {
       return result;
@@ -657,7 +657,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final long lhs, final long rhs) {
    final Object result = PrimitiveMetaClasses.getLongMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a long");
     } else {
       return result;
@@ -667,7 +667,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final long lhs, final short rhs) {
    final Object result = PrimitiveMetaClasses.getLongMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a long to a short");
     } else {
       return result;
@@ -677,7 +677,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final float lhs, final BigDecimal rhs) {
    final Object result = PrimitiveMetaClasses.getFloatMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a BigDecimal");
     } else {
       return result;
@@ -687,7 +687,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final float lhs, final BigInteger rhs) {
    final Object result = PrimitiveMetaClasses.getFloatMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a BigInteger");
     } else {
       return result;
@@ -697,7 +697,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final float lhs, final byte rhs) {
    final Object result = PrimitiveMetaClasses.getFloatMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a byte");
     } else {
       return result;
@@ -707,7 +707,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final float lhs, final char rhs) {
    final Object result = PrimitiveMetaClasses.getFloatMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a char");
     } else {
       return result;
@@ -717,7 +717,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final float lhs, final double rhs) {
   final Object result = PrimitiveMetaClasses.getFloatMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a double");
     } else {
       return result;
@@ -727,7 +727,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final float lhs, final float rhs) {
    final Object result = PrimitiveMetaClasses.getFloatMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a float");
     } else {
       return result;
@@ -737,7 +737,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final float lhs, final int rhs) {
    final Object result = PrimitiveMetaClasses.getFloatMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to an int");
     } else {
       return result;
@@ -747,7 +747,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final float lhs, final long rhs) {
    final Object result = PrimitiveMetaClasses.getFloatMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a long");
     } else {
       return result;
@@ -757,7 +757,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final float lhs, final short rhs) {
    final Object result = PrimitiveMetaClasses.getFloatMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a float to a short");
     } else {
       return result;
@@ -767,7 +767,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final double lhs, final BigDecimal rhs) {
    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a BigDecimal");
     } else {
       return result;
@@ -777,7 +777,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final double lhs, final BigInteger rhs) {
    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a BigInteger");
     } else {
       return result;
@@ -787,7 +787,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final double lhs, final byte rhs) {
    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a byte");
     } else {
       return result;
@@ -797,7 +797,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final double lhs, final char rhs) {
    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a char");
     } else {
       return result;
@@ -807,7 +807,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final double lhs, final double rhs) {
    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a double");
     } else {
       return result;
@@ -817,7 +817,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final double lhs, final float rhs) {
    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a float");
     } else {
       return result;
@@ -827,7 +827,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final double lhs, final int rhs) {
    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to an int");
     } else {
       return result;
@@ -837,7 +837,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final double lhs, final long rhs) {
    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a long");
     } else {
       return result;
@@ -847,7 +847,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final double lhs, final short rhs) {
    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a double to a short");
     } else {
       return result;
@@ -857,7 +857,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigInteger lhs, final BigDecimal rhs) {
    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a BigDecimal");
     } else {
       return result;
@@ -867,7 +867,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigInteger lhs, final BigInteger rhs) {
    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a BigInteger");
     } else {
       return result;
@@ -877,7 +877,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigInteger lhs, final byte rhs) {
    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a byte");
     } else {
       return result;
@@ -887,7 +887,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigInteger lhs, final char rhs) {
    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a char");
     } else {
       return result;
@@ -897,7 +897,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigInteger lhs, final double rhs) {
    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a double");
     } else {
       return result;
@@ -907,7 +907,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigInteger lhs, final float rhs) {
    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a float");
     } else {
       return result;
@@ -917,7 +917,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigInteger lhs, final int rhs) {
    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to an int");
     } else {
       return result;
@@ -927,7 +927,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigInteger lhs, final long rhs) {
    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a long");
     } else {
       return result;
@@ -937,7 +937,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigInteger lhs, final short rhs) {
    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigInteger to a short");
     } else {
       return result;
@@ -947,7 +947,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigDecimal lhs, final BigDecimal rhs) {
    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a BigDecimal");
     } else {
       return result;
@@ -957,7 +957,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigDecimal lhs, final BigInteger rhs) {
    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a BigInteger");
     } else {
       return result;
@@ -967,7 +967,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigDecimal lhs, final byte rhs) {
    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a byte");
     } else {
       return result;
@@ -977,7 +977,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigDecimal lhs, final char rhs) {
    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a char");
     } else {
       return result;
@@ -987,7 +987,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigDecimal lhs, final double rhs) {
    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a double");
     } else {
       return result;
@@ -997,7 +997,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigDecimal lhs, final float rhs) {
    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a float");
     } else {
       return result;
@@ -1007,7 +1007,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigDecimal lhs, final int rhs) {
    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to an int");
     } else {
       return result;
@@ -1017,7 +1017,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigDecimal lhs, final long rhs) {
    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a long");
     } else {
       return result;
@@ -1027,7 +1027,7 @@ public class $Op extends BaseBooleanComparison {
   public Object apply(final BigDecimal lhs, final short rhs) {
    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().$op(this).doApply(this.tc, lhs, rhs);
 
-    if (result == ThreadContext.NOT_PERFORMED) {
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Standard behaviour has been overridden and now it is not possible to $verb a BigDecimal to a short");
     } else {
       return result;

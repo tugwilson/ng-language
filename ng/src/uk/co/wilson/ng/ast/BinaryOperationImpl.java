@@ -15,6 +15,6 @@ public abstract class BinaryOperationImpl extends NodeImpl implements ng.ast.Bin
   public void setRhs(final Expression rhs) {
     this.rhs = rhs;
   }
-  
+
   public abstract Object evaluate(Object instance, MetaClass metaClass, ThreadContext tc);
 }

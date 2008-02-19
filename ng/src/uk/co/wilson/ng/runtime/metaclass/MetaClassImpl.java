@@ -8,8 +8,11 @@ import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.BooleanBinaryComparisonNoopImpl;
 import ng.runtime.metaclass.Conversion;
 import ng.runtime.metaclass.ConversionNoopImpl;
+import ng.runtime.metaclass.IntegerBinaryComparison;
+import ng.runtime.metaclass.IntegerBinaryComparisonNoopImpl;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 
 /**
  * @author John
@@ -26,6 +29,8 @@ public class MetaClassImpl extends BaseMetaClass {
   protected volatile ArithmeticBinaryOperation modifiedModulo = null;
   protected volatile ArithmeticBinaryOperation modifiedRemainderDivide = null;
   protected volatile ArithmeticBinaryOperation modifiedPower = null;
+
+  protected volatile IntegerBinaryComparison modifiedCompare = null;
 
   protected volatile BooleanBinaryComparison modifiedEquals = null;
   protected volatile BooleanBinaryComparison modifiedNotEquals = null;
@@ -237,6 +242,32 @@ public class MetaClassImpl extends BaseMetaClass {
       return getOriginalPower();
     } else {
       return this.modifiedPower;
+    }
+  }
+
+  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+    this.modifiedCompare = modifiedCompare;
+  }
+
+  public IntegerBinaryComparison getOriginalCompare() {
+    return IntegerBinaryComparisonNoopImpl.instance;
+  }
+
+  public IntegerBinaryComparison compare(final IntegerComparison integerComparison) {
+  final Map<Object, IntegerBinaryComparison> categoryOperationMap = integerComparison.getCategoryOperationMap();
+
+    if (categoryOperationMap != null) {
+    final IntegerBinaryComparison categoryIntegerBinaryComparison = categoryOperationMap.get(this);
+
+      if (categoryIntegerBinaryComparison != null) {
+        return categoryIntegerBinaryComparison;
+      }
+    }
+
+    if (this.modifiedCompare == null) {
+      return getOriginalCompare();
+    } else {
+      return this.modifiedCompare;
     }
   }
 
