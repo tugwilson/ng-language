@@ -5,8 +5,10 @@ import java.math.BigDecimal;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimalMetaClass {
@@ -19,6 +21,8 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
   private volatile BigDecimalBinaryArithmeticOperation modifiedModulo = null;
   private volatile BigDecimalBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile BigDecimalBinaryArithmeticOperation modifiedPower = null;
+
+  private volatile BigDecimalIntegerComparison modifiedCompare = null;
 
   private volatile BigDecimalBooleanComparison modifiedEquals = null;
   private volatile BigDecimalBooleanComparison modifiedNotEquals = null;
@@ -36,6 +40,8 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
   private final BigDecimalBinaryArithmeticOperation modulo = new Modulo();
   private final BigDecimalBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final BigDecimalBinaryArithmeticOperation power = new Power();
+
+  private final BigDecimalIntegerComparison compare = new Compare();
 
   private final BigDecimalBooleanComparison equals = new Equals();
   private final BigDecimalBooleanComparison notEquals = new NotEquals();
@@ -270,8 +276,38 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     }
   }
 
-  public void modifyEquals(final BooleanBinaryComparison modifiedRemainderDivide) {
-    modifyEquals(fixOperationType(modifiedRemainderDivide));
+  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+    if (modifiedCompare instanceof BigDecimalIntegerComparison) {
+      modifyCompare((BigDecimalIntegerComparison)this.modifiedConvert);
+    } else {
+      modifyCompare(new BigDecimalIntegerComparisonWrapper(modifiedCompare));
+    }
+  }
+
+  public void modifyCompare(final BigDecimalIntegerComparison modifiedCompare) {
+    this.modifiedCompare = modifiedCompare;
+  }
+
+  public BigDecimalIntegerComparison getOriginalCompare() {
+    return this.compare;
+  }
+
+  public BigDecimalIntegerComparison compare(final IntegerComparison integerComparison) {
+  final BigDecimalIntegerComparison bigDecimalCategoryOperation = integerComparison.getBigDecimalCategoryOperation();
+
+    if (bigDecimalCategoryOperation == null) {
+      if (this.modifiedCompare == null) {
+        return this.compare;
+      } else {
+        return this.modifiedCompare;
+      }
+    } else {
+      return bigDecimalCategoryOperation;
+    }
+  }
+
+  public void modifyEquals(final BooleanBinaryComparison modifiedEquals) {
+    modifyEquals(fixOperationType(modifiedEquals));
   }
 
   public void modifyEquals(final BigDecimalBooleanComparison modifiedEquals) {

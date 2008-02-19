@@ -46,13 +46,13 @@ public interface BinaryArithmeticOperation extends BinaryIntegralOperation {
 
   Map<Object, ArithmeticBinaryOperation> getCategoryBinaryOperationMap();
   void setCategoryBinaryOperationMap(Map<Object, ArithmeticBinaryOperation> categoryBinaryOperationMap);
-    
+
   long longApply(char lhs, long rhs) throws NotPerformed;
   float floatApply(char lhs, float rhs) throws NotPerformed;
   double doubleApply(char lhs, double rhs) throws NotPerformed;
   BigDecimal bigDecimalApply(char lhs, BigDecimal rhs) throws NotPerformed;
   BigInteger bigIntegerApply(char lhs, BigInteger rhs) throws NotPerformed;
-  
+
   long longApply(byte lhs, long rhs) throws NotPerformed;
   float floatApply(byte lhs, float rhs) throws NotPerformed;
   double doubleApply(byte lhs, double rhs) throws NotPerformed;
@@ -95,7 +95,7 @@ public interface BinaryArithmeticOperation extends BinaryIntegralOperation {
   double doubleApply(double lhs, double rhs) throws NotPerformed;
   double doubleApply(double lhs, BigInteger rhs) throws NotPerformed;
   BigDecimal bigDecimalApply(double lhs, BigDecimal rhs) throws NotPerformed;
-  
+
   float floatApply(BigInteger lhs, float rhs) throws NotPerformed;
   double doubleApply(BigInteger lhs, double rhs) throws NotPerformed;
   BigDecimal bigDecimalApply(BigInteger lhs, BigDecimal rhs) throws NotPerformed;

@@ -3,8 +3,10 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.intimpl;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
@@ -17,6 +19,8 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   private volatile IntBinaryArithmeticOperation modifiedModulo = null;
   private volatile IntBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile IntBinaryArithmeticOperation modifiedPower = null;
+
+  private volatile IntIntegerComparison modifiedCompare = null;
 
   private volatile IntBooleanComparison modifiedEquals = null;
   private volatile IntBooleanComparison modifiedNotEquals = null;
@@ -34,6 +38,8 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   private final IntBinaryArithmeticOperation modulo = new Modulo();
   private final IntBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final IntBinaryArithmeticOperation power = new Power();
+
+  private final IntIntegerComparison compare = new Compare();
 
   private final IntBooleanComparison equals = new Equals();
   private final IntBooleanComparison notEquals = new NotEquals();
@@ -262,6 +268,36 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
         return this.remainderDivide;
       } else {
         return this.modifiedRemainderDivide;
+      }
+    } else {
+      return intCategoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+    if (modifiedCompare instanceof IntIntegerComparison) {
+      modifyCompare((IntIntegerComparison)this.modifiedConvert);
+    } else {
+      modifyCompare(new IntIntegerComparisonWrapper(modifiedCompare));
+    }
+  }
+
+  public void modifyCompare(final IntIntegerComparison modifiedCompare) {
+    this.modifiedCompare = modifiedCompare;
+  }
+
+  public IntIntegerComparison getOriginalCompare() {
+    return this.compare;
+  }
+
+  public IntIntegerComparison compare(final IntegerComparison integerComparison) {
+  final IntIntegerComparison intCategoryOperation = integerComparison.getIntCategoryOperation();
+
+    if (intCategoryOperation == null) {
+      if (this.modifiedCompare == null) {
+        return this.compare;
+      } else {
+        return this.modifiedCompare;
       }
     } else {
       return intCategoryOperation;

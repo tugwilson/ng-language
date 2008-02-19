@@ -246,6 +246,8 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
 
   private final BinaryArithmeticOperation power = new Power(this);
 
+  private final IntegerComparison compare = new Compare(this);
+
   private final BooleanComparison equals = new Equals(this);
 
   private final BooleanComparison notEquals = new NotEquals(this);
@@ -786,8 +788,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    */
   @Override
   public IntegerComparison compare() {
-    // TODO Auto-generated method stub
-    return null;
+    return this.compare;
   }
 
   /* (non-JavaDoc)

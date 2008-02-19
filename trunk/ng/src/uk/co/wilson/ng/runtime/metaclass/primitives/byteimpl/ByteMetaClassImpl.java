@@ -3,8 +3,10 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 
@@ -19,6 +21,8 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
   private volatile ByteBinaryArithmeticOperation modifiedModulo = null;
   private volatile ByteBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile ByteBinaryArithmeticOperation modifiedPower = null;
+
+  private volatile ByteIntegerComparison modifiedCompare = null;
 
   private volatile ByteBooleanComparison modifiedEquals = null;
   private volatile ByteBooleanComparison modifiedNotEquals = null;
@@ -36,6 +40,8 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
   private final ByteBinaryArithmeticOperation modulo = new Modulo();
   private final ByteBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final ByteBinaryArithmeticOperation power = new Power();
+
+  private final ByteIntegerComparison compare = new Compare();
 
   private final ByteBooleanComparison equals = new Equals();
   private final ByteBooleanComparison notEquals = new NotEquals();
@@ -264,6 +270,36 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
         return this.remainderDivide;
       } else {
         return this.modifiedRemainderDivide;
+      }
+    } else {
+      return byteCategoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+    if (modifiedCompare instanceof ByteIntegerComparison) {
+      modifyCompare((ByteIntegerComparison)this.modifiedConvert);
+    } else {
+      modifyCompare(new ByteIntegerComparisonWrapper(modifiedCompare));
+    }
+  }
+
+  public void modifyCompare(final ByteIntegerComparison modifiedCompare) {
+    this.modifiedCompare = modifiedCompare;
+  }
+
+  public ByteIntegerComparison getOriginalCompare() {
+    return this.compare;
+  }
+
+  public ByteIntegerComparison compare(final IntegerComparison integerComparison) {
+  final ByteIntegerComparison byteCategoryOperation = integerComparison.getByteCategoryOperation();
+
+    if (byteCategoryOperation == null) {
+      if (this.modifiedCompare == null) {
+        return this.compare;
+      } else {
+        return this.modifiedCompare;
       }
     } else {
       return byteCategoryOperation;

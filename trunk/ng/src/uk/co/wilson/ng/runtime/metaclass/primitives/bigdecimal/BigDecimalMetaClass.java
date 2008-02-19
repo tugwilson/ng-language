@@ -3,6 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 
 public interface BigDecimalMetaClass extends MetaClass {
 
@@ -37,6 +38,10 @@ public interface BigDecimalMetaClass extends MetaClass {
   void modifyPower(BigDecimalBinaryArithmeticOperation modifiedPower);
   BigDecimalBinaryArithmeticOperation getOriginalPower();
   BigDecimalBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation);
+
+  void modifyCompare(BigDecimalIntegerComparison modifiedCompare);
+  BigDecimalIntegerComparison getOriginalCompare();
+  BigDecimalIntegerComparison compare(IntegerComparison booleanComparison);
 
   void modifyEquals(BigDecimalBooleanComparison modifiedEquals);
   BigDecimalBooleanComparison getOriginalEquals();

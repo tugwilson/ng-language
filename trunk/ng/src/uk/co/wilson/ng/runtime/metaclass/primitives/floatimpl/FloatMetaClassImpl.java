@@ -3,8 +3,10 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 
@@ -18,6 +20,8 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
   private volatile FloatBinaryArithmeticOperation modifiedModulo = null;
   private volatile FloatBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile FloatBinaryArithmeticOperation modifiedPower = null;
+
+  private volatile FloatIntegerComparison modifiedCompare = null;
 
   private volatile FloatBooleanComparison modifiedEquals = null;
   private volatile FloatBooleanComparison modifiedNotEquals = null;
@@ -35,6 +39,8 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
   private final FloatBinaryArithmeticOperation modulo = new Modulo();
   private final FloatBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final FloatBinaryArithmeticOperation power = new Power();
+
+  private final FloatIntegerComparison compare = new Compare();
 
   private final FloatBooleanComparison equals = new Equals();
   private final FloatBooleanComparison notEquals = new NotEquals();
@@ -263,6 +269,36 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
         return this.remainderDivide;
       } else {
         return this.modifiedRemainderDivide;
+      }
+    } else {
+      return floatCategoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+    if (modifiedCompare instanceof FloatIntegerComparison) {
+      modifyCompare((FloatIntegerComparison)this.modifiedConvert);
+    } else {
+      modifyCompare(new FloatIntegerComparisonWrapper(modifiedCompare));
+    }
+  }
+
+  public void modifyCompare(final FloatIntegerComparison modifiedCompare) {
+    this.modifiedCompare = modifiedCompare;
+  }
+
+  public FloatIntegerComparison getOriginalCompare() {
+    return this.compare;
+  }
+
+  public FloatIntegerComparison compare(final IntegerComparison integerComparison) {
+  final FloatIntegerComparison floatCategoryOperation = integerComparison.getFloatCategoryOperation();
+
+    if (floatCategoryOperation == null) {
+      if (this.modifiedCompare == null) {
+        return this.compare;
+      } else {
+        return this.modifiedCompare;
       }
     } else {
       return floatCategoryOperation;

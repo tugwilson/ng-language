@@ -3,8 +3,10 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.longimpl;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
@@ -17,6 +19,8 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   private volatile LongBinaryArithmeticOperation modifiedModulo = null;
   private volatile LongBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile LongBinaryArithmeticOperation modifiedPower = null;
+
+  private volatile LongIntegerComparison modifiedCompare = null;
 
   private volatile LongBooleanComparison modifiedEquals = null;
   private volatile LongBooleanComparison modifiedNotEquals = null;
@@ -34,6 +38,8 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   private final LongBinaryArithmeticOperation modulo = new Modulo();
   private final LongBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final LongBinaryArithmeticOperation power = new Power();
+
+  private final LongIntegerComparison compare = new Compare();
 
   private final LongBooleanComparison equals = new Equals();
   private final LongBooleanComparison notEquals = new NotEquals();
@@ -262,6 +268,36 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
         return this.remainderDivide;
       } else {
         return this.modifiedRemainderDivide;
+      }
+    } else {
+      return longCategoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+    if (modifiedCompare instanceof LongIntegerComparison) {
+      modifyCompare((LongIntegerComparison)this.modifiedConvert);
+    } else {
+      modifyCompare(new LongIntegerComparisonWrapper(modifiedCompare));
+    }
+  }
+
+  public void modifyCompare(final LongIntegerComparison modifiedCompare) {
+    this.modifiedCompare = modifiedCompare;
+  }
+
+  public LongIntegerComparison getOriginalCompare() {
+    return this.compare;
+  }
+
+  public LongIntegerComparison compare(final IntegerComparison integerComparison) {
+  final LongIntegerComparison longCategoryOperation = integerComparison.getLongCategoryOperation();
+
+    if (longCategoryOperation == null) {
+      if (this.modifiedCompare == null) {
+        return this.compare;
+      } else {
+        return this.modifiedCompare;
       }
     } else {
       return longCategoryOperation;

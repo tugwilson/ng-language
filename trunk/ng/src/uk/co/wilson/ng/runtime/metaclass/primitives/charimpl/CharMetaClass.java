@@ -3,6 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.charimpl;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 
 public interface CharMetaClass extends MetaClass {
 
@@ -37,6 +38,10 @@ public interface CharMetaClass extends MetaClass {
   void modifyPower(CharBinaryArithmeticOperation modifiedPower);
   CharBinaryArithmeticOperation getOriginalPower();
   CharBinaryArithmeticOperation power(BinaryArithmeticOperation binaryArithmeticOperation);
+
+  void modifyCompare(CharIntegerComparison modifiedCompare);
+  CharIntegerComparison getOriginalCompare();
+  CharIntegerComparison compare(IntegerComparison integerComparison);
 
   void modifyEquals(CharBooleanComparison modifiedEquals);
   CharBooleanComparison getOriginalEquals();

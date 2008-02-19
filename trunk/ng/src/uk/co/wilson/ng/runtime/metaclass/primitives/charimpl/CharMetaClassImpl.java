@@ -3,8 +3,10 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.charimpl;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
@@ -18,6 +20,8 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private volatile CharBinaryArithmeticOperation modifiedModulo = null;
   private volatile CharBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile CharBinaryArithmeticOperation modifiedPower = null;
+
+  private volatile CharIntegerComparison modifiedCompare = null;
 
   private volatile CharBooleanComparison modifiedEquals = null;
   private volatile CharBooleanComparison modifiedNotEquals = null;
@@ -35,6 +39,8 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private final CharBinaryArithmeticOperation modulo = new Modulo();
   private final CharBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final CharBinaryArithmeticOperation power = new Power();
+
+  private final CharIntegerComparison compare = new Compare();
 
   private final CharBooleanComparison equals = new Equals();
   private final CharBooleanComparison notEquals = new NotEquals();
@@ -263,6 +269,36 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
         return this.remainderDivide;
       } else {
         return this.modifiedRemainderDivide;
+      }
+    } else {
+      return charCategoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+    if (modifiedCompare instanceof CharIntegerComparison) {
+      modifyCompare((CharIntegerComparison)this.modifiedConvert);
+    } else {
+      modifyCompare(new CharIntegerComparisonWrapper(modifiedCompare));
+    }
+  }
+
+  public void modifyCompare(final CharIntegerComparison modifiedCompare) {
+    this.modifiedCompare = modifiedCompare;
+  }
+
+  public CharIntegerComparison getOriginalCompare() {
+    return this.compare;
+  }
+
+  public CharIntegerComparison compare(final IntegerComparison integerComparison) {
+  final CharIntegerComparison charCategoryOperation = integerComparison.getCharCategoryOperation();
+
+    if (charCategoryOperation == null) {
+      if (this.modifiedCompare == null) {
+        return this.compare;
+      } else {
+        return this.modifiedCompare;
       }
     } else {
       return charCategoryOperation;

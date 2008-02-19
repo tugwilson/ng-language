@@ -471,48 +471,48 @@ public class BooleanComparisonTest extends TestCase {
       assertTrue(op.applyBoolean(NgChar.valueOf((char)lhsTrue[i]), charMetaClass, NgChar.valueOf((char)rhsTrue[i])));
       assertTrue(op.applyBoolean(NgShort.valueOf((short)lhsTrue[i]), charMetaClass, NgChar.valueOf((char)rhsTrue[i])));
       assertTrue(op.applyBoolean(NgInt.valueOf(lhsTrue[i]), charMetaClass, NgChar.valueOf((char)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgLong.valueOf((long)lhsTrue[i]), charMetaClass, (Object)NgChar.valueOf((char)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgFloat.valueOf((float)lhsTrue[i]), charMetaClass, (Object)NgChar.valueOf((char)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgDouble.valueOf((double)lhsTrue[i]), charMetaClass, (Object)NgChar.valueOf((char)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgLong.valueOf(lhsTrue[i]), charMetaClass, NgChar.valueOf((char)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgFloat.valueOf(lhsTrue[i]), charMetaClass, NgChar.valueOf((char)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgDouble.valueOf(lhsTrue[i]), charMetaClass, NgChar.valueOf((char)rhsTrue[i])));
       assertTrue(op.applyBoolean((Object)BigInteger.valueOf(lhsTrue[i]), charMetaClass, (Object)NgChar.valueOf((char)rhsTrue[i])));
       assertTrue(op.applyBoolean((Object)BigDecimal.valueOf(lhsTrue[i]), charMetaClass, (Object)NgChar.valueOf((char)rhsTrue[i])));
 
-      assertTrue(op.applyBoolean((Object)NgByte.valueOf((byte)lhsTrue[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgChar.valueOf((char)lhsTrue[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgShort.valueOf((short)lhsTrue[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgInt.valueOf((int)lhsTrue[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgLong.valueOf((long)lhsTrue[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgFloat.valueOf((float)lhsTrue[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgDouble.valueOf((double)lhsTrue[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgByte.valueOf((byte)lhsTrue[i]), shortMetaClass, NgShort.valueOf((short)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgChar.valueOf((char)lhsTrue[i]), shortMetaClass, NgShort.valueOf((short)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgShort.valueOf((short)lhsTrue[i]), shortMetaClass, NgShort.valueOf((short)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgInt.valueOf(lhsTrue[i]), shortMetaClass, NgShort.valueOf((short)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgLong.valueOf(lhsTrue[i]), shortMetaClass, NgShort.valueOf((short)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgFloat.valueOf(lhsTrue[i]), shortMetaClass, NgShort.valueOf((short)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgDouble.valueOf(lhsTrue[i]), shortMetaClass, NgShort.valueOf((short)rhsTrue[i])));
       assertTrue(op.applyBoolean((Object)BigInteger.valueOf(lhsTrue[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsTrue[i])));
       assertTrue(op.applyBoolean((Object)BigDecimal.valueOf(lhsTrue[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsTrue[i])));
 
-      assertTrue(op.applyBoolean((Object)NgByte.valueOf((byte)lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf((int)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgChar.valueOf((char)lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf((int)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgShort.valueOf((short)lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf((int)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgInt.valueOf((int)lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf((int)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgLong.valueOf((long)lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf((int)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgFloat.valueOf((float)lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf((int)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgDouble.valueOf((double)lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf((int)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)BigInteger.valueOf(lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf((int)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)BigDecimal.valueOf(lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf((int)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgByte.valueOf((byte)lhsTrue[i]), intMetaClass, NgInt.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgChar.valueOf((char)lhsTrue[i]), intMetaClass, NgInt.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgShort.valueOf((short)lhsTrue[i]), intMetaClass, NgInt.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgInt.valueOf(lhsTrue[i]), intMetaClass, NgInt.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgLong.valueOf(lhsTrue[i]), intMetaClass, NgInt.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgFloat.valueOf(lhsTrue[i]), intMetaClass, NgInt.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgDouble.valueOf(lhsTrue[i]), intMetaClass, NgInt.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean((Object)BigInteger.valueOf(lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean((Object)BigDecimal.valueOf(lhsTrue[i]), intMetaClass, (Object)NgInt.valueOf(rhsTrue[i])));
 
-      assertTrue(op.applyBoolean((Object)NgByte.valueOf((byte)lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf((long)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgChar.valueOf((char)lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf((long)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgShort.valueOf((short)lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf((long)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgInt.valueOf((int)lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf((long)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgLong.valueOf((long)lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf((long)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgFloat.valueOf((float)lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf((long)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgDouble.valueOf((double)lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf((long)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)BigInteger.valueOf(lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf((long)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)BigDecimal.valueOf(lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf((long)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgByte.valueOf((byte)lhsTrue[i]), longMetaClass, NgLong.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgChar.valueOf((char)lhsTrue[i]), longMetaClass, NgLong.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgShort.valueOf((short)lhsTrue[i]), longMetaClass, NgLong.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgInt.valueOf(lhsTrue[i]), longMetaClass, NgLong.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgLong.valueOf(lhsTrue[i]), longMetaClass, NgLong.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgFloat.valueOf(lhsTrue[i]), longMetaClass, NgLong.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgDouble.valueOf(lhsTrue[i]), longMetaClass, NgLong.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean((Object)BigInteger.valueOf(lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean((Object)BigDecimal.valueOf(lhsTrue[i]), longMetaClass, (Object)NgLong.valueOf(rhsTrue[i])));
 
-      assertTrue(op.applyBoolean((Object)NgByte.valueOf((byte)lhsTrue[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgChar.valueOf((char)lhsTrue[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgShort.valueOf((short)lhsTrue[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgInt.valueOf((int)lhsTrue[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgLong.valueOf((long)lhsTrue[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsTrue[i])));
-      assertTrue(op.applyBoolean((Object)NgFloat.valueOf((float)lhsTrue[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgByte.valueOf((byte)lhsTrue[i]), floatMetaClass, NgFloat.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgChar.valueOf((char)lhsTrue[i]), floatMetaClass, NgFloat.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgShort.valueOf((short)lhsTrue[i]), floatMetaClass, NgFloat.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgInt.valueOf(lhsTrue[i]), floatMetaClass, NgFloat.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgLong.valueOf(lhsTrue[i]), floatMetaClass, NgFloat.valueOf(rhsTrue[i])));
+      assertTrue(op.applyBoolean(NgFloat.valueOf((float)lhsTrue[i]), floatMetaClass, NgFloat.valueOf((float)rhsTrue[i])));
       assertTrue(op.applyBoolean((Object)NgDouble.valueOf((double)lhsTrue[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsTrue[i])));
       assertTrue(op.applyBoolean((Object)BigInteger.valueOf(lhsTrue[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsTrue[i])));
       assertTrue(op.applyBoolean((Object)BigDecimal.valueOf(lhsTrue[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsTrue[i])));
@@ -548,7 +548,528 @@ public class BooleanComparisonTest extends TestCase {
       assertTrue(op.applyBoolean((Object)BigDecimal.valueOf(lhsTrue[i]), bigDecimalMetaClass, (Object)BigDecimal.valueOf(rhsTrue[i])));
     }
 
+    for (int i = 0; i != lhsFalse.length; i++) {
 
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], (byte)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], (byte)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], (byte)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], (byte)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], (byte)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], (byte)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], (byte)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), (byte)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), (byte)rhsFalse[i])));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], (char)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], (char)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], (char)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], (char)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], (char)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], (char)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], (char)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), (char)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), (char)rhsFalse[i])));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], (short)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], (short)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], (short)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], (short)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], (short)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], (short)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], (short)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), (short)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), (short)rhsFalse[i])));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), rhsFalse[i])));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], (long)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], (long)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], (long)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], (long)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], (long)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], (long)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], (long)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), (long)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), (long)rhsFalse[i])));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], (float)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], (float)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], (float)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], (float)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], (float)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], (float)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], (float)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), (float)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), (float)rhsFalse[i])));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], (double)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], (double)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], (double)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], (double)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], (double)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], (double)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], (double)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), (double)rhsFalse[i])));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), (double)rhsFalse[i])));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((byte)lhsFalse[i], NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((char)lhsFalse[i], NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((short)lhsFalse[i], NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(lhsFalse[i], NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((long)lhsFalse[i], NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((float)lhsFalse[i], NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((double)lhsFalse[i], NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), BigInteger.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigInteger.valueOf(lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(BigDecimal.valueOf(lhsFalse[i]), BigDecimal.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgByte.valueOf((byte)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgByte.valueOf((byte)rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgChar.valueOf((char)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgChar.valueOf((char)rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgShort.valueOf((short)rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgShort.valueOf((short)rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgInt.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgInt.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgLong.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgLong.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgFloat.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgFloat.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply(NgByte.valueOf((byte)lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgChar.valueOf((char)lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgShort.valueOf((short)lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgInt.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgLong.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgFloat.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply(NgDouble.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgDouble.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgDouble.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgByte.valueOf((byte)lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgChar.valueOf((char)lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgShort.valueOf((short)lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgInt.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgLong.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgFloat.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgDouble.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigInteger.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i]))));
+
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgByte.valueOf((byte)lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgChar.valueOf((char)lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgShort.valueOf((short)lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgInt.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgLong.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgFloat.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)NgDouble.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigInteger.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i]))));
+      assertFalse(tc.unwrapToBoolean(op.apply((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i]))));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgByte.valueOf((byte)rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgChar.valueOf((char)rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgShort.valueOf((short)rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgInt.valueOf(rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgLong.valueOf(rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgFloat.valueOf(rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), NgDouble.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), NgDouble.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), NgDouble.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), NgDouble.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), (Object)NgDouble.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)NgDouble.valueOf(rhsFalse[i])));
+
+      assertFalse(op.applyBoolean((Object)NgByte.valueOf((byte)lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgChar.valueOf((char)lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgShort.valueOf((short)lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgInt.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgLong.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgFloat.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgDouble.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)BigInteger.valueOf(rhsFalse[i])));
+
+      assertFalse(op.applyBoolean((Object)NgByte.valueOf((byte)lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgChar.valueOf((char)lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgShort.valueOf((short)lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgInt.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgLong.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgFloat.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgDouble.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), (Object)BigDecimal.valueOf(rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), byteMetaClass, NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), byteMetaClass, NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), byteMetaClass, NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), byteMetaClass, NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), byteMetaClass, NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), byteMetaClass, NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), byteMetaClass, NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), byteMetaClass, (Object)NgByte.valueOf((byte)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), byteMetaClass, (Object)NgByte.valueOf((byte)rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), charMetaClass, NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), charMetaClass, NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), charMetaClass, NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), charMetaClass, NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), charMetaClass, NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), charMetaClass, NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), charMetaClass, NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), charMetaClass, (Object)NgChar.valueOf((char)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), charMetaClass, (Object)NgChar.valueOf((char)rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), shortMetaClass, NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), shortMetaClass, NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), shortMetaClass, NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), shortMetaClass, NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), shortMetaClass, NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), shortMetaClass, NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), shortMetaClass, NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), shortMetaClass, (Object)NgShort.valueOf((short)rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), intMetaClass, NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), intMetaClass, NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), intMetaClass, NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), intMetaClass, NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), intMetaClass, NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), intMetaClass, NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), intMetaClass, NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), intMetaClass, (Object)NgInt.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), intMetaClass, (Object)NgInt.valueOf(rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), longMetaClass, NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), longMetaClass, NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), longMetaClass, NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), longMetaClass, NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), longMetaClass, NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf(lhsFalse[i]), longMetaClass, NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgDouble.valueOf(lhsFalse[i]), longMetaClass, NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), longMetaClass, (Object)NgLong.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), longMetaClass, (Object)NgLong.valueOf(rhsFalse[i])));
+
+      assertFalse(op.applyBoolean(NgByte.valueOf((byte)lhsFalse[i]), floatMetaClass, NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgChar.valueOf((char)lhsFalse[i]), floatMetaClass, NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgShort.valueOf((short)lhsFalse[i]), floatMetaClass, NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgInt.valueOf(lhsFalse[i]), floatMetaClass, NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgLong.valueOf(lhsFalse[i]), floatMetaClass, NgFloat.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean(NgFloat.valueOf((float)lhsFalse[i]), floatMetaClass, NgFloat.valueOf((float)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgDouble.valueOf((double)lhsFalse[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), floatMetaClass, (Object)NgFloat.valueOf((float)rhsFalse[i])));
+
+      assertFalse(op.applyBoolean((Object)NgByte.valueOf((byte)lhsFalse[i]), doubleMetaClass, (Object)NgDouble.valueOf((double)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgChar.valueOf((char)lhsFalse[i]), doubleMetaClass, (Object)NgDouble.valueOf((double)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgShort.valueOf((short)lhsFalse[i]), doubleMetaClass, (Object)NgDouble.valueOf((double)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgInt.valueOf((int)lhsFalse[i]), doubleMetaClass, (Object)NgDouble.valueOf((double)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgLong.valueOf((long)lhsFalse[i]), doubleMetaClass, (Object)NgDouble.valueOf((double)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgFloat.valueOf((float)lhsFalse[i]), doubleMetaClass, (Object)NgDouble.valueOf((double)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgDouble.valueOf((double)lhsFalse[i]), doubleMetaClass, (Object)NgDouble.valueOf((double)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), doubleMetaClass, (Object)NgDouble.valueOf((double)rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), doubleMetaClass, (Object)NgDouble.valueOf((double)rhsFalse[i])));
+
+      assertFalse(op.applyBoolean((Object)NgByte.valueOf((byte)lhsFalse[i]), bigIntegerMetaClass, (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgChar.valueOf((char)lhsFalse[i]), bigIntegerMetaClass, (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgShort.valueOf((short)lhsFalse[i]), bigIntegerMetaClass, (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgInt.valueOf((int)lhsFalse[i]), bigIntegerMetaClass, (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgLong.valueOf((long)lhsFalse[i]), bigIntegerMetaClass, (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgFloat.valueOf((float)lhsFalse[i]), bigIntegerMetaClass, (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgDouble.valueOf((double)lhsFalse[i]), bigIntegerMetaClass, (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), bigIntegerMetaClass, (Object)BigInteger.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), bigIntegerMetaClass, (Object)BigInteger.valueOf(rhsFalse[i])));
+
+      assertFalse(op.applyBoolean((Object)NgByte.valueOf((byte)lhsFalse[i]), bigDecimalMetaClass, (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgChar.valueOf((char)lhsFalse[i]), bigDecimalMetaClass, (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgShort.valueOf((short)lhsFalse[i]), bigDecimalMetaClass, (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgInt.valueOf((int)lhsFalse[i]), bigDecimalMetaClass, (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgLong.valueOf((long)lhsFalse[i]), bigDecimalMetaClass, (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgFloat.valueOf((float)lhsFalse[i]), bigDecimalMetaClass, (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)NgDouble.valueOf((double)lhsFalse[i]), bigDecimalMetaClass, (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigInteger.valueOf(lhsFalse[i]), bigDecimalMetaClass, (Object)BigDecimal.valueOf(rhsFalse[i])));
+      assertFalse(op.applyBoolean((Object)BigDecimal.valueOf(lhsFalse[i]), bigDecimalMetaClass, (Object)BigDecimal.valueOf(rhsFalse[i])));
+    }
   }
 
   public void testEquals() throws Throwable {

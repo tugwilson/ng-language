@@ -2,6 +2,7 @@ package ng.runtime.metaclass;
 
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
+import ng.runtime.threadcontext.IntegerComparison;
 import ng.runtime.threadcontext.StaticMethodCall;
 
 
@@ -45,6 +46,10 @@ public interface MetaClass {
   void modifyPower(ArithmeticBinaryOperation modifiedPower);
   ArithmeticBinaryOperation getOriginalPower();
   ArithmeticBinaryOperation power(BinaryArithmeticOperation binaryArithmeticOperation);
+
+  void modifyCompare(IntegerBinaryComparison modifiedCompare);
+  IntegerBinaryComparison getOriginalCompare();
+  IntegerBinaryComparison compare(IntegerComparison integerComparison);
 
   void modifyEquals(BooleanBinaryComparison modifiedEquals);
   BooleanBinaryComparison getOriginalEquals();
