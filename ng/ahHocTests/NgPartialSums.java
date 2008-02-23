@@ -1,5 +1,6 @@
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.NotPerformed;
+import ng.runtime.threadcontext.StaticCallable;
 import ng.runtime.threadcontext.ThreadContext;
 
 /*
@@ -28,10 +29,12 @@ import ng.runtime.threadcontext.ThreadContext;
 public class NgPartialSums {
   static final double twothirds = 2.0/3.0;
 
-  public static void main(final String[] args) {
+  public static void main(final String[] args) throws Throwable {
     final long start = System.currentTimeMillis();
     final ThreadContext tc = ThreadContext.getThreadContext();
     final MetaClass mathMetaClass = tc.getMetaClassFor(Math.class);
+    StaticCallable Math$sin = tc.staticMethodCall().getCallable(mathMetaClass, "sin", tc.getMetaClassFor(int.class));
+    StaticCallable Math$cos = tc.staticMethodCall().getCallable(mathMetaClass, "cos", tc.getMetaClassFor(int.class));
 
      final int n = Integer.parseInt(args[0]);
 
@@ -54,9 +57,11 @@ public class NgPartialSums {
         } catch (final NotPerformed e10) {
           k3 = tc.convert().asDouble(tc.multiply().apply(k2, k));
         }
-
-        final double sk = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, "sin", k));
-        final double ck = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, "cos", k));
+        
+        Math$sin = tc.staticMethodCall().getCallable(mathMetaClass, Math$sin, "sin");
+        final double sk = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, Math$sin, "sin", k));
+        Math$cos = tc.staticMethodCall().getCallable(mathMetaClass, Math$cos, "cos");
+        final double ck = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, Math$cos, "cos", k));
 
         try {
           alt = tc.subtract().doubleApply(0.0, alt);

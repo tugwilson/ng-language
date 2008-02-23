@@ -12,24 +12,25 @@ import java.util.Map;
 
 import ng.runtime.metaclass.DoStaticMethodCall;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.metaclass.StaticMethodProxy;
+import ng.runtime.metaclass.StaticMethodContainer;
 import ng.runtime.threadcontext.ExtendedThreadContext;
+import ng.runtime.threadcontext.StaticCallable;
 
 /**
  * @author John
  *
  */
 public class DoStaticMethodCallImpl implements DoStaticMethodCall {
-  private final StaticMethodProxy noMethods = new BaseStaticMethodProxy();
-  private final Map<String, StaticMethodProxy>staticMethods = new HashMap<String, StaticMethodProxy>() {
+  private final StaticMethodContainer noMethods = new BaseStaticMethodContainer();
+  private final Map<String, StaticMethodContainer>staticMethods = new HashMap<String, StaticMethodContainer>() {
     private static final long serialVersionUID = 1L;
 
      /* (non-JavaDoc)
      * @see java.util.HashMap#get(java.lang.Object)
      */
     @Override
-    public StaticMethodProxy get(final Object key) {
-    final StaticMethodProxy result = super.get(key);
+    public StaticMethodContainer get(final Object key) {
+    final StaticMethodContainer result = super.get(key);
 
       if (result == null) {
         return DoStaticMethodCallImpl.this.noMethods;
@@ -106,122 +107,71 @@ public class DoStaticMethodCallImpl implements DoStaticMethodCall {
     }
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.Object[])
-   */
-  public Object doApply(final ExtendedThreadContext tc, final String name, final Object[] params) {
-     return this.staticMethods.get(name).doApply(tc, params);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final Object[] params, final MetaClass[] metaClasses) {
+     return this.staticMethods.get(name).getCallable(tc, params, metaClasses);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name) {
-    return this.staticMethods.get(name).doApplyQuick(tc);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name) {
+    return this.staticMethods.get(name).getCallable(tc);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.String)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final String p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final Object p1, final MetaClass m1) {
+    return this.staticMethods.get(name).getCallable(tc, p1, m1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.Object)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final Object p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final boolean p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final Object p1, final Object p2) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1, p2);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final char p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final Object p1, final Object p2, final Object p3) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1, p2, p3);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final byte p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final Object p1, final Object p2, final Object p3, final Object p4) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1, p2, p3, p4);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final short p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, boolean)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final boolean p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final int p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, char)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final char p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final long p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, byte)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final byte p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final float p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, short)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final short p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final double p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, int)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final int p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final BigInteger p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, long)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final long p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final BigDecimal p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, float)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final float p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final String p1) {
+    return this.staticMethods.get(name).getCallable(tc, p1);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, double)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final double p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final Object p1, final MetaClass m1, final Object p2, final MetaClass m2) {
+    return this.staticMethods.get(name).getCallable(tc, p1, m1, p2, m2);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.math.BigInteger)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final BigInteger p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final Object p1, final MetaClass m1, final Object p2, final MetaClass m2, final Object p3, final MetaClass m3) {
+    return this.staticMethods.get(name).getCallable(tc, p1, m1, p2, m2, p3, m3);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.DoStaticMethodCall#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.String, java.math.BigDecimal)
-   */
-  public Object doApplyQuick(final ExtendedThreadContext tc, final String name, final BigDecimal p1) {
-    return this.staticMethods.get(name).doApplyQuick(tc, p1);
+  public StaticCallable doGetCallable(final ExtendedThreadContext tc, final String name, final Object p1, final MetaClass m1, final Object p2, final MetaClass m2, final Object p3, final MetaClass m3, final Object p4, final MetaClass m4) {
+    return this.staticMethods.get(name).getCallable(tc, p1, m1, p2, m2, p3, m3, p4, m4);
   }
 }

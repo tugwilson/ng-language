@@ -20,28 +20,19 @@ public class OneByteParameterSingletonStaticMethodProxy extends OneParameterSing
     super(method);
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final Object p1) {
-    return doApplyQuick(tc, tc.convert().asByte(p1));
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final Object p1) throws Throwable {
+    return doStaticCallQuick(tc, tc.convert().asByte(p1));
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, char)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final char p1) {
-    return doApplyQuick(tc, (byte)p1);
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final char p1) throws Throwable {
+    return doStaticCallQuick(tc, (byte)p1);
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, byte)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final byte p1) {
-    if (this.modifiedProxy == null) {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final byte p1) throws Throwable {
+    if (this.modifiedCallable == null) {
       try {
         return wrapReturnValue(tc, this.method.invoke(null, tc.prepareParameters(Byte.valueOf(p1))));
       } catch (final IllegalArgumentException e) {
@@ -49,66 +40,45 @@ public class OneByteParameterSingletonStaticMethodProxy extends OneParameterSing
       } catch (final IllegalAccessException e) {
         throw new NgRuntimeException(e);
       } catch (final InvocationTargetException e) {
-        throw new NgRuntimeException(e);
+        throw e.getCause();
       }
     } else {
-      return this.modifiedProxy.doApplyQuick(tc, p1);
+      return this.modifiedCallable.doStaticCallQuick(tc, p1);
     }
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, short)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final short p1) {
-    return doApplyQuick(tc, tc.convert().asByte(p1));
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final short p1) throws Throwable {
+    return doStaticCallQuick(tc, tc.convert().asByte(p1));
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, int)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final int p1) {
-    return doApplyQuick(tc, tc.convert().asByte(p1));
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final int p1) throws Throwable {
+    return doStaticCallQuick(tc, tc.convert().asByte(p1));
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, long)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final long p1) {
-    return doApplyQuick(tc, tc.convert().asByte(p1));
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final long p1) throws Throwable {
+    return doStaticCallQuick(tc, tc.convert().asByte(p1));
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, float)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final float p1) {
-    return doApplyQuick(tc, tc.convert().asByte(p1));
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final float p1) throws Throwable {
+    return doStaticCallQuick(tc, tc.convert().asByte(p1));
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, double)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final double p1) {
-    return doApplyQuick(tc, tc.convert().asByte(p1));
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final double p1) throws Throwable {
+    return doStaticCallQuick(tc, tc.convert().asByte(p1));
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.math.BigInteger)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final BigInteger p1) {
-    return doApplyQuick(tc, tc.convert().asByte(p1));
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final BigInteger p1) throws Throwable {
+    return doStaticCallQuick(tc, tc.convert().asByte(p1));
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.math.BigDecimal)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final BigDecimal p1) {
-    return doApplyQuick(tc, tc.convert().asByte(p1));
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final BigDecimal p1) throws Throwable {
+    return doStaticCallQuick(tc, tc.convert().asByte(p1));
   }
 }

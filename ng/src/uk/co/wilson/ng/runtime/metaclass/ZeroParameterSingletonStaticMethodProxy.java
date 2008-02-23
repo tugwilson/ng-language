@@ -17,24 +17,18 @@ public class ZeroParameterSingletonStaticMethodProxy extends BaseSingletonStatic
     super(method);
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object[])
-   */
   @Override
-  public Object doApply(final ExtendedThreadContext tc, final Object[] params) {
+  public Object doStaticCall(final ExtendedThreadContext tc, final Object[] params) throws Throwable {
     if (params.length == 0) {
-      return doApplyQuick(tc);
+      return doStaticCallQuick(tc);
     } else {
       return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc) {
-    if (this.modifiedProxy == null) {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc) throws Throwable {
+    if (this.modifiedCallable== null) {
       try {
         return wrapReturnValue(tc, this.method.invoke(null, args));
       } catch (final IllegalArgumentException e) {
@@ -42,10 +36,10 @@ public class ZeroParameterSingletonStaticMethodProxy extends BaseSingletonStatic
       } catch (final IllegalAccessException e) {
         throw new NgRuntimeException(e);
       } catch (final InvocationTargetException e) {
-        throw new NgRuntimeException(e);
+        throw e.getCause();
       }
     } else {
-      return this.modifiedProxy.doApplyQuick(tc);
+      return this.modifiedCallable.doStaticCallQuick(tc);
     }
   }
 
