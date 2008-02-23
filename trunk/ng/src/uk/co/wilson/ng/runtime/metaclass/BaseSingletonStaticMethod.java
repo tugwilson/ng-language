@@ -10,7 +10,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
  * @author John
  *
  */
-public abstract class BaseSingletonStaticMethod extends BaseStaticMethodProxy {
+public abstract class BaseSingletonStaticMethod extends BaseStaticMethodContainer {
 
   protected final Method method;
   protected final int returnType;

@@ -21,12 +21,9 @@ public class OneUntypedParameterSingletonStaticMethodProxy extends OneParameterS
     super(method);
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApplyQuick(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
-   */
   @Override
-  public Object doApplyQuick(final ExtendedThreadContext tc, final Object p1) {
-    if (this.modifiedProxy == null) {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final Object p1) throws Throwable {
+    if (this.modifiedCallable == null) {
       try {
         return wrapReturnValue(tc, this.method.invoke(null, tc.prepareParameters(p1)));
       } catch (final IllegalArgumentException e) {
@@ -34,10 +31,10 @@ public class OneUntypedParameterSingletonStaticMethodProxy extends OneParameterS
       } catch (final IllegalAccessException e) {
         throw new NgRuntimeException(e);
       } catch (final InvocationTargetException e) {
-        throw new NgRuntimeException(e);
+        throw e.getCause();
       }
     } else {
-      return this.modifiedProxy.doApplyQuick(tc, p1);
+      return this.modifiedCallable.doStaticCallQuick(tc, p1);
     }
   }
 

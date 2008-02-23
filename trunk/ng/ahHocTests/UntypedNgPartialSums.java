@@ -29,7 +29,7 @@ import ng.runtime.threadcontext.ThreadContext;
 public class UntypedNgPartialSums {
   static final Object twothirds = NgDouble.valueOf(2.0/3.0);
 
-  public static void main(final String[] args) {
+  public static void main(final String[] args) throws Throwable {
     final long start = System.currentTimeMillis();
     final ThreadContext tc = ThreadContext.getThreadContext();
     final MetaClass mathMetaClass = tc.getMetaClassFor(Math.class);

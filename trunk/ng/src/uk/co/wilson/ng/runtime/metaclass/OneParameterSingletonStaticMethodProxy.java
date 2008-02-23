@@ -18,13 +18,10 @@ public class OneParameterSingletonStaticMethodProxy extends BaseSingletonStaticM
     super(method);
   }
 
-  /* (non-JavaDoc)
-   * @see uk.co.wilson.ng.runtime.metaclass.BaseStaticMethodProxy#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object[])
-   */
   @Override
-  public Object doApply(final ExtendedThreadContext tc, final Object[] params) {
+  public Object doStaticCall(final ExtendedThreadContext tc, final Object[] params) throws Throwable {
     if (params.length == 1) {
-      return doApplyQuick(tc, params[1]);
+      return doCallQuick(tc, params[1]);
     } else {
       return ExtendedThreadContext.NOT_PERFORMED;
     }
