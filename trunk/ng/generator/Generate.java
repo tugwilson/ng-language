@@ -37,11 +37,11 @@ public class Generate {
       context.put("op", parameters[1]);
       context.put("verb", parameters[2]);
          
-      Template template = Velocity.getTemplate(parameters[3]);
+      Template template = Velocity.getTemplate("prototypes/" +parameters[3]);
       
-      new File("../generated/" + parameters[4]).mkdirs();
+      new File("generated/" + parameters[4]).mkdirs();
       
-      Writer result = new FileWriter("../generated/" + parameters[4] + "/" + parameters[5]);
+      Writer result = new FileWriter("generated/" + parameters[4] + "/" + parameters[5]);
 
       template.merge(context, result);
       
