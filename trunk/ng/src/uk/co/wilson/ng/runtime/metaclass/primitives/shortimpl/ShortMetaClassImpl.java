@@ -1,13 +1,13 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl;
 
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.IntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.ArithmeticBinaryOperation;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.BooleanBinaryComparison;
 import uk.co.wilson.ng.runtime.metaclass.Conversion;
-import uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison;
 
 public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass {
   private volatile ShortConversion modifiedConvert = null;

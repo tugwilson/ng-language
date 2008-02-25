@@ -3,9 +3,9 @@ package uk.co.wilson.ng.runtime.metaclass.primitives;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.NotPerformed;
-import uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison;
 import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
@@ -246,7 +246,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.math.BigDecimal, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.math.BigDecimal, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -258,7 +258,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.math.BigInteger, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.math.BigInteger, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -270,7 +270,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, byte, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, byte, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final byte lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -282,7 +282,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, char, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, char, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -294,7 +294,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, double, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, double, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final double lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -306,7 +306,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, float, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, float, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final float lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -318,7 +318,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, int, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, int, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final int lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -330,7 +330,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, long, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, long, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final long lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -342,7 +342,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.math.BigDecimal)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.math.BigDecimal)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final BigDecimal rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -354,7 +354,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.math.BigInteger)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.math.BigInteger)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final BigInteger rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -366,7 +366,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, byte)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, byte)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final byte rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -378,7 +378,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, char)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, char)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final char rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -390,7 +390,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, double)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, double)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final double rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -402,7 +402,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, float)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, float)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final float rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -414,7 +414,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, int)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, int)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final int rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -426,7 +426,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, long)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, long)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final long rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -439,7 +439,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, ng.runtime.metaclass.MetaClass, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, ng.runtime.metaclass.MetaClass, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhsMetaClass, rhs);
@@ -451,7 +451,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -463,7 +463,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, short)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, short)
    */
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final short rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -475,7 +475,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, short, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doIntApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, short, java.lang.Object)
    */
   public int doIntApply(final ExtendedThreadContext tc, final short lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doIntApply(tc, lhs, rhs);
@@ -498,7 +498,7 @@ public abstract class IntegerBinaryComparisonWrapper implements IntegerBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison#doReverseintApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.lang.Object)
+   * @see ng.runtime.metaclass.IntegerBinaryComparison#doReverseintApply(uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.lang.Object)
    */
   public int doReverseIntApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) throws NotPerformed {
     return this.delegate.doReverseIntApply(tc, lhs, rhs);

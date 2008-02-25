@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Map;
 
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.metaclass.MetaClass;
-import uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalIntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerIntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteIntegerComparison;
