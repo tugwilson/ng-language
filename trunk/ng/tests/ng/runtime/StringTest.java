@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import junit.framework.TestCase;
+import ng.runtime.metaclass.PrimitiveMetaClasses;
 import ng.runtime.threadcontext.ThreadContext;
-import uk.co.wilson.ng.runtime.threadcontext.PrimitiveMetaClasses;
 
 /**
  * @author John

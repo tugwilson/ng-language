@@ -2,11 +2,11 @@ package ng.runtime;
 
 import ng.lang.NgObject;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.metaclass.PrimitiveMetaClasses;
 import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClassImpl;
 
 public class NgLong extends NgObject {
-  private static final LongMetaClass metaclass = new LongMetaClassImpl();
+  private static final LongMetaClass metaclass = PrimitiveMetaClasses.getLongMetaClass();
 
   public static LongMetaClass get$MetaClass() {
     return metaclass;

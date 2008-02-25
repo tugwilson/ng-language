@@ -2,11 +2,11 @@ package ng.runtime;
 
 import ng.lang.NgObject;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.metaclass.PrimitiveMetaClasses;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClassImpl;
 
 public class NgByte extends NgObject {
-  private static final ByteMetaClass metaclass = new ByteMetaClassImpl();
+  private static final ByteMetaClass metaclass = PrimitiveMetaClasses.getByteMetaClass();
 
   public static ByteMetaClass get$MetaClass() {
     return metaclass;

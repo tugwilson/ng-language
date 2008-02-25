@@ -4,9 +4,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.metaclass.StaticMethodContainer;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.StaticCallable;
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John

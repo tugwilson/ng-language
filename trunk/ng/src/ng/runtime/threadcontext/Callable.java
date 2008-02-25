@@ -3,6 +3,8 @@ package ng.runtime.threadcontext;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
+
 
 /**
  * @author John

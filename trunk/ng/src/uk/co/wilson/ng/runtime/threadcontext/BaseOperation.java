@@ -1,6 +1,5 @@
 package uk.co.wilson.ng.runtime.threadcontext;
 
-import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.Operation;
 
 public abstract class BaseOperation implements Operation {

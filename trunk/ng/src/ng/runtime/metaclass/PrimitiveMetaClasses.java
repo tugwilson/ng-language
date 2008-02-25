@@ -1,36 +1,43 @@
-package uk.co.wilson.ng.runtime.threadcontext;
+package ng.runtime.metaclass;
 
-import ng.runtime.NgBoolean;
-import ng.runtime.NgByte;
-import ng.runtime.NgChar;
-import ng.runtime.NgDouble;
-import ng.runtime.NgFloat;
-import ng.runtime.NgInt;
-import ng.runtime.NgLong;
-import ng.runtime.NgShort;
-import ng.runtime.metaclass.MetaClass;
 import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl.BooleanMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl.BooleanMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl;
 
 
 public abstract class PrimitiveMetaClasses {
   private static final MetaClass objectMetaClass = new MetaClassImpl(Object.class);
-  private static final StringMetaClass stringMetaClass = new StringMetaClassImpl();
+  private static final BooleanMetaClass booleanMetaClass = new BooleanMetaClassImpl();
+  private static final CharMetaClass charMetaClass = new CharMetaClassImpl();
+  private static final ByteMetaClass byteMetaClass = new ByteMetaClassImpl();
+  private static final ShortMetaClass shortMetaClass = new ShortMetaClassImpl();
+  private static final IntMetaClass intMetaClass = new IntMetaClassImpl();
+  private static final LongMetaClass longMetaClass = new LongMetaClassImpl();
+  private static final FloatMetaClass floatMetaClass = new FloatMetaClassImpl();
+  private static final DoubleMetaClass doubleMetaClass = new DoubleMetaClassImpl();
   private static final BigIntegerMetaClass bigIntegerMetaClass = new BigIntegerMetaClassImpl();
   private static final BigDecimalMetaClass bigDecimalMetaClass = new BigDecimalMetaClassImpl();
+  private static final StringMetaClass stringMetaClass = new StringMetaClassImpl();
 
   public static MetaClass getObjectMetaClass() {
     return objectMetaClass;
@@ -42,35 +49,35 @@ public abstract class PrimitiveMetaClasses {
   }
 
   public static BooleanMetaClass getBooleanMetaClass() {
-    return NgBoolean.get$MetaClass();
+    return booleanMetaClass;
   }
 
   public static CharMetaClass getCharMetaClass() {
-    return NgChar.get$MetaClass();
+    return charMetaClass;
   }
 
   public static ByteMetaClass getByteMetaClass() {
-    return NgByte.get$MetaClass();
+    return byteMetaClass;
   }
 
   public static ShortMetaClass getShortMetaClass() {
-    return NgShort.get$MetaClass();
+    return shortMetaClass;
   }
 
   public static IntMetaClass getIntMetaClass() {
-    return NgInt.get$MetaClass();
+    return intMetaClass;
   }
 
   public static LongMetaClass getLongMetaClass() {
-    return NgLong.get$MetaClass();
+    return longMetaClass;
   }
 
   public static FloatMetaClass getFloatMetaClass() {
-    return NgFloat.get$MetaClass();
+    return floatMetaClass;
   }
 
   public static DoubleMetaClass getDoubleMetaClass() {
-    return NgDouble.get$MetaClass();
+    return doubleMetaClass;
   }
 
   public static BigIntegerMetaClass getBigIntegerMetaClass() {

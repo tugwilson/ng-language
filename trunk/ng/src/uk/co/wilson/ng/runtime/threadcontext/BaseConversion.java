@@ -5,8 +5,8 @@ import java.math.BigInteger;
 
 import ng.lang.NgRuntimeException;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.metaclass.PrimitiveMetaClasses;
 import ng.runtime.threadcontext.ConversionOperation;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
 public class BaseConversion implements ConversionOperation {

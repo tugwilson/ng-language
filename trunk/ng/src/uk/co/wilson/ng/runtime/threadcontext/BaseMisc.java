@@ -1,7 +1,6 @@
 package uk.co.wilson.ng.runtime.threadcontext;
 
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.Misc;
 
 public class BaseMisc implements Misc {
