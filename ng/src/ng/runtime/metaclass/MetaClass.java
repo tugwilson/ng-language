@@ -4,11 +4,8 @@ import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.IntegerComparison;
 import ng.runtime.threadcontext.StaticMethodCall;
-import uk.co.wilson.ng.runtime.metaclass.ArithmeticBinaryOperation;
-import uk.co.wilson.ng.runtime.metaclass.BooleanBinaryComparison;
 import uk.co.wilson.ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.DoStaticMethodCall;
-import uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison;
 import uk.co.wilson.ng.runtime.metaclass.Misc;
 
 

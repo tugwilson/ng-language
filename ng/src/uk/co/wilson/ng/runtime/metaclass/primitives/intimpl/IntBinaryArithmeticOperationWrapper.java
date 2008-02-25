@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.NgInt;
+import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.threadcontext.NotPerformed;
-import uk.co.wilson.ng.runtime.metaclass.ArithmeticBinaryOperation;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ArithmeticOperationWrapper;
 import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 

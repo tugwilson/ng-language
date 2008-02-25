@@ -5,9 +5,9 @@ import java.math.BigInteger;
 import java.util.Map;
 import java.util.Stack;
 
+import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.IntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.IntegerBinaryComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalIntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerIntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteIntegerComparison;
