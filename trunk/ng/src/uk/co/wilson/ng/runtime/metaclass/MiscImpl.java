@@ -1,5 +1,7 @@
 package uk.co.wilson.ng.runtime.metaclass;
 
+import ng.runtime.metaclass.Misc;
+
 
 public class MiscImpl implements Misc {
   private final Class<?> theClass;
