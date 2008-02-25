@@ -24,6 +24,7 @@ import ng.runtime.NgInt;
 import ng.runtime.NgLong;
 import ng.runtime.NgShort;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.metaclass.PrimitiveMetaClasses;
 import ng.runtime.threadcontext.*;
 
 public class ExtendedThreadContextImpl extends ExtendedThreadContext {

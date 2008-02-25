@@ -2,11 +2,11 @@ package ng.runtime;
 
 import ng.lang.NgObject;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.metaclass.PrimitiveMetaClasses;
 import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClassImpl;
 
 public class NgShort extends NgObject {
-  private static final ShortMetaClass metaclass = new ShortMetaClassImpl();
+  private static final ShortMetaClass metaclass = PrimitiveMetaClasses.getShortMetaClass();
 
   public static ShortMetaClass get$MetaClass() {
     return metaclass;

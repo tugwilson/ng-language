@@ -3,9 +3,9 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
-import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
+import uk.co.wilson.ng.runtime.metaclass.ArithmeticBinaryOperation;
+import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 
 public interface ShortBinaryArithmeticOperation extends ArithmeticBinaryOperation, ShortBinaryOperation {
