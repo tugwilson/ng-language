@@ -5,6 +5,7 @@ import java.util.Map;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
 import ng.runtime.metaclass.BaseBooleanComparison;
+import ng.runtime.metaclass.BaseConversionOperation;
 import ng.runtime.metaclass.BaseIntegerComparison;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
@@ -55,7 +56,17 @@ public class MetaClassImpl extends BaseMetaClass {
     return ConversionNoopImpl.instance;
   }
 
-  public Conversion convert() {
+  public Conversion convert(BaseConversionOperation conversionOperation) {
+  final Map<Object, Conversion> categoryOperationMap = conversionOperation.getCategoryConversionCallMap();
+
+    if(categoryOperationMap != null) {
+    final Conversion operation = categoryOperationMap.get(this);
+
+      if (operation != null) {
+        return operation;
+      }
+    }
+
     if (this.modifiedConvert == null) {
       return getOriginalConvert();
     } else {

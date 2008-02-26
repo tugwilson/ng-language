@@ -81,7 +81,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.convert;
   }
 
-  public CharConversion convert() {
+  public CharConversion convert(BaseConversionOperation conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {

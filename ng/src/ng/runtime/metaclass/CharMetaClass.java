@@ -5,7 +5,7 @@ public interface CharMetaClass extends MetaClass {
 
   void modifyConvert(CharConversion modifiedConvert);
   CharConversion getOriginalConvert();
-  CharConversion convert();
+  CharConversion convert(BaseConversionOperation conversionOperation);
 
   void modifyAdd(CharBinaryArithmeticOperation modifiedAdd);
   CharBinaryArithmeticOperation getOriginalAdd();

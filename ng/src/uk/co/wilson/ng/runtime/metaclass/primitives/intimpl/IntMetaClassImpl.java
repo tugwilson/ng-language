@@ -80,7 +80,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.convert;
   }
 
-  public IntConversion convert() {
+  public IntConversion convert(BaseConversionOperation conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {

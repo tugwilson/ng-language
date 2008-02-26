@@ -98,7 +98,7 @@ class Convert implements FloatConversion {
   }
 
   public Object doAsType(final ExtendedThreadContext tc, final Object instance, final Class<?> type) {
-    return tc.getMetaClassFor(type).convert().doAsYourType(tc, tc.unwrapToFloat(instance));
+    return tc.getMetaClassFor(type).convert(tc.convert()).doAsYourType(tc, tc.unwrapToFloat(instance));
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final boolean value) {

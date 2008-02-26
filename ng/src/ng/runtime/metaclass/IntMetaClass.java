@@ -6,7 +6,7 @@ public interface IntMetaClass extends MetaClass {
 
   void modifyConvert(IntConversion modifiedConvert);
   IntConversion getOriginalConvert();
-  IntConversion convert();
+  IntConversion convert(BaseConversionOperation conversionOperation);
 
   void modifyAdd(IntBinaryArithmeticOperation modifiedAdd);
   IntBinaryArithmeticOperation getOriginalAdd();

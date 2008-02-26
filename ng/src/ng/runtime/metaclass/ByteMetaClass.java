@@ -5,7 +5,7 @@ public interface ByteMetaClass extends MetaClass {
 
   void modifyConvert(ByteConversion modifiedConvert);
   ByteConversion getOriginalConvert();
-  ByteConversion convert();
+  ByteConversion convert(BaseConversionOperation conversionOperation);
 
   void modifyAdd(ByteBinaryArithmeticOperation modifiedAdd);
   ByteBinaryArithmeticOperation getOriginalAdd();

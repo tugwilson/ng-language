@@ -5,7 +5,7 @@ public interface DoubleMetaClass extends MetaClass {
 
   void modifyConvert(DoubleConversion modifiedConvert);
   DoubleConversion getOriginalConvert();
-  DoubleConversion convert();
+  DoubleConversion convert(BaseConversionOperation conversionOperation);
 
   void modifyAdd(DoubleBinaryArithmeticOperation modifiedAdd);
   DoubleBinaryArithmeticOperation getOriginalAdd();

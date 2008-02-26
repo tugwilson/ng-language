@@ -5,7 +5,7 @@ public interface LongMetaClass extends MetaClass {
 
   void modifyConvert(LongConversion modifiedConvert);
   LongConversion getOriginalConvert();
-  LongConversion convert();
+  LongConversion convert(BaseConversionOperation conversionOperation);
 
   void modifyAdd(LongBinaryArithmeticOperation modifiedAdd);
   LongBinaryArithmeticOperation getOriginalAdd();

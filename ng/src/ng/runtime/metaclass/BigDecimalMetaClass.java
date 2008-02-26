@@ -5,7 +5,7 @@ public interface BigDecimalMetaClass extends MetaClass {
 
   void modifyConvert(BigDecimalConversion modifiedConvert);
   BigDecimalConversion getOriginalConvert();
-  BigDecimalConversion convert();
+  BigDecimalConversion convert(BaseConversionOperation conversionOperation);
 
   void modifyAdd(BigDecimalBinaryArithmeticOperation modifiedAdd);
   BigDecimalBinaryArithmeticOperation getOriginalAdd();

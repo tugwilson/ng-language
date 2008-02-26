@@ -26,5 +26,5 @@ import java.util.Map;
  */
 public interface BaseStaticMethodCall {
   Map<MetaClass, DoStaticMethodCall> getCategoryStaticMethodCallMap();
-  void setCategoryStaticMethodCallMap(Map<MetaClass, DoStaticMethodCall> categoryBinaryOperationMap);
+  void setCategoryStaticMethodCallMap(Map<MetaClass, DoStaticMethodCall> categoryStsticMethodCallMap);
 }
