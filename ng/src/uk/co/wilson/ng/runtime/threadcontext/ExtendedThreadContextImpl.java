@@ -33,6 +33,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   private static final Map<Class<?>, MetaClass> registry = new HashMap<Class<?>, MetaClass>();
 
   static {
+    registry.put(Object.class, PrimitiveMetaClasses.getObjectMetaClass());
     registry.put(boolean.class, PrimitiveMetaClasses.getBooleanMetaClass());
     registry.put(byte.class, PrimitiveMetaClasses.getByteMetaClass());
     registry.put(char.class, PrimitiveMetaClasses.getCharMetaClass());
