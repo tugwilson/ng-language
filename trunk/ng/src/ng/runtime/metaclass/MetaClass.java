@@ -11,7 +11,7 @@ public interface MetaClass {
 
   void modifyConvert(Conversion modifiedConvert);
   Conversion getOriginalConvert();
-  Conversion convert();
+  Conversion convert(BaseConversionOperation conversionOperation);
 
   void modifyAdd(ArithmeticBinaryOperation modifiedAdd);
   ArithmeticBinaryOperation getOriginalAdd();

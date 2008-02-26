@@ -5,7 +5,7 @@ public interface FloatMetaClass extends MetaClass {
 
   void modifyConvert(FloatConversion modifiedConvert);
   FloatConversion getOriginalConvert();
-  FloatConversion convert();
+  FloatConversion convert(BaseConversionOperation conversionOperation);
 
   void modifyAdd(FloatBinaryArithmeticOperation modifiedAdd);
   FloatBinaryArithmeticOperation getOriginalAdd();

@@ -6,10 +6,6 @@ import java.math.BigInteger;
 import ng.runtime.metaclass.BigDecimalBinaryOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
-
-
-
-
 abstract class BaseBinaryOperation implements BigDecimalBinaryOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final char rhs) {
     return doApply(tc, (BigDecimal)lhs, rhs);

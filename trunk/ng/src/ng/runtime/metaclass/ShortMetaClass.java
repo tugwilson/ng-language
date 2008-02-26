@@ -5,7 +5,7 @@ public interface ShortMetaClass extends MetaClass {
 
   void modifyConvert(ShortConversion modifiedConvert);
   ShortConversion getOriginalConvert();
-  ShortConversion convert();
+  ShortConversion convert(BaseConversionOperation conversionOperation);
 
   void modifyAdd(ShortBinaryArithmeticOperation modifiedAdd);
   ShortBinaryArithmeticOperation getOriginalAdd();

@@ -5,7 +5,7 @@ public interface BigIntegerMetaClass extends MetaClass {
 
   void modifyConvert(BigIntegerConversion modifiedConvert);
   BigIntegerConversion getOriginalConvert();
-  BigIntegerConversion convert();
+  BigIntegerConversion convert(BaseConversionOperation conversionOperation);
 
   void modifyAdd(BigIntegerBinaryArithmeticOperation modifiedAdd);
   BigIntegerBinaryArithmeticOperation getOriginalAdd();

@@ -81,7 +81,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.convert;
   }
 
-  public FloatConversion convert() {
+  public FloatConversion convert(BaseConversionOperation conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {

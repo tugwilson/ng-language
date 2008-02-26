@@ -82,7 +82,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.convert;
   }
 
-  public BigDecimalConversion convert() {
+  public BigDecimalConversion convert(BaseConversionOperation conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {

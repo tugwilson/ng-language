@@ -20,5 +20,4 @@ public class MiscImpl implements Misc {
   public Class<?> getTheClass(final Object instance) {
     return this.theClass;
   }
-
 }

@@ -80,7 +80,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.convert;
   }
 
-  public LongConversion convert() {
+  public LongConversion convert(BaseConversionOperation conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {

@@ -129,7 +129,7 @@ class Convert implements CharConversion {
   }
 
   public Object doAsType(final ExtendedThreadContext tc, final Object instance, final Class<?> type) {
-    return tc.getMetaClassFor(type).convert().doAsYourType(tc, tc.unwrapToChar(instance));
+    return tc.getMetaClassFor(type).convert(tc.convert()).doAsYourType(tc, tc.unwrapToChar(instance));
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final boolean value) {
