@@ -1,4 +1,4 @@
-import ng.lang.MetaClass;
+import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.NotPerformed;
 import ng.runtime.threadcontext.StaticCallable;
 import ng.runtime.threadcontext.ThreadContext;

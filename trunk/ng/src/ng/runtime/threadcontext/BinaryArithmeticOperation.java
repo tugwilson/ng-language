@@ -2,43 +2,11 @@ package ng.runtime.threadcontext;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.Map;
 
-import ng.runtime.metaclass.*;
+import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
 
 
-public interface BinaryArithmeticOperation extends BinaryIntegralOperation {
-
-  CharBinaryArithmeticOperation getCharCategoryOperation();
-  void setCharCategoryOperation(CharBinaryArithmeticOperation charCategoryOperation);
-
-  ByteBinaryArithmeticOperation getByteCategoryOperation();
-  void setByteCategoryOperation(ByteBinaryArithmeticOperation byteCategoryOperation);
-
-  ShortBinaryArithmeticOperation getShortCategoryOperation();
-  void setShortCategoryOperation(ShortBinaryArithmeticOperation shortCategoryOperation);
-
-  IntBinaryArithmeticOperation getIntCategoryOperation();
-  void setIntCategoryOperation(IntBinaryArithmeticOperation intCategoryOperation);
-
-  LongBinaryArithmeticOperation getLongCategoryOperation();
-  void setLongCategoryOperation(LongBinaryArithmeticOperation longCategoryOperation);
-
-  FloatBinaryArithmeticOperation getFloatCategoryOperation();
-  void setFloatCategoryOperation(FloatBinaryArithmeticOperation floatCategoryOperation);
-
-  DoubleBinaryArithmeticOperation getDoubleCategoryOperation();
-  void setDoubleCategoryOperation(DoubleBinaryArithmeticOperation doubleCategoryOperation);
-
-  BigIntegerBinaryArithmeticOperation getBigIntegerCategoryOperation();
-  void setBigIntegerCategoryOperation(BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation);
-
-  BigDecimalBinaryArithmeticOperation getBigDecimalCategoryOperation();
-  void setBigDecimalCategoryOperation(BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation);
-
-  Map<Object, ArithmeticBinaryOperation> getCategoryBinaryOperationMap();
-  void setCategoryBinaryOperationMap(Map<Object, ArithmeticBinaryOperation> categoryBinaryOperationMap);
-
+public interface BinaryArithmeticOperation extends BaseBinaryArithmeticOperation, BinaryIntegralOperation {
   long longApply(char lhs, long rhs) throws NotPerformed;
   float floatApply(char lhs, float rhs) throws NotPerformed;
   double doubleApply(char lhs, double rhs) throws NotPerformed;

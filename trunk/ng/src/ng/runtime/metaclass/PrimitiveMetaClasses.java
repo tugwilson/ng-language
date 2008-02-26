@@ -1,6 +1,5 @@
 package ng.runtime.metaclass;
 
-import ng.lang.MetaClass;
 import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl;

@@ -1,6 +1,5 @@
 package ng.runtime.metaclass;
 
-import ng.lang.MetaClass;
 
 
 /**

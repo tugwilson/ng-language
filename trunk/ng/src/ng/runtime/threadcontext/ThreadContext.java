@@ -1,6 +1,6 @@
 package ng.runtime.threadcontext;
 
-import ng.lang.MetaClass;
+import ng.runtime.metaclass.MetaClass;
 import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContextImpl;
 
 /**

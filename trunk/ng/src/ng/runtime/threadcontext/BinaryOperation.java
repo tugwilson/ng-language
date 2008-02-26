@@ -3,7 +3,7 @@ package ng.runtime.threadcontext;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.lang.MetaClass;
+import ng.runtime.metaclass.MetaClass;
 
 /**
  * @author John

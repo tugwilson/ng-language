@@ -3,7 +3,7 @@ package uk.co.wilson.ng.ast;
 import java.math.BigDecimal;
 
 import ng.ast.BigDecimalConstant;
-import ng.lang.MetaClass;
+import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 
 

@@ -1,8 +1,8 @@
 package uk.co.wilson.ng.ast;
 
 import ng.ast.FloatConstant;
-import ng.lang.MetaClass;
 import ng.runtime.NgFloat;
+import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 
 

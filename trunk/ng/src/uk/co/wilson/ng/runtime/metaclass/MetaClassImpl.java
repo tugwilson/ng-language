@@ -3,12 +3,12 @@ package uk.co.wilson.ng.runtime.metaclass;
 import java.util.Map;
 
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
+import ng.runtime.metaclass.BaseBooleanComparison;
+import ng.runtime.metaclass.BaseIntegerComparison;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
 import ng.runtime.metaclass.IntegerBinaryComparison;
-import ng.runtime.threadcontext.BinaryArithmeticOperation;
-import ng.runtime.threadcontext.BooleanComparison;
-import ng.runtime.threadcontext.IntegerComparison;
 
 /**
  * @author John
@@ -67,7 +67,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation add(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation add(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -93,7 +93,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation subtract(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation subtract(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -119,7 +119,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation multiply(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation multiply(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -145,7 +145,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation divide(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation divide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -171,7 +171,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation modulo(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation modulo(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -197,7 +197,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation remainderDivide(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation remainderDivide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -223,7 +223,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation power(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ArithmeticBinaryOperation power(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -249,7 +249,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return IntegerBinaryComparisonNoopImpl.instance;
   }
 
-  public IntegerBinaryComparison compare(final IntegerComparison integerComparison) {
+  public IntegerBinaryComparison compare(final BaseIntegerComparison integerComparison) {
   final Map<Object, IntegerBinaryComparison> categoryOperationMap = integerComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
@@ -275,7 +275,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison equals(final BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison equals(final BaseBooleanComparison booleanComparison) {
   final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
@@ -301,7 +301,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison notEquals(final BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison notEquals(final BaseBooleanComparison booleanComparison) {
   final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
@@ -327,7 +327,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison lessThan(final BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison lessThan(final BaseBooleanComparison booleanComparison) {
   final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
@@ -353,7 +353,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison greaterThan(final BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison greaterThan(final BaseBooleanComparison booleanComparison) {
   final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
@@ -379,7 +379,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison lessThanOrEquals(final BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison lessThanOrEquals(final BaseBooleanComparison booleanComparison) {
   final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
@@ -405,7 +405,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return BooleanBinaryComparisonNoopImpl.instance;
   }
 
-  public BooleanBinaryComparison greaterThanOrEquals(final BooleanComparison booleanComparison) {
+  public BooleanBinaryComparison greaterThanOrEquals(final BaseBooleanComparison booleanComparison) {
   final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {

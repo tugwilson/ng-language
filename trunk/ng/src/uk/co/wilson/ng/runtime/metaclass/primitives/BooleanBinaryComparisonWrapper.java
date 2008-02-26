@@ -3,8 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.lang.MetaClass;
 import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
@@ -183,7 +183,7 @@ public abstract class BooleanBinaryComparisonWrapper implements BooleanBinaryCom
    * @param rhsMetaClass
    * @param rhs
    * @return
-   * @see ng.runtime.metaclass.ArithmeticBinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, ng.lang.MetaClass, java.lang.Object)
+   * @see ng.runtime.metaclass.ArithmeticBinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, ng.runtime.metaclass.MetaClass, java.lang.Object)
    */
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
     return this.delegate.doApply(tc, lhs, rhsMetaClass, rhs);
@@ -401,7 +401,7 @@ public abstract class BooleanBinaryComparisonWrapper implements BooleanBinaryCom
    * @param rhs
    * @return
    * @throws NotPerformed
-   * @see ng.runtime.metaclass.BooleanBinaryComparison#doApplyBoolean(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, ng.lang.MetaClass, java.lang.Object)
+   * @see ng.runtime.metaclass.BooleanBinaryComparison#doApplyBoolean(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, ng.runtime.metaclass.MetaClass, java.lang.Object)
    */
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) throws NotPerformed {
     return this.delegate.doApplyBoolean(tc, lhs, rhsMetaClass, rhs);

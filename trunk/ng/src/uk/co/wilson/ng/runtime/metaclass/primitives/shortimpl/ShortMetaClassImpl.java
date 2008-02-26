@@ -1,17 +1,8 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
-import ng.runtime.metaclass.BooleanBinaryComparison;
-import ng.runtime.metaclass.Conversion;
-import ng.runtime.metaclass.IntegerBinaryComparison;
-import ng.runtime.metaclass.ShortBinaryArithmeticOperation;
-import ng.runtime.metaclass.ShortBooleanComparison;
-import ng.runtime.metaclass.ShortConversion;
-import ng.runtime.metaclass.ShortIntegerComparison;
-import ng.runtime.metaclass.ShortMetaClass;
-import ng.runtime.threadcontext.BinaryArithmeticOperation;
-import ng.runtime.threadcontext.BooleanComparison;
-import ng.runtime.threadcontext.IntegerComparison;
+import ng.runtime.metaclass.*;
+import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
+import ng.runtime.metaclass.BaseBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass {
@@ -109,7 +100,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.add;
   }
 
-  public ShortBinaryArithmeticOperation add(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ShortBinaryArithmeticOperation add(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -135,7 +126,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.subtract;
   }
 
-  public ShortBinaryArithmeticOperation subtract(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ShortBinaryArithmeticOperation subtract(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -161,7 +152,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.multiply;
   }
 
-  public ShortBinaryArithmeticOperation multiply(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ShortBinaryArithmeticOperation multiply(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -187,7 +178,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.divide;
   }
 
-  public ShortBinaryArithmeticOperation divide(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ShortBinaryArithmeticOperation divide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -213,7 +204,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.modulo;
   }
 
-  public ShortBinaryArithmeticOperation modulo(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ShortBinaryArithmeticOperation modulo(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -239,7 +230,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.power;
   }
 
-  public ShortBinaryArithmeticOperation power(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ShortBinaryArithmeticOperation power(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -265,7 +256,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.remainderDivide;
   }
 
-  public ShortBinaryArithmeticOperation remainderDivide(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ShortBinaryArithmeticOperation remainderDivide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -295,7 +286,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.compare;
   }
 
-  public ShortIntegerComparison compare(final IntegerComparison integerComparison) {
+  public ShortIntegerComparison compare(final BaseIntegerComparison integerComparison) {
   final ShortIntegerComparison shortCategoryOperation = integerComparison.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -321,7 +312,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.equals;
   }
 
-  public ShortBooleanComparison equals(final BooleanComparison booleanComparison) {
+  public ShortBooleanComparison equals(final BaseBooleanComparison booleanComparison) {
   final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -347,7 +338,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.notEquals;
   }
 
-  public ShortBooleanComparison notEquals(final BooleanComparison booleanComparison) {
+  public ShortBooleanComparison notEquals(final BaseBooleanComparison booleanComparison) {
   final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -373,7 +364,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.lessThan;
   }
 
-  public ShortBooleanComparison lessThan(final BooleanComparison booleanComparison) {
+  public ShortBooleanComparison lessThan(final BaseBooleanComparison booleanComparison) {
   final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -399,7 +390,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.greaterThan;
   }
 
-  public ShortBooleanComparison greaterThan(final BooleanComparison booleanComparison) {
+  public ShortBooleanComparison greaterThan(final BaseBooleanComparison booleanComparison) {
   final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -425,7 +416,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.lessThanOrEquals;
   }
 
-  public ShortBooleanComparison lessThanOrEquals(final BooleanComparison booleanComparison) {
+  public ShortBooleanComparison lessThanOrEquals(final BaseBooleanComparison booleanComparison) {
   final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {
@@ -451,7 +442,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.greaterThanOrEquals;
   }
 
-  public ShortBooleanComparison greaterThanOrEquals(final BooleanComparison booleanComparison) {
+  public ShortBooleanComparison greaterThanOrEquals(final BaseBooleanComparison booleanComparison) {
   final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
 
     if (shortCategoryOperation == null) {

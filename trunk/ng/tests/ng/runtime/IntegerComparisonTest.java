@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 
 import junit.framework.TestCase;
-import ng.lang.MetaClass;
+import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.IntegerComparison;
 import ng.runtime.threadcontext.ThreadContext;

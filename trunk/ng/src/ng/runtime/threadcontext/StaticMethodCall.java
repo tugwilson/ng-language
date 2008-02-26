@@ -2,20 +2,16 @@ package ng.runtime.threadcontext;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.Map;
 
-import ng.lang.MetaClass;
-import ng.runtime.metaclass.DoStaticMethodCall;
+import ng.runtime.metaclass.BaseStaticMethodCall;
+import ng.runtime.metaclass.MetaClass;
 
 /**
  * @author John
  *
  */
-public interface StaticMethodCall {
 
-  Map<MetaClass, DoStaticMethodCall> getCategoryStaticMethodCallMap();
-  void setCategoryStaticMethodCallMap(Map<MetaClass, DoStaticMethodCall> categoryBinaryOperationMap);
-
+public interface StaticMethodCall extends BaseStaticMethodCall {
   Object apply(Class theClass, String name, Object[] params) throws Throwable;
   Object apply(MetaClass metaClass, String name, Object[] params) throws Throwable;
   Object apply(Class theClass, StaticCallable callable, String name, Object[] params) throws Throwable;

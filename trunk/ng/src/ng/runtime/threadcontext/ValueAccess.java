@@ -1,6 +1,6 @@
 package ng.runtime.threadcontext;
 
-import ng.lang.MetaClass;
+import ng.runtime.metaclass.MetaClass;
 
 public interface ValueAccess {
   Object get(MetaClass metaClass, String name);
