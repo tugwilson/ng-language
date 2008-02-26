@@ -1,17 +1,8 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
-import ng.runtime.metaclass.BooleanBinaryComparison;
-import ng.runtime.metaclass.ByteBinaryArithmeticOperation;
-import ng.runtime.metaclass.ByteBooleanComparison;
-import ng.runtime.metaclass.ByteConversion;
-import ng.runtime.metaclass.ByteIntegerComparison;
-import ng.runtime.metaclass.ByteMetaClass;
-import ng.runtime.metaclass.Conversion;
-import ng.runtime.metaclass.IntegerBinaryComparison;
-import ng.runtime.threadcontext.BinaryArithmeticOperation;
-import ng.runtime.threadcontext.BooleanComparison;
-import ng.runtime.threadcontext.IntegerComparison;
+import ng.runtime.metaclass.*;
+import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
+import ng.runtime.metaclass.BaseBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 
@@ -111,7 +102,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.add;
   }
 
-  public ByteBinaryArithmeticOperation add(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ByteBinaryArithmeticOperation add(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ByteBinaryArithmeticOperation byteCategoryOperation = binaryArithmeticOperation.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -137,7 +128,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.subtract;
   }
 
-  public ByteBinaryArithmeticOperation subtract(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ByteBinaryArithmeticOperation subtract(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ByteBinaryArithmeticOperation byteCategoryOperation = binaryArithmeticOperation.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -163,7 +154,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.multiply;
   }
 
-  public ByteBinaryArithmeticOperation multiply(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ByteBinaryArithmeticOperation multiply(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ByteBinaryArithmeticOperation byteCategoryOperation = binaryArithmeticOperation.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -189,7 +180,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.divide;
   }
 
-  public ByteBinaryArithmeticOperation divide(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ByteBinaryArithmeticOperation divide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ByteBinaryArithmeticOperation byteCategoryOperation = binaryArithmeticOperation.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -215,7 +206,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.modulo;
   }
 
-  public ByteBinaryArithmeticOperation modulo(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ByteBinaryArithmeticOperation modulo(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ByteBinaryArithmeticOperation byteCategoryOperation = binaryArithmeticOperation.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -241,7 +232,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.power;
   }
 
-  public ByteBinaryArithmeticOperation power(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ByteBinaryArithmeticOperation power(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ByteBinaryArithmeticOperation byteCategoryOperation = binaryArithmeticOperation.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -267,7 +258,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.remainderDivide;
   }
 
-  public ByteBinaryArithmeticOperation remainderDivide(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public ByteBinaryArithmeticOperation remainderDivide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final ByteBinaryArithmeticOperation byteCategoryOperation = binaryArithmeticOperation.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -297,7 +288,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.compare;
   }
 
-  public ByteIntegerComparison compare(final IntegerComparison integerComparison) {
+  public ByteIntegerComparison compare(final BaseIntegerComparison integerComparison) {
   final ByteIntegerComparison byteCategoryOperation = integerComparison.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -323,7 +314,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.equals;
   }
 
-  public ByteBooleanComparison equals(final BooleanComparison booleanComparison) {
+  public ByteBooleanComparison equals(final BaseBooleanComparison booleanComparison) {
   final ByteBooleanComparison byteCategoryOperation = booleanComparison.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -349,7 +340,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.notEquals;
   }
 
-  public ByteBooleanComparison notEquals(final BooleanComparison booleanComparison) {
+  public ByteBooleanComparison notEquals(final BaseBooleanComparison booleanComparison) {
   final ByteBooleanComparison byteCategoryOperation = booleanComparison.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -375,7 +366,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.lessThan;
   }
 
-  public ByteBooleanComparison lessThan(final BooleanComparison booleanComparison) {
+  public ByteBooleanComparison lessThan(final BaseBooleanComparison booleanComparison) {
   final ByteBooleanComparison byteCategoryOperation = booleanComparison.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -401,7 +392,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.greaterThan;
   }
 
-  public ByteBooleanComparison greaterThan(final BooleanComparison booleanComparison) {
+  public ByteBooleanComparison greaterThan(final BaseBooleanComparison booleanComparison) {
   final ByteBooleanComparison byteCategoryOperation = booleanComparison.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -427,7 +418,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.lessThanOrEquals;
   }
 
-  public ByteBooleanComparison lessThanOrEquals(final BooleanComparison booleanComparison) {
+  public ByteBooleanComparison lessThanOrEquals(final BaseBooleanComparison booleanComparison) {
   final ByteBooleanComparison byteCategoryOperation = booleanComparison.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {
@@ -453,7 +444,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.greaterThanOrEquals;
   }
 
-  public ByteBooleanComparison greaterThanOrEquals(final BooleanComparison booleanComparison) {
+  public ByteBooleanComparison greaterThanOrEquals(final BaseBooleanComparison booleanComparison) {
   final ByteBooleanComparison byteCategoryOperation = booleanComparison.getByteCategoryOperation();
 
     if (byteCategoryOperation == null) {

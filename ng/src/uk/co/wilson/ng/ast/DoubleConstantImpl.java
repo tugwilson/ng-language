@@ -1,8 +1,8 @@
 package uk.co.wilson.ng.ast;
 
 import ng.ast.DoubleConstant;
-import ng.lang.MetaClass;
 import ng.runtime.NgDouble;
+import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 
 

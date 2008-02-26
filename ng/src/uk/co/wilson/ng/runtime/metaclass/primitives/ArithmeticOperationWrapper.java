@@ -3,8 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.lang.MetaClass;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
@@ -200,7 +200,7 @@ public abstract class ArithmeticOperationWrapper implements ArithmeticBinaryOper
    * @param rhsMetaClass
    * @param rhs
    * @return
-   * @see ng.runtime.metaclass.ArithmeticBinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, ng.lang.MetaClass, java.lang.Object)
+   * @see ng.runtime.metaclass.ArithmeticBinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, ng.runtime.metaclass.MetaClass, java.lang.Object)
    */
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
     return this.delegate.doApply(tc, lhs, rhsMetaClass, rhs);

@@ -1,17 +1,8 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
-import ng.runtime.metaclass.BooleanBinaryComparison;
-import ng.runtime.metaclass.Conversion;
-import ng.runtime.metaclass.FloatBinaryArithmeticOperation;
-import ng.runtime.metaclass.FloatBooleanComparison;
-import ng.runtime.metaclass.FloatConversion;
-import ng.runtime.metaclass.FloatIntegerComparison;
-import ng.runtime.metaclass.FloatMetaClass;
-import ng.runtime.metaclass.IntegerBinaryComparison;
-import ng.runtime.threadcontext.BinaryArithmeticOperation;
-import ng.runtime.threadcontext.BooleanComparison;
-import ng.runtime.threadcontext.IntegerComparison;
+import ng.runtime.metaclass.*;
+import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
+import ng.runtime.metaclass.BaseBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 
@@ -110,7 +101,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.add;
   }
 
-  public FloatBinaryArithmeticOperation add(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation add(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -136,7 +127,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.subtract;
   }
 
-  public FloatBinaryArithmeticOperation subtract(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation subtract(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -162,7 +153,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.multiply;
   }
 
-  public FloatBinaryArithmeticOperation multiply(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation multiply(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -188,7 +179,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.divide;
   }
 
-  public FloatBinaryArithmeticOperation divide(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation divide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -214,7 +205,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.modulo;
   }
 
-  public FloatBinaryArithmeticOperation modulo(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation modulo(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -240,7 +231,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.power;
   }
 
-  public FloatBinaryArithmeticOperation power(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation power(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -266,7 +257,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.remainderDivide;
   }
 
-  public FloatBinaryArithmeticOperation remainderDivide(final BinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation remainderDivide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -296,7 +287,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.compare;
   }
 
-  public FloatIntegerComparison compare(final IntegerComparison integerComparison) {
+  public FloatIntegerComparison compare(final BaseIntegerComparison integerComparison) {
   final FloatIntegerComparison floatCategoryOperation = integerComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -322,7 +313,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.equals;
   }
 
-  public FloatBooleanComparison equals(final BooleanComparison booleanComparison) {
+  public FloatBooleanComparison equals(final BaseBooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -348,7 +339,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.notEquals;
   }
 
-  public FloatBooleanComparison notEquals(final BooleanComparison booleanComparison) {
+  public FloatBooleanComparison notEquals(final BaseBooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -374,7 +365,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.lessThan;
   }
 
-  public FloatBooleanComparison lessThan(final BooleanComparison booleanComparison) {
+  public FloatBooleanComparison lessThan(final BaseBooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -400,7 +391,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.greaterThan;
   }
 
-  public FloatBooleanComparison greaterThan(final BooleanComparison booleanComparison) {
+  public FloatBooleanComparison greaterThan(final BaseBooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -426,7 +417,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.lessThanOrEquals;
   }
 
-  public FloatBooleanComparison lessThanOrEquals(final BooleanComparison booleanComparison) {
+  public FloatBooleanComparison lessThanOrEquals(final BaseBooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -452,7 +443,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.greaterThanOrEquals;
   }
 
-  public FloatBooleanComparison greaterThanOrEquals(final BooleanComparison booleanComparison) {
+  public FloatBooleanComparison greaterThanOrEquals(final BaseBooleanComparison booleanComparison) {
   final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
