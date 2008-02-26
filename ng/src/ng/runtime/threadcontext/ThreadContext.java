@@ -1,7 +1,7 @@
 package ng.runtime.threadcontext;
 
+import ng.lang.NgRuntimeException;
 import ng.runtime.metaclass.MetaClass;
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContextImpl;
 
 /**
  * @author John
@@ -9,13 +9,32 @@ import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContextImpl;
  */
 public abstract class ThreadContext {
   private static final ThreadLocal<ThreadContext> contexts = new ThreadLocal<ThreadContext>() {
+    private final Class tcClass;
+    {
+      Class tmp = null;
+      
+      try {
+        // TODO: get the class name from Property
+        tmp = Class.forName("uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContextImpl");
+      } catch (ClassNotFoundException e) {
+        throw new NgRuntimeException(e);
+      }
+      
+      tcClass = tmp;
+    }
 
     /* (non-JavaDoc)
      * @see java.lang.ThreadLocal#initialValue()
      */
     @Override
     protected ThreadContext initialValue() {
-      return new ExtendedThreadContextImpl();
+      try {
+        return (ThreadContext)tcClass.newInstance();
+      } catch (InstantiationException e) {
+        throw new NgRuntimeException(e);
+      } catch (IllegalAccessException e) {
+        throw new NgRuntimeException(e);
+      }
     }
 
   };

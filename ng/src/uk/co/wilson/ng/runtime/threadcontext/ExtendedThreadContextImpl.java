@@ -13,7 +13,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import ng.lang.NgObject;
 import ng.lang.NgRuntimeException;
 import ng.runtime.NgBoolean;
 import ng.runtime.NgByte;
@@ -22,6 +21,7 @@ import ng.runtime.NgDouble;
 import ng.runtime.NgFloat;
 import ng.runtime.NgInt;
 import ng.runtime.NgLong;
+import ng.runtime.NgObject;
 import ng.runtime.NgShort;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.PrimitiveMetaClasses;
