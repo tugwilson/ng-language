@@ -82,7 +82,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.convert;
   }
 
-  public BigIntegerConversion convert(BaseConversionOperation conversionOperation) {
+  public BigIntegerConversion convert(final BaseConversionOperation conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {

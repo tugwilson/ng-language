@@ -40,7 +40,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl;
 
 public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   private static final MetaClass objectMetaClass = new MetaClassImpl(Object.class);
-  
+
   private static final int getMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC;
 
   private static final Map<Class<?>, MetaClass> registry = new HashMap<Class<?>, MetaClass>();

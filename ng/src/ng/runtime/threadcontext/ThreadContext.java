@@ -12,15 +12,15 @@ public abstract class ThreadContext {
     private final Class tcClass;
     {
       Class tmp = null;
-      
+
       try {
         // TODO: get the class name from Property
         tmp = Class.forName("uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContextImpl");
       } catch (ClassNotFoundException e) {
         throw new NgRuntimeException(e);
       }
-      
-      tcClass = tmp;
+
+      this.tcClass = tmp;
     }
 
     /* (non-JavaDoc)
@@ -29,7 +29,7 @@ public abstract class ThreadContext {
     @Override
     protected ThreadContext initialValue() {
       try {
-        return (ThreadContext)tcClass.newInstance();
+        return (ThreadContext)this.tcClass.newInstance();
       } catch (InstantiationException e) {
         throw new NgRuntimeException(e);
       } catch (IllegalAccessException e) {

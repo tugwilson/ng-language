@@ -15,211 +15,211 @@ import ng.runtime.threadcontext.StaticCallable;
 public class BaseStaticMethodContainer implements StaticMethodContainer, StaticCallable {
   protected volatile StaticCallable modifiedCallable = null;
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, Object[] params, MetaClass[] metaClasses) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final Object[] params, final MetaClass[] metaClasses) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, boolean p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final boolean p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, char p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final char p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, byte p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final byte p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, short p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final short p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, int p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final int p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, long p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final long p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, float p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final float p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, double p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final double p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, BigInteger p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final BigInteger p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, BigDecimal p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final BigDecimal p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, String p1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final String p1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, Object p1, MetaClass m1) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final Object p1, final MetaClass m1) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, Object p1, MetaClass m1, Object p2, MetaClass m2) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final Object p1, final MetaClass m1, final Object p2, final MetaClass m2) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, Object p1, MetaClass m1, Object p2, MetaClass m2, Object p3, MetaClass m3) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final Object p1, final MetaClass m1, final Object p2, final MetaClass m2, final Object p3, final MetaClass m3) {
     return this;
   }
 
-  public StaticCallable getCallable(ExtendedThreadContext tc, Object p1, MetaClass m1, Object p, MetaClass m2, Object p3, MetaClass m3, Object p4, MetaClass m4) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final Object p1, final MetaClass m1, final Object p, final MetaClass m2, final Object p3, final MetaClass m3, final Object p4, final MetaClass m4) {
     return this;
   }
 
-  public boolean isStillValid(MetaClass metaclass) {
+  public boolean isStillValid(final MetaClass metaclass) {
     return false;
   }
 
-  public Object doStaticCall(ExtendedThreadContext tc, Object[] params) throws Throwable {
+  public Object doStaticCall(final ExtendedThreadContext tc, final Object[] params) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, boolean p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final boolean p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, char p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final char p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, byte p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final byte p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, short p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final short p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, int p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final int p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, long p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final long p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, float p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final float p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, double p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final double p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, BigInteger p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final BigInteger p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, BigDecimal p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final BigDecimal p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, String p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final String p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, Object p1) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final Object p1) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, Object p1, Object p2) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final Object p1, final Object p2) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, Object p1, Object p2, Object p3) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final Object p1, final Object p2, final Object p3) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doStaticCallQuick(ExtendedThreadContext tc, Object p1, Object p2, Object p3, Object p4) throws Throwable {
+  public Object doStaticCallQuick(final ExtendedThreadContext tc, final Object p1, final Object p2, final Object p3, final Object p4) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doCall(ExtendedThreadContext tc, Object instance, Object[] params) throws Throwable {
+  public Object doCall(final ExtendedThreadContext tc, final Object instance, final Object[] params) throws Throwable {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance) throws Throwable {
     return doStaticCallQuick(tc);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, boolean p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final boolean p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, char p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final char p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, byte p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final byte p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, short p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final short p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, int p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final int p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, long p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final long p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, float p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final float p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, double p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final double p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, BigInteger p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final BigInteger p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, BigDecimal p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final BigDecimal p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, String p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final String p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, Object p1) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final Object p1) throws Throwable {
     return doStaticCallQuick(tc, p1);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, Object p1, Object p2) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final Object p1, final Object p2) throws Throwable {
     return doStaticCallQuick(tc, p1, p2);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, Object p1, Object p2, Object p3) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final Object p1, final Object p2, final Object p3) throws Throwable {
     return doStaticCallQuick(tc, p1, p2, p3);
   }
 
-  public Object doCallQuick(ExtendedThreadContext tc, Object instance, Object p1, Object p2, Object p3, Object p4) throws Throwable {
+  public Object doCallQuick(final ExtendedThreadContext tc, final Object instance, final Object p1, final Object p2, final Object p3, final Object p4) throws Throwable {
     return doStaticCallQuick(tc, p1, p2, p3, p4);
   }
 }

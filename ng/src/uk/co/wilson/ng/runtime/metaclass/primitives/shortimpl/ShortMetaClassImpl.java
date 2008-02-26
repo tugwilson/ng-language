@@ -80,7 +80,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.convert;
   }
 
-  public ShortConversion convert(BaseConversionOperation conversionOperation) {
+  public ShortConversion convert(final BaseConversionOperation conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {

@@ -82,7 +82,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.convert;
   }
 
-  public ByteConversion convert(BaseConversionOperation conversionOperation) {
+  public ByteConversion convert(final BaseConversionOperation conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {

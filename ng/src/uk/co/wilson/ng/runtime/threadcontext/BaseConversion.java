@@ -28,7 +28,7 @@ public class BaseConversion implements ConversionOperation {
     return this.categoryOperationMap;
   }
 
-  public void setCategoryConversionMap(Map<Object, Conversion> categoryConversionMap) {
+  public void setCategoryConversionMap(final Map<Object, Conversion> categoryConversionMap) {
     this.categoryOperationMap = categoryConversionMap;
   }
 

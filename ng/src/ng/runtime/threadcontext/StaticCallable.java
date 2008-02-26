@@ -11,7 +11,7 @@ import ng.runtime.metaclass.MetaClass;
  */
 public interface StaticCallable extends Callable {
   boolean isStillValid(MetaClass metaclass);
-  
+
   Object doStaticCall(ExtendedThreadContext tc, Object params[]) throws Throwable;
 
   Object doStaticCallQuick(ExtendedThreadContext tc) throws Throwable;
