@@ -1,27 +1,21 @@
 package ng.runtime.metaclass;
 
+import uk.co.wilson.ng.runtime.metaclass.DoubleMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.FloatMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.IntMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.ShortMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.StringMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl.BooleanMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl.BooleanMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl;
 
 
