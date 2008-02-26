@@ -57,7 +57,7 @@ public class NgPartialSums {
         } catch (final NotPerformed e10) {
           k3 = tc.convert().asDouble(tc.multiply().apply(k2, k));
         }
-        
+
         Math$sin = tc.staticMethodCall().getCallable(mathMetaClass, Math$sin, "sin");
         final double sk = tc.convert().asDouble(tc.staticMethodCall().applyQuick(mathMetaClass, Math$sin, "sin", k));
         Math$cos = tc.staticMethodCall().getCallable(mathMetaClass, Math$cos, "cos");

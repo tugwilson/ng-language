@@ -19,10 +19,10 @@ public abstract class PrimitiveMetaClasses {
   private static final BigIntegerMetaClass bigIntegerMetaClass;
   private static final BigDecimalMetaClass bigDecimalMetaClass;
   private static final StringMetaClass stringMetaClass;
-  
+
   static {
     final ThreadContext tc = ThreadContext.getThreadContext();
-    
+
     objectMetaClass = tc.getMetaClassFor(Object.class);
     booleanMetaClass = (BooleanMetaClass)tc.getMetaClassFor(boolean.class);
     charMetaClass = (CharMetaClass)tc.getMetaClassFor(char.class);

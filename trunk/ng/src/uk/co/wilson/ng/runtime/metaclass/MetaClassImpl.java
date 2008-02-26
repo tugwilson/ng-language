@@ -56,7 +56,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ConversionNoopImpl.instance;
   }
 
-  public Conversion convert(BaseConversionOperation conversionOperation) {
+  public Conversion convert(final BaseConversionOperation conversionOperation) {
   final Map<Object, Conversion> categoryOperationMap = conversionOperation.getCategoryConversionCallMap();
 
     if(categoryOperationMap != null) {

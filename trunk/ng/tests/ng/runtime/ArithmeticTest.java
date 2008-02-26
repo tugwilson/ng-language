@@ -616,52 +616,52 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToDouble(op.apply((float)18, (Object)NgDouble.valueOf(4))) == dResult);
     assertTrue(tc.unwrapToDouble(op.apply((double)18, (Object)NgDouble.valueOf(4))) == dResult);
     assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(18), NgDouble.valueOf(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), NgDouble.valueOf((double)4))).doubleValue() == dResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), NgDouble.valueOf(4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToDouble(op.apply(NgByte.valueOf((byte)18), NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(NgChar.valueOf((char)18), NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(NgShort.valueOf((short)18), NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(NgInt.valueOf((int)18), NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(NgLong.valueOf((long)18), NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(NgFloat.valueOf((float)18), NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)18), NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(18), NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), NgDouble.valueOf((double)4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgByte.valueOf((byte)18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgChar.valueOf((char)18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgShort.valueOf((short)18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgInt.valueOf(18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgLong.valueOf(18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgFloat.valueOf(18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf(18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), NgDouble.valueOf(4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgByte.valueOf((byte)18), (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgChar.valueOf((char)18), (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgShort.valueOf((short)18), (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgInt.valueOf((int)18), (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgLong.valueOf((long)18), (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgFloat.valueOf((float)18), (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)18), (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(18), (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)NgDouble.valueOf((double)4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgByte.valueOf((byte)18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgChar.valueOf((char)18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgShort.valueOf((short)18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgInt.valueOf(18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgLong.valueOf(18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgFloat.valueOf(18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf(18), NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(18), (Object)NgDouble.valueOf(4))) == dResult);
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)NgDouble.valueOf(4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgByte.valueOf((byte)18), doubleMetaClass, (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgChar.valueOf((char)18), doubleMetaClass, (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgShort.valueOf((short)18), doubleMetaClass, (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgInt.valueOf((int)18), doubleMetaClass, (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgLong.valueOf((long)18), doubleMetaClass, (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgFloat.valueOf((float)18), doubleMetaClass, (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)18), doubleMetaClass, (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(18), doubleMetaClass, (Object)NgDouble.valueOf((double)4))) == dResult);
-    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), doubleMetaClass, (Object)NgDouble.valueOf((double)4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgByte.valueOf((byte)18), doubleMetaClass, NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgChar.valueOf((char)18), doubleMetaClass, NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgShort.valueOf((short)18), doubleMetaClass, NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgInt.valueOf(18), doubleMetaClass, NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgLong.valueOf(18), doubleMetaClass, NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgFloat.valueOf(18), doubleMetaClass, NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf(18), doubleMetaClass, NgDouble.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(18), doubleMetaClass, (Object)NgDouble.valueOf(4))) == dResult);
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), doubleMetaClass, (Object)NgDouble.valueOf(4))).doubleValue() == dResult);
 
     assertTrue(op.bigIntegerApply((byte)18, BigInteger.valueOf(4)).longValue() == iResult);
     assertTrue(op.bigIntegerApply((char)18, BigInteger.valueOf(4)).longValue() == iResult);
     assertTrue(op.bigIntegerApply((short)18, BigInteger.valueOf(4)).longValue() == iResult);
-    assertTrue(op.bigIntegerApply((int)18, BigInteger.valueOf(4)).longValue() == iResult);
+    assertTrue(op.bigIntegerApply(18, BigInteger.valueOf(4)).longValue() == iResult);
     assertTrue(op.bigIntegerApply((long)18, BigInteger.valueOf(4)).longValue() == iResult);
-    assertTrue(op.floatApply((float)18, BigInteger.valueOf(4)) == dResult);
-    assertTrue(op.doubleApply((double)18, BigInteger.valueOf(4)) == dResult);
+    assertTrue(op.floatApply(18, BigInteger.valueOf(4)) == dResult);
+    assertTrue(op.doubleApply(18, BigInteger.valueOf(4)) == dResult);
     assertTrue(op.bigIntegerApply(BigInteger.valueOf(18), BigInteger.valueOf(4)).longValue() == iResult);
     assertTrue(op.bigDecimalApply(BigDecimal.valueOf(18), BigInteger.valueOf(4)).doubleValue() == dResult);
 
     assertTrue(((BigInteger)op.apply((byte)18, BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply((char)18, BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply((short)18, BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((int)18, BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply(18, BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply((long)18, BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(tc.unwrapToFloat(op.apply((float)18, BigInteger.valueOf(4))) == dResult);
     assertTrue(tc.unwrapToDouble(op.apply((double)18, BigInteger.valueOf(4))) == dResult);
@@ -671,35 +671,35 @@ public class ArithmeticTest extends TestCase {
     assertTrue(((BigInteger)op.apply(NgByte.valueOf((byte)18), BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply(NgChar.valueOf((char)18), BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply(NgShort.valueOf((short)18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply(NgInt.valueOf((int)18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply(NgLong.valueOf((long)18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(NgFloat.valueOf((float)18), BigInteger.valueOf(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf((double)18), BigInteger.valueOf(4))) == dResult);
+    assertTrue(((BigInteger)op.apply(NgInt.valueOf(18), BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply(NgLong.valueOf(18), BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(NgFloat.valueOf(18), BigInteger.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf(18), BigInteger.valueOf(4))) == dResult);
 
-    assertTrue(((BigInteger)op.apply((Object)NgByte.valueOf((byte)18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((Object)NgChar.valueOf((char)18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((Object)NgShort.valueOf((short)18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((Object)NgInt.valueOf((int)18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((Object)NgLong.valueOf((long)18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)18), BigInteger.valueOf(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)18), BigInteger.valueOf(4))) == dResult);
+    assertTrue(((BigInteger)op.apply(NgByte.valueOf((byte)18), BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply(NgChar.valueOf((char)18), BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply(NgShort.valueOf((short)18), BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply(NgInt.valueOf(18), BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply(NgLong.valueOf(18), BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(NgFloat.valueOf(18), BigInteger.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(NgDouble.valueOf(18), BigInteger.valueOf(4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), BigInteger.valueOf(4))).doubleValue() == dResult);
 
     assertTrue(((BigInteger)op.apply((Object)NgByte.valueOf((byte)18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply((Object)NgChar.valueOf((char)18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply((Object)NgShort.valueOf((short)18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((Object)NgInt.valueOf((int)18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((Object)NgLong.valueOf((long)18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)18), (Object)BigInteger.valueOf(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)18), (Object)BigInteger.valueOf(4))) == dResult);
+    assertTrue(((BigInteger)op.apply((Object)NgInt.valueOf(18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply((Object)NgLong.valueOf(18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf(18), (Object)BigInteger.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf(18), (Object)BigInteger.valueOf(4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)BigInteger.valueOf(4))).doubleValue() == dResult);
 
-    assertTrue(((BigInteger)op.apply((Object)NgByte.valueOf((byte)18), bigIntegerMetaClass, (Object)BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((Object)NgChar.valueOf((char)18), bigIntegerMetaClass, (Object)BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((Object)NgShort.valueOf((short)18), bigIntegerMetaClass, (Object)BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((Object)NgInt.valueOf((int)18), bigIntegerMetaClass, (Object)BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply(NgByte.valueOf((byte)18), bigIntegerMetaClass, BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply(NgChar.valueOf((char)18), bigIntegerMetaClass, BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply(NgShort.valueOf((short)18), bigIntegerMetaClass, BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(((BigInteger)op.apply(NgInt.valueOf(18), bigIntegerMetaClass, BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply((Object)NgLong.valueOf((long)18), bigIntegerMetaClass, (Object)BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(tc.unwrapToFloat(op.apply((Object)NgFloat.valueOf((float)18), bigIntegerMetaClass, (Object)BigInteger.valueOf(4))) == dResult);
     assertTrue(tc.unwrapToDouble(op.apply((Object)NgDouble.valueOf((double)18), bigIntegerMetaClass, (Object)BigInteger.valueOf(4))) == dResult);
@@ -799,7 +799,7 @@ public class ArithmeticTest extends TestCase {
     final ExtendedThreadContext tc = (ExtendedThreadContext)ThreadContext.getThreadContext();
     doTest(tc, tc.modulo(), 4, 4.0);
   }
-  
+
   public void testRemainderDivide() throws Throwable {
     final ExtendedThreadContext tc = (ExtendedThreadContext)ThreadContext.getThreadContext();
     doTest(tc, tc.remainderDivide(), 2, 2.0);

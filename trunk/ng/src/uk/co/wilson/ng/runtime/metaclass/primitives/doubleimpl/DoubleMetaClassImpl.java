@@ -80,7 +80,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.convert;
   }
 
-  public DoubleConversion convert(BaseConversionOperation conversionOperation) {
+  public DoubleConversion convert(final BaseConversionOperation conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {
