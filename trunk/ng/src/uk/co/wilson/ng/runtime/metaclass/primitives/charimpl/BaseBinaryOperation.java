@@ -3,6 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.charimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import ng.runtime.metaclass.CharBinaryOperation;
+
 import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 

@@ -8,6 +8,11 @@ import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.ShortBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.ShortBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.ShortConversion;
+import uk.co.wilson.ng.runtime.metaclass.ShortIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.ShortMetaClass;
 
 public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass {
   private volatile ShortConversion modifiedConvert = null;

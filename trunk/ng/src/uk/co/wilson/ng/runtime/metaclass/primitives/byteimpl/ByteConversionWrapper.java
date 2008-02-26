@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.NgByte;
+import ng.runtime.metaclass.ByteConversion;
 import ng.runtime.metaclass.Conversion;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ConversionWrapper;

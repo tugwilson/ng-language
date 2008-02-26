@@ -4,17 +4,17 @@ import java.util.Map;
 import java.util.Stack;
 
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.metaclass.BigDecimalBinaryArithmeticOperation;
+import ng.runtime.metaclass.BigIntegerBinaryArithmeticOperation;
+import ng.runtime.metaclass.ByteBinaryArithmeticOperation;
+import ng.runtime.metaclass.CharBinaryArithmeticOperation;
+import ng.runtime.metaclass.LongBinaryArithmeticOperation;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.DoubleBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.FloatBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.IntBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.ShortBinaryArithmeticOperation;
 
 public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation implements BinaryArithmeticOperation {
   protected BaseBinaryAritmeticOperation(final ExtendedThreadContext tc) {

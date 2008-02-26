@@ -1,5 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl;
 
+import ng.runtime.metaclass.BooleanMetaClass;
 import ng.runtime.metaclass.Conversion;
 import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
 
