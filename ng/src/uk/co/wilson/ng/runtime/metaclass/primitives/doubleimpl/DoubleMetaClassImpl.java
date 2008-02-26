@@ -3,16 +3,16 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.DoubleBinaryArithmeticOperation;
+import ng.runtime.metaclass.DoubleBooleanComparison;
+import ng.runtime.metaclass.DoubleConversion;
+import ng.runtime.metaclass.DoubleIntegerComparison;
+import ng.runtime.metaclass.DoubleMetaClass;
 import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.DoubleBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.DoubleBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.DoubleConversion;
-import uk.co.wilson.ng.runtime.metaclass.DoubleIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.DoubleMetaClass;
 
 public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClass {
   private volatile DoubleConversion modifiedConvert = null;

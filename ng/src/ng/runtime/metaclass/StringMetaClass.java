@@ -1,6 +1,7 @@
-package uk.co.wilson.ng.runtime.metaclass;
+package ng.runtime.metaclass;
 
-import ng.runtime.metaclass.MetaClass;
+import ng.lang.MetaClass;
+
 
 /**
  * @author John

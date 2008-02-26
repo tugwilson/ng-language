@@ -3,9 +3,9 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.intimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import ng.runtime.metaclass.IntBooleanComparison;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
-import uk.co.wilson.ng.runtime.metaclass.IntBooleanComparison;
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 
 

@@ -2,7 +2,8 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import java.lang.reflect.Method;
 
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
+
 
 
 

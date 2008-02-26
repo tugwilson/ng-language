@@ -3,16 +3,16 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.intimpl;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.IntBinaryArithmeticOperation;
+import ng.runtime.metaclass.IntBooleanComparison;
+import ng.runtime.metaclass.IntConversion;
+import ng.runtime.metaclass.IntIntegerComparison;
+import ng.runtime.metaclass.IntMetaClass;
 import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.IntBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.IntBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.IntConversion;
-import uk.co.wilson.ng.runtime.metaclass.IntIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.IntMetaClass;
 
 public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   private volatile IntConversion modifiedConvert = null;

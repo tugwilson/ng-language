@@ -4,17 +4,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Map;
 
-import ng.runtime.metaclass.BigDecimalIntegerComparison;
-import ng.runtime.metaclass.BigIntegerIntegerComparison;
-import ng.runtime.metaclass.ByteIntegerComparison;
-import ng.runtime.metaclass.CharIntegerComparison;
-import ng.runtime.metaclass.IntegerBinaryComparison;
-import ng.runtime.metaclass.LongIntegerComparison;
-import ng.runtime.metaclass.MetaClass;
-import uk.co.wilson.ng.runtime.metaclass.DoubleIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.FloatIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.IntIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.ShortIntegerComparison;
+import ng.lang.MetaClass;
+import ng.runtime.metaclass.*;
 
 /**
  * @author John

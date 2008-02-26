@@ -2,8 +2,8 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import java.util.Map;
 
+import ng.lang.MetaClass;
 import ng.runtime.metaclass.DoStaticMethodCall;
-import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.Misc;
 import ng.runtime.threadcontext.StaticMethodCall;
 

@@ -3,7 +3,7 @@ package ng.runtime.threadcontext;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.MetaClass;
+import ng.lang.MetaClass;
 
 public interface ConversionOperation {
   boolean asBoolean(Object instance);

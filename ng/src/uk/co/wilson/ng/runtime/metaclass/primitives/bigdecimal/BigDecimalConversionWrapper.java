@@ -5,9 +5,9 @@ import java.math.BigInteger;
 
 import ng.runtime.metaclass.BigDecimalConversion;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ConversionWrapper;
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 /*
  * Created on 10 Feb 2008

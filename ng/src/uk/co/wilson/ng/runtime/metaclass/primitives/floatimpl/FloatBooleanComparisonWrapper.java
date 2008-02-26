@@ -5,10 +5,10 @@ import java.math.BigInteger;
 
 import ng.runtime.NgFloat;
 import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.metaclass.FloatBooleanComparison;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
-import uk.co.wilson.ng.runtime.metaclass.FloatBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BooleanBinaryComparisonWrapper;
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John

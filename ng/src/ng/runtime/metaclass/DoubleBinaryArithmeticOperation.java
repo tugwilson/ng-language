@@ -1,11 +1,10 @@
-package uk.co.wilson.ng.runtime.metaclass;
+package ng.runtime.metaclass;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 public interface DoubleBinaryArithmeticOperation extends ArithmeticBinaryOperation, DoubleBinaryOperation {
   double doDoubleApply(ExtendedThreadContext tc, double lhs, char rhs) throws NotPerformed;

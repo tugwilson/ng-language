@@ -3,10 +3,10 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.MetaClass;
+import ng.lang.MetaClass;
+import ng.runtime.metaclass.ShortIntegerComparison;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
-import uk.co.wilson.ng.runtime.metaclass.ShortIntegerComparison;
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 /*
  * Created on 19 Feb 2008

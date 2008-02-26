@@ -1,11 +1,7 @@
 package ng.runtime.metaclass;
 
-import uk.co.wilson.ng.runtime.metaclass.DoubleMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.FloatMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.IntMetaClass;
+import ng.lang.MetaClass;
 import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.ShortMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.StringMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl.BooleanMetaClassImpl;

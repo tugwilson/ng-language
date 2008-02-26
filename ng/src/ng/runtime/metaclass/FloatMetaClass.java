@@ -1,6 +1,6 @@
-package uk.co.wilson.ng.runtime.metaclass;
+package ng.runtime.metaclass;
 
-import ng.runtime.metaclass.MetaClass;
+import ng.lang.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.IntegerComparison;
