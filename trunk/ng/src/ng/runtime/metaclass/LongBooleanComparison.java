@@ -3,8 +3,8 @@ package ng.runtime.metaclass;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 public interface LongBooleanComparison extends BooleanBinaryComparison, LongBinaryOperation {
   boolean doApplyBoolean(ExtendedThreadContext tc, long lhs, char rhs)  throws NotPerformed;

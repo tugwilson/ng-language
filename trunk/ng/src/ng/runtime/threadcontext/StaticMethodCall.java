@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Map;
 
+import ng.lang.MetaClass;
 import ng.runtime.metaclass.DoStaticMethodCall;
-import ng.runtime.metaclass.MetaClass;
 
 /**
  * @author John

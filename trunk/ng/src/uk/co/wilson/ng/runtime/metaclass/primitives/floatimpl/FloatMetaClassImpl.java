@@ -3,16 +3,16 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 import ng.runtime.metaclass.ArithmeticBinaryOperation;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.FloatBinaryArithmeticOperation;
+import ng.runtime.metaclass.FloatBooleanComparison;
+import ng.runtime.metaclass.FloatConversion;
+import ng.runtime.metaclass.FloatIntegerComparison;
+import ng.runtime.metaclass.FloatMetaClass;
 import ng.runtime.metaclass.IntegerBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
-import uk.co.wilson.ng.runtime.metaclass.FloatBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.FloatBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.FloatConversion;
-import uk.co.wilson.ng.runtime.metaclass.FloatIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.FloatMetaClass;
 
 
 public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass {

@@ -1,7 +1,7 @@
 import ng.ast.BinaryOperation;
 import ng.ast.Node;
 import ng.ast.util.BinaryOperations;
-import ng.runtime.metaclass.MetaClass;
+import ng.lang.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 import uk.co.wilson.ng.ast.NodeImpl;
 

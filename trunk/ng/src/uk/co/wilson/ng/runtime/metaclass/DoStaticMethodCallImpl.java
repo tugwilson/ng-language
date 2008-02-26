@@ -10,10 +10,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import ng.lang.MetaClass;
 import ng.runtime.metaclass.DoStaticMethodCall;
-import ng.runtime.metaclass.MetaClass;
+import ng.runtime.metaclass.StaticMethodContainer;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.StaticCallable;
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John

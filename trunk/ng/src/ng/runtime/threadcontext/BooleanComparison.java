@@ -4,17 +4,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Map;
 
-import ng.runtime.metaclass.BigDecimalBooleanComparison;
-import ng.runtime.metaclass.BigIntegerBooleanComparison;
-import ng.runtime.metaclass.BooleanBinaryComparison;
-import ng.runtime.metaclass.ByteBooleanComparison;
-import ng.runtime.metaclass.CharBooleanComparison;
-import ng.runtime.metaclass.LongBooleanComparison;
-import ng.runtime.metaclass.MetaClass;
-import uk.co.wilson.ng.runtime.metaclass.DoubleBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.FloatBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.IntBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.ShortBooleanComparison;
+import ng.lang.MetaClass;
+import ng.runtime.metaclass.*;
 
 public interface BooleanComparison extends BinaryOperation {
 

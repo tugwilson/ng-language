@@ -1,11 +1,10 @@
-package uk.co.wilson.ng.runtime.metaclass;
+package ng.runtime.metaclass;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 public interface FloatBooleanComparison extends BooleanBinaryComparison, FloatBinaryOperation {
   boolean doApplyBoolean(ExtendedThreadContext tc, float lhs, char rhs)  throws NotPerformed;

@@ -1,6 +1,6 @@
 package ng.runtime.threadcontext;
 
-import ng.runtime.metaclass.MetaClass;
+import ng.lang.MetaClass;
 
 public interface Misc {
   public abstract Class<?> getTheClass(MetaClass metaClass, Object instance);

@@ -1,7 +1,5 @@
-package uk.co.wilson.ng.runtime.threadcontext;
+package ng.runtime.threadcontext;
 
-import ng.runtime.threadcontext.NotPerformed;
-import ng.runtime.threadcontext.ThreadContext;
 
 
 

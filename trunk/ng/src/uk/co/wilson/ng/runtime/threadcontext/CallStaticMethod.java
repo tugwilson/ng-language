@@ -5,9 +5,10 @@ import java.math.BigInteger;
 import java.util.Map;
 import java.util.Stack;
 
+import ng.lang.MetaClass;
 import ng.lang.NgRuntimeException;
 import ng.runtime.metaclass.DoStaticMethodCall;
-import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.StaticCallable;
 import ng.runtime.threadcontext.StaticMethodCall;
 

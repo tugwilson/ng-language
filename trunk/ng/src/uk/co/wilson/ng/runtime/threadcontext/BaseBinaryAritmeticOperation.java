@@ -3,18 +3,10 @@ package uk.co.wilson.ng.runtime.threadcontext;
 import java.util.Map;
 import java.util.Stack;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
-import ng.runtime.metaclass.BigDecimalBinaryArithmeticOperation;
-import ng.runtime.metaclass.BigIntegerBinaryArithmeticOperation;
-import ng.runtime.metaclass.ByteBinaryArithmeticOperation;
-import ng.runtime.metaclass.CharBinaryArithmeticOperation;
-import ng.runtime.metaclass.LongBinaryArithmeticOperation;
+import ng.runtime.metaclass.*;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.DoubleBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.FloatBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.IntBinaryArithmeticOperation;
-import uk.co.wilson.ng.runtime.metaclass.ShortBinaryArithmeticOperation;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 public abstract class BaseBinaryAritmeticOperation extends BaseBinaryOperation implements BinaryArithmeticOperation {
   protected BaseBinaryAritmeticOperation(final ExtendedThreadContext tc) {

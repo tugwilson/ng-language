@@ -1,5 +1,6 @@
 package ng.runtime.metaclass;
 
+import ng.lang.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.IntegerComparison;

@@ -1,7 +1,7 @@
 package uk.co.wilson.ng.ast;
 
 import ng.ast.Expression;
-import ng.runtime.metaclass.MetaClass;
+import ng.lang.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 
 public abstract class BinaryOperationImpl extends NodeImpl implements ng.ast.BinaryOperation {

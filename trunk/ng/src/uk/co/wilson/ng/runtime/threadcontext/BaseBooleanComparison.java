@@ -5,18 +5,10 @@ import java.math.BigInteger;
 import java.util.Map;
 import java.util.Stack;
 
-import ng.runtime.metaclass.BigDecimalBooleanComparison;
-import ng.runtime.metaclass.BigIntegerBooleanComparison;
-import ng.runtime.metaclass.BooleanBinaryComparison;
-import ng.runtime.metaclass.ByteBooleanComparison;
-import ng.runtime.metaclass.CharBooleanComparison;
-import ng.runtime.metaclass.LongBooleanComparison;
+import ng.runtime.metaclass.*;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.DoubleBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.FloatBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.IntBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.ShortBooleanComparison;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 
 public abstract class BaseBooleanComparison extends BaseBinaryOperation implements BooleanComparison {

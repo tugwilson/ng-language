@@ -3,8 +3,8 @@ package ng.runtime.metaclass;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
-import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 public interface ByteBinaryArithmeticOperation extends ArithmeticBinaryOperation, ByteBinaryOperation {
   int doIntApply(ExtendedThreadContext tc, byte lhs, char rhs) throws NotPerformed;
