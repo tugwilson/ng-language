@@ -43,6 +43,10 @@ public class MetaClassImpl extends BaseMetaClass {
     // TODO: introspect the class and set up the operations
   }
 
+  public MetaClassImpl() {
+    this(Object.class);
+  }
+
   public void modifyConvert(final Conversion modifiedConvert) {
     this.modifiedConvert = modifiedConvert;
   }

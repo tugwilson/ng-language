@@ -1,6 +1,5 @@
 package ng.runtime;
 
-import ng.lang.NgObject;
 import ng.runtime.metaclass.IntMetaClass;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.PrimitiveMetaClasses;

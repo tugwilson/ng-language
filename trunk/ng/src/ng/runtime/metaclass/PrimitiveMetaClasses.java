@@ -1,33 +1,34 @@
 package ng.runtime.metaclass;
 
-import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl.BooleanMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl;
+import ng.lang.NgRuntimeException;
 
 
 public abstract class PrimitiveMetaClasses {
-  private static final MetaClass objectMetaClass = new MetaClassImpl(Object.class);
-  private static final BooleanMetaClass booleanMetaClass = new BooleanMetaClassImpl();
-  private static final CharMetaClass charMetaClass = new CharMetaClassImpl();
-  private static final ByteMetaClass byteMetaClass = new ByteMetaClassImpl();
-  private static final ShortMetaClass shortMetaClass = new ShortMetaClassImpl();
-  private static final IntMetaClass intMetaClass = new IntMetaClassImpl();
-  private static final LongMetaClass longMetaClass = new LongMetaClassImpl();
-  private static final FloatMetaClass floatMetaClass = new FloatMetaClassImpl();
-  private static final DoubleMetaClass doubleMetaClass = new DoubleMetaClassImpl();
-  private static final BigIntegerMetaClass bigIntegerMetaClass = new BigIntegerMetaClassImpl();
-  private static final BigDecimalMetaClass bigDecimalMetaClass = new BigDecimalMetaClassImpl();
-  private static final StringMetaClass stringMetaClass = new StringMetaClassImpl();
+  // TODO: get these strings from Properties
+  private static final MetaClass objectMetaClass = (MetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.MetaClassImpl");
+  private static final BooleanMetaClass booleanMetaClass = (BooleanMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl.BooleanMetaClassImpl");
+  private static final CharMetaClass charMetaClass = (CharMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClassImpl");
+  private static final ByteMetaClass byteMetaClass = (ByteMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClassImpl");
+  private static final ShortMetaClass shortMetaClass = (ShortMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClassImpl");
+  private static final IntMetaClass intMetaClass = (IntMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClassImpl");
+  private static final LongMetaClass longMetaClass = (LongMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClassImpl");
+  private static final FloatMetaClass floatMetaClass = (FloatMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClassImpl");
+  private static final DoubleMetaClass doubleMetaClass = (DoubleMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClassImpl");
+  private static final BigIntegerMetaClass bigIntegerMetaClass = (BigIntegerMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl");
+  private static final BigDecimalMetaClass bigDecimalMetaClass = (BigDecimalMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl");
+  private static final StringMetaClass stringMetaClass = (StringMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl");
 
+  private static Object getInstance(final String className) {
+    try {
+      return Class.forName(className).newInstance();
+    } catch (InstantiationException e) {
+      throw new NgRuntimeException(e);
+    } catch (IllegalAccessException e) {
+      throw new NgRuntimeException(e);
+    } catch (ClassNotFoundException e) {
+      throw new NgRuntimeException(e);
+    }
+  }
   public static MetaClass getObjectMetaClass() {
     return objectMetaClass;
   }
