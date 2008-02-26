@@ -1,35 +1,43 @@
 package ng.runtime.metaclass;
 
-import ng.lang.NgRuntimeException;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
+import ng.runtime.threadcontext.ThreadContext;
 
 
 public abstract class PrimitiveMetaClasses {
-  // TODO: get these strings from Properties
-  private static final MetaClass objectMetaClass = (MetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.MetaClassImpl");
-  private static final BooleanMetaClass booleanMetaClass = (BooleanMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl.BooleanMetaClassImpl");
-  private static final CharMetaClass charMetaClass = (CharMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClassImpl");
-  private static final ByteMetaClass byteMetaClass = (ByteMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClassImpl");
-  private static final ShortMetaClass shortMetaClass = (ShortMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClassImpl");
-  private static final IntMetaClass intMetaClass = (IntMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClassImpl");
-  private static final LongMetaClass longMetaClass = (LongMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClassImpl");
-  private static final FloatMetaClass floatMetaClass = (FloatMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClassImpl");
-  private static final DoubleMetaClass doubleMetaClass = (DoubleMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClassImpl");
-  private static final BigIntegerMetaClass bigIntegerMetaClass = (BigIntegerMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl");
-  private static final BigDecimalMetaClass bigDecimalMetaClass = (BigDecimalMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl");
-  private static final StringMetaClass stringMetaClass = (StringMetaClass)getInstance("uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl");
-
-  private static Object getInstance(final String className) {
-    try {
-      return Class.forName(className).newInstance();
-    } catch (InstantiationException e) {
-      throw new NgRuntimeException(e);
-    } catch (IllegalAccessException e) {
-      throw new NgRuntimeException(e);
-    } catch (ClassNotFoundException e) {
-      throw new NgRuntimeException(e);
-    }
+  private static final MetaClass objectMetaClass;
+  private static final BooleanMetaClass booleanMetaClass;
+  private static final CharMetaClass charMetaClass;
+  private static final ByteMetaClass byteMetaClass;
+  private static final ShortMetaClass shortMetaClass;
+  private static final IntMetaClass intMetaClass;
+  private static final LongMetaClass longMetaClass;
+  private static final FloatMetaClass floatMetaClass;
+  private static final DoubleMetaClass doubleMetaClass;
+  private static final BigIntegerMetaClass bigIntegerMetaClass;
+  private static final BigDecimalMetaClass bigDecimalMetaClass;
+  private static final StringMetaClass stringMetaClass;
+  
+  static {
+    final ThreadContext tc = ThreadContext.getThreadContext();
+    
+    objectMetaClass = tc.getMetaClassFor(Object.class);
+    booleanMetaClass = (BooleanMetaClass)tc.getMetaClassFor(boolean.class);
+    charMetaClass = (CharMetaClass)tc.getMetaClassFor(char.class);
+    byteMetaClass = (ByteMetaClass)tc.getMetaClassFor(byte.class);
+    shortMetaClass = (ShortMetaClass)tc.getMetaClassFor(short.class);
+    intMetaClass = (IntMetaClass)tc.getMetaClassFor(int.class);
+    longMetaClass = (LongMetaClass)tc.getMetaClassFor(long.class);
+    floatMetaClass = (FloatMetaClass)tc.getMetaClassFor(float.class);
+    doubleMetaClass = (DoubleMetaClass)tc.getMetaClassFor(double.class);
+    bigIntegerMetaClass = (BigIntegerMetaClass)tc.getMetaClassFor(BigInteger.class);
+    bigDecimalMetaClass = (BigDecimalMetaClass)tc.getMetaClassFor(BigDecimal.class);
+    stringMetaClass = (StringMetaClass)tc.getMetaClassFor(String.class);
   }
-  public static MetaClass getObjectMetaClass() {
+
+ public static MetaClass getObjectMetaClass() {
     return objectMetaClass;
   }
 

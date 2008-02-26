@@ -24,27 +24,40 @@ import ng.runtime.NgLong;
 import ng.runtime.NgObject;
 import ng.runtime.NgShort;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.metaclass.PrimitiveMetaClasses;
 import ng.runtime.threadcontext.*;
+import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.booleanimpl.BooleanMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl;
 
 public class ExtendedThreadContextImpl extends ExtendedThreadContext {
+  private static final MetaClass objectMetaClass = new MetaClassImpl(Object.class);
+  
   private static final int getMetaClassModifiers = Modifier.PUBLIC | Modifier.STATIC;
 
   private static final Map<Class<?>, MetaClass> registry = new HashMap<Class<?>, MetaClass>();
 
   static {
-    registry.put(Object.class, PrimitiveMetaClasses.getObjectMetaClass());
-    registry.put(boolean.class, PrimitiveMetaClasses.getBooleanMetaClass());
-    registry.put(byte.class, PrimitiveMetaClasses.getByteMetaClass());
-    registry.put(char.class, PrimitiveMetaClasses.getCharMetaClass());
-    registry.put(short.class, PrimitiveMetaClasses.getShortMetaClass());
-    registry.put(int.class, PrimitiveMetaClasses.getIntMetaClass());
-    registry.put(long.class, PrimitiveMetaClasses.getLongMetaClass());
-    registry.put(float.class, PrimitiveMetaClasses.getFloatMetaClass());
-    registry.put(double.class, PrimitiveMetaClasses.getDoubleMetaClass());
-    registry.put(BigInteger.class, PrimitiveMetaClasses.getBigIntegerMetaClass());
-    registry.put(BigDecimal.class, PrimitiveMetaClasses.getBigDecimalMetaClass());
-    registry.put(String.class, PrimitiveMetaClasses.getStringMetaClass());
+    registry.put(Object.class, objectMetaClass);
+    registry.put(boolean.class, new BooleanMetaClassImpl());
+    registry.put(byte.class, new ByteMetaClassImpl());
+    registry.put(char.class, new CharMetaClassImpl());
+    registry.put(short.class, new ShortMetaClassImpl());
+    registry.put(int.class, new IntMetaClassImpl());
+    registry.put(long.class, new LongMetaClassImpl());
+    registry.put(float.class, new FloatMetaClassImpl());
+    registry.put(double.class, new DoubleMetaClassImpl());
+    registry.put(BigInteger.class, new BigIntegerMetaClassImpl());
+    registry.put(BigDecimal.class, new BigDecimalMetaClassImpl());
+    registry.put(String.class, new StringMetaClassImpl());
   }
 
   private final Map<Class<?>, MetaClass> registryCache = new Map<Class<?>, MetaClass>() {
@@ -325,7 +338,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
               //
               // It's an Interface
               //
-              metaClass = PrimitiveMetaClasses.getObjectMetaClass().createMetaClassFor(type);
+              metaClass = objectMetaClass.createMetaClassFor(type);
             } else {
               metaClass = getMetaClassFor(superClass).createMetaClassFor(type);
             }

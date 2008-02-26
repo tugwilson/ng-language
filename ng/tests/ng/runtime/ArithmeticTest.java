@@ -3,7 +3,6 @@ package ng.runtime;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-
 import junit.framework.TestCase;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.BinaryArithmeticOperation;
