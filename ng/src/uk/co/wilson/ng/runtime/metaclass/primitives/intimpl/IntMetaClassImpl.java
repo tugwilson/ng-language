@@ -8,6 +8,11 @@ import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.IntBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.IntBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.IntConversion;
+import uk.co.wilson.ng.runtime.metaclass.IntIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.IntMetaClass;
 
 public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   private volatile IntConversion modifiedConvert = null;

@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.threadcontext.NotPerformed;
+import uk.co.wilson.ng.runtime.metaclass.ShortConversion;
 import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
 

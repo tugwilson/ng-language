@@ -4,17 +4,17 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Map;
 
+import ng.runtime.metaclass.BigDecimalBooleanComparison;
+import ng.runtime.metaclass.BigIntegerBooleanComparison;
 import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.metaclass.ByteBooleanComparison;
+import ng.runtime.metaclass.CharBooleanComparison;
+import ng.runtime.metaclass.LongBooleanComparison;
 import ng.runtime.metaclass.MetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.DoubleBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.FloatBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.IntBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.ShortBooleanComparison;
 
 public interface BooleanComparison extends BinaryOperation {
 

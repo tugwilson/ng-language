@@ -8,6 +8,11 @@ import ng.runtime.threadcontext.BinaryArithmeticOperation;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.IntegerComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.DoubleBinaryArithmeticOperation;
+import uk.co.wilson.ng.runtime.metaclass.DoubleBooleanComparison;
+import uk.co.wilson.ng.runtime.metaclass.DoubleConversion;
+import uk.co.wilson.ng.runtime.metaclass.DoubleIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.DoubleMetaClass;
 
 public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClass {
   private volatile DoubleConversion modifiedConvert = null;

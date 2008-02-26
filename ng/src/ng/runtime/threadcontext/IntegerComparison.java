@@ -4,17 +4,17 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Map;
 
+import ng.runtime.metaclass.BigDecimalIntegerComparison;
+import ng.runtime.metaclass.BigIntegerIntegerComparison;
+import ng.runtime.metaclass.ByteIntegerComparison;
+import ng.runtime.metaclass.CharIntegerComparison;
 import ng.runtime.metaclass.IntegerBinaryComparison;
+import ng.runtime.metaclass.LongIntegerComparison;
 import ng.runtime.metaclass.MetaClass;
-import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.biginteger.BigIntegerIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl.ByteIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.charimpl.CharIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl.DoubleIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongIntegerComparison;
-import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.DoubleIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.FloatIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.IntIntegerComparison;
+import uk.co.wilson.ng.runtime.metaclass.ShortIntegerComparison;
 
 /**
  * @author John

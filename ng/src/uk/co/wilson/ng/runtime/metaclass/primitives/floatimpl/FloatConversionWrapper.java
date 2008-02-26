@@ -6,6 +6,7 @@ import java.math.BigInteger;
 import ng.runtime.NgFloat;
 import ng.runtime.metaclass.Conversion;
 import ng.runtime.threadcontext.NotPerformed;
+import uk.co.wilson.ng.runtime.metaclass.FloatConversion;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ConversionWrapper;
 import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 

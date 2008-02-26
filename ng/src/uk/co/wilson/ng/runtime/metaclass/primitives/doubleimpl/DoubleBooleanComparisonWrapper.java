@@ -6,6 +6,7 @@ import java.math.BigInteger;
 import ng.runtime.NgDouble;
 import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.threadcontext.NotPerformed;
+import uk.co.wilson.ng.runtime.metaclass.DoubleBooleanComparison;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BooleanBinaryComparisonWrapper;
 import uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContext;
 
