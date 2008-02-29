@@ -2,6 +2,12 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 
 import ng.runtime.metaclass.*;
 import ng.runtime.metaclass.BaseBooleanComparison;
+import ng.runtime.metaclass.primitives.doubleimpl.DoubleBinaryArithmeticOperation;
+import ng.runtime.metaclass.primitives.doubleimpl.DoubleBooleanComparison;
+import ng.runtime.metaclass.primitives.doubleimpl.DoubleConversion;
+import ng.runtime.metaclass.primitives.doubleimpl.DoubleIntegerComparison;
+import ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClass;
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import uk.co.wilson.ng.runtime.metaclass.BinaryLogicalOperationNoopImpl;
 import uk.co.wilson.ng.runtime.metaclass.ShiftOperationNoopImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.FractionalNumberMetaClassImpl;

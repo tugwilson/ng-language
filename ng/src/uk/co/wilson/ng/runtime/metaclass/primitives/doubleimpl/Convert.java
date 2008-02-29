@@ -3,7 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.DoubleConversion;
+import ng.runtime.metaclass.primitives.doubleimpl.DoubleConversion;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 

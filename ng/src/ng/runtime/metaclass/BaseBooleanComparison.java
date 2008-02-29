@@ -2,6 +2,16 @@ package ng.runtime.metaclass;
 
 import java.util.Map;
 
+import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
+import ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;
+import ng.runtime.metaclass.primitives.charimpl.CharBooleanComparison;
+import ng.runtime.metaclass.primitives.doubleimpl.DoubleBooleanComparison;
+import ng.runtime.metaclass.primitives.floatimpl.FloatBooleanComparison;
+import ng.runtime.metaclass.primitives.intimpl.IntBooleanComparison;
+import ng.runtime.metaclass.primitives.longimpl.LongBooleanComparison;
+import ng.runtime.metaclass.primitives.shortimpl.ShortBooleanComparison;
+
 /**
  * @author John
  *

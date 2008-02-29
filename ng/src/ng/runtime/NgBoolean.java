@@ -2,7 +2,7 @@ package ng.runtime;
 
 import ng.runtime.metaclass.BooleanMetaClass;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.metaclass.PrimitiveMetaClasses;
+import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
 public class NgBoolean extends NgObject {
   private static final BooleanMetaClass metaclass = PrimitiveMetaClasses.getBooleanMetaClass();

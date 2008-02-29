@@ -1,8 +1,8 @@
 package ng.runtime;
 
-import ng.runtime.metaclass.IntMetaClass;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.metaclass.PrimitiveMetaClasses;
+import ng.runtime.metaclass.primitives.intimpl.IntMetaClass;
+import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
 public class NgInt extends NgObject {
   private static final IntMetaClass metaclass = PrimitiveMetaClasses.getIntMetaClass();

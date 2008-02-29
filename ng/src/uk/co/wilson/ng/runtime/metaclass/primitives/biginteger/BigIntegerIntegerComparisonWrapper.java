@@ -3,8 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.biginteger;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BigIntegerIntegerComparison;
-import ng.runtime.metaclass.IntBinaryComparison;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerIntegerComparison;
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.IntegerBinaryComparisonWrapper;

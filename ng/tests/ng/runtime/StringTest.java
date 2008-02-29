@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import junit.framework.TestCase;
-import ng.runtime.metaclass.PrimitiveMetaClasses;
+import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 import ng.runtime.threadcontext.ThreadContext;
 
 /**

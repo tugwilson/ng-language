@@ -3,7 +3,14 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.charimpl;
 import ng.runtime.metaclass.*;
 import ng.runtime.metaclass.BaseBooleanComparison;
 import ng.runtime.metaclass.BaseShiftOperation;
-import ng.runtime.metaclass.ShiftOperation;
+import ng.runtime.metaclass.primitives.charimpl.CharBinaryArithmeticOperation;
+import ng.runtime.metaclass.primitives.charimpl.CharBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.charimpl.CharBooleanComparison;
+import ng.runtime.metaclass.primitives.charimpl.CharConversion;
+import ng.runtime.metaclass.primitives.charimpl.CharIntegerComparison;
+import ng.runtime.metaclass.primitives.charimpl.CharMetaClass;
+import ng.runtime.metaclass.primitives.charimpl.CharShiftOperation;
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {

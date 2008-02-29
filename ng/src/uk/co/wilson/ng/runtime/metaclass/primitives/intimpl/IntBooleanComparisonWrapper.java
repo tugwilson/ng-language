@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 import ng.runtime.NgInt;
 import ng.runtime.metaclass.BooleanBinaryComparison;
-import ng.runtime.metaclass.IntBooleanComparison;
+import ng.runtime.metaclass.primitives.intimpl.IntBooleanComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BooleanBinaryComparisonWrapper;

@@ -3,8 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.intimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.IntBinaryLogicalOperation;
 import ng.runtime.metaclass.LogicalBinaryOperation;
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryLogicalOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ArithmeticOperationWrapper;

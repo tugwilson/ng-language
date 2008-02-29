@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 import ng.runtime.NgInt;
 import ng.runtime.metaclass.Conversion;
-import ng.runtime.metaclass.IntConversion;
+import ng.runtime.metaclass.primitives.intimpl.IntConversion;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ConversionWrapper;

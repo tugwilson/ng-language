@@ -1,8 +1,8 @@
 package ng.runtime;
 
-import ng.runtime.metaclass.CharMetaClass;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.metaclass.PrimitiveMetaClasses;
+import ng.runtime.metaclass.primitives.charimpl.CharMetaClass;
+import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
 public class NgChar extends NgObject {
   private static final CharMetaClass metaclass = PrimitiveMetaClasses.getCharMetaClass();

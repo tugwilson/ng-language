@@ -1,5 +1,7 @@
 package ng.runtime.metaclass;
 
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
+
 public interface MetaClass {
   Class getTheClass();
 

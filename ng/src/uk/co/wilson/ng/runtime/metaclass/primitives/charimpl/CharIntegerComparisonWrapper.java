@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.NgChar;
-import ng.runtime.metaclass.CharIntegerComparison;
-import ng.runtime.metaclass.IntBinaryComparison;
+import ng.runtime.metaclass.primitives.charimpl.CharIntegerComparison;
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.IntegerBinaryComparisonWrapper;
