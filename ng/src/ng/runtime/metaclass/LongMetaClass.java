@@ -9,31 +9,55 @@ public interface LongMetaClass extends MetaClass {
 
   void modifyAdd(LongBinaryArithmeticOperation modifiedAdd);
   LongBinaryArithmeticOperation getOriginalAdd();
-  LongBinaryArithmeticOperation add(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifySubtract(LongBinaryArithmeticOperation modifiedSubtract);
   LongBinaryArithmeticOperation getOriginalSubtract();
-  LongBinaryArithmeticOperation subtract(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyMultiply(LongBinaryArithmeticOperation modifiedMultiply);
   LongBinaryArithmeticOperation getOriginalMultiply();
-  LongBinaryArithmeticOperation multiply(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyDivide(LongBinaryArithmeticOperation modifiedDivide);
   LongBinaryArithmeticOperation getOriginalDivide();
-  LongBinaryArithmeticOperation divide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyModulo(LongBinaryArithmeticOperation modifiedModulo);
   LongBinaryArithmeticOperation getOriginalModulo();
-  LongBinaryArithmeticOperation modulo(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyRemainderDivide(LongBinaryArithmeticOperation modifiedRemainderDivide);
   LongBinaryArithmeticOperation getOriginalRemainderDivide();
-  LongBinaryArithmeticOperation remainderDivide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyPower(LongBinaryArithmeticOperation modifiedPower);
   LongBinaryArithmeticOperation getOriginalPower();
-  LongBinaryArithmeticOperation power(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+
+  void modifyAnd(LongBinaryLogicalOperation modifiedAnd);
+  LongBinaryLogicalOperation getOriginalAnd();
+  LongBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyOr(LongBinaryLogicalOperation modifiedOr);
+  LongBinaryLogicalOperation getOriginalOr();
+  LongBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyXor(LongBinaryLogicalOperation modifiedXor);
+  LongBinaryLogicalOperation getOriginalXor();
+  LongBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyLeftShift(LongShiftOperation modifiedLeftShift);
+  LongShiftOperation getOriginalLeftShift();
+  LongShiftOperation leftShift(BaseShiftOperation shiftOperation);
+
+  void modifyRightShift(LongShiftOperation modifiedRightShift);
+  LongShiftOperation getOriginalRightShift();
+  LongShiftOperation rightShift(BaseShiftOperation shiftOperation);
+
+  void modifyUnsignedRightShift(LongShiftOperation modifiedUnsignedRightShift);
+  LongShiftOperation getOriginalUnsignedRightShift();
+  LongShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation);
 
   void modifyCompare(LongIntegerComparison modifiedCompare);
   LongIntegerComparison getOriginalCompare();

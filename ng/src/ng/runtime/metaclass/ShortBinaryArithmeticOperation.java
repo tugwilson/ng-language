@@ -7,7 +7,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
 
-public interface ShortBinaryArithmeticOperation extends ArithmeticBinaryOperation, ShortBinaryOperation {
+public interface ShortBinaryArithmeticOperation extends BinaryOperation, ShortBinaryOperation {
   int doIntApply(ExtendedThreadContext tc, short lhs, char rhs) throws NotPerformed;
   int doIntApply(ExtendedThreadContext tc, short lhs, byte rhs) throws NotPerformed;
   int doIntApply(ExtendedThreadContext tc, short lhs, short rhs) throws NotPerformed;

@@ -1,6 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.string;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.metaclass.BinaryOperation;
 import ng.runtime.metaclass.StringMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
 
@@ -9,14 +9,14 @@ import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
  *
  */
 public class StringMetaClassImpl extends MetaClassImpl implements StringMetaClass {
-  private final ArithmeticBinaryOperation add = new Add();
+  private final BinaryOperation add = new Add();
 
   public StringMetaClassImpl() {
     super(String.class);
   }
 
   @Override
-  public ArithmeticBinaryOperation getOriginalAdd() {
+  public BinaryOperation getOriginalAdd() {
     return this.add;
   }
 }

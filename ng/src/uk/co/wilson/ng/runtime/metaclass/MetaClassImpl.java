@@ -2,14 +2,7 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import java.util.Map;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
-import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
-import ng.runtime.metaclass.BaseBooleanComparison;
-import ng.runtime.metaclass.BaseConversionOperation;
-import ng.runtime.metaclass.BaseIntegerComparison;
-import ng.runtime.metaclass.BooleanBinaryComparison;
-import ng.runtime.metaclass.Conversion;
-import ng.runtime.metaclass.IntegerBinaryComparison;
+import ng.runtime.metaclass.*;
 
 /**
  * @author John
@@ -19,15 +12,22 @@ public class MetaClassImpl extends BaseMetaClass {
 
   protected volatile Conversion modifiedConvert = null;
 
-  protected volatile ArithmeticBinaryOperation modifiedAdd = null;
-  protected volatile ArithmeticBinaryOperation modifiedSubtract = null;
-  protected volatile ArithmeticBinaryOperation modifiedMultiply = null;
-  protected volatile ArithmeticBinaryOperation modifiedDivide = null;
-  protected volatile ArithmeticBinaryOperation modifiedModulo = null;
-  protected volatile ArithmeticBinaryOperation modifiedRemainderDivide = null;
-  protected volatile ArithmeticBinaryOperation modifiedPower = null;
+  protected volatile BinaryOperation modifiedAdd = null;
+  protected volatile BinaryOperation modifiedSubtract = null;
+  protected volatile BinaryOperation modifiedMultiply = null;
+  protected volatile BinaryOperation modifiedDivide = null;
+  protected volatile BinaryOperation modifiedModulo = null;
+  protected volatile BinaryOperation modifiedRemainderDivide = null;
+  protected volatile BinaryOperation modifiedPower = null;
+  
+  protected volatile LogicalBinaryOperation modifiedAnd = null;
+  protected volatile LogicalBinaryOperation modifiedOr = null;
+  protected volatile LogicalBinaryOperation modifiedXor = null;
+  protected volatile ShiftOperation modifiedLeftShift = null;
+  protected volatile ShiftOperation modifiedRightShift = null;
+  protected volatile ShiftOperation modifiedUnsignedRightShift = null;
 
-  protected volatile IntegerBinaryComparison modifiedCompare = null;
+  protected volatile IntBinaryComparison modifiedCompare = null;
 
   protected volatile BooleanBinaryComparison modifiedEquals = null;
   protected volatile BooleanBinaryComparison modifiedNotEquals = null;
@@ -74,19 +74,19 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
+  public void modifyAdd(final BinaryOperation modifiedAdd) {
     this.modifiedAdd = modifiedAdd;
   }
 
-  public ArithmeticBinaryOperation getOriginalAdd() {
+  public BinaryOperation getOriginalAdd() {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation add(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  public BinaryOperation add(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
-    final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -100,19 +100,19 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
+  public void modifySubtract(final BinaryOperation modifiedSubtract) {
     this.modifiedSubtract = modifiedSubtract;
   }
 
-  public ArithmeticBinaryOperation getOriginalSubtract() {
+  public BinaryOperation getOriginalSubtract() {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation subtract(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  public BinaryOperation subtract(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
-    final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -126,19 +126,19 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
+  public void modifyMultiply(final BinaryOperation modifiedMultiply) {
     this.modifiedMultiply = modifiedMultiply;
   }
 
-  public ArithmeticBinaryOperation getOriginalMultiply() {
+  public BinaryOperation getOriginalMultiply() {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation multiply(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  public BinaryOperation multiply(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
-    final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -152,19 +152,19 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
+  public void modifyDivide(final BinaryOperation modifiedDivide) {
     this.modifiedDivide = modifiedDivide;
   }
 
-  public ArithmeticBinaryOperation getOriginalDivide() {
+  public BinaryOperation getOriginalDivide() {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation divide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  public BinaryOperation divide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
-    final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -178,19 +178,19 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
+  public void modifyModulo(final BinaryOperation modifiedModulo) {
     this.modifiedModulo = modifiedModulo;
   }
 
-  public ArithmeticBinaryOperation getOriginalModulo() {
+  public BinaryOperation getOriginalModulo() {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation modulo(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  public BinaryOperation modulo(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
-    final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -204,19 +204,19 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final BinaryOperation modifiedRemainderDivide) {
     this.modifiedRemainderDivide = modifiedRemainderDivide;
   }
 
-  public ArithmeticBinaryOperation getOriginalRemainderDivide() {
+  public BinaryOperation getOriginalRemainderDivide() {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation remainderDivide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  public BinaryOperation remainderDivide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
-    final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -230,19 +230,19 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
+  public void modifyPower(final BinaryOperation modifiedPower) {
     this.modifiedPower = modifiedPower;
   }
 
-  public ArithmeticBinaryOperation getOriginalPower() {
+  public BinaryOperation getOriginalPower() {
     return ArithmeticBinaryOperationNoopImpl.instance;
   }
 
-  public ArithmeticBinaryOperation power(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final Map<Object, ArithmeticBinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+  public BinaryOperation power(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
-    final ArithmeticBinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -256,19 +256,175 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
+    this.modifiedAnd = modifiedAnd;
+  }
+
+  public LogicalBinaryOperation getOriginalAnd() {
+    return LogicalBinaryOperationNoopImpl.instance;
+  }
+
+  public LogicalBinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
+
+    if(categoryOperationMap != null) {
+    final LogicalBinaryOperation logicalBinaryOperation = categoryOperationMap.get(this);
+
+      if (logicalBinaryOperation != null) {
+        return logicalBinaryOperation;
+      }
+    }
+
+    if (this.modifiedAnd == null) {
+      return getOriginalAnd();
+    } else {
+      return this.modifiedAnd;
+    }
+  }
+
+  public void modifyOr(LogicalBinaryOperation modifiedOr) {
+    this.modifiedOr = modifiedOr;
+  }
+
+  public LogicalBinaryOperation getOriginalOr() {
+    return LogicalBinaryOperationNoopImpl.instance;
+  }
+
+  public LogicalBinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
+
+    if(categoryOperationMap != null) {
+    final LogicalBinaryOperation logicalBinaryOperation = categoryOperationMap.get(this);
+
+      if (logicalBinaryOperation != null) {
+        return logicalBinaryOperation;
+      }
+    }
+
+    if (this.modifiedOr == null) {
+      return getOriginalOr();
+    } else {
+      return this.modifiedOr;
+    }
+  }
+
+  public void modifyXor(LogicalBinaryOperation modifiedXor) {
+    this.modifiedXor = modifiedXor;
+  }
+
+  public LogicalBinaryOperation getOriginalXor() {
+    return LogicalBinaryOperationNoopImpl.instance;
+  }
+
+  public LogicalBinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
+
+    if(categoryOperationMap != null) {
+    final LogicalBinaryOperation logicalBinaryOperation = categoryOperationMap.get(this);
+
+      if (logicalBinaryOperation != null) {
+        return logicalBinaryOperation;
+      }
+    }
+
+    if (this.modifiedXor == null) {
+      return getOriginalXor();
+    } else {
+      return this.modifiedXor;
+    }
+  }
+
+  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
+    this.modifiedLeftShift = modifiedLeftShift;
+  }
+
+  public ShiftOperation getOriginalLeftShift() {
+    return ShiftOperationNoopImpl.instance;
+  }
+
+  public ShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
+
+    if(categoryOperationMap != null) {
+    final ShiftOperation shiftOp = categoryOperationMap.get(this);
+
+      if (shiftOp != null) {
+        return shiftOp;
+      }
+    }
+
+    if (this.modifiedLeftShift == null) {
+      return getOriginalLeftShift();
+    } else {
+      return this.modifiedLeftShift;
+    }
+  }
+
+  public void modifyRightShift(ShiftOperation modifiedRightShift) {
+    this.modifiedRightShift = modifiedRightShift;
+  }
+
+  public ShiftOperation getOriginalRightShift() {
+    return ShiftOperationNoopImpl.instance;
+  }
+
+  public ShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
+
+    if(categoryOperationMap != null) {
+    final ShiftOperation shiftOp = categoryOperationMap.get(this);
+
+      if (shiftOp != null) {
+        return shiftOp;
+      }
+    }
+
+    if (this.modifiedRightShift == null) {
+      return getOriginalRightShift();
+    } else {
+      return this.modifiedRightShift;
+    }
+  }
+
+  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
+    this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
+  }
+
+  public ShiftOperation getOriginalUnsignedRightShift() {
+    return ShiftOperationNoopImpl.instance;
+  }
+
+  public ShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
+
+    if(categoryOperationMap != null) {
+    final ShiftOperation shiftOp = categoryOperationMap.get(this);
+
+      if (shiftOp != null) {
+        return shiftOp;
+      }
+    }
+
+    if (this.modifiedUnsignedRightShift == null) {
+      return getOriginalUnsignedRightShift();
+    } else {
+      return this.modifiedUnsignedRightShift;
+    }
+  }
+
+  public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     this.modifiedCompare = modifiedCompare;
   }
 
-  public IntegerBinaryComparison getOriginalCompare() {
+  public IntBinaryComparison getOriginalCompare() {
     return IntegerBinaryComparisonNoopImpl.instance;
   }
 
-  public IntegerBinaryComparison compare(final BaseIntegerComparison integerComparison) {
-  final Map<Object, IntegerBinaryComparison> categoryOperationMap = integerComparison.getCategoryOperationMap();
+  public IntBinaryComparison compare(final BaseIntegerComparison integerComparison) {
+  final Map<Object, IntBinaryComparison> categoryOperationMap = integerComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
-    final IntegerBinaryComparison categoryIntegerBinaryComparison = categoryOperationMap.get(this);
+    final IntBinaryComparison categoryIntegerBinaryComparison = categoryOperationMap.get(this);
 
       if (categoryIntegerBinaryComparison != null) {
         return categoryIntegerBinaryComparison;

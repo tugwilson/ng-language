@@ -24,6 +24,9 @@ public class Generate {
         new String[]{"GreaterThan", "greaterThan", "compare greater than", "BooleanComparison.vm", "uk/co/wilson/ng/runtime/threadcontext", "GreaterThan.java"},
         new String[]{"LessThanOrEquals", "lessThanOrEquals", "compare less than or equals", "BooleanComparison.vm", "uk/co/wilson/ng/runtime/threadcontext", "LessThanOrEquals.java"},
         new String[]{"GreaterThanOrEquals", "greaterThanOrEquals", "compare greater than or equals", "BooleanComparison.vm", "uk/co/wilson/ng/runtime/threadcontext", "GreaterThanOrEquals.java"},
+        new String[]{"LeftShift", "leftShift", "shift left", "ShiftOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "LeftShift.java"},
+        new String[]{"RightShift", "rightShift", "shift right", "ShiftOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "RightShift.java"},
+        new String[]{"UnsignedRightShift", "unsignedRightShift", "unsigned shift rught", "ShiftOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "UnsignedRightShift.java"},
     };
     
     Velocity.init();

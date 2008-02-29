@@ -1,12 +1,13 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
 import ng.runtime.metaclass.BaseBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.BinaryLogicalOperationNoopImpl;
+import uk.co.wilson.ng.runtime.metaclass.ShiftOperationNoopImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.FractionalNumberMetaClassImpl;
 
 
-public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass {
+public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements FloatMetaClass {
   private volatile FloatConversion modifiedConvert = null;
 
   private volatile FloatBinaryArithmeticOperation modifiedAdd = null;
@@ -49,7 +50,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     super(float.class);
   }
 
-  private FloatBinaryArithmeticOperation fixOperationType(final ArithmeticBinaryOperation modifiedOperation) {
+  private FloatBinaryArithmeticOperation fixOperationType(final BinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof FloatBinaryArithmeticOperation) {
       return( FloatBinaryArithmeticOperation) modifiedOperation;
     }
@@ -89,7 +90,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     }
   }
 
-  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
+  public void modifyAdd(final BinaryOperation modifiedAdd) {
     modifyAdd(fixOperationType(modifiedAdd));
   }
 
@@ -101,7 +102,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.add;
   }
 
-  public FloatBinaryArithmeticOperation add(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation add(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -115,7 +116,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     }
   }
 
-  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
+  public void modifySubtract(final BinaryOperation modifiedSubtract) {
     modifySubtract(fixOperationType(modifiedSubtract));
   }
 
@@ -127,7 +128,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.subtract;
   }
 
-  public FloatBinaryArithmeticOperation subtract(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation subtract(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -141,7 +142,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     }
   }
 
-  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
+  public void modifyMultiply(final BinaryOperation modifiedMultiply) {
     modifyMultiply(fixOperationType(modifiedMultiply));
   }
 
@@ -153,7 +154,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.multiply;
   }
 
-  public FloatBinaryArithmeticOperation multiply(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation multiply(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -167,7 +168,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     }
   }
 
-  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
+  public void modifyDivide(final BinaryOperation modifiedDivide) {
     modifyDivide(fixOperationType(modifiedDivide));
   }
 
@@ -179,7 +180,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.divide;
   }
 
-  public FloatBinaryArithmeticOperation divide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation divide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -193,7 +194,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     }
   }
 
-  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
+  public void modifyModulo(final BinaryOperation modifiedModulo) {
     modifyModulo(fixOperationType(modifiedModulo));
   }
 
@@ -205,7 +206,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.modulo;
   }
 
-  public FloatBinaryArithmeticOperation modulo(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation modulo(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -219,7 +220,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     }
   }
 
-  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
+  public void modifyPower(final BinaryOperation modifiedPower) {
     modifyPower(fixOperationType(modifiedPower));
   }
 
@@ -231,7 +232,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.power;
   }
 
-  public FloatBinaryArithmeticOperation power(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation power(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -245,7 +246,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     }
   }
 
-  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final BinaryOperation modifiedRemainderDivide) {
     modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
   }
 
@@ -257,7 +258,7 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     return this.remainderDivide;
   }
 
-  public FloatBinaryArithmeticOperation remainderDivide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public FloatBinaryArithmeticOperation remainderDivide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
@@ -271,7 +272,91 @@ public class FloatMetaClassImpl extends BaseMetaClass implements FloatMetaClass 
     }
   }
 
-  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+  public BinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final BinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedAnd == null) {
+        return BinaryLogicalOperationNoopImpl.instance;
+      } else {
+        return this.modifiedAnd;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public BinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final BinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedOr == null) {
+        return BinaryLogicalOperationNoopImpl.instance;
+      } else {
+        return this.modifiedOr;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public BinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final BinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedXor == null) {
+        return BinaryLogicalOperationNoopImpl.instance;
+      } else {
+        return this.modifiedXor;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public ShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedLeftShift == null) {
+        return ShiftOperationNoopImpl.instance;
+      } else {
+        return this.modifiedLeftShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public ShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedRightShift == null) {
+        return ShiftOperationNoopImpl.instance;
+      } else {
+        return this.modifiedRightShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public ShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedUnsignedRightShift == null) {
+        return ShiftOperationNoopImpl.instance;
+      } else {
+        return this.modifiedUnsignedRightShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     if (modifiedCompare instanceof FloatIntegerComparison) {
       modifyCompare((FloatIntegerComparison)this.modifiedConvert);
     } else {

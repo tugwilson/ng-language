@@ -30,7 +30,7 @@ import ng.runtime.threadcontext.NotPerformed;
  * @author John
  *
  */
-public interface BigDecimalIntegerComparison extends IntegerBinaryComparison, BigDecimalBinaryOperation {
+public interface BigDecimalIntegerComparison extends IntBinaryComparison, BigDecimalBinaryOperation {
   int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, char rhs)  throws NotPerformed;
   int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, byte rhs)  throws NotPerformed;
   int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, short rhs)  throws NotPerformed;

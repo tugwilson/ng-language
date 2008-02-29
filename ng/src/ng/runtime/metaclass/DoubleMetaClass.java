@@ -9,31 +9,31 @@ public interface DoubleMetaClass extends MetaClass {
 
   void modifyAdd(DoubleBinaryArithmeticOperation modifiedAdd);
   DoubleBinaryArithmeticOperation getOriginalAdd();
-  DoubleBinaryArithmeticOperation add(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  DoubleBinaryArithmeticOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifySubtract(DoubleBinaryArithmeticOperation modifiedSubtract);
   DoubleBinaryArithmeticOperation getOriginalSubtract();
-  DoubleBinaryArithmeticOperation subtract(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  DoubleBinaryArithmeticOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyMultiply(DoubleBinaryArithmeticOperation modifiedMultiply);
   DoubleBinaryArithmeticOperation getOriginalMultiply();
-  DoubleBinaryArithmeticOperation multiply(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  DoubleBinaryArithmeticOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyDivide(DoubleBinaryArithmeticOperation modifiedDivide);
   DoubleBinaryArithmeticOperation getOriginalDivide();
-  DoubleBinaryArithmeticOperation divide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  DoubleBinaryArithmeticOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyModulo(DoubleBinaryArithmeticOperation modifiedModulo);
   DoubleBinaryArithmeticOperation getOriginalModulo();
-  DoubleBinaryArithmeticOperation modulo(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  DoubleBinaryArithmeticOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyRemainderDivide(DoubleBinaryArithmeticOperation modifiedRemainderDivide);
   DoubleBinaryArithmeticOperation getOriginalRemainderDivide();
-  DoubleBinaryArithmeticOperation remainderDivide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  DoubleBinaryArithmeticOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyPower(DoubleBinaryArithmeticOperation modifiedPower);
   DoubleBinaryArithmeticOperation getOriginalPower();
-  DoubleBinaryArithmeticOperation power(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  DoubleBinaryArithmeticOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyCompare(DoubleIntegerComparison modifiedCompare);
   DoubleIntegerComparison getOriginalCompare();

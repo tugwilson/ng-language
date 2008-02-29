@@ -235,7 +235,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   private final Object[] p4 = new Object[4];
   private final Object[] p5 = new Object[5];
 
-  private final Misc misc = new BaseMisc(this);
+  private final Misc misc = new BaseMiscImpl(this);
 
   private final InterpreterSupport interpreterSupport = null;  // TODO: implement this
 
@@ -243,9 +243,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
 
   private final ValueAccess fieldAccess = null;  // TODO: implement this
 
-  private final ConversionOperation convert = new BaseConversion(this);
+  private final ConversionOperation convert = new BaseConversionImpl(this);
 
-  private final StaticMethodCall staticMethodCall = new CallStaticMethod(this);
+  private final StaticMethodCall staticMethodCall = new CallStaticMethodImpl(this);
 
   private final BinaryArithmeticOperation add = new Add(this);
 
@@ -260,6 +260,12 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   private final BinaryArithmeticOperation modulo = new Modulo(this);
 
   private final BinaryArithmeticOperation power = new Power(this);
+  
+  private final BinaryShiftOperation leftShift = new LeftShift(this);
+  
+  private final BinaryShiftOperation rightShift = new RightShift(this);
+  
+  private final BinaryShiftOperation unsignedRightShift = new UnsignedRightShift(this);
 
   private final IntegerComparison compare = new Compare(this);
 
@@ -745,42 +751,6 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   }
 
   /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#leftShift()
-   */
-  @Override
-  public ShiftOperation leftShift() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#rightShift()
-   */
-  @Override
-  public ShiftOperation rightShift() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#unsignedRightShift()
-   */
-  @Override
-  public ShiftOperation unsignedRightShift() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#and()
-   */
-  @Override
-  public BinaryLogicalOperation and() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  /* (non-JavaDoc)
    * @see ng.runtime.threadcontext.ThreadContext#or()
    */
   @Override
@@ -794,6 +764,39 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    */
   @Override
   public BinaryLogicalOperation xor() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#leftShift()
+   */
+  @Override
+  public BinaryShiftOperation leftShift() {
+    return this.leftShift;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#rightShift()
+   */
+  @Override
+  public BinaryShiftOperation rightShift() {
+    return this.rightShift;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#unsignedRightShift()
+   */
+  @Override
+  public BinaryShiftOperation unsignedRightShift() {
+    return this.unsignedRightShift;
+  }
+
+  /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#and()
+   */
+  @Override
+  public BinaryLogicalOperation and() {
     // TODO Auto-generated method stub
     return null;
   }

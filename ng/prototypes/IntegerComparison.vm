@@ -9,7 +9,7 @@ import ng.runtime.metaclass.PrimitiveMetaClasses;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-public class $Op extends BaseIntegerComparison {
+public class $Op extends BaseIntegerComparisonImpl {
   public $Op(final ExtendedThreadContext tc) {
     super(tc);
   }

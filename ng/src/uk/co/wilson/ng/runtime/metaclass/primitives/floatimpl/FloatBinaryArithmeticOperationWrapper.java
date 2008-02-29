@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.NgFloat;
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.metaclass.BinaryOperation;
 import ng.runtime.metaclass.FloatBinaryArithmeticOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
@@ -19,7 +19,7 @@ public class FloatBinaryArithmeticOperationWrapper extends ArithmeticOperationWr
   /**
    * @param delegate
    */
-  public FloatBinaryArithmeticOperationWrapper(final ArithmeticBinaryOperation delegate) {
+  public FloatBinaryArithmeticOperationWrapper(final BinaryOperation delegate) {
     super(delegate);
   }
 

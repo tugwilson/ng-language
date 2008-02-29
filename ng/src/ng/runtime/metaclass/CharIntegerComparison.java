@@ -10,7 +10,7 @@ import ng.runtime.threadcontext.NotPerformed;
  * @author John
  *
  */
-public interface CharIntegerComparison  extends IntegerBinaryComparison, CharBinaryOperation {
+public interface CharIntegerComparison  extends IntBinaryComparison, CharBinaryOperation {
   int doIntApply(ExtendedThreadContext tc, char lhs, char rhs)  throws NotPerformed;
   int doIntApply(ExtendedThreadContext tc, char lhs, byte rhs)  throws NotPerformed;
   int doIntApply(ExtendedThreadContext tc, char lhs, short rhs)  throws NotPerformed;

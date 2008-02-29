@@ -1,8 +1,9 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.charimpl;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
 import ng.runtime.metaclass.BaseBooleanComparison;
+import ng.runtime.metaclass.BaseShiftOperation;
+import ng.runtime.metaclass.ShiftOperation;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
@@ -16,6 +17,13 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private volatile CharBinaryArithmeticOperation modifiedModulo = null;
   private volatile CharBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile CharBinaryArithmeticOperation modifiedPower = null;
+  
+  private volatile CharBinaryLogicalOperation modifiedAnd = null;
+  private volatile CharBinaryLogicalOperation modifiedOr = null;
+  private volatile CharBinaryLogicalOperation modifiedXor = null;
+  private volatile CharShiftOperation modifiedLeftShift = null;
+  private volatile CharShiftOperation modifiedRightShift = null;
+  private volatile CharShiftOperation modifiedUnsignedRightShift = null;
 
   private volatile CharIntegerComparison modifiedCompare = null;
 
@@ -35,6 +43,13 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private final CharBinaryArithmeticOperation modulo = new Modulo();
   private final CharBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final CharBinaryArithmeticOperation power = new Power();
+  
+  private final CharBinaryLogicalOperation and = new And();
+  private final CharBinaryLogicalOperation or = new Or();
+  private final CharBinaryLogicalOperation xor = new Xor();
+  private final CharShiftOperation leftShift = new LeftShift();
+  private final CharShiftOperation rightShift = new RightShift();
+  private final CharShiftOperation unsignedRightShift = new UnsignedRightShift();
 
   private final CharIntegerComparison compare = new Compare();
 
@@ -49,12 +64,28 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     super(char.class);
   }
 
-  private CharBinaryArithmeticOperation fixOperationType(final ArithmeticBinaryOperation modifiedOperation) {
+  private CharBinaryArithmeticOperation fixOperationType(final BinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof CharBinaryArithmeticOperation) {
       return( CharBinaryArithmeticOperation) modifiedOperation;
     }
 
     return new CharBinaryArithmeticOperationWrapper(modifiedOperation);
+  }
+
+  private CharBinaryLogicalOperation fixOperationType(final LogicalBinaryOperation modifiedOperation) {
+    if (modifiedOperation instanceof CharBinaryLogicalOperation) {
+      return (CharBinaryLogicalOperation)modifiedOperation;
+    }
+
+    return new CharBinaryLogicalOperationWrapper(modifiedOperation);
+  }
+
+  private CharShiftOperation fixOperationType(final ShiftOperation modifiedOperation) {
+    if (modifiedOperation instanceof CharShiftOperation) {
+      return (CharShiftOperation)modifiedOperation;
+    }
+
+    return new CharShiftOperationWrapper(modifiedOperation);
   }
 
   private CharBooleanComparison fixOperationType(final BooleanBinaryComparison modifiedOperation) {
@@ -89,7 +120,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     }
   }
 
-  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
+  public void modifyAdd(final BinaryOperation modifiedAdd) {
     modifyAdd(fixOperationType(modifiedAdd));
   }
 
@@ -101,21 +132,21 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.add;
   }
 
-  public CharBinaryArithmeticOperation add(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+  public CharBinaryArithmeticOperation add(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedAdd == null) {
         return this.add;
       } else {
         return this.modifiedAdd;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
+  public void modifySubtract(final BinaryOperation modifiedSubtract) {
     modifySubtract(fixOperationType(modifiedSubtract));
   }
 
@@ -127,21 +158,21 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.subtract;
   }
 
-  public CharBinaryArithmeticOperation subtract(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+  public CharBinaryArithmeticOperation subtract(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedSubtract == null) {
         return this.subtract;
       } else {
         return this.modifiedSubtract;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
+  public void modifyMultiply(final BinaryOperation modifiedMultiply) {
     modifyMultiply(fixOperationType(modifiedMultiply));
   }
 
@@ -153,21 +184,21 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.multiply;
   }
 
-  public CharBinaryArithmeticOperation multiply(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+  public CharBinaryArithmeticOperation multiply(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedMultiply == null) {
         return this.multiply;
       } else {
         return this.modifiedMultiply;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
+  public void modifyDivide(final BinaryOperation modifiedDivide) {
     modifyDivide(fixOperationType(modifiedDivide));
   }
 
@@ -179,21 +210,21 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.divide;
   }
 
-  public CharBinaryArithmeticOperation divide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+  public CharBinaryArithmeticOperation divide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedDivide == null) {
         return this.divide;
       } else {
         return this.modifiedDivide;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
+  public void modifyModulo(final BinaryOperation modifiedModulo) {
     modifyModulo(fixOperationType(modifiedModulo));
   }
 
@@ -205,21 +236,21 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.modulo;
   }
 
-  public CharBinaryArithmeticOperation modulo(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+  public CharBinaryArithmeticOperation modulo(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedModulo == null) {
         return this.modulo;
       } else {
         return this.modifiedModulo;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
+  public void modifyPower(final BinaryOperation modifiedPower) {
     modifyPower(fixOperationType(modifiedPower));
   }
 
@@ -231,21 +262,21 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.power;
   }
 
-  public CharBinaryArithmeticOperation power(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+  public CharBinaryArithmeticOperation power(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedPower == null) {
         return this.power;
       } else {
         return this.modifiedPower;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final BinaryOperation modifiedRemainderDivide) {
     modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
   }
 
@@ -257,21 +288,177 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.remainderDivide;
   }
 
-  public CharBinaryArithmeticOperation remainderDivide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation charCategoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+  public CharBinaryArithmeticOperation remainderDivide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
         return this.remainderDivide;
       } else {
         return this.modifiedRemainderDivide;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
+    modifyAnd(fixOperationType(modifiedAnd)); 
+  }
+
+  public void modifyAnd(CharBinaryLogicalOperation modifiedAnd) {
+    this.modifiedAnd = modifiedAnd;
+  }
+
+  public CharBinaryLogicalOperation getOriginalAnd() {
+    return this.and;
+  }
+
+  public CharBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedAnd == null) {
+        return this.and;
+      } else {
+        return this.modifiedAnd;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyOr(LogicalBinaryOperation modifiedOr) {
+    modifyOr(fixOperationType(modifiedOr)); 
+  }
+
+  public void modifyOr(CharBinaryLogicalOperation modifiedOr) {
+    this.modifiedOr = modifiedOr;
+  }
+
+  public CharBinaryLogicalOperation getOriginalOr() {
+    return this.or;
+  }
+
+  public CharBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedOr == null) {
+        return this.or;
+      } else {
+        return this.modifiedOr;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyXor(LogicalBinaryOperation modifiedXor) {
+    modifyXor(fixOperationType(modifiedXor)); 
+  }
+
+  public void modifyXor(CharBinaryLogicalOperation modifiedXor) {
+    this.modifiedXor = modifiedXor;
+  }
+
+  public CharBinaryLogicalOperation getOriginalXor() {
+    return this.xor;
+  }
+
+  public CharBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedXor == null) {
+        return this.xor;
+      } else {
+        return this.modifiedXor;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
+    modifyLeftShift(fixOperationType(modifiedLeftShift)); 
+  }
+
+  public void modifyLeftShift(CharShiftOperation modifiedLeftShift) {
+    this.modifiedLeftShift = modifiedLeftShift;
+  }
+
+  public CharShiftOperation getOriginalLeftShift() {
+    return this.leftShift;
+  }
+
+  public CharShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedLeftShift == null) {
+        return this.leftShift;
+      } else {
+        return this.modifiedLeftShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyRightShift(ShiftOperation modifiedRightShift) {
+    modifyRightShift(fixOperationType(modifiedRightShift)); 
+  }
+
+  public void modifyRightShift(CharShiftOperation modifiedRightShift) {
+    this.modifiedRightShift = modifiedRightShift;
+  }
+
+  public CharShiftOperation getOriginalRightShift() {
+    return this.rightShift;
+  }
+
+  public CharShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedRightShift == null) {
+        return this.rightShift;
+      } else {
+        return this.modifiedRightShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
+    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift)); 
+  }
+
+  public void modifyUnsignedRightShift(CharShiftOperation modifiedUnsignedRightShift) {
+    this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
+  }
+
+  public CharShiftOperation getOriginalUnsignedRightShift() {
+    return this.unsignedRightShift;
+  }
+
+  public CharShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedUnsignedRightShift == null) {
+        return this.unsignedRightShift;
+      } else {
+        return this.modifiedUnsignedRightShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     if (modifiedCompare instanceof CharIntegerComparison) {
       modifyCompare((CharIntegerComparison)this.modifiedConvert);
     } else {
@@ -288,16 +475,16 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharIntegerComparison compare(final BaseIntegerComparison integerComparison) {
-  final CharIntegerComparison charCategoryOperation = integerComparison.getCharCategoryOperation();
+  final CharIntegerComparison categoryOperation = integerComparison.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedCompare == null) {
         return this.compare;
       } else {
         return this.modifiedCompare;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -314,16 +501,16 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison equals(final BaseBooleanComparison booleanComparison) {
-  final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
+  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedEquals == null) {
         return this.equals;
       } else {
         return this.modifiedEquals;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -340,16 +527,16 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison notEquals(final BaseBooleanComparison booleanComparison) {
-  final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
+  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedNotEquals == null) {
         return this.notEquals;
       } else {
         return this.modifiedNotEquals;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -366,16 +553,16 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison lessThan(final BaseBooleanComparison booleanComparison) {
-  final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
+  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedLessThan == null) {
         return this.lessThan;
       } else {
         return this.modifiedLessThan;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -392,16 +579,16 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison greaterThan(final BaseBooleanComparison booleanComparison) {
-  final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
+  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
         return this.greaterThan;
       } else {
         return this.modifiedGreaterThan;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -418,16 +605,16 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison lessThanOrEquals(final BaseBooleanComparison booleanComparison) {
-  final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
+  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
         return this.lessThanOrEquals;
       } else {
         return this.modifiedLessThanOrEquals;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -444,16 +631,16 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison greaterThanOrEquals(final BaseBooleanComparison booleanComparison) {
-  final CharBooleanComparison charCategoryOperation = booleanComparison.getCharCategoryOperation();
+  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
-    if (charCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {
         return this.greaterThanOrEquals;
       } else {
         return this.modifiedGreaterThanOrEquals;
       }
     } else {
-      return charCategoryOperation;
+      return categoryOperation;
     }
   }
 }

@@ -81,11 +81,11 @@ public abstract class ThreadContext {
 
   public abstract BinaryLogicalOperation xor();
 
-  public abstract ShiftOperation leftShift();
+  public abstract BinaryShiftOperation leftShift();
 
-  public abstract ShiftOperation rightShift();
+  public abstract BinaryShiftOperation rightShift();
 
-  public abstract ShiftOperation unsignedRightShift();
+  public abstract BinaryShiftOperation unsignedRightShift();
 
   public abstract IntegerComparison compare();
 

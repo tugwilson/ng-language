@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.NgShort;
-import ng.runtime.metaclass.IntegerBinaryComparison;
+import ng.runtime.metaclass.IntBinaryComparison;
 import ng.runtime.metaclass.ShortIntegerComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
@@ -19,7 +19,7 @@ public class ShortIntegerComparisonWrapper extends IntegerBinaryComparisonWrappe
   /**
    * @param delegate
    */
-  public ShortIntegerComparisonWrapper(final IntegerBinaryComparison delegate) {
+  public ShortIntegerComparisonWrapper(final IntBinaryComparison delegate) {
     super(delegate);
   }
 

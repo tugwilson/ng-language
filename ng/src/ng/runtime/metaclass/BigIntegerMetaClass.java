@@ -9,31 +9,55 @@ public interface BigIntegerMetaClass extends MetaClass {
 
   void modifyAdd(BigIntegerBinaryArithmeticOperation modifiedAdd);
   BigIntegerBinaryArithmeticOperation getOriginalAdd();
-  BigIntegerBinaryArithmeticOperation add(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigIntegerBinaryArithmeticOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifySubtract(BigIntegerBinaryArithmeticOperation modifiedSubtract);
   BigIntegerBinaryArithmeticOperation getOriginalSubtract();
-  BigIntegerBinaryArithmeticOperation subtract(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigIntegerBinaryArithmeticOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyMultiply(BigIntegerBinaryArithmeticOperation modifiedMultiply);
   BigIntegerBinaryArithmeticOperation getOriginalMultiply();
-  BigIntegerBinaryArithmeticOperation multiply(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigIntegerBinaryArithmeticOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyDivide(BigIntegerBinaryArithmeticOperation modifiedDivide);
   BigIntegerBinaryArithmeticOperation getOriginalDivide();
-  BigIntegerBinaryArithmeticOperation divide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigIntegerBinaryArithmeticOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyModulo(BigIntegerBinaryArithmeticOperation modifiedModulo);
   BigIntegerBinaryArithmeticOperation getOriginalModulo();
-  BigIntegerBinaryArithmeticOperation modulo(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigIntegerBinaryArithmeticOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyRemainderDivide(BigIntegerBinaryArithmeticOperation modifiedRemainderDivide);
   BigIntegerBinaryArithmeticOperation getOriginalRemainderDivide();
-  BigIntegerBinaryArithmeticOperation remainderDivide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigIntegerBinaryArithmeticOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyPower(BigIntegerBinaryArithmeticOperation modifiedPower);
   BigIntegerBinaryArithmeticOperation getOriginalPower();
-  BigIntegerBinaryArithmeticOperation power(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigIntegerBinaryArithmeticOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+
+  void modifyAnd(BigIntegerBinaryLogicalOperation modifiedAnd);
+  BigIntegerBinaryLogicalOperation getOriginalAnd();
+  BigIntegerBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyOr(BigIntegerBinaryLogicalOperation modifiedOr);
+  BigIntegerBinaryLogicalOperation getOriginalOr();
+  BigIntegerBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyXor(BigIntegerBinaryLogicalOperation modifiedXor);
+  BigIntegerBinaryLogicalOperation getOriginalXor();
+  BigIntegerBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyLeftShift(BigIntegerShiftOperation modifiedLeftShift);
+  BigIntegerShiftOperation getOriginalLeftShift();
+  BigIntegerShiftOperation leftShift(BaseShiftOperation shiftOperation);
+
+  void modifyRightShift(BigIntegerShiftOperation modifiedRightShift);
+  BigIntegerShiftOperation getOriginalRightShift();
+  BigIntegerShiftOperation rightShift(BaseShiftOperation shiftOperation);
+
+  void modifyUnsignedRightShift(BigIntegerShiftOperation modifiedUnsignedRightShift);
+  BigIntegerShiftOperation getOriginalUnsignedRightShift();
+  BigIntegerShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation);
 
   void modifyCompare(BigIntegerIntegerComparison modifiedCompare);
   BigIntegerIntegerComparison getOriginalCompare();

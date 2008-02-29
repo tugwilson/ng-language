@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 import ng.runtime.NgDouble;
 import ng.runtime.metaclass.DoubleIntegerComparison;
-import ng.runtime.metaclass.IntegerBinaryComparison;
+import ng.runtime.metaclass.IntBinaryComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.IntegerBinaryComparisonWrapper;
@@ -19,7 +19,7 @@ public class DoubleIntegerComparisonWrapper extends IntegerBinaryComparisonWrapp
   /**
    * @param delegate
    */
-  public DoubleIntegerComparisonWrapper(final IntegerBinaryComparison delegate) {
+  public DoubleIntegerComparisonWrapper(final IntBinaryComparison delegate) {
     super(delegate);
   }
 
