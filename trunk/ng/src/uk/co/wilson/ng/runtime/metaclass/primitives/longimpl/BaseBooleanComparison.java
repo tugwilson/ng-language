@@ -3,7 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.longimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.LongBooleanComparison;
+import ng.runtime.metaclass.primitives.longimpl.LongBooleanComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 

@@ -2,6 +2,13 @@ package ng.runtime.metaclass;
 
 import java.util.Map;
 
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerShiftOperation;
+import ng.runtime.metaclass.primitives.byteimpl.ByteShiftOperation;
+import ng.runtime.metaclass.primitives.charimpl.CharShiftOperation;
+import ng.runtime.metaclass.primitives.intimpl.IntShiftOperation;
+import ng.runtime.metaclass.primitives.longimpl.LongShiftOperation;
+import ng.runtime.metaclass.primitives.shortimpl.ShortShiftOperation;
+
 /**
  * @author John
  *

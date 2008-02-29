@@ -3,7 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.charimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.CharConversion;
+import ng.runtime.metaclass.primitives.charimpl.CharConversion;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 

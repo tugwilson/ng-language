@@ -3,7 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.ShortBinaryArithmeticOperation;
+import ng.runtime.metaclass.primitives.shortimpl.ShortBinaryArithmeticOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 

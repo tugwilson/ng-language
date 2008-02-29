@@ -5,12 +5,12 @@ import java.util.Map;
 import java.util.Stack;
 
 import ng.runtime.metaclass.BinaryOperation;
-import ng.runtime.metaclass.BigIntegerBinaryLogicalOperation;
-import ng.runtime.metaclass.ByteBinaryLogicalOperation;
-import ng.runtime.metaclass.CharBinaryLogicalOperation;
-import ng.runtime.metaclass.IntBinaryLogicalOperation;
-import ng.runtime.metaclass.LongBinaryLogicalOperation;
-import ng.runtime.metaclass.ShortBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.charimpl.CharBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.longimpl.LongBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.shortimpl.ShortBinaryLogicalOperation;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BinaryLogicalOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;

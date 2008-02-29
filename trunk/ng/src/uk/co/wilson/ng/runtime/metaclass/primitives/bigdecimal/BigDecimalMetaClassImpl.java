@@ -4,6 +4,12 @@ import java.math.BigDecimal;
 
 import ng.runtime.metaclass.*;
 import ng.runtime.metaclass.BaseBooleanComparison;
+import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBinaryArithmeticOperation;
+import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
+import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalConversion;
+import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalIntegerComparison;
+import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClass;
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import uk.co.wilson.ng.runtime.metaclass.BinaryLogicalOperationNoopImpl;
 import uk.co.wilson.ng.runtime.metaclass.ShiftOperationNoopImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.FractionalNumberMetaClassImpl;

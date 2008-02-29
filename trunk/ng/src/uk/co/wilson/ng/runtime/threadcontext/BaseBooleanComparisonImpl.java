@@ -6,6 +6,15 @@ import java.util.Map;
 import java.util.Stack;
 
 import ng.runtime.metaclass.*;
+import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
+import ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;
+import ng.runtime.metaclass.primitives.charimpl.CharBooleanComparison;
+import ng.runtime.metaclass.primitives.doubleimpl.DoubleBooleanComparison;
+import ng.runtime.metaclass.primitives.floatimpl.FloatBooleanComparison;
+import ng.runtime.metaclass.primitives.intimpl.IntBooleanComparison;
+import ng.runtime.metaclass.primitives.longimpl.LongBooleanComparison;
+import ng.runtime.metaclass.primitives.shortimpl.ShortBooleanComparison;
 import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;

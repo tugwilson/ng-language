@@ -8,7 +8,7 @@ import java.util.Stack;
 import ng.lang.NgRuntimeException;
 import ng.runtime.metaclass.Conversion;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.metaclass.PrimitiveMetaClasses;
+import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 import ng.runtime.threadcontext.ConversionOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;

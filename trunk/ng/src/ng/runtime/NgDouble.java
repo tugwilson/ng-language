@@ -1,8 +1,8 @@
 package ng.runtime;
 
-import ng.runtime.metaclass.DoubleMetaClass;
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.metaclass.PrimitiveMetaClasses;
+import ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClass;
+import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
 public class NgDouble extends NgObject {
   private static final DoubleMetaClass metaclass = PrimitiveMetaClasses.getDoubleMetaClass();

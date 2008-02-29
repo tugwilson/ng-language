@@ -3,8 +3,8 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.FloatIntegerComparison;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.metaclass.primitives.floatimpl.FloatIntegerComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 

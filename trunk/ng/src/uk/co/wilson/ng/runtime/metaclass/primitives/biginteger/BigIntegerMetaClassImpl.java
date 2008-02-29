@@ -5,6 +5,14 @@ import java.math.BigInteger;
 import ng.runtime.metaclass.*;
 import ng.runtime.metaclass.BaseBooleanComparison;
 import ng.runtime.metaclass.BaseShiftOperation;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryArithmeticOperation;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerConversion;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerIntegerComparison;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClass;
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerShiftOperation;
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigIntegerMetaClass {

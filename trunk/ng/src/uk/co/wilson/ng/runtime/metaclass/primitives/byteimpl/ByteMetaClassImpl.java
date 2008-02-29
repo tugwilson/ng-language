@@ -3,6 +3,14 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl;
 import ng.runtime.metaclass.*;
 import ng.runtime.metaclass.BaseBooleanComparison;
 import ng.runtime.metaclass.BaseShiftOperation;
+import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryArithmeticOperation;
+import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;
+import ng.runtime.metaclass.primitives.byteimpl.ByteConversion;
+import ng.runtime.metaclass.primitives.byteimpl.ByteIntegerComparison;
+import ng.runtime.metaclass.primitives.byteimpl.ByteMetaClass;
+import ng.runtime.metaclass.primitives.byteimpl.ByteShiftOperation;
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 

@@ -1,7 +1,7 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.string;
 
 import ng.runtime.metaclass.BinaryOperation;
-import ng.runtime.metaclass.StringMetaClass;
+import ng.runtime.metaclass.primitives.string.StringMetaClass;
 import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
 
 /**

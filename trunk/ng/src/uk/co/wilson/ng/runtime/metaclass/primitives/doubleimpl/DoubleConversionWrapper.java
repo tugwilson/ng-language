@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 import ng.runtime.NgDouble;
 import ng.runtime.metaclass.Conversion;
-import ng.runtime.metaclass.DoubleConversion;
+import ng.runtime.metaclass.primitives.doubleimpl.DoubleConversion;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ConversionWrapper;

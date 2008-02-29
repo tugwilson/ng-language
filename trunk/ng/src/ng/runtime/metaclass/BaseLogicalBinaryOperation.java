@@ -2,6 +2,13 @@ package ng.runtime.metaclass;
 
 import java.util.Map;
 
+import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.charimpl.CharBinaryArithmeticOperation;
+import ng.runtime.metaclass.primitives.charimpl.CharBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.intimpl.IntBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.longimpl.LongBinaryLogicalOperation;
+import ng.runtime.metaclass.primitives.shortimpl.ShortBinaryLogicalOperation;
 import ng.runtime.threadcontext.BinaryLogicalOperation;
 
 

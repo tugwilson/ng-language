@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 import ng.runtime.NgFloat;
 import ng.runtime.metaclass.BinaryOperation;
-import ng.runtime.metaclass.FloatBinaryArithmeticOperation;
+import ng.runtime.metaclass.primitives.floatimpl.FloatBinaryArithmeticOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ArithmeticOperationWrapper;
