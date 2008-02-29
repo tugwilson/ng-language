@@ -9,31 +9,55 @@ public interface ShortMetaClass extends MetaClass {
 
   void modifyAdd(ShortBinaryArithmeticOperation modifiedAdd);
   ShortBinaryArithmeticOperation getOriginalAdd();
-  ShortBinaryArithmeticOperation add(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifySubtract(ShortBinaryArithmeticOperation modifiedSubtract);
   ShortBinaryArithmeticOperation getOriginalSubtract();
-  ShortBinaryArithmeticOperation subtract(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyMultiply(ShortBinaryArithmeticOperation modifiedMultiply);
   ShortBinaryArithmeticOperation getOriginalMultiply();
-  ShortBinaryArithmeticOperation multiply(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyDivide(ShortBinaryArithmeticOperation modifiedDivide);
   ShortBinaryArithmeticOperation getOriginalDivide();
-  ShortBinaryArithmeticOperation divide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyModulo(ShortBinaryArithmeticOperation modifiedModulo);
   ShortBinaryArithmeticOperation getOriginalModulo();
-  ShortBinaryArithmeticOperation modulo(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyRemainderDivide(ShortBinaryArithmeticOperation modifiedRemainderDivide);
   ShortBinaryArithmeticOperation getOriginalRemainderDivide();
-  ShortBinaryArithmeticOperation remainderDivide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+
+  void modifyAnd(ShortBinaryLogicalOperation modifiedAnd);
+  ShortBinaryLogicalOperation getOriginalAnd();
+  ShortBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyOr(ShortBinaryLogicalOperation modifiedOr);
+  ShortBinaryLogicalOperation getOriginalOr();
+  ShortBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyXor(ShortBinaryLogicalOperation modifiedXor);
+  ShortBinaryLogicalOperation getOriginalXor();
+  ShortBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyLeftShift(ShortShiftOperation modifiedLeftShift);
+  ShortShiftOperation getOriginalLeftShift();
+  ShortShiftOperation leftShift(BaseShiftOperation shiftOperation);
+
+  void modifyRightShift(ShortShiftOperation modifiedRightShift);
+  ShortShiftOperation getOriginalRightShift();
+  ShortShiftOperation rightShift(BaseShiftOperation shiftOperation);
+
+  void modifyUnsignedRightShift(ShortShiftOperation modifiedUnsignedRightShift);
+  ShortShiftOperation getOriginalUnsignedRightShift();
+  ShortShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation);
 
   void modifyPower(ShortBinaryArithmeticOperation modifiedPower);
   ShortBinaryArithmeticOperation getOriginalPower();
-  ShortBinaryArithmeticOperation power(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyCompare(ShortIntegerComparison modifiedCompare);
   ShortIntegerComparison getOriginalCompare();

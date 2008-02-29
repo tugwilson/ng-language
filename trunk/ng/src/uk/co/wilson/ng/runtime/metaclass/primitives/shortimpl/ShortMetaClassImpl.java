@@ -1,8 +1,8 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
 import ng.runtime.metaclass.BaseBooleanComparison;
+import ng.runtime.metaclass.BaseShiftOperation;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass {
@@ -15,6 +15,13 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   private volatile ShortBinaryArithmeticOperation modifiedModulo = null;
   private volatile ShortBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile ShortBinaryArithmeticOperation modifiedPower = null;
+  
+  private volatile ShortBinaryLogicalOperation modifiedAnd = null;
+  private volatile ShortBinaryLogicalOperation modifiedOr = null;
+  private volatile ShortBinaryLogicalOperation modifiedXor = null;
+  private volatile ShortShiftOperation modifiedLeftShift = null;
+  private volatile ShortShiftOperation modifiedRightShift = null;
+  private volatile ShortShiftOperation modifiedUnsignedRightShift = null;
 
   private volatile ShortIntegerComparison modifiedCompare = null;
 
@@ -34,6 +41,13 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   private final ShortBinaryArithmeticOperation modulo = new Modulo();
   private final ShortBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final ShortBinaryArithmeticOperation power = new Power();
+  
+  private final ShortBinaryLogicalOperation and = new And();
+  private final ShortBinaryLogicalOperation or = new Or();
+  private final ShortBinaryLogicalOperation xor = new Xor();
+  private final ShortShiftOperation leftShift = new LeftShift();
+  private final ShortShiftOperation rightShift = new RightShift();
+  private final ShortShiftOperation unsignedRightShift = new UnsignedRightShift();
 
   private final ShortIntegerComparison compare = new Compare();
 
@@ -48,7 +62,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     super(short.class);
   }
 
-  private ShortBinaryArithmeticOperation fixOperationType(final ArithmeticBinaryOperation modifiedOperation) {
+  private ShortBinaryArithmeticOperation fixOperationType(final BinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof ShortBinaryArithmeticOperation) {
       return( ShortBinaryArithmeticOperation) modifiedOperation;
     }
@@ -62,6 +76,22 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     }
 
     return new ShortBooleanComparisonWrapper(modifiedOperation);
+  }
+
+  private ShortBinaryLogicalOperation fixOperationType(final LogicalBinaryOperation modifiedOperation) {
+    if (modifiedOperation instanceof ShortBinaryLogicalOperation) {
+      return (ShortBinaryLogicalOperation)modifiedOperation;
+    }
+
+    return new ShortBinaryLogicalOperationWrapper(modifiedOperation);
+  }
+
+  private ShortShiftOperation fixOperationType(final ShiftOperation modifiedOperation) {
+    if (modifiedOperation instanceof ShortShiftOperation) {
+      return (ShortShiftOperation)modifiedOperation;
+    }
+
+    return new ShortShiftOperationWrapper(modifiedOperation);
   }
 
   public void modifyConvert(final Conversion modifiedConvert) {
@@ -88,7 +118,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     }
   }
 
-  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
+  public void modifyAdd(final BinaryOperation modifiedAdd) {
     modifyAdd(fixOperationType(modifiedAdd));
   }
 
@@ -100,21 +130,21 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.add;
   }
 
-  public ShortBinaryArithmeticOperation add(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
+  public ShortBinaryArithmeticOperation add(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final ShortBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedAdd == null) {
         return this.add;
       } else {
         return this.modifiedAdd;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
+  public void modifySubtract(final BinaryOperation modifiedSubtract) {
     modifySubtract(fixOperationType(modifiedSubtract));
   }
 
@@ -126,21 +156,21 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.subtract;
   }
 
-  public ShortBinaryArithmeticOperation subtract(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
+  public ShortBinaryArithmeticOperation subtract(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final ShortBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedSubtract == null) {
         return this.subtract;
       } else {
         return this.modifiedSubtract;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
+  public void modifyMultiply(final BinaryOperation modifiedMultiply) {
     modifyMultiply(fixOperationType(modifiedMultiply));
   }
 
@@ -152,21 +182,21 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.multiply;
   }
 
-  public ShortBinaryArithmeticOperation multiply(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
+  public ShortBinaryArithmeticOperation multiply(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final ShortBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedMultiply == null) {
         return this.multiply;
       } else {
         return this.modifiedMultiply;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
+  public void modifyDivide(final BinaryOperation modifiedDivide) {
     modifyDivide(fixOperationType(modifiedDivide));
   }
 
@@ -178,21 +208,21 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.divide;
   }
 
-  public ShortBinaryArithmeticOperation divide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
+  public ShortBinaryArithmeticOperation divide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final ShortBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedDivide == null) {
         return this.divide;
       } else {
         return this.modifiedDivide;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
+  public void modifyModulo(final BinaryOperation modifiedModulo) {
     modifyModulo(fixOperationType(modifiedModulo));
   }
 
@@ -204,21 +234,21 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.modulo;
   }
 
-  public ShortBinaryArithmeticOperation modulo(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
+  public ShortBinaryArithmeticOperation modulo(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final ShortBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedModulo == null) {
         return this.modulo;
       } else {
         return this.modifiedModulo;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
+  public void modifyPower(final BinaryOperation modifiedPower) {
     modifyPower(fixOperationType(modifiedPower));
   }
 
@@ -230,21 +260,21 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.power;
   }
 
-  public ShortBinaryArithmeticOperation power(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
+  public ShortBinaryArithmeticOperation power(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final ShortBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedPower == null) {
         return this.power;
       } else {
         return this.modifiedPower;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final BinaryOperation modifiedRemainderDivide) {
     modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
   }
 
@@ -256,21 +286,177 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.remainderDivide;
   }
 
-  public ShortBinaryArithmeticOperation remainderDivide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
-  final ShortBinaryArithmeticOperation shortCategoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
+  public ShortBinaryArithmeticOperation remainderDivide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  final ShortBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
         return this.remainderDivide;
       } else {
         return this.modifiedRemainderDivide;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
-  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
+    modifyAnd(fixOperationType(modifiedAnd)); 
+  }
+
+  public void modifyAnd(ShortBinaryLogicalOperation modifiedAnd) {
+    this.modifiedAnd = modifiedAnd;
+  }
+
+  public ShortBinaryLogicalOperation getOriginalAnd() {
+    return this.and;
+  }
+
+  public ShortBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final ShortBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getShortCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedAnd == null) {
+        return this.and;
+      } else {
+        return this.modifiedAnd;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyOr(LogicalBinaryOperation modifiedOr) {
+    modifyOr(fixOperationType(modifiedOr)); 
+  }
+
+  public void modifyOr(ShortBinaryLogicalOperation modifiedOr) {
+    this.modifiedOr = modifiedOr;
+  }
+
+  public ShortBinaryLogicalOperation getOriginalOr() {
+    return this.or;
+  }
+
+  public ShortBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final ShortBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getShortCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedOr == null) {
+        return this.or;
+      } else {
+        return this.modifiedOr;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyXor(LogicalBinaryOperation modifiedXor) {
+    modifyXor(fixOperationType(modifiedXor)); 
+  }
+
+  public void modifyXor(ShortBinaryLogicalOperation modifiedXor) {
+    this.modifiedXor = modifiedXor;
+  }
+
+  public ShortBinaryLogicalOperation getOriginalXor() {
+    return this.xor;
+  }
+
+  public ShortBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final ShortBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getShortCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedXor == null) {
+        return this.xor;
+      } else {
+        return this.modifiedXor;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
+    modifyLeftShift(fixOperationType(modifiedLeftShift)); 
+  }
+
+  public void modifyLeftShift(ShortShiftOperation modifiedLeftShift) {
+    this.modifiedLeftShift = modifiedLeftShift;
+  }
+
+  public ShortShiftOperation getOriginalLeftShift() {
+    return this.leftShift;
+  }
+
+  public ShortShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  final ShortShiftOperation categoryOperation = shiftOperation.getShortCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedLeftShift == null) {
+        return this.leftShift;
+      } else {
+        return this.modifiedLeftShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyRightShift(ShiftOperation modifiedRightShift) {
+    modifyRightShift(fixOperationType(modifiedRightShift)); 
+  }
+
+  public void modifyRightShift(ShortShiftOperation modifiedRightShift) {
+    this.modifiedRightShift = modifiedRightShift;
+  }
+
+  public ShortShiftOperation getOriginalRightShift() {
+    return this.rightShift;
+  }
+
+  public ShortShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  final ShortShiftOperation categoryOperation = shiftOperation.getShortCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedRightShift == null) {
+        return this.rightShift;
+      } else {
+        return this.modifiedRightShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
+    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift)); 
+  }
+
+  public void modifyUnsignedRightShift(ShortShiftOperation modifiedUnsignedRightShift) {
+    this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
+  }
+
+  public ShortShiftOperation getOriginalUnsignedRightShift() {
+    return this.unsignedRightShift;
+  }
+
+  public ShortShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  final ShortShiftOperation categoryOperation = shiftOperation.getShortCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedUnsignedRightShift == null) {
+        return this.unsignedRightShift;
+      } else {
+        return this.modifiedUnsignedRightShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     if (modifiedCompare instanceof ShortIntegerComparison) {
       modifyCompare((ShortIntegerComparison)this.modifiedConvert);
     } else {
@@ -287,16 +473,16 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   }
 
   public ShortIntegerComparison compare(final BaseIntegerComparison integerComparison) {
-  final ShortIntegerComparison shortCategoryOperation = integerComparison.getShortCategoryOperation();
+  final ShortIntegerComparison categoryOperation = integerComparison.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedCompare == null) {
         return this.compare;
       } else {
         return this.modifiedCompare;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -313,16 +499,16 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   }
 
   public ShortBooleanComparison equals(final BaseBooleanComparison booleanComparison) {
-  final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
+  final ShortBooleanComparison categoryOperation = booleanComparison.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedEquals == null) {
         return this.equals;
       } else {
         return this.modifiedEquals;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -339,16 +525,16 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   }
 
   public ShortBooleanComparison notEquals(final BaseBooleanComparison booleanComparison) {
-  final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
+  final ShortBooleanComparison categoryOperation = booleanComparison.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedNotEquals == null) {
         return this.notEquals;
       } else {
         return this.modifiedNotEquals;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -365,16 +551,16 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   }
 
   public ShortBooleanComparison lessThan(final BaseBooleanComparison booleanComparison) {
-  final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
+  final ShortBooleanComparison categoryOperation = booleanComparison.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedLessThan == null) {
         return this.lessThan;
       } else {
         return this.modifiedLessThan;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -391,16 +577,16 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   }
 
   public ShortBooleanComparison greaterThan(final BaseBooleanComparison booleanComparison) {
-  final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
+  final ShortBooleanComparison categoryOperation = booleanComparison.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
         return this.greaterThan;
       } else {
         return this.modifiedGreaterThan;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -417,16 +603,16 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   }
 
   public ShortBooleanComparison lessThanOrEquals(final BaseBooleanComparison booleanComparison) {
-  final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
+  final ShortBooleanComparison categoryOperation = booleanComparison.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
         return this.lessThanOrEquals;
       } else {
         return this.modifiedLessThanOrEquals;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 
@@ -443,16 +629,16 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   }
 
   public ShortBooleanComparison greaterThanOrEquals(final BaseBooleanComparison booleanComparison) {
-  final ShortBooleanComparison shortCategoryOperation = booleanComparison.getShortCategoryOperation();
+  final ShortBooleanComparison categoryOperation = booleanComparison.getShortCategoryOperation();
 
-    if (shortCategoryOperation == null) {
+    if (categoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {
         return this.greaterThanOrEquals;
       } else {
         return this.modifiedGreaterThanOrEquals;
       }
     } else {
-      return shortCategoryOperation;
+      return categoryOperation;
     }
   }
 }

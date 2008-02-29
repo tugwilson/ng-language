@@ -3,7 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.string;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.metaclass.BinaryOperation;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
@@ -30,7 +30,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
  * @author John
  *
  */
-public class Add implements ArithmeticBinaryOperation {
+public class Add implements BinaryOperation {
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.lang.Object, java.lang.Object)

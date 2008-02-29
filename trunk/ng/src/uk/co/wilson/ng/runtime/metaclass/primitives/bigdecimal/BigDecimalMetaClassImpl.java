@@ -3,11 +3,12 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 import java.math.BigDecimal;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
 import ng.runtime.metaclass.BaseBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.BinaryLogicalOperationNoopImpl;
+import uk.co.wilson.ng.runtime.metaclass.ShiftOperationNoopImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.FractionalNumberMetaClassImpl;
 
-public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimalMetaClass {
+public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl implements BigDecimalMetaClass {
   private volatile BigDecimalConversion modifiedConvert = null;
 
   private volatile BigDecimalBinaryArithmeticOperation modifiedAdd = null;
@@ -50,7 +51,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     super(BigDecimal.class);
   }
 
-  private BigDecimalBinaryArithmeticOperation fixOperationType(final ArithmeticBinaryOperation modifiedOperation) {
+  private BigDecimalBinaryArithmeticOperation fixOperationType(final BinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof BigDecimalBinaryArithmeticOperation) {
       return( BigDecimalBinaryArithmeticOperation) modifiedOperation;
     }
@@ -90,7 +91,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     }
   }
 
-  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
+  public void modifyAdd(final BinaryOperation modifiedAdd) {
     modifyAdd(fixOperationType(modifiedAdd));
   }
 
@@ -102,7 +103,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.add;
   }
 
-  public BigDecimalBinaryArithmeticOperation add(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation add(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -116,7 +117,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     }
   }
 
-  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
+  public void modifySubtract(final BinaryOperation modifiedSubtract) {
     modifySubtract(fixOperationType(modifiedSubtract));
   }
 
@@ -128,7 +129,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.subtract;
   }
 
-  public BigDecimalBinaryArithmeticOperation subtract(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation subtract(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -142,7 +143,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     }
   }
 
-  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
+  public void modifyMultiply(final BinaryOperation modifiedMultiply) {
     modifyMultiply(fixOperationType(modifiedMultiply));
   }
 
@@ -154,7 +155,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.multiply;
   }
 
-  public BigDecimalBinaryArithmeticOperation multiply(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation multiply(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -168,7 +169,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     }
   }
 
-  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
+  public void modifyDivide(final BinaryOperation modifiedDivide) {
     modifyDivide(fixOperationType(modifiedDivide));
   }
 
@@ -180,7 +181,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.divide;
   }
 
-  public BigDecimalBinaryArithmeticOperation divide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation divide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -194,7 +195,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     }
   }
 
-  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
+  public void modifyModulo(final BinaryOperation modifiedModulo) {
     modifyModulo(fixOperationType(modifiedModulo));
   }
 
@@ -206,7 +207,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.modulo;
   }
 
-  public BigDecimalBinaryArithmeticOperation modulo(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation modulo(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -220,7 +221,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     }
   }
 
-  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
+  public void modifyPower(final BinaryOperation modifiedPower) {
     modifyPower(fixOperationType(modifiedPower));
   }
 
@@ -232,7 +233,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.power;
   }
 
-  public BigDecimalBinaryArithmeticOperation power(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation power(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -246,7 +247,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     }
   }
 
-  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final BinaryOperation modifiedRemainderDivide) {
     modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
   }
 
@@ -258,7 +259,7 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     return this.remainderDivide;
   }
 
-  public BigDecimalBinaryArithmeticOperation remainderDivide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation remainderDivide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -272,7 +273,91 @@ public class BigDecimalMetaClassImpl extends BaseMetaClass implements BigDecimal
     }
   }
 
-  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+  public BinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final BinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedAnd == null) {
+        return BinaryLogicalOperationNoopImpl.instance;
+      } else {
+        return this.modifiedAnd;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public BinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final BinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedOr == null) {
+        return BinaryLogicalOperationNoopImpl.instance;
+      } else {
+        return this.modifiedOr;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public BinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final BinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedXor == null) {
+        return BinaryLogicalOperationNoopImpl.instance;
+      } else {
+        return this.modifiedXor;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public ShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  final ShiftOperation categoryOperation = shiftOperation.getBigDecimalCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedLeftShift == null) {
+        return ShiftOperationNoopImpl.instance;
+      } else {
+        return this.modifiedLeftShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public ShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  final ShiftOperation categoryOperation = shiftOperation.getBigDecimalCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedRightShift == null) {
+        return ShiftOperationNoopImpl.instance;
+      } else {
+        return this.modifiedRightShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public ShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  final ShiftOperation categoryOperation = shiftOperation.getBigDecimalCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedUnsignedRightShift == null) {
+        return ShiftOperationNoopImpl.instance;
+      } else {
+        return this.modifiedUnsignedRightShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     if (modifiedCompare instanceof BigDecimalIntegerComparison) {
       modifyCompare((BigDecimalIntegerComparison)this.modifiedConvert);
     } else {

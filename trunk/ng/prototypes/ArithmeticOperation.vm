@@ -9,13 +9,13 @@ import ng.runtime.metaclass.PrimitiveMetaClasses;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-public class ${Op} extends BaseBinaryAritmeticOperation {
+public class ${Op} extends BaseBinaryAritmeticOperationImpl {
   public ${Op}(final ExtendedThreadContext tc) {
     super(tc);
   }
 
   public Object apply(final MetaClass lhsMetaClass, final Object lhs, final Object rhs) {
-  final Object result= lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+  final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
 
     if (result == ExtendedThreadContext.NOT_PERFORMED) {
       throw new NgRuntimeException("Cannot ${op} a value of type " + lhs.getClass().getName() + "${verb} one of type " + rhs.getClass().getName());

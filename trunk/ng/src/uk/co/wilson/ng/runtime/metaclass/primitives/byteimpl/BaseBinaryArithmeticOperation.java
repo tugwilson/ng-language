@@ -7,8 +7,6 @@ import ng.runtime.metaclass.ByteBinaryArithmeticOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 /**
  * @author John
  *

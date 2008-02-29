@@ -3,7 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.IntegerBinaryComparison;
+import ng.runtime.metaclass.IntBinaryComparison;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
@@ -12,7 +12,7 @@ import ng.runtime.threadcontext.NotPerformed;
  * @author John
  *
  */
-public class IntegerBinaryComparisonNoopImpl implements IntegerBinaryComparison {
+public class IntegerBinaryComparisonNoopImpl implements IntBinaryComparison {
   public static final IntegerBinaryComparisonNoopImpl instance = new IntegerBinaryComparisonNoopImpl();
 
   private IntegerBinaryComparisonNoopImpl() {

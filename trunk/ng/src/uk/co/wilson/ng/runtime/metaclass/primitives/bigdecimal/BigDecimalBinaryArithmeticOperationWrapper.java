@@ -3,7 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.metaclass.BinaryOperation;
 import ng.runtime.metaclass.BigDecimalBinaryArithmeticOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
@@ -14,7 +14,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.ArithmeticOperationWrapper;
  *
  */
 public class BigDecimalBinaryArithmeticOperationWrapper extends ArithmeticOperationWrapper implements BigDecimalBinaryArithmeticOperation {
-  public BigDecimalBinaryArithmeticOperationWrapper(final ArithmeticBinaryOperation delegate) {
+  public BigDecimalBinaryArithmeticOperationWrapper(final BinaryOperation delegate) {
     super(delegate);
   }
 

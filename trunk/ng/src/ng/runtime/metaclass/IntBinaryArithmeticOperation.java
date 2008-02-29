@@ -6,7 +6,7 @@ import java.math.BigInteger;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-public interface IntBinaryArithmeticOperation extends ArithmeticBinaryOperation, IntBinaryOperation {
+public interface IntBinaryArithmeticOperation extends BinaryOperation, IntBinaryOperation {
   int doIntApply(ExtendedThreadContext tc, int lhs, char rhs) throws NotPerformed;
   int doIntApply(ExtendedThreadContext tc, int lhs, byte rhs) throws NotPerformed;
   int doIntApply(ExtendedThreadContext tc, int lhs, short rhs) throws NotPerformed;

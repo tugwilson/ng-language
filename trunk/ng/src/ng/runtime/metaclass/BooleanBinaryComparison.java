@@ -8,7 +8,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 
 
-public interface BooleanBinaryComparison extends ArithmeticBinaryOperation {
+public interface BooleanBinaryComparison extends BinaryOperation {
   boolean doApplyBoolean(ExtendedThreadContext tc, Object lhs, Object rhs)  throws NotPerformed;
   boolean doApplyBoolean(ExtendedThreadContext tc, Object lhs, MetaClass rhsMetaClass, Object rhs)  throws NotPerformed;
   boolean doReverseApplyBoolean(ExtendedThreadContext tc, Object lhs, Object rhs)  throws NotPerformed;

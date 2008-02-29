@@ -3,7 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.ArithmeticBinaryOperation;
+import ng.runtime.metaclass.BinaryOperation;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
@@ -13,8 +13,8 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
  * @author John
  *
  */
-public class ArithmeticBinaryOperationNoopImpl implements ArithmeticBinaryOperation {
-  public final static ArithmeticBinaryOperation instance = new ArithmeticBinaryOperationNoopImpl();
+public class ArithmeticBinaryOperationNoopImpl implements BinaryOperation {
+  public final static BinaryOperation instance = new ArithmeticBinaryOperationNoopImpl();
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryArithmeticOperation#doApply(ng.runtime.threadcontext.ThreadContext, java.math.BigDecimal, java.lang.Object)

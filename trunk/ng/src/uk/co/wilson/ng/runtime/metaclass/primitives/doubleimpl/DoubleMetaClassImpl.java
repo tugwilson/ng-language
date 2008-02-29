@@ -1,11 +1,12 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BaseBinaryArithmeticOperation;
 import ng.runtime.metaclass.BaseBooleanComparison;
-import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
+import uk.co.wilson.ng.runtime.metaclass.BinaryLogicalOperationNoopImpl;
+import uk.co.wilson.ng.runtime.metaclass.ShiftOperationNoopImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.FractionalNumberMetaClassImpl;
 
-public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClass {
+public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implements DoubleMetaClass {
   private volatile DoubleConversion modifiedConvert = null;
 
   private volatile DoubleBinaryArithmeticOperation modifiedAdd = null;
@@ -48,7 +49,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     super(double.class);
   }
 
-  private DoubleBinaryArithmeticOperation fixOperationType(final ArithmeticBinaryOperation modifiedOperation) {
+  private DoubleBinaryArithmeticOperation fixOperationType(final BinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof DoubleBinaryArithmeticOperation) {
       return( DoubleBinaryArithmeticOperation) modifiedOperation;
     }
@@ -88,7 +89,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     }
   }
 
-  public void modifyAdd(final ArithmeticBinaryOperation modifiedAdd) {
+  public void modifyAdd(final BinaryOperation modifiedAdd) {
     modifyAdd(fixOperationType(modifiedAdd));
   }
 
@@ -100,7 +101,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.add;
   }
 
-  public DoubleBinaryArithmeticOperation add(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation add(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -114,7 +115,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     }
   }
 
-  public void modifySubtract(final ArithmeticBinaryOperation modifiedSubtract) {
+  public void modifySubtract(final BinaryOperation modifiedSubtract) {
     modifySubtract(fixOperationType(modifiedSubtract));
   }
 
@@ -126,7 +127,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.subtract;
   }
 
-  public DoubleBinaryArithmeticOperation subtract(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation subtract(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -140,7 +141,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     }
   }
 
-  public void modifyMultiply(final ArithmeticBinaryOperation modifiedMultiply) {
+  public void modifyMultiply(final BinaryOperation modifiedMultiply) {
     modifyMultiply(fixOperationType(modifiedMultiply));
   }
 
@@ -152,7 +153,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.multiply;
   }
 
-  public DoubleBinaryArithmeticOperation multiply(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation multiply(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -166,7 +167,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     }
   }
 
-  public void modifyDivide(final ArithmeticBinaryOperation modifiedDivide) {
+  public void modifyDivide(final BinaryOperation modifiedDivide) {
     modifyDivide(fixOperationType(modifiedDivide));
   }
 
@@ -178,7 +179,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.divide;
   }
 
-  public DoubleBinaryArithmeticOperation divide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation divide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -192,7 +193,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     }
   }
 
-  public void modifyModulo(final ArithmeticBinaryOperation modifiedModulo) {
+  public void modifyModulo(final BinaryOperation modifiedModulo) {
     modifyModulo(fixOperationType(modifiedModulo));
   }
 
@@ -204,7 +205,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.modulo;
   }
 
-  public DoubleBinaryArithmeticOperation modulo(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation modulo(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -218,7 +219,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     }
   }
 
-  public void modifyPower(final ArithmeticBinaryOperation modifiedPower) {
+  public void modifyPower(final BinaryOperation modifiedPower) {
     modifyPower(fixOperationType(modifiedPower));
   }
 
@@ -230,7 +231,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.power;
   }
 
-  public DoubleBinaryArithmeticOperation power(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation power(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -244,7 +245,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     }
   }
 
-  public void modifyRemainderDivide(final ArithmeticBinaryOperation modifiedRemainderDivide) {
+  public void modifyRemainderDivide(final BinaryOperation modifiedRemainderDivide) {
     modifyRemainderDivide(fixOperationType(modifiedRemainderDivide));
   }
 
@@ -256,7 +257,7 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     return this.remainderDivide;
   }
 
-  public DoubleBinaryArithmeticOperation remainderDivide(final BaseBinaryArithmeticOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation remainderDivide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -270,7 +271,91 @@ public class DoubleMetaClassImpl extends BaseMetaClass implements DoubleMetaClas
     }
   }
 
-  public void modifyCompare(final IntegerBinaryComparison modifiedCompare) {
+  public BinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final BinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedAnd == null) {
+        return BinaryLogicalOperationNoopImpl.instance;
+      } else {
+        return this.modifiedAnd;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public BinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final BinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedOr == null) {
+        return BinaryLogicalOperationNoopImpl.instance;
+      } else {
+        return this.modifiedOr;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public BinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final BinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedXor == null) {
+        return BinaryLogicalOperationNoopImpl.instance;
+      } else {
+        return this.modifiedXor;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public ShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  final ShiftOperation categoryOperation = shiftOperation.getDoubleCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedLeftShift == null) {
+        return ShiftOperationNoopImpl.instance;
+      } else {
+        return this.modifiedLeftShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public ShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  final ShiftOperation categoryOperation = shiftOperation.getDoubleCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedRightShift == null) {
+        return ShiftOperationNoopImpl.instance;
+      } else {
+        return this.modifiedRightShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public ShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  final ShiftOperation categoryOperation = shiftOperation.getDoubleCategoryOperation();
+
+    if (categoryOperation == null) {
+      if (this.modifiedUnsignedRightShift == null) {
+        return ShiftOperationNoopImpl.instance;
+      } else {
+        return this.modifiedUnsignedRightShift;
+      }
+    } else {
+      return categoryOperation;
+    }
+  }
+
+  public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     if (modifiedCompare instanceof DoubleIntegerComparison) {
       modifyCompare((DoubleIntegerComparison)this.modifiedConvert);
     } else {

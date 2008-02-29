@@ -9,31 +9,31 @@ public interface FloatMetaClass extends MetaClass {
 
   void modifyAdd(FloatBinaryArithmeticOperation modifiedAdd);
   FloatBinaryArithmeticOperation getOriginalAdd();
-  FloatBinaryArithmeticOperation add(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  FloatBinaryArithmeticOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifySubtract(FloatBinaryArithmeticOperation modifiedSubtract);
   FloatBinaryArithmeticOperation getOriginalSubtract();
-  FloatBinaryArithmeticOperation subtract(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  FloatBinaryArithmeticOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyMultiply(FloatBinaryArithmeticOperation modifiedMultiply);
   FloatBinaryArithmeticOperation getOriginalMultiply();
-  FloatBinaryArithmeticOperation multiply(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  FloatBinaryArithmeticOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyDivide(FloatBinaryArithmeticOperation modifiedDivide);
   FloatBinaryArithmeticOperation getOriginalDivide();
-  FloatBinaryArithmeticOperation divide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  FloatBinaryArithmeticOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyModulo(FloatBinaryArithmeticOperation modifiedModulo);
   FloatBinaryArithmeticOperation getOriginalModulo();
-  FloatBinaryArithmeticOperation modulo(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  FloatBinaryArithmeticOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyRemainderDivide(FloatBinaryArithmeticOperation modifiedRemainderDivide);
   FloatBinaryArithmeticOperation getOriginalRemainderDivide();
-  FloatBinaryArithmeticOperation remainderDivide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  FloatBinaryArithmeticOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyPower(FloatBinaryArithmeticOperation modifiedPower);
   FloatBinaryArithmeticOperation getOriginalPower();
-  FloatBinaryArithmeticOperation power(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  FloatBinaryArithmeticOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyCompare(FloatIntegerComparison modifiedCompare);
   FloatIntegerComparison getOriginalCompare();

@@ -13,37 +13,61 @@ public interface MetaClass {
   Conversion getOriginalConvert();
   Conversion convert(BaseConversionOperation conversionOperation);
 
-  void modifyAdd(ArithmeticBinaryOperation modifiedAdd);
-  ArithmeticBinaryOperation getOriginalAdd();
-  ArithmeticBinaryOperation add(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  void modifyAdd(BinaryOperation modifiedAdd);
+  BinaryOperation getOriginalAdd();
+  BinaryOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
-  void modifySubtract(ArithmeticBinaryOperation modifiedSubtract);
-  ArithmeticBinaryOperation getOriginalSubtract();
-  ArithmeticBinaryOperation subtract(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  void modifySubtract(BinaryOperation modifiedSubtract);
+  BinaryOperation getOriginalSubtract();
+  BinaryOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
-  void modifyMultiply(ArithmeticBinaryOperation modifiedMultiply);
-  ArithmeticBinaryOperation getOriginalMultiply();
-  ArithmeticBinaryOperation multiply(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  void modifyMultiply(BinaryOperation modifiedMultiply);
+  BinaryOperation getOriginalMultiply();
+  BinaryOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
-  void modifyDivide(ArithmeticBinaryOperation modifiedDivide);
-  ArithmeticBinaryOperation getOriginalDivide();
-  ArithmeticBinaryOperation divide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  void modifyDivide(BinaryOperation modifiedDivide);
+  BinaryOperation getOriginalDivide();
+  BinaryOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
-  void modifyModulo(ArithmeticBinaryOperation modifiedModulo);
-  ArithmeticBinaryOperation getOriginalModulo();
-  ArithmeticBinaryOperation modulo(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  void modifyModulo(BinaryOperation modifiedModulo);
+  BinaryOperation getOriginalModulo();
+  BinaryOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
-  void modifyRemainderDivide(ArithmeticBinaryOperation modifiedRemainderDivide);
-  ArithmeticBinaryOperation getOriginalRemainderDivide();
-  ArithmeticBinaryOperation remainderDivide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  void modifyRemainderDivide(BinaryOperation modifiedRemainderDivide);
+  BinaryOperation getOriginalRemainderDivide();
+  BinaryOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
-  void modifyPower(ArithmeticBinaryOperation modifiedPower);
-  ArithmeticBinaryOperation getOriginalPower();
-  ArithmeticBinaryOperation power(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  void modifyPower(BinaryOperation modifiedPower);
+  BinaryOperation getOriginalPower();
+  BinaryOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
-  void modifyCompare(IntegerBinaryComparison modifiedCompare);
-  IntegerBinaryComparison getOriginalCompare();
-  IntegerBinaryComparison compare(BaseIntegerComparison integerComparison);
+  void modifyAnd(LogicalBinaryOperation modifiedAnd);
+  BinaryOperation getOriginalAnd();
+  BinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyOr(LogicalBinaryOperation modifiedOr);
+  BinaryOperation getOriginalOr();
+  BinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyXor(LogicalBinaryOperation modifiedXor);
+  BinaryOperation getOriginalXor();
+  BinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation);
+
+  void modifyLeftShift(ShiftOperation modifiedLeftShift);
+  BinaryOperation getOriginalLeftShift();
+  BinaryOperation leftShift(BaseShiftOperation shiftOperation);
+
+  void modifyRightShift(ShiftOperation modifiedRightShift);
+  BinaryOperation getOriginalRightShift();
+  BinaryOperation rightShift(BaseShiftOperation shiftOperation);
+
+  void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift);
+  BinaryOperation getOriginalUnsignedRightShift();
+  BinaryOperation unsignedRightShift(BaseShiftOperation shiftOperation);
+
+  void modifyCompare(IntBinaryComparison modifiedCompare);
+  IntBinaryComparison getOriginalCompare();
+  IntBinaryComparison compare(BaseIntegerComparison integerComparison);
 
   void modifyEquals(BooleanBinaryComparison modifiedEquals);
   BooleanBinaryComparison getOriginalEquals();

@@ -34,6 +34,6 @@ public interface BaseIntegerComparison {
   BigDecimalIntegerComparison getBigDecimalCategoryOperation();
   void setBigDecimalCategoryOperation(BigDecimalIntegerComparison bigDecimalCategoryOperation);
 
-  Map<Object, IntegerBinaryComparison> getCategoryOperationMap();
-  void setCategoryOperationMap(Map<Object, IntegerBinaryComparison> categoryOperationMap);
+  Map<Object, IntBinaryComparison> getCategoryOperationMap();
+  void setCategoryOperationMap(Map<Object, IntBinaryComparison> categoryOperationMap);
 }

@@ -9,31 +9,31 @@ public interface BigDecimalMetaClass extends MetaClass {
 
   void modifyAdd(BigDecimalBinaryArithmeticOperation modifiedAdd);
   BigDecimalBinaryArithmeticOperation getOriginalAdd();
-  BigDecimalBinaryArithmeticOperation add(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigDecimalBinaryArithmeticOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifySubtract(BigDecimalBinaryArithmeticOperation modifiedSubtract);
   BigDecimalBinaryArithmeticOperation getOriginalSubtract();
-  BigDecimalBinaryArithmeticOperation subtract(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigDecimalBinaryArithmeticOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyMultiply(BigDecimalBinaryArithmeticOperation modifiedMultiply);
   BigDecimalBinaryArithmeticOperation getOriginalMultiply();
-  BigDecimalBinaryArithmeticOperation multiply(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigDecimalBinaryArithmeticOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyDivide(BigDecimalBinaryArithmeticOperation modifiedDivide);
   BigDecimalBinaryArithmeticOperation getOriginalDivide();
-  BigDecimalBinaryArithmeticOperation divide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigDecimalBinaryArithmeticOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyModulo(BigDecimalBinaryArithmeticOperation modifiedModulo);
   BigDecimalBinaryArithmeticOperation getOriginalModulo();
-  BigDecimalBinaryArithmeticOperation modulo(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigDecimalBinaryArithmeticOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyRemainderDivide(BigDecimalBinaryArithmeticOperation modifiedRemainderDivide);
   BigDecimalBinaryArithmeticOperation getOriginalRemainderDivide();
-  BigDecimalBinaryArithmeticOperation remainderDivide(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigDecimalBinaryArithmeticOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyPower(BigDecimalBinaryArithmeticOperation modifiedPower);
   BigDecimalBinaryArithmeticOperation getOriginalPower();
-  BigDecimalBinaryArithmeticOperation power(BaseBinaryArithmeticOperation binaryArithmeticOperation);
+  BigDecimalBinaryArithmeticOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyCompare(BigDecimalIntegerComparison modifiedCompare);
   BigDecimalIntegerComparison getOriginalCompare();
