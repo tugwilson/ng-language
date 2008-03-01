@@ -45,6 +45,19 @@ public abstract class ThreadContext {
 
   public abstract MetaClass getMetaClassFor(Object instance);
   public abstract MetaClass getMetaClassFor(Class<?> type);
+  
+  //
+  // Utility Methods
+  //
+
+  public abstract Object wrap(boolean val);
+  public abstract Object wrap(char val);
+  public abstract Object wrap(byte val);
+  public abstract Object wrap(short val);
+  public abstract Object wrap(int val);
+  public abstract Object wrap(long val);
+  public abstract Object wrap(float val);
+  public abstract Object wrap(double val);
 
   //
   // Select Message Types

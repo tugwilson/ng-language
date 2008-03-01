@@ -3,7 +3,6 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.NgFloat;
 import ng.runtime.metaclass.BinaryOperation;
 import ng.runtime.metaclass.primitives.floatimpl.FloatBinaryArithmeticOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
@@ -24,39 +23,39 @@ public class FloatBinaryArithmeticOperationWrapper extends ArithmeticOperationWr
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final BigDecimal rhs) {
-    return doApply(tc, NgFloat.valueOf(lhs), rhs);
+    return doApply(tc, tc.wrap(lhs), rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final BigInteger rhs) {
-    return doApply(tc, NgFloat.valueOf(lhs), rhs);
+    return doApply(tc, tc.wrap(lhs), rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final byte rhs) {
-    return doApply(tc, NgFloat.valueOf(lhs), rhs);
+    return doApply(tc, tc.wrap(lhs), rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final char rhs) {
-    return doApply(tc, NgFloat.valueOf(lhs), rhs);
+    return doApply(tc, tc.wrap(lhs), rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final double rhs) {
-    return doApply(tc, NgFloat.valueOf(lhs), rhs);
+    return doApply(tc, tc.wrap(lhs), rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final float rhs) {
-    return doApply(tc, NgFloat.valueOf(lhs), rhs);
+    return doApply(tc, tc.wrap(lhs), rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final int rhs) {
-    return doApply(tc, NgFloat.valueOf(lhs), rhs);
+    return doApply(tc, tc.wrap(lhs), rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final long rhs) {
-    return doApply(tc, NgFloat.valueOf(lhs), rhs);
+    return doApply(tc, tc.wrap(lhs), rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final short rhs) {
-    return doApply(tc, NgFloat.valueOf(lhs), rhs);
+    return doApply(tc, tc.wrap(lhs), rhs);
   }
 
   public BigDecimal doBigDecimalApply(final ExtendedThreadContext tc, final float lhs, final BigDecimal rhs) throws NotPerformed {

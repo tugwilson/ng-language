@@ -1,7 +1,7 @@
 package uk.co.wilson.ng.ast;
 
+import uk.co.wilson.ng.runtime.NgChar;
 import ng.ast.CharConstant;
-import ng.runtime.NgChar;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 

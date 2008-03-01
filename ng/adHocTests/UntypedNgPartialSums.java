@@ -1,5 +1,3 @@
-import ng.runtime.NgDouble;
-import ng.runtime.NgInt;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 
@@ -27,19 +25,19 @@ import ng.runtime.threadcontext.ThreadContext;
  *
  */
 public class UntypedNgPartialSums {
-  static final Object twothirds = NgDouble.valueOf(2.0/3.0);
+  static final Object twothirds = ThreadContext.getThreadContext().wrap(2.0/3.0);
 
   public static void main(final String[] args) throws Throwable {
     final long start = System.currentTimeMillis();
     final ThreadContext tc = ThreadContext.getThreadContext();
     final MetaClass mathMetaClass = tc.getMetaClassFor(Math.class);
 
-     final Object n = NgInt.valueOf(Integer.parseInt(args[0]));
+     final Object n = tc.wrap(Integer.parseInt(args[0]));
 
-     Object k = NgInt.valueOf(1);
+     Object k = tc.wrap(1);
 
-     Object a1 = NgDouble.valueOf(0.0), a2 = NgDouble.valueOf(0.0), a3 = NgDouble.valueOf(0.0), a4 = NgDouble.valueOf(0.0), a5 = NgDouble.valueOf(0.0);
-     Object a6 = NgDouble.valueOf(0.0), a7 = NgDouble.valueOf(0.0), a8 = NgDouble.valueOf(0.0), a9 = NgDouble.valueOf(0.0), alt = NgDouble.valueOf(-1.0);
+     Object a1 = tc.wrap(0.0), a2 = tc.wrap(0.0), a3 = tc.wrap(0.0), a4 = tc.wrap(0.0), a5 = tc.wrap(0.0);
+     Object a6 = tc.wrap(0.0), a7 = tc.wrap(0.0), a8 = tc.wrap(0.0), a9 = tc.wrap(0.0), alt = tc.wrap(-1.0);
 
      while (tc.lessThanOrEquals().applyBoolean(k, n)) {
         final Object k2 = tc.power().apply(tc.convert().asDouble(k), 2);
