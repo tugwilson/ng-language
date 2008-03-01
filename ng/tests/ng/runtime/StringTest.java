@@ -14,16 +14,16 @@ import ng.runtime.threadcontext.ThreadContext;
 public class StringTest extends TestCase {
   public void testCatenation() {
     final ThreadContext tc = ThreadContext.getThreadContext();
-    assertEquals(tc.add().apply("", tc.wrap('0')), "0");
-    assertEquals(tc.add().apply(tc.wrap('1'), ""), "1");
+    assertEquals(tc.add().apply("", tc.wrap((char)'0')), "0");
+    assertEquals(tc.add().apply(tc.wrap((char)'1'), ""), "1");
     assertEquals(tc.add().apply("", tc.wrap((byte)2)), "2");
     assertEquals(tc.add().apply(tc.wrap((byte)3), ""), "3");
     assertEquals(tc.add().apply("", tc.wrap((short)4)), "4");
     assertEquals(tc.add().apply(tc.wrap((short)5), ""), "5");
-    assertEquals(tc.add().apply("", tc.wrap(6)), "6");
-    assertEquals(tc.add().apply(tc.wrap(7), ""), "7");
-    assertEquals(tc.add().apply("", tc.wrap(8)), "8");
-    assertEquals(tc.add().apply(tc.wrap(9), ""), "9");
+    assertEquals(tc.add().apply("", tc.wrap((int)6)), "6");
+    assertEquals(tc.add().apply(tc.wrap((int)7), ""), "7");
+    assertEquals(tc.add().apply("", tc.wrap((long)8)), "8");
+    assertEquals(tc.add().apply(tc.wrap((long)9), ""), "9");
     assertEquals(tc.add().apply("", tc.wrap((float)10.5)), "10.5");
     assertEquals(tc.add().apply(tc.wrap((float)11.5), ""), "11.5");
     assertEquals(tc.add().apply("", tc.wrap(12.5)), "12.5");

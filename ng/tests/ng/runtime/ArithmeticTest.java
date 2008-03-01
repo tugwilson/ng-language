@@ -46,17 +46,17 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), (byte)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), (byte)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), (byte)4)) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), (byte)4)) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), (byte)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (byte)4)) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), (byte)4)) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), (byte)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), (byte)4)) == dResult);
 
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((byte)18), (byte)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), (byte)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), (byte)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), (byte)4)) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), (byte)4)) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), (byte)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (byte)4)) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), (byte)4)) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), (byte)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), (byte)4)) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (byte)4)).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (byte)4)).doubleValue() == dResult);
 
@@ -84,9 +84,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), tc.wrap((byte)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), tc.wrap((byte)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), tc.wrap((byte)4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap((byte)4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap((byte)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap((byte)4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), tc.wrap((byte)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap((byte)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((byte)4))) == dResult);
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(18), tc.wrap((byte)4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((byte)4))).doubleValue() == dResult);
 
@@ -94,9 +94,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), tc.wrap((byte)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), tc.wrap((byte)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), tc.wrap((byte)4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap((byte)4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap((byte)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap((byte)4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), tc.wrap((byte)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap((byte)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((byte)4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (Object)tc.wrap((byte)4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)tc.wrap((byte)4))).doubleValue() == dResult);
 
@@ -104,9 +104,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), byteMetaClass, tc.wrap((byte)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), byteMetaClass, tc.wrap((byte)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), byteMetaClass, tc.wrap((byte)4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), byteMetaClass, tc.wrap((byte)4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), byteMetaClass, tc.wrap((byte)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), byteMetaClass, tc.wrap((byte)4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), byteMetaClass, tc.wrap((byte)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), byteMetaClass, tc.wrap((byte)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), byteMetaClass, tc.wrap((byte)4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), byteMetaClass, (Object)tc.wrap((byte)4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), byteMetaClass, (Object)tc.wrap((byte)4))).doubleValue() == dResult);
 
@@ -134,17 +134,17 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), (char)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), (char)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), (char)4)) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), (char)4)) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), (char)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (char)4)) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), (char)4)) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), (char)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), (char)4)) == dResult);
 
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((byte)18), (char)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), (char)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), (char)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), (char)4)) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), (char)4)) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), (char)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (char)4)) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), (char)4)) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), (char)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), (char)4)) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (char)4)).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (char)4)).doubleValue() == dResult);
 
@@ -172,9 +172,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), tc.wrap((char)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), tc.wrap((char)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), tc.wrap((char)4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap((char)4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap((char)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap((char)4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), tc.wrap((char)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap((char)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((char)4))) == dResult);
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(18), tc.wrap((char)4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((char)4))).doubleValue() == dResult);
 
@@ -182,9 +182,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), tc.wrap((char)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), tc.wrap((char)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), tc.wrap((char)4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap((char)4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap((char)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap((char)4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), tc.wrap((char)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap((char)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((char)4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (Object)tc.wrap((char)4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)tc.wrap((char)4))).doubleValue() == dResult);
 
@@ -192,9 +192,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), charMetaClass, tc.wrap((char)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), charMetaClass, tc.wrap((char)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), charMetaClass, tc.wrap((char)4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), charMetaClass, tc.wrap((char)4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), charMetaClass, tc.wrap((char)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), charMetaClass, tc.wrap((char)4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), charMetaClass, tc.wrap((char)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), charMetaClass, tc.wrap((char)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), charMetaClass, tc.wrap((char)4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), charMetaClass, (Object)tc.wrap((char)4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), charMetaClass, (Object)tc.wrap((char)4))).doubleValue() == dResult);
 
@@ -202,9 +202,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), charMetaClass,tc.wrap((char)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), charMetaClass,tc.wrap((char)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), charMetaClass,tc.wrap((char)4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), charMetaClass,tc.wrap((char)4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), charMetaClass,tc.wrap((char)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), charMetaClass,tc.wrap((char)4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), charMetaClass,tc.wrap((char)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), charMetaClass,tc.wrap((char)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), charMetaClass,tc.wrap((char)4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), charMetaClass,(Object)tc.wrap((char)4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), charMetaClass,(Object)tc.wrap((char)4))).doubleValue() == dResult);
 
@@ -232,17 +232,17 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), (short)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), (short)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), (short)4)) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), (short)4)) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), (short)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (short)4)) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), (short)4)) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), (short)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), (short)4)) == dResult);
 
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((byte)18), (short)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), (short)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), (short)4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), (short)4)) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), (short)4)) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), (short)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (short)4)) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), (short)4)) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), (short)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), (short)4)) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (short)4)).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (short)4)).doubleValue() == dResult);
 
@@ -270,9 +270,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), tc.wrap((short)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), tc.wrap((short)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), tc.wrap((short)4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap((short)4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap((short)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap((short)4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), tc.wrap((short)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap((short)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((short)4))) == dResult);
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(18), tc.wrap((short)4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((short)4))).doubleValue() == dResult);
 
@@ -280,9 +280,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), tc.wrap((short)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), tc.wrap((short)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), tc.wrap((short)4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap((short)4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap((short)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap((short)4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), tc.wrap((short)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap((short)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((short)4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (Object)tc.wrap((short)4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)tc.wrap((short)4))).doubleValue() == dResult);
 
@@ -290,9 +290,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), shortMetaClass, tc.wrap((short)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), shortMetaClass, tc.wrap((short)4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), shortMetaClass, tc.wrap((short)4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), shortMetaClass, tc.wrap((short)4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), shortMetaClass, tc.wrap((short)4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), shortMetaClass, tc.wrap((short)4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), shortMetaClass, tc.wrap((short)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), shortMetaClass, tc.wrap((short)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), shortMetaClass, tc.wrap((short)4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), shortMetaClass, (Object)tc.wrap((short)4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), shortMetaClass, (Object)tc.wrap((short)4))).doubleValue() == dResult);
 
@@ -320,17 +320,17 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), 4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), 4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), 4)) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), 4)) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), 4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), 4)) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), 4)) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), 4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), 4)) == dResult);
 
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((byte)18), 4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), 4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), 4)) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), 4)) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), 4)) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), 4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), 4)) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), 4)) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), 4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), 4)) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), 4)).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), 4)).doubleValue() == dResult);
 
@@ -358,9 +358,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), tc.wrap(4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), tc.wrap(4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), tc.wrap(4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap(4))) == dResult);
     assertTrue(((BigInteger)op.apply(BigInteger.valueOf(18), tc.wrap(4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap(4))).doubleValue() == dResult);
 
@@ -368,9 +368,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), tc.wrap(4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), tc.wrap(4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), tc.wrap(4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap(4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (Object)tc.wrap(4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)tc.wrap(4))).doubleValue() == dResult);
 
@@ -378,9 +378,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((char)18), intMetaClass, tc.wrap(4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap((short)18), intMetaClass, tc.wrap(4))) == iResult);
     assertTrue(tc.unwrapToInt(op.apply(tc.wrap(18), intMetaClass, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), intMetaClass, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), intMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), intMetaClass, tc.wrap(4))) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), intMetaClass, tc.wrap(4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), intMetaClass, tc.wrap(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), intMetaClass, tc.wrap(4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), intMetaClass, (Object)tc.wrap(4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), intMetaClass, (Object)tc.wrap(4))).doubleValue() == dResult);
 
@@ -408,69 +408,69 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToLong(op.apply(tc.wrap((char)18), (long)4)) == iResult);
     assertTrue(tc.unwrapToLong(op.apply(tc.wrap((short)18), (long)4)) == iResult);
     assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), (long)4)) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), (long)4)) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), (long)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (long)4)) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), (long)4)) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), (long)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), (long)4)) == dResult);
 
     assertTrue(tc.unwrapToLong(op.apply((Object)tc.wrap((byte)18), (long)4)) == iResult);
     assertTrue(tc.unwrapToLong(op.apply((Object)tc.wrap((char)18), (long)4)) == iResult);
     assertTrue(tc.unwrapToLong(op.apply((Object)tc.wrap((short)18), (long)4)) == iResult);
     assertTrue(tc.unwrapToLong(op.apply((Object)tc.wrap(18), (long)4)) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply((Object)tc.wrap(18), (long)4)) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap(18), (long)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap(18), (long)4)) == dResult);
+    assertTrue(tc.unwrapToLong(op.apply((Object)tc.wrap((long)18), (long)4)) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap((float)18), (long)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap((double)18), (long)4)) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (long)4)).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (long)4)).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToLong(op.apply((byte)18, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply((char)18, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply((short)18, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(18, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply((long)18, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply((float)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((double)18, tc.wrap(4))) == dResult);
-    assertTrue(((BigInteger)op.apply(BigInteger.valueOf(18), tc.wrap(4))).longValue() == iResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToLong(op.apply((byte)18, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply((char)18, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply((short)18, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(18, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply((long)18, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply((float)18, tc.wrap((long)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((double)18, tc.wrap((long)4))) == dResult);
+    assertTrue(((BigInteger)op.apply(BigInteger.valueOf(18), tc.wrap((long)4))).longValue() == iResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((long)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToLong(op.apply((byte)18, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply((char)18, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply((short)18, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(18, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply((long)18, (Object)tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply((float)18, (Object)tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((double)18, (Object)tc.wrap(4))) == dResult);
-    assertTrue(((BigInteger)op.apply(BigInteger.valueOf(18), tc.wrap(4))).longValue() == iResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToLong(op.apply((byte)18, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply((char)18, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply((short)18, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(18, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply((long)18, (Object)tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply((float)18, (Object)tc.wrap((long)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((double)18, (Object)tc.wrap((long)4))) == dResult);
+    assertTrue(((BigInteger)op.apply(BigInteger.valueOf(18), tc.wrap((long)4))).longValue() == iResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((long)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((byte)18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((char)18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((short)18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(((BigInteger)op.apply(BigInteger.valueOf(18), tc.wrap(4))).longValue() == iResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((byte)18), tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((char)18), tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((short)18), tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap((long)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((long)4))) == dResult);
+    assertTrue(((BigInteger)op.apply(BigInteger.valueOf(18), tc.wrap((long)4))).longValue() == iResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((long)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((byte)18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((char)18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((short)18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (Object)tc.wrap(4))).longValue() == iResult);
-    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((byte)18), tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((char)18), tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((short)18), tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap((long)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((long)4))) == dResult);
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (Object)tc.wrap((long)4))).longValue() == iResult);
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)tc.wrap((long)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((byte)18), longMetaClass, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((char)18), longMetaClass, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((short)18), longMetaClass, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), longMetaClass, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), longMetaClass, tc.wrap(4))) == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), longMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), longMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), longMetaClass, (Object)tc.wrap(4))).longValue() == iResult);
-    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), longMetaClass, (Object)tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((byte)18), longMetaClass, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((char)18), longMetaClass, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((short)18), longMetaClass, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap(18), longMetaClass, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToLong(op.apply(tc.wrap((long)18), longMetaClass, tc.wrap((long)4))) == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), longMetaClass, tc.wrap((long)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), longMetaClass, tc.wrap((long)4))) == dResult);
+    assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), longMetaClass, (Object)tc.wrap((long)4))).longValue() == iResult);
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), longMetaClass, (Object)tc.wrap((long)4))).doubleValue() == dResult);
 
     assertTrue(op.floatApply((byte)18, (float)4) == dResult);
     assertTrue(op.floatApply((char)18, (float)4) == dResult);
@@ -496,69 +496,69 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((char)18), (float)4)) == dResult);
     assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((short)18), (float)4)) == dResult);
     assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), (float)4)) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), (float)4)) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), (float)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (float)4)) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((long)18), (float)4)) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), (float)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), (float)4)) == dResult);
 
     assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap((byte)18), (float)4)) == dResult);
     assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap((char)18), (float)4)) == dResult);
     assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap((short)18), (float)4)) == dResult);
     assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap(18), (float)4)) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap(18), (float)4)) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap(18), (float)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap(18), (float)4)) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap((long)18), (float)4)) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap((float)18), (float)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap((double)18), (float)4)) == dResult);
     assertTrue(tc.unwrapToFloat(op.apply((Object)BigInteger.valueOf(18), (float)4)) == dResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (float)4)).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToFloat(op.apply((byte)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((char)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((short)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((long)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((float)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((double)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(BigInteger.valueOf(18), tc.wrap(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((byte)18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((char)18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((short)18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((long)18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((float)18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((double)18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(BigInteger.valueOf(18), tc.wrap((float)4))) == dResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((float)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToFloat(op.apply((byte)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((char)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((short)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((long)18, (Object)tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((float)18, (Object)tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((double)18, (Object)tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(BigInteger.valueOf(18), tc.wrap(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((byte)18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((char)18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((short)18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(18, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((long)18, (Object)tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((float)18, (Object)tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((double)18, (Object)tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(BigInteger.valueOf(18), tc.wrap((float)4))) == dResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((float)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((byte)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((char)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((short)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(BigInteger.valueOf(18), tc.wrap(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((byte)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((char)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((short)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((long)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(BigInteger.valueOf(18), tc.wrap((float)4))) == dResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((float)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((byte)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((char)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((short)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((Object)BigInteger.valueOf(18), (Object)tc.wrap(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((byte)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((char)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((short)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((long)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((Object)BigInteger.valueOf(18), (Object)tc.wrap((float)4))) == dResult);
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)tc.wrap((float)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((byte)18), floatMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((char)18), floatMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((short)18), floatMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), floatMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), floatMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), floatMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), floatMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToFloat(op.apply((Object)BigInteger.valueOf(18), floatMetaClass, (Object)tc.wrap(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), floatMetaClass, (Object)tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((byte)18), floatMetaClass, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((char)18), floatMetaClass, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((short)18), floatMetaClass, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), floatMetaClass, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((long)18), floatMetaClass, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), floatMetaClass, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), floatMetaClass, tc.wrap((float)4))) == dResult);
+    assertTrue(tc.unwrapToFloat(op.apply((Object)BigInteger.valueOf(18), floatMetaClass, (Object)tc.wrap((float)4))) == dResult);
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), floatMetaClass, (Object)tc.wrap((float)4))).doubleValue() == dResult);
 
     assertTrue(op.doubleApply((byte)18, (double)4) == dResult);
     assertTrue(op.doubleApply((char)18, (double)4) == dResult);
@@ -584,69 +584,69 @@ public class ArithmeticTest extends TestCase {
     assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((char)18), (double)4)) == dResult);
     assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((short)18), (double)4)) == dResult);
     assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (double)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (double)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (double)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), (double)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((long)18), (double)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((float)18), (double)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), (double)4)) == dResult);
 
     assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap((byte)18), (double)4)) == dResult);
     assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap((char)18), (double)4)) == dResult);
     assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap((short)18), (double)4)) == dResult);
     assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap(18), (double)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap(18), (double)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap(18), (double)4)) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap(18), (double)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap((long)18), (double)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap((float)18), (double)4)) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap((double)18), (double)4)) == dResult);
     assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(18), (double)4)) == dResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (double)4)).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToDouble(op.apply((byte)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((char)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((short)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((long)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((float)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((double)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(18), tc.wrap(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((byte)18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((char)18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((short)18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((long)18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((float)18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((double)18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(18), tc.wrap((double)4))) == dResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((double)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToDouble(op.apply((byte)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((char)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((short)18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(18, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((long)18, (Object)tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((float)18, (Object)tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((double)18, (Object)tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(18), tc.wrap(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((byte)18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((char)18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((short)18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(18, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((long)18, (Object)tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((float)18, (Object)tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((double)18, (Object)tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(18), tc.wrap((double)4))) == dResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((double)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((byte)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((char)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((short)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(18), tc.wrap(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((byte)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((char)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((short)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((long)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((float)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(BigInteger.valueOf(18), tc.wrap((double)4))) == dResult);
+    assertTrue(((BigDecimal)op.apply(BigDecimal.valueOf(18), tc.wrap((double)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((byte)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((char)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((short)18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(18), (Object)tc.wrap(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((byte)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((char)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((short)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((long)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((float)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(18), (Object)tc.wrap((double)4))) == dResult);
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)tc.wrap((double)4))).doubleValue() == dResult);
 
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((byte)18), doubleMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((char)18), doubleMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((short)18), doubleMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), doubleMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), doubleMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), doubleMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), doubleMetaClass, tc.wrap(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(18), doubleMetaClass, (Object)tc.wrap(4))) == dResult);
-    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), doubleMetaClass, (Object)tc.wrap(4))).doubleValue() == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((byte)18), doubleMetaClass, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((char)18), doubleMetaClass, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((short)18), doubleMetaClass, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), doubleMetaClass, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((long)18), doubleMetaClass, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((float)18), doubleMetaClass, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), doubleMetaClass, tc.wrap((double)4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)BigInteger.valueOf(18), doubleMetaClass, (Object)tc.wrap((double)4))) == dResult);
+    assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), doubleMetaClass, (Object)tc.wrap((double)4))).doubleValue() == dResult);
 
     assertTrue(op.bigIntegerApply((byte)18, BigInteger.valueOf(4)).longValue() == iResult);
     assertTrue(op.bigIntegerApply((char)18, BigInteger.valueOf(4)).longValue() == iResult);
@@ -672,17 +672,17 @@ public class ArithmeticTest extends TestCase {
     assertTrue(((BigInteger)op.apply(tc.wrap((char)18), BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply(tc.wrap((short)18), BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply(tc.wrap(18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply(tc.wrap(18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), BigInteger.valueOf(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), BigInteger.valueOf(4))) == dResult);
+    assertTrue(((BigInteger)op.apply(tc.wrap((long)18), BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), BigInteger.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), BigInteger.valueOf(4))) == dResult);
 
     assertTrue(((BigInteger)op.apply(tc.wrap((byte)18), BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply(tc.wrap((char)18), BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply(tc.wrap((short)18), BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply(tc.wrap(18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply(tc.wrap(18), BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap(18), BigInteger.valueOf(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap(18), BigInteger.valueOf(4))) == dResult);
+    assertTrue(((BigInteger)op.apply(tc.wrap((long)18), BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply(tc.wrap((float)18), BigInteger.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply(tc.wrap((double)18), BigInteger.valueOf(4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), BigInteger.valueOf(4))).doubleValue() == dResult);
 
@@ -690,9 +690,9 @@ public class ArithmeticTest extends TestCase {
     assertTrue(((BigInteger)op.apply((Object)tc.wrap((char)18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply((Object)tc.wrap((short)18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigInteger)op.apply((Object)tc.wrap(18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(((BigInteger)op.apply((Object)tc.wrap(18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
-    assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap(18), (Object)BigInteger.valueOf(4))) == dResult);
-    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap(18), (Object)BigInteger.valueOf(4))) == dResult);
+    assertTrue(((BigInteger)op.apply((Object)tc.wrap((long)18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
+    assertTrue(tc.unwrapToFloat(op.apply((Object)tc.wrap((float)18), (Object)BigInteger.valueOf(4))) == dResult);
+    assertTrue(tc.unwrapToDouble(op.apply((Object)tc.wrap((double)18), (Object)BigInteger.valueOf(4))) == dResult);
     assertTrue(((BigInteger)op.apply((Object)BigInteger.valueOf(18), (Object)BigInteger.valueOf(4))).longValue() == iResult);
     assertTrue(((BigDecimal)op.apply((Object)BigDecimal.valueOf(18), (Object)BigInteger.valueOf(4))).doubleValue() == dResult);
 
