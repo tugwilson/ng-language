@@ -1,4 +1,4 @@
-package uk.co.wilson.ng.runtime;
+package ng.lang;
 
 import ng.runtime.metaclass.MetaClass;
 
