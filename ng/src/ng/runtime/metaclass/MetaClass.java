@@ -44,16 +44,16 @@ public interface MetaClass {
   BinaryOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
 
   void modifyAnd(LogicalBinaryOperation modifiedAnd);
-  BinaryOperation getOriginalAnd();
+  LogicalBinaryOperation getOriginalAnd();
   BinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation);
 
   void modifyOr(LogicalBinaryOperation modifiedOr);
-  BinaryOperation getOriginalOr();
-  BinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation);
+  LogicalBinaryOperation getOriginalOr();
+  LogicalBinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation);
 
   void modifyXor(LogicalBinaryOperation modifiedXor);
-  BinaryOperation getOriginalXor();
-  BinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation);
+  LogicalBinaryOperation getOriginalXor();
+  LogicalBinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation);
 
   void modifyLeftShift(ShiftOperation modifiedLeftShift);
   BinaryOperation getOriginalLeftShift();

@@ -292,8 +292,8 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
     }
   }
 
-  public BinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
-  final BinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
+  public LogicalBinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedOr == null) {
@@ -306,8 +306,8 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
     }
   }
 
-  public BinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
-  final BinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
+  public LogicalBinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedXor == null) {

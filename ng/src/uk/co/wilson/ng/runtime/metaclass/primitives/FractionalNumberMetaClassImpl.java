@@ -50,7 +50,7 @@ public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
     this.modifiedAnd = modifiedAnd;
   }
 
-  public BinaryOperation getOriginalAnd() {
+  public LogicalBinaryOperation getOriginalAnd() {
     return BinaryLogicalOperationNoopImpl.instance;
   }
 
@@ -58,7 +58,7 @@ public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
     this.modifiedOr = modifiedOr;
   }
 
-  public BinaryOperation getOriginalOr() {
+  public LogicalBinaryOperation getOriginalOr() {
     return BinaryLogicalOperationNoopImpl.instance;
   }
 
@@ -66,7 +66,7 @@ public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
     this.modifiedXor = modifiedXor;
   }
 
-  public BinaryOperation getOriginalXor() {
+  public LogicalBinaryOperation getOriginalXor() {
     return BinaryLogicalOperationNoopImpl.instance;
   }
 

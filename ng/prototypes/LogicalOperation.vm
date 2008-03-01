@@ -1,0 +1,1178 @@
+package uk.co.wilson.ng.runtime.threadcontext;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
+import ng.lang.NgRuntimeException;
+import ng.runtime.metaclass.MetaClass;
+import ng.runtime.metaclass.util.PrimitiveMetaClasses;
+import ng.runtime.threadcontext.ExtendedThreadContext;
+import ng.runtime.threadcontext.NotPerformed;
+
+public class ${Op} extends BaseBinaryLogicalOperationImpl {
+  public ${Op}(final ExtendedThreadContext tc) {
+    super(tc);
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final Object rhs) {
+  final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} one of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
+  final Object result = rhsMetaClass.${op}(this).doReverseApply(this.tc, lhs, rhs);
+ 
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} one of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
+  final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhsMetaClass, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} one of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final char rhs) {
+    final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} a char" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final byte rhs) {
+    final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} a byte" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final short rhs) {
+    final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} a short" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final int rhs) {
+    final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} a int" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final long rhs) {
+    final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} a long" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final float rhs) {
+    final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} a float" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final double rhs) {
+    final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} a double" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final BigInteger rhs) {
+    final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} a BigInteger" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final MetaClass lhsMetaClass, final Object lhs, final BigDecimal rhs) {
+    final Object result = lhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a value of type " + lhs.getClass().getName() + "${verb} a BigDecimal" );
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result = rhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a char and a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result = rhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a byte and a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result = rhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a short and a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result = rhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a int and a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result = rhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a long and a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result = rhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a float and a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result = rhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a double and a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result = rhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a BigInteger and a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final MetaClass rhsMetaClass, final Object rhs) {
+    final Object result = rhsMetaClass.${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Cannot and a BigDecimal and a value of type " + rhs.getClass().getName());
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final BigDecimal rhs) {
+    final Object result = PrimitiveMetaClasses.getCharMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a char and a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final BigInteger rhs) {
+    final Object result = PrimitiveMetaClasses.getCharMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a char and a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final byte rhs) {
+    final Object result = PrimitiveMetaClasses.getCharMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a char and a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final char rhs) {
+    final Object result = PrimitiveMetaClasses.getCharMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a char and a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final double rhs) {
+    final Object result = PrimitiveMetaClasses.getCharMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a char and a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final float rhs) {
+    final Object result = PrimitiveMetaClasses.getCharMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a char and a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final int rhs) {
+    final Object result = PrimitiveMetaClasses.getCharMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a char and an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final long rhs) {
+    final Object result = PrimitiveMetaClasses.getCharMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a char and a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final char lhs, final short rhs) {
+    final Object result = PrimitiveMetaClasses.getCharMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a char and a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final BigDecimal rhs) {
+    final Object result = PrimitiveMetaClasses.getByteMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a byte and a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final BigInteger rhs) {
+    final Object result = PrimitiveMetaClasses.getByteMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a byte and a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final byte rhs) {
+    final Object result = PrimitiveMetaClasses.getByteMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a byte and a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final char rhs) {
+    final Object result = PrimitiveMetaClasses.getByteMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a byte and a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final double rhs) {
+    final Object result = PrimitiveMetaClasses.getByteMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a byte and a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final float rhs) {
+    final Object result = PrimitiveMetaClasses.getByteMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a byte and a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final int rhs) {
+    final Object result = PrimitiveMetaClasses.getByteMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a byte and an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final long rhs) {
+    final Object result = PrimitiveMetaClasses.getByteMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a byte and a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final byte lhs, final short rhs) {
+    final Object result = PrimitiveMetaClasses.getByteMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a byte and a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final BigDecimal rhs) {
+    final Object result = PrimitiveMetaClasses.getShortMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a short and a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final BigInteger rhs) {
+    final Object result = PrimitiveMetaClasses.getShortMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a short and a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final byte rhs) {
+    final Object result = PrimitiveMetaClasses.getShortMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a short and a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final char rhs) {
+    final Object result = PrimitiveMetaClasses.getShortMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a short and a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final double rhs) {
+    final Object result = PrimitiveMetaClasses.getShortMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a short and a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final float rhs) {
+    final Object result = PrimitiveMetaClasses.getShortMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a short and a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final int rhs) {
+    final Object result = PrimitiveMetaClasses.getShortMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a short and an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final long rhs) {
+    final Object result = PrimitiveMetaClasses.getShortMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a short and a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final short lhs, final short rhs) {
+    final Object result = PrimitiveMetaClasses.getShortMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a short and a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final BigDecimal rhs) {
+    final Object result = PrimitiveMetaClasses.getIntMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} an int and a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final BigInteger rhs) {
+    final Object result = PrimitiveMetaClasses.getIntMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} an int and a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final byte rhs) {
+    final Object result = PrimitiveMetaClasses.getIntMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} an int and a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final char rhs) {
+    final Object result = PrimitiveMetaClasses.getIntMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} an int and a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final double rhs) {
+    final Object result = PrimitiveMetaClasses.getIntMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} an int and a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final float rhs) {
+    final Object result = PrimitiveMetaClasses.getIntMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} an int and a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final int rhs) {
+    final Object result = PrimitiveMetaClasses.getIntMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} an int and an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final long rhs) {
+    final Object result = PrimitiveMetaClasses.getIntMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} an int and a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final int lhs, final short rhs) {
+    final Object result = PrimitiveMetaClasses.getIntMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} an int and a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final BigDecimal rhs) {
+    final Object result = PrimitiveMetaClasses.getLongMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a long and a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final BigInteger rhs) {
+    final Object result = PrimitiveMetaClasses.getLongMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a long and a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final byte rhs) {
+    final Object result = PrimitiveMetaClasses.getLongMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a long and a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final char rhs) {
+    final Object result = PrimitiveMetaClasses.getLongMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a long and a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final double rhs) {
+    final Object result = PrimitiveMetaClasses.getLongMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a long and a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final float rhs) {
+    final Object result = PrimitiveMetaClasses.getLongMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a long and a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final int rhs) {
+    final Object result = PrimitiveMetaClasses.getLongMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a long and an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final long rhs) {
+    final Object result = PrimitiveMetaClasses.getLongMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a long and a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final long lhs, final short rhs) {
+    final Object result = PrimitiveMetaClasses.getLongMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a long and a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final BigDecimal rhs) {
+    final Object result = PrimitiveMetaClasses.getFloatMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a float and a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final BigInteger rhs) {
+    final Object result = PrimitiveMetaClasses.getFloatMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a float and a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final byte rhs) {
+    final Object result = PrimitiveMetaClasses.getFloatMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a float and a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final char rhs) {
+    final Object result = PrimitiveMetaClasses.getFloatMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a float and a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final double rhs) {
+    final Object result = PrimitiveMetaClasses.getFloatMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a float and a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final float rhs) {
+    final Object result = PrimitiveMetaClasses.getFloatMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a float and a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final int rhs) {
+    final Object result = PrimitiveMetaClasses.getFloatMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a float and an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final long rhs) {
+    final Object result = PrimitiveMetaClasses.getFloatMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a float and a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final float lhs, final short rhs) {
+    final Object result = PrimitiveMetaClasses.getFloatMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a float and a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final BigDecimal rhs) {
+    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a double and a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final BigInteger rhs) {
+    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a double and a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final byte rhs) {
+    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a double and a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final char rhs) {
+    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a double and a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final double rhs) {
+    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a double and a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final float rhs) {
+    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a double and a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final int rhs) {
+    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a double and an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final long rhs) {
+    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a double and a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final double lhs, final short rhs) {
+    final Object result = PrimitiveMetaClasses.getDoubleMetaClass().${op}(this).doApply(this.tc, tc.wrap(lhs), rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a double and a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final BigDecimal rhs) {
+    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigInteger and a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final BigInteger rhs) {
+    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigInteger and a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final byte rhs) {
+    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigInteger and a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final char rhs) {
+    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigInteger and a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final double rhs) {
+    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigInteger and a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final float rhs) {
+    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigInteger and a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final int rhs) {
+    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigInteger and an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final long rhs) {
+    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigInteger and a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigInteger lhs, final short rhs) {
+    final Object result = PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigInteger and a short");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final BigDecimal rhs) {
+    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}(this).doApply(this.tc, (Object)lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a BigDecimal and a BigDecimal");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final BigInteger rhs) {
+    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}(this).doApply(this.tc, (Object)lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("It is not possible to ${verb} a BigDecimal and a BigInteger");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final byte rhs) {
+    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigDecimal and a byte");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final char rhs) {
+    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigDecimal and a char");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final double rhs) {
+    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigDecimal and a double");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final float rhs) {
+    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigDecimal and a float");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final int rhs) {
+    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigDecimal and an int");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final long rhs) {
+    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigDecimal and a long");
+    } else {
+      return result;
+    }
+  }
+
+  public Object apply(final BigDecimal lhs, final short rhs) {
+    final Object result = PrimitiveMetaClasses.getBigDecimalMetaClass().${op}(this).doApply(this.tc, lhs, rhs);
+
+    if (result == ExtendedThreadContext.NOT_PERFORMED) {
+      throw new NgRuntimeException("Default behaviour has been changed and now it is not possible to ${verb} a BigDecimal and a short");
+    } else {
+      return result;
+    }
+  }
+  
+  public int intApply(char lhs, char rhs) throws NotPerformed {
+	return PrimitiveMetaClasses.getCharMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(char lhs, byte rhs) throws NotPerformed {
+	return PrimitiveMetaClasses.getCharMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(char lhs, short rhs) throws NotPerformed {
+	return PrimitiveMetaClasses.getCharMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+ }
+  
+  public int intApply(char lhs, int rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getCharMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public long longApply(char lhs, long rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getCharMetaClass().${op}(this).doLongApply(this.tc, lhs, rhs);
+  }
+  
+  public BigInteger bigIntegerApply(char lhs, BigInteger rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getCharMetaClass().${op}(this).doBigIntegerApply(this.tc, lhs, rhs);
+  }
+
+  public int intApply(byte lhs, char rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getByteMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(byte lhs, byte rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getByteMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(byte lhs, short rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getByteMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(byte lhs, int rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getByteMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public long longApply(byte lhs, long rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getByteMetaClass().${op}(this).doLongApply(this.tc, lhs, rhs);
+  }
+
+  public BigInteger bigIntegerApply(byte lhs, BigInteger rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getByteMetaClass().${op}(this).doBigIntegerApply(this.tc, lhs, rhs);
+  }
+
+  public int intApply(short lhs, char rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getShortMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(short lhs, byte rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getShortMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(short lhs, short rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getShortMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(short lhs, int rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getShortMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public long longApply(short lhs, long rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getShortMetaClass().${op}(this).doLongApply(this.tc, lhs, rhs);
+  }
+
+  public BigInteger bigIntegerApply(short lhs, BigInteger rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getShortMetaClass().${op}(this).doBigIntegerApply(this.tc, lhs, rhs);
+  }
+
+  public int intApply(int lhs, char rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getIntMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(int lhs, byte rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getIntMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(int lhs, short rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getIntMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public int intApply(int lhs, int rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getIntMetaClass().${op}(this).doIntApply(this.tc, lhs, rhs);
+  }
+  
+  public long longApply(int lhs, long rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getIntMetaClass().${op}(this).doLongApply(this.tc, lhs, rhs);
+  }
+
+  public BigInteger bigIntegerApply(int lhs, BigInteger rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getIntMetaClass().${op}(this).doBigIntegerApply(this.tc, lhs, rhs);
+  }
+
+  public long longApply(long lhs, char rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getLongMetaClass().${op}(this).doLongApply(this.tc, lhs, rhs);
+  }
+  
+  public long longApply(long lhs, byte rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getLongMetaClass().${op}(this).doLongApply(this.tc, lhs, rhs);
+  }
+  
+  public long longApply(long lhs, short rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getLongMetaClass().${op}(this).doLongApply(this.tc, lhs, rhs);
+  }
+  
+  public long longApply(long lhs, int rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getLongMetaClass().${op}(this).doLongApply(this.tc, lhs, rhs);
+  }
+  
+  public long longApply(long lhs, long rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getLongMetaClass().${op}(this).doLongApply(this.tc, lhs, rhs);
+  }
+  
+
+  public BigInteger bigIntegerApply(BigInteger lhs, char rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doBigIntegerApply(this.tc, lhs, rhs);
+  }
+  
+  public BigInteger bigIntegerApply(BigInteger lhs, byte rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doBigIntegerApply(this.tc, lhs, rhs);
+  }
+  
+  public BigInteger bigIntegerApply(BigInteger lhs, short rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doBigIntegerApply(this.tc, lhs, rhs);
+  }
+  
+  public BigInteger bigIntegerApply(BigInteger lhs, int rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doBigIntegerApply(this.tc, lhs, rhs);
+  }
+  
+  public BigInteger bigIntegerApply(BigInteger lhs, long rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doBigIntegerApply(this.tc, lhs, rhs);
+  }
+
+  public BigInteger bigIntegerApply(BigInteger lhs, BigInteger rhs) throws NotPerformed {
+    return PrimitiveMetaClasses.getBigIntegerMetaClass().${op}(this).doBigIntegerApply(this.tc, lhs, rhs);
+  }
+}
+

@@ -27,6 +27,9 @@ public class Generate {
         new String[]{"LeftShift", "leftShift", "shift left", "ShiftOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "LeftShift.java"},
         new String[]{"RightShift", "rightShift", "shift right", "ShiftOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "RightShift.java"},
         new String[]{"UnsignedRightShift", "unsignedRightShift", "unsigned shift rught", "ShiftOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "UnsignedRightShift.java"},
+        new String[]{"And", "and", "and", "LogicalOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "And.java"},
+        new String[]{"Or", "or", "or", "LogicalOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "Or.java"},
+        new String[]{"Xor", "xor", "xor", "LogicalOperation.vm", "uk/co/wilson/ng/runtime/threadcontext", "Xor.java"},
     };
     
     Velocity.init();

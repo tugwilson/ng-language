@@ -31,7 +31,7 @@ import ng.runtime.threadcontext.NotPerformed;
  */
 public class Or extends BaseBinaryLogicalOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.or().apply(tc.unwrapToInt(lhs), rhs);
+    return tc.or().apply(tc.unwrapToShort(lhs), rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {

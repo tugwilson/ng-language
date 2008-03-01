@@ -2,13 +2,15 @@ package ng.runtime.threadcontext;
 
 import java.math.BigInteger;
 
+import ng.runtime.metaclass.BaseLogicalBinaryOperation;
+
 
 
 /**
  * @author John
  *
  */
-public interface BinaryLogicalOperation extends BinaryIntegralOperation {
+public interface BinaryLogicalOperation extends BaseLogicalBinaryOperation, BinaryIntegralOperation {
   long longApply(char lhs, long rhs) throws NotPerformed;
   BigInteger bigIntegerApply(char lhs, BigInteger rhs) throws NotPerformed;
 
