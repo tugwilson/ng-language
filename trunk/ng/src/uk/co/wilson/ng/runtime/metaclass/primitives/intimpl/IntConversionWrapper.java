@@ -2,7 +2,6 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.intimpl;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.NgInt;
 import ng.runtime.metaclass.Conversion;
 import ng.runtime.metaclass.primitives.intimpl.IntConversion;
 import ng.runtime.threadcontext.ExtendedThreadContext;
@@ -42,42 +41,42 @@ public class IntConversionWrapper extends ConversionWrapper implements IntConver
   }
 
   public BigDecimal doAsBigDecimal(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return doAsBigDecimal(tc, NgInt.valueOf(value));
+    return doAsBigDecimal(tc, tc.wrap(value));
   }
 
   public BigInteger doAsBigInteger(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return doAsBigInteger(tc, NgInt.valueOf(value));
+    return doAsBigInteger(tc, tc.wrap(value));
   }
 
   public boolean doAsBoolean(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return doAsBoolean(tc, NgInt.valueOf(value));
+    return doAsBoolean(tc, tc.wrap(value));
   }
 
   public char doAsChar(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return doAsChar(tc, NgInt.valueOf(value));
+    return doAsChar(tc, tc.wrap(value));
   }
 
   public byte doAsByte(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return doAsByte(tc, NgInt.valueOf(value));
+    return doAsByte(tc, tc.wrap(value));
   }
 
   public double doAsDouble(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return doAsDouble(tc, NgInt.valueOf(value));
+    return doAsDouble(tc, tc.wrap(value));
   }
 
   public float doAsFloat(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return doAsFloat(tc, NgInt.valueOf(value));
+    return doAsFloat(tc, tc.wrap(value));
   }
 
   public long doAsLong(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return doAsLong(tc, NgInt.valueOf(value));
+    return doAsLong(tc, tc.wrap(value));
   }
 
   public short doAsShort(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return doAsShort(tc, NgInt.valueOf(value));
+    return doAsShort(tc, tc.wrap(value));
   }
 
   public String doAsString(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return doAsString(tc, NgInt.valueOf(value));
+    return doAsString(tc, tc.wrap(value));
   }
 }
