@@ -291,8 +291,8 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public BinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
-  final BinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
+  public LogicalBinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedOr == null) {
@@ -305,8 +305,8 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public BinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
-  final BinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
+  public LogicalBinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedXor == null) {

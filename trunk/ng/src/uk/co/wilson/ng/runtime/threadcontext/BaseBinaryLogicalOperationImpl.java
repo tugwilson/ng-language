@@ -4,7 +4,7 @@ package uk.co.wilson.ng.runtime.threadcontext;
 import java.util.Map;
 import java.util.Stack;
 
-import ng.runtime.metaclass.BinaryOperation;
+import ng.runtime.metaclass.LogicalBinaryOperation;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.charimpl.CharBinaryLogicalOperation;
@@ -38,17 +38,17 @@ public abstract class BaseBinaryLogicalOperationImpl extends BaseBinaryOperation
 
   private LongBinaryLogicalOperation longCategoryOperation = null;
 
-  private BinaryLogicalOperation floatCategoryOperation = null;
+  private LogicalBinaryOperation floatCategoryOperation = null;
 
-  private BinaryLogicalOperation doubleCategoryOperation = null;
+  private LogicalBinaryOperation doubleCategoryOperation = null;
 
   private BigIntegerBinaryLogicalOperation bigIntegerCategoryOperation = null;
 
-  private BinaryLogicalOperation bigDecimalCategoryOperation = null;
+  private LogicalBinaryOperation bigDecimalCategoryOperation = null;
 
-  private Map<Object, BinaryOperation> categoryBinaryOperationMap = null;
+  private Map<Object, LogicalBinaryOperation> categoryBinaryOperationMap = null;
 
-  private final Stack<Map<Object, BinaryOperation>> categoryBinaryOperationMapStack = new Stack<Map<Object, BinaryOperation>>();
+  private final Stack<Map<Object, LogicalBinaryOperation>> categoryBinaryOperationMapStack = new Stack<Map<Object, LogicalBinaryOperation>>();
 
   public CharBinaryLogicalOperation getCharCategoryOperation() {
     return this.charCategoryOperation;
@@ -90,19 +90,19 @@ public abstract class BaseBinaryLogicalOperationImpl extends BaseBinaryOperation
     this.longCategoryOperation = longCategoryOperation;
   }
 
-  public BinaryLogicalOperation getFloatCategoryOperation() {
+  public LogicalBinaryOperation getFloatCategoryOperation() {
     return this.floatCategoryOperation;
   }
 
-  public void setFloatCategoryOperation(final BinaryLogicalOperation floatCategoryOperation) {
+  public void setFloatCategoryOperation(final LogicalBinaryOperation floatCategoryOperation) {
     this.floatCategoryOperation = floatCategoryOperation;
   }
 
-  public BinaryLogicalOperation getDoubleCategoryOperation() {
+  public LogicalBinaryOperation getDoubleCategoryOperation() {
     return this.doubleCategoryOperation;
   }
 
-  public void setDoubleCategoryOperation(final BinaryLogicalOperation doubleCategoryOperation) {
+  public void setDoubleCategoryOperation(final LogicalBinaryOperation doubleCategoryOperation) {
     this.doubleCategoryOperation = doubleCategoryOperation;
   }
 
@@ -114,19 +114,19 @@ public abstract class BaseBinaryLogicalOperationImpl extends BaseBinaryOperation
     this.bigIntegerCategoryOperation = bigIntegerCategoryOperation;
   }
 
-  public BinaryLogicalOperation getBigDecimalCategoryOperation() {
+  public LogicalBinaryOperation getBigDecimalCategoryOperation() {
     return this.bigDecimalCategoryOperation;
   }
 
-  public void setBigDecimalCategoryOperation(final BinaryLogicalOperation bigDecimalCategoryOperation) {
+  public void setBigDecimalCategoryOperation(final LogicalBinaryOperation bigDecimalCategoryOperation) {
     this.bigDecimalCategoryOperation = bigDecimalCategoryOperation;
   }
 
-  public Map<Object, BinaryOperation> getCategoryBinaryOperationMap() {
+  public Map<Object, LogicalBinaryOperation> getCategoryBinaryOperationMap() {
     return this.categoryBinaryOperationMap;
   }
 
-  public void setCategoryBinaryOperationMap(final Map<Object, BinaryOperation> categoryBinaryOperationMap) {
+  public void setCategoryBinaryOperationMap(final Map<Object, LogicalBinaryOperation> categoryBinaryOperationMap) {
     this.categoryBinaryOperationMap = categoryBinaryOperationMap;
   }
 

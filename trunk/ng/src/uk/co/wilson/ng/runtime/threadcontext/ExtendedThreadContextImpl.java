@@ -261,6 +261,12 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
 
   private final BinaryArithmeticOperation power = new Power(this);
   
+  private final BinaryLogicalOperation and = new And(this);
+  
+  private final BinaryLogicalOperation or = new Or(this);
+  
+  private final BinaryLogicalOperation xor = new Xor(this);
+  
   private final BinaryShiftOperation leftShift = new LeftShift(this);
   
   private final BinaryShiftOperation rightShift = new RightShift(this);
@@ -751,12 +757,19 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   }
 
   /* (non-JavaDoc)
+   * @see ng.runtime.threadcontext.ThreadContext#and()
+   */
+  @Override
+  public BinaryLogicalOperation and() {
+    return this.and;
+  }
+
+  /* (non-JavaDoc)
    * @see ng.runtime.threadcontext.ThreadContext#or()
    */
   @Override
   public BinaryLogicalOperation or() {
-    // TODO Auto-generated method stub
-    return null;
+    return this.or;
   }
 
   /* (non-JavaDoc)
@@ -764,8 +777,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
    */
   @Override
   public BinaryLogicalOperation xor() {
-    // TODO Auto-generated method stub
-    return null;
+     return this.xor;
   }
 
   /* (non-JavaDoc)
@@ -790,15 +802,6 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   @Override
   public BinaryShiftOperation unsignedRightShift() {
     return this.unsignedRightShift;
-  }
-
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#and()
-   */
-  @Override
-  public BinaryLogicalOperation and() {
-    // TODO Auto-generated method stub
-    return null;
   }
 
   /* (non-JavaDoc)

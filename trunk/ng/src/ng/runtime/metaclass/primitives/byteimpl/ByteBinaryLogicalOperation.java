@@ -2,7 +2,7 @@ package ng.runtime.metaclass.primitives.byteimpl;
 
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BinaryOperation;
+import ng.runtime.metaclass.LogicalBinaryOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
@@ -29,7 +29,7 @@ import ng.runtime.threadcontext.NotPerformed;
  * @author John
  *
  */
-public interface ByteBinaryLogicalOperation extends BinaryOperation, ByteBinaryOperation {
+public interface ByteBinaryLogicalOperation extends LogicalBinaryOperation, ByteBinaryOperation {
   int doIntApply(ExtendedThreadContext tc, byte lhs, char rhs) throws NotPerformed;
   int doIntApply(ExtendedThreadContext tc, byte lhs, byte rhs) throws NotPerformed;
   int doIntApply(ExtendedThreadContext tc, byte lhs, short rhs) throws NotPerformed;

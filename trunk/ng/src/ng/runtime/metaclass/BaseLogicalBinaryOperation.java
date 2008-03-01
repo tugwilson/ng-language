@@ -4,12 +4,10 @@ import java.util.Map;
 
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryLogicalOperation;
-import ng.runtime.metaclass.primitives.charimpl.CharBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.charimpl.CharBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.longimpl.LongBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.shortimpl.ShortBinaryLogicalOperation;
-import ng.runtime.threadcontext.BinaryLogicalOperation;
 
 
 /*
@@ -37,7 +35,7 @@ import ng.runtime.threadcontext.BinaryLogicalOperation;
  */
 public interface BaseLogicalBinaryOperation {
   CharBinaryLogicalOperation getCharCategoryOperation();
-  void setCharCategoryOperation(CharBinaryArithmeticOperation charCategoryOperation);
+  void setCharCategoryOperation(CharBinaryLogicalOperation charCategoryOperation);
 
   ByteBinaryLogicalOperation getByteCategoryOperation();
   void setByteCategoryOperation(ByteBinaryLogicalOperation byteCategoryOperation);
@@ -52,16 +50,16 @@ public interface BaseLogicalBinaryOperation {
   void setLongCategoryOperation(LongBinaryLogicalOperation longCategoryOperation);
 
   LogicalBinaryOperation getFloatCategoryOperation();
-  void setFloatCategoryOperation(BinaryLogicalOperation floatCategoryOperation);
+  void setFloatCategoryOperation(LogicalBinaryOperation floatCategoryOperation);
 
   LogicalBinaryOperation getDoubleCategoryOperation();
-  void setDoubleCategoryOperation(BinaryLogicalOperation doubleCategoryOperation);
+  void setDoubleCategoryOperation(LogicalBinaryOperation doubleCategoryOperation);
 
   BigIntegerBinaryLogicalOperation getBigIntegerCategoryOperation();
   void setBigIntegerCategoryOperation(BigIntegerBinaryLogicalOperation bigIntegerCategoryOperation);
 
   LogicalBinaryOperation getBigDecimalCategoryOperation();
-  void setBigDecimalCategoryOperation(BinaryLogicalOperation bigDecimalCategoryOperation);
+  void setBigDecimalCategoryOperation(LogicalBinaryOperation bigDecimalCategoryOperation);
 
   Map<Object, LogicalBinaryOperation> getCategoryBinaryOperationMap();
   void setCategoryBinaryOperationMap(Map<Object, LogicalBinaryOperation> categoryBinaryOperationMap);

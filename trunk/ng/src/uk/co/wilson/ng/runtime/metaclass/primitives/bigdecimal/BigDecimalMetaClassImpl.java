@@ -293,8 +293,8 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public BinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
-  final BinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
+  public LogicalBinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedOr == null) {
@@ -307,8 +307,8 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public BinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
-  final BinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
+  public LogicalBinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedXor == null) {
