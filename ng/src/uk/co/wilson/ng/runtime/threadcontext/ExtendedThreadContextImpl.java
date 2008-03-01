@@ -13,6 +13,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import ng.lang.NgObject;
 import ng.lang.NgRuntimeException;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.*;
@@ -23,7 +24,6 @@ import uk.co.wilson.ng.runtime.NgDouble;
 import uk.co.wilson.ng.runtime.NgFloat;
 import uk.co.wilson.ng.runtime.NgInt;
 import uk.co.wilson.ng.runtime.NgLong;
-import uk.co.wilson.ng.runtime.NgObject;
 import uk.co.wilson.ng.runtime.NgShort;
 import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal.BigDecimalMetaClassImpl;

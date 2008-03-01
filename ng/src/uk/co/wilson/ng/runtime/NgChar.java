@@ -1,5 +1,6 @@
 package uk.co.wilson.ng.runtime;
 
+import ng.lang.NgObject;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.primitives.charimpl.CharMetaClass;
 import ng.runtime.metaclass.util.PrimitiveMetaClasses;
