@@ -24,7 +24,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private volatile CharBinaryArithmeticOperation modifiedModulo = null;
   private volatile CharBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile CharBinaryArithmeticOperation modifiedPower = null;
-  
+
   private volatile CharBinaryLogicalOperation modifiedAnd = null;
   private volatile CharBinaryLogicalOperation modifiedOr = null;
   private volatile CharBinaryLogicalOperation modifiedXor = null;
@@ -50,7 +50,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private final CharBinaryArithmeticOperation modulo = new Modulo();
   private final CharBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final CharBinaryArithmeticOperation power = new Power();
-  
+
   private final CharBinaryLogicalOperation and = new And();
   private final CharBinaryLogicalOperation or = new Or();
   private final CharBinaryLogicalOperation xor = new Xor();
@@ -309,11 +309,11 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     }
   }
 
-  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
-    modifyAnd(fixOperationType(modifiedAnd)); 
+  public void modifyAnd(final LogicalBinaryOperation modifiedAnd) {
+    modifyAnd(fixOperationType(modifiedAnd));
   }
 
-  public void modifyAnd(CharBinaryLogicalOperation modifiedAnd) {
+  public void modifyAnd(final CharBinaryLogicalOperation modifiedAnd) {
     this.modifiedAnd = modifiedAnd;
   }
 
@@ -321,7 +321,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.and;
   }
 
-  public CharBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public CharBinaryLogicalOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
@@ -335,11 +335,11 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     }
   }
 
-  public void modifyOr(LogicalBinaryOperation modifiedOr) {
-    modifyOr(fixOperationType(modifiedOr)); 
+  public void modifyOr(final LogicalBinaryOperation modifiedOr) {
+    modifyOr(fixOperationType(modifiedOr));
   }
 
-  public void modifyOr(CharBinaryLogicalOperation modifiedOr) {
+  public void modifyOr(final CharBinaryLogicalOperation modifiedOr) {
     this.modifiedOr = modifiedOr;
   }
 
@@ -347,7 +347,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.or;
   }
 
-  public CharBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public CharBinaryLogicalOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
@@ -361,11 +361,11 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     }
   }
 
-  public void modifyXor(LogicalBinaryOperation modifiedXor) {
-    modifyXor(fixOperationType(modifiedXor)); 
+  public void modifyXor(final LogicalBinaryOperation modifiedXor) {
+    modifyXor(fixOperationType(modifiedXor));
   }
 
-  public void modifyXor(CharBinaryLogicalOperation modifiedXor) {
+  public void modifyXor(final CharBinaryLogicalOperation modifiedXor) {
     this.modifiedXor = modifiedXor;
   }
 
@@ -373,7 +373,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.xor;
   }
 
-  public CharBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public CharBinaryLogicalOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
@@ -387,11 +387,11 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     }
   }
 
-  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
-    modifyLeftShift(fixOperationType(modifiedLeftShift)); 
+  public void modifyLeftShift(final ShiftOperation modifiedLeftShift) {
+    modifyLeftShift(fixOperationType(modifiedLeftShift));
   }
 
-  public void modifyLeftShift(CharShiftOperation modifiedLeftShift) {
+  public void modifyLeftShift(final CharShiftOperation modifiedLeftShift) {
     this.modifiedLeftShift = modifiedLeftShift;
   }
 
@@ -399,7 +399,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.leftShift;
   }
 
-  public CharShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  public CharShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
   final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
@@ -413,11 +413,11 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     }
   }
 
-  public void modifyRightShift(ShiftOperation modifiedRightShift) {
-    modifyRightShift(fixOperationType(modifiedRightShift)); 
+  public void modifyRightShift(final ShiftOperation modifiedRightShift) {
+    modifyRightShift(fixOperationType(modifiedRightShift));
   }
 
-  public void modifyRightShift(CharShiftOperation modifiedRightShift) {
+  public void modifyRightShift(final CharShiftOperation modifiedRightShift) {
     this.modifiedRightShift = modifiedRightShift;
   }
 
@@ -425,7 +425,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.rightShift;
   }
 
-  public CharShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  public CharShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
   final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
@@ -439,11 +439,11 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     }
   }
 
-  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
-    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift)); 
+  public void modifyUnsignedRightShift(final ShiftOperation modifiedUnsignedRightShift) {
+    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift));
   }
 
-  public void modifyUnsignedRightShift(CharShiftOperation modifiedUnsignedRightShift) {
+  public void modifyUnsignedRightShift(final CharShiftOperation modifiedUnsignedRightShift) {
     this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
   }
 
@@ -451,7 +451,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
     return this.unsignedRightShift;
   }
 
-  public CharShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  public CharShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
   final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {

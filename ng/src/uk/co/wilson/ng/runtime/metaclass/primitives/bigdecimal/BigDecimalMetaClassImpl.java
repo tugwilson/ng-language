@@ -279,7 +279,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public BinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public BinaryOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final BinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -293,7 +293,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public LogicalBinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -307,7 +307,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public LogicalBinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -321,7 +321,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public ShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -335,7 +335,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public ShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -349,7 +349,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public ShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {

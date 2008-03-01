@@ -23,7 +23,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   private volatile LongBinaryArithmeticOperation modifiedModulo = null;
   private volatile LongBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile LongBinaryArithmeticOperation modifiedPower = null;
-  
+
   private volatile LongBinaryLogicalOperation modifiedAnd = null;
   private volatile LongBinaryLogicalOperation modifiedOr = null;
   private volatile LongBinaryLogicalOperation modifiedXor = null;
@@ -49,7 +49,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   private final LongBinaryArithmeticOperation modulo = new Modulo();
   private final LongBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final LongBinaryArithmeticOperation power = new Power();
-  
+
   private final LongBinaryLogicalOperation and = new And();
   private final LongBinaryLogicalOperation or = new Or();
   private final LongBinaryLogicalOperation xor = new Xor();
@@ -308,11 +308,11 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     }
   }
 
-  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
-    modifyAnd(fixOperationType(modifiedAnd)); 
+  public void modifyAnd(final LogicalBinaryOperation modifiedAnd) {
+    modifyAnd(fixOperationType(modifiedAnd));
   }
 
-  public void modifyAnd(LongBinaryLogicalOperation modifiedAnd) {
+  public void modifyAnd(final LongBinaryLogicalOperation modifiedAnd) {
     this.modifiedAnd = modifiedAnd;
   }
 
@@ -320,7 +320,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.and;
   }
 
-  public LongBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LongBinaryLogicalOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final LongBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
@@ -334,11 +334,11 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     }
   }
 
-  public void modifyOr(LogicalBinaryOperation modifiedOr) {
-    modifyOr(fixOperationType(modifiedOr)); 
+  public void modifyOr(final LogicalBinaryOperation modifiedOr) {
+    modifyOr(fixOperationType(modifiedOr));
   }
 
-  public void modifyOr(LongBinaryLogicalOperation modifiedOr) {
+  public void modifyOr(final LongBinaryLogicalOperation modifiedOr) {
     this.modifiedOr = modifiedOr;
   }
 
@@ -346,7 +346,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.or;
   }
 
-  public LongBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LongBinaryLogicalOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final LongBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
@@ -360,11 +360,11 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     }
   }
 
-  public void modifyXor(LogicalBinaryOperation modifiedXor) {
-    modifyXor(fixOperationType(modifiedXor)); 
+  public void modifyXor(final LogicalBinaryOperation modifiedXor) {
+    modifyXor(fixOperationType(modifiedXor));
   }
 
-  public void modifyXor(LongBinaryLogicalOperation modifiedXor) {
+  public void modifyXor(final LongBinaryLogicalOperation modifiedXor) {
     this.modifiedXor = modifiedXor;
   }
 
@@ -372,7 +372,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.xor;
   }
 
-  public LongBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LongBinaryLogicalOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final LongBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
@@ -386,11 +386,11 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     }
   }
 
-  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
-    modifyLeftShift(fixOperationType(modifiedLeftShift)); 
+  public void modifyLeftShift(final ShiftOperation modifiedLeftShift) {
+    modifyLeftShift(fixOperationType(modifiedLeftShift));
   }
 
-  public void modifyLeftShift(LongShiftOperation modifiedLeftShift) {
+  public void modifyLeftShift(final LongShiftOperation modifiedLeftShift) {
     this.modifiedLeftShift = modifiedLeftShift;
   }
 
@@ -398,7 +398,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.leftShift;
   }
 
-  public LongShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  public LongShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
   final LongShiftOperation categoryOperation = shiftOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
@@ -412,11 +412,11 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     }
   }
 
-  public void modifyRightShift(ShiftOperation modifiedRightShift) {
-    modifyRightShift(fixOperationType(modifiedRightShift)); 
+  public void modifyRightShift(final ShiftOperation modifiedRightShift) {
+    modifyRightShift(fixOperationType(modifiedRightShift));
   }
 
-  public void modifyRightShift(LongShiftOperation modifiedRightShift) {
+  public void modifyRightShift(final LongShiftOperation modifiedRightShift) {
     this.modifiedRightShift = modifiedRightShift;
   }
 
@@ -424,7 +424,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.rightShift;
   }
 
-  public LongShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  public LongShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
   final LongShiftOperation categoryOperation = shiftOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
@@ -438,11 +438,11 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     }
   }
 
-  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
-    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift)); 
+  public void modifyUnsignedRightShift(final ShiftOperation modifiedUnsignedRightShift) {
+    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift));
   }
 
-  public void modifyUnsignedRightShift(LongShiftOperation modifiedUnsignedRightShift) {
+  public void modifyUnsignedRightShift(final LongShiftOperation modifiedUnsignedRightShift) {
     this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
   }
 
@@ -450,7 +450,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
     return this.unsignedRightShift;
   }
 
-  public LongShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  public LongShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
   final LongShiftOperation categoryOperation = shiftOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {

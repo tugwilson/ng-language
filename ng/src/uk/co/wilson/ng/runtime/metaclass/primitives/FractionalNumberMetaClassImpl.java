@@ -31,7 +31,7 @@ import uk.co.wilson.ng.runtime.metaclass.ShiftOperationNoopImpl;
  *
  */
 public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
-  
+
   protected volatile LogicalBinaryOperation modifiedAnd = null;
   protected volatile LogicalBinaryOperation modifiedOr = null;
   protected volatile LogicalBinaryOperation modifiedXor = null;
@@ -42,11 +42,11 @@ public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
   /**
    * @param theClass
    */
-  protected FractionalNumberMetaClassImpl(Class<?> theClass) {
+  protected FractionalNumberMetaClassImpl(final Class<?> theClass) {
     super(theClass);
   }
 
-  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
+  public void modifyAnd(final LogicalBinaryOperation modifiedAnd) {
     this.modifiedAnd = modifiedAnd;
   }
 
@@ -54,7 +54,7 @@ public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
     return BinaryLogicalOperationNoopImpl.instance;
   }
 
-  public void modifyOr(LogicalBinaryOperation modifiedOr) {
+  public void modifyOr(final LogicalBinaryOperation modifiedOr) {
     this.modifiedOr = modifiedOr;
   }
 
@@ -62,7 +62,7 @@ public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
     return BinaryLogicalOperationNoopImpl.instance;
   }
 
-  public void modifyXor(LogicalBinaryOperation modifiedXor) {
+  public void modifyXor(final LogicalBinaryOperation modifiedXor) {
     this.modifiedXor = modifiedXor;
   }
 
@@ -70,7 +70,7 @@ public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
     return BinaryLogicalOperationNoopImpl.instance;
   }
 
-  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
+  public void modifyLeftShift(final ShiftOperation modifiedLeftShift) {
     this.modifiedLeftShift = modifiedLeftShift;
   }
 
@@ -78,7 +78,7 @@ public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
     return ShiftOperationNoopImpl.instance;
   }
 
-  public void modifyRightShift(ShiftOperation modifiedRightShift) {
+  public void modifyRightShift(final ShiftOperation modifiedRightShift) {
     this.modifiedRightShift = modifiedRightShift;
   }
 
@@ -86,7 +86,7 @@ public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
     return ShiftOperationNoopImpl.instance;
   }
 
-  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
+  public void modifyUnsignedRightShift(final ShiftOperation modifiedUnsignedRightShift) {
     this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
   }
 

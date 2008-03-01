@@ -277,7 +277,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public BinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public BinaryOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final BinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -291,7 +291,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public LogicalBinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -305,7 +305,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public LogicalBinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -319,7 +319,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public ShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -333,7 +333,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public ShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -347,7 +347,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public ShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {

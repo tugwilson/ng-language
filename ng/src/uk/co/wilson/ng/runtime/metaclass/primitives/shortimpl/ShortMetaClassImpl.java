@@ -23,7 +23,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   private volatile ShortBinaryArithmeticOperation modifiedModulo = null;
   private volatile ShortBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile ShortBinaryArithmeticOperation modifiedPower = null;
-  
+
   private volatile ShortBinaryLogicalOperation modifiedAnd = null;
   private volatile ShortBinaryLogicalOperation modifiedOr = null;
   private volatile ShortBinaryLogicalOperation modifiedXor = null;
@@ -49,7 +49,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
   private final ShortBinaryArithmeticOperation modulo = new Modulo();
   private final ShortBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final ShortBinaryArithmeticOperation power = new Power();
-  
+
   private final ShortBinaryLogicalOperation and = new And();
   private final ShortBinaryLogicalOperation or = new Or();
   private final ShortBinaryLogicalOperation xor = new Xor();
@@ -308,11 +308,11 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     }
   }
 
-  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
-    modifyAnd(fixOperationType(modifiedAnd)); 
+  public void modifyAnd(final LogicalBinaryOperation modifiedAnd) {
+    modifyAnd(fixOperationType(modifiedAnd));
   }
 
-  public void modifyAnd(ShortBinaryLogicalOperation modifiedAnd) {
+  public void modifyAnd(final ShortBinaryLogicalOperation modifiedAnd) {
     this.modifiedAnd = modifiedAnd;
   }
 
@@ -320,7 +320,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.and;
   }
 
-  public ShortBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public ShortBinaryLogicalOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final ShortBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getShortCategoryOperation();
 
     if (categoryOperation == null) {
@@ -334,11 +334,11 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     }
   }
 
-  public void modifyOr(LogicalBinaryOperation modifiedOr) {
-    modifyOr(fixOperationType(modifiedOr)); 
+  public void modifyOr(final LogicalBinaryOperation modifiedOr) {
+    modifyOr(fixOperationType(modifiedOr));
   }
 
-  public void modifyOr(ShortBinaryLogicalOperation modifiedOr) {
+  public void modifyOr(final ShortBinaryLogicalOperation modifiedOr) {
     this.modifiedOr = modifiedOr;
   }
 
@@ -346,7 +346,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.or;
   }
 
-  public ShortBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public ShortBinaryLogicalOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final ShortBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getShortCategoryOperation();
 
     if (categoryOperation == null) {
@@ -360,11 +360,11 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     }
   }
 
-  public void modifyXor(LogicalBinaryOperation modifiedXor) {
-    modifyXor(fixOperationType(modifiedXor)); 
+  public void modifyXor(final LogicalBinaryOperation modifiedXor) {
+    modifyXor(fixOperationType(modifiedXor));
   }
 
-  public void modifyXor(ShortBinaryLogicalOperation modifiedXor) {
+  public void modifyXor(final ShortBinaryLogicalOperation modifiedXor) {
     this.modifiedXor = modifiedXor;
   }
 
@@ -372,7 +372,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.xor;
   }
 
-  public ShortBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public ShortBinaryLogicalOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final ShortBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getShortCategoryOperation();
 
     if (categoryOperation == null) {
@@ -386,11 +386,11 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     }
   }
 
-  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
-    modifyLeftShift(fixOperationType(modifiedLeftShift)); 
+  public void modifyLeftShift(final ShiftOperation modifiedLeftShift) {
+    modifyLeftShift(fixOperationType(modifiedLeftShift));
   }
 
-  public void modifyLeftShift(ShortShiftOperation modifiedLeftShift) {
+  public void modifyLeftShift(final ShortShiftOperation modifiedLeftShift) {
     this.modifiedLeftShift = modifiedLeftShift;
   }
 
@@ -398,7 +398,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.leftShift;
   }
 
-  public ShortShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  public ShortShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
   final ShortShiftOperation categoryOperation = shiftOperation.getShortCategoryOperation();
 
     if (categoryOperation == null) {
@@ -412,11 +412,11 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     }
   }
 
-  public void modifyRightShift(ShiftOperation modifiedRightShift) {
-    modifyRightShift(fixOperationType(modifiedRightShift)); 
+  public void modifyRightShift(final ShiftOperation modifiedRightShift) {
+    modifyRightShift(fixOperationType(modifiedRightShift));
   }
 
-  public void modifyRightShift(ShortShiftOperation modifiedRightShift) {
+  public void modifyRightShift(final ShortShiftOperation modifiedRightShift) {
     this.modifiedRightShift = modifiedRightShift;
   }
 
@@ -424,7 +424,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.rightShift;
   }
 
-  public ShortShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  public ShortShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
   final ShortShiftOperation categoryOperation = shiftOperation.getShortCategoryOperation();
 
     if (categoryOperation == null) {
@@ -438,11 +438,11 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     }
   }
 
-  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
-    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift)); 
+  public void modifyUnsignedRightShift(final ShiftOperation modifiedUnsignedRightShift) {
+    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift));
   }
 
-  public void modifyUnsignedRightShift(ShortShiftOperation modifiedUnsignedRightShift) {
+  public void modifyUnsignedRightShift(final ShortShiftOperation modifiedUnsignedRightShift) {
     this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
   }
 
@@ -450,7 +450,7 @@ public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass 
     return this.unsignedRightShift;
   }
 
-  public ShortShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  public ShortShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
   final ShortShiftOperation categoryOperation = shiftOperation.getShortCategoryOperation();
 
     if (categoryOperation == null) {

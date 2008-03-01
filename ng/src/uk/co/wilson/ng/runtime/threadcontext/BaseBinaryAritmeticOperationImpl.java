@@ -3,7 +3,7 @@ package uk.co.wilson.ng.runtime.threadcontext;
 import java.util.Map;
 import java.util.Stack;
 
-import ng.runtime.metaclass.*;
+import ng.runtime.metaclass.BinaryOperation;
 import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryArithmeticOperation;

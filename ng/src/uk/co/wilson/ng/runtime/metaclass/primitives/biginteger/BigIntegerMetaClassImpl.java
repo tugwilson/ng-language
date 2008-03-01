@@ -25,7 +25,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   private volatile BigIntegerBinaryArithmeticOperation modifiedModulo = null;
   private volatile BigIntegerBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile BigIntegerBinaryArithmeticOperation modifiedPower = null;
-  
+
   private volatile BigIntegerBinaryLogicalOperation modifiedAnd = null;
   private volatile BigIntegerBinaryLogicalOperation modifiedOr = null;
   private volatile BigIntegerBinaryLogicalOperation modifiedXor = null;
@@ -51,7 +51,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   private final BigIntegerBinaryArithmeticOperation modulo = new Modulo();
   private final BigIntegerBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final BigIntegerBinaryArithmeticOperation power = new Power();
-  
+
   private final BigIntegerBinaryLogicalOperation and = new And();
   private final BigIntegerBinaryLogicalOperation or = new Or();
   private final BigIntegerBinaryLogicalOperation xor = new Xor();
@@ -310,11 +310,11 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
-  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
-    modifyAnd(fixOperationType(modifiedAnd)); 
+  public void modifyAnd(final LogicalBinaryOperation modifiedAnd) {
+    modifyAnd(fixOperationType(modifiedAnd));
   }
 
-  public void modifyAnd(BigIntegerBinaryLogicalOperation modifiedAnd) {
+  public void modifyAnd(final BigIntegerBinaryLogicalOperation modifiedAnd) {
     this.modifiedAnd = modifiedAnd;
   }
 
@@ -322,7 +322,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.and;
   }
 
-  public BigIntegerBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public BigIntegerBinaryLogicalOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final BigIntegerBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
@@ -336,11 +336,11 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
-  public void modifyOr(LogicalBinaryOperation modifiedOr) {
-    modifyOr(fixOperationType(modifiedOr)); 
+  public void modifyOr(final LogicalBinaryOperation modifiedOr) {
+    modifyOr(fixOperationType(modifiedOr));
   }
 
-  public void modifyOr(BigIntegerBinaryLogicalOperation modifiedOr) {
+  public void modifyOr(final BigIntegerBinaryLogicalOperation modifiedOr) {
     this.modifiedOr = modifiedOr;
   }
 
@@ -348,7 +348,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.or;
   }
 
-  public BigIntegerBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public BigIntegerBinaryLogicalOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final BigIntegerBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
@@ -362,11 +362,11 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
-  public void modifyXor(LogicalBinaryOperation modifiedXor) {
-    modifyXor(fixOperationType(modifiedXor)); 
+  public void modifyXor(final LogicalBinaryOperation modifiedXor) {
+    modifyXor(fixOperationType(modifiedXor));
   }
 
-  public void modifyXor(BigIntegerBinaryLogicalOperation modifiedXor) {
+  public void modifyXor(final BigIntegerBinaryLogicalOperation modifiedXor) {
     this.modifiedXor = modifiedXor;
   }
 
@@ -374,7 +374,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.xor;
   }
 
-  public BigIntegerBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public BigIntegerBinaryLogicalOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final BigIntegerBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
@@ -388,11 +388,11 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
-  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
-    modifyLeftShift(fixOperationType(modifiedLeftShift)); 
+  public void modifyLeftShift(final ShiftOperation modifiedLeftShift) {
+    modifyLeftShift(fixOperationType(modifiedLeftShift));
   }
 
-  public void modifyLeftShift(BigIntegerShiftOperation modifiedLeftShift) {
+  public void modifyLeftShift(final BigIntegerShiftOperation modifiedLeftShift) {
     this.modifiedLeftShift = modifiedLeftShift;
   }
 
@@ -400,7 +400,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.leftShift;
   }
 
-  public BigIntegerShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  public BigIntegerShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
   final BigIntegerShiftOperation categoryOperation = shiftOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
@@ -414,11 +414,11 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
-  public void modifyRightShift(ShiftOperation modifiedRightShift) {
-    modifyRightShift(fixOperationType(modifiedRightShift)); 
+  public void modifyRightShift(final ShiftOperation modifiedRightShift) {
+    modifyRightShift(fixOperationType(modifiedRightShift));
   }
 
-  public void modifyRightShift(BigIntegerShiftOperation modifiedRightShift) {
+  public void modifyRightShift(final BigIntegerShiftOperation modifiedRightShift) {
     this.modifiedRightShift = modifiedRightShift;
   }
 
@@ -426,7 +426,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.rightShift;
   }
 
-  public BigIntegerShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  public BigIntegerShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
   final BigIntegerShiftOperation categoryOperation = shiftOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
@@ -440,11 +440,11 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     }
   }
 
-  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
-    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift)); 
+  public void modifyUnsignedRightShift(final ShiftOperation modifiedUnsignedRightShift) {
+    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift));
   }
 
-  public void modifyUnsignedRightShift(BigIntegerShiftOperation modifiedUnsignedRightShift) {
+  public void modifyUnsignedRightShift(final BigIntegerShiftOperation modifiedUnsignedRightShift) {
     this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
   }
 
@@ -452,7 +452,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
     return this.unsignedRightShift;
   }
 
-  public BigIntegerShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  public BigIntegerShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
   final BigIntegerShiftOperation categoryOperation = shiftOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {

@@ -39,147 +39,147 @@ public class BinaryLogicalOperationNoopImpl implements LogicalBinaryOperation {
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.math.BigDecimal, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, BigDecimal lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.math.BigInteger, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, BigInteger lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, byte, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, byte lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, char, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, char lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, double, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, double lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, float, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, float lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final float lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, int, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, int lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final int lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, long, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, long lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final long lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.math.BigDecimal)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, BigDecimal rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final BigDecimal rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.math.BigInteger)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, BigInteger rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final BigInteger rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, byte)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, byte rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final byte rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, char)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, char rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final char rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, double)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, double rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final double rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, float)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, float rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final float rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, int)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, int rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final int rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, long)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, long rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final long rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, ng.runtime.metaclass.MetaClass, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, MetaClass rhsMetaClass, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, short)
    */
-  public Object doApply(ExtendedThreadContext tc, Object lhs, short rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final short rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doApply(ng.runtime.threadcontext.ExtendedThreadContext, short, java.lang.Object)
    */
-  public Object doApply(ExtendedThreadContext tc, short lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
   /* (non-JavaDoc)
    * @see ng.runtime.metaclass.BinaryOperation#doReverseApply(ng.runtime.threadcontext.ExtendedThreadContext, java.lang.Object, java.lang.Object)
    */
-  public Object doReverseApply(ExtendedThreadContext tc, Object lhs, Object rhs) {
+  public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 }

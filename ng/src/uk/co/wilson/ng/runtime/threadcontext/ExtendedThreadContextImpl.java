@@ -260,17 +260,17 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   private final BinaryArithmeticOperation modulo = new Modulo(this);
 
   private final BinaryArithmeticOperation power = new Power(this);
-  
+
   private final BinaryLogicalOperation and = new And(this);
-  
+
   private final BinaryLogicalOperation or = new Or(this);
-  
+
   private final BinaryLogicalOperation xor = new Xor(this);
-  
+
   private final BinaryShiftOperation leftShift = new LeftShift(this);
-  
+
   private final BinaryShiftOperation rightShift = new RightShift(this);
-  
+
   private final BinaryShiftOperation unsignedRightShift = new UnsignedRightShift(this);
 
   private final IntegerComparison compare = new Compare(this);

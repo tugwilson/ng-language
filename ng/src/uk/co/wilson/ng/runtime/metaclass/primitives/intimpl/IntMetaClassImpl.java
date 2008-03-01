@@ -23,7 +23,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   private volatile IntBinaryArithmeticOperation modifiedModulo = null;
   private volatile IntBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile IntBinaryArithmeticOperation modifiedPower = null;
-  
+
   private volatile IntBinaryLogicalOperation modifiedAnd = null;
   private volatile IntBinaryLogicalOperation modifiedOr = null;
   private volatile IntBinaryLogicalOperation modifiedXor = null;
@@ -49,7 +49,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   private final IntBinaryArithmeticOperation modulo = new Modulo();
   private final IntBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final IntBinaryArithmeticOperation power = new Power();
-  
+
   private final IntBinaryLogicalOperation and = new And();
   private final IntBinaryLogicalOperation or = new Or();
   private final IntBinaryLogicalOperation xor = new Xor();
@@ -308,11 +308,11 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     }
   }
 
-  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
-    modifyAnd(fixOperationType(modifiedAnd)); 
+  public void modifyAnd(final LogicalBinaryOperation modifiedAnd) {
+    modifyAnd(fixOperationType(modifiedAnd));
   }
 
-  public void modifyAnd(IntBinaryLogicalOperation modifiedAnd) {
+  public void modifyAnd(final IntBinaryLogicalOperation modifiedAnd) {
     this.modifiedAnd = modifiedAnd;
   }
 
@@ -320,7 +320,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.and;
   }
 
-  public IntBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public IntBinaryLogicalOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final IntBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
@@ -334,11 +334,11 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     }
   }
 
-  public void modifyOr(LogicalBinaryOperation modifiedOr) {
-    modifyOr(fixOperationType(modifiedOr)); 
+  public void modifyOr(final LogicalBinaryOperation modifiedOr) {
+    modifyOr(fixOperationType(modifiedOr));
   }
 
-  public void modifyOr(IntBinaryLogicalOperation modifiedOr) {
+  public void modifyOr(final IntBinaryLogicalOperation modifiedOr) {
     this.modifiedOr = modifiedOr;
   }
 
@@ -346,7 +346,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.or;
   }
 
-  public IntBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public IntBinaryLogicalOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final IntBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
@@ -360,11 +360,11 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     }
   }
 
-  public void modifyXor(LogicalBinaryOperation modifiedXor) {
-    modifyXor(fixOperationType(modifiedXor)); 
+  public void modifyXor(final LogicalBinaryOperation modifiedXor) {
+    modifyXor(fixOperationType(modifiedXor));
   }
 
-  public void modifyXor(IntBinaryLogicalOperation modifiedXor) {
+  public void modifyXor(final IntBinaryLogicalOperation modifiedXor) {
     this.modifiedXor = modifiedXor;
   }
 
@@ -372,7 +372,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.xor;
   }
 
-  public IntBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public IntBinaryLogicalOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final IntBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
@@ -386,11 +386,11 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     }
   }
 
-  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
-    modifyLeftShift(fixOperationType(modifiedLeftShift)); 
+  public void modifyLeftShift(final ShiftOperation modifiedLeftShift) {
+    modifyLeftShift(fixOperationType(modifiedLeftShift));
   }
 
-  public void modifyLeftShift(IntShiftOperation modifiedLeftShift) {
+  public void modifyLeftShift(final IntShiftOperation modifiedLeftShift) {
     this.modifiedLeftShift = modifiedLeftShift;
   }
 
@@ -398,7 +398,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.leftShift;
   }
 
-  public IntShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  public IntShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
   final IntShiftOperation categoryOperation = shiftOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
@@ -412,11 +412,11 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     }
   }
 
-  public void modifyRightShift(ShiftOperation modifiedRightShift) {
-    modifyRightShift(fixOperationType(modifiedRightShift)); 
+  public void modifyRightShift(final ShiftOperation modifiedRightShift) {
+    modifyRightShift(fixOperationType(modifiedRightShift));
   }
 
-  public void modifyRightShift(IntShiftOperation modifiedRightShift) {
+  public void modifyRightShift(final IntShiftOperation modifiedRightShift) {
     this.modifiedRightShift = modifiedRightShift;
   }
 
@@ -424,7 +424,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.rightShift;
   }
 
-  public IntShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  public IntShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
   final IntShiftOperation categoryOperation = shiftOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
@@ -438,11 +438,11 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     }
   }
 
-  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
-    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift)); 
+  public void modifyUnsignedRightShift(final ShiftOperation modifiedUnsignedRightShift) {
+    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift));
   }
 
-  public void modifyUnsignedRightShift(IntShiftOperation modifiedUnsignedRightShift) {
+  public void modifyUnsignedRightShift(final IntShiftOperation modifiedUnsignedRightShift) {
     this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
   }
 
@@ -450,7 +450,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
     return this.unsignedRightShift;
   }
 
-  public IntShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  public IntShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
   final IntShiftOperation categoryOperation = shiftOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
