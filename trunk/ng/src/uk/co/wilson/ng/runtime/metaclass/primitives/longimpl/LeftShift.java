@@ -43,63 +43,63 @@ public class LeftShift extends BaseShiftOperation {
     return tc.leftShift().apply(lhs, tc.unwrapToLong(rhs));
   }
 
-  public long doLongApply(ExtendedThreadContext tc, long lhs, char rhs) throws NotPerformed {
+  public long doLongApply(final ExtendedThreadContext tc, final long lhs, final char rhs) throws NotPerformed {
     return lhs << rhs;
   }
 
-  public long doLongApply(ExtendedThreadContext tc, long lhs, byte rhs) throws NotPerformed {
+  public long doLongApply(final ExtendedThreadContext tc, final long lhs, final byte rhs) throws NotPerformed {
     return lhs << rhs;
   }
 
-  public long doLongApply(ExtendedThreadContext tc, long lhs, short rhs) throws NotPerformed {
+  public long doLongApply(final ExtendedThreadContext tc, final long lhs, final short rhs) throws NotPerformed {
     return lhs << rhs;
   }
 
-  public long doLongApply(ExtendedThreadContext tc, long lhs, int rhs) throws NotPerformed {
+  public long doLongApply(final ExtendedThreadContext tc, final long lhs, final int rhs) throws NotPerformed {
     return lhs << rhs;
   }
 
-  public long doLongApply(ExtendedThreadContext tc, long lhs, long rhs) throws NotPerformed {
+  public long doLongApply(final ExtendedThreadContext tc, final long lhs, final long rhs) throws NotPerformed {
     return lhs << rhs;
   }
 
-  public long doLongApply(ExtendedThreadContext tc, long lhs, BigInteger rhs) throws NotPerformed {
+  public long doLongApply(final ExtendedThreadContext tc, final long lhs, final BigInteger rhs) throws NotPerformed {
     return lhs << rhs.longValue();
   }
 
-  public Object doApply(ExtendedThreadContext tc, char lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
     return tc.leftShift().apply(lhs, tc.unwrapToLong(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final Object rhs) {
     return tc.leftShift().apply(lhs, tc.unwrapToLong(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final Object rhs) {
     return tc.leftShift().apply(lhs, tc.unwrapToLong(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, int lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final int lhs, final Object rhs) {
     return tc.leftShift().apply(lhs, tc.unwrapToLong(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, long lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final long lhs, final Object rhs) {
     return tc.leftShift().apply(lhs, tc.unwrapToLong(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, float lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final float lhs, final Object rhs) {
     return tc.leftShift().apply(lhs, tc.unwrapToLong(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, double lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final Object rhs) {
     return tc.leftShift().apply(lhs, tc.unwrapToLong(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, BigInteger lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) {
     return tc.leftShift().apply(lhs, tc.unwrapToLong(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, BigDecimal lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.leftShift().apply(lhs, tc.unwrapToLong(rhs));
   }
 }

@@ -14,87 +14,87 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 public class ShiftOperationNoopImpl implements ShiftOperation {
   public final static ShiftOperation instance = new ShiftOperationNoopImpl();
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, MetaClass rhsMetaClass, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, char rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final char rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, byte rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final byte rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, short rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final short rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, int rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final int rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, long rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final long rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, float rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final float rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, double rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final double rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, BigInteger rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final BigInteger rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, Object lhs, BigDecimal rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final Object lhs, final BigDecimal rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, char lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, int lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final int lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, long lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final long lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, float lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final float lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, double lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, BigInteger lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doApply(ExtendedThreadContext tc, BigDecimal lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 
-  public Object doReverseApply(ExtendedThreadContext tc, Object lhs, Object rhs) {
+  public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
     return ExtendedThreadContext.NOT_PERFORMED;
   }
 }

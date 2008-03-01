@@ -25,7 +25,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
   private volatile ByteBinaryArithmeticOperation modifiedModulo = null;
   private volatile ByteBinaryArithmeticOperation modifiedRemainderDivide = null;
   private volatile ByteBinaryArithmeticOperation modifiedPower = null;
-  
+
   private volatile ByteBinaryLogicalOperation modifiedAnd = null;
   private volatile ByteBinaryLogicalOperation modifiedOr = null;
   private volatile ByteBinaryLogicalOperation modifiedXor = null;
@@ -51,7 +51,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
   private final ByteBinaryArithmeticOperation modulo = new Modulo();
   private final ByteBinaryArithmeticOperation remainderDivide = new RemainderDivide();
   private final ByteBinaryArithmeticOperation power = new Power();
-  
+
   private final ByteBinaryLogicalOperation and = new And();
   private final ByteBinaryLogicalOperation or = new Or();
   private final ByteBinaryLogicalOperation xor = new Xor();
@@ -310,11 +310,11 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     }
   }
 
-  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
-    modifyAnd(fixOperationType(modifiedAnd)); 
+  public void modifyAnd(final LogicalBinaryOperation modifiedAnd) {
+    modifyAnd(fixOperationType(modifiedAnd));
   }
 
-  public void modifyAnd(ByteBinaryLogicalOperation modifiedAnd) {
+  public void modifyAnd(final ByteBinaryLogicalOperation modifiedAnd) {
     this.modifiedAnd = modifiedAnd;
   }
 
@@ -322,7 +322,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.and;
   }
 
-  public ByteBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public ByteBinaryLogicalOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final ByteBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getByteCategoryOperation();
 
     if (categoryOperation == null) {
@@ -336,11 +336,11 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     }
   }
 
-  public void modifyOr(LogicalBinaryOperation modifiedOr) {
-    modifyOr(fixOperationType(modifiedOr)); 
+  public void modifyOr(final LogicalBinaryOperation modifiedOr) {
+    modifyOr(fixOperationType(modifiedOr));
   }
 
-  public void modifyOr(ByteBinaryLogicalOperation modifiedOr) {
+  public void modifyOr(final ByteBinaryLogicalOperation modifiedOr) {
     this.modifiedOr = modifiedOr;
   }
 
@@ -348,7 +348,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.or;
   }
 
-  public ByteBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public ByteBinaryLogicalOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final ByteBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getByteCategoryOperation();
 
     if (categoryOperation == null) {
@@ -362,11 +362,11 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     }
   }
 
-  public void modifyXor(LogicalBinaryOperation modifiedXor) {
-    modifyXor(fixOperationType(modifiedXor)); 
+  public void modifyXor(final LogicalBinaryOperation modifiedXor) {
+    modifyXor(fixOperationType(modifiedXor));
   }
 
-  public void modifyXor(ByteBinaryLogicalOperation modifiedXor) {
+  public void modifyXor(final ByteBinaryLogicalOperation modifiedXor) {
     this.modifiedXor = modifiedXor;
   }
 
@@ -374,7 +374,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.xor;
   }
 
-  public ByteBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public ByteBinaryLogicalOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final ByteBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getByteCategoryOperation();
 
     if (categoryOperation == null) {
@@ -388,11 +388,11 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     }
   }
 
-  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
-    modifyLeftShift(fixOperationType(modifiedLeftShift)); 
+  public void modifyLeftShift(final ShiftOperation modifiedLeftShift) {
+    modifyLeftShift(fixOperationType(modifiedLeftShift));
   }
 
-  public void modifyLeftShift(ByteShiftOperation modifiedLeftShift) {
+  public void modifyLeftShift(final ByteShiftOperation modifiedLeftShift) {
     this.modifiedLeftShift = modifiedLeftShift;
   }
 
@@ -400,7 +400,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.leftShift;
   }
 
-  public ByteShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  public ByteShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
   final ByteShiftOperation categoryOperation = shiftOperation.getByteCategoryOperation();
 
     if (categoryOperation == null) {
@@ -414,11 +414,11 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     }
   }
 
-  public void modifyRightShift(ShiftOperation modifiedRightShift) {
-    modifyRightShift(fixOperationType(modifiedRightShift)); 
+  public void modifyRightShift(final ShiftOperation modifiedRightShift) {
+    modifyRightShift(fixOperationType(modifiedRightShift));
   }
 
-  public void modifyRightShift(ByteShiftOperation modifiedRightShift) {
+  public void modifyRightShift(final ByteShiftOperation modifiedRightShift) {
     this.modifiedRightShift = modifiedRightShift;
   }
 
@@ -426,7 +426,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.rightShift;
   }
 
-  public ByteShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  public ByteShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
   final ByteShiftOperation categoryOperation = shiftOperation.getByteCategoryOperation();
 
     if (categoryOperation == null) {
@@ -440,11 +440,11 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     }
   }
 
-  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
-    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift)); 
+  public void modifyUnsignedRightShift(final ShiftOperation modifiedUnsignedRightShift) {
+    modifyUnsignedRightShift(fixOperationType(modifiedUnsignedRightShift));
   }
 
-  public void modifyUnsignedRightShift(ByteShiftOperation modifiedUnsignedRightShift) {
+  public void modifyUnsignedRightShift(final ByteShiftOperation modifiedUnsignedRightShift) {
     this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
   }
 
@@ -452,7 +452,7 @@ public class ByteMetaClassImpl extends BaseMetaClass implements ByteMetaClass {
     return this.unsignedRightShift;
   }
 
-  public ByteShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  public ByteShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
   final ByteShiftOperation categoryOperation = shiftOperation.getByteCategoryOperation();
 
     if (categoryOperation == null) {

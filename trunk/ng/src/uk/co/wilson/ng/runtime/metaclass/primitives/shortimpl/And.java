@@ -43,63 +43,63 @@ public class And extends BaseBinaryLogicalOperation {
     return tc.and().apply(lhs, tc.unwrapToShort(rhs));
   }
 
-  public int doIntApply(ExtendedThreadContext tc, short lhs, char rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final short lhs, final char rhs) throws NotPerformed {
     return lhs & rhs;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, short lhs, byte rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final short lhs, final byte rhs) throws NotPerformed {
     return lhs & rhs;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, short lhs, short rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final short lhs, final short rhs) throws NotPerformed {
     return lhs & rhs;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, short lhs, int rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final short lhs, final int rhs) throws NotPerformed {
     return lhs & rhs;
   }
 
-  public long doLongApply(ExtendedThreadContext tc, short lhs, long rhs) throws NotPerformed {
+  public long doLongApply(final ExtendedThreadContext tc, final short lhs, final long rhs) throws NotPerformed {
     return lhs & rhs;
   }
 
-  public BigInteger doBigIntegerApply(ExtendedThreadContext tc, short lhs, BigInteger rhs) throws NotPerformed {
+  public BigInteger doBigIntegerApply(final ExtendedThreadContext tc, final short lhs, final BigInteger rhs) throws NotPerformed {
     return BigInteger.valueOf(lhs).and(rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, char lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
     return tc.and().apply(lhs, tc.unwrapToShort(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final Object rhs) {
     return tc.and().apply(lhs, tc.unwrapToShort(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final Object rhs) {
     return tc.and().apply(lhs, tc.unwrapToShort(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, int lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final int lhs, final Object rhs) {
     return tc.and().apply(lhs, tc.unwrapToShort(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, long lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final long lhs, final Object rhs) {
     return tc.and().apply(lhs, tc.unwrapToShort(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, float lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final float lhs, final Object rhs) {
     return tc.and().apply(lhs, tc.unwrapToShort(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, double lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final double lhs, final Object rhs) {
     return tc.and().apply(lhs, tc.unwrapToShort(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, BigInteger lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) {
     return tc.and().apply(lhs, tc.unwrapToShort(rhs));
   }
 
-  public Object doApply(ExtendedThreadContext tc, BigDecimal lhs, Object rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.and().apply(lhs, tc.unwrapToShort(rhs));
   }
 }

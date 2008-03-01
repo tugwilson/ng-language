@@ -23,63 +23,63 @@ public class ShortShiftOperationWrapper extends ArithmeticOperationWrapper imple
     super(delegate);
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, BigDecimal rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final BigDecimal rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, BigInteger rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final BigInteger rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, byte rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final byte rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, char rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final char rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, double rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final double rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, float rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final float rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, int rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final int rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, long rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final long rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, short lhs, short rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final short lhs, final short rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public int doIntApply(ExtendedThreadContext tc, short lhs, BigInteger rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final short lhs, final BigInteger rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, short lhs, byte rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final short lhs, final byte rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, short lhs, char rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final short lhs, final char rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, short lhs, int rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final short lhs, final int rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, short lhs, short rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final short lhs, final short rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, short lhs, long rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final short lhs, final long rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 }

@@ -5,7 +5,6 @@ import java.math.BigInteger;
 import java.util.Map;
 import java.util.Stack;
 
-import ng.runtime.metaclass.*;
 import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalIntegerComparison;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerIntegerComparison;
 import ng.runtime.metaclass.primitives.byteimpl.ByteIntegerComparison;

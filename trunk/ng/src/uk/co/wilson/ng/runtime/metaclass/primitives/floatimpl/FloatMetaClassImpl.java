@@ -278,7 +278,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
     }
   }
 
-  public BinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public BinaryOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final BinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
@@ -292,7 +292,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
     }
   }
 
-  public LogicalBinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
@@ -306,7 +306,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
     }
   }
 
-  public LogicalBinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
@@ -320,7 +320,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
     }
   }
 
-  public ShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
@@ -334,7 +334,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
     }
   }
 
-  public ShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
@@ -348,7 +348,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
     }
   }
 
-  public ShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {

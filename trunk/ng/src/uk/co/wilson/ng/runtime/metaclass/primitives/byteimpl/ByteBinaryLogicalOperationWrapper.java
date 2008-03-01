@@ -22,63 +22,63 @@ public class ByteBinaryLogicalOperationWrapper extends ArithmeticOperationWrappe
     super(delegate);
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, BigDecimal rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final BigDecimal rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, BigInteger rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final BigInteger rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, byte rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final byte rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, char rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final char rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, double rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final double rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, float rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final float rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, int rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final int rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, long rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final long rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public Object doApply(ExtendedThreadContext tc, byte lhs, short rhs) {
+  public Object doApply(final ExtendedThreadContext tc, final byte lhs, final short rhs) {
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 
-  public BigInteger doBigIntegerApply(ExtendedThreadContext tc, byte lhs, BigInteger rhs) throws NotPerformed {
+  public BigInteger doBigIntegerApply(final ExtendedThreadContext tc, final byte lhs, final BigInteger rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, byte lhs, byte rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final byte lhs, final byte rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, byte lhs, char rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final byte lhs, final char rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, byte lhs, int rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final byte lhs, final int rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public int doIntApply(ExtendedThreadContext tc, byte lhs, short rhs) throws NotPerformed {
+  public int doIntApply(final ExtendedThreadContext tc, final byte lhs, final short rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 
-  public long doLongApply(ExtendedThreadContext tc, byte lhs, long rhs) throws NotPerformed {
+  public long doLongApply(final ExtendedThreadContext tc, final byte lhs, final long rhs) throws NotPerformed {
     throw ExtendedThreadContext.NOT_PERFORMED_EXCEPTION;
   }
 }

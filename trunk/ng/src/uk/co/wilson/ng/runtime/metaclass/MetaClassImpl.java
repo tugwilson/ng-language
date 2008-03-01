@@ -20,7 +20,7 @@ public class MetaClassImpl extends BaseMetaClass {
   protected volatile BinaryOperation modifiedModulo = null;
   protected volatile BinaryOperation modifiedRemainderDivide = null;
   protected volatile BinaryOperation modifiedPower = null;
-  
+
   protected volatile LogicalBinaryOperation modifiedAnd = null;
   protected volatile LogicalBinaryOperation modifiedOr = null;
   protected volatile LogicalBinaryOperation modifiedXor = null;
@@ -257,7 +257,7 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyAnd(LogicalBinaryOperation modifiedAnd) {
+  public void modifyAnd(final LogicalBinaryOperation modifiedAnd) {
     this.modifiedAnd = modifiedAnd;
   }
 
@@ -265,7 +265,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return LogicalBinaryOperationNoopImpl.instance;
   }
 
-  public LogicalBinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -283,7 +283,7 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyOr(LogicalBinaryOperation modifiedOr) {
+  public void modifyOr(final LogicalBinaryOperation modifiedOr) {
     this.modifiedOr = modifiedOr;
   }
 
@@ -291,7 +291,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return LogicalBinaryOperationNoopImpl.instance;
   }
 
-  public LogicalBinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -309,7 +309,7 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyXor(LogicalBinaryOperation modifiedXor) {
+  public void modifyXor(final LogicalBinaryOperation modifiedXor) {
     this.modifiedXor = modifiedXor;
   }
 
@@ -317,7 +317,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return LogicalBinaryOperationNoopImpl.instance;
   }
 
-  public LogicalBinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
   final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -335,7 +335,7 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyLeftShift(ShiftOperation modifiedLeftShift) {
+  public void modifyLeftShift(final ShiftOperation modifiedLeftShift) {
     this.modifiedLeftShift = modifiedLeftShift;
   }
 
@@ -343,7 +343,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ShiftOperationNoopImpl.instance;
   }
 
-  public ShiftOperation leftShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
   final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -361,7 +361,7 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyRightShift(ShiftOperation modifiedRightShift) {
+  public void modifyRightShift(final ShiftOperation modifiedRightShift) {
     this.modifiedRightShift = modifiedRightShift;
   }
 
@@ -369,7 +369,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ShiftOperationNoopImpl.instance;
   }
 
-  public ShiftOperation rightShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
   final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
@@ -387,7 +387,7 @@ public class MetaClassImpl extends BaseMetaClass {
     }
   }
 
-  public void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift) {
+  public void modifyUnsignedRightShift(final ShiftOperation modifiedUnsignedRightShift) {
     this.modifiedUnsignedRightShift = modifiedUnsignedRightShift;
   }
 
@@ -395,7 +395,7 @@ public class MetaClassImpl extends BaseMetaClass {
     return ShiftOperationNoopImpl.instance;
   }
 
-  public ShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation) {
+  public ShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
   final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
 
     if(categoryOperationMap != null) {
