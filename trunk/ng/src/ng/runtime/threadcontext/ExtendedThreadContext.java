@@ -2,7 +2,8 @@ package ng.runtime.threadcontext;
 
 public abstract class ExtendedThreadContext extends ThreadContext {
   public static final Object NOT_PERFORMED = new Object();
-  public static final NotPerformed NOT_PERFORMED_EXCEPTION = new NotPerformed();
+  
+  public static final NotPerformed NOT_PERFORMED_EXCEPTION = NotPerformed.instance;
 
   //
   // Utility Methods
