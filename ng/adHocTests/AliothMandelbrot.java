@@ -2,14 +2,18 @@ import java.io.BufferedOutputStream;
 import java.io.IOException;
 
 class AliothMandelbrot {
-
+  static int check = 0;
    final static double limitSquared = 4.0;
    final static int iterations = 50;
 
    public static void main(final String[] args) throws Exception {
+     final long start = System.currentTimeMillis();
       final int size = Integer.parseInt(args[0]);
       final Mandelbrot m = new Mandelbrot(size);
       m.compute();
+
+      System.out.println("Time: " + (System.currentTimeMillis() - start) + " ms");
+      System.out.println("Check: " + check);
    }
 
    public static class Mandelbrot {
@@ -33,7 +37,7 @@ class AliothMandelbrot {
          for (int y = 0; y<this.size; y++) {
           computeRow(y);
         }
-         this.out.close();
+//         this.out.close();
       }
 
       private void computeRow(final int y) throws IOException
@@ -62,13 +66,15 @@ class AliothMandelbrot {
             }
 
             if (x%8 == 7) {
-               this.out.write((byte)bits);
+              check ^= bits;
+//               this.out.write((byte)bits);
                bits = 0;
             }
          }
          if (this.shift!=0) {
             bits = bits << this.shift;
-            this.out.write((byte)bits);
+            check ^= bits;
+//            this.out.write((byte)bits);
          }
       }
    }
