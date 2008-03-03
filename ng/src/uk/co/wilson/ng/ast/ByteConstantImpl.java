@@ -1,9 +1,9 @@
 package uk.co.wilson.ng.ast;
 
-import uk.co.wilson.ng.runtime.NgByte;
 import ng.ast.ByteConstant;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
+import uk.co.wilson.ng.runtime.NgByte;
 
 
 /**

@@ -45,7 +45,7 @@ public abstract class ThreadContext {
 
   public abstract MetaClass getMetaClassFor(Object instance);
   public abstract MetaClass getMetaClassFor(Class<?> type);
-  
+
   //
   // Utility Methods
   //

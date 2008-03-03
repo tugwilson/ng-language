@@ -2,7 +2,11 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import java.util.Map;
 
-import ng.runtime.metaclass.*;
+import ng.runtime.metaclass.BinaryOperation;
+import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.LogicalBinaryOperation;
+import ng.runtime.metaclass.ShiftOperation;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import ng.runtime.threadcontext.BinaryArithmeticCategorySupport;
 import ng.runtime.threadcontext.BinaryLogicalCategorySupport;

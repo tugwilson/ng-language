@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import ng.runtime.metaclass.MetaClass;
-import ng.runtime.metaclass.StaticCallable;
 
 /**
  * @author John

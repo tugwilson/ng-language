@@ -1,10 +1,9 @@
-package ng.runtime.metaclass;
+package ng.runtime.threadcontext;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.threadcontext.Callable;
-import ng.runtime.threadcontext.ExtendedThreadContext;
+import ng.runtime.metaclass.MetaClass;
 
 /**
  * @author John

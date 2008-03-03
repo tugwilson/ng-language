@@ -2,7 +2,11 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.biginteger;
 
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.*;
+import ng.runtime.metaclass.BinaryOperation;
+import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.LogicalBinaryOperation;
+import ng.runtime.metaclass.ShiftOperation;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
