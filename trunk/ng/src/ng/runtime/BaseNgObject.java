@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 import ng.lang.NgObject;
 import ng.lang.NgRuntimeException;
-import ng.runtime.threadcontext.ThreadContext;
+import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /*
  * Created on 2 Mar 2008
@@ -34,119 +34,119 @@ public abstract class BaseNgObject implements NgObject, CompiledNgObject {
   //
   // Can we make these synthetic?
   //
-  public Object ng$Call(ThreadContext tc, int methodNumber) throws Throwable {
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber) throws Throwable {
     switch(methodNumber) {
       case 0:
-        return tc.wrap(hashCode());
-        
+        return tc.wrap(super.hashCode());
+
       case 1:
-        notify();
+        super.notify();
         return null;
-        
+
       case 2:
-        notifyAll();
+        super.notifyAll();
         return null;
-        
+
       case 3:
-        return toString();
-        
+        return super.toString();
+
       case 4:
-        wait();
+        super.wait();
         return null;
-        
+
       case 5:
-        return clone();
-        
+        return super.clone();
+
       case 6:
-        finalize();
+        super.finalize();
         return null;
-        
+
       case 7:
         return getMetaClass();
-        
+
       default:
         throw new NgRuntimeException("Invalid call");
     }
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, boolean p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final boolean p1) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, char p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final char p1) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, byte p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final byte p1) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, short p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final short p1) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, int p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final int p1) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, long p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final long p1) throws Throwable {
     switch(methodNumber) {
       case 0:
-        wait(p1);
+        super.wait(p1);
         return null;
-        
+
       default:
         throw new NgRuntimeException("Invalid call");
     }
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, float p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final float p1) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, double p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final double p1) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, BigInteger p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final BigInteger p1) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, BigDecimal p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final BigDecimal p1) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, Object params[]) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final Object params[]) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, Object p1) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final Object p1) throws Throwable {
     switch(methodNumber) {
       case 0:
-        wait(tc.convert().asLong(p1));
+        super.wait(tc.convert().asLong(p1));
         return null;
-        
+
       default:
         throw new NgRuntimeException("Invalid call");
     }
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, Object p1, Object p2) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final Object p1, final Object p2) throws Throwable {
     switch(methodNumber) {
     case 0:
-      wait(tc.convert().asLong(p1), tc.convert().asInt(p2));
+      super.wait(tc.convert().asLong(p1), tc.convert().asInt(p2));
       return null;
-      
+
     default:
       throw new NgRuntimeException("Invalid call");
     }
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, Object p1, Object p2, Object p3) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final Object p1, final Object p2, final Object p3) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
-  
-  public Object ng$Call(ThreadContext tc, int methodNumber, Object p1, Object p2, Object p3, Object p4) throws Throwable {
+
+  public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final Object p1, final Object p2, final Object p3, final Object p4) throws Throwable {
     throw new NgRuntimeException("Invalid call");
   }
 }

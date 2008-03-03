@@ -7,7 +7,6 @@ import ng.runtime.metaclass.Conversion;
 import ng.runtime.metaclass.primitives.doubleimpl.DoubleConversion;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
-import uk.co.wilson.ng.runtime.NgDouble;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ConversionWrapper;
 
 /**

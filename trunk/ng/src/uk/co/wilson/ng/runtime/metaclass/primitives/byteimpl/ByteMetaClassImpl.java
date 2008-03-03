@@ -1,6 +1,10 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl;
 
-import ng.runtime.metaclass.*;
+import ng.runtime.metaclass.BinaryOperation;
+import ng.runtime.metaclass.BooleanBinaryComparison;
+import ng.runtime.metaclass.Conversion;
+import ng.runtime.metaclass.LogicalBinaryOperation;
+import ng.runtime.metaclass.ShiftOperation;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;
