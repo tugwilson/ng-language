@@ -9,89 +9,89 @@ public interface MetaClass {
 
   Misc misc();
 
-  DoStaticMethodCall staticMethodCall(BaseStaticMethodCall doStaticMethodCall);
+  DoStaticMethodCall staticMethodCall(StaticMethodCallCategorySupport doStaticMethodCall);
 
   void modifyConvert(Conversion modifiedConvert);
   Conversion getOriginalConvert();
-  Conversion convert(BaseConversionOperation conversionOperation);
+  Conversion convert(ConversionOperationCategorySupport conversionOperation);
 
   void modifyAdd(BinaryOperation modifiedAdd);
   BinaryOperation getOriginalAdd();
-  BinaryOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  BinaryOperation add(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifySubtract(BinaryOperation modifiedSubtract);
   BinaryOperation getOriginalSubtract();
-  BinaryOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  BinaryOperation subtract(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyMultiply(BinaryOperation modifiedMultiply);
   BinaryOperation getOriginalMultiply();
-  BinaryOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  BinaryOperation multiply(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyDivide(BinaryOperation modifiedDivide);
   BinaryOperation getOriginalDivide();
-  BinaryOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  BinaryOperation divide(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyModulo(BinaryOperation modifiedModulo);
   BinaryOperation getOriginalModulo();
-  BinaryOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  BinaryOperation modulo(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyRemainderDivide(BinaryOperation modifiedRemainderDivide);
   BinaryOperation getOriginalRemainderDivide();
-  BinaryOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  BinaryOperation remainderDivide(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyPower(BinaryOperation modifiedPower);
   BinaryOperation getOriginalPower();
-  BinaryOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  BinaryOperation power(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyAnd(LogicalBinaryOperation modifiedAnd);
   LogicalBinaryOperation getOriginalAnd();
-  BinaryOperation and(BaseLogicalBinaryOperation binaryLogicalOperation);
+  BinaryOperation and(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyOr(LogicalBinaryOperation modifiedOr);
   LogicalBinaryOperation getOriginalOr();
-  LogicalBinaryOperation or(BaseLogicalBinaryOperation binaryLogicalOperation);
+  LogicalBinaryOperation or(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyXor(LogicalBinaryOperation modifiedXor);
   LogicalBinaryOperation getOriginalXor();
-  LogicalBinaryOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation);
+  LogicalBinaryOperation xor(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyLeftShift(ShiftOperation modifiedLeftShift);
   BinaryOperation getOriginalLeftShift();
-  BinaryOperation leftShift(BaseShiftOperation shiftOperation);
+  BinaryOperation leftShift(ShiftCategorySupport shiftOperation);
 
   void modifyRightShift(ShiftOperation modifiedRightShift);
   BinaryOperation getOriginalRightShift();
-  BinaryOperation rightShift(BaseShiftOperation shiftOperation);
+  BinaryOperation rightShift(ShiftCategorySupport shiftOperation);
 
   void modifyUnsignedRightShift(ShiftOperation modifiedUnsignedRightShift);
   BinaryOperation getOriginalUnsignedRightShift();
-  BinaryOperation unsignedRightShift(BaseShiftOperation shiftOperation);
+  BinaryOperation unsignedRightShift(ShiftCategorySupport shiftOperation);
 
   void modifyCompare(IntBinaryComparison modifiedCompare);
   IntBinaryComparison getOriginalCompare();
-  IntBinaryComparison compare(BaseIntegerComparison integerComparison);
+  IntBinaryComparison compare(IntegerComparisonCategorySupport integerComparison);
 
   void modifyEquals(BooleanBinaryComparison modifiedEquals);
   BooleanBinaryComparison getOriginalEquals();
-  BooleanBinaryComparison equals(BaseBooleanComparison booleanComparison);
+  BooleanBinaryComparison equals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyNotEquals(BooleanBinaryComparison modifiedNotEquals);
   BooleanBinaryComparison getOriginalNotEquals();
-  BooleanBinaryComparison notEquals(BaseBooleanComparison booleanComparison);
+  BooleanBinaryComparison notEquals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyLessThan(BooleanBinaryComparison modifiedLessThan);
   BooleanBinaryComparison getOriginalLessThan();
-  BooleanBinaryComparison lessThan(BaseBooleanComparison booleanComparison);
+  BooleanBinaryComparison lessThan(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyGreaterThan(BooleanBinaryComparison modifiedGreaterThan);
   BooleanBinaryComparison getOriginalGreaterThan();
-  BooleanBinaryComparison greaterThan(BaseBooleanComparison booleanComparison);
+  BooleanBinaryComparison greaterThan(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyLessThanOrEquals(BooleanBinaryComparison modifiedLessThanOrEquals);
   BooleanBinaryComparison getOriginalLessThanOrEquals();
-  BooleanBinaryComparison lessThanOrEquals(BaseBooleanComparison booleanComparison);
+  BooleanBinaryComparison lessThanOrEquals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyGreaterThanOrEquals(BooleanBinaryComparison modifiedGreaterThanOrEquals);
   BooleanBinaryComparison getOriginalGreaterThanOrEquals();
-  BooleanBinaryComparison greaterThanOrEquals(BaseBooleanComparison booleanComparison);
+  BooleanBinaryComparison greaterThanOrEquals(BooleanComparisonCategorySupport booleanComparison);
 }

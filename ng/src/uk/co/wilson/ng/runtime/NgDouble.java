@@ -1,11 +1,11 @@
 package uk.co.wilson.ng.runtime;
 
-import ng.lang.NgObject;
+import ng.runtime.BaseNgObject;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClass;
 import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
-public class NgDouble extends NgObject {
+public class NgDouble extends BaseNgObject {
   private static final DoubleMetaClass metaclass = PrimitiveMetaClasses.getDoubleMetaClass();
 
   public static DoubleMetaClass get$MetaClass() {
@@ -22,7 +22,6 @@ public class NgDouble extends NgObject {
     this.value = value;
   }
 
-  @Override
   public MetaClass getMetaClass() {
     return get$MetaClass();
   }

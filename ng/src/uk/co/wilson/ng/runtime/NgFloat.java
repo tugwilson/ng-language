@@ -1,11 +1,11 @@
 package uk.co.wilson.ng.runtime;
 
-import ng.lang.NgObject;
+import ng.runtime.BaseNgObject;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.primitives.floatimpl.FloatMetaClass;
 import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
-public class NgFloat extends NgObject {
+public class NgFloat extends BaseNgObject {
   private static final FloatMetaClass metaclass = PrimitiveMetaClasses.getFloatMetaClass();
 
   public static FloatMetaClass get$MetaClass() {
@@ -22,7 +22,6 @@ public class NgFloat extends NgObject {
     this.value = value;
   }
 
-  @Override
   public MetaClass getMetaClass() {
     return get$MetaClass();
   }

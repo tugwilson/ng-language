@@ -1,11 +1,11 @@
 package ng.runtime.metaclass.primitives.byteimpl;
 
-import ng.runtime.metaclass.BaseArithmeticBinaryOperation;
-import ng.runtime.metaclass.BaseBooleanComparison;
-import ng.runtime.metaclass.BaseConversionOperation;
-import ng.runtime.metaclass.BaseIntegerComparison;
-import ng.runtime.metaclass.BaseLogicalBinaryOperation;
-import ng.runtime.metaclass.BaseShiftOperation;
+import ng.runtime.metaclass.BinaryArithmeticCategorySupport;
+import ng.runtime.metaclass.BooleanComparisonCategorySupport;
+import ng.runtime.metaclass.ConversionOperationCategorySupport;
+import ng.runtime.metaclass.IntegerComparisonCategorySupport;
+import ng.runtime.metaclass.BinaryLogicalCategorySupport;
+import ng.runtime.metaclass.ShiftCategorySupport;
 import ng.runtime.metaclass.MetaClass;
 
 
@@ -13,85 +13,85 @@ public interface ByteMetaClass extends MetaClass {
 
   void modifyConvert(ByteConversion modifiedConvert);
   ByteConversion getOriginalConvert();
-  ByteConversion convert(BaseConversionOperation conversionOperation);
+  ByteConversion convert(ConversionOperationCategorySupport conversionOperation);
 
   void modifyAdd(ByteBinaryArithmeticOperation modifiedAdd);
   ByteBinaryArithmeticOperation getOriginalAdd();
-  ByteBinaryArithmeticOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ByteBinaryArithmeticOperation add(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifySubtract(ByteBinaryArithmeticOperation modifiedSubtract);
   ByteBinaryArithmeticOperation getOriginalSubtract();
-  ByteBinaryArithmeticOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ByteBinaryArithmeticOperation subtract(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyMultiply(ByteBinaryArithmeticOperation modifiedMultiply);
   ByteBinaryArithmeticOperation getOriginalMultiply();
-  ByteBinaryArithmeticOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ByteBinaryArithmeticOperation multiply(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyDivide(ByteBinaryArithmeticOperation modifiedDivide);
   ByteBinaryArithmeticOperation getOriginalDivide();
-  ByteBinaryArithmeticOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ByteBinaryArithmeticOperation divide(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyModulo(ByteBinaryArithmeticOperation modifiedModulo);
   ByteBinaryArithmeticOperation getOriginalModulo();
-  ByteBinaryArithmeticOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ByteBinaryArithmeticOperation modulo(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyRemainderDivide(ByteBinaryArithmeticOperation modifiedRemainderDivide);
   ByteBinaryArithmeticOperation getOriginalRemainderDivide();
-  ByteBinaryArithmeticOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ByteBinaryArithmeticOperation remainderDivide(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyAnd(ByteBinaryLogicalOperation modifiedAnd);
   ByteBinaryLogicalOperation getOriginalAnd();
-  ByteBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation);
+  ByteBinaryLogicalOperation and(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyOr(ByteBinaryLogicalOperation modifiedOr);
   ByteBinaryLogicalOperation getOriginalOr();
-  ByteBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation);
+  ByteBinaryLogicalOperation or(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyXor(ByteBinaryLogicalOperation modifiedXor);
   ByteBinaryLogicalOperation getOriginalXor();
-  ByteBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation);
+  ByteBinaryLogicalOperation xor(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyLeftShift(ByteShiftOperation modifiedLeftShift);
   ByteShiftOperation getOriginalLeftShift();
-  ByteShiftOperation leftShift(BaseShiftOperation shiftOperation);
+  ByteShiftOperation leftShift(ShiftCategorySupport shiftOperation);
 
   void modifyRightShift(ByteShiftOperation modifiedRightShift);
   ByteShiftOperation getOriginalRightShift();
-  ByteShiftOperation rightShift(BaseShiftOperation shiftOperation);
+  ByteShiftOperation rightShift(ShiftCategorySupport shiftOperation);
 
   void modifyUnsignedRightShift(ByteShiftOperation modifiedUnsignedRightShift);
   ByteShiftOperation getOriginalUnsignedRightShift();
-  ByteShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation);
+  ByteShiftOperation unsignedRightShift(ShiftCategorySupport shiftOperation);
 
   void modifyPower(ByteBinaryArithmeticOperation modifiedPower);
   ByteBinaryArithmeticOperation getOriginalPower();
-  ByteBinaryArithmeticOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ByteBinaryArithmeticOperation power(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyCompare(ByteIntegerComparison modifiedCompare);
   ByteIntegerComparison getOriginalCompare();
-  ByteIntegerComparison compare(BaseIntegerComparison integerComparison);
+  ByteIntegerComparison compare(IntegerComparisonCategorySupport integerComparison);
 
   void modifyEquals(ByteBooleanComparison modifiedEquals);
   ByteBooleanComparison getOriginalEquals();
-  ByteBooleanComparison equals(BaseBooleanComparison booleanComparison);
+  ByteBooleanComparison equals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyNotEquals(ByteBooleanComparison modifiedNotEquals);
   ByteBooleanComparison getOriginalNotEquals();
-  ByteBooleanComparison notEquals(BaseBooleanComparison booleanComparison);
+  ByteBooleanComparison notEquals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyLessThan(ByteBooleanComparison modifiedLessThan);
   ByteBooleanComparison getOriginalLessThan();
-  ByteBooleanComparison lessThan(BaseBooleanComparison booleanComparison);
+  ByteBooleanComparison lessThan(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyGreaterThan(ByteBooleanComparison modifiedGreaterThan);
   ByteBooleanComparison getOriginalGreaterThan();
-  ByteBooleanComparison greaterThan(BaseBooleanComparison booleanComparison);
+  ByteBooleanComparison greaterThan(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyLessThanOrEquals(ByteBooleanComparison modifiedLessThanOrEquals);
   ByteBooleanComparison getOriginalLessThanOrEquals();
-  ByteBooleanComparison lessThanOrEquals(BaseBooleanComparison booleanComparison);
+  ByteBooleanComparison lessThanOrEquals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyGreaterThanOrEquals(ByteBooleanComparison modifiedGreaterThanOrEquals);
   ByteBooleanComparison getOriginalGreaterThanOrEquals();
-  ByteBooleanComparison greaterThanOrEquals(BaseBooleanComparison booleanComparison);
+  ByteBooleanComparison greaterThanOrEquals(BooleanComparisonCategorySupport booleanComparison);
 }

@@ -3,10 +3,10 @@ package ng.runtime.threadcontext;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BaseArithmeticBinaryOperation;
+import ng.runtime.metaclass.BinaryArithmeticCategorySupport;
 
 
-public interface BinaryArithmeticOperation extends BaseArithmeticBinaryOperation, BinaryIntegralOperation {
+public interface BinaryArithmeticOperation extends BinaryArithmeticCategorySupport, BinaryIntegralOperation {
   long longApply(char lhs, long rhs) throws NotPerformed;
   float floatApply(char lhs, float rhs) throws NotPerformed;
   double doubleApply(char lhs, double rhs) throws NotPerformed;

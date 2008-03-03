@@ -13,7 +13,7 @@ import ng.runtime.metaclass.primitives.shortimpl.ShortShiftOperation;
  * @author John
  *
  */
-public interface BaseShiftOperation {
+public interface ShiftCategorySupport {
   CharShiftOperation getCharCategoryOperation();
   void setCharCategoryOperation(CharShiftOperation charCategoryOperation);
 

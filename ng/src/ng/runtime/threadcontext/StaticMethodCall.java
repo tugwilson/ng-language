@@ -3,7 +3,7 @@ package ng.runtime.threadcontext;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BaseStaticMethodCall;
+import ng.runtime.metaclass.StaticMethodCallCategorySupport;
 import ng.runtime.metaclass.MetaClass;
 
 /**
@@ -11,7 +11,7 @@ import ng.runtime.metaclass.MetaClass;
  *
  */
 
-public interface StaticMethodCall extends BaseStaticMethodCall {
+public interface StaticMethodCall extends StaticMethodCallCategorySupport {
   Object apply(Class theClass, String name, Object[] params) throws Throwable;
   Object apply(MetaClass metaClass, String name, Object[] params) throws Throwable;
   Object apply(Class theClass, StaticCallable callable, String name, Object[] params) throws Throwable;

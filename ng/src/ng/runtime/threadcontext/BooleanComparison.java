@@ -3,10 +3,10 @@ package ng.runtime.threadcontext;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BaseBooleanComparison;
+import ng.runtime.metaclass.BooleanComparisonCategorySupport;
 import ng.runtime.metaclass.MetaClass;
 
-public interface BooleanComparison extends BaseBooleanComparison, BinaryOperation {
+public interface BooleanComparison extends BooleanComparisonCategorySupport, BinaryOperation {
   boolean applyBoolean(Object lhs, Object rhs);
   boolean applyBoolean(MetaClass lhsMetaClass, Object lhs, Object rhs);
   boolean applyBoolean(Object lhs, MetaClass rhsMetaClass, Object rhs);

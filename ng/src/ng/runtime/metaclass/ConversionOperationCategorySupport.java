@@ -7,7 +7,7 @@ import java.util.Map;
  * @author John
  *
  */
-public interface BaseConversionOperation {
+public interface ConversionOperationCategorySupport {
   Map<Object, Conversion> getCategoryConversionCallMap();
   void setCategoryConversionMap(Map<Object, Conversion> categoryConversionMap);
 }

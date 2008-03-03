@@ -1,7 +1,7 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BaseBooleanComparison;
+import ng.runtime.metaclass.BooleanComparisonCategorySupport;
 import ng.runtime.metaclass.primitives.doubleimpl.DoubleBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.doubleimpl.DoubleBooleanComparison;
 import ng.runtime.metaclass.primitives.doubleimpl.DoubleConversion;
@@ -87,7 +87,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.convert;
   }
 
-  public DoubleConversion convert(final BaseConversionOperation conversionOperation) {
+  public DoubleConversion convert(final ConversionOperationCategorySupport conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {
@@ -107,7 +107,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.add;
   }
 
-  public DoubleBinaryArithmeticOperation add(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation add(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -133,7 +133,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.subtract;
   }
 
-  public DoubleBinaryArithmeticOperation subtract(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation subtract(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -159,7 +159,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.multiply;
   }
 
-  public DoubleBinaryArithmeticOperation multiply(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation multiply(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -185,7 +185,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.divide;
   }
 
-  public DoubleBinaryArithmeticOperation divide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation divide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -211,7 +211,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.modulo;
   }
 
-  public DoubleBinaryArithmeticOperation modulo(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation modulo(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -237,7 +237,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.power;
   }
 
-  public DoubleBinaryArithmeticOperation power(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation power(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -263,7 +263,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.remainderDivide;
   }
 
-  public DoubleBinaryArithmeticOperation remainderDivide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public DoubleBinaryArithmeticOperation remainderDivide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final DoubleBinaryArithmeticOperation doubleCategoryOperation = binaryArithmeticOperation.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -277,7 +277,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public BinaryOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public BinaryOperation and(final BinaryLogicalCategorySupport binaryLogicalOperation) {
   final BinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -291,7 +291,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public LogicalBinaryOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation or(final BinaryLogicalCategorySupport binaryLogicalOperation) {
   final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -305,7 +305,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public LogicalBinaryOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation xor(final BinaryLogicalCategorySupport binaryLogicalOperation) {
   final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -319,7 +319,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public ShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
+  public ShiftOperation leftShift(final ShiftCategorySupport shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -333,7 +333,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public ShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
+  public ShiftOperation rightShift(final ShiftCategorySupport shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -347,7 +347,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     }
   }
 
-  public ShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
+  public ShiftOperation unsignedRightShift(final ShiftCategorySupport shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getDoubleCategoryOperation();
 
     if (categoryOperation == null) {
@@ -377,7 +377,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.compare;
   }
 
-  public DoubleIntegerComparison compare(final BaseIntegerComparison integerComparison) {
+  public DoubleIntegerComparison compare(final IntegerComparisonCategorySupport integerComparison) {
   final DoubleIntegerComparison doubleCategoryOperation = integerComparison.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -403,7 +403,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.equals;
   }
 
-  public DoubleBooleanComparison equals(final BaseBooleanComparison booleanComparison) {
+  public DoubleBooleanComparison equals(final BooleanComparisonCategorySupport booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -429,7 +429,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.notEquals;
   }
 
-  public DoubleBooleanComparison notEquals(final BaseBooleanComparison booleanComparison) {
+  public DoubleBooleanComparison notEquals(final BooleanComparisonCategorySupport booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -455,7 +455,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.lessThan;
   }
 
-  public DoubleBooleanComparison lessThan(final BaseBooleanComparison booleanComparison) {
+  public DoubleBooleanComparison lessThan(final BooleanComparisonCategorySupport booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -481,7 +481,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.greaterThan;
   }
 
-  public DoubleBooleanComparison greaterThan(final BaseBooleanComparison booleanComparison) {
+  public DoubleBooleanComparison greaterThan(final BooleanComparisonCategorySupport booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -507,7 +507,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.lessThanOrEquals;
   }
 
-  public DoubleBooleanComparison lessThanOrEquals(final BaseBooleanComparison booleanComparison) {
+  public DoubleBooleanComparison lessThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {
@@ -533,7 +533,7 @@ public class DoubleMetaClassImpl extends FractionalNumberMetaClassImpl implement
     return this.greaterThanOrEquals;
   }
 
-  public DoubleBooleanComparison greaterThanOrEquals(final BaseBooleanComparison booleanComparison) {
+  public DoubleBooleanComparison greaterThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
   final DoubleBooleanComparison doubleCategoryOperation = booleanComparison.getDoubleCategoryOperation();
 
     if (doubleCategoryOperation == null) {

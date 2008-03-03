@@ -16,7 +16,7 @@ import ng.runtime.metaclass.primitives.shortimpl.ShortBinaryArithmeticOperation;
  * @author John
  *
  */
-public interface BaseArithmeticBinaryOperation {
+public interface BinaryArithmeticCategorySupport {
   CharBinaryArithmeticOperation getCharCategoryOperation();
   void setCharCategoryOperation(CharBinaryArithmeticOperation charCategoryOperation);
 

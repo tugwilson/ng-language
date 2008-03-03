@@ -3,7 +3,7 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.bigdecimal;
 import java.math.BigDecimal;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BaseBooleanComparison;
+import ng.runtime.metaclass.BooleanComparisonCategorySupport;
 import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
 import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalConversion;
@@ -89,7 +89,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.convert;
   }
 
-  public BigDecimalConversion convert(final BaseConversionOperation conversionOperation) {
+  public BigDecimalConversion convert(final ConversionOperationCategorySupport conversionOperation) {
     if (this.modifiedConvert == null) {
       return this.convert;
     } else {
@@ -109,7 +109,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.add;
   }
 
-  public BigDecimalBinaryArithmeticOperation add(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation add(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -135,7 +135,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.subtract;
   }
 
-  public BigDecimalBinaryArithmeticOperation subtract(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation subtract(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -161,7 +161,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.multiply;
   }
 
-  public BigDecimalBinaryArithmeticOperation multiply(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation multiply(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -187,7 +187,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.divide;
   }
 
-  public BigDecimalBinaryArithmeticOperation divide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation divide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -213,7 +213,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.modulo;
   }
 
-  public BigDecimalBinaryArithmeticOperation modulo(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation modulo(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -239,7 +239,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.power;
   }
 
-  public BigDecimalBinaryArithmeticOperation power(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation power(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -265,7 +265,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.remainderDivide;
   }
 
-  public BigDecimalBinaryArithmeticOperation remainderDivide(final BaseArithmeticBinaryOperation binaryArithmeticOperation) {
+  public BigDecimalBinaryArithmeticOperation remainderDivide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
   final BigDecimalBinaryArithmeticOperation bigDecimalCategoryOperation = binaryArithmeticOperation.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -279,7 +279,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public BinaryOperation and(final BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public BinaryOperation and(final BinaryLogicalCategorySupport binaryLogicalOperation) {
   final BinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -293,7 +293,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public LogicalBinaryOperation or(final BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation or(final BinaryLogicalCategorySupport binaryLogicalOperation) {
   final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -307,7 +307,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public LogicalBinaryOperation xor(final BaseLogicalBinaryOperation binaryLogicalOperation) {
+  public LogicalBinaryOperation xor(final BinaryLogicalCategorySupport binaryLogicalOperation) {
   final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -321,7 +321,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public ShiftOperation leftShift(final BaseShiftOperation shiftOperation) {
+  public ShiftOperation leftShift(final ShiftCategorySupport shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -335,7 +335,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public ShiftOperation rightShift(final BaseShiftOperation shiftOperation) {
+  public ShiftOperation rightShift(final ShiftCategorySupport shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -349,7 +349,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     }
   }
 
-  public ShiftOperation unsignedRightShift(final BaseShiftOperation shiftOperation) {
+  public ShiftOperation unsignedRightShift(final ShiftCategorySupport shiftOperation) {
   final ShiftOperation categoryOperation = shiftOperation.getBigDecimalCategoryOperation();
 
     if (categoryOperation == null) {
@@ -379,7 +379,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.compare;
   }
 
-  public BigDecimalIntegerComparison compare(final BaseIntegerComparison integerComparison) {
+  public BigDecimalIntegerComparison compare(final IntegerComparisonCategorySupport integerComparison) {
   final BigDecimalIntegerComparison bigDecimalCategoryOperation = integerComparison.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -405,7 +405,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.equals;
   }
 
-  public BigDecimalBooleanComparison equals(final BaseBooleanComparison booleanComparison) {
+  public BigDecimalBooleanComparison equals(final BooleanComparisonCategorySupport booleanComparison) {
   final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -431,7 +431,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.notEquals;
   }
 
-  public BigDecimalBooleanComparison notEquals(final BaseBooleanComparison booleanComparison) {
+  public BigDecimalBooleanComparison notEquals(final BooleanComparisonCategorySupport booleanComparison) {
   final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -457,7 +457,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.lessThan;
   }
 
-  public BigDecimalBooleanComparison lessThan(final BaseBooleanComparison booleanComparison) {
+  public BigDecimalBooleanComparison lessThan(final BooleanComparisonCategorySupport booleanComparison) {
   final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -483,7 +483,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.greaterThan;
   }
 
-  public BigDecimalBooleanComparison greaterThan(final BaseBooleanComparison booleanComparison) {
+  public BigDecimalBooleanComparison greaterThan(final BooleanComparisonCategorySupport booleanComparison) {
   final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -509,7 +509,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.lessThanOrEquals;
   }
 
-  public BigDecimalBooleanComparison lessThanOrEquals(final BaseBooleanComparison booleanComparison) {
+  public BigDecimalBooleanComparison lessThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
   final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
@@ -535,7 +535,7 @@ public class BigDecimalMetaClassImpl extends FractionalNumberMetaClassImpl imple
     return this.greaterThanOrEquals;
   }
 
-  public BigDecimalBooleanComparison greaterThanOrEquals(final BaseBooleanComparison booleanComparison) {
+  public BigDecimalBooleanComparison greaterThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
   final BigDecimalBooleanComparison bigDecimalCategoryOperation = booleanComparison.getBigDecimalCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {

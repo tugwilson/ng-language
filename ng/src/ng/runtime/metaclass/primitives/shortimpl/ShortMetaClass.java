@@ -1,11 +1,11 @@
 package ng.runtime.metaclass.primitives.shortimpl;
 
-import ng.runtime.metaclass.BaseArithmeticBinaryOperation;
-import ng.runtime.metaclass.BaseBooleanComparison;
-import ng.runtime.metaclass.BaseConversionOperation;
-import ng.runtime.metaclass.BaseIntegerComparison;
-import ng.runtime.metaclass.BaseLogicalBinaryOperation;
-import ng.runtime.metaclass.BaseShiftOperation;
+import ng.runtime.metaclass.BinaryArithmeticCategorySupport;
+import ng.runtime.metaclass.BooleanComparisonCategorySupport;
+import ng.runtime.metaclass.ConversionOperationCategorySupport;
+import ng.runtime.metaclass.IntegerComparisonCategorySupport;
+import ng.runtime.metaclass.BinaryLogicalCategorySupport;
+import ng.runtime.metaclass.ShiftCategorySupport;
 import ng.runtime.metaclass.MetaClass;
 
 
@@ -13,85 +13,85 @@ public interface ShortMetaClass extends MetaClass {
 
   void modifyConvert(ShortConversion modifiedConvert);
   ShortConversion getOriginalConvert();
-  ShortConversion convert(BaseConversionOperation conversionOperation);
+  ShortConversion convert(ConversionOperationCategorySupport conversionOperation);
 
   void modifyAdd(ShortBinaryArithmeticOperation modifiedAdd);
   ShortBinaryArithmeticOperation getOriginalAdd();
-  ShortBinaryArithmeticOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation add(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifySubtract(ShortBinaryArithmeticOperation modifiedSubtract);
   ShortBinaryArithmeticOperation getOriginalSubtract();
-  ShortBinaryArithmeticOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation subtract(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyMultiply(ShortBinaryArithmeticOperation modifiedMultiply);
   ShortBinaryArithmeticOperation getOriginalMultiply();
-  ShortBinaryArithmeticOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation multiply(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyDivide(ShortBinaryArithmeticOperation modifiedDivide);
   ShortBinaryArithmeticOperation getOriginalDivide();
-  ShortBinaryArithmeticOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation divide(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyModulo(ShortBinaryArithmeticOperation modifiedModulo);
   ShortBinaryArithmeticOperation getOriginalModulo();
-  ShortBinaryArithmeticOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation modulo(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyRemainderDivide(ShortBinaryArithmeticOperation modifiedRemainderDivide);
   ShortBinaryArithmeticOperation getOriginalRemainderDivide();
-  ShortBinaryArithmeticOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation remainderDivide(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyAnd(ShortBinaryLogicalOperation modifiedAnd);
   ShortBinaryLogicalOperation getOriginalAnd();
-  ShortBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation);
+  ShortBinaryLogicalOperation and(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyOr(ShortBinaryLogicalOperation modifiedOr);
   ShortBinaryLogicalOperation getOriginalOr();
-  ShortBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation);
+  ShortBinaryLogicalOperation or(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyXor(ShortBinaryLogicalOperation modifiedXor);
   ShortBinaryLogicalOperation getOriginalXor();
-  ShortBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation);
+  ShortBinaryLogicalOperation xor(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyLeftShift(ShortShiftOperation modifiedLeftShift);
   ShortShiftOperation getOriginalLeftShift();
-  ShortShiftOperation leftShift(BaseShiftOperation shiftOperation);
+  ShortShiftOperation leftShift(ShiftCategorySupport shiftOperation);
 
   void modifyRightShift(ShortShiftOperation modifiedRightShift);
   ShortShiftOperation getOriginalRightShift();
-  ShortShiftOperation rightShift(BaseShiftOperation shiftOperation);
+  ShortShiftOperation rightShift(ShiftCategorySupport shiftOperation);
 
   void modifyUnsignedRightShift(ShortShiftOperation modifiedUnsignedRightShift);
   ShortShiftOperation getOriginalUnsignedRightShift();
-  ShortShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation);
+  ShortShiftOperation unsignedRightShift(ShiftCategorySupport shiftOperation);
 
   void modifyPower(ShortBinaryArithmeticOperation modifiedPower);
   ShortBinaryArithmeticOperation getOriginalPower();
-  ShortBinaryArithmeticOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  ShortBinaryArithmeticOperation power(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyCompare(ShortIntegerComparison modifiedCompare);
   ShortIntegerComparison getOriginalCompare();
-  ShortIntegerComparison compare(BaseIntegerComparison integerComparison);
+  ShortIntegerComparison compare(IntegerComparisonCategorySupport integerComparison);
 
   void modifyEquals(ShortBooleanComparison modifiedEquals);
   ShortBooleanComparison getOriginalEquals();
-  ShortBooleanComparison equals(BaseBooleanComparison booleanComparison);
+  ShortBooleanComparison equals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyNotEquals(ShortBooleanComparison modifiedNotEquals);
   ShortBooleanComparison getOriginalNotEquals();
-  ShortBooleanComparison notEquals(BaseBooleanComparison booleanComparison);
+  ShortBooleanComparison notEquals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyLessThan(ShortBooleanComparison modifiedLessThan);
   ShortBooleanComparison getOriginalLessThan();
-  ShortBooleanComparison lessThan(BaseBooleanComparison booleanComparison);
+  ShortBooleanComparison lessThan(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyGreaterThan(ShortBooleanComparison modifiedGreaterThan);
   ShortBooleanComparison getOriginalGreaterThan();
-  ShortBooleanComparison greaterThan(BaseBooleanComparison booleanComparison);
+  ShortBooleanComparison greaterThan(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyLessThanOrEquals(ShortBooleanComparison modifiedLessThanOrEquals);
   ShortBooleanComparison getOriginalLessThanOrEquals();
-  ShortBooleanComparison lessThanOrEquals(BaseBooleanComparison booleanComparison);
+  ShortBooleanComparison lessThanOrEquals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyGreaterThanOrEquals(ShortBooleanComparison modifiedGreaterThanOrEquals);
   ShortBooleanComparison getOriginalGreaterThanOrEquals();
-  ShortBooleanComparison greaterThanOrEquals(BaseBooleanComparison booleanComparison);
+  ShortBooleanComparison greaterThanOrEquals(BooleanComparisonCategorySupport booleanComparison);
 }

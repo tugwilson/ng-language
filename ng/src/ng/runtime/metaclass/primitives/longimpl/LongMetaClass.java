@@ -1,11 +1,11 @@
 package ng.runtime.metaclass.primitives.longimpl;
 
-import ng.runtime.metaclass.BaseArithmeticBinaryOperation;
-import ng.runtime.metaclass.BaseBooleanComparison;
-import ng.runtime.metaclass.BaseConversionOperation;
-import ng.runtime.metaclass.BaseIntegerComparison;
-import ng.runtime.metaclass.BaseLogicalBinaryOperation;
-import ng.runtime.metaclass.BaseShiftOperation;
+import ng.runtime.metaclass.BinaryArithmeticCategorySupport;
+import ng.runtime.metaclass.BooleanComparisonCategorySupport;
+import ng.runtime.metaclass.ConversionOperationCategorySupport;
+import ng.runtime.metaclass.IntegerComparisonCategorySupport;
+import ng.runtime.metaclass.BinaryLogicalCategorySupport;
+import ng.runtime.metaclass.ShiftCategorySupport;
 import ng.runtime.metaclass.MetaClass;
 
 
@@ -13,85 +13,85 @@ public interface LongMetaClass extends MetaClass {
 
   void modifyConvert(LongConversion modifiedConvert);
   LongConversion getOriginalConvert();
-  LongConversion convert(BaseConversionOperation conversionOperation);
+  LongConversion convert(ConversionOperationCategorySupport conversionOperation);
 
   void modifyAdd(LongBinaryArithmeticOperation modifiedAdd);
   LongBinaryArithmeticOperation getOriginalAdd();
-  LongBinaryArithmeticOperation add(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation add(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifySubtract(LongBinaryArithmeticOperation modifiedSubtract);
   LongBinaryArithmeticOperation getOriginalSubtract();
-  LongBinaryArithmeticOperation subtract(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation subtract(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyMultiply(LongBinaryArithmeticOperation modifiedMultiply);
   LongBinaryArithmeticOperation getOriginalMultiply();
-  LongBinaryArithmeticOperation multiply(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation multiply(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyDivide(LongBinaryArithmeticOperation modifiedDivide);
   LongBinaryArithmeticOperation getOriginalDivide();
-  LongBinaryArithmeticOperation divide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation divide(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyModulo(LongBinaryArithmeticOperation modifiedModulo);
   LongBinaryArithmeticOperation getOriginalModulo();
-  LongBinaryArithmeticOperation modulo(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation modulo(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyRemainderDivide(LongBinaryArithmeticOperation modifiedRemainderDivide);
   LongBinaryArithmeticOperation getOriginalRemainderDivide();
-  LongBinaryArithmeticOperation remainderDivide(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation remainderDivide(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyPower(LongBinaryArithmeticOperation modifiedPower);
   LongBinaryArithmeticOperation getOriginalPower();
-  LongBinaryArithmeticOperation power(BaseArithmeticBinaryOperation binaryArithmeticOperation);
+  LongBinaryArithmeticOperation power(BinaryArithmeticCategorySupport binaryArithmeticOperation);
 
   void modifyAnd(LongBinaryLogicalOperation modifiedAnd);
   LongBinaryLogicalOperation getOriginalAnd();
-  LongBinaryLogicalOperation and(BaseLogicalBinaryOperation binaryLogicalOperation);
+  LongBinaryLogicalOperation and(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyOr(LongBinaryLogicalOperation modifiedOr);
   LongBinaryLogicalOperation getOriginalOr();
-  LongBinaryLogicalOperation or(BaseLogicalBinaryOperation binaryLogicalOperation);
+  LongBinaryLogicalOperation or(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyXor(LongBinaryLogicalOperation modifiedXor);
   LongBinaryLogicalOperation getOriginalXor();
-  LongBinaryLogicalOperation xor(BaseLogicalBinaryOperation binaryLogicalOperation);
+  LongBinaryLogicalOperation xor(BinaryLogicalCategorySupport binaryLogicalOperation);
 
   void modifyLeftShift(LongShiftOperation modifiedLeftShift);
   LongShiftOperation getOriginalLeftShift();
-  LongShiftOperation leftShift(BaseShiftOperation shiftOperation);
+  LongShiftOperation leftShift(ShiftCategorySupport shiftOperation);
 
   void modifyRightShift(LongShiftOperation modifiedRightShift);
   LongShiftOperation getOriginalRightShift();
-  LongShiftOperation rightShift(BaseShiftOperation shiftOperation);
+  LongShiftOperation rightShift(ShiftCategorySupport shiftOperation);
 
   void modifyUnsignedRightShift(LongShiftOperation modifiedUnsignedRightShift);
   LongShiftOperation getOriginalUnsignedRightShift();
-  LongShiftOperation unsignedRightShift(BaseShiftOperation shiftOperation);
+  LongShiftOperation unsignedRightShift(ShiftCategorySupport shiftOperation);
 
   void modifyCompare(LongIntegerComparison modifiedCompare);
   LongIntegerComparison getOriginalCompare();
-  LongIntegerComparison compare(BaseIntegerComparison integerComparison);
+  LongIntegerComparison compare(IntegerComparisonCategorySupport integerComparison);
 
   void modifyEquals(LongBooleanComparison modifiedEquals);
   LongBooleanComparison getOriginalEquals();
-  LongBooleanComparison equals(BaseBooleanComparison booleanComparison);
+  LongBooleanComparison equals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyNotEquals(LongBooleanComparison modifiedNotEquals);
   LongBooleanComparison getOriginalNotEquals();
-  LongBooleanComparison notEquals(BaseBooleanComparison booleanComparison);
+  LongBooleanComparison notEquals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyLessThan(LongBooleanComparison modifiedLessThan);
   LongBooleanComparison getOriginalLessThan();
-  LongBooleanComparison lessThan(BaseBooleanComparison booleanComparison);
+  LongBooleanComparison lessThan(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyGreaterThan(LongBooleanComparison modifiedGreaterThan);
   LongBooleanComparison getOriginalGreaterThan();
-  LongBooleanComparison greaterThan(BaseBooleanComparison booleanComparison);
+  LongBooleanComparison greaterThan(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyLessThanOrEquals(LongBooleanComparison modifiedLessThanOrEquals);
   LongBooleanComparison getOriginalLessThanOrEquals();
-  LongBooleanComparison lessThanOrEquals(BaseBooleanComparison booleanComparison);
+  LongBooleanComparison lessThanOrEquals(BooleanComparisonCategorySupport booleanComparison);
 
   void modifyGreaterThanOrEquals(LongBooleanComparison modifiedGreaterThanOrEquals);
   LongBooleanComparison getOriginalGreaterThanOrEquals();
-  LongBooleanComparison greaterThanOrEquals(BaseBooleanComparison booleanComparison);
+  LongBooleanComparison greaterThanOrEquals(BooleanComparisonCategorySupport booleanComparison);
 }
