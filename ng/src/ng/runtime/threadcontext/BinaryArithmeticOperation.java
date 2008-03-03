@@ -3,7 +3,6 @@ package ng.runtime.threadcontext;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BinaryArithmeticCategorySupport;
 
 
 public interface BinaryArithmeticOperation extends BinaryArithmeticCategorySupport, BinaryIntegralOperation {

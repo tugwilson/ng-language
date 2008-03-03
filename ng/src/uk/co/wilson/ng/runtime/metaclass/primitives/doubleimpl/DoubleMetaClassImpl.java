@@ -1,13 +1,18 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.doubleimpl;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BooleanComparisonCategorySupport;
 import ng.runtime.metaclass.primitives.doubleimpl.DoubleBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.doubleimpl.DoubleBooleanComparison;
 import ng.runtime.metaclass.primitives.doubleimpl.DoubleConversion;
 import ng.runtime.metaclass.primitives.doubleimpl.DoubleIntegerComparison;
 import ng.runtime.metaclass.primitives.doubleimpl.DoubleMetaClass;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
+import ng.runtime.threadcontext.BinaryArithmeticCategorySupport;
+import ng.runtime.threadcontext.BinaryLogicalCategorySupport;
+import ng.runtime.threadcontext.BooleanComparisonCategorySupport;
+import ng.runtime.threadcontext.ConversionOperationCategorySupport;
+import ng.runtime.threadcontext.IntegerComparisonCategorySupport;
+import ng.runtime.threadcontext.ShiftCategorySupport;
 import uk.co.wilson.ng.runtime.metaclass.BinaryLogicalOperationNoopImpl;
 import uk.co.wilson.ng.runtime.metaclass.ShiftOperationNoopImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.FractionalNumberMetaClassImpl;

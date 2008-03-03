@@ -1,6 +1,9 @@
-package ng.runtime.metaclass;
+package ng.runtime.threadcontext;
 
 import java.util.Map;
+
+import ng.runtime.metaclass.DoStaticMethodCall;
+import ng.runtime.metaclass.MetaClass;
 
 /**
  * @author John
