@@ -3,8 +3,6 @@ package uk.co.wilson.ng.runtime.metaclass.primitives.biginteger;
 import java.math.BigInteger;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BooleanComparisonCategorySupport;
-import ng.runtime.metaclass.ShiftCategorySupport;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
@@ -13,6 +11,12 @@ import ng.runtime.metaclass.primitives.biginteger.BigIntegerIntegerComparison;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerMetaClass;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerShiftOperation;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
+import ng.runtime.threadcontext.BinaryArithmeticCategorySupport;
+import ng.runtime.threadcontext.BinaryLogicalCategorySupport;
+import ng.runtime.threadcontext.BooleanComparisonCategorySupport;
+import ng.runtime.threadcontext.ConversionOperationCategorySupport;
+import ng.runtime.threadcontext.IntegerComparisonCategorySupport;
+import ng.runtime.threadcontext.ShiftCategorySupport;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigIntegerMetaClass {

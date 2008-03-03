@@ -1,7 +1,8 @@
-package ng.runtime.metaclass;
+package ng.runtime.threadcontext;
 
 import java.util.Map;
 
+import ng.runtime.metaclass.LogicalBinaryOperation;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.charimpl.CharBinaryLogicalOperation;

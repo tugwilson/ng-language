@@ -1,8 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.intimpl;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BooleanComparisonCategorySupport;
-import ng.runtime.metaclass.ShiftCategorySupport;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryLogicalOperation;
@@ -11,6 +9,12 @@ import ng.runtime.metaclass.primitives.intimpl.IntConversion;
 import ng.runtime.metaclass.primitives.intimpl.IntIntegerComparison;
 import ng.runtime.metaclass.primitives.intimpl.IntMetaClass;
 import ng.runtime.metaclass.primitives.intimpl.IntShiftOperation;
+import ng.runtime.threadcontext.BinaryArithmeticCategorySupport;
+import ng.runtime.threadcontext.BinaryLogicalCategorySupport;
+import ng.runtime.threadcontext.BooleanComparisonCategorySupport;
+import ng.runtime.threadcontext.ConversionOperationCategorySupport;
+import ng.runtime.threadcontext.IntegerComparisonCategorySupport;
+import ng.runtime.threadcontext.ShiftCategorySupport;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {

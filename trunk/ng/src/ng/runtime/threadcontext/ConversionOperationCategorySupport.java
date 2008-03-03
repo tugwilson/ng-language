@@ -1,7 +1,9 @@
-package ng.runtime.metaclass;
+package ng.runtime.threadcontext;
 
 
 import java.util.Map;
+
+import ng.runtime.metaclass.Conversion;
 
 /**
  * @author John

@@ -1,8 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.byteimpl;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BooleanComparisonCategorySupport;
-import ng.runtime.metaclass.ShiftCategorySupport;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;
@@ -11,6 +9,12 @@ import ng.runtime.metaclass.primitives.byteimpl.ByteIntegerComparison;
 import ng.runtime.metaclass.primitives.byteimpl.ByteMetaClass;
 import ng.runtime.metaclass.primitives.byteimpl.ByteShiftOperation;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
+import ng.runtime.threadcontext.BinaryArithmeticCategorySupport;
+import ng.runtime.threadcontext.BinaryLogicalCategorySupport;
+import ng.runtime.threadcontext.BooleanComparisonCategorySupport;
+import ng.runtime.threadcontext.ConversionOperationCategorySupport;
+import ng.runtime.threadcontext.IntegerComparisonCategorySupport;
+import ng.runtime.threadcontext.ShiftCategorySupport;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 

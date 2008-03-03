@@ -1,6 +1,5 @@
 package ng.runtime.threadcontext;
 
-import ng.runtime.metaclass.ShiftCategorySupport;
 
 
 /**

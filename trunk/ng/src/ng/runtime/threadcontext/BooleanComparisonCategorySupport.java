@@ -1,7 +1,8 @@
-package ng.runtime.metaclass;
+package ng.runtime.threadcontext;
 
 import java.util.Map;
 
+import ng.runtime.metaclass.BooleanBinaryComparison;
 import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerBooleanComparison;
 import ng.runtime.metaclass.primitives.byteimpl.ByteBooleanComparison;

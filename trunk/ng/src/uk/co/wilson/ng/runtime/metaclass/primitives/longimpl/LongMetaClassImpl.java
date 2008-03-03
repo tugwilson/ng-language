@@ -1,8 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.longimpl;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BooleanComparisonCategorySupport;
-import ng.runtime.metaclass.ShiftCategorySupport;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import ng.runtime.metaclass.primitives.longimpl.LongBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.longimpl.LongBinaryLogicalOperation;
@@ -11,6 +9,12 @@ import ng.runtime.metaclass.primitives.longimpl.LongConversion;
 import ng.runtime.metaclass.primitives.longimpl.LongIntegerComparison;
 import ng.runtime.metaclass.primitives.longimpl.LongMetaClass;
 import ng.runtime.metaclass.primitives.longimpl.LongShiftOperation;
+import ng.runtime.threadcontext.BinaryArithmeticCategorySupport;
+import ng.runtime.threadcontext.BinaryLogicalCategorySupport;
+import ng.runtime.threadcontext.BooleanComparisonCategorySupport;
+import ng.runtime.threadcontext.ConversionOperationCategorySupport;
+import ng.runtime.threadcontext.IntegerComparisonCategorySupport;
+import ng.runtime.threadcontext.ShiftCategorySupport;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {

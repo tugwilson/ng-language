@@ -1,10 +1,10 @@
 package ng.runtime.metaclass.primitives.bigdecimal;
 
-import ng.runtime.metaclass.BinaryArithmeticCategorySupport;
-import ng.runtime.metaclass.BooleanComparisonCategorySupport;
-import ng.runtime.metaclass.ConversionOperationCategorySupport;
-import ng.runtime.metaclass.IntegerComparisonCategorySupport;
 import ng.runtime.metaclass.MetaClass;
+import ng.runtime.threadcontext.BinaryArithmeticCategorySupport;
+import ng.runtime.threadcontext.BooleanComparisonCategorySupport;
+import ng.runtime.threadcontext.ConversionOperationCategorySupport;
+import ng.runtime.threadcontext.IntegerComparisonCategorySupport;
 
 
 public interface BigDecimalMetaClass extends MetaClass {

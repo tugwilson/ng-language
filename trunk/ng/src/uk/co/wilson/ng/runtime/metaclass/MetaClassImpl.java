@@ -4,6 +4,12 @@ import java.util.Map;
 
 import ng.runtime.metaclass.*;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
+import ng.runtime.threadcontext.BinaryArithmeticCategorySupport;
+import ng.runtime.threadcontext.BinaryLogicalCategorySupport;
+import ng.runtime.threadcontext.BooleanComparisonCategorySupport;
+import ng.runtime.threadcontext.ConversionOperationCategorySupport;
+import ng.runtime.threadcontext.IntegerComparisonCategorySupport;
+import ng.runtime.threadcontext.ShiftCategorySupport;
 
 /**
  * @author John

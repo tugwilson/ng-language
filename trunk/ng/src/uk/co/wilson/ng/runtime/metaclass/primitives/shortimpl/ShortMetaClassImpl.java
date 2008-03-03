@@ -1,8 +1,6 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl;
 
 import ng.runtime.metaclass.*;
-import ng.runtime.metaclass.BooleanComparisonCategorySupport;
-import ng.runtime.metaclass.ShiftCategorySupport;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import ng.runtime.metaclass.primitives.shortimpl.ShortBinaryArithmeticOperation;
 import ng.runtime.metaclass.primitives.shortimpl.ShortBinaryLogicalOperation;
@@ -11,6 +9,12 @@ import ng.runtime.metaclass.primitives.shortimpl.ShortConversion;
 import ng.runtime.metaclass.primitives.shortimpl.ShortIntegerComparison;
 import ng.runtime.metaclass.primitives.shortimpl.ShortMetaClass;
 import ng.runtime.metaclass.primitives.shortimpl.ShortShiftOperation;
+import ng.runtime.threadcontext.BinaryArithmeticCategorySupport;
+import ng.runtime.threadcontext.BinaryLogicalCategorySupport;
+import ng.runtime.threadcontext.BooleanComparisonCategorySupport;
+import ng.runtime.threadcontext.ConversionOperationCategorySupport;
+import ng.runtime.threadcontext.IntegerComparisonCategorySupport;
+import ng.runtime.threadcontext.ShiftCategorySupport;
 import uk.co.wilson.ng.runtime.metaclass.BaseMetaClass;
 
 public class ShortMetaClassImpl extends BaseMetaClass implements ShortMetaClass {

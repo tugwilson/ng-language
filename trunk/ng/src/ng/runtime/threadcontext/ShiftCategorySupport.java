@@ -1,7 +1,8 @@
-package ng.runtime.metaclass;
+package ng.runtime.threadcontext;
 
 import java.util.Map;
 
+import ng.runtime.metaclass.ShiftOperation;
 import ng.runtime.metaclass.primitives.biginteger.BigIntegerShiftOperation;
 import ng.runtime.metaclass.primitives.byteimpl.ByteShiftOperation;
 import ng.runtime.metaclass.primitives.charimpl.CharShiftOperation;
