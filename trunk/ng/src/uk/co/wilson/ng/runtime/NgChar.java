@@ -1,11 +1,11 @@
 package uk.co.wilson.ng.runtime;
 
-import ng.lang.NgObject;
+import ng.runtime.BaseNgObject;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.primitives.charimpl.CharMetaClass;
 import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
-public class NgChar extends NgObject {
+public class NgChar extends BaseNgObject {
   private static final CharMetaClass metaclass = PrimitiveMetaClasses.getCharMetaClass();
 
   public static CharMetaClass get$MetaClass() {
@@ -22,7 +22,6 @@ public class NgChar extends NgObject {
     this.value = value;
   }
 
-  @Override
   public MetaClass getMetaClass() {
     return get$MetaClass();
   }

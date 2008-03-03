@@ -1,11 +1,11 @@
 package uk.co.wilson.ng.runtime;
 
-import ng.lang.NgObject;
+import ng.runtime.BaseNgObject;
 import ng.runtime.metaclass.BooleanMetaClass;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
-public class NgBoolean extends NgObject {
+public class NgBoolean extends BaseNgObject {
   private static final BooleanMetaClass metaclass = PrimitiveMetaClasses.getBooleanMetaClass();
   private static NgBoolean TRUE = new NgBoolean(true);
   private static NgBoolean FALSE = new NgBoolean(false);
@@ -24,7 +24,6 @@ public class NgBoolean extends NgObject {
     this.value = value;
   }
 
-  @Override
   public MetaClass getMetaClass() {
     return get$MetaClass();
   }

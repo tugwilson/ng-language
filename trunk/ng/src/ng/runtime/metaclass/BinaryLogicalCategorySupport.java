@@ -33,7 +33,7 @@ import ng.runtime.metaclass.primitives.shortimpl.ShortBinaryLogicalOperation;
  * @author John
  *
  */
-public interface BaseLogicalBinaryOperation {
+public interface BinaryLogicalCategorySupport {
   CharBinaryLogicalOperation getCharCategoryOperation();
   void setCharCategoryOperation(CharBinaryLogicalOperation charCategoryOperation);
 

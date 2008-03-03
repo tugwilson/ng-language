@@ -16,7 +16,7 @@ import ng.runtime.metaclass.primitives.shortimpl.ShortBooleanComparison;
  * @author John
  *
  */
-public interface BaseBooleanComparison {
+public interface BooleanComparisonCategorySupport {
   CharBooleanComparison getCharCategoryOperation();
   void setCharCategoryOperation(CharBooleanComparison charCategoryOperation);
 

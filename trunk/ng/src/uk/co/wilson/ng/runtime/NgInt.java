@@ -1,11 +1,11 @@
 package uk.co.wilson.ng.runtime;
 
-import ng.lang.NgObject;
+import ng.runtime.BaseNgObject;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.metaclass.primitives.intimpl.IntMetaClass;
 import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
-public class NgInt extends NgObject {
+public class NgInt extends BaseNgObject {
   private static final IntMetaClass metaclass = PrimitiveMetaClasses.getIntMetaClass();
 
   public static IntMetaClass get$MetaClass() {
@@ -22,7 +22,6 @@ public class NgInt extends NgObject {
     this.value = value;
   }
 
-  @Override
   public MetaClass getMetaClass() {
     return get$MetaClass();
   }

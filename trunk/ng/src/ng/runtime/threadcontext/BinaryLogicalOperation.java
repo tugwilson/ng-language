@@ -2,7 +2,7 @@ package ng.runtime.threadcontext;
 
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BaseLogicalBinaryOperation;
+import ng.runtime.metaclass.BinaryLogicalCategorySupport;
 
 
 
@@ -10,7 +10,7 @@ import ng.runtime.metaclass.BaseLogicalBinaryOperation;
  * @author John
  *
  */
-public interface BinaryLogicalOperation extends BaseLogicalBinaryOperation, BinaryIntegralOperation {
+public interface BinaryLogicalOperation extends BinaryLogicalCategorySupport, BinaryIntegralOperation {
   long longApply(char lhs, long rhs) throws NotPerformed;
   BigInteger bigIntegerApply(char lhs, BigInteger rhs) throws NotPerformed;
 

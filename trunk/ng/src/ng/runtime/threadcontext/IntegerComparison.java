@@ -3,14 +3,14 @@ package ng.runtime.threadcontext;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import ng.runtime.metaclass.BaseIntegerComparison;
+import ng.runtime.metaclass.IntegerComparisonCategorySupport;
 import ng.runtime.metaclass.MetaClass;
 
 /**
  * @author John
  *
  */
-public interface IntegerComparison extends BaseIntegerComparison, BinaryOperation {
+public interface IntegerComparison extends IntegerComparisonCategorySupport, BinaryOperation {
   int intApply(Object lhs, Object rhs);
   int intApply(MetaClass lhsMetaClass, Object lhs, Object rhs);
   int intApply(Object lhs, MetaClass rhsMetaClass, Object rhs);

@@ -17,7 +17,7 @@ import ng.runtime.metaclass.primitives.shortimpl.ShortIntegerComparison;
  * @author John
  *
  */
-public interface BaseIntegerComparison {
+public interface IntegerComparisonCategorySupport {
   CharIntegerComparison getCharCategoryOperation();
   void setCharCategoryOperation(CharIntegerComparison charCategoryOperation);
 
