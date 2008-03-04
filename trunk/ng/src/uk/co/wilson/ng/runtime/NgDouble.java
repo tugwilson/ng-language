@@ -7,12 +7,19 @@ import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
 public class NgDouble extends BaseNgObject {
   private static final DoubleMetaClass metaclass = PrimitiveMetaClasses.getDoubleMetaClass();
+  
+  private static final NgDouble zero = new NgDouble(0.0);
+  private static final NgDouble one = new NgDouble(1.0);
 
   public static DoubleMetaClass get$MetaClass() {
     return metaclass;
   }
 
   public static NgDouble valueOf(final double value) {
+    if (value == 0.0) return zero;
+    
+    if (value == 1.0) return one;
+    
     return new NgDouble(value);
   }
 
