@@ -1,14 +1,13 @@
 /// by Erik Wrenholt
 import java.util.Date;
 
-class MandelbrotJava
-{
+class MandelbrotJava {
   static int BAILOUT = 16;
+
   static int MAX_ITERATIONS = 1000;
 
-  private static int iterate(final float x, final float y)
-  {
-    final float cr = y-0.5f;
+  private static int iterate(final float x, final float y) {
+    final float cr = y - 0.5f;
     final float ci = x;
     float zi = 0.0f;
     float zr = 0.0f;
@@ -20,23 +19,22 @@ class MandelbrotJava
       final float zi2 = zi * zi;
       zr = zr2 - zi2 + cr;
       zi = temp + temp + ci;
-      if (zi2 + zr2 > BAILOUT) {
+      if (zi2 + zr2 > MandelbrotJava.BAILOUT) {
         return i;
       }
-      if (i > MAX_ITERATIONS) {
+      if (i > MandelbrotJava.MAX_ITERATIONS) {
         return 0;
       }
     }
   }
 
-  public static void main(final String args[])
-  {
+  public static void main(final String args[]) {
     final Date d1 = new Date();
-    int x,y;
+    int x, y;
     for (y = -39; y < 39; y++) {
-    // System.out.print("\n");
+      // System.out.print("\n");
       for (x = -39; x < 39; x++) {
-        if (iterate(x/40.0f,y/40.0f) == 0) {
+        if (iterate(x / 40.0f, y / 40.0f) == 0) {
           ;// System.out.print("*");
         } else {
           ;// System.out.print(" ");
@@ -46,7 +44,7 @@ class MandelbrotJava
     }
     final Date d2 = new Date();
     final long diff = d2.getTime() - d1.getTime();
-    System.out.println("\nJava Elapsed " + diff/1000.0f);
+    System.out.println("\nJava Elapsed " + diff / 1000.0f);
 
   }
 }

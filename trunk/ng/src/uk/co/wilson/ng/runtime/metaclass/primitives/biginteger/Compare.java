@@ -29,67 +29,67 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public class Compare extends BaseBinaryOperation implements BigIntegerIntegerComparison {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.compare().apply((BigInteger)lhs, rhs);
+    return tc.compare().apply((BigInteger) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.compare().apply((BigInteger)lhs, rhsMetaClass, rhs);
+    return tc.compare().apply((BigInteger) lhs, rhsMetaClass, rhs);
   }
 
   public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.compare().apply(lhs, (BigDecimal)rhs);
+    return tc.compare().apply(lhs, (BigDecimal) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.compare().intApply((BigInteger)lhs, rhs);
+    return tc.compare().intApply((BigInteger) lhs, rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.compare().intApply((BigInteger)lhs, rhsMetaClass, rhs);
+    return tc.compare().intApply((BigInteger) lhs, rhsMetaClass, rhs);
   }
 
   public int doReverseIntApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.compare().intApply(lhs, (BigInteger)rhs);
+    return tc.compare().intApply(lhs, (BigInteger) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) throws NotPerformed {
-    return tc.compare().intApply(lhs, (BigInteger)rhs);
+    return tc.compare().intApply(lhs, (BigInteger) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final byte lhs, final Object rhs) throws NotPerformed {
-    return tc.compare().intApply(lhs, (BigInteger)rhs);
+    return tc.compare().intApply(lhs, (BigInteger) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final short lhs, final Object rhs) throws NotPerformed {
-    return tc.compare().intApply(lhs, (BigInteger)rhs);
+    return tc.compare().intApply(lhs, (BigInteger) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final int lhs, final Object rhs) throws NotPerformed {
-    return tc.compare().intApply(lhs, (BigInteger)rhs);
+    return tc.compare().intApply(lhs, (BigInteger) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final long lhs, final Object rhs) throws NotPerformed {
-    return tc.compare().intApply(lhs, (BigInteger)rhs);
+    return tc.compare().intApply(lhs, (BigInteger) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final float lhs, final Object rhs) throws NotPerformed {
-    return tc.compare().intApply(lhs, (BigInteger)rhs);
+    return tc.compare().intApply(lhs, (BigInteger) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final double lhs, final Object rhs) throws NotPerformed {
-    return tc.compare().intApply(lhs, (BigInteger)rhs);
+    return tc.compare().intApply(lhs, (BigInteger) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) throws NotPerformed {
-    return tc.compare().intApply(lhs, (BigInteger)rhs);
+    return tc.compare().intApply(lhs, (BigInteger) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) throws NotPerformed {
-    return tc.compare().intApply(lhs, (BigInteger)rhs);
+    return tc.compare().intApply(lhs, (BigInteger) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final BigInteger lhs, final char rhs) throws NotPerformed {
@@ -113,11 +113,11 @@ public class Compare extends BaseBinaryOperation implements BigIntegerIntegerCom
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final BigInteger lhs, final float rhs) throws NotPerformed {
-    return lhs.compareTo(BigInteger.valueOf((long)rhs));
+    return lhs.compareTo(BigInteger.valueOf((long) rhs));
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final BigInteger lhs, final double rhs) throws NotPerformed {
-    return lhs.compareTo(BigInteger.valueOf((long)rhs));
+    return lhs.compareTo(BigInteger.valueOf((long) rhs));
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final BigInteger lhs, final BigInteger rhs) throws NotPerformed {
@@ -273,38 +273,38 @@ public class Compare extends BaseBinaryOperation implements BigIntegerIntegerCom
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final char rhs) throws NotPerformed {
-    return doIntApply(tc, (BigInteger)lhs, rhs);
+    return doIntApply(tc, (BigInteger) lhs, rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final byte rhs) throws NotPerformed {
-    return doIntApply(tc, (BigInteger)lhs, rhs);
+    return doIntApply(tc, (BigInteger) lhs, rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final short rhs) throws NotPerformed {
-    return doIntApply(tc, (BigInteger)lhs, rhs);
+    return doIntApply(tc, (BigInteger) lhs, rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final int rhs) throws NotPerformed {
-    return doIntApply(tc, (BigInteger)lhs, rhs);
+    return doIntApply(tc, (BigInteger) lhs, rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final long rhs) throws NotPerformed {
-    return doIntApply(tc, (BigInteger)lhs, rhs);
+    return doIntApply(tc, (BigInteger) lhs, rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final float rhs) throws NotPerformed {
-    return doIntApply(tc, (BigInteger)lhs, rhs);
+    return doIntApply(tc, (BigInteger) lhs, rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final double rhs) throws NotPerformed {
-    return doIntApply(tc, (BigInteger)lhs, rhs);
+    return doIntApply(tc, (BigInteger) lhs, rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final BigInteger rhs) throws NotPerformed {
-    return doIntApply(tc, (BigInteger)lhs, rhs);
+    return doIntApply(tc, (BigInteger) lhs, rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final BigDecimal rhs) throws NotPerformed {
-    return doIntApply(tc, (BigInteger)lhs, rhs);
+    return doIntApply(tc, (BigInteger) lhs, rhs);
   }
 }

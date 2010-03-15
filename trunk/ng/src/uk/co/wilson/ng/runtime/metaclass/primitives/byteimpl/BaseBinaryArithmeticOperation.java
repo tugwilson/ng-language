@@ -9,7 +9,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public abstract class BaseBinaryArithmeticOperation extends BaseBinaryOperation implements ByteBinaryArithmeticOperation {
 

@@ -10,7 +10,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class OneShortParameterSingletonStaticMethodProxy extends OneParameterSingletonStaticMethodProxy {
   /**
@@ -27,12 +27,12 @@ public class OneShortParameterSingletonStaticMethodProxy extends OneParameterSin
 
   @Override
   public Object doStaticCallQuick(final ExtendedThreadContext tc, final char p1) throws Throwable {
-    return doStaticCallQuick(tc, (short)p1);
+    return doStaticCallQuick(tc, (short) p1);
   }
 
   @Override
   public Object doStaticCallQuick(final ExtendedThreadContext tc, final byte p1) throws Throwable {
-    return doStaticCallQuick(tc, (short)p1);
+    return doStaticCallQuick(tc, (short) p1);
   }
 
   @Override
@@ -54,22 +54,22 @@ public class OneShortParameterSingletonStaticMethodProxy extends OneParameterSin
 
   @Override
   public Object doStaticCallQuick(final ExtendedThreadContext tc, final int p1) throws Throwable {
-    return doStaticCallQuick(tc, (short)p1);
+    return doStaticCallQuick(tc, (short) p1);
   }
 
   @Override
   public Object doStaticCallQuick(final ExtendedThreadContext tc, final long p1) throws Throwable {
-    return doStaticCallQuick(tc, (short)p1);
+    return doStaticCallQuick(tc, (short) p1);
   }
 
   @Override
   public Object doStaticCallQuick(final ExtendedThreadContext tc, final float p1) throws Throwable {
-    return doStaticCallQuick(tc, (short)p1);
+    return doStaticCallQuick(tc, (short) p1);
   }
 
   @Override
   public Object doStaticCallQuick(final ExtendedThreadContext tc, final double p1) throws Throwable {
-    return doStaticCallQuick(tc, (short)p1);
+    return doStaticCallQuick(tc, (short) p1);
   }
 
   @Override

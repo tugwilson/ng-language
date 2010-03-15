@@ -1,4 +1,5 @@
 package ng.ast;
+
 /*
  * Created on 24 Apr 2007
  *
@@ -20,7 +21,7 @@ package ng.ast;
 
 /**
  * @author John
- *
+ * 
  */
 public interface Finally extends Statement {
   Block getBlock();

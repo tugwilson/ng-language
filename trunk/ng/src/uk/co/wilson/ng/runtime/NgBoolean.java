@@ -7,15 +7,17 @@ import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
 public class NgBoolean extends BaseNgObject {
   private static final BooleanMetaClass metaclass = PrimitiveMetaClasses.getBooleanMetaClass();
+
   private static NgBoolean TRUE = new NgBoolean(true);
+
   private static NgBoolean FALSE = new NgBoolean(false);
 
   public static BooleanMetaClass get$MetaClass() {
-    return metaclass;
+    return NgBoolean.metaclass;
   }
 
   public static NgBoolean valueOf(final boolean value) {
-    return (value) ? TRUE : FALSE;
+    return (value) ? NgBoolean.TRUE : NgBoolean.FALSE;
   }
 
   private final boolean value;
@@ -32,7 +34,9 @@ public class NgBoolean extends BaseNgObject {
     return this.value;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see java.lang.Object#toString()
    */
   @Override

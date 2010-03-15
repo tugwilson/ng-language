@@ -27,13 +27,18 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public interface LongBinaryLogicalOperation extends LogicalBinaryOperation, LongBinaryOperation {
   long doLongApply(ExtendedThreadContext tc, long lhs, char rhs) throws NotPerformed;
+
   long doLongApply(ExtendedThreadContext tc, long lhs, byte rhs) throws NotPerformed;
+
   long doLongApply(ExtendedThreadContext tc, long lhs, short rhs) throws NotPerformed;
+
   long doLongApply(ExtendedThreadContext tc, long lhs, int rhs) throws NotPerformed;
+
   long doLongApply(ExtendedThreadContext tc, long lhs, long rhs) throws NotPerformed;
+
   BigInteger doBigIntegerApply(ExtendedThreadContext tc, long lhs, BigInteger rhs) throws NotPerformed;
 }

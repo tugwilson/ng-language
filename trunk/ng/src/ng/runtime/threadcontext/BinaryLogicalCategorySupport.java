@@ -10,7 +10,6 @@ import ng.runtime.metaclass.primitives.intimpl.IntBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.longimpl.LongBinaryLogicalOperation;
 import ng.runtime.metaclass.primitives.shortimpl.ShortBinaryLogicalOperation;
 
-
 /*
  * Created on 26 Feb 2008
  *
@@ -32,36 +31,46 @@ import ng.runtime.metaclass.primitives.shortimpl.ShortBinaryLogicalOperation;
 
 /**
  * @author John
- *
+ * 
  */
 public interface BinaryLogicalCategorySupport {
   CharBinaryLogicalOperation getCharCategoryOperation();
+
   void setCharCategoryOperation(CharBinaryLogicalOperation charCategoryOperation);
 
   ByteBinaryLogicalOperation getByteCategoryOperation();
+
   void setByteCategoryOperation(ByteBinaryLogicalOperation byteCategoryOperation);
 
   ShortBinaryLogicalOperation getShortCategoryOperation();
+
   void setShortCategoryOperation(ShortBinaryLogicalOperation shortCategoryOperation);
 
   IntBinaryLogicalOperation getIntCategoryOperation();
+
   void setIntCategoryOperation(IntBinaryLogicalOperation intCategoryOperation);
 
   LongBinaryLogicalOperation getLongCategoryOperation();
+
   void setLongCategoryOperation(LongBinaryLogicalOperation longCategoryOperation);
 
   LogicalBinaryOperation getFloatCategoryOperation();
+
   void setFloatCategoryOperation(LogicalBinaryOperation floatCategoryOperation);
 
   LogicalBinaryOperation getDoubleCategoryOperation();
+
   void setDoubleCategoryOperation(LogicalBinaryOperation doubleCategoryOperation);
 
   BigIntegerBinaryLogicalOperation getBigIntegerCategoryOperation();
+
   void setBigIntegerCategoryOperation(BigIntegerBinaryLogicalOperation bigIntegerCategoryOperation);
 
   LogicalBinaryOperation getBigDecimalCategoryOperation();
+
   void setBigDecimalCategoryOperation(LogicalBinaryOperation bigDecimalCategoryOperation);
 
   Map<Object, LogicalBinaryOperation> getCategoryBinaryOperationMap();
+
   void setCategoryBinaryOperationMap(Map<Object, LogicalBinaryOperation> categoryBinaryOperationMap);
 }

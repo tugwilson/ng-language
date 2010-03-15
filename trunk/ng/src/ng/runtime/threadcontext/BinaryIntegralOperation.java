@@ -23,40 +23,61 @@ import java.math.BigInteger;
 
 /**
  * @author John
- *
+ * 
  */
 public interface BinaryIntegralOperation extends BinaryOperation {
 
   int intApply(char lhs, char rhs) throws NotPerformed;
+
   int intApply(char lhs, byte rhs) throws NotPerformed;
+
   int intApply(char lhs, short rhs) throws NotPerformed;
+
   int intApply(char lhs, int rhs) throws NotPerformed;
 
   int intApply(byte lhs, char rhs) throws NotPerformed;
+
   int intApply(byte lhs, byte rhs) throws NotPerformed;
+
   int intApply(byte lhs, short rhs) throws NotPerformed;
+
   int intApply(byte lhs, int rhs) throws NotPerformed;
 
   int intApply(short lhs, char rhs) throws NotPerformed;
+
   int intApply(short lhs, byte rhs) throws NotPerformed;
+
   int intApply(short lhs, short rhs) throws NotPerformed;
+
   int intApply(short lhs, int rhs) throws NotPerformed;
 
   int intApply(int lhs, char rhs) throws NotPerformed;
+
   int intApply(int lhs, byte rhs) throws NotPerformed;
+
   int intApply(int lhs, short rhs) throws NotPerformed;
+
   int intApply(int lhs, int rhs) throws NotPerformed;
 
   long longApply(long lhs, char rhs) throws NotPerformed;
+
   long longApply(long lhs, byte rhs) throws NotPerformed;
+
   long longApply(long lhs, short rhs) throws NotPerformed;
+
   long longApply(long lhs, int rhs) throws NotPerformed;
+
   long longApply(long lhs, long rhs) throws NotPerformed;
 
   BigInteger bigIntegerApply(BigInteger lhs, char rhs) throws NotPerformed;
+
   BigInteger bigIntegerApply(BigInteger lhs, byte rhs) throws NotPerformed;
+
   BigInteger bigIntegerApply(BigInteger lhs, short rhs) throws NotPerformed;
+
   BigInteger bigIntegerApply(BigInteger lhs, int rhs) throws NotPerformed;
+
   BigInteger bigIntegerApply(BigInteger lhs, long rhs) throws NotPerformed;
+
   BigInteger bigIntegerApply(BigInteger lhs, BigInteger rhs) throws NotPerformed;
 }

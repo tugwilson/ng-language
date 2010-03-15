@@ -11,7 +11,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.ArithmeticOperationWrapper;
 
 /**
  * @author John
- *
+ * 
  */
 public class LongBinaryArithmeticOperationWrapper extends ArithmeticOperationWrapper implements LongBinaryArithmeticOperation {
 

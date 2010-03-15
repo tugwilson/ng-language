@@ -17,34 +17,50 @@ import ng.runtime.threadcontext.ShiftCategorySupport;
 
 /**
  * @author John
- *
+ * 
  */
 public class MetaClassImpl extends BaseMetaClass {
 
   protected volatile Conversion modifiedConvert = null;
 
   protected volatile BinaryOperation modifiedAdd = null;
+
   protected volatile BinaryOperation modifiedSubtract = null;
+
   protected volatile BinaryOperation modifiedMultiply = null;
+
   protected volatile BinaryOperation modifiedDivide = null;
+
   protected volatile BinaryOperation modifiedModulo = null;
+
   protected volatile BinaryOperation modifiedRemainderDivide = null;
+
   protected volatile BinaryOperation modifiedPower = null;
 
   protected volatile LogicalBinaryOperation modifiedAnd = null;
+
   protected volatile LogicalBinaryOperation modifiedOr = null;
+
   protected volatile LogicalBinaryOperation modifiedXor = null;
+
   protected volatile ShiftOperation modifiedLeftShift = null;
+
   protected volatile ShiftOperation modifiedRightShift = null;
+
   protected volatile ShiftOperation modifiedUnsignedRightShift = null;
 
   protected volatile IntBinaryComparison modifiedCompare = null;
 
   protected volatile BooleanBinaryComparison modifiedEquals = null;
+
   protected volatile BooleanBinaryComparison modifiedNotEquals = null;
+
   protected volatile BooleanBinaryComparison modifiedLessThan = null;
+
   protected volatile BooleanBinaryComparison modifiedGreaterThan = null;
+
   protected volatile BooleanBinaryComparison modifiedLessThanOrEquals = null;
+
   protected volatile BooleanBinaryComparison modifiedGreaterThanOrEquals = null;
 
   /**
@@ -68,10 +84,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public Conversion convert(final ConversionOperationCategorySupport conversionOperation) {
-  final Map<Object, Conversion> categoryOperationMap = conversionOperation.getCategoryConversionCallMap();
+    final Map<Object, Conversion> categoryOperationMap = conversionOperation.getCategoryConversionCallMap();
 
-    if(categoryOperationMap != null) {
-    final Conversion operation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final Conversion operation = categoryOperationMap.get(this);
 
       if (operation != null) {
         return operation;
@@ -94,10 +110,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BinaryOperation add(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+    final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -120,10 +136,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BinaryOperation subtract(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+    final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -146,10 +162,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BinaryOperation multiply(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+    final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -172,10 +188,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BinaryOperation divide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+    final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -198,10 +214,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BinaryOperation modulo(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+    final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -224,10 +240,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BinaryOperation remainderDivide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+    final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -250,10 +266,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BinaryOperation power(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
+    final Map<Object, BinaryOperation> categoryOperationMap = binaryArithmeticOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final BinaryOperation arithmeticBinaryOperation = categoryOperationMap.get(this);
 
       if (arithmeticBinaryOperation != null) {
         return arithmeticBinaryOperation;
@@ -276,10 +292,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public LogicalBinaryOperation and(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
+    final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final LogicalBinaryOperation logicalBinaryOperation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final LogicalBinaryOperation logicalBinaryOperation = categoryOperationMap.get(this);
 
       if (logicalBinaryOperation != null) {
         return logicalBinaryOperation;
@@ -302,10 +318,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public LogicalBinaryOperation or(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
+    final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final LogicalBinaryOperation logicalBinaryOperation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final LogicalBinaryOperation logicalBinaryOperation = categoryOperationMap.get(this);
 
       if (logicalBinaryOperation != null) {
         return logicalBinaryOperation;
@@ -328,10 +344,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public LogicalBinaryOperation xor(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
+    final Map<Object, LogicalBinaryOperation> categoryOperationMap = binaryLogicalOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final LogicalBinaryOperation logicalBinaryOperation = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final LogicalBinaryOperation logicalBinaryOperation = categoryOperationMap.get(this);
 
       if (logicalBinaryOperation != null) {
         return logicalBinaryOperation;
@@ -354,10 +370,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ShiftOperation leftShift(final ShiftCategorySupport shiftOperation) {
-  final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
+    final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final ShiftOperation shiftOp = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final ShiftOperation shiftOp = categoryOperationMap.get(this);
 
       if (shiftOp != null) {
         return shiftOp;
@@ -380,10 +396,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ShiftOperation rightShift(final ShiftCategorySupport shiftOperation) {
-  final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
+    final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final ShiftOperation shiftOp = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final ShiftOperation shiftOp = categoryOperationMap.get(this);
 
       if (shiftOp != null) {
         return shiftOp;
@@ -406,10 +422,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public ShiftOperation unsignedRightShift(final ShiftCategorySupport shiftOperation) {
-  final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
+    final Map<Object, ShiftOperation> categoryOperationMap = shiftOperation.getCategoryBinaryOperationMap();
 
-    if(categoryOperationMap != null) {
-    final ShiftOperation shiftOp = categoryOperationMap.get(this);
+    if (categoryOperationMap != null) {
+      final ShiftOperation shiftOp = categoryOperationMap.get(this);
 
       if (shiftOp != null) {
         return shiftOp;
@@ -432,10 +448,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public IntBinaryComparison compare(final IntegerComparisonCategorySupport integerComparison) {
-  final Map<Object, IntBinaryComparison> categoryOperationMap = integerComparison.getCategoryOperationMap();
+    final Map<Object, IntBinaryComparison> categoryOperationMap = integerComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
-    final IntBinaryComparison categoryIntegerBinaryComparison = categoryOperationMap.get(this);
+      final IntBinaryComparison categoryIntegerBinaryComparison = categoryOperationMap.get(this);
 
       if (categoryIntegerBinaryComparison != null) {
         return categoryIntegerBinaryComparison;
@@ -458,10 +474,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison equals(final BooleanComparisonCategorySupport booleanComparison) {
-  final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
+    final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
-    final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
+      final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
 
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
@@ -484,10 +500,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison notEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
+    final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
-    final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
+      final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
 
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
@@ -510,10 +526,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison lessThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
+    final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
-    final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
+      final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
 
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
@@ -536,10 +552,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison greaterThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
+    final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
-    final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
+      final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
 
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
@@ -562,10 +578,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison lessThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
+    final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
-    final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
+      final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
 
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;
@@ -588,10 +604,10 @@ public class MetaClassImpl extends BaseMetaClass {
   }
 
   public BooleanBinaryComparison greaterThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
+    final Map<Object, BooleanBinaryComparison> categoryOperationMap = booleanComparison.getCategoryOperationMap();
 
     if (categoryOperationMap != null) {
-    final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
+      final BooleanBinaryComparison categoryBooleanBinaryComparison = categoryOperationMap.get(this);
 
       if (categoryBooleanBinaryComparison != null) {
         return categoryBooleanBinaryComparison;

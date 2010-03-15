@@ -8,7 +8,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class Power extends BaseBinaryArithmeticOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
@@ -60,27 +60,27 @@ public class Power extends BaseBinaryArithmeticOperation {
   }
 
   public float doFloatApply(final ExtendedThreadContext tc, final float lhs, final char rhs) {
-    return (float)Math.pow(lhs, rhs);
+    return (float) Math.pow(lhs, rhs);
   }
 
   public float doFloatApply(final ExtendedThreadContext tc, final float lhs, final byte rhs) {
-    return (float)Math.pow(lhs, rhs);
+    return (float) Math.pow(lhs, rhs);
   }
 
   public float doFloatApply(final ExtendedThreadContext tc, final float lhs, final short rhs) {
-    return (float)Math.pow(lhs, rhs);
+    return (float) Math.pow(lhs, rhs);
   }
 
   public float doFloatApply(final ExtendedThreadContext tc, final float lhs, final int rhs) {
-    return (float)Math.pow(lhs, rhs);
+    return (float) Math.pow(lhs, rhs);
   }
 
   public float doFloatApply(final ExtendedThreadContext tc, final float lhs, final long rhs) {
-    return (float)Math.pow(lhs, rhs);
+    return (float) Math.pow(lhs, rhs);
   }
 
   public float doFloatApply(final ExtendedThreadContext tc, final float lhs, final float rhs) {
-    return (float)Math.pow(lhs, rhs);
+    return (float) Math.pow(lhs, rhs);
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final float lhs, final double rhs) {
@@ -88,7 +88,7 @@ public class Power extends BaseBinaryArithmeticOperation {
   }
 
   public float doFloatApply(final ExtendedThreadContext tc, final float lhs, final BigInteger rhs) {
-    return (float)Math.pow(lhs, rhs.floatValue());
+    return (float) Math.pow(lhs, rhs.floatValue());
   }
 
   public BigDecimal doBigDecimalApply(final ExtendedThreadContext tc, final float lhs, final BigDecimal rhs) {

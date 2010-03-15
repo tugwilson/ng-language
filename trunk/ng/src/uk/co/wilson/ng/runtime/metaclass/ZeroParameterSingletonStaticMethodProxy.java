@@ -8,10 +8,10 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class ZeroParameterSingletonStaticMethodProxy extends BaseSingletonStaticMethod {
-  private static final Object[] args = new Object[]{};
+  private static final Object[] args = new Object[] {};
 
   public ZeroParameterSingletonStaticMethodProxy(final Method method) {
     super(method);
@@ -28,9 +28,9 @@ public class ZeroParameterSingletonStaticMethodProxy extends BaseSingletonStatic
 
   @Override
   public Object doStaticCallQuick(final ExtendedThreadContext tc) throws Throwable {
-    if (this.modifiedCallable== null) {
+    if (this.modifiedCallable == null) {
       try {
-        return wrapReturnValue(tc, this.method.invoke(null, args));
+        return wrapReturnValue(tc, this.method.invoke(null, ZeroParameterSingletonStaticMethodProxy.args));
       } catch (final IllegalArgumentException e) {
         throw new NgRuntimeException(e);
       } catch (final IllegalAccessException e) {

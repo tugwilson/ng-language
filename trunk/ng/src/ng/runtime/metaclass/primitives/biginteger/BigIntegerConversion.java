@@ -9,7 +9,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public interface BigIntegerConversion extends Conversion {
   boolean doAsBoolean(ExtendedThreadContext tc, BigInteger value) throws NotPerformed;

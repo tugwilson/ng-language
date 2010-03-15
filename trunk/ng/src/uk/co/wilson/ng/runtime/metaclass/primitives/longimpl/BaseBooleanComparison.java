@@ -7,8 +7,6 @@ import ng.runtime.metaclass.primitives.longimpl.LongBooleanComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 abstract class BaseBooleanComparison extends BaseBinaryOperation implements LongBooleanComparison {
   public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
     try {
@@ -153,7 +151,6 @@ abstract class BaseBooleanComparison extends BaseBinaryOperation implements Long
       return ExtendedThreadContext.NOT_PERFORMED;
     }
   }
-
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final char rhs) throws NotPerformed {
     return doApplyBoolean(tc, tc.unwrapToLong(lhs), rhs);

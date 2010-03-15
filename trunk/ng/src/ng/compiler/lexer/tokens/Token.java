@@ -5,7 +5,7 @@ import ng.compiler.parser.State.Value;
 
 /**
  * @author John
- *
+ * 
  */
 public abstract class Token {
   public void transform(final State state) {

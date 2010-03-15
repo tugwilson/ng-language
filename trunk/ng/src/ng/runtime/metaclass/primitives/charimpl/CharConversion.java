@@ -28,7 +28,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public interface CharConversion extends Conversion {
   boolean doAsBoolean(ExtendedThreadContext tc, char value) throws NotPerformed;

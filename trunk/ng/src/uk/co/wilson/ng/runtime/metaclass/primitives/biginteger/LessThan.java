@@ -8,67 +8,67 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class LessThan extends BaseBooleanComparison {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.lessThan().apply((BigInteger)lhs, rhs);
+    return tc.lessThan().apply((BigInteger) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.lessThan().apply((BigInteger)lhs, rhsMetaClass, rhs);
+    return tc.lessThan().apply((BigInteger) lhs, rhsMetaClass, rhs);
   }
 
   public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.lessThan().apply(lhs, (BigInteger)rhs);
+    return tc.lessThan().apply(lhs, (BigInteger) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.lessThan().applyBoolean((BigInteger)lhs, rhs);
+    return tc.lessThan().applyBoolean((BigInteger) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.lessThan().applyBoolean((BigInteger)lhs, rhsMetaClass, rhs);
+    return tc.lessThan().applyBoolean((BigInteger) lhs, rhsMetaClass, rhs);
   }
 
   public boolean doReverseApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.lessThan().applyBoolean(lhs, (BigInteger)rhs);
+    return tc.lessThan().applyBoolean(lhs, (BigInteger) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
-    return tc.lessThan().applyBoolean(lhs, (BigInteger)rhs);
+    return tc.lessThan().applyBoolean(lhs, (BigInteger) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final byte lhs, final Object rhs) {
-    return tc.lessThan().applyBoolean(lhs, (BigInteger)rhs);
+    return tc.lessThan().applyBoolean(lhs, (BigInteger) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final short lhs, final Object rhs) {
-    return tc.lessThan().applyBoolean(lhs, (BigInteger)rhs);
+    return tc.lessThan().applyBoolean(lhs, (BigInteger) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final Object rhs) {
-    return tc.lessThan().applyBoolean(lhs, (BigInteger)rhs);
+    return tc.lessThan().applyBoolean(lhs, (BigInteger) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final long lhs, final Object rhs) {
-    return tc.lessThan().applyBoolean(lhs, (BigInteger)rhs);
+    return tc.lessThan().applyBoolean(lhs, (BigInteger) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final float lhs, final Object rhs) {
-    return tc.lessThan().applyBoolean(lhs, (BigInteger)rhs);
+    return tc.lessThan().applyBoolean(lhs, (BigInteger) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final double lhs, final Object rhs) {
-    return tc.lessThan().applyBoolean(lhs, (BigInteger)rhs);
+    return tc.lessThan().applyBoolean(lhs, (BigInteger) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return lhs.compareTo((BigInteger)rhs) < 0;
+    return lhs.compareTo((BigInteger) rhs) < 0;
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return lhs.compareTo(BigDecimal.valueOf(((BigInteger)rhs).longValue())) < 0;
+    return lhs.compareTo(BigDecimal.valueOf(((BigInteger) rhs).longValue())) < 0;
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final char rhs) {
@@ -92,11 +92,11 @@ public class LessThan extends BaseBooleanComparison {
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final float rhs) {
-    return lhs.compareTo(BigInteger.valueOf((long)rhs)) < 0;
+    return lhs.compareTo(BigInteger.valueOf((long) rhs)) < 0;
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final double rhs) {
-    return lhs.compareTo(BigInteger.valueOf((long)rhs)) < 0;
+    return lhs.compareTo(BigInteger.valueOf((long) rhs)) < 0;
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final BigInteger rhs) {

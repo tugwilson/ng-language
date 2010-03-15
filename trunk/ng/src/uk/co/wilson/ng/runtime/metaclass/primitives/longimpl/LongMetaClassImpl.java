@@ -25,53 +25,85 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   private volatile LongConversion modifiedConvert = null;
 
   private volatile LongBinaryArithmeticOperation modifiedAdd = null;
+
   private volatile LongBinaryArithmeticOperation modifiedSubtract = null;
+
   private volatile LongBinaryArithmeticOperation modifiedMultiply = null;
+
   private volatile LongBinaryArithmeticOperation modifiedDivide = null;
+
   private volatile LongBinaryArithmeticOperation modifiedModulo = null;
+
   private volatile LongBinaryArithmeticOperation modifiedRemainderDivide = null;
+
   private volatile LongBinaryArithmeticOperation modifiedPower = null;
 
   private volatile LongBinaryLogicalOperation modifiedAnd = null;
+
   private volatile LongBinaryLogicalOperation modifiedOr = null;
+
   private volatile LongBinaryLogicalOperation modifiedXor = null;
+
   private volatile LongShiftOperation modifiedLeftShift = null;
+
   private volatile LongShiftOperation modifiedRightShift = null;
+
   private volatile LongShiftOperation modifiedUnsignedRightShift = null;
 
   private volatile LongIntegerComparison modifiedCompare = null;
 
   private volatile LongBooleanComparison modifiedEquals = null;
+
   private volatile LongBooleanComparison modifiedNotEquals = null;
+
   private volatile LongBooleanComparison modifiedLessThan = null;
+
   private volatile LongBooleanComparison modifiedGreaterThan = null;
+
   private volatile LongBooleanComparison modifiedLessThanOrEquals = null;
+
   private volatile LongBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final LongConversion convert = new Convert();
 
   private final LongBinaryArithmeticOperation add = new Add();
+
   private final LongBinaryArithmeticOperation subtract = new Subtract();
+
   private final LongBinaryArithmeticOperation multiply = new Multiply();
+
   private final LongBinaryArithmeticOperation divide = new Divide();
+
   private final LongBinaryArithmeticOperation modulo = new Modulo();
+
   private final LongBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+
   private final LongBinaryArithmeticOperation power = new Power();
 
   private final LongBinaryLogicalOperation and = new And();
+
   private final LongBinaryLogicalOperation or = new Or();
+
   private final LongBinaryLogicalOperation xor = new Xor();
+
   private final LongShiftOperation leftShift = new LeftShift();
+
   private final LongShiftOperation rightShift = new RightShift();
+
   private final LongShiftOperation unsignedRightShift = new UnsignedRightShift();
 
   private final LongIntegerComparison compare = new Compare();
 
   private final LongBooleanComparison equals = new Equals();
+
   private final LongBooleanComparison notEquals = new NotEquals();
+
   private final LongBooleanComparison lessThan = new LessThan();
+
   private final LongBooleanComparison greaterThan = new GreaterThan();
+
   private final LongBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+
   private final LongBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public LongMetaClassImpl() {
@@ -80,7 +112,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
 
   private LongBinaryArithmeticOperation fixOperationType(final BinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof LongBinaryArithmeticOperation) {
-      return( LongBinaryArithmeticOperation) modifiedOperation;
+      return (LongBinaryArithmeticOperation) modifiedOperation;
     }
 
     return new LongBinaryArithmeticOperationWrapper(modifiedOperation);
@@ -88,7 +120,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
 
   private LongBinaryLogicalOperation fixOperationType(final LogicalBinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof LongBinaryLogicalOperation) {
-      return (LongBinaryLogicalOperation)modifiedOperation;
+      return (LongBinaryLogicalOperation) modifiedOperation;
     }
 
     return new LongBinaryLogicalOperationWrapper(modifiedOperation);
@@ -96,15 +128,15 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
 
   private LongShiftOperation fixOperationType(final ShiftOperation modifiedOperation) {
     if (modifiedOperation instanceof LongShiftOperation) {
-      return (LongShiftOperation)modifiedOperation;
+      return (LongShiftOperation) modifiedOperation;
     }
 
     return new LongShiftOperationWrapper(modifiedOperation);
   }
 
   private LongBooleanComparison fixOperationType(final BooleanBinaryComparison modifiedOperation) {
-    if(modifiedOperation instanceof LongBooleanComparison) {
-      return (LongBooleanComparison)modifiedOperation;
+    if (modifiedOperation instanceof LongBooleanComparison) {
+      return (LongBooleanComparison) modifiedOperation;
     }
 
     return new LongBooleanComparisonWrapper(modifiedOperation);
@@ -112,7 +144,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
 
   public void modifyConvert(final Conversion modifiedConvert) {
     if (modifiedConvert instanceof LongConversion) {
-      modifyConvert((LongConversion)modifiedConvert);
+      modifyConvert((LongConversion) modifiedConvert);
     } else {
       modifyConvert(new LongConversionWrapper(modifiedConvert));
     }
@@ -147,7 +179,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBinaryArithmeticOperation add(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
+    final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedAdd == null) {
@@ -173,7 +205,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBinaryArithmeticOperation subtract(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
+    final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedSubtract == null) {
@@ -199,7 +231,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBinaryArithmeticOperation multiply(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
+    final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedMultiply == null) {
@@ -225,7 +257,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBinaryArithmeticOperation divide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
+    final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedDivide == null) {
@@ -251,7 +283,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBinaryArithmeticOperation modulo(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
+    final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedModulo == null) {
@@ -277,7 +309,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBinaryArithmeticOperation power(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
+    final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedPower == null) {
@@ -303,7 +335,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBinaryArithmeticOperation remainderDivide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
+    final LongBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
@@ -329,7 +361,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBinaryLogicalOperation and(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final LongBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getLongCategoryOperation();
+    final LongBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedAnd == null) {
@@ -355,7 +387,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBinaryLogicalOperation or(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final LongBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getLongCategoryOperation();
+    final LongBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedOr == null) {
@@ -381,7 +413,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBinaryLogicalOperation xor(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final LongBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getLongCategoryOperation();
+    final LongBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLeftShift == null) {
@@ -407,7 +439,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongShiftOperation leftShift(final ShiftCategorySupport shiftOperation) {
-  final LongShiftOperation categoryOperation = shiftOperation.getLongCategoryOperation();
+    final LongShiftOperation categoryOperation = shiftOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLeftShift == null) {
@@ -433,7 +465,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongShiftOperation rightShift(final ShiftCategorySupport shiftOperation) {
-  final LongShiftOperation categoryOperation = shiftOperation.getLongCategoryOperation();
+    final LongShiftOperation categoryOperation = shiftOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedRightShift == null) {
@@ -459,7 +491,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongShiftOperation unsignedRightShift(final ShiftCategorySupport shiftOperation) {
-  final LongShiftOperation categoryOperation = shiftOperation.getLongCategoryOperation();
+    final LongShiftOperation categoryOperation = shiftOperation.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedUnsignedRightShift == null) {
@@ -474,7 +506,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
 
   public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     if (modifiedCompare instanceof LongIntegerComparison) {
-      modifyCompare((LongIntegerComparison)this.modifiedConvert);
+      modifyCompare((LongIntegerComparison) this.modifiedConvert);
     } else {
       modifyCompare(new LongIntegerComparisonWrapper(modifiedCompare));
     }
@@ -489,7 +521,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongIntegerComparison compare(final IntegerComparisonCategorySupport integerComparison) {
-  final LongIntegerComparison categoryOperation = integerComparison.getLongCategoryOperation();
+    final LongIntegerComparison categoryOperation = integerComparison.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedCompare == null) {
@@ -515,7 +547,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBooleanComparison equals(final BooleanComparisonCategorySupport booleanComparison) {
-  final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
+    final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedEquals == null) {
@@ -541,7 +573,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBooleanComparison notEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
+    final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedNotEquals == null) {
@@ -567,7 +599,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBooleanComparison lessThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
+    final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLessThan == null) {
@@ -593,7 +625,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBooleanComparison greaterThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
+    final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
@@ -619,7 +651,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBooleanComparison lessThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
+    final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
@@ -645,7 +677,7 @@ public class LongMetaClassImpl extends BaseMetaClass implements LongMetaClass {
   }
 
   public LongBooleanComparison greaterThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
+    final LongBooleanComparison categoryOperation = booleanComparison.getLongCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {

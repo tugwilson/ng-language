@@ -910,23 +910,23 @@ public class BaseConversionImpl implements ConversionOperation {
         } else if (type == BigDecimal.class) {
           return metaClass.convert(this).doAsBigDecimal(this.tc, instance);
         } else {
-          result = metaClass.convert(this).doAsType(this.tc, instance, (Class<?>)type);
+          result = metaClass.convert(this).doAsType(this.tc, instance, (Class<?>) type);
         }
       } catch (final NotPerformed e) {
         result = ExtendedThreadContext.NOT_PERFORMED;
       }
 
       if (result == ExtendedThreadContext.NOT_PERFORMED) {
-        throw new NgRuntimeException("Value of type " + instance.getClass().getName() + " cannot be converted to " + ((Class<?>)type).getName());
+        throw new NgRuntimeException("Value of type " + instance.getClass().getName() + " cannot be converted to " + ((Class<?>) type).getName());
       } else {
         return result;
       }
     } else {
-      throw new NgRuntimeException("The target type for an as operation is " + type.getClass() + " it should be a Class" );
+      throw new NgRuntimeException("The target type for an as operation is " + type.getClass() + " it should be a Class");
     }
   }
 
   public Object asType(final Object instance, final Object type) {
     return asType(this.tc.getMetaClassFor(type), instance, type);
- }
+  }
 }

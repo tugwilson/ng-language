@@ -25,14 +25,14 @@ import ng.runtime.threadcontext.ThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class MandelbrotNg {
   static int BAILOUT = 16;
+
   static int MAX_ITERATIONS = 1000;
 
-  private static int iterate(final ExtendedThreadContext tc, final float x, final float y)
-  {
+  private static int iterate(final ExtendedThreadContext tc, final float x, final float y) {
     float cr;
     try {
       cr = tc.subtract().floatApply(y, 0.5f);
@@ -44,14 +44,14 @@ public class MandelbrotNg {
     float zr = 0.0f;
     int i = 0;
     while (true) {
-      //   i++;
+      // i++;
       try {
         i = tc.add().intApply(i, 1);
       } catch (final NotPerformed e) {
         i = tc.convert().asInt(tc.add().apply(i, 1));
       }
 
-      //  float temp = zr * zi;
+      // float temp = zr * zi;
       float temp;
       try {
         temp = tc.multiply().floatApply(zr, zi);
@@ -59,7 +59,7 @@ public class MandelbrotNg {
         temp = tc.convert().asFloat(tc.multiply().apply(zr, zi));
       }
 
-      //  float zr2 = zr * zr;
+      // float zr2 = zr * zr;
       float zr2;
       try {
         zr2 = tc.multiply().floatApply(zr, zr);
@@ -67,22 +67,22 @@ public class MandelbrotNg {
         zr2 = tc.convert().asFloat(tc.multiply().apply(zr, zr));
       }
 
-      //  float zi2 = zi * zi;
-     float zi2;
+      // float zi2 = zi * zi;
+      float zi2;
       try {
         zi2 = tc.multiply().floatApply(zi, zi);
       } catch (final NotPerformed e) {
         zi2 = tc.convert().asFloat(tc.multiply().apply(zi, zi));
       }
 
-      //  zr = zr2 - zi2 + cr;
+      // zr = zr2 - zi2 + cr;
       try {
         zr = tc.add().floatApply(tc.subtract().floatApply(zr2, zi2), cr);
       } catch (final NotPerformed e) {
         zr = tc.convert().asFloat(tc.add().apply(tc.subtract().apply(zr2, zi2), cr));
       }
 
-      //  zi = temp + temp + ci;
+      // zi = temp + temp + ci;
       zi = temp + temp + ci;
       try {
         zi = tc.add().floatApply(temp, tc.add().floatApply(temp, ci));
@@ -90,33 +90,32 @@ public class MandelbrotNg {
         zi = tc.convert().asFloat(tc.add().apply(temp, tc.add().apply(temp, ci)));
       }
 
-      //  if (zi2 + zr2 > BAILOUT) return i;
+      // if (zi2 + zr2 > BAILOUT) return i;
       boolean tmpBool;
       try {
-        tmpBool = tc.greaterThan().applyBoolean(tc.add().floatApply(zi2, zr2), BAILOUT);
+        tmpBool = tc.greaterThan().applyBoolean(tc.add().floatApply(zi2, zr2), MandelbrotNg.BAILOUT);
       } catch (final NotPerformed e) {
-        tmpBool = tc.greaterThan().applyBoolean(tc.add().apply(zi2, zr2), BAILOUT);
+        tmpBool = tc.greaterThan().applyBoolean(tc.add().apply(zi2, zr2), MandelbrotNg.BAILOUT);
       }
       if (tmpBool) {
         return i;
       }
 
-      //  if (i > MAX_ITERATIONS) return 0;
-      if (tc.greaterThan().applyBoolean(i, MAX_ITERATIONS)) {
+      // if (i > MAX_ITERATIONS) return 0;
+      if (tc.greaterThan().applyBoolean(i, MandelbrotNg.MAX_ITERATIONS)) {
         return 0;
       }
     }
   }
 
-  public static void main(final String args[])
-  {
+  public static void main(final String args[]) {
     final ThreadContext tc = ThreadContext.getThreadContext();
     final Date d1 = new Date();
-    int x,y;
-    //  for (y = -39; y < 39; y++) {
+    int x, y;
+    // for (y = -39; y < 39; y++) {
     for (y = -39; tc.lessThan().applyBoolean(y, 39);) {
-    // System.out.print("\n");
-      //  for (x = -39; x < 39; x++) {
+      // System.out.print("\n");
+      // for (x = -39; x < 39; x++) {
       for (x = -39; tc.lessThan().applyBoolean(x, 39);) {
         float t1;
         try {
@@ -132,7 +131,7 @@ public class MandelbrotNg {
           t2 = tc.convert().asFloat(tc.divide().apply(y, 40.0f));
         }
 
-        if (tc.equals().applyBoolean(iterate((ExtendedThreadContext)tc, t1, t2), 0)) {
+        if (tc.equals().applyBoolean(iterate((ExtendedThreadContext) tc, t1, t2), 0)) {
           ;// System.out.print("*");
         } else {
           ;// System.out.print(" ");
@@ -152,7 +151,7 @@ public class MandelbrotNg {
     }
     final Date d2 = new Date();
     final long diff = d2.getTime() - d1.getTime();
-    System.out.println("\nNgElapsed " + diff/1000.0f);
+    System.out.println("\nNgElapsed " + diff / 1000.0f);
 
   }
 }

@@ -7,19 +7,22 @@ import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
 public class NgFloat extends BaseNgObject {
   private static final FloatMetaClass metaclass = PrimitiveMetaClasses.getFloatMetaClass();
-  
+
   private static final NgFloat zero = new NgFloat(0.0f);
+
   private static final NgFloat one = new NgFloat(1.0f);
 
   public static FloatMetaClass get$MetaClass() {
-    return metaclass;
+    return NgFloat.metaclass;
   }
 
   public static NgFloat valueOf(final float value) {
-    if (value == 0.0f) return zero;
-    
-    if (value == 1.0f) return one;
-    
+    if (value == 0.0f)
+      return NgFloat.zero;
+
+    if (value == 1.0f)
+      return NgFloat.one;
+
     return new NgFloat(value);
   }
 
@@ -37,7 +40,9 @@ public class NgFloat extends BaseNgObject {
     return this.value;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see java.lang.Object#toString()
    */
   @Override

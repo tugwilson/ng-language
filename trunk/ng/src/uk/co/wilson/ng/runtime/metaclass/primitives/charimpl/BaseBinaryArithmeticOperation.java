@@ -1,6 +1,5 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.charimpl;
 
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -8,11 +7,9 @@ import ng.runtime.metaclass.primitives.charimpl.CharBinaryArithmeticOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 /**
  * @author John
- *
+ * 
  */
 public abstract class BaseBinaryArithmeticOperation extends BaseBinaryOperation implements CharBinaryArithmeticOperation {
 

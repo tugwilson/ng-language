@@ -9,7 +9,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public interface BigDecimalConversion extends Conversion {
   boolean doAsBoolean(ExtendedThreadContext tc, BigDecimal value) throws NotPerformed;

@@ -4,16 +4,19 @@ import java.util.Stack;
 
 /**
  * @author John
- *
+ * 
  */
 public class State {
-  public enum Value {start, finished,
-                     expectingPackageName, possiblePackageQualifierDot, packageDeclared,
-                     expectingImportName, possibleImportQualifierDot, expectingImportAsName, importDeclared};
+  public enum Value {
+    start, finished, expectingPackageName, possiblePackageQualifierDot, packageDeclared, expectingImportName, possibleImportQualifierDot, expectingImportAsName, importDeclared
+  };
 
   private boolean done = false;
+
   private boolean error = false;
+
   private Value currentState = Value.start;
+
   private final Stack<Value> stateStack = new Stack<Value>();
 
   public boolean isDone() {

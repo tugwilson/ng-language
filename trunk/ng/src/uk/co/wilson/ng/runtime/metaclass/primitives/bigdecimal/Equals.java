@@ -8,63 +8,63 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 class Equals extends BaseBooleanComparison {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.equals().apply((BigDecimal)lhs, rhs);
+    return tc.equals().apply((BigDecimal) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.equals().apply((BigDecimal)lhs, rhsMetaClass, rhs);
+    return tc.equals().apply((BigDecimal) lhs, rhsMetaClass, rhs);
   }
 
   public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.equals().apply(lhs, (BigDecimal)rhs);
+    return tc.equals().apply(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.equals().applyBoolean((BigDecimal)lhs, rhs);
+    return tc.equals().applyBoolean((BigDecimal) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.equals().applyBoolean((BigDecimal)lhs, rhsMetaClass, rhs);
+    return tc.equals().applyBoolean((BigDecimal) lhs, rhsMetaClass, rhs);
   }
 
   public boolean doReverseApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.equals().applyBoolean(lhs, (BigDecimal)rhs);
+    return tc.equals().applyBoolean(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
-    return tc.equals().applyBoolean(lhs, (BigDecimal)rhs);
+    return tc.equals().applyBoolean(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final byte lhs, final Object rhs) {
-    return tc.equals().applyBoolean(lhs, (BigDecimal)rhs);
+    return tc.equals().applyBoolean(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final short lhs, final Object rhs) {
-    return tc.equals().applyBoolean(lhs, (BigDecimal)rhs);
+    return tc.equals().applyBoolean(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final int lhs, final Object rhs) {
-    return tc.equals().applyBoolean(lhs, (BigDecimal)rhs);
+    return tc.equals().applyBoolean(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final long lhs, final Object rhs) {
-    return tc.equals().applyBoolean(lhs, (BigDecimal)rhs);
+    return tc.equals().applyBoolean(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final float lhs, final Object rhs) {
-    return tc.equals().applyBoolean(lhs, (BigDecimal)rhs);
+    return tc.equals().applyBoolean(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final double lhs, final Object rhs) {
-    return tc.equals().applyBoolean(lhs, (BigDecimal)rhs);
+    return tc.equals().applyBoolean(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return tc.equals().applyBoolean(lhs, (BigDecimal)rhs);
+    return tc.equals().applyBoolean(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return tc.equals().applyBoolean(lhs, (BigDecimal)rhs);
+    return tc.equals().applyBoolean(lhs, (BigDecimal) rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigDecimal lhs, final char rhs) {

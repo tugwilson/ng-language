@@ -7,8 +7,6 @@ import ng.runtime.metaclass.primitives.intimpl.IntBooleanComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 abstract class BaseBooleanComparison extends BaseBinaryOperation implements IntBooleanComparison {
   public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
     try {

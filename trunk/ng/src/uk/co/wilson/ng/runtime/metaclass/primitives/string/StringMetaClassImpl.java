@@ -6,7 +6,7 @@ import uk.co.wilson.ng.runtime.metaclass.MetaClassImpl;
 
 /**
  * @author John
- *
+ * 
  */
 public class StringMetaClassImpl extends MetaClassImpl implements StringMetaClass {
   private final BinaryOperation add = new Add();

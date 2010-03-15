@@ -7,10 +7,11 @@ import java.nio.CharBuffer;
 
 /**
  * @author John
- *
+ * 
  */
 public class NgReader extends Reader {
   private final Reader reader;
+
   private boolean lastCharacterWasBackslash = false;
 
   public NgReader(final Reader reader) {
@@ -28,7 +29,7 @@ public class NgReader extends Reader {
    */
   @Override
   public int read() throws IOException {
-  final int c = this.reader.read();
+    final int c = this.reader.read();
 
     if (c == -1) {
       return -1;
@@ -36,26 +37,28 @@ public class NgReader extends Reader {
 
     if (!this.lastCharacterWasBackslash && c == '\\') {
       //
-      //    Strictly, we may need to read past any number of \ and u characters
-      //     but this is a reasonable limit
+      // Strictly, we may need to read past any number of \ and u characters
+      // but this is a reasonable limit
       //
       this.reader.mark(1024);
 
       if (this.reader.read() == 'u') {
-      final char charCode[] = new char[4];
+        final char charCode[] = new char[4];
 
-        while((charCode[0] = (char)this.reader.read()) == 'u') {
+        while ((charCode[0] = (char) this.reader.read()) == 'u') {
           ;
         }
 
         for (int i = 1; i != 4; i++) {
-          // if we are at EOF it's OK we will just get an illegal hex value and we will reset and return \
-          charCode[i] = (char)this.reader.read();
+          // if we are at EOF it's OK we will just get an illegal hex value and
+          // we will reset and return \
+          charCode[i] = (char) this.reader.read();
         }
 
         try {
           return Integer.parseInt(String.valueOf(charCode), 16);
-        } catch (final NumberFormatException e) {}
+        } catch (final NumberFormatException e) {
+        }
       }
 
       this.reader.reset();
@@ -76,13 +79,13 @@ public class NgReader extends Reader {
   @Override
   public int read(final char[] cbuf, final int off, final int len) throws IOException {
     for (int i = 0; i < len; i++) {
-    final int c = read();
+      final int c = read();
 
       if (c == -1) {
         return i;
       }
 
-      cbuf[off + i] = (char)c;
+      cbuf[off + i] = (char) c;
     }
 
     return len;
@@ -107,13 +110,13 @@ public class NgReader extends Reader {
    */
   @Override
   public int read(final CharBuffer target) throws IOException {
-  final int c = read();
+    final int c = read();
 
     if (c == -1) {
       return -1;
     }
 
-    target.put((char)c);
+    target.put((char) c);
 
     return 1;
   }

@@ -23,9 +23,10 @@ import ng.ast.util.UnaryOperations;
 
 /**
  * @author John
- *
+ * 
  */
 public interface UnaryOperation extends Operator {
   void setOperation(UnaryOperations op);
+
   void setOperand(Expression operand);
 }

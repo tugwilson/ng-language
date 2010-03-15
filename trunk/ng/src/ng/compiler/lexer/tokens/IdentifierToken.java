@@ -9,17 +9,17 @@ import ng.compiler.parser.State.Value;
 
 /**
  * @author John
- *
+ * 
  */
 public class IdentifierToken extends Token {
   private final String name;
 
   public IdentifierToken(final int firstChar, final Reader reader) throws IOException {
-  final StringBuilder buf = new StringBuilder();
+    final StringBuilder buf = new StringBuilder();
 
     buf.append(firstChar);
 
-    while(true) {
+    while (true) {
       reader.mark(1);
       final int c = reader.read();
 
@@ -34,26 +34,29 @@ public class IdentifierToken extends Token {
     this.name = buf.toString();
   }
 
-  /* (non-Javadoc)
-   * @see ng.compiler.lexer.tokens.Token#transform(ng.compiler.parser.State, ng.compiler.parser.State.Value)
+  /*
+   * (non-Javadoc)
+   * 
+   * @see ng.compiler.lexer.tokens.Token#transform(ng.compiler.parser.State,
+   * ng.compiler.parser.State.Value)
    */
   @Override
   protected void transform(final State state, final Value currentValue) {
     switch (currentValue) {
-      case expectingPackageName:
-        state.setCurrentState(Value.possiblePackageQualifierDot);
-        break;
+    case expectingPackageName:
+      state.setCurrentState(Value.possiblePackageQualifierDot);
+      break;
 
-      case expectingImportName:
-        state.setCurrentState(Value.possibleImportQualifierDot);
-        break;
+    case expectingImportName:
+      state.setCurrentState(Value.possibleImportQualifierDot);
+      break;
 
-      case expectingImportAsName:
-        state.setCurrentState(Value.importDeclared);
-        break;
+    case expectingImportAsName:
+      state.setCurrentState(Value.importDeclared);
+      break;
 
-      default:
-        super.transform(state, currentValue);
+    default:
+      super.transform(state, currentValue);
     }
   }
 }

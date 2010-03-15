@@ -8,55 +8,55 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class RemainderDivide extends BaseBinaryArithmeticOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.remainderDivide().apply((BigInteger)lhs, rhs);
+    return tc.remainderDivide().apply((BigInteger) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.remainderDivide().apply((BigInteger)lhs, rhsMetaClass, rhs);
+    return tc.remainderDivide().apply((BigInteger) lhs, rhsMetaClass, rhs);
   }
 
   public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.remainderDivide().apply(lhs, (BigInteger)rhs);
+    return tc.remainderDivide().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
-    return tc.remainderDivide().apply(lhs, (BigInteger)rhs);
+    return tc.remainderDivide().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final byte lhs, final Object rhs) {
-    return tc.remainderDivide().apply(lhs, (BigInteger)rhs);
+    return tc.remainderDivide().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final short lhs, final Object rhs) {
-    return tc.remainderDivide().apply(lhs, (BigInteger)rhs);
+    return tc.remainderDivide().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final int lhs, final Object rhs) {
-    return tc.remainderDivide().apply(lhs, (BigInteger)rhs);
+    return tc.remainderDivide().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final long lhs, final Object rhs) {
-    return tc.remainderDivide().apply(lhs, (BigInteger)rhs);
+    return tc.remainderDivide().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final Object rhs) {
-    return tc.remainderDivide().apply(lhs, (BigInteger)rhs);
+    return tc.remainderDivide().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final double lhs, final Object rhs) {
-    return tc.remainderDivide().apply(lhs, (BigInteger)rhs);
+    return tc.remainderDivide().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return tc.remainderDivide().apply(lhs, (BigInteger)rhs);
+    return tc.remainderDivide().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return tc.remainderDivide().apply(lhs, (BigInteger)rhs);
+    return tc.remainderDivide().apply(lhs, (BigInteger) rhs);
   }
 
   public BigInteger doBigIntegerApply(final ExtendedThreadContext tc, final BigInteger lhs, final char rhs) {
@@ -80,13 +80,13 @@ public class RemainderDivide extends BaseBinaryArithmeticOperation {
   }
 
   public float doFloatApply(final ExtendedThreadContext tc, final BigInteger lhs, final float rhs) {
-  final float tmp = lhs.floatValue() / rhs;
+    final float tmp = lhs.floatValue() / rhs;
 
-    return (float)(lhs.floatValue() - Math.floor(tmp) * rhs);
+    return (float) (lhs.floatValue() - Math.floor(tmp) * rhs);
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final BigInteger lhs, final double rhs) {
-  final double tmp = lhs.doubleValue() / rhs;
+    final double tmp = lhs.doubleValue() / rhs;
 
     return lhs.doubleValue() - Math.floor(tmp) * rhs;
   }

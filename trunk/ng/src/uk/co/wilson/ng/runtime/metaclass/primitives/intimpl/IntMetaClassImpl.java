@@ -25,53 +25,85 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   private volatile IntConversion modifiedConvert = null;
 
   private volatile IntBinaryArithmeticOperation modifiedAdd = null;
+
   private volatile IntBinaryArithmeticOperation modifiedSubtract = null;
+
   private volatile IntBinaryArithmeticOperation modifiedMultiply = null;
+
   private volatile IntBinaryArithmeticOperation modifiedDivide = null;
+
   private volatile IntBinaryArithmeticOperation modifiedModulo = null;
+
   private volatile IntBinaryArithmeticOperation modifiedRemainderDivide = null;
+
   private volatile IntBinaryArithmeticOperation modifiedPower = null;
 
   private volatile IntBinaryLogicalOperation modifiedAnd = null;
+
   private volatile IntBinaryLogicalOperation modifiedOr = null;
+
   private volatile IntBinaryLogicalOperation modifiedXor = null;
+
   private volatile IntShiftOperation modifiedLeftShift = null;
+
   private volatile IntShiftOperation modifiedRightShift = null;
+
   private volatile IntShiftOperation modifiedUnsignedRightShift = null;
 
   private volatile IntIntegerComparison modifiedCompare = null;
 
   private volatile IntBooleanComparison modifiedEquals = null;
+
   private volatile IntBooleanComparison modifiedNotEquals = null;
+
   private volatile IntBooleanComparison modifiedLessThan = null;
+
   private volatile IntBooleanComparison modifiedGreaterThan = null;
+
   private volatile IntBooleanComparison modifiedLessThanOrEquals = null;
+
   private volatile IntBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final IntConversion convert = new Convert();
 
   private final IntBinaryArithmeticOperation add = new Add();
+
   private final IntBinaryArithmeticOperation subtract = new Subtract();
+
   private final IntBinaryArithmeticOperation multiply = new Multiply();
+
   private final IntBinaryArithmeticOperation divide = new Divide();
+
   private final IntBinaryArithmeticOperation modulo = new Modulo();
+
   private final IntBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+
   private final IntBinaryArithmeticOperation power = new Power();
 
   private final IntBinaryLogicalOperation and = new And();
+
   private final IntBinaryLogicalOperation or = new Or();
+
   private final IntBinaryLogicalOperation xor = new Xor();
+
   private final IntShiftOperation leftShift = new LeftShift();
+
   private final IntShiftOperation rightShift = new RightShift();
+
   private final IntShiftOperation unsignedRightShift = new UnsignedRightShift();
 
   private final IntIntegerComparison compare = new Compare();
 
   private final IntBooleanComparison equals = new Equals();
+
   private final IntBooleanComparison notEquals = new NotEquals();
+
   private final IntBooleanComparison lessThan = new LessThan();
+
   private final IntBooleanComparison greaterThan = new GreaterThan();
+
   private final IntBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+
   private final IntBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public IntMetaClassImpl() {
@@ -80,7 +112,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
 
   private IntBinaryArithmeticOperation fixOperationType(final BinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof IntBinaryArithmeticOperation) {
-      return (IntBinaryArithmeticOperation)modifiedOperation;
+      return (IntBinaryArithmeticOperation) modifiedOperation;
     }
 
     return new IntBinaryArithmeticOperationWrapper(modifiedOperation);
@@ -88,7 +120,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
 
   private IntBinaryLogicalOperation fixOperationType(final LogicalBinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof IntBinaryLogicalOperation) {
-      return (IntBinaryLogicalOperation)modifiedOperation;
+      return (IntBinaryLogicalOperation) modifiedOperation;
     }
 
     return new IntBinaryLogicalOperationWrapper(modifiedOperation);
@@ -96,15 +128,15 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
 
   private IntShiftOperation fixOperationType(final ShiftOperation modifiedOperation) {
     if (modifiedOperation instanceof IntShiftOperation) {
-      return (IntShiftOperation)modifiedOperation;
+      return (IntShiftOperation) modifiedOperation;
     }
 
     return new IntShiftOperationWrapper(modifiedOperation);
   }
 
   private IntBooleanComparison fixOperationType(final BooleanBinaryComparison modifiedOperation) {
-    if(modifiedOperation instanceof IntBooleanComparison) {
-      return (IntBooleanComparison)modifiedOperation;
+    if (modifiedOperation instanceof IntBooleanComparison) {
+      return (IntBooleanComparison) modifiedOperation;
     }
 
     return new IntBooleanComparisonWrapper(modifiedOperation);
@@ -112,7 +144,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
 
   public void modifyConvert(final Conversion modifiedConvert) {
     if (modifiedConvert instanceof IntConversion) {
-      modifyConvert((IntConversion)modifiedConvert);
+      modifyConvert((IntConversion) modifiedConvert);
     } else {
       modifyConvert(new IntConversionWrapper(modifiedConvert));
     }
@@ -147,7 +179,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBinaryArithmeticOperation add(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedAdd == null) {
@@ -173,7 +205,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBinaryArithmeticOperation subtract(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedSubtract == null) {
@@ -199,7 +231,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBinaryArithmeticOperation multiply(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedMultiply == null) {
@@ -225,7 +257,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBinaryArithmeticOperation divide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedDivide == null) {
@@ -251,7 +283,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBinaryArithmeticOperation modulo(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedModulo == null) {
@@ -277,7 +309,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBinaryArithmeticOperation power(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedPower == null) {
@@ -303,7 +335,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBinaryArithmeticOperation remainderDivide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
+    final IntBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
@@ -329,7 +361,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBinaryLogicalOperation and(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final IntBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getIntCategoryOperation();
+    final IntBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedAnd == null) {
@@ -355,7 +387,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBinaryLogicalOperation or(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final IntBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getIntCategoryOperation();
+    final IntBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedOr == null) {
@@ -381,7 +413,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBinaryLogicalOperation xor(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final IntBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getIntCategoryOperation();
+    final IntBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedXor == null) {
@@ -407,7 +439,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntShiftOperation leftShift(final ShiftCategorySupport shiftOperation) {
-  final IntShiftOperation categoryOperation = shiftOperation.getIntCategoryOperation();
+    final IntShiftOperation categoryOperation = shiftOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLeftShift == null) {
@@ -433,7 +465,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntShiftOperation rightShift(final ShiftCategorySupport shiftOperation) {
-  final IntShiftOperation categoryOperation = shiftOperation.getIntCategoryOperation();
+    final IntShiftOperation categoryOperation = shiftOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedRightShift == null) {
@@ -459,7 +491,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntShiftOperation unsignedRightShift(final ShiftCategorySupport shiftOperation) {
-  final IntShiftOperation categoryOperation = shiftOperation.getIntCategoryOperation();
+    final IntShiftOperation categoryOperation = shiftOperation.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedUnsignedRightShift == null) {
@@ -474,7 +506,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
 
   public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     if (modifiedCompare instanceof IntIntegerComparison) {
-      modifyCompare((IntIntegerComparison)this.modifiedConvert);
+      modifyCompare((IntIntegerComparison) this.modifiedConvert);
     } else {
       modifyCompare(new IntIntegerComparisonWrapper(modifiedCompare));
     }
@@ -489,7 +521,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntIntegerComparison compare(final IntegerComparisonCategorySupport integerComparison) {
-  final IntIntegerComparison categoryOperation = integerComparison.getIntCategoryOperation();
+    final IntIntegerComparison categoryOperation = integerComparison.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedCompare == null) {
@@ -515,7 +547,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBooleanComparison equals(final BooleanComparisonCategorySupport booleanComparison) {
-  final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
+    final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedEquals == null) {
@@ -541,7 +573,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBooleanComparison notEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
+    final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedNotEquals == null) {
@@ -567,7 +599,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBooleanComparison lessThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
+    final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLessThan == null) {
@@ -593,7 +625,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBooleanComparison greaterThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
+    final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
@@ -619,7 +651,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBooleanComparison lessThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
+    final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
@@ -645,7 +677,7 @@ public class IntMetaClassImpl extends BaseMetaClass implements IntMetaClass {
   }
 
   public IntBooleanComparison greaterThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
+    final IntBooleanComparison categoryOperation = booleanComparison.getIntCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {

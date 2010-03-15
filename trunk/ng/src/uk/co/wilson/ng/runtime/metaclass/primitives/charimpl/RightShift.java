@@ -9,7 +9,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public class RightShift extends BaseShiftOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {

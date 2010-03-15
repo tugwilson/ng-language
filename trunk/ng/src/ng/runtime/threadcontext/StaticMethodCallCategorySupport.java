@@ -7,9 +7,10 @@ import ng.runtime.metaclass.MetaClass;
 
 /**
  * @author John
- *
+ * 
  */
 public interface StaticMethodCallCategorySupport {
   Map<MetaClass, DoStaticMethodCall> getCategoryStaticMethodCallMap();
+
   void setCategoryStaticMethodCallMap(Map<MetaClass, DoStaticMethodCall> categoryStsticMethodCallMap);
 }

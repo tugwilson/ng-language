@@ -11,7 +11,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.IntegerBinaryComparisonWrapp
 
 /**
  * @author John
- *
+ * 
  */
 public class DoubleIntegerComparisonWrapper extends IntegerBinaryComparisonWrapper implements DoubleIntegerComparison {
 

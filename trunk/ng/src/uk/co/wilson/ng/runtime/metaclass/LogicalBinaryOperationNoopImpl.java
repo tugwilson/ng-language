@@ -7,10 +7,9 @@ import ng.runtime.metaclass.LogicalBinaryOperation;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
-
 /**
  * @author John
- *
+ * 
  */
 public class LogicalBinaryOperationNoopImpl implements LogicalBinaryOperation {
   public final static LogicalBinaryOperation instance = new LogicalBinaryOperationNoopImpl();

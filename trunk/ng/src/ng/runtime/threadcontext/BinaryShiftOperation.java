@@ -1,10 +1,8 @@
 package ng.runtime.threadcontext;
 
-
-
 /**
  * @author John
- *
+ * 
  */
 public interface BinaryShiftOperation extends ShiftCategorySupport, BinaryIntegralOperation {
   int intApply(char lhs, long rhs) throws NotPerformed;

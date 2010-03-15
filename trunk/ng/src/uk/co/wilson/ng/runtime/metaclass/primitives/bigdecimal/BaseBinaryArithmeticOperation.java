@@ -7,11 +7,9 @@ import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBinaryArithmeticOper
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 /**
  * @author John
- *
+ * 
  */
 public abstract class BaseBinaryArithmeticOperation extends BaseBinaryOperation implements BigDecimalBinaryArithmeticOperation {
 

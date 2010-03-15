@@ -1,6 +1,5 @@
 package uk.co.wilson.ng.runtime.threadcontext;
 
-
 import java.util.Map;
 import java.util.Stack;
 
@@ -15,10 +14,9 @@ import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BinaryLogicalOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
-
 /**
  * @author John
- *
+ * 
  */
 public abstract class BaseBinaryLogicalOperationImpl extends BaseBinaryOperationImpl implements BinaryLogicalOperation {
   /**

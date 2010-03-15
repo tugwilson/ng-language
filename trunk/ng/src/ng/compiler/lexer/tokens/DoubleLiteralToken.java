@@ -1,4 +1,5 @@
 package ng.compiler.lexer.tokens;
+
 /*
  * Created on 8 Apr 2007
  *
@@ -20,7 +21,7 @@ package ng.compiler.lexer.tokens;
 
 /**
  * @author John
- *
+ * 
  */
 public class DoubleLiteralToken extends RealLiteralToken {
   public DoubleLiteralToken(final double value) {

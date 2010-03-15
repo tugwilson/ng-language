@@ -46,25 +46,25 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   private static final Map<Class<?>, MetaClass> registry = new HashMap<Class<?>, MetaClass>();
 
   static {
-    registry.put(Object.class, objectMetaClass);
-    registry.put(boolean.class, new BooleanMetaClassImpl());
-    registry.put(byte.class, new ByteMetaClassImpl());
-    registry.put(char.class, new CharMetaClassImpl());
-    registry.put(short.class, new ShortMetaClassImpl());
-    registry.put(int.class, new IntMetaClassImpl());
-    registry.put(long.class, new LongMetaClassImpl());
-    registry.put(float.class, new FloatMetaClassImpl());
-    registry.put(double.class, new DoubleMetaClassImpl());
-    registry.put(BigInteger.class, new BigIntegerMetaClassImpl());
-    registry.put(BigDecimal.class, new BigDecimalMetaClassImpl());
-    registry.put(String.class, new StringMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(Object.class, ExtendedThreadContextImpl.objectMetaClass);
+    ExtendedThreadContextImpl.registry.put(boolean.class, new BooleanMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(byte.class, new ByteMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(char.class, new CharMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(short.class, new ShortMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(int.class, new IntMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(long.class, new LongMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(float.class, new FloatMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(double.class, new DoubleMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(BigInteger.class, new BigIntegerMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(BigDecimal.class, new BigDecimalMetaClassImpl());
+    ExtendedThreadContextImpl.registry.put(String.class, new StringMetaClassImpl());
   }
 
   private final Map<Class<?>, MetaClass> registryCache = new Map<Class<?>, MetaClass>() {
     private final Map<Class<?>, SoftReference<MetaClass>> innerRegistryCache = new HashMap<Class<?>, SoftReference<MetaClass>>();
 
     /**
-     *
+     * 
      * @see java.util.Map#clear()
      */
     public void clear() {
@@ -76,7 +76,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
      * @return
      * @see java.util.Map#containsKey(java.lang.Object)
      */
-    public boolean containsKey(Object key) {
+    public boolean containsKey(final Object key) {
       return this.innerRegistryCache.containsKey(key);
     }
 
@@ -85,7 +85,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
      * @return
      * @see java.util.Map#containsValue(java.lang.Object)
      */
-    public boolean containsValue(Object value) {
+    public boolean containsValue(final Object value) {
       return this.innerRegistryCache.containsValue(value);
     }
 
@@ -94,11 +94,11 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
      * @see java.util.Map#entrySet()
      */
     public Set<Entry<Class<?>, MetaClass>> entrySet() {
-    final Set<Entry<Class<?>, MetaClass>> result = new HashSet<Entry<Class<?>,MetaClass>>();
-    final Set<Entry<Class<?>, SoftReference<MetaClass>>> wrapped = this.innerRegistryCache.entrySet();
+      final Set<Entry<Class<?>, MetaClass>> result = new HashSet<Entry<Class<?>, MetaClass>>();
+      final Set<Entry<Class<?>, SoftReference<MetaClass>>> wrapped = this.innerRegistryCache.entrySet();
 
       for (final Iterator<Entry<Class<?>, SoftReference<MetaClass>>> iterator = wrapped.iterator(); iterator.hasNext();) {
-      final Entry<Class<?>, SoftReference<MetaClass>> entry = iterator.next();
+        final Entry<Class<?>, SoftReference<MetaClass>> entry = iterator.next();
 
         result.add(new Entry<Class<?>, MetaClass>() {
           public Class<?> getKey() {
@@ -106,7 +106,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
           }
 
           public MetaClass getValue() {
-             return entry.getValue().get();
+            return entry.getValue().get();
           }
 
           public MetaClass setValue(final MetaClass value) {
@@ -124,7 +124,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
      * @see java.util.Map#equals(java.lang.Object)
      */
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
       return this.innerRegistryCache.equals(o);
     }
 
@@ -133,14 +133,14 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
      * @return
      * @see java.util.Map#get(java.lang.Object)
      */
-    public MetaClass get(Object key) {
-     final SoftReference<MetaClass> ref = this.innerRegistryCache.get(key);
+    public MetaClass get(final Object key) {
+      final SoftReference<MetaClass> ref = this.innerRegistryCache.get(key);
 
-       if (ref == null) {
-         return null;
-       } else {
-         return ref.get();
-       }
+      if (ref == null) {
+        return null;
+      } else {
+        return ref.get();
+      }
     }
 
     /**
@@ -174,8 +174,8 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
      * @return
      * @see java.util.Map#put(java.lang.Object, java.lang.Object)
      */
-    public MetaClass put(Class<?> key, MetaClass value) {
-      final SoftReference<MetaClass> result =  this.innerRegistryCache.put(key, new SoftReference<MetaClass>(value));
+    public MetaClass put(final Class<?> key, final MetaClass value) {
+      final SoftReference<MetaClass> result = this.innerRegistryCache.put(key, new SoftReference<MetaClass>(value));
 
       if (result == null) {
         return null;
@@ -188,9 +188,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
      * @param m
      * @see java.util.Map#putAll(java.util.Map)
      */
-    public void putAll(Map<? extends Class<?>, ? extends MetaClass> m) {
+    public void putAll(final Map<? extends Class<?>, ? extends MetaClass> m) {
       for (final Iterator<? extends Class<?>> iterator = m.keySet().iterator(); iterator.hasNext();) {
-      final Class<?> key = iterator.next();
+        final Class<?> key = iterator.next();
 
         this.innerRegistryCache.put(key, new SoftReference<MetaClass>(m.get(key)));
       }
@@ -201,7 +201,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
      * @return
      * @see java.util.Map#remove(java.lang.Object)
      */
-    public MetaClass remove(Object key) {
+    public MetaClass remove(final Object key) {
       return this.innerRegistryCache.remove(key).get();
     }
 
@@ -218,8 +218,8 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
      * @see java.util.Map#values()
      */
     public Collection<MetaClass> values() {
-    final Collection<SoftReference<MetaClass>> values = this.innerRegistryCache.values();
-    final Set<MetaClass> result = new HashSet<MetaClass>();
+      final Collection<SoftReference<MetaClass>> values = this.innerRegistryCache.values();
+      final Set<MetaClass> result = new HashSet<MetaClass>();
 
       for (final Iterator<SoftReference<MetaClass>> iterator = values.iterator(); iterator.hasNext();) {
         result.add(iterator.next().get());
@@ -230,18 +230,23 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   };
 
   private final Object[] p1 = new Object[1];
+
   private final Object[] p2 = new Object[2];
+
   private final Object[] p3 = new Object[3];
+
   private final Object[] p4 = new Object[4];
+
   private final Object[] p5 = new Object[5];
 
   private final Misc misc = new BaseMiscImpl(this);
 
-  private final InterpreterSupport interpreterSupport = null;  // TODO: implement this
+  private final InterpreterSupport interpreterSupport = null; // TODO: implement
+                                                              // this
 
-  private final ValueAccess propertyAccess = null;  // TODO: implement this
+  private final ValueAccess propertyAccess = null; // TODO: implement this
 
-  private final ValueAccess fieldAccess = null;  // TODO: implement this
+  private final ValueAccess fieldAccess = null; // TODO: implement this
 
   private final ConversionOperation convert = new BaseConversionImpl(this);
 
@@ -290,9 +295,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   @Override
   public MetaClass getMetaClassFor(final Object instance) {
     if (instance instanceof NgObject) {
-      return ((NgObject)instance).getMetaClass();
+      return ((NgObject) instance).getMetaClass();
     } else if (instance == null) {
-      return null;  // TODO: return the Null MetaClass
+      return null; // TODO: return the Null MetaClass
     } else {
       return getMetaClassFor(instance.getClass());
     }
@@ -308,21 +313,21 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
 
     if (metaClass == null) {
       //
-      // If the class has a static method get$MetaClass then use this to get the MetaClass
+      // If the class has a static method get$MetaClass then use this to get the
+      // MetaClass
       //
       try {
-      final Method getMetaClass = type.getMethod("get$MetaClass", (Class<?>[])null);
+        final Method getMetaClass = type.getMethod("get$MetaClass", (Class<?>[]) null);
 
         try {
           getMetaClass.setAccessible(true);
         } catch (final SecurityException e) {
         }
 
-        if (getMetaClass.getDeclaringClass() == type &&
-            (getMetaClass.getModifiers() & getMetaClassModifiers) == getMetaClassModifiers &&
-            getMetaClass.getReturnType().isAssignableFrom(MetaClass.class)) {
+        if (getMetaClass.getDeclaringClass() == type && (getMetaClass.getModifiers() & ExtendedThreadContextImpl.getMetaClassModifiers) == ExtendedThreadContextImpl.getMetaClassModifiers
+            && getMetaClass.getReturnType().isAssignableFrom(MetaClass.class)) {
 
-          metaClass = (MetaClass)getMetaClass.invoke(null, (Object[])null);
+          metaClass = (MetaClass) getMetaClass.invoke(null, (Object[]) null);
         }
       } catch (final SecurityException e) {
       } catch (final IllegalArgumentException e) {
@@ -333,35 +338,38 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
 
       if (metaClass == null) {
         //
-        // If it's not in the thread local cache then synchronise against the class
-        // and get it from the global registry, put it in the thread local cache and
+        // If it's not in the thread local cache then synchronise against the
+        // class
+        // and get it from the global registry, put it in the thread local cache
+        // and
         // return it
         //
         // If it's not in the global registry then create it and put it in the
         // global registry and in the thread local cache and return it.
         //
         synchronized (ExtendedThreadContextImpl.class) {
-          metaClass = registry.get(type);
+          metaClass = ExtendedThreadContextImpl.registry.get(type);
 
           if (metaClass == null) {
-          final Class<?> superClass = type.getSuperclass();
+            final Class<?> superClass = type.getSuperclass();
 
             if (superClass == null) {
               //
               // It's an Interface
               //
-              metaClass = objectMetaClass.createMetaClassFor(type);
+              metaClass = ExtendedThreadContextImpl.objectMetaClass.createMetaClassFor(type);
             } else {
               metaClass = getMetaClassFor(superClass).createMetaClassFor(type);
             }
 
-            registry.put(type, metaClass);
+            ExtendedThreadContextImpl.registry.put(type, metaClass);
           }
         }
       }
 
       //
-      // Put the MetaClass in the thread local cache to speed up subsequent fetches
+      // Put the MetaClass in the thread local cache to speed up subsequent
+      // fetches
       //
       this.registryCache.put(type, metaClass);
     }
@@ -369,7 +377,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return metaClass;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#wrap(boolean)
    */
   @Override
@@ -377,7 +387,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return NgBoolean.valueOf(val);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#unwrapToBoolean(java.lang.Object)
    */
   @Override
@@ -385,7 +397,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     final NgBoolean ngBoolean;
 
     try {
-      ngBoolean = ((NgBoolean)wrapped);
+      ngBoolean = ((NgBoolean) wrapped);
     } catch (final ClassCastException e) {
       throw new NgRuntimeException("Attempted to unwrap a char from an object of type " + wrapped.getClass().getName());
     }
@@ -393,7 +405,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return ngBoolean.getBooleanValue();
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#wrap(char)
    */
   @Override
@@ -401,7 +415,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return NgChar.valueOf(val);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#unwrapToChar(java.lang.Object)
    */
   @Override
@@ -409,7 +425,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     final NgChar ngChar;
 
     try {
-      ngChar = ((NgChar)wrapped);
+      ngChar = ((NgChar) wrapped);
     } catch (final ClassCastException e) {
       throw new NgRuntimeException("Attempted to unwrap a char from an object of type " + wrapped.getClass().getName());
     }
@@ -417,7 +433,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return ngChar.getCharValue();
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#wrap(byte)
    */
   @Override
@@ -425,7 +443,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return NgByte.valueOf(val);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#unwrapToByte(java.lang.Object)
    */
   @Override
@@ -433,7 +453,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     final NgByte ngByte;
 
     try {
-      ngByte = ((NgByte)wrapped);
+      ngByte = ((NgByte) wrapped);
     } catch (final ClassCastException e) {
       throw new NgRuntimeException("Attempted to unwrap a byte from an object of type " + wrapped.getClass().getName());
     }
@@ -441,7 +461,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return ngByte.getByteValue();
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#wrap(short)
    */
   @Override
@@ -449,7 +471,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return NgShort.valueOf(val);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#unwrapToShort(java.lang.Object)
    */
   @Override
@@ -457,7 +481,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     final NgShort ngShort;
 
     try {
-      ngShort = ((NgShort)wrapped);
+      ngShort = ((NgShort) wrapped);
     } catch (final ClassCastException e) {
       throw new NgRuntimeException("Attempted to unwrap a short from an object of type " + wrapped.getClass().getName());
     }
@@ -465,7 +489,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return ngShort.getShortValue();
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#wrap(int)
    */
   @Override
@@ -473,7 +499,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return NgInt.valueOf(val);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#unwrapToInt(java.lang.Object)
    */
   @Override
@@ -481,7 +509,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     final NgInt ngInt;
 
     try {
-      ngInt = ((NgInt)wrapped);
+      ngInt = ((NgInt) wrapped);
     } catch (final ClassCastException e) {
       throw new NgRuntimeException("Attempted to unwrap an int from an object of type " + wrapped.getClass().getName());
     }
@@ -489,7 +517,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return ngInt.getIntValue();
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#wrap(long)
    */
   @Override
@@ -497,7 +527,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return NgLong.valueOf(val);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#unwrapToLong(java.lang.Object)
    */
   @Override
@@ -505,7 +537,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     final NgLong ngLong;
 
     try {
-      ngLong = ((NgLong)wrapped);
+      ngLong = ((NgLong) wrapped);
     } catch (final ClassCastException e) {
       throw new NgRuntimeException("Attempted to unwrap a long from an object of type " + wrapped.getClass().getName());
     }
@@ -513,7 +545,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return ngLong.getLongValue();
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#wrap(float)
    */
   @Override
@@ -521,7 +555,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return NgFloat.valueOf(val);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#unwrapToFloat(java.lang.Object)
    */
   @Override
@@ -529,7 +565,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     final NgFloat ngFloat;
 
     try {
-      ngFloat = ((NgFloat)wrapped);
+      ngFloat = ((NgFloat) wrapped);
     } catch (final ClassCastException e) {
       throw new NgRuntimeException("Attempted to unwrap a float from an object of type " + wrapped.getClass().getName());
     }
@@ -537,7 +573,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return ngFloat.getFloatValue();
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#wrap(double)
    */
   @Override
@@ -545,7 +583,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return NgDouble.valueOf(val);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.ThreadContext#unwrapToDouble(java.lang.Object)
    */
   @Override
@@ -553,7 +593,7 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     final NgDouble ngDouble;
 
     try {
-      ngDouble = ((NgDouble)wrapped);
+      ngDouble = ((NgDouble) wrapped);
     } catch (final ClassCastException e) {
       throw new NgRuntimeException("Attempted to unwrap a double from an object of type " + wrapped.getClass().getName());
     }
@@ -561,8 +601,12 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return ngDouble.getDoubleValue();
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see
+   * ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters
+   * (java.lang.Object)
    */
   @Override
   public Object[] prepareThreadContextAndParameters() {
@@ -570,8 +614,11 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.p1;
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see
+   * ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object)
    */
   @Override
   public Object[] prepareParameters(final Object p1) {
@@ -579,8 +626,12 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.p1;
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see
+   * ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters
+   * (java.lang.Object)
    */
   @Override
   public Object[] prepareThreadContextAndParameters(final Object p1) {
@@ -589,8 +640,12 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.p2;
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see
+   * ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object,
+   * java.lang.Object)
    */
   @Override
   public Object[] prepareParameters(final Object p1, final Object p2) {
@@ -599,8 +654,12 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.p2;
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see
+   * ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters
+   * (java.lang.Object, java.lang.Object)
    */
   @Override
   public Object[] prepareThreadContextAndParameters(final Object p1, final Object p2) {
@@ -610,8 +669,12 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.p3;
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object, java.lang.Object, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see
+   * ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object,
+   * java.lang.Object, java.lang.Object)
    */
   @Override
   public Object[] prepareParameters(final Object p1, final Object p2, final Object p3) {
@@ -621,8 +684,12 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.p3;
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object, java.lang.Object, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see
+   * ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters
+   * (java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
   public Object[] prepareThreadContextAndParameters(final Object p1, final Object p2, final Object p3) {
@@ -633,8 +700,12 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.p4;
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see
+   * ng.runtime.threadcontext.ThreadContext#prepareParameters(java.lang.Object,
+   * java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
   public Object[] prepareParameters(final Object p1, final Object p2, final Object p3, final Object p4) {
@@ -645,8 +716,12 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.p4;
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see
+   * ng.runtime.threadcontext.ThreadContext#prepareThreadContextAndParameters
+   * (java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)
    */
   @Override
   public Object[] prepareThreadContextAndParameters(final Object p1, final Object p2, final Object p3, final Object p4) {
@@ -658,7 +733,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.p5;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#misc()
    */
   @Override
@@ -666,7 +743,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.misc;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#interpreterSupport()
    */
   @Override
@@ -674,7 +753,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.interpreterSupport;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#staticMethodCall()
    */
   @Override
@@ -682,7 +763,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.staticMethodCall;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#propertyAccess()
    */
   @Override
@@ -690,7 +773,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.propertyAccess;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#fieldAccess()
    */
   @Override
@@ -708,7 +793,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.add;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#subtract()
    */
   @Override
@@ -716,7 +803,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.subtract;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#multiply()
    */
   @Override
@@ -724,7 +813,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.mutiply;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#divide()
    */
   @Override
@@ -732,7 +823,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.divide;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#remainderDivide()
    */
   @Override
@@ -740,7 +833,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.remainderDivide;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#modulo()
    */
   @Override
@@ -748,7 +843,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.modulo;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#power()
    */
   @Override
@@ -756,7 +853,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.power;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#and()
    */
   @Override
@@ -764,7 +863,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.and;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#or()
    */
   @Override
@@ -772,15 +873,19 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.or;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#xor()
    */
   @Override
   public BinaryLogicalOperation xor() {
-     return this.xor;
+    return this.xor;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#leftShift()
    */
   @Override
@@ -788,7 +893,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.leftShift;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#rightShift()
    */
   @Override
@@ -796,7 +903,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.rightShift;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#unsignedRightShift()
    */
   @Override
@@ -804,7 +913,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.unsignedRightShift;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#compare()
    */
   @Override
@@ -812,7 +923,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.compare;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#instanceOf()
    */
   @Override
@@ -826,7 +939,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.equals;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#notEquals()
    */
   @Override
@@ -834,7 +949,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.notEquals;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#lessThan()
    */
   @Override
@@ -842,7 +959,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.lessThan;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#greaterThan()
    */
   @Override
@@ -850,7 +969,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.greaterThan;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#lessThanOrEquals()
    */
   @Override
@@ -858,7 +979,9 @@ public class ExtendedThreadContextImpl extends ExtendedThreadContext {
     return this.lessThanOrEquals;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.threadcontext.ThreadContext#greaterThanOrEquals()
    */
   @Override

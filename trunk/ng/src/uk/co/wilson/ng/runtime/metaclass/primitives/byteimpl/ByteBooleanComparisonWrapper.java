@@ -9,10 +9,9 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.BooleanBinaryComparisonWrapper;
 
-
 /**
  * @author John
- *
+ * 
  */
 public class ByteBooleanComparisonWrapper extends BooleanBinaryComparisonWrapper implements ByteBooleanComparison {
 

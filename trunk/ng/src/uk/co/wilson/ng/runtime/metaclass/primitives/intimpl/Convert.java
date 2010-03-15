@@ -7,23 +7,21 @@ import ng.runtime.metaclass.primitives.intimpl.IntConversion;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 class Convert implements IntConversion {
   public boolean doAsBoolean(final ExtendedThreadContext tc, final int value) throws NotPerformed {
     return value != 0;
   }
 
   public char doAsChar(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return (char)value;
+    return (char) value;
   }
 
   public byte doAsByte(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return (byte)value;
+    return (byte) value;
   }
 
   public short doAsShort(final ExtendedThreadContext tc, final int value) throws NotPerformed {
-    return (short)value;
+    return (short) value;
   }
 
   public long doAsLong(final ExtendedThreadContext tc, final int value) throws NotPerformed {
@@ -55,15 +53,15 @@ class Convert implements IntConversion {
   }
 
   public char doAsChar(final ExtendedThreadContext tc, final Object instance) {
-    return (char)tc.unwrapToInt(instance);
+    return (char) tc.unwrapToInt(instance);
   }
 
   public byte doAsByte(final ExtendedThreadContext tc, final Object instance) {
-    return (byte)tc.unwrapToInt(instance);
+    return (byte) tc.unwrapToInt(instance);
   }
 
   public short doAsShort(final ExtendedThreadContext tc, final Object instance) {
-    return (short)tc.unwrapToInt(instance);
+    return (short) tc.unwrapToInt(instance);
   }
 
   public int doAsInt(final ExtendedThreadContext tc, final Object instance) {
@@ -90,8 +88,11 @@ class Convert implements IntConversion {
     return BigDecimal.valueOf(tc.unwrapToInt(instance));
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @seeng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.
+   * ThreadContext, java.lang.Object)
    */
   public String doAsString(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return String.valueOf(tc.unwrapToInt(instance));
@@ -106,15 +107,15 @@ class Convert implements IntConversion {
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final char value) {
-    return tc.wrap((int)value);
+    return tc.wrap((int) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final byte value) {
-    return tc.wrap((int)value);
+    return tc.wrap((int) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final short value) {
-    return tc.wrap((int)value);
+    return tc.wrap((int) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final int value) {
@@ -122,15 +123,15 @@ class Convert implements IntConversion {
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final long value) {
-    return tc.wrap((int)value);
+    return tc.wrap((int) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final float value) {
-    return tc.wrap((int)value);
+    return tc.wrap((int) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final double value) {
-    return tc.wrap((int)value);
+    return tc.wrap((int) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final BigInteger value) {

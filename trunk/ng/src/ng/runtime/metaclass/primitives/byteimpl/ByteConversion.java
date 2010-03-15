@@ -9,7 +9,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public interface ByteConversion extends Conversion {
   boolean doAsBoolean(ExtendedThreadContext tc, byte value) throws NotPerformed;

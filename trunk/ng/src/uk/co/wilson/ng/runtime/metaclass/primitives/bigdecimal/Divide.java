@@ -8,55 +8,55 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class Divide extends BaseBinaryArithmeticOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.divide().apply((BigDecimal)lhs, rhs);
+    return tc.divide().apply((BigDecimal) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.divide().apply((BigDecimal)lhs, rhsMetaClass, rhs);
+    return tc.divide().apply((BigDecimal) lhs, rhsMetaClass, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
-    return tc.divide().apply(lhs, (BigDecimal)rhs);
+    return tc.divide().apply(lhs, (BigDecimal) rhs);
   }
 
   public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.divide().apply(lhs, (BigDecimal)rhs);
+    return tc.divide().apply(lhs, (BigDecimal) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final byte lhs, final Object rhs) {
-    return tc.divide().apply(lhs, (BigDecimal)rhs);
+    return tc.divide().apply(lhs, (BigDecimal) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final short lhs, final Object rhs) {
-    return tc.divide().apply(lhs, (BigDecimal)rhs);
+    return tc.divide().apply(lhs, (BigDecimal) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final int lhs, final Object rhs) {
-    return tc.divide().apply(lhs, (BigDecimal)rhs);
+    return tc.divide().apply(lhs, (BigDecimal) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final long lhs, final Object rhs) {
-    return tc.divide().apply(lhs, (BigDecimal)rhs);
+    return tc.divide().apply(lhs, (BigDecimal) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final Object rhs) {
-    return tc.divide().apply(lhs, (BigDecimal)rhs);
+    return tc.divide().apply(lhs, (BigDecimal) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final double lhs, final Object rhs) {
-    return tc.divide().apply(lhs, (BigDecimal)rhs);
+    return tc.divide().apply(lhs, (BigDecimal) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return tc.divide().apply(lhs, (BigDecimal)rhs);
+    return tc.divide().apply(lhs, (BigDecimal) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return tc.divide().apply(lhs, (BigDecimal)rhs);
+    return tc.divide().apply(lhs, (BigDecimal) rhs);
   }
 
   public BigDecimal doBigDecimalApply(final ExtendedThreadContext tc, final BigDecimal lhs, final char rhs) {

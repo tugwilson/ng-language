@@ -9,7 +9,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public interface LongConversion extends Conversion {
   boolean doAsBoolean(ExtendedThreadContext tc, long value) throws NotPerformed;

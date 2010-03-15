@@ -8,7 +8,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class RemainderDivide extends BaseBinaryArithmeticOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
@@ -82,7 +82,7 @@ public class RemainderDivide extends BaseBinaryArithmeticOperation {
   public float doFloatApply(final ExtendedThreadContext tc, final int lhs, final float rhs) {
     final double tmp = lhs / rhs;
 
-    return (float)(lhs - Math.floor(tmp) * rhs);
+    return (float) (lhs - Math.floor(tmp) * rhs);
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final int lhs, final double rhs) {

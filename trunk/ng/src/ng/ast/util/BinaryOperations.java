@@ -1,4 +1,5 @@
 package ng.ast.util;
+
 /*
  * Created on 24 Apr 2007
  *
@@ -20,11 +21,8 @@ package ng.ast.util;
 
 /**
  * @author John
- *
+ * 
  */
 public enum BinaryOperations {
-  plus, minus, multiply, divide, integerDivide, remainderDivide,
-  power, or, and, xor, leftShift, rightShift, unsignedRightShift,
-  equals, notEquals, compare, greaterThan, lessThan,
-  greaterThanOrEquals, lessThanOrEquals, as, instanceOf
+  plus, minus, multiply, divide, integerDivide, remainderDivide, power, or, and, xor, leftShift, rightShift, unsignedRightShift, equals, notEquals, compare, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals, as, instanceOf
 }

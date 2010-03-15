@@ -8,7 +8,7 @@ import ng.compiler.lexer.NgLexer;
 
 /**
  * @author John
- *
+ * 
  */
 public class Compiler {
   public Object compile(final String source) throws IOException {
@@ -16,8 +16,8 @@ public class Compiler {
   }
 
   public Object compile(final Reader sourceReader) throws IOException {
-  final NgLexer lexer = new NgLexer(sourceReader);
-  final State state = new State();
+    final NgLexer lexer = new NgLexer(sourceReader);
+    final State state = new State();
 
     while (!state.isDone()) {
       lexer.nextToken().transform(state);

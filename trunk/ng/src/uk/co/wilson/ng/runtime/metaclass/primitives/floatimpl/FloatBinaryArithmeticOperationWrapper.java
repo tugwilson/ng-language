@@ -11,7 +11,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.ArithmeticOperationWrapper;
 
 /**
  * @author John
- *
+ * 
  */
 public class FloatBinaryArithmeticOperationWrapper extends ArithmeticOperationWrapper implements FloatBinaryArithmeticOperation {
 

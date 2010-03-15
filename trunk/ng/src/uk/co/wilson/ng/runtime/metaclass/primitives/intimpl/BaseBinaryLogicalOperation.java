@@ -1,6 +1,5 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.intimpl;
 
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -29,7 +28,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public abstract class BaseBinaryLogicalOperation extends BaseBinaryOperation implements IntBinaryLogicalOperation {
 

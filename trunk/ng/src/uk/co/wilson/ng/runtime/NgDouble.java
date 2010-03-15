@@ -7,19 +7,22 @@ import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
 public class NgDouble extends BaseNgObject {
   private static final DoubleMetaClass metaclass = PrimitiveMetaClasses.getDoubleMetaClass();
-  
+
   private static final NgDouble zero = new NgDouble(0.0);
+
   private static final NgDouble one = new NgDouble(1.0);
 
   public static DoubleMetaClass get$MetaClass() {
-    return metaclass;
+    return NgDouble.metaclass;
   }
 
   public static NgDouble valueOf(final double value) {
-    if (value == 0.0) return zero;
-    
-    if (value == 1.0) return one;
-    
+    if (value == 0.0)
+      return NgDouble.zero;
+
+    if (value == 1.0)
+      return NgDouble.one;
+
     return new NgDouble(value);
   }
 
@@ -37,7 +40,9 @@ public class NgDouble extends BaseNgObject {
     return this.value;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see java.lang.Object#toString()
    */
   @Override
@@ -45,4 +50,3 @@ public class NgDouble extends BaseNgObject {
     return String.valueOf(this.value);
   }
 }
-

@@ -1,4 +1,5 @@
 package ng.ast;
+
 /*
  * Created on 23 Apr 2007
  *
@@ -20,10 +21,12 @@ package ng.ast;
 
 /**
  * @author John
- *
+ * 
  */
 public interface Identifier extends Expression {
   String getName();
+
   boolean isTyped();
+
   Class<?> getType();
 }

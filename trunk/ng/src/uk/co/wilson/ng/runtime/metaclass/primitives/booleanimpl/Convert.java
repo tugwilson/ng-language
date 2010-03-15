@@ -14,15 +14,15 @@ class Convert implements Conversion {
   }
 
   public char doAsChar(final ExtendedThreadContext tc, final Object instance) {
-    return (char)(tc.unwrapToBoolean(instance) ? 1 : 0);
+    return (char) (tc.unwrapToBoolean(instance) ? 1 : 0);
   }
 
   public byte doAsByte(final ExtendedThreadContext tc, final Object instance) {
-    return (byte)(tc.unwrapToBoolean(instance) ? 1 : 0);
+    return (byte) (tc.unwrapToBoolean(instance) ? 1 : 0);
   }
 
   public short doAsShort(final ExtendedThreadContext tc, final Object instance) {
-    return (short)(tc.unwrapToBoolean(instance) ? 1 : 0);
+    return (short) (tc.unwrapToBoolean(instance) ? 1 : 0);
   }
 
   public int doAsInt(final ExtendedThreadContext tc, final Object instance) {
@@ -49,8 +49,11 @@ class Convert implements Conversion {
     return BigDecimal.valueOf((tc.unwrapToBoolean(instance) ? 1 : 0));
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @seeng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.
+   * ThreadContext, java.lang.Object)
    */
   public String doAsString(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return String.valueOf(tc.unwrapToBoolean(instance));

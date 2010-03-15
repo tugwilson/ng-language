@@ -6,10 +6,9 @@ import ng.ast.BigIntegerConstant;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 
-
 /**
  * @author John
- *
+ * 
  */
 public class BigIntegerConstantImpl extends NodeImpl implements BigIntegerConstant {
   private final BigInteger value;
@@ -21,8 +20,11 @@ public class BigIntegerConstantImpl extends NodeImpl implements BigIntegerConsta
     this.value = value;
   }
 
-  /* (non-JavaDoc)
-   * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass, ng.runtime.threadcontext.ThreadContext)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass,
+   * ng.runtime.threadcontext.ThreadContext)
    */
   public Object evaluate(final Object instance, final MetaClass metaClass, final ThreadContext tc) {
     return this.value;

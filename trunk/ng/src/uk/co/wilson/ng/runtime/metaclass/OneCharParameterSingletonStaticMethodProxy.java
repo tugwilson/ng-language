@@ -10,7 +10,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class OneCharParameterSingletonStaticMethodProxy extends OneParameterSingletonStaticMethodProxy {
   /**

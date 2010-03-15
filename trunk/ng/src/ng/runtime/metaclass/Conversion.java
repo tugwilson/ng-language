@@ -6,8 +6,6 @@ import java.math.BigInteger;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 public interface Conversion {
   boolean doAsBoolean(ExtendedThreadContext tc, Object instance) throws NotPerformed;
 

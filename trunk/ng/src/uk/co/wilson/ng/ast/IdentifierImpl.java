@@ -6,6 +6,7 @@ import ng.runtime.threadcontext.ThreadContext;
 
 public class IdentifierImpl extends NodeImpl implements Identifier {
   final String name;
+
   final Class<?> type;
 
   public IdentifierImpl(final String name, final Class<?> type) {

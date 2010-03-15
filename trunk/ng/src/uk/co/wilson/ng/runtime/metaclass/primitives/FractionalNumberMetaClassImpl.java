@@ -28,15 +28,20 @@ import uk.co.wilson.ng.runtime.metaclass.ShiftOperationNoopImpl;
 
 /**
  * @author John
- *
+ * 
  */
 public abstract class FractionalNumberMetaClassImpl extends BaseMetaClass {
 
   protected volatile LogicalBinaryOperation modifiedAnd = null;
+
   protected volatile LogicalBinaryOperation modifiedOr = null;
+
   protected volatile LogicalBinaryOperation modifiedXor = null;
+
   protected volatile ShiftOperation modifiedLeftShift = null;
+
   protected volatile ShiftOperation modifiedRightShift = null;
+
   protected volatile ShiftOperation modifiedUnsignedRightShift = null;
 
   /**
