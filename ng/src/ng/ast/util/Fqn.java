@@ -1,4 +1,5 @@
 package ng.ast.util;
+
 /*
  * Created on 23 Apr 2007
  *
@@ -20,18 +21,20 @@ package ng.ast.util;
 
 /**
  * @author John
- *
+ * 
  */
 public class Fqn {
   /**
-   * @param root The root package name i.e. 'a' in a.b.c
+   * @param root
+   *          The root package name i.e. 'a' in a.b.c
    */
   public void setRoot(final String root) {
 
   }
 
   /**
-   * @param subPackage The subpackage name i.e. 'b' and 'c' in a.b.c
+   * @param subPackage
+   *          The subpackage name i.e. 'b' and 'c' in a.b.c
    */
   public void addSubPackage(final String subPackage) {
 

@@ -9,7 +9,7 @@ public class NgByte extends BaseNgObject {
   private static final ByteMetaClass metaclass = PrimitiveMetaClasses.getByteMetaClass();
 
   public static ByteMetaClass get$MetaClass() {
-    return metaclass;
+    return NgByte.metaclass;
   }
 
   public static NgByte valueOf(final byte value) {
@@ -30,7 +30,9 @@ public class NgByte extends BaseNgObject {
     return this.value;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see java.lang.Object#toString()
    */
   @Override

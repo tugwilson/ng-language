@@ -10,7 +10,7 @@ import ng.runtime.threadcontext.StaticCallable;
 
 /**
  * @author John
- *
+ * 
  */
 public class BaseStaticMethodContainer implements StaticMethodContainer, StaticCallable {
   protected volatile StaticCallable modifiedCallable = null;
@@ -79,7 +79,8 @@ public class BaseStaticMethodContainer implements StaticMethodContainer, StaticC
     return this;
   }
 
-  public StaticCallable getCallable(final ExtendedThreadContext tc, final Object p1, final MetaClass m1, final Object p, final MetaClass m2, final Object p3, final MetaClass m3, final Object p4, final MetaClass m4) {
+  public StaticCallable getCallable(final ExtendedThreadContext tc, final Object p1, final MetaClass m1, final Object p, final MetaClass m2, final Object p3, final MetaClass m3, final Object p4,
+      final MetaClass m4) {
     return this;
   }
 

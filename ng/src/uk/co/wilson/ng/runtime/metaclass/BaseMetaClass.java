@@ -9,10 +9,13 @@ import ng.runtime.threadcontext.StaticMethodCallCategorySupport;
 
 public abstract class BaseMetaClass implements MetaClass {
   private final Misc modifiedMisc = null;
+
   private final DoStaticMethodCall modifiedStaticMethodCall = null;
 
   private final Class theClass;
+
   private final Misc misc;
+
   private final DoStaticMethodCall staticMethodCall;
 
   protected BaseMetaClass(final Class<?> theClass) {
@@ -21,7 +24,9 @@ public abstract class BaseMetaClass implements MetaClass {
     this.staticMethodCall = new DoStaticMethodCallImpl(this);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.metaclass.MetaClass#getTheClass()
    */
   public Class getTheClass() {
@@ -32,7 +37,9 @@ public abstract class BaseMetaClass implements MetaClass {
     return new MetaClassImpl(type);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.metaclass.MetaClass#misc()
    */
   public Misc misc() {
@@ -47,7 +54,7 @@ public abstract class BaseMetaClass implements MetaClass {
     final Map<MetaClass, DoStaticMethodCall> categoryStaticMethodCallMap = staticMethodCall.getCategoryStaticMethodCallMap();
 
     if (categoryStaticMethodCallMap != null) {
-    final DoStaticMethodCall categoryStaticMethodCall = categoryStaticMethodCallMap.get(this);
+      final DoStaticMethodCall categoryStaticMethodCall = categoryStaticMethodCallMap.get(this);
 
       if (categoryStaticMethodCall != null) {
         return categoryStaticMethodCall;

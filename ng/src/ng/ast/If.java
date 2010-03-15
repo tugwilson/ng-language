@@ -1,4 +1,5 @@
 package ng.ast;
+
 /*
  * Created on 23 Apr 2007
  *
@@ -20,9 +21,10 @@ package ng.ast;
 
 /**
  * @author John
- *
+ * 
  */
 public interface If extends Statement {
   Statement getTrueStatement();
+
   Statement getFalseStatement();
 }

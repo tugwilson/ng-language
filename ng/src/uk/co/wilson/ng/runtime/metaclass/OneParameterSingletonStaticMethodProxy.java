@@ -4,13 +4,9 @@ import java.lang.reflect.Method;
 
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
-
-
-
-
 /**
  * @author John
- *
+ * 
  */
 public class OneParameterSingletonStaticMethodProxy extends BaseSingletonStaticMethod {
   /**

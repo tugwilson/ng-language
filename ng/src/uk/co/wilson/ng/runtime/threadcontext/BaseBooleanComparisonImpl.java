@@ -19,7 +19,6 @@ import ng.runtime.threadcontext.Behaviour;
 import ng.runtime.threadcontext.BooleanComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
-
 public abstract class BaseBooleanComparisonImpl extends BaseBinaryOperationImpl implements BooleanComparison {
   public BaseBooleanComparisonImpl(final ExtendedThreadContext tc) {
     super(tc);

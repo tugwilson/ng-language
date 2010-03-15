@@ -8,7 +8,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class NotEquals extends BaseBooleanComparison {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {

@@ -5,7 +5,7 @@ import ng.runtime.metaclass.MetaClass;
 
 /**
  * @author John
- *
+ * 
  */
 public abstract class ThreadContext {
   private static final ThreadLocal<ThreadContext> contexts = new ThreadLocal<ThreadContext>() {
@@ -16,23 +16,25 @@ public abstract class ThreadContext {
       try {
         // TODO: get the class name from Property
         tmp = Class.forName("uk.co.wilson.ng.runtime.threadcontext.ExtendedThreadContextImpl");
-      } catch (ClassNotFoundException e) {
+      } catch (final ClassNotFoundException e) {
         throw new NgRuntimeException(e);
       }
 
       this.tcClass = tmp;
     }
 
-    /* (non-JavaDoc)
+    /*
+     * (non-JavaDoc)
+     * 
      * @see java.lang.ThreadLocal#initialValue()
      */
     @Override
     protected ThreadContext initialValue() {
       try {
-        return (ThreadContext)this.tcClass.newInstance();
-      } catch (InstantiationException e) {
+        return (ThreadContext) this.tcClass.newInstance();
+      } catch (final InstantiationException e) {
         throw new NgRuntimeException(e);
-      } catch (IllegalAccessException e) {
+      } catch (final IllegalAccessException e) {
         throw new NgRuntimeException(e);
       }
     }
@@ -40,10 +42,11 @@ public abstract class ThreadContext {
   };
 
   public static ThreadContext getThreadContext() {
-    return contexts.get();
+    return ThreadContext.contexts.get();
   }
 
   public abstract MetaClass getMetaClassFor(Object instance);
+
   public abstract MetaClass getMetaClassFor(Class<?> type);
 
   //
@@ -51,12 +54,19 @@ public abstract class ThreadContext {
   //
 
   public abstract Object wrap(boolean val);
+
   public abstract Object wrap(char val);
+
   public abstract Object wrap(byte val);
+
   public abstract Object wrap(short val);
+
   public abstract Object wrap(int val);
+
   public abstract Object wrap(long val);
+
   public abstract Object wrap(float val);
+
   public abstract Object wrap(double val);
 
   //

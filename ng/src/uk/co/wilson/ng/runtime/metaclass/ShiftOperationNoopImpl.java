@@ -9,7 +9,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class ShiftOperationNoopImpl implements ShiftOperation {
   public final static ShiftOperation instance = new ShiftOperationNoopImpl();

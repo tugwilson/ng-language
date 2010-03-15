@@ -6,10 +6,6 @@ import java.math.BigInteger;
 import ng.runtime.metaclass.primitives.intimpl.IntBinaryOperation;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
-
-
-
-
 abstract class BaseBinaryOperation implements IntBinaryOperation {
 
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final char rhs) {

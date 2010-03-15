@@ -11,7 +11,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.ConversionWrapper;
 
 /**
  * @author John
- *
+ * 
  */
 public class ByteConversionWrapper extends ConversionWrapper implements ByteConversion {
 

@@ -6,6 +6,7 @@ import ng.runtime.threadcontext.ThreadContext;
 
 public abstract class BinaryOperationImpl extends NodeImpl implements ng.ast.BinaryOperation {
   protected Expression lhs;
+
   protected Expression rhs;
 
   public void setLhs(final Expression lhs) {

@@ -1,4 +1,5 @@
 package ng.ast;
+
 /*
  * Created on 16 Jan 2008
  *
@@ -20,7 +21,7 @@ package ng.ast;
 
 /**
  * @author John
- *
+ * 
  */
 public interface DoubleConstant extends NumericValue {
 

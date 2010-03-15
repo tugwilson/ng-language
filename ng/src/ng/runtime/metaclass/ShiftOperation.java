@@ -1,4 +1,5 @@
 package ng.runtime.metaclass;
+
 /*
  * Created on 28 Feb 2008
  *
@@ -20,7 +21,7 @@ package ng.runtime.metaclass;
 
 /**
  * @author John
- *
+ * 
  */
 public interface ShiftOperation extends BinaryOperation {
 

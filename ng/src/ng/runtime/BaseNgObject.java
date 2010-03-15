@@ -28,44 +28,44 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public abstract class BaseNgObject implements NgObject, CompiledNgObject {
   //
   // Can we make these synthetic?
   //
   public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber) throws Throwable {
-    switch(methodNumber) {
-      case 0:
-        return tc.wrap(super.hashCode());
+    switch (methodNumber) {
+    case 0:
+      return tc.wrap(super.hashCode());
 
-      case 1:
-        super.notify();
-        return null;
+    case 1:
+      super.notify();
+      return null;
 
-      case 2:
-        super.notifyAll();
-        return null;
+    case 2:
+      super.notifyAll();
+      return null;
 
-      case 3:
-        return super.toString();
+    case 3:
+      return super.toString();
 
-      case 4:
-        super.wait();
-        return null;
+    case 4:
+      super.wait();
+      return null;
 
-      case 5:
-        return super.clone();
+    case 5:
+      return super.clone();
 
-      case 6:
-        super.finalize();
-        return null;
+    case 6:
+      super.finalize();
+      return null;
 
-      case 7:
-        return getMetaClass();
+    case 7:
+      return getMetaClass();
 
-      default:
-        throw new NgRuntimeException("Invalid call");
+    default:
+      throw new NgRuntimeException("Invalid call");
     }
   }
 
@@ -90,13 +90,13 @@ public abstract class BaseNgObject implements NgObject, CompiledNgObject {
   }
 
   public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final long p1) throws Throwable {
-    switch(methodNumber) {
-      case 0:
-        super.wait(p1);
-        return null;
+    switch (methodNumber) {
+    case 0:
+      super.wait(p1);
+      return null;
 
-      default:
-        throw new NgRuntimeException("Invalid call");
+    default:
+      throw new NgRuntimeException("Invalid call");
     }
   }
 
@@ -121,18 +121,18 @@ public abstract class BaseNgObject implements NgObject, CompiledNgObject {
   }
 
   public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final Object p1) throws Throwable {
-    switch(methodNumber) {
-      case 0:
-        super.wait(tc.convert().asLong(p1));
-        return null;
+    switch (methodNumber) {
+    case 0:
+      super.wait(tc.convert().asLong(p1));
+      return null;
 
-      default:
-        throw new NgRuntimeException("Invalid call");
+    default:
+      throw new NgRuntimeException("Invalid call");
     }
   }
 
   public Object ng$Call(final ExtendedThreadContext tc, final int methodNumber, final Object p1, final Object p2) throws Throwable {
-    switch(methodNumber) {
+    switch (methodNumber) {
     case 0:
       super.wait(tc.convert().asLong(p1), tc.convert().asInt(p2));
       return null;

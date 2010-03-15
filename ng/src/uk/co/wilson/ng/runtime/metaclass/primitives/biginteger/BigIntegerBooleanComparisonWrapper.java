@@ -11,7 +11,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.BooleanBinaryComparisonWrapp
 
 /**
  * @author John
- *
+ * 
  */
 public class BigIntegerBooleanComparisonWrapper extends BooleanBinaryComparisonWrapper implements BigIntegerBooleanComparison {
 
@@ -23,74 +23,74 @@ public class BigIntegerBooleanComparisonWrapper extends BooleanBinaryComparisonW
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final char rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (Object)lhs, rhs);
+    return doApplyBoolean(tc, (Object) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final byte rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (Object)lhs, rhs);
+    return doApplyBoolean(tc, (Object) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final short rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (Object)lhs, rhs);
+    return doApplyBoolean(tc, (Object) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final int rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (Object)lhs, rhs);
+    return doApplyBoolean(tc, (Object) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final long rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (Object)lhs, rhs);
+    return doApplyBoolean(tc, (Object) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final float rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (Object)lhs, rhs);
+    return doApplyBoolean(tc, (Object) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final double rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (Object)lhs, rhs);
+    return doApplyBoolean(tc, (Object) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final BigInteger rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (Object)lhs, rhs);
+    return doApplyBoolean(tc, (Object) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final BigInteger lhs, final BigDecimal rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (Object)lhs, rhs);
+    return doApplyBoolean(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final char rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final byte rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final short rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final int rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final long rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final float rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final double rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 }

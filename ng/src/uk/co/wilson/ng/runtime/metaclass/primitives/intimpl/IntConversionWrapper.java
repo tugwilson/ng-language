@@ -1,4 +1,5 @@
 package uk.co.wilson.ng.runtime.metaclass.primitives.intimpl;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -29,7 +30,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.ConversionWrapper;
 
 /**
  * @author John
- *
+ * 
  */
 public class IntConversionWrapper extends ConversionWrapper implements IntConversion {
 

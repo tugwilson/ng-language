@@ -26,53 +26,85 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   private volatile CharConversion modifiedConvert = null;
 
   private volatile CharBinaryArithmeticOperation modifiedAdd = null;
+
   private volatile CharBinaryArithmeticOperation modifiedSubtract = null;
+
   private volatile CharBinaryArithmeticOperation modifiedMultiply = null;
+
   private volatile CharBinaryArithmeticOperation modifiedDivide = null;
+
   private volatile CharBinaryArithmeticOperation modifiedModulo = null;
+
   private volatile CharBinaryArithmeticOperation modifiedRemainderDivide = null;
+
   private volatile CharBinaryArithmeticOperation modifiedPower = null;
 
   private volatile CharBinaryLogicalOperation modifiedAnd = null;
+
   private volatile CharBinaryLogicalOperation modifiedOr = null;
+
   private volatile CharBinaryLogicalOperation modifiedXor = null;
+
   private volatile CharShiftOperation modifiedLeftShift = null;
+
   private volatile CharShiftOperation modifiedRightShift = null;
+
   private volatile CharShiftOperation modifiedUnsignedRightShift = null;
 
   private volatile CharIntegerComparison modifiedCompare = null;
 
   private volatile CharBooleanComparison modifiedEquals = null;
+
   private volatile CharBooleanComparison modifiedNotEquals = null;
+
   private volatile CharBooleanComparison modifiedLessThan = null;
+
   private volatile CharBooleanComparison modifiedGreaterThan = null;
+
   private volatile CharBooleanComparison modifiedLessThanOrEquals = null;
+
   private volatile CharBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final CharConversion convert = new Convert();
 
   private final CharBinaryArithmeticOperation add = new Add();
+
   private final CharBinaryArithmeticOperation subtract = new Subtract();
+
   private final CharBinaryArithmeticOperation multiply = new Multiply();
+
   private final CharBinaryArithmeticOperation divide = new Divide();
+
   private final CharBinaryArithmeticOperation modulo = new Modulo();
+
   private final CharBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+
   private final CharBinaryArithmeticOperation power = new Power();
 
   private final CharBinaryLogicalOperation and = new And();
+
   private final CharBinaryLogicalOperation or = new Or();
+
   private final CharBinaryLogicalOperation xor = new Xor();
+
   private final CharShiftOperation leftShift = new LeftShift();
+
   private final CharShiftOperation rightShift = new RightShift();
+
   private final CharShiftOperation unsignedRightShift = new UnsignedRightShift();
 
   private final CharIntegerComparison compare = new Compare();
 
   private final CharBooleanComparison equals = new Equals();
+
   private final CharBooleanComparison notEquals = new NotEquals();
+
   private final CharBooleanComparison lessThan = new LessThan();
+
   private final CharBooleanComparison greaterThan = new GreaterThan();
+
   private final CharBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+
   private final CharBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public CharMetaClassImpl() {
@@ -81,7 +113,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
 
   private CharBinaryArithmeticOperation fixOperationType(final BinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof CharBinaryArithmeticOperation) {
-      return( CharBinaryArithmeticOperation) modifiedOperation;
+      return (CharBinaryArithmeticOperation) modifiedOperation;
     }
 
     return new CharBinaryArithmeticOperationWrapper(modifiedOperation);
@@ -89,7 +121,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
 
   private CharBinaryLogicalOperation fixOperationType(final LogicalBinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof CharBinaryLogicalOperation) {
-      return (CharBinaryLogicalOperation)modifiedOperation;
+      return (CharBinaryLogicalOperation) modifiedOperation;
     }
 
     return new CharBinaryLogicalOperationWrapper(modifiedOperation);
@@ -97,15 +129,15 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
 
   private CharShiftOperation fixOperationType(final ShiftOperation modifiedOperation) {
     if (modifiedOperation instanceof CharShiftOperation) {
-      return (CharShiftOperation)modifiedOperation;
+      return (CharShiftOperation) modifiedOperation;
     }
 
     return new CharShiftOperationWrapper(modifiedOperation);
   }
 
   private CharBooleanComparison fixOperationType(final BooleanBinaryComparison modifiedOperation) {
-    if(modifiedOperation instanceof CharBooleanComparison) {
-      return (CharBooleanComparison)modifiedOperation;
+    if (modifiedOperation instanceof CharBooleanComparison) {
+      return (CharBooleanComparison) modifiedOperation;
     }
 
     return new CharBooleanComparisonWrapper(modifiedOperation);
@@ -113,7 +145,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
 
   public void modifyConvert(final Conversion modifiedConvert) {
     if (modifiedConvert instanceof CharConversion) {
-      modifyConvert((CharConversion)modifiedConvert);
+      modifyConvert((CharConversion) modifiedConvert);
     } else {
       modifyConvert(new CharConversionWrapper(modifiedConvert));
     }
@@ -148,7 +180,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBinaryArithmeticOperation add(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+    final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedAdd == null) {
@@ -174,7 +206,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBinaryArithmeticOperation subtract(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+    final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedSubtract == null) {
@@ -200,7 +232,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBinaryArithmeticOperation multiply(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+    final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedMultiply == null) {
@@ -226,7 +258,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBinaryArithmeticOperation divide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+    final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedDivide == null) {
@@ -252,7 +284,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBinaryArithmeticOperation modulo(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+    final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedModulo == null) {
@@ -278,7 +310,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBinaryArithmeticOperation power(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+    final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedPower == null) {
@@ -304,7 +336,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBinaryArithmeticOperation remainderDivide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
+    final CharBinaryArithmeticOperation categoryOperation = binaryArithmeticOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
@@ -330,7 +362,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBinaryLogicalOperation and(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
+    final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedAnd == null) {
@@ -356,7 +388,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBinaryLogicalOperation or(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
+    final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedOr == null) {
@@ -382,7 +414,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBinaryLogicalOperation xor(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
+    final CharBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedXor == null) {
@@ -408,7 +440,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharShiftOperation leftShift(final ShiftCategorySupport shiftOperation) {
-  final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
+    final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLeftShift == null) {
@@ -434,7 +466,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharShiftOperation rightShift(final ShiftCategorySupport shiftOperation) {
-  final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
+    final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedRightShift == null) {
@@ -460,7 +492,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharShiftOperation unsignedRightShift(final ShiftCategorySupport shiftOperation) {
-  final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
+    final CharShiftOperation categoryOperation = shiftOperation.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedUnsignedRightShift == null) {
@@ -475,7 +507,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
 
   public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     if (modifiedCompare instanceof CharIntegerComparison) {
-      modifyCompare((CharIntegerComparison)this.modifiedConvert);
+      modifyCompare((CharIntegerComparison) this.modifiedConvert);
     } else {
       modifyCompare(new CharIntegerComparisonWrapper(modifiedCompare));
     }
@@ -490,7 +522,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharIntegerComparison compare(final IntegerComparisonCategorySupport integerComparison) {
-  final CharIntegerComparison categoryOperation = integerComparison.getCharCategoryOperation();
+    final CharIntegerComparison categoryOperation = integerComparison.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedCompare == null) {
@@ -516,7 +548,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison equals(final BooleanComparisonCategorySupport booleanComparison) {
-  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
+    final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedEquals == null) {
@@ -542,7 +574,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison notEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
+    final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedNotEquals == null) {
@@ -568,7 +600,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison lessThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
+    final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLessThan == null) {
@@ -594,7 +626,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison greaterThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
+    final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
@@ -620,7 +652,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison lessThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
+    final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
@@ -646,7 +678,7 @@ public class CharMetaClassImpl extends BaseMetaClass implements CharMetaClass {
   }
 
   public CharBooleanComparison greaterThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
+    final CharBooleanComparison categoryOperation = booleanComparison.getCharCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {

@@ -9,10 +9,9 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 import uk.co.wilson.ng.runtime.metaclass.primitives.ArithmeticOperationWrapper;
 
-
 /**
  * @author John
- *
+ * 
  */
 public class ShortShiftOperationWrapper extends ArithmeticOperationWrapper implements ShortShiftOperation {
 

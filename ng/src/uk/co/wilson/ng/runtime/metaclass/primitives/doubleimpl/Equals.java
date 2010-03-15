@@ -96,7 +96,7 @@ class Equals extends BaseBooleanComparison {
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final double lhs, final BigInteger rhs) {
-    return BigInteger.valueOf((long)lhs).compareTo(rhs) == 0;
+    return BigInteger.valueOf((long) lhs).compareTo(rhs) == 0;
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final double lhs, final BigDecimal rhs) {

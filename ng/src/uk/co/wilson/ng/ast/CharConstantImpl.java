@@ -5,10 +5,9 @@ import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 import uk.co.wilson.ng.runtime.NgChar;
 
-
 /**
  * @author John
- *
+ * 
  */
 public class CharConstantImpl extends NodeImpl implements CharConstant {
   private final NgChar value;
@@ -20,8 +19,11 @@ public class CharConstantImpl extends NodeImpl implements CharConstant {
     this.value = NgChar.valueOf(value);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass, ng.runtime.threadcontext.ThreadContext)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass,
+   * ng.runtime.threadcontext.ThreadContext)
    */
   public Object evaluate(final Object instance, final MetaClass metaClass, final ThreadContext tc) {
     return this.value;

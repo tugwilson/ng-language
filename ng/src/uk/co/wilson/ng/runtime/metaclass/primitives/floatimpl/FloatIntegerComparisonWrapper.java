@@ -11,7 +11,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.IntegerBinaryComparisonWrapp
 
 /**
  * @author John
- *
+ * 
  */
 public class FloatIntegerComparisonWrapper extends IntegerBinaryComparisonWrapper implements FloatIntegerComparison {
 
@@ -94,4 +94,3 @@ public class FloatIntegerComparisonWrapper extends IntegerBinaryComparisonWrappe
     return doApply(tc, tc.wrap(lhs), rhs);
   }
 }
-

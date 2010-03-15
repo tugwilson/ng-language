@@ -11,7 +11,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.ArithmeticOperationWrapper;
 
 /**
  * @author John
- *
+ * 
  */
 public class BigIntegerShiftOperationWrapper extends ArithmeticOperationWrapper implements BigIntegerShiftOperation {
 
@@ -23,39 +23,39 @@ public class BigIntegerShiftOperationWrapper extends ArithmeticOperationWrapper 
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final BigDecimal rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final BigInteger rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final byte rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final char rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final double rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final float rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final int rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final long rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final short rhs) {
-    return doApply(tc, (Object)lhs, rhs);
+    return doApply(tc, (Object) lhs, rhs);
   }
 
   public BigInteger doBigIntegerApply(final ExtendedThreadContext tc, final BigInteger lhs, final BigInteger rhs) throws NotPerformed {

@@ -5,7 +5,7 @@ import java.io.Reader;
 
 /**
  * @author John
- *
+ * 
  */
 public class FieldnameToken extends IdentifierToken {
   public FieldnameToken(final int c, final Reader reader) throws IOException {

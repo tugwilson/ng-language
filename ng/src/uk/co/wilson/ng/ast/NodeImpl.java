@@ -8,10 +8,12 @@ import ng.ast.util.BinaryOperations;
 
 /**
  * @author John
- *
+ * 
  */
 public abstract class NodeImpl implements Node {
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newAbstractMethodDeclaration()
    */
   public AbstractMethodDeclaration newAbstractMethodDeclaration() {
@@ -19,7 +21,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newAbstractPropertyDeclaration()
    */
   public AbstractPropertyDeclaration newAbstractPropertyDeclaration() {
@@ -27,7 +31,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newAnnotation()
    */
   public Annotation newAnnotation() {
@@ -35,7 +41,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newAssert()
    */
   public Assert newAssert() {
@@ -43,21 +51,27 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newBigDecimalConstant()
    */
   public BigDecimalConstant newBigDecimalConstant(final BigDecimal value) {
     return new BigDecimalConstantImpl(value);
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newBigIntegerConstant()
    */
   public BigIntegerConstant newBigIntegerConstant(final BigInteger value) {
     return new BigIntegerConstantImpl(value);
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newBinaryOperation()
    */
   public BinaryOperation newBinaryOperation(final BinaryOperations operation) {
@@ -90,7 +104,7 @@ public abstract class NodeImpl implements Node {
       return new AndImpl();
 
     case xor:
-      return new XorImpl() ;
+      return new XorImpl();
 
     case leftShift:
       return new LeftShiftImpl();
@@ -129,10 +143,12 @@ public abstract class NodeImpl implements Node {
       return new InstanceofImpl();
     }
 
-    return null;  // TODO: trow a complier error exception here
+    return null; // TODO: trow a complier error exception here
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newBlock()
    */
   public Block newBlock() {
@@ -140,7 +156,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newBooleanConstant()
    */
   public BooleanConstant newBooleanConstant(final boolean value) {
@@ -148,7 +166,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newBreak()
    */
   public Break newBreak() {
@@ -156,14 +176,18 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newByteConstant()
    */
   public ByteConstant newByteConstant(final byte value) {
     return new ByteConstantImpl(value);
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newCase()
    */
   public Case newCase() {
@@ -171,7 +195,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newCatch()
    */
   public Catch newCatch() {
@@ -179,14 +205,18 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newCharConstant(char)
    */
   public CharConstant newCharConstant(final char value) {
     return new CharConstantImpl(value);
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newClassDeclaration()
    */
   public ClassDeclaration newClassDeclaration() {
@@ -194,7 +224,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newClosure()
    */
   public Closure newClosure() {
@@ -202,7 +234,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newCompilationUnit()
    */
   public CompilationUnit newCompilationUnit() {
@@ -210,7 +244,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newConcreteMethodDeclaration()
    */
   public ConcreteMethodDeclaration newConcreteMethodDeclaration() {
@@ -218,7 +254,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newConcretePropertyDeclaration()
    */
   public ConcretePropertyDeclaration newConcretePropertyDeclaration() {
@@ -226,15 +264,19 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newConditionalExpression ()
    */
-  public ConditionalExpression newConditionalExpression () {
+  public ConditionalExpression newConditionalExpression() {
     // TODO Auto-generated method stub
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newConstructor()
    */
   public Constructor newConstructor() {
@@ -242,7 +284,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newContinue()
    */
   public Continue newContinue() {
@@ -250,7 +294,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newDefault()
    */
   public Default newDefault() {
@@ -258,7 +304,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newDo()
    */
   public Do newDo() {
@@ -266,14 +314,18 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newDoubleConstant()
    */
   public DoubleConstant newDoubleConstant(final double value) {
     return new DoubleConstantImpl(value);
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newEmpty()
    */
   public Empty newEmpty() {
@@ -281,7 +333,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newFieldDeclaration()
    */
   public FieldDeclaration newFieldDeclaration() {
@@ -289,7 +343,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newFinally()
    */
   public Finally newFinally() {
@@ -297,14 +353,18 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newFloatConstant()
    */
   public FloatConstant newFloatConstant(final float value) {
     return new FloatConstantImpl(value);
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newFor()
    */
   public For newFor() {
@@ -312,7 +372,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newIdentifier()
    */
   public Identifier newIdentifier() {
@@ -320,7 +382,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newIf()
    */
   public If newIf() {
@@ -328,7 +392,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newImport()
    */
   public Import newImport() {
@@ -336,14 +402,18 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.ast.Node#newIntegerConstant()
    */
   public IntegerConstant newIntegerConstant(final int value) {
     return new IntegerConstantImpl(value);
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newInterfaceDeclaration()
    */
   public InterfaceDeclaration newInterfaceDeclaration() {
@@ -351,7 +421,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newLocalDeclaration()
    */
   public LocalDeclaration newLocalDeclaration() {
@@ -359,7 +431,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newMethodCall()
    */
   public MethodCall newMethodCall() {
@@ -367,7 +441,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newParameterDeclaration()
    */
   public ParameterDeclaration newParameterDeclaration() {
@@ -375,7 +451,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newReturn()
    */
   public Return newReturn() {
@@ -383,14 +461,18 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newStringConstant()
    */
   public StringConstant newStringConstant(final String value) {
     return new StringConstantImpl(value);
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newSwitch()
    */
   public Switch newSwitch() {
@@ -398,7 +480,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newSynchronized()
    */
   public Synchronized newSynchronized() {
@@ -406,7 +490,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newThrow()
    */
   public Throw newThrow() {
@@ -414,7 +500,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newTry()
    */
   public Try newTry() {
@@ -422,7 +510,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newUnaryOperation()
    */
   public UnaryOperation newUnaryOperation() {
@@ -430,7 +520,9 @@ public abstract class NodeImpl implements Node {
     return null;
   }
 
-  /* (non-Javadoc)
+  /*
+   * (non-Javadoc)
+   * 
    * @see ng.ast.Node#newWhile()
    */
   public While newWhile() {

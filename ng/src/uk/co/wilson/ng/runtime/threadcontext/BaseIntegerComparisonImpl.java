@@ -21,7 +21,7 @@ import ng.runtime.threadcontext.IntegerComparison;
 
 /**
  * @author John
- *
+ * 
  */
 public abstract class BaseIntegerComparisonImpl extends BaseBinaryOperationImpl implements IntegerComparison {
   public BaseIntegerComparisonImpl(final ExtendedThreadContext tc) {

@@ -7,14 +7,15 @@ import ng.lang.NgRuntimeException;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
- *
- * This is the case where there is only one method on the class with this name and
- * this method takes one parameter which is not a primative type.
- *
- * This class is subclassed to cater for the case where the parameter is a primative
- *
+ * 
+ * This is the case where there is only one method on the class with this name
+ * and this method takes one parameter which is not a primative type.
+ * 
+ * This class is subclassed to cater for the case where the parameter is a
+ * primative
+ * 
  * @author John
- *
+ * 
  */
 public class OneUntypedParameterSingletonStaticMethodProxy extends OneParameterSingletonStaticMethodProxy {
   public OneUntypedParameterSingletonStaticMethodProxy(final Method method) {

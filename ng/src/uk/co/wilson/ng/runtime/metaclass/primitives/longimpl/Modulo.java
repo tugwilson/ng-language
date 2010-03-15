@@ -8,9 +8,9 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
-public class Modulo extends BaseBinaryArithmeticOperation{
+public class Modulo extends BaseBinaryArithmeticOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
     return tc.modulo().apply(tc.unwrapToLong(lhs), rhs);
   }
@@ -80,7 +80,7 @@ public class Modulo extends BaseBinaryArithmeticOperation{
   }
 
   public float doFloatApply(final ExtendedThreadContext tc, final long lhs, final float rhs) {
-    return (float)Math.floor(lhs / rhs);
+    return (float) Math.floor(lhs / rhs);
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final long lhs, final double rhs) {

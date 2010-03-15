@@ -5,10 +5,9 @@ import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 import uk.co.wilson.ng.runtime.NgByte;
 
-
 /**
  * @author John
- *
+ * 
  */
 public class ByteConstantImpl extends NodeImpl implements ByteConstant {
   private final NgByte value;
@@ -17,8 +16,11 @@ public class ByteConstantImpl extends NodeImpl implements ByteConstant {
     this.value = NgByte.valueOf(value);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass, ng.runtime.threadcontext.ThreadContext)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @see ng.ast.Node#evaluate(java.lang.Object, ng.runtime.metaclass.MetaClass,
+   * ng.runtime.threadcontext.ThreadContext)
    */
   public Object evaluate(final Object instance, final MetaClass metaClass, final ThreadContext tc) {
     return this.value;

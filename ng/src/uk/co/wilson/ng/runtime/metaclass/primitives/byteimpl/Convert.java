@@ -7,15 +7,13 @@ import ng.runtime.metaclass.primitives.byteimpl.ByteConversion;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 class Convert implements ByteConversion {
   public boolean doAsBoolean(final ExtendedThreadContext tc, final byte value) throws NotPerformed {
     return value != 0;
   }
 
   public char doAsChar(final ExtendedThreadContext tc, final byte value) throws NotPerformed {
-    return (char)value;
+    return (char) value;
   }
 
   public short doAsShort(final ExtendedThreadContext tc, final byte value) throws NotPerformed {
@@ -55,7 +53,7 @@ class Convert implements ByteConversion {
   }
 
   public char doAsChar(final ExtendedThreadContext tc, final Object instance) {
-    return (char)tc.unwrapToByte(instance);
+    return (char) tc.unwrapToByte(instance);
   }
 
   public byte doAsByte(final ExtendedThreadContext tc, final Object instance) {
@@ -90,8 +88,11 @@ class Convert implements ByteConversion {
     return BigDecimal.valueOf(tc.unwrapToByte(instance));
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @seeng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.
+   * ThreadContext, java.lang.Object)
    */
   public String doAsString(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return String.valueOf(tc.unwrapToByte(instance));
@@ -102,11 +103,11 @@ class Convert implements ByteConversion {
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final boolean value) {
-    return tc.wrap(value ? (byte)1 : (byte)0);
+    return tc.wrap(value ? (byte) 1 : (byte) 0);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final char value) {
-    return tc.wrap((byte)value);
+    return tc.wrap((byte) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final byte value) {
@@ -114,23 +115,23 @@ class Convert implements ByteConversion {
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final short value) {
-    return tc.wrap((byte)value);
+    return tc.wrap((byte) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final int value) {
-    return tc.wrap((byte)value);
+    return tc.wrap((byte) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final long value) {
-    return tc.wrap((byte)value);
+    return tc.wrap((byte) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final float value) {
-    return tc.wrap((byte)value);
+    return tc.wrap((byte) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final double value) {
-    return tc.wrap((byte)value);
+    return tc.wrap((byte) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final BigInteger value) {

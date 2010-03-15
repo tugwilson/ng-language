@@ -16,7 +16,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public abstract class BaseShiftOperationImpl extends BaseBinaryOperationImpl implements BinaryShiftOperation {
   /**

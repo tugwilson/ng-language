@@ -28,19 +28,19 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public class RightShift extends BaseShiftOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.rightShift().apply((BigInteger)lhs, rhs);
+    return tc.rightShift().apply((BigInteger) lhs, rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final MetaClass rhsMetaClass, final Object rhs) {
-    return tc.rightShift().apply((BigInteger)lhs, rhsMetaClass, rhs);
+    return tc.rightShift().apply((BigInteger) lhs, rhsMetaClass, rhs);
   }
 
   public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.rightShift().apply(lhs, (BigInteger)rhs);
+    return tc.rightShift().apply(lhs, (BigInteger) rhs);
   }
 
   public BigInteger doBigIntegerApply(final ExtendedThreadContext tc, final BigInteger lhs, final char rhs) throws NotPerformed {
@@ -68,38 +68,38 @@ public class RightShift extends BaseShiftOperation {
   }
 
   public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
-    return tc.rightShift().apply(lhs, (BigInteger)rhs);
+    return tc.rightShift().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final byte lhs, final Object rhs) {
-    return tc.rightShift().apply(lhs, (BigInteger)rhs);
+    return tc.rightShift().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final short lhs, final Object rhs) {
-    return tc.rightShift().apply(lhs, (BigInteger)rhs);
+    return tc.rightShift().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final int lhs, final Object rhs) {
-    return tc.rightShift().apply(lhs, (BigInteger)rhs);
+    return tc.rightShift().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final long lhs, final Object rhs) {
-    return tc.rightShift().apply(lhs, (BigInteger)rhs);
+    return tc.rightShift().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final float lhs, final Object rhs) {
-    return tc.rightShift().apply(lhs, (BigInteger)rhs);
+    return tc.rightShift().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final double lhs, final Object rhs) {
-    return tc.rightShift().apply(lhs, (BigInteger)rhs);
+    return tc.rightShift().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigInteger lhs, final Object rhs) {
-    return tc.rightShift().apply(lhs, (BigInteger)rhs);
+    return tc.rightShift().apply(lhs, (BigInteger) rhs);
   }
 
   public Object doApply(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
-    return tc.rightShift().apply(lhs, (BigInteger)rhs);
+    return tc.rightShift().apply(lhs, (BigInteger) rhs);
   }
 }

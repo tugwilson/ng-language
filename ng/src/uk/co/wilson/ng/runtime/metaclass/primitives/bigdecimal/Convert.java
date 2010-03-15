@@ -7,15 +7,13 @@ import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalConversion;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 class Convert implements BigDecimalConversion {
   public boolean doAsBoolean(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
     return value.compareTo(BigDecimal.ZERO) == 0;
   }
 
   public char doAsChar(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
-    return (char)value.intValue();
+    return (char) value.intValue();
   }
 
   public byte doAsByte(final ExtendedThreadContext tc, final BigDecimal value) throws NotPerformed {
@@ -51,54 +49,57 @@ class Convert implements BigDecimalConversion {
   }
 
   public boolean doAsBoolean(final ExtendedThreadContext tc, final Object instance) {
-    return ((BigInteger)instance).intValue() != 0;
+    return ((BigInteger) instance).intValue() != 0;
   }
 
   public char doAsChar(final ExtendedThreadContext tc, final Object instance) {
-    return (char)((BigInteger)instance).intValue();
+    return (char) ((BigInteger) instance).intValue();
   }
 
   public byte doAsByte(final ExtendedThreadContext tc, final Object instance) {
-    return (byte)((BigInteger)instance).intValue();
+    return (byte) ((BigInteger) instance).intValue();
   }
 
   public short doAsShort(final ExtendedThreadContext tc, final Object instance) {
-    return (short)((BigInteger)instance).intValue();
+    return (short) ((BigInteger) instance).intValue();
   }
 
   public int doAsInt(final ExtendedThreadContext tc, final Object instance) {
-    return ((BigInteger)instance).intValue();
+    return ((BigInteger) instance).intValue();
   }
 
   public long doAsLong(final ExtendedThreadContext tc, final Object instance) {
-    return ((BigInteger)instance).longValue();
+    return ((BigInteger) instance).longValue();
   }
 
   public float doAsFloat(final ExtendedThreadContext tc, final Object instance) {
-    return ((BigInteger)instance).floatValue();
+    return ((BigInteger) instance).floatValue();
   }
 
   public double doAsDouble(final ExtendedThreadContext tc, final Object instance) {
-    return ((BigInteger)instance).doubleValue();
+    return ((BigInteger) instance).doubleValue();
   }
 
   public BigInteger doAsBigInteger(final ExtendedThreadContext tc, final Object instance) {
-    return (BigInteger)instance;
+    return (BigInteger) instance;
   }
 
   public BigDecimal doAsBigDecimal(final ExtendedThreadContext tc, final Object instance) {
-    return new BigDecimal((BigInteger)instance);
+    return new BigDecimal((BigInteger) instance);
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @seeng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.
+   * ThreadContext, java.lang.Object)
    */
   public String doAsString(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
-    return ((BigInteger)instance).toString();
+    return ((BigInteger) instance).toString();
   }
 
   public Object doAsType(final ExtendedThreadContext tc, final Object instance, final Class<?> type) {
-    return tc.getMetaClassFor(type).convert(tc.convert()).doAsYourType(tc, (BigInteger)instance);
+    return tc.getMetaClassFor(type).convert(tc.convert()).doAsYourType(tc, (BigInteger) instance);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final boolean value) {
@@ -126,11 +127,11 @@ class Convert implements BigDecimalConversion {
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final float value) {
-    return BigInteger.valueOf((long)value);
+    return BigInteger.valueOf((long) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final double value) {
-    return BigInteger.valueOf((long)value);
+    return BigInteger.valueOf((long) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final BigInteger value) {

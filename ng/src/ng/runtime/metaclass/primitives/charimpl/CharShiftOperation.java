@@ -27,13 +27,18 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
-public interface CharShiftOperation  extends BinaryOperation, CharBinaryOperation {
+public interface CharShiftOperation extends BinaryOperation, CharBinaryOperation {
   int doIntApply(ExtendedThreadContext tc, char lhs, char rhs) throws NotPerformed;
+
   int doIntApply(ExtendedThreadContext tc, char lhs, byte rhs) throws NotPerformed;
+
   int doIntApply(ExtendedThreadContext tc, char lhs, short rhs) throws NotPerformed;
+
   int doIntApply(ExtendedThreadContext tc, char lhs, int rhs) throws NotPerformed;
+
   int doIntApply(ExtendedThreadContext tc, char lhs, long rhs) throws NotPerformed;
+
   int doIntApply(ExtendedThreadContext tc, char lhs, BigInteger rhs) throws NotPerformed;
 }

@@ -8,7 +8,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class RemainderDivide extends BaseBinaryArithmeticOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
@@ -60,49 +60,49 @@ public class RemainderDivide extends BaseBinaryArithmeticOperation {
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final char rhs) {
-  final double tmp = lhs / rhs;
+    final double tmp = lhs / rhs;
 
     return (tmp - Math.floor(tmp)) * rhs;
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final byte rhs) {
-  final double tmp = lhs / rhs;
+    final double tmp = lhs / rhs;
 
     return (tmp - Math.floor(tmp)) * rhs;
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final short rhs) {
-  final double tmp = lhs / rhs;
+    final double tmp = lhs / rhs;
 
     return (tmp - Math.floor(tmp)) * rhs;
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final int rhs) {
-  final double tmp = lhs / rhs;
+    final double tmp = lhs / rhs;
 
     return (tmp - Math.floor(tmp)) * rhs;
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final long rhs) {
-  final double tmp = lhs / rhs;
+    final double tmp = lhs / rhs;
 
     return (tmp - Math.floor(tmp)) * rhs;
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final float rhs) {
-  final double tmp = lhs / rhs;
+    final double tmp = lhs / rhs;
 
     return (tmp - Math.floor(tmp)) * rhs;
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final double rhs) {
-  final double tmp = lhs / rhs;
+    final double tmp = lhs / rhs;
 
     return (tmp - Math.floor(tmp)) * rhs;
   }
 
   public double doDoubleApply(final ExtendedThreadContext tc, final double lhs, final BigInteger rhs) {
-  final double tmp = lhs / rhs.longValue();
+    final double tmp = lhs / rhs.longValue();
 
     return (tmp - Math.floor(tmp)) * rhs.longValue();
   }

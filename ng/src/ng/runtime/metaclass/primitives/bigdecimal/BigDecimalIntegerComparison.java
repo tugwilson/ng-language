@@ -7,7 +7,6 @@ import ng.runtime.metaclass.primitives.intimpl.IntBinaryComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
 /*
  * Created on 15 Feb 2008
  *
@@ -29,16 +28,24 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public interface BigDecimalIntegerComparison extends IntBinaryComparison, BigDecimalBinaryOperation {
-  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, char rhs)  throws NotPerformed;
-  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, byte rhs)  throws NotPerformed;
-  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, short rhs)  throws NotPerformed;
-  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, int rhs)  throws NotPerformed;
-  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, long rhs)  throws NotPerformed;
-  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, float rhs)  throws NotPerformed;
-  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, double rhs)  throws NotPerformed;
-  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, BigInteger rhs)  throws NotPerformed;
-  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, BigDecimal rhs)  throws NotPerformed;
+  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, char rhs) throws NotPerformed;
+
+  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, byte rhs) throws NotPerformed;
+
+  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, short rhs) throws NotPerformed;
+
+  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, int rhs) throws NotPerformed;
+
+  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, long rhs) throws NotPerformed;
+
+  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, float rhs) throws NotPerformed;
+
+  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, double rhs) throws NotPerformed;
+
+  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, BigInteger rhs) throws NotPerformed;
+
+  int doIntApply(ExtendedThreadContext tc, BigDecimal lhs, BigDecimal rhs) throws NotPerformed;
 }

@@ -9,7 +9,7 @@ public class NgChar extends BaseNgObject {
   private static final CharMetaClass metaclass = PrimitiveMetaClasses.getCharMetaClass();
 
   public static CharMetaClass get$MetaClass() {
-    return metaclass;
+    return NgChar.metaclass;
   }
 
   public static NgChar valueOf(final char value) {
@@ -30,7 +30,9 @@ public class NgChar extends BaseNgObject {
     return this.value;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see java.lang.Object#toString()
    */
   @Override

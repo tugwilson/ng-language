@@ -10,7 +10,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class OneByteParameterSingletonStaticMethodProxy extends OneParameterSingletonStaticMethodProxy {
   /**
@@ -27,7 +27,7 @@ public class OneByteParameterSingletonStaticMethodProxy extends OneParameterSing
 
   @Override
   public Object doStaticCallQuick(final ExtendedThreadContext tc, final char p1) throws Throwable {
-    return doStaticCallQuick(tc, (byte)p1);
+    return doStaticCallQuick(tc, (byte) p1);
   }
 
   @Override

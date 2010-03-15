@@ -7,39 +7,37 @@ import ng.runtime.metaclass.primitives.doubleimpl.DoubleConversion;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 class Convert implements DoubleConversion {
   public boolean doAsBoolean(final ExtendedThreadContext tc, final double value) throws NotPerformed {
     return value != 0;
   }
 
   public char doAsChar(final ExtendedThreadContext tc, final double value) throws NotPerformed {
-    return (char)value;
+    return (char) value;
   }
 
   public byte doAsByte(final ExtendedThreadContext tc, final double value) throws NotPerformed {
-    return (byte)value;
+    return (byte) value;
   }
 
   public short doAsShort(final ExtendedThreadContext tc, final double value) throws NotPerformed {
-    return (short)value;
+    return (short) value;
   }
 
   public int doAsInt(final ExtendedThreadContext tc, final double value) throws NotPerformed {
-    return (int)value;
+    return (int) value;
   }
 
   public long doAsLong(final ExtendedThreadContext tc, final double value) throws NotPerformed {
-    return (long)value;
+    return (long) value;
   }
 
   public float doAsFloat(final ExtendedThreadContext tc, final double value) throws NotPerformed {
-    return (float)value;
+    return (float) value;
   }
 
   public BigInteger doAsBigInteger(final ExtendedThreadContext tc, final double value) throws NotPerformed {
-    return BigInteger.valueOf((long)value);
+    return BigInteger.valueOf((long) value);
   }
 
   public BigDecimal doAsBigDecimal(final ExtendedThreadContext tc, final double value) throws NotPerformed {
@@ -55,27 +53,27 @@ class Convert implements DoubleConversion {
   }
 
   public char doAsChar(final ExtendedThreadContext tc, final Object instance) {
-    return (char)tc.unwrapToDouble(instance);
+    return (char) tc.unwrapToDouble(instance);
   }
 
   public byte doAsByte(final ExtendedThreadContext tc, final Object instance) {
-    return (byte)tc.unwrapToDouble(instance);
+    return (byte) tc.unwrapToDouble(instance);
   }
 
   public short doAsShort(final ExtendedThreadContext tc, final Object instance) {
-    return (short)tc.unwrapToDouble(instance);
+    return (short) tc.unwrapToDouble(instance);
   }
 
   public int doAsInt(final ExtendedThreadContext tc, final Object instance) {
-    return (int)tc.unwrapToDouble(instance);
+    return (int) tc.unwrapToDouble(instance);
   }
 
   public long doAsLong(final ExtendedThreadContext tc, final Object instance) {
-    return (long)tc.unwrapToDouble(instance);
+    return (long) tc.unwrapToDouble(instance);
   }
 
   public float doAsFloat(final ExtendedThreadContext tc, final Object instance) {
-    return (float)tc.unwrapToDouble(instance);
+    return (float) tc.unwrapToDouble(instance);
   }
 
   public double doAsDouble(final ExtendedThreadContext tc, final Object instance) {
@@ -83,15 +81,18 @@ class Convert implements DoubleConversion {
   }
 
   public BigInteger doAsBigInteger(final ExtendedThreadContext tc, final Object instance) {
-    return BigInteger.valueOf((long)tc.unwrapToDouble(instance));
+    return BigInteger.valueOf((long) tc.unwrapToDouble(instance));
   }
 
   public BigDecimal doAsBigDecimal(final ExtendedThreadContext tc, final Object instance) {
     return BigDecimal.valueOf(tc.unwrapToDouble(instance));
   }
 
-  /* (non-JavaDoc)
-   * @see ng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.ThreadContext, java.lang.Object)
+  /*
+   * (non-JavaDoc)
+   * 
+   * @seeng.runtime.metaclass.Conversion#doAsString(ng.runtime.threadcontext.
+   * ThreadContext, java.lang.Object)
    */
   public String doAsString(final ExtendedThreadContext tc, final Object instance) throws NotPerformed {
     return String.valueOf(tc.unwrapToDouble(instance));
@@ -106,27 +107,27 @@ class Convert implements DoubleConversion {
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final char value) {
-    return tc.wrap((double)value);
+    return tc.wrap((double) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final byte value) {
-    return tc.wrap((double)value);
+    return tc.wrap((double) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final short value) {
-    return tc.wrap((double)value);
+    return tc.wrap((double) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final int value) {
-    return tc.wrap((double)value);
+    return tc.wrap((double) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final long value) {
-    return tc.wrap((double)value);
+    return tc.wrap((double) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final float value) {
-    return tc.wrap((double)value);
+    return tc.wrap((double) value);
   }
 
   public Object doAsYourType(final ExtendedThreadContext tc, final double value) {

@@ -1,4 +1,5 @@
 package ng.ast.util;
+
 /*
  * Created on 24 Apr 2007
  *
@@ -20,7 +21,7 @@ package ng.ast.util;
 
 /**
  * @author John
- *
+ * 
  */
 public enum UnaryOperations {
   plus, minus, preIncrement, preDecrement, postIncrement, postDecrement, complement, not

@@ -9,7 +9,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public interface ShortConversion extends Conversion {
   boolean doAsBoolean(ExtendedThreadContext tc, short value) throws NotPerformed;

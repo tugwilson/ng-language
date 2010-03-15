@@ -1,4 +1,5 @@
 package ng.ast;
+
 /*
  * Created on 22 Apr 2007
  *
@@ -20,7 +21,7 @@ package ng.ast;
 
 /**
  * @author John
- *
+ * 
  */
 public interface Switch extends Statement {
   Block getBlock();

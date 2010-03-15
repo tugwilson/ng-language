@@ -26,10 +26,9 @@ import ng.runtime.threadcontext.NotPerformed;
  *
  */
 
-
 /**
  * @author John
- *
+ * 
  */
 public abstract class BaseShiftOperation extends BaseBinaryOperation implements LongShiftOperation {
 

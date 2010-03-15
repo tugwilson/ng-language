@@ -11,7 +11,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.BooleanBinaryComparisonWrapp
 
 /**
  * @author John
- *
+ * 
  */
 public class IntBooleanComparisonWrapper extends BooleanBinaryComparisonWrapper implements IntBooleanComparison {
 

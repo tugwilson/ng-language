@@ -8,7 +8,7 @@ import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
  * @author John
- *
+ * 
  */
 public class Divide extends BaseBinaryArithmeticOperation {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
@@ -58,6 +58,7 @@ public class Divide extends BaseBinaryArithmeticOperation {
   public Object doApply(final ExtendedThreadContext tc, final BigDecimal lhs, final Object rhs) {
     return tc.divide().apply(lhs, tc.unwrapToByte(rhs));
   }
+
   public int doIntApply(final ExtendedThreadContext tc, final byte lhs, final char rhs) {
     return lhs / rhs;
   }

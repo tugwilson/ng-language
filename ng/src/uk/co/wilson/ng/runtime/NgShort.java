@@ -9,7 +9,7 @@ public class NgShort extends BaseNgObject {
   private static final ShortMetaClass metaclass = PrimitiveMetaClasses.getShortMetaClass();
 
   public static ShortMetaClass get$MetaClass() {
-    return metaclass;
+    return NgShort.metaclass;
   }
 
   public static NgShort valueOf(final short value) {
@@ -30,7 +30,9 @@ public class NgShort extends BaseNgObject {
     return this.value;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see java.lang.Object#toString()
    */
   @Override

@@ -7,21 +7,24 @@ import ng.runtime.metaclass.util.PrimitiveMetaClasses;
 
 public class NgInt extends BaseNgObject {
   private static final IntMetaClass metaclass = PrimitiveMetaClasses.getIntMetaClass();
+
   private static final int range = 127;
-  private static final NgInt cache[] = new NgInt[range * 2 + 1];
+
+  private static final NgInt cache[] = new NgInt[NgInt.range * 2 + 1];
   static {
-    for (int i = 0; i != cache.length; i++) {
-      cache[i] = new NgInt(i - range);
+    for (int i = 0; i != NgInt.cache.length; i++) {
+      NgInt.cache[i] = new NgInt(i - NgInt.range);
     }
   }
 
   public static IntMetaClass get$MetaClass() {
-    return metaclass;
+    return NgInt.metaclass;
   }
 
   public static NgInt valueOf(final int value) {
-    if (value >= -range && value <= range) return cache[value + range];
-    
+    if (value >= -NgInt.range && value <= NgInt.range)
+      return NgInt.cache[value + NgInt.range];
+
     return new NgInt(value);
   }
 
@@ -39,7 +42,9 @@ public class NgInt extends BaseNgObject {
     return this.value;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see java.lang.Object#toString()
    */
   @Override

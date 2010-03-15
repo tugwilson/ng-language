@@ -7,8 +7,6 @@ import ng.runtime.metaclass.primitives.bigdecimal.BigDecimalBooleanComparison;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 import ng.runtime.threadcontext.NotPerformed;
 
-
-
 abstract class BaseBooleanComparison extends BaseBinaryOperation implements BigDecimalBooleanComparison {
   public Object doApply(final ExtendedThreadContext tc, final char lhs, final Object rhs) {
     try {
@@ -155,38 +153,38 @@ abstract class BaseBooleanComparison extends BaseBinaryOperation implements BigD
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final char rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (BigDecimal)lhs, rhs);
+    return doApplyBoolean(tc, (BigDecimal) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final byte rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (BigDecimal)lhs, rhs);
+    return doApplyBoolean(tc, (BigDecimal) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final short rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (BigDecimal)lhs, rhs);
+    return doApplyBoolean(tc, (BigDecimal) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final int rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (BigDecimal)lhs, rhs);
+    return doApplyBoolean(tc, (BigDecimal) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final long rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (BigDecimal)lhs, rhs);
+    return doApplyBoolean(tc, (BigDecimal) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final float rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (BigDecimal)lhs, rhs);
+    return doApplyBoolean(tc, (BigDecimal) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final double rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (BigDecimal)lhs, rhs);
+    return doApplyBoolean(tc, (BigDecimal) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final BigInteger rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (BigDecimal)lhs, rhs);
+    return doApplyBoolean(tc, (BigDecimal) lhs, rhs);
   }
 
   public boolean doApplyBoolean(final ExtendedThreadContext tc, final Object lhs, final BigDecimal rhs) throws NotPerformed {
-    return doApplyBoolean(tc, (BigDecimal)lhs, rhs);
+    return doApplyBoolean(tc, (BigDecimal) lhs, rhs);
   }
 }

@@ -9,7 +9,7 @@ public class NgLong extends BaseNgObject {
   private static final LongMetaClass metaclass = PrimitiveMetaClasses.getLongMetaClass();
 
   public static LongMetaClass get$MetaClass() {
-    return metaclass;
+    return NgLong.metaclass;
   }
 
   public static NgLong valueOf(final long value) {
@@ -30,7 +30,9 @@ public class NgLong extends BaseNgObject {
     return this.value;
   }
 
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see java.lang.Object#toString()
    */
   @Override

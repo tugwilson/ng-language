@@ -2,7 +2,6 @@ package uk.co.wilson.ng.runtime.metaclass;
 
 import ng.runtime.metaclass.Misc;
 
-
 public class MiscImpl implements Misc {
   private final Class<?> theClass;
 
@@ -13,8 +12,9 @@ public class MiscImpl implements Misc {
     this.theClass = theClass;
   }
 
-
-  /* (non-JavaDoc)
+  /*
+   * (non-JavaDoc)
+   * 
    * @see ng.runtime.metaclass.Misc#getTheClass(java.lang.Object)
    */
   public Class<?> getTheClass(final Object instance) {

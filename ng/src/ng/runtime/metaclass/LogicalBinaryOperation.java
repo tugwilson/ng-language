@@ -1,4 +1,5 @@
 package ng.runtime.metaclass;
+
 /*
  * Created on 27 Feb 2008
  *
@@ -20,7 +21,7 @@ package ng.runtime.metaclass;
 
 /**
  * @author John
- *
+ * 
  */
 public interface LogicalBinaryOperation extends BinaryOperation {
 

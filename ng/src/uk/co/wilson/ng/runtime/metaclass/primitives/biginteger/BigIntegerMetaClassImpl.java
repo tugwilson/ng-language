@@ -27,53 +27,85 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   private volatile BigIntegerConversion modifiedConvert = null;
 
   private volatile BigIntegerBinaryArithmeticOperation modifiedAdd = null;
+
   private volatile BigIntegerBinaryArithmeticOperation modifiedSubtract = null;
+
   private volatile BigIntegerBinaryArithmeticOperation modifiedMultiply = null;
+
   private volatile BigIntegerBinaryArithmeticOperation modifiedDivide = null;
+
   private volatile BigIntegerBinaryArithmeticOperation modifiedModulo = null;
+
   private volatile BigIntegerBinaryArithmeticOperation modifiedRemainderDivide = null;
+
   private volatile BigIntegerBinaryArithmeticOperation modifiedPower = null;
 
   private volatile BigIntegerBinaryLogicalOperation modifiedAnd = null;
+
   private volatile BigIntegerBinaryLogicalOperation modifiedOr = null;
+
   private volatile BigIntegerBinaryLogicalOperation modifiedXor = null;
+
   private volatile BigIntegerShiftOperation modifiedLeftShift = null;
+
   private volatile BigIntegerShiftOperation modifiedRightShift = null;
+
   private volatile BigIntegerShiftOperation modifiedUnsignedRightShift = null;
 
   private volatile BigIntegerIntegerComparison modifiedCompare = null;
 
   private volatile BigIntegerBooleanComparison modifiedEquals = null;
+
   private volatile BigIntegerBooleanComparison modifiedNotEquals = null;
+
   private volatile BigIntegerBooleanComparison modifiedLessThan = null;
+
   private volatile BigIntegerBooleanComparison modifiedGreaterThan = null;
+
   private volatile BigIntegerBooleanComparison modifiedLessThanOrEquals = null;
+
   private volatile BigIntegerBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final BigIntegerConversion convert = new Convert();
 
   private final BigIntegerBinaryArithmeticOperation add = new Add();
+
   private final BigIntegerBinaryArithmeticOperation subtract = new Subtract();
+
   private final BigIntegerBinaryArithmeticOperation multiply = new Multiply();
+
   private final BigIntegerBinaryArithmeticOperation divide = new Divide();
+
   private final BigIntegerBinaryArithmeticOperation modulo = new Modulo();
+
   private final BigIntegerBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+
   private final BigIntegerBinaryArithmeticOperation power = new Power();
 
   private final BigIntegerBinaryLogicalOperation and = new And();
+
   private final BigIntegerBinaryLogicalOperation or = new Or();
+
   private final BigIntegerBinaryLogicalOperation xor = new Xor();
+
   private final BigIntegerShiftOperation leftShift = new LeftShift();
+
   private final BigIntegerShiftOperation rightShift = new RightShift();
+
   private final BigIntegerShiftOperation unsignedRightShift = new UnsignedRightShift();
 
   private final BigIntegerIntegerComparison compare = new Compare();
 
   private final BigIntegerBooleanComparison equals = new Equals();
+
   private final BigIntegerBooleanComparison notEquals = new NotEquals();
+
   private final BigIntegerBooleanComparison lessThan = new LessThan();
+
   private final BigIntegerBooleanComparison greaterThan = new GreaterThan();
+
   private final BigIntegerBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+
   private final BigIntegerBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public BigIntegerMetaClassImpl() {
@@ -82,7 +114,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
 
   private BigIntegerBinaryArithmeticOperation fixOperationType(final BinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof BigIntegerBinaryArithmeticOperation) {
-      return( BigIntegerBinaryArithmeticOperation) modifiedOperation;
+      return (BigIntegerBinaryArithmeticOperation) modifiedOperation;
     }
 
     return new BigIntegerBinaryArithmeticOperationWrapper(modifiedOperation);
@@ -90,7 +122,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
 
   private BigIntegerBinaryLogicalOperation fixOperationType(final LogicalBinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof BigIntegerBinaryLogicalOperation) {
-      return (BigIntegerBinaryLogicalOperation)modifiedOperation;
+      return (BigIntegerBinaryLogicalOperation) modifiedOperation;
     }
 
     return new BigIntegerBinaryLogicalOperationWrapper(modifiedOperation);
@@ -98,15 +130,15 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
 
   private BigIntegerShiftOperation fixOperationType(final ShiftOperation modifiedOperation) {
     if (modifiedOperation instanceof BigIntegerShiftOperation) {
-      return (BigIntegerShiftOperation)modifiedOperation;
+      return (BigIntegerShiftOperation) modifiedOperation;
     }
 
     return new BigIntegerShiftOperationWrapper(modifiedOperation);
   }
 
   private BigIntegerBooleanComparison fixOperationType(final BooleanBinaryComparison modifiedOperation) {
-    if(modifiedOperation instanceof BigIntegerBooleanComparison) {
-      return (BigIntegerBooleanComparison)modifiedOperation;
+    if (modifiedOperation instanceof BigIntegerBooleanComparison) {
+      return (BigIntegerBooleanComparison) modifiedOperation;
     }
 
     return new BigIntegerBooleanComparisonWrapper(modifiedOperation);
@@ -114,7 +146,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
 
   public void modifyConvert(final Conversion modifiedConvert) {
     if (modifiedConvert instanceof BigIntegerConversion) {
-      modifyConvert((BigIntegerConversion)modifiedConvert);
+      modifyConvert((BigIntegerConversion) modifiedConvert);
     } else {
       modifyConvert(new BigIntegerConversionWrapper(modifiedConvert));
     }
@@ -149,7 +181,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBinaryArithmeticOperation add(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedAdd == null) {
@@ -175,7 +207,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBinaryArithmeticOperation subtract(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedSubtract == null) {
@@ -201,7 +233,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBinaryArithmeticOperation multiply(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedMultiply == null) {
@@ -227,7 +259,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBinaryArithmeticOperation divide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedDivide == null) {
@@ -253,7 +285,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBinaryArithmeticOperation modulo(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedModulo == null) {
@@ -279,7 +311,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBinaryArithmeticOperation power(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedPower == null) {
@@ -305,7 +337,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBinaryArithmeticOperation remainderDivide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
+    final BigIntegerBinaryArithmeticOperation bigIntegerCategoryOperation = binaryArithmeticOperation.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
@@ -331,7 +363,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBinaryLogicalOperation and(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final BigIntegerBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getBigIntegerCategoryOperation();
+    final BigIntegerBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedAnd == null) {
@@ -357,7 +389,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBinaryLogicalOperation or(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final BigIntegerBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getBigIntegerCategoryOperation();
+    final BigIntegerBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedOr == null) {
@@ -383,7 +415,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBinaryLogicalOperation xor(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final BigIntegerBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getBigIntegerCategoryOperation();
+    final BigIntegerBinaryLogicalOperation categoryOperation = binaryLogicalOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedXor == null) {
@@ -409,7 +441,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerShiftOperation leftShift(final ShiftCategorySupport shiftOperation) {
-  final BigIntegerShiftOperation categoryOperation = shiftOperation.getBigIntegerCategoryOperation();
+    final BigIntegerShiftOperation categoryOperation = shiftOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLeftShift == null) {
@@ -435,7 +467,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerShiftOperation rightShift(final ShiftCategorySupport shiftOperation) {
-  final BigIntegerShiftOperation categoryOperation = shiftOperation.getBigIntegerCategoryOperation();
+    final BigIntegerShiftOperation categoryOperation = shiftOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedRightShift == null) {
@@ -461,7 +493,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerShiftOperation unsignedRightShift(final ShiftCategorySupport shiftOperation) {
-  final BigIntegerShiftOperation categoryOperation = shiftOperation.getBigIntegerCategoryOperation();
+    final BigIntegerShiftOperation categoryOperation = shiftOperation.getBigIntegerCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedUnsignedRightShift == null) {
@@ -476,7 +508,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
 
   public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     if (modifiedCompare instanceof BigIntegerIntegerComparison) {
-      modifyCompare((BigIntegerIntegerComparison)this.modifiedConvert);
+      modifyCompare((BigIntegerIntegerComparison) this.modifiedConvert);
     } else {
       modifyCompare(new BigIntegerIntegerComparisonWrapper(modifiedCompare));
     }
@@ -491,7 +523,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerIntegerComparison compare(final IntegerComparisonCategorySupport integerComparison) {
-  final BigIntegerIntegerComparison bigDecimalCategoryOperation = integerComparison.getBigIntegerCategoryOperation();
+    final BigIntegerIntegerComparison bigDecimalCategoryOperation = integerComparison.getBigIntegerCategoryOperation();
 
     if (bigDecimalCategoryOperation == null) {
       if (this.modifiedCompare == null) {
@@ -517,7 +549,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBooleanComparison equals(final BooleanComparisonCategorySupport booleanComparison) {
-  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedEquals == null) {
@@ -543,7 +575,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBooleanComparison notEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedNotEquals == null) {
@@ -569,7 +601,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBooleanComparison lessThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedLessThan == null) {
@@ -595,7 +627,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBooleanComparison greaterThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
@@ -621,7 +653,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBooleanComparison lessThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
@@ -647,7 +679,7 @@ public class BigIntegerMetaClassImpl extends BaseMetaClass implements BigInteger
   }
 
   public BigIntegerBooleanComparison greaterThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
+    final BigIntegerBooleanComparison bigIntegerCategoryOperation = booleanComparison.getBigIntegerCategoryOperation();
 
     if (bigIntegerCategoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {

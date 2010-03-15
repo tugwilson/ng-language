@@ -9,7 +9,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public interface DoubleConversion extends Conversion {
   boolean doAsBoolean(ExtendedThreadContext tc, double value) throws NotPerformed;

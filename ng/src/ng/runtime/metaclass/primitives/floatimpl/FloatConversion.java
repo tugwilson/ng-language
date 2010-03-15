@@ -9,7 +9,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public interface FloatConversion extends Conversion {
   boolean doAsBoolean(ExtendedThreadContext tc, float value) throws NotPerformed;

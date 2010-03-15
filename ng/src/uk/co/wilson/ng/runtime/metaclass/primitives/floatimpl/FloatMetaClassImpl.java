@@ -21,44 +21,65 @@ import uk.co.wilson.ng.runtime.metaclass.BinaryLogicalOperationNoopImpl;
 import uk.co.wilson.ng.runtime.metaclass.ShiftOperationNoopImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.FractionalNumberMetaClassImpl;
 
-
 public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements FloatMetaClass {
   private volatile FloatConversion modifiedConvert = null;
 
   private volatile FloatBinaryArithmeticOperation modifiedAdd = null;
+
   private volatile FloatBinaryArithmeticOperation modifiedSubtract = null;
+
   private volatile FloatBinaryArithmeticOperation modifiedMultiply = null;
+
   private volatile FloatBinaryArithmeticOperation modifiedDivide = null;
+
   private volatile FloatBinaryArithmeticOperation modifiedModulo = null;
+
   private volatile FloatBinaryArithmeticOperation modifiedRemainderDivide = null;
+
   private volatile FloatBinaryArithmeticOperation modifiedPower = null;
 
   private volatile FloatIntegerComparison modifiedCompare = null;
 
   private volatile FloatBooleanComparison modifiedEquals = null;
+
   private volatile FloatBooleanComparison modifiedNotEquals = null;
+
   private volatile FloatBooleanComparison modifiedLessThan = null;
+
   private volatile FloatBooleanComparison modifiedGreaterThan = null;
+
   private volatile FloatBooleanComparison modifiedLessThanOrEquals = null;
+
   private volatile FloatBooleanComparison modifiedGreaterThanOrEquals = null;
 
   private final FloatConversion convert = new Convert();
 
   private final FloatBinaryArithmeticOperation add = new Add();
+
   private final FloatBinaryArithmeticOperation subtract = new Subtract();
+
   private final FloatBinaryArithmeticOperation multiply = new Multiply();
+
   private final FloatBinaryArithmeticOperation divide = new Divide();
+
   private final FloatBinaryArithmeticOperation modulo = new Modulo();
+
   private final FloatBinaryArithmeticOperation remainderDivide = new RemainderDivide();
+
   private final FloatBinaryArithmeticOperation power = new Power();
 
   private final FloatIntegerComparison compare = new Compare();
 
   private final FloatBooleanComparison equals = new Equals();
+
   private final FloatBooleanComparison notEquals = new NotEquals();
+
   private final FloatBooleanComparison lessThan = new LessThan();
+
   private final FloatBooleanComparison greaterThan = new GreaterThan();
+
   private final FloatBooleanComparison lessThanOrEquals = new LessThanOrEquals();
+
   private final FloatBooleanComparison greaterThanOrEquals = new GreaterThanOrEquals();
 
   public FloatMetaClassImpl() {
@@ -67,15 +88,15 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
 
   private FloatBinaryArithmeticOperation fixOperationType(final BinaryOperation modifiedOperation) {
     if (modifiedOperation instanceof FloatBinaryArithmeticOperation) {
-      return( FloatBinaryArithmeticOperation) modifiedOperation;
+      return (FloatBinaryArithmeticOperation) modifiedOperation;
     }
 
     return new FloatBinaryArithmeticOperationWrapper(modifiedOperation);
   }
 
   private FloatBooleanComparison fixOperationType(final BooleanBinaryComparison modifiedOperation) {
-    if(modifiedOperation instanceof FloatBooleanComparison) {
-      return (FloatBooleanComparison)modifiedOperation;
+    if (modifiedOperation instanceof FloatBooleanComparison) {
+      return (FloatBooleanComparison) modifiedOperation;
     }
 
     return new FloatBooleanComparisonWrapper(modifiedOperation);
@@ -83,7 +104,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
 
   public void modifyConvert(final Conversion modifiedConvert) {
     if (modifiedConvert instanceof FloatConversion) {
-      modifyConvert((FloatConversion)modifiedConvert);
+      modifyConvert((FloatConversion) modifiedConvert);
     } else {
       modifyConvert(new FloatConversionWrapper(modifiedConvert));
     }
@@ -118,7 +139,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBinaryArithmeticOperation add(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedAdd == null) {
@@ -144,7 +165,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBinaryArithmeticOperation subtract(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedSubtract == null) {
@@ -170,7 +191,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBinaryArithmeticOperation multiply(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedMultiply == null) {
@@ -196,7 +217,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBinaryArithmeticOperation divide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedDivide == null) {
@@ -222,7 +243,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBinaryArithmeticOperation modulo(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedModulo == null) {
@@ -248,7 +269,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBinaryArithmeticOperation power(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedPower == null) {
@@ -274,7 +295,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBinaryArithmeticOperation remainderDivide(final BinaryArithmeticCategorySupport binaryArithmeticOperation) {
-  final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
+    final FloatBinaryArithmeticOperation floatCategoryOperation = binaryArithmeticOperation.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedRemainderDivide == null) {
@@ -288,7 +309,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public BinaryOperation and(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final BinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
+    final BinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedAnd == null) {
@@ -302,7 +323,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public LogicalBinaryOperation or(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
+    final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedOr == null) {
@@ -316,7 +337,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public LogicalBinaryOperation xor(final BinaryLogicalCategorySupport binaryLogicalOperation) {
-  final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
+    final LogicalBinaryOperation categoryOperation = binaryLogicalOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedXor == null) {
@@ -330,7 +351,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public ShiftOperation leftShift(final ShiftCategorySupport shiftOperation) {
-  final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
+    final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedLeftShift == null) {
@@ -344,7 +365,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public ShiftOperation rightShift(final ShiftCategorySupport shiftOperation) {
-  final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
+    final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedRightShift == null) {
@@ -358,7 +379,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public ShiftOperation unsignedRightShift(final ShiftCategorySupport shiftOperation) {
-  final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
+    final ShiftOperation categoryOperation = shiftOperation.getFloatCategoryOperation();
 
     if (categoryOperation == null) {
       if (this.modifiedUnsignedRightShift == null) {
@@ -373,7 +394,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
 
   public void modifyCompare(final IntBinaryComparison modifiedCompare) {
     if (modifiedCompare instanceof FloatIntegerComparison) {
-      modifyCompare((FloatIntegerComparison)this.modifiedConvert);
+      modifyCompare((FloatIntegerComparison) this.modifiedConvert);
     } else {
       modifyCompare(new FloatIntegerComparisonWrapper(modifiedCompare));
     }
@@ -388,7 +409,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatIntegerComparison compare(final IntegerComparisonCategorySupport integerComparison) {
-  final FloatIntegerComparison floatCategoryOperation = integerComparison.getFloatCategoryOperation();
+    final FloatIntegerComparison floatCategoryOperation = integerComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedCompare == null) {
@@ -414,7 +435,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBooleanComparison equals(final BooleanComparisonCategorySupport booleanComparison) {
-  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedEquals == null) {
@@ -440,7 +461,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBooleanComparison notEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedNotEquals == null) {
@@ -466,7 +487,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBooleanComparison lessThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedLessThan == null) {
@@ -492,7 +513,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBooleanComparison greaterThan(final BooleanComparisonCategorySupport booleanComparison) {
-  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedGreaterThan == null) {
@@ -518,7 +539,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBooleanComparison lessThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedLessThanOrEquals == null) {
@@ -544,7 +565,7 @@ public class FloatMetaClassImpl extends FractionalNumberMetaClassImpl implements
   }
 
   public FloatBooleanComparison greaterThanOrEquals(final BooleanComparisonCategorySupport booleanComparison) {
-  final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
+    final FloatBooleanComparison floatCategoryOperation = booleanComparison.getFloatCategoryOperation();
 
     if (floatCategoryOperation == null) {
       if (this.modifiedGreaterThanOrEquals == null) {

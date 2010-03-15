@@ -29,9 +29,9 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
-public class Compare  extends BaseBinaryOperation implements DoubleIntegerComparison {
+public class Compare extends BaseBinaryOperation implements DoubleIntegerComparison {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
     return tc.compare().apply(tc.unwrapToDouble(lhs), rhs);
   }
@@ -41,7 +41,7 @@ public class Compare  extends BaseBinaryOperation implements DoubleIntegerCompar
   }
 
   public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.compare().apply(lhs, (BigDecimal)rhs);
+    return tc.compare().apply(lhs, (BigDecimal) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
@@ -121,7 +121,7 @@ public class Compare  extends BaseBinaryOperation implements DoubleIntegerCompar
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final double lhs, final BigInteger rhs) throws NotPerformed {
-    return BigInteger.valueOf((long)lhs).compareTo(rhs);
+    return BigInteger.valueOf((long) lhs).compareTo(rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final double lhs, final BigDecimal rhs) throws NotPerformed {

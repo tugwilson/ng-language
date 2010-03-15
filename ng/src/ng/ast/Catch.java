@@ -1,4 +1,5 @@
 package ng.ast;
+
 /*
  * Created on 24 Apr 2007
  *
@@ -20,10 +21,12 @@ package ng.ast;
 
 /**
  * @author John
- *
+ * 
  */
 public interface Catch extends Statement {
   void setException(LocalDeclaration exception);
+
   LocalDeclaration getException();
+
   Block getBlock();
 }

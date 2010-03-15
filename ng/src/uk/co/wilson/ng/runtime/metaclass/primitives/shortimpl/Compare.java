@@ -29,7 +29,7 @@ import ng.runtime.threadcontext.NotPerformed;
 
 /**
  * @author John
- *
+ * 
  */
 public class Compare extends BaseBinaryOperation implements ShortIntegerComparison {
   public Object doApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
@@ -41,7 +41,7 @@ public class Compare extends BaseBinaryOperation implements ShortIntegerComparis
   }
 
   public Object doReverseApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {
-    return tc.compare().apply(lhs, (BigDecimal)rhs);
+    return tc.compare().apply(lhs, (BigDecimal) rhs);
   }
 
   public int doIntApply(final ExtendedThreadContext tc, final Object lhs, final Object rhs) {

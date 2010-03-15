@@ -7,10 +7,9 @@ import ng.ast.util.BinaryOperations;
 import ng.runtime.metaclass.MetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 
-
 /**
  * @author John
- *
+ * 
  */
 public interface Node {
   /**
@@ -244,10 +243,10 @@ public interface Node {
   /**
    * @return
    */
- UnaryOperation newUnaryOperation();
+  UnaryOperation newUnaryOperation();
 
- /**
-  * @return
-  */
+  /**
+   * @return
+   */
   While newWhile();
 }

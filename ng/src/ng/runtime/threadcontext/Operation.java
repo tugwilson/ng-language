@@ -21,9 +21,10 @@ package ng.runtime.threadcontext;
 
 /**
  * @author John
- *
+ * 
  */
 public interface Operation {
   void pushBehaviour(Behaviour behaviour);
+
   void popBehaviour();
 }

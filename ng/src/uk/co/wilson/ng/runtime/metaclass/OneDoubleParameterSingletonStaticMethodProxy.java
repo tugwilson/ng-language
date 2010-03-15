@@ -9,11 +9,12 @@ import ng.lang.NgRuntimeException;
 import ng.runtime.threadcontext.ExtendedThreadContext;
 
 /**
- *
- * This is the case where there is just one method with this name and it takes a single double parameter
- *
+ * 
+ * This is the case where there is just one method with this name and it takes a
+ * single double parameter
+ * 
  * @author John
- *
+ * 
  */
 public class OneDoubleParameterSingletonStaticMethodProxy extends OneParameterSingletonStaticMethodProxy {
   /**

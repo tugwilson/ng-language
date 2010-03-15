@@ -1,4 +1,5 @@
 package ng.runtime.threadcontext;
+
 /*
  * Created on 10 Feb 2008
  *
@@ -20,7 +21,7 @@ package ng.runtime.threadcontext;
 
 /**
  * @author John
- *
+ * 
  */
 public interface Behaviour {
 
