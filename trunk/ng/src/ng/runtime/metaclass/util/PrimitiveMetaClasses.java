@@ -14,7 +14,7 @@ import ng.runtime.metaclass.primitives.floatimpl.FloatMetaClass;
 import ng.runtime.metaclass.primitives.intimpl.IntMetaClass;
 import ng.runtime.metaclass.primitives.longimpl.LongMetaClass;
 import ng.runtime.metaclass.primitives.shortimpl.ShortMetaClass;
-import ng.runtime.metaclass.primitives.string.StringMetaClass;
+import ng.runtime.metaclass.primitives.stringimpl.StringMetaClass;
 import ng.runtime.threadcontext.ThreadContext;
 
 public abstract class PrimitiveMetaClasses {

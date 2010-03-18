@@ -1,4 +1,4 @@
-package ng.runtime.metaclass.primitives.string;
+package ng.runtime.metaclass.primitives.stringimpl;
 
 import ng.runtime.metaclass.MetaClass;
 
