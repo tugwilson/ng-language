@@ -36,7 +36,7 @@ import uk.co.wilson.ng.runtime.metaclass.primitives.floatimpl.FloatMetaClassImpl
 import uk.co.wilson.ng.runtime.metaclass.primitives.intimpl.IntMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.longimpl.LongMetaClassImpl;
 import uk.co.wilson.ng.runtime.metaclass.primitives.shortimpl.ShortMetaClassImpl;
-import uk.co.wilson.ng.runtime.metaclass.primitives.string.StringMetaClassImpl;
+import uk.co.wilson.ng.runtime.metaclass.primitives.stringimpl.StringMetaClassImpl;
 
 public class ExtendedThreadContextImpl extends ExtendedThreadContext {
   private static final MetaClass objectMetaClass = new MetaClassImpl(Object.class);
