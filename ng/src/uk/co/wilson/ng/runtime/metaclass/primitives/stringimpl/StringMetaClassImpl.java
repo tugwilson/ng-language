@@ -1,4 +1,4 @@
-package uk.co.wilson.ng.runtime.metaclass.primitives.string;
+package uk.co.wilson.ng.runtime.metaclass.primitives.stringimpl;
 
 import ng.runtime.metaclass.BinaryOperation;
 import ng.runtime.metaclass.primitives.string.StringMetaClass;
